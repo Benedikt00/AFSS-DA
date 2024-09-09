@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}  % Ensure this is loaded before biblatex
+\usepackage{biblatex}  % Load the biblatex package
+\addbibresource{../../Quellen/sources.bib}  % Add your .bib file
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage[export]{adjustbox} % for valign option
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+
+
+\graphicspath{{../Bilder/}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+\usepackage{xcolor}
+
+%\pagecolor[rgb]{0,0,0} %black
+
+%\color[rgb]{0.5,0.5,0.5} %grey
+
+%uncomment to make the links not display the red border
+%\hypersetup{
+%    colorlinks,
+%    citecolor=black,
+%    filecolor=black,
+%    linkcolor=black,
+%    urlcolor=black
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+\newcommand{\iu}{{i\mkern1mu}}
+\newcommand*\mathinhead[2]{\texorpdfstring{$\boldsymbol{#1}$}{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{AFSS - Automated Factory Storage System}
+\author{Benedikt Simbürger \\
+    \and Nikolaj Voglauer \\
+    \and Vincent Sonvilla \\
+    \and Elena Widmann
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\section{Introduction}
+
+\newpage
+
+\tableofcontents
+
+
+\begin{figure}[h]
+    \includegraphics[width=0.3\textwidth]{4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG}
+    %\caption{ Source: \cite{}}
+    \centering
+\end{figure}
+
+
+\printbibliography
+
+\end{document}
