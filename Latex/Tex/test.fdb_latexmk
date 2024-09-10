@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber test"] 0 "test.bcf" "test.bbl" "test" 1725898982.15849 0
+["biber test"] 0 "test.bcf" "test.bbl" "test" 1725949582.93642 0
   "../../Quellen/sources.bib" 0 -1 0 ""
   "test.bcf" 0 -1 0 "pdflatex"
   (generated)
   "test.bbl"
   "test.blg"
   (rewritten before read)
-["pdflatex"] 1725898977.94316 "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1725898982.16041 0
+["pdflatex"] 1725949571.19838 "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1725949582.94008 0
   "../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG" 1725551505 1533314 7562f9161b99ee5b32c445433c0ce5f8 ""
   "C:/Users/bsimb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1716670242 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/bsimb/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1715260019 24240353 c3bf47a934a0e14ed1505d1abbf79c46 ""
@@ -254,13 +254,13 @@
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" 1725898976 2078 f4049dc6233107e4a4d60d227bf89c37 ""
-  "test.aux" 1725898981 630 8d1e7b2d6948feb9ce6fa2bab87a81dc "pdflatex"
+  "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" 1725949569 2093 9184c3fde6d9030ddd414808471e28c7 ""
+  "test.aux" 1725949581 630 8d1e7b2d6948feb9ce6fa2bab87a81dc "pdflatex"
   "test.bbl" 1725893479 486 76d65a242ec496c9b4361af646ff12cb "biber test"
-  "test.out" 1725898981 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
-  "test.run.xml" 1725898981 2316 3886a8f90d9605f8a0a23f7a2b28745a "pdflatex"
-  "test.tex" 1725898976 2078 f4049dc6233107e4a4d60d227bf89c37 ""
-  "test.toc" 1725898981 68 422450c2a666dfbf59c2f9003cf3f68d "pdflatex"
+  "test.out" 1725949581 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
+  "test.run.xml" 1725949581 2316 3886a8f90d9605f8a0a23f7a2b28745a "pdflatex"
+  "test.tex" 1725949569 2093 9184c3fde6d9030ddd414808471e28c7 ""
+  "test.toc" 1725949581 68 422450c2a666dfbf59c2f9003cf3f68d "pdflatex"
   (generated)
   "test.aux"
   "test.bcf"
