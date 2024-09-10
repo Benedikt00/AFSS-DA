@@ -450,6 +450,10 @@ INPUT ..\Bilder\4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG
 INPUT ..\Bilder\4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG
 INPUT ..\Bilder\4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG
 INPUT ..\Bilder\4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG
+INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex\latex\base\omlcmr.fd
+INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex\latex\base\omlcmr.fd
+INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex\latex\base\omlcmr.fd
+INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
 INPUT test.aux
 INPUT .\test.out
 INPUT .\test.out
@@ -459,6 +463,8 @@ INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmib10.pfb
+INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmib10.pfb
 INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\bsimb\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb

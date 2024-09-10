@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  9 SEP 2024 18:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  9 SEP 2024 18:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1133,6 +1133,18 @@ File: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG Graphic file (type png)
 <use ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG>
 Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 79.
 (pdftex.def)             Requested size: 145.11053pt x 116.08281pt.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 81.
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 81.
+
+
+LaTeX Warning: Citation '' on page 2 undefined on input line 81.
+
+
+LaTeX Warning: Citation '' on page 2 undefined on input line 81.
 
 
 LaTeX Warning: Empty bibliography on input line 85.
@@ -1149,17 +1161,17 @@ Package logreq Info: Writing requests to 'test.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42861 strings out of 474370
- 967992 string characters out of 5740536
+ 43071 strings out of 474370
+ 972161 string characters out of 5740536
  1931754 words of memory out of 5000000
- 64605 multiletter control sequences out of 15000+600000
- 566695 words of font info for 67 fonts, out of 8000000 for 9000
+ 64812 multiletter control sequences out of 15000+600000
+ 567053 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,7n,117p,758b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on test.pdf (2 pages, 1592416 bytes).
+ 99i,7n,117p,758b,1607s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on test.pdf (2 pages, 1607024 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  6 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
