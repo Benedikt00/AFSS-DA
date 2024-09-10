@@ -1,0 +1,23 @@
+# LaTeX compiled files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# PDF files (optional)
+*.pdf
+
+# Build directories
+_build/
+out/
