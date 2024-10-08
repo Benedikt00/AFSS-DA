@@ -1,12 +1,11 @@
 # Fdb version 4
-["biber test"] 0 "test.bcf" "test.bbl" "test" 1728404777.6426 -1
-  "./../Quellen/sources.bib" 1725892948 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "test.bcf" 1728404776 108500 9279b9857cde2639f36f36b53b7ffa98 "pdflatex"
+["biber test"] 1728404939.7246 "test.bcf" "test.bbl" "test" 1728405004.61231 0
+  "test.bcf" 1728405003 108500 9279b9857cde2639f36f36b53b7ffa98 "pdflatex"
   (generated)
   "test.bbl"
   "test.blg"
   (rewritten before read)
-["pdflatex"] 1728404769.80595 "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1728404777.64408 0
+["pdflatex"] 1728404998.24863 "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1728405004.61363 0
   "../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG" 1725551505 1533314 7562f9161b99ee5b32c445433c0ce5f8 ""
   "../Bilder/HTL_Moessingerstraßen_Logo.png" 1728373668 25947 7f0960940fd2c61e5cad4bc90bc12549 ""
   "C:/Users/bsimb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1728402441 123019 4e6d54fe28a67ad1b512b0cc9d03c2e8 ""
@@ -276,13 +275,13 @@
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" 1728404768 3911 745d4db09d412805e2e9fa33b032cb8c ""
-  "test.aux" 1728404776 729 e8ea0e5e4aff07bce16add94006e66ea "pdflatex"
-  "test.bbl" 1728394453 486 76d65a242ec496c9b4361af646ff12cb "biber test"
-  "test.out" 1728404776 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
-  "test.run.xml" 1728404776 2376 cacc5fd0af7855d79b2c57cf78c36bb5 "pdflatex"
-  "test.tex" 1728404768 3911 745d4db09d412805e2e9fa33b032cb8c ""
-  "test.toc" 1728404776 98 23df5d9c88d984fbb74aea190b8c052b "pdflatex"
+  "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" 1728404989 3911 745d4db09d412805e2e9fa33b032cb8c ""
+  "test.aux" 1728405003 729 e8ea0e5e4aff07bce16add94006e66ea "pdflatex"
+  "test.bbl" 1728404945 486 76d65a242ec496c9b4361af646ff12cb "biber test"
+  "test.out" 1728405003 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
+  "test.run.xml" 1728405003 2376 cacc5fd0af7855d79b2c57cf78c36bb5 "pdflatex"
+  "test.tex" 1728404989 3911 745d4db09d412805e2e9fa33b032cb8c ""
+  "test.toc" 1728405003 98 23df5d9c88d984fbb74aea190b8c052b "pdflatex"
   (generated)
   "test.aux"
   "test.bcf"
