@@ -1,15 +1,14 @@
 # Fdb version 4
-["biber test"] 0 "test.bcf" "test.bbl" "test" 1728402861.48899 -1
+["biber test"] 0 "test.bcf" "test.bbl" "test" 1728404777.6426 -1
   "./../Quellen/sources.bib" 1725892948 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "test.bcf" 1728402860 108500 9279b9857cde2639f36f36b53b7ffa98 "pdflatex"
+  "test.bcf" 1728404776 108500 9279b9857cde2639f36f36b53b7ffa98 "pdflatex"
   (generated)
   "test.bbl"
   "test.blg"
   (rewritten before read)
-["pdflatex"] 1728402853.23075 "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1728402861.49268 2
+["pdflatex"] 1728404769.80595 "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1728404777.64408 0
   "../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG" 1725551505 1533314 7562f9161b99ee5b32c445433c0ce5f8 ""
   "../Bilder/HTL_Moessingerstraßen_Logo.png" 1728373668 25947 7f0960940fd2c61e5cad4bc90bc12549 ""
-  "/end" 1727122628 35 28d6814f309ea289f847c69cf91194c6 ""
   "C:/Users/bsimb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1728402441 123019 4e6d54fe28a67ad1b512b0cc9d03c2e8 ""
   "C:/Users/bsimb/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1715260019 24240353 c3bf47a934a0e14ed1505d1abbf79c46 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -34,7 +33,6 @@
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx7.tfm" 1136765053 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmib10.tfm" 1136765053 1524 554068197b70979a55370e6c6495f441 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1247596666 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
-  "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 adef23a721dd8354a4a2bf4434f1c484 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb" 1136849748 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvb7t.vf" 1136768654 1372 1c26b449eb4a1a0bcf6ac7cfe376d450 ""
@@ -278,12 +276,13 @@
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/bsimb/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" 1728402841 3477 723a1d2ae65447ef8bcfa3479bca0b6e ""
-  "test.aux" 1728402860 726 d1c2ae098af3e51a6de9d2526b4f1200 "pdflatex"
+  "c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex" 1728404768 3911 745d4db09d412805e2e9fa33b032cb8c ""
+  "test.aux" 1728404776 729 e8ea0e5e4aff07bce16add94006e66ea "pdflatex"
   "test.bbl" 1728394453 486 76d65a242ec496c9b4361af646ff12cb "biber test"
-  "test.out" 1728402860 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
-  "test.tex" 1728402841 3477 723a1d2ae65447ef8bcfa3479bca0b6e ""
-  "test.toc" 1728402860 98 23df5d9c88d984fbb74aea190b8c052b "pdflatex"
+  "test.out" 1728404776 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
+  "test.run.xml" 1728404776 2376 cacc5fd0af7855d79b2c57cf78c36bb5 "pdflatex"
+  "test.tex" 1728404768 3911 745d4db09d412805e2e9fa33b032cb8c ""
+  "test.toc" 1728404776 98 23df5d9c88d984fbb74aea190b8c052b "pdflatex"
   (generated)
   "test.aux"
   "test.bcf"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  8 OCT 2024 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  8 OCT 2024 18:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -297,41 +297,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen147
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks20
- (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
-C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty:1006: Missing number, treated as zero.
-<to be read again> 
-                   <
-l.1006 \Gm@process
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty:1006: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   <
-l.1006 \Gm@process
-                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty:1006: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1006 \Gm@process
-                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
@@ -1147,80 +1113,36 @@ LaTeX Info: Redefining \datengerman on input line 86.
 \dt@a=\toks58
 \dt@b=\toks59
 )
-c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: Missing number, treated as zero.
-<to be read again> 
-                   <
-l.67 \geometry{a4paper}
-                       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   <
-l.67 \geometry{a4paper}
-                       
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: Package calc Error: `<' invalid at this point.
-
-See the calc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 \geometry{a4paper}
-                       
-I expected to see one of: + - * / )
-
-
-c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 \geometry{a4paper}
-                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
 \@quotelevel=\count508
 \@quotereset=\count509
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 86.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 90.
 (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (test.aux)
 \openout1 = `test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
  (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
@@ -1248,8 +1170,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'test.bbl' found.
  (test.bbl)
-Package biblatex Info: Reference section=0 on input line 86.
-Package biblatex Info: Reference segment=0 on input line 86.
+Package biblatex Info: Reference section=0 on input line 90.
+Package biblatex Info: Reference segment=0 on input line 90.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1258,17 +1180,17 @@ Package biblatex Info: Reference segment=0 on input line 86.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* modes: includehead 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91498pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=591.5302pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=-25.86334pt
-* \headheight=30.0pt
+* \textwidth=483.69687pt
+* \textheight=692.00948pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-58.04362pt
+* \headheight=56.9055pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
@@ -1312,127 +1234,114 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 86.
+ on input line 90.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 86.
+Package hyperref Info: Link coloring OFF on input line 90.
+(test.out) (test.out)
 \@outlinefile=\write6
 \openout6 = `test.out'.
 
-<../Bilder/HTL_Moessingerstraßen_Logo.png, id=6, 145.7445pt x 28.54665pt>
+<../Bilder/HTL_Moessingerstraßen_Logo.png, id=10, 145.7445pt x 28.54665pt>
 File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 90.
-(pdftex.def)             Requested size: 209.12683pt x 40.96382pt.
-[1
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 94.
+(pdftex.def)             Requested size: 241.84843pt x 47.37303pt.
+ [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
 {C:/Users/bsimb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <../Bilder/HTL_Moessingerstraßen_Logo.png>]
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 109.
+(fancyhdr)                Please consider using the `twoside' option on input line 134.
 
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 115.
+(fancyhdr)                Please consider using the `twoside' option on input line 140.
 
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 122.
+(fancyhdr)                Please consider using the `twoside' option on input line 147.
 
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 125.
+(fancyhdr)                Please consider using the `twoside' option on input line 150.
 
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 128.
+(fancyhdr)                Please consider using the `twoside' option on input line 153.
 
 
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 131.
+(fancyhdr)                Please consider using the `twoside' option on input line 156.
 
-No file test.toc.
+(test.toc)
 \tf@toc=\write7
 \openout7 = `test.toc'.
 
-<../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG, id=18, 3011.25pt x 2409.0pt>
+<../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG, id=22, 3011.25pt x 2409.0pt>
 File: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG Graphic file (type png)
 <use ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG>
-Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 143.
-(pdftex.def)             Requested size: 125.47737pt x 100.35025pt.
-LaTeX Font Info:    Trying to load font information for OML+phv on input line 145.
-(C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlphv.fd
+Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 168.
+(pdftex.def)             Requested size: 145.11053pt x 116.08281pt.
+LaTeX Font Info:    Trying to load font information for OML+phv on input line 170.
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlphv.fd
 File: omlphv.fd 
 )
 LaTeX Font Info:    Font shape `OML/phv/b/n' in size <10> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 145.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 170.
 
 
-LaTeX Warning: Citation '' on page 2 undefined on input line 145.
+LaTeX Warning: Citation '' on page 2 undefined on input line 170.
 
 
-LaTeX Warning: Citation '' on page 2 undefined on input line 145.
-
-
-LaTeX Warning: Empty bibliography on input line 149.
+LaTeX Warning: Citation '' on page 2 undefined on input line 170.
 
 File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 151.
-(pdftex.def)             Requested size: 83.64944pt x 16.38412pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 151.
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 173.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 173.
 (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 151.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 173.
  (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2 <../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG (PNG copy)>] (test.aux)
+) [2 <../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG (PNG copy)>]
+
+LaTeX Warning: Empty bibliography on input line 177.
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 179.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[3] (test.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `test.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `test.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  9814C2D956916ADB9290ECA4E25C967A;103.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                test
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `test.out' has not changed.
+(rerunfilecheck)             Checksum: 9814C2D956916ADB9290ECA4E25C967A;103.
 Package logreq Info: Writing requests to 'test.run.xml'.
 \openout1 = `test.run.xml'.
 
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 67 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 45353 strings out of 474370
- 1015085 string characters out of 5740536
- 2034992 words of memory out of 5000000
- 67008 multiletter control sequences out of 15000+600000
- 568157 words of font info for 60 fonts, out of 8000000 for 9000
+ 45374 strings out of 474370
+ 1015435 string characters out of 5740536
+ 2031270 words of memory out of 5000000
+ 67017 multiletter control sequences out of 15000+600000
+ 576703 words of font info for 70 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 99i,17n,117p,1059b,4314s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on test.pdf (2 pages, 1589423 bytes).
+ 99i,17n,117p,1059b,2461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on test.pdf (3 pages, 1580992 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

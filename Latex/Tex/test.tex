@@ -5,7 +5,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[a4paper, head=30pt, foot=<..>]{geometry}
+\usepackage[a4paper, margin=2cm, top=5mm, includehead, headheight=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -35,7 +35,11 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 
-\renewcommand{\footrulewidth}{0.3pt}%
+\renewcommand{\footrulewidth}{0.4pt}%
+\renewcommand{\headrulewidth}{0.4pt}%
+
+\renewcommand{\headruleskip}{3mm}
+\renewcommand{\footruleskip}{4mm}
 
 \usepackage[english,ngerman]{babel}
 \usepackage[ddmmyyyy]{datetime}
@@ -94,13 +98,34 @@
 \vspace{10mm}
 
 \begin{center}
-    \Large \textbf{HÖHERE TECHNISCHE BUNDESLEHRANSTALT} \\
+    \huge \textbf{HÖHERE TECHNISCHE BUNDESLEHRANSTALT} \\
     \vspace{5mm}
-    \normalsize KLAGENFURT, MÖSSINGERSTRASSE
-
-    
+    \Large{KLAGENFURT, MÖSSINGERSTRASSE}
 
 \end{center}
+
+\vspace{7mm}
+
+\begin{center}
+    \large{ELEKTROTECHNIK}
+\end{center}
+
+\hrule
+
+\vspace{10mm}
+
+\begin{center}
+    \Huge \textbf{DIPLOMARBEIT} \\
+    \vspace{7mm}
+    \huge{Autometed-Factory-Storage-System}
+
+    \vspace{20mm}
+
+    \Large{Jahrgang 5AHET}
+
+\end{center}
+
+
 
 \newpage
 
@@ -145,6 +170,9 @@
     \caption{Source may go here: \cite{}}
 \end{figure}
 
+\newpage
+
+asd
 
 \printbibliography
 
