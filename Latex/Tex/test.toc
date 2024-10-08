@@ -1,1 +1,2 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%

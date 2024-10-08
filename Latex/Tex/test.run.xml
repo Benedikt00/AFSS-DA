@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>test.bcf</file>
@@ -57,10 +57,12 @@
       <file>numeric.bbx</file>
       <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
+      <file>german.lbx</file>
+      <file>ngerman.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="0">
+  <external package="biblatex" priority="5" active="1">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
@@ -79,7 +81,7 @@
       <file>test.bcf</file>
     </requires>
     <requires type="editable">
-      <file>../../Quellen/sources.bib</file>
+      <file>./../Quellen/sources.bib</file>
     </requires>
   </external>
 </requests>

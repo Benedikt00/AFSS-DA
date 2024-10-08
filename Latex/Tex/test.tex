@@ -1,11 +1,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}  % Ensure this is loaded before biblatex
 \usepackage{biblatex}  % Load the biblatex package
-\addbibresource{../../Quellen/sources.bib}  % Add your .bib file
+\addbibresource{./../Quellen/sources.bib}  % Add your .bib file
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, head=30pt, foot=<..>]{geometry}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -28,6 +28,19 @@
 \usepackage{hyperref}
 
 
+\usepackage{emptypage}
+\usepackage{fancyhdr}
+
+\usepackage{helvet}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\renewcommand{\footrulewidth}{0.3pt}%
+
+\usepackage[english,ngerman]{babel}
+\usepackage[ddmmyyyy]{datetime}
+
+\newcommand{\todayD}{\the\day.\the\month.\the\year}   
 
 \graphicspath{{../Bilder/}}
 
@@ -56,6 +69,10 @@
 \newcommand{\iu}{{i\mkern1mu}}
 \newcommand*\mathinhead[2]{\texorpdfstring{$\boldsymbol{#1}$}{#2}}
 
+
+\definecolor{mred}{rgb}{0.619, 0.2392, 0.3176}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{AFSS - Automated Factory Storage System}
 \author{Benedikt Simbürger \\
@@ -67,10 +84,57 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\maketitle
-\section{Introduction}
+
+
+\begin{figure}[h]
+    \includegraphics[width=0.5\textwidth]{HTL_Moessingerstraßen_Logo.png}
+    \centering
+\end{figure}
+
+\vspace{10mm}
+
+\begin{center}
+    \Large \textbf{HÖHERE TECHNISCHE BUNDESLEHRANSTALT} \\
+    \vspace{5mm}
+    \normalsize KLAGENFURT, MÖSSINGERSTRASSE
+
+    
+
+\end{center}
 
 \newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhf[EHL]{\includegraphics[width=0.2\textwidth]{HTL_Moessingerstraßen_Logo.png}}
+\fancyhf[OHL]{\includegraphics[width=0.2\textwidth]{HTL_Moessingerstraßen_Logo.png}}
+
+\fancyhf[EHC]{\begin{tabular}{cc}
+    Simbürger & Sonvilla \\
+    Voglauer & Widmann \\
+\end{tabular}}
+
+\fancyhf[OHC]{\begin{tabular}{cc}
+    Simbürger & Sonvilla \\
+    Voglauer & Widmann\\
+\end{tabular}}
+
+\fancyhf[EHR]{\color{mred} ELEKTROTECHNIK}
+\fancyhf[OHR]{\color{mred} ELEKTROTECHNIK}
+
+\fancyhf[EFL]{\todayD}
+\fancyhf[OFL]{\todayD}
+
+\fancyhf[EFC]{Automated-Factory-Storage-System}
+\fancyhf[OFC]{Automated-Factory-Storage-System}
+
+\fancyhf[EFR]{\thepage}
+\fancyhf[OFR]{\thepage}
+
+
+\newpage
+
+\section{Introduction}
 
 \tableofcontents
 
@@ -78,7 +142,7 @@
 \begin{figure}[h]
     \includegraphics[width=0.3\textwidth]{4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG}
     \centering
-    \caption{ Source may go here: \cite{}}
+    \caption{Source may go here: \cite{}}
 \end{figure}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  10 SEP 2024 08:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  8 OCT 2024 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -297,7 +297,41 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen147
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks20
- (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty:1006: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.1006 \Gm@process
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty:1006: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   <
+l.1006 \Gm@process
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty:1006: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1006 \Gm@process
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
@@ -1008,30 +1042,199 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip150
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/emptypage\emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip151
+\f@nch@O@elh=\skip152
+\f@nch@O@erh=\skip153
+\f@nch@O@olh=\skip154
+\f@nch@O@orh=\skip155
+\f@nch@O@elf=\skip156
+\f@nch@O@erf=\skip157
+\f@nch@O@olf=\skip158
+\f@nch@O@orf=\skip159
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/04/20 v24.4 The Babel package
+\babel@savecnt=\count481
+\U@D=\dimen342
+\l@unhyphenated=\language80
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read4
+\bbl@dirlevel=\count482
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ldf
+Language: ngerman 2024/01/19 v2.14 German support for babel (post-1996 orthography)
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngermanb.ldf
+Language: ngermanb 2024/01/19 v2.14 German support for babel (post-1996 orthography)
+Package babel Info: Making " an active character on input line 122.
+))) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/de\babel-ngerman.tex
+Package babel Info: Importing font and identification data for ngerman
+(babel)             from babel-de.ini. Reported on input line 11.
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fmtcount.sty
+Package: fmtcount 2024/08/31 v3.08
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcprefix.sty
+Package: fcprefix 2012/09/28
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcnumparser.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count483
+))
+\c@padzeroesN=\count484
+\fc@tmpcatcode=\count485
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-english.def
+File: fc-english.def 2016/01/12
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-ngerman.def
+File: fc-ngerman.def 2012/06/18
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-german.def
+File: fc-german.def 2018/06/17
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-germanb.def
+File: fc-germanb.def 2013/08/17
+)) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-ngermanb.def
+File: fc-ngermanb.def 2013/08/17
+))
+\@DT@modctr=\count486
+\@ordinalctr=\count487
+\@orgargctr=\count488
+\@strctr=\count489
+\@tmpstrctr=\count490
+\@DT@loopN=\count491
+\@DT@X=\count492
+) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
 )
-\@quotelevel=\count481
-\@quotereset=\count482
- (test.aux)
+\@day=\count493
+\@month=\count494
+\@year=\count495
+\c@HOUR=\count496
+\c@HOURXII=\count497
+\c@MINUTE=\count498
+\c@TOHOUR=\count499
+\c@TOMINUTE=\count500
+\c@SECOND=\count501
+\currenthour=\count502
+\currentminute=\count503
+\currentsecond=\count504
+Package datetime Info: No datetime.cfg file found, using default settings on input line 308.
+\@dtctr=\count505
+\dayofyear=\count506
+\dayofweek=\count507
+LaTeX Info: Redefining \today on input line 736.
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/datetime\dt-ngerman.def
+File: dt-ngerman.def 2013/09/10
+LaTeX Info: Redefining \datengerman on input line 86.
+)
+\dt@a=\toks58
+\dt@b=\toks59
+)
+c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: Missing number, treated as zero.
+<to be read again> 
+                   <
+l.67 \geometry{a4paper}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   <
+l.67 \geometry{a4paper}
+                       
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: Package calc Error: `<' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \geometry{a4paper}
+                       
+I expected to see one of: + - * / )
+
+
+c:/Users/bsimb/Documents/AFSS-DA/Latex/Tex/test.tex:67: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \geometry{a4paper}
+                       
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count508
+\@quotereset=\count509
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 86.
+(C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
+File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+) (test.aux)
 \openout1 = `test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
+File: ngerman.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
@@ -1045,8 +1248,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'test.bbl' found.
  (test.bbl)
-Package biblatex Info: Reference section=0 on input line 69.
-Package biblatex Info: Reference segment=0 on input line 69.
+Package biblatex Info: Reference section=0 on input line 86.
+Package biblatex Info: Reference segment=0 on input line 86.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1056,16 +1259,16 @@ Package biblatex Info: Reference segment=0 on input line 69.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
-* \textheight=731.23584pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-52.36449pt
-* \headheight=12.0pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-25.86334pt
+* \headheight=30.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
@@ -1084,94 +1287,152 @@ Package biblatex Info: Reference segment=0 on input line 69.
 
 (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count483
-\scratchdimen=\dimen342
+\scratchcounter=\count510
+\scratchdimen=\dimen343
 \scratchbox=\box80
-\nofMPsegments=\count484
-\nofMParguments=\count485
-\everyMPshowfont=\toks58
-\MPscratchCnt=\count486
-\MPscratchDim=\dimen343
-\MPnumerator=\count487
-\makeMPintoPDFobject=\count488
-\everyMPtoPDFconversion=\toks59
+\nofMPsegments=\count511
+\nofMParguments=\count512
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count513
+\MPscratchDim=\dimen344
+\MPnumerator=\count514
+\makeMPintoPDFobject=\count515
+\everyMPtoPDFconversion=\toks61
 ) (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 69.
+ on input line 86.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 69.
-(test.out) (test.out)
+Package hyperref Info: Link coloring OFF on input line 86.
 \@outlinefile=\write6
 \openout6 = `test.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
- (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
- (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+<../Bilder/HTL_Moessingerstraßen_Logo.png, id=6, 145.7445pt x 28.54665pt>
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 90.
+(pdftex.def)             Requested size: 209.12683pt x 40.96382pt.
+[1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
-{C:/Users/bsimb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (test.toc)
+{C:/Users/bsimb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <../Bilder/HTL_Moessingerstraßen_Logo.png>]
+
+Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 109.
+
+
+Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 115.
+
+
+Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 122.
+
+
+Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 125.
+
+
+Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 128.
+
+
+Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 131.
+
+No file test.toc.
 \tf@toc=\write7
 \openout7 = `test.toc'.
 
-<../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG, id=20, 3011.25pt x 2409.0pt>
+<../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG, id=18, 3011.25pt x 2409.0pt>
 File: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG Graphic file (type png)
 <use ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG>
-Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 79.
-(pdftex.def)             Requested size: 145.11053pt x 116.08281pt.
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 81.
- (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
-File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 143.
+(pdftex.def)             Requested size: 125.47737pt x 100.35025pt.
+LaTeX Font Info:    Trying to load font information for OML+phv on input line 145.
+(C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlphv.fd
+File: omlphv.fd 
 )
-LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 81.
+LaTeX Font Info:    Font shape `OML/phv/b/n' in size <10> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 145.
 
 
-LaTeX Warning: Citation '' on page 2 undefined on input line 81.
+LaTeX Warning: Citation '' on page 2 undefined on input line 145.
 
 
-LaTeX Warning: Citation '' on page 2 undefined on input line 81.
+LaTeX Warning: Citation '' on page 2 undefined on input line 145.
 
 
-LaTeX Warning: Empty bibliography on input line 85.
+LaTeX Warning: Empty bibliography on input line 149.
 
-[2 <../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG (PNG copy)>] (test.aux)
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 151.
+(pdftex.def)             Requested size: 83.64944pt x 16.38412pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 151.
+(C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 151.
+ (C:\Users\bsimb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [2 <../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG (PNG copy)>] (test.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
-Package rerunfilecheck Info: File `test.out' has not changed.
-(rerunfilecheck)             Checksum: 9814C2D956916ADB9290ECA4E25C967A;103.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `test.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `test.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  9814C2D956916ADB9290ECA4E25C967A;103.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                test
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'test.run.xml'.
 \openout1 = `test.run.xml'.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 67 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 43071 strings out of 474370
- 972161 string characters out of 5740536
- 1931754 words of memory out of 5000000
- 64812 multiletter control sequences out of 15000+600000
- 567053 words of font info for 68 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 99i,7n,117p,758b,1607s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on test.pdf (2 pages, 1607237 bytes).
+ 45353 strings out of 474370
+ 1015085 string characters out of 5740536
+ 2034992 words of memory out of 5000000
+ 67008 multiletter control sequences out of 15000+600000
+ 568157 words of font info for 60 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 99i,17n,117p,1059b,4314s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bsimb/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on test.pdf (2 pages, 1589423 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 49 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
