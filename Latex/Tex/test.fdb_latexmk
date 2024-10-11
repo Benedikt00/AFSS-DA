@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber test"] 0 "test.bcf" "test.bbl" "test" 1725952229.01414 0
+["biber test"] 0 "test.bcf" "test.bbl" "test" 1728680754.17012 0
   "../../Quellen/sources.bib" 0 -1 0 ""
   "test.bcf" 0 -1 0 "pdflatex"
   (generated)
   "test.bbl"
   "test.blg"
   (rewritten before read)
-["pdflatex"] 1725952225.55977 "c:/AFSS/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1725952229.01544 0
+["pdflatex"] 1728680751.89823 "c:/AFSS/AFSS-DA/Latex/Tex/test.tex" "test.pdf" "test" 1728680754.17101 0
   "../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG" 1725950709 1533314 7562f9161b99ee5b32c445433c0ce5f8 ""
   "C:/Users/elena/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1725951500 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/elena/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1725951242 24265333 927245404a162633c575b5a7784aa5f5 ""
@@ -255,13 +255,13 @@
   "C:/Users/elena/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/elena/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/elena/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/AFSS/AFSS-DA/Latex/Tex/test.tex" 1725952223 2095 178774cd136b95ffe36830b2bd7e9714 ""
-  "test.aux" 1725952228 630 8d1e7b2d6948feb9ce6fa2bab87a81dc "pdflatex"
+  "c:/AFSS/AFSS-DA/Latex/Tex/test.tex" 1728680751 2095 178774cd136b95ffe36830b2bd7e9714 ""
+  "test.aux" 1728680753 630 8d1e7b2d6948feb9ce6fa2bab87a81dc "pdflatex"
   "test.bbl" 1725950709 486 76d65a242ec496c9b4361af646ff12cb "biber test"
-  "test.out" 1725952228 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
-  "test.run.xml" 1725952228 2316 3886a8f90d9605f8a0a23f7a2b28745a "pdflatex"
-  "test.tex" 1725952223 2095 178774cd136b95ffe36830b2bd7e9714 ""
-  "test.toc" 1725952228 68 422450c2a666dfbf59c2f9003cf3f68d "pdflatex"
+  "test.out" 1728680753 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
+  "test.run.xml" 1728680753 2316 3886a8f90d9605f8a0a23f7a2b28745a "pdflatex"
+  "test.tex" 1728680751 2095 178774cd136b95ffe36830b2bd7e9714 ""
+  "test.toc" 1728680753 68 422450c2a666dfbf59c2f9003cf3f68d "pdflatex"
   (generated)
   "test.aux"
   "test.bcf"
