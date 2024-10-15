@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.10)  14 OCT 2024 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.10)  15 OCT 2024 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1305,46 +1305,13 @@ Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useles
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
 (fancyhdr)                Please consider using the `twoside' option on input line 227.
 
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 248.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 244.
 (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-
-File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
-<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 259.
-(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
-[3] (test.toc)
-\tf@toc=\write7
-\openout7 = `test.toc'.
-
-<../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG, id=34, 3011.25pt x 2409.0pt>
-File: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG Graphic file (type png)
-<use ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG>
-Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 267.
-(pdftex.def)             Requested size: 145.11053pt x 116.08281pt.
-LaTeX Font Info:    Trying to load font information for OML+phv on input line 269.
- (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlphv.fd
-File: omlphv.fd 
-)
-LaTeX Font Info:    Font shape `OML/phv/b/n' in size <10> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 269.
-
-
-LaTeX Warning: Citation '' on page 4 undefined on input line 269.
-
-
-LaTeX Warning: Citation '' on page 4 undefined on input line 269.
-
-
-
-File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
-<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 272.
-(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
-[4 <../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG (PNG copy)>]
-
-LaTeX Warning: Empty bibliography on input line 276.
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
+[]|[]\OT1/phv/m/n/10 Maximal f[]unf aus-sa-ge-kr[]aftige und durch Kom-mas ge-trenn-te
+ []
 
 
 
@@ -1352,29 +1319,86 @@ File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
 Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 278.
 (pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
-[5] (test.aux)
+[3]
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 294.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[4] (test.toc)
+\tf@toc=\write7
+\openout7 = `test.toc'.
+
+
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 296.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[5]
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 300.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[6]
+<../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG, id=51, 3011.25pt x 2409.0pt>
+File: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG Graphic file (type png)
+<use ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG>
+Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 306.
+(pdftex.def)             Requested size: 145.11053pt x 116.08281pt.
+LaTeX Font Info:    Trying to load font information for OML+phv on input line 308.
+ (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlphv.fd
+File: omlphv.fd 
+)
+LaTeX Font Info:    Font shape `OML/phv/b/n' in size <10> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 308.
+
+
+LaTeX Warning: Citation '' on page 7 undefined on input line 308.
+
+
+LaTeX Warning: Citation '' on page 7 undefined on input line 308.
+
+
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 311.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[7 <../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG (PNG copy)>]
+
+LaTeX Warning: Empty bibliography on input line 315.
+
+
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 317.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[8] (test.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
 Package rerunfilecheck Info: File `test.out' has not changed.
-(rerunfilecheck)             Checksum: 9814C2D956916ADB9290ECA4E25C967A;103.
+(rerunfilecheck)             Checksum: 5094E4EB7061D518F6AABF96528EC15D;93.
 Package logreq Info: Writing requests to 'test.run.xml'.
 \openout1 = `test.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45639 strings out of 473899
- 1019604 string characters out of 5726500
- 2052498 words of memory out of 5000000
+ 45646 strings out of 473899
+ 1019664 string characters out of 5726500
+ 2056498 words of memory out of 5000000
  67734 multiletter control sequences out of 15000+600000
  579960 words of font info for 81 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  99i,17n,117p,1042b,2461s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on test.pdf (5 pages, 1588924 bytes).
+Output written on test.pdf (8 pages, 1594344 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
