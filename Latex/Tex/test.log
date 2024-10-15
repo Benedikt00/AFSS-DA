@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.10)  15 OCT 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.10)  15 OCT 2024 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1130,30 +1130,30 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count513
 \@quotereset=\count514
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 91.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 92.
 (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (test.aux)
 \openout1 = `test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
  (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
@@ -1181,8 +1181,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'test.bbl' found.
  (test.bbl)
-Package biblatex Info: Reference section=0 on input line 91.
-Package biblatex Info: Reference segment=0 on input line 91.
+Package biblatex Info: Reference section=0 on input line 92.
+Package biblatex Info: Reference segment=0 on input line 92.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1245,26 +1245,26 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 91.
+ on input line 92.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 91.
+Package hyperref Info: Link coloring OFF on input line 92.
 (test.out) (test.out)
 \@outlinefile=\write6
 \openout6 = `test.out'.
 
-<../Bilder/HTL_Moessingerstraßen_Logo.png, id=10, 145.7445pt x 28.54665pt>
+<../Bilder/HTL_Moessingerstraßen_Logo.png, id=54, 145.7445pt x 28.54665pt>
 File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 95.
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 96.
 (pdftex.def)             Requested size: 241.84843pt x 47.37303pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 135.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 136.
  (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 135.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 136.
  (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1305,11 +1305,11 @@ Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useles
 Package fancyhdr Warning: \fancyhf's `E' option without twoside option is useless.
 (fancyhdr)                Please consider using the `twoside' option on input line 227.
 
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 244.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 243.
 (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 []|[]\OT1/phv/m/n/10 Maximal f[]unf aus-sa-ge-kr[]aftige und durch Kom-mas ge-trenn-te
  []
 
@@ -1317,13 +1317,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
 File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 278.
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 277.
 (pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
 [3]
 
 File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 294.
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 293.
 (pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
 [4] (test.toc)
 \tf@toc=\write7
@@ -1333,72 +1333,135 @@ Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on inpu
 
 File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 296.
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 295.
 (pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 299--302
 
-File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
-<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 300.
-(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
-[6]
-<../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG, id=51, 3011.25pt x 2409.0pt>
-File: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG Graphic file (type png)
-<use ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG>
-Package pdftex.def Info: ../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG  used on input line 306.
-(pdftex.def)             Requested size: 145.11053pt x 116.08281pt.
-LaTeX Font Info:    Trying to load font information for OML+phv on input line 308.
- (C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlphv.fd
-File: omlphv.fd 
-)
-LaTeX Font Info:    Font shape `OML/phv/b/n' in size <10> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 308.
+ []
 
-
-LaTeX Warning: Citation '' on page 7 undefined on input line 308.
-
-
-LaTeX Warning: Citation '' on page 7 undefined on input line 308.
-
-
-
-File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
-<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
-Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 311.
-(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
-[7 <../Bilder/4f7edc3f-3fba-4cf4-8cb9-5347d889097a.PNG (PNG copy)>]
-
-LaTeX Warning: Empty bibliography on input line 315.
-
+<../Bilder/Systemstruktur.png, id=103, 448.731pt x 268.713pt>
+File: ../Bilder/Systemstruktur.png Graphic file (type png)
+<use ../Bilder/Systemstruktur.png>
+Package pdftex.def Info: ../Bilder/Systemstruktur.png  used on input line 304.
+(pdftex.def)             Requested size: 483.69687pt x 289.65628pt.
 
 
 File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
 <use ../Bilder/HTL_Moessingerstraßen_Logo.png>
 Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 317.
 (pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
-[8] (test.aux)
+[6 <../Bilder/Systemstruktur.png>]
+Overfull \hbox (27.64282pt too wide) in paragraph at lines 320--328
+\OT1/phv/m/n/10 L[]osungsans[]atze, die zur Um-set-zung in Fra-ge kom-men. Be-gr[]unden Sie die ge-w[]ahlten Me-tho-de und L[]osungsans[]atze. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--328
+
+ []
+
+<../Bilder/Produktstruktur.png, id=111, 440.847pt x 251.0178pt>
+File: ../Bilder/Produktstruktur.png Graphic file (type png)
+<use ../Bilder/Produktstruktur.png>
+Package pdftex.def Info: ../Bilder/Produktstruktur.png  used on input line 330.
+(pdftex.def)             Requested size: 483.69687pt x 275.41566pt.
+
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 343.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[7 <../Bilder/Produktstruktur.png>]
+<../Bilder/Scrum_Projektplan.png, id=119, 408.77719pt x 394.47375pt>
+File: ../Bilder/Scrum_Projektplan.png Graphic file (type png)
+<use ../Bilder/Scrum_Projektplan.png>
+Package pdftex.def Info: ../Bilder/Scrum_Projektplan.png  used on input line 345.
+(pdftex.def)             Requested size: 386.95897pt x 373.44177pt.
+
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 351.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[8 <../Bilder/Scrum_Projektplan.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 354--357
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+phv on input line 361.
+(C:\Users\elena\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 361.
+
+Overfull \hbox (7.95766pt too wide) in paragraph at lines 362--363
+[]\OT1/phv/m/n/10 Detaillierte Be-schrei-bung der kon-kre-ten Um-set-zung mit Re-fe-ren-zen auf re-le-van-ten Quel-len (Prim[]arliteratur/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--382
+
+ []
+
+
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 384.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[9]
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 387.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[10]
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 390.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[11]
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 393.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[12]
+
+File: ../Bilder/HTL_Moessingerstraßen_Logo.png Graphic file (type png)
+<use ../Bilder/HTL_Moessingerstraßen_Logo.png>
+Package pdftex.def Info: ../Bilder/HTL_Moessingerstraßen_Logo.png  used on input line 398.
+(pdftex.def)             Requested size: 96.73788pt x 18.94798pt.
+[13]
+
+LaTeX Warning: Empty bibliography on input line 400.
+
+(test.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
 Package rerunfilecheck Info: File `test.out' has not changed.
-(rerunfilecheck)             Checksum: 5094E4EB7061D518F6AABF96528EC15D;93.
+(rerunfilecheck)             Checksum: 44AE4385FF2DF51D460CCE132EBDAED5;2408.
 Package logreq Info: Writing requests to 'test.run.xml'.
 \openout1 = `test.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45646 strings out of 473899
- 1019664 string characters out of 5726500
- 2056498 words of memory out of 5000000
- 67734 multiletter control sequences out of 15000+600000
+ 45514 strings out of 473899
+ 1016804 string characters out of 5726500
+ 2058591 words of memory out of 5000000
+ 67583 multiletter control sequences out of 15000+600000
  579960 words of font info for 81 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  99i,17n,117p,1042b,2461s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on test.pdf (8 pages, 1594344 bytes).
+<C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/elena/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on test.pdf (13 pages, 735734 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
