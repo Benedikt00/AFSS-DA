@@ -10,10 +10,12 @@
 *.lot
 *.fls
 *.fdb_latexmk
-*.synctex.gz
+*.gz
 *.nav
 *.snm
 *.vrb
+*.xml
+*.bcf
 
 # PDF files (optional)
 *.pdf
