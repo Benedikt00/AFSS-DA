@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+% -- Loading the code block package:
+\usepackage{listings, listings-rust}
+% -- Basic formatting
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{times}
+\setlength{\parindent}{8pt}
+\usepackage{indentfirst}
+% -- Defining colors:
+\usepackage[dvipsnames]{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.2,0.8,0.7}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+% Definig a custom style:
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codepurple},
+    keywordstyle=\color{NavyBlue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize\bfseries,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+% -- Setting up the custom style:
+\lstset{style=mystyle}
+
+\begin{document}
+\begin{lstlisting}[language=Rust]
+    fn term_frequency(document: &str, term: &str) -> f64 {
+        // Store the lowercase document as a String to ensure it lives long enough
+        let lower_document = document.to_lowercase(); // Convert the document to lowercase
+    
+        // Split the lowercase document into words
+        let normalize_document: Vec<&str> = lower_document.split_whitespace().collect();
+    
+        // Normalize the term by converting it to lowercase
+        let normalize_term = term.to_lowercase();
+    
+        // Count occurrences of the term in the document
+        let count = normalize_document
+            .iter()
+            .filter(|&&word| word == normalize_term) // Compare each word with the term
+            .count();
+    
+        // Calculate the term frequency as occurrences / total number of words
+        let total_words = normalize_document.len();
+        if total_words == 0 {
+            0.0 // Avoid division by zero if the document is empty
+        } else {
+            count as f64 / total_words as f64
+        }
+    }
+\end{lstlisting}
+\end{document}

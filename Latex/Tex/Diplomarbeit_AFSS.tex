@@ -56,10 +56,12 @@
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Other Settings
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 
 %\pagecolor[rgb]{0,0,0} %black
 
@@ -73,6 +75,38 @@
 %    linkcolor=black,
 %    urlcolor=black
 %}
+
+
+%% codestuff
+\usepackage{listings, listings-rust}
+\setlength{\parindent}{8pt}
+\usepackage{indentfirst}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codecomment}{rgb}{0.6,0.6,0.6}
+\definecolor{backcolour}{rgb}{0.92,0.92,0.91}
+
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codecomment},
+    keywordstyle=\color{NavyBlue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize\bfseries,
+    breakatwhitespace=false,         
+    %breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+    %numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+% -- Setting up the custom style:
+\lstset{style=mystyle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \geometry{a4paper}
@@ -391,7 +425,6 @@ Die Überschriften der nachfolgenden Unterkapitel stellen lediglich Platzhalter 
 \newpage
 
 \include{simbuerger}
-
 
 \newpage
 \section{Titel der Individuellen Themenstellung (Vincent Sonvilla)}
