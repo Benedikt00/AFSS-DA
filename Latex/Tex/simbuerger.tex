@@ -75,6 +75,23 @@ Als Datenbanksystem wurde aufgrund des guten Supports MySQL geqählt. Dies ist e
 
 \subsubsection{Docker}
 
+    \begin{wrapfigure}{r}{0.3\textwidth} % 'r' for right, 'l' for left
+        \vspace{-20px}
+        \includegraphics[width=0.3\textwidth]{docker-logo-011.png} % Replace with your image file
+        \caption{Docker-Logo: \cite{docker_logo}}
+    \end{wrapfigure}
+
+    Docker ist eine Umgebung, in der Softwareprojekte isoliert werden können. Da besonders auch bei Projekten mit großem Python anteil, viele Pakete mit verschiedenen Versoinen benötigt werden, ist es sehr hilfreich diese zu bündeln. \\
+    Umgesetzt wird dies mithilfe von Containern welche einen gesamten Programmteil als alleinstehende Einheit enthält. Diese werden über ein 'Dockerfile' configuriert, welches sich im selben Ordner wie die Python-Anwendung befindet. In diesem werden Parameter wie die Python-Version und die benötigten pip-Pakete sowie den Programmeinstiegspunkt angegeben. \\ 
+    Ein zweier Docker Conteianer wird mit einem MySql-Image erstellt, dort wird die Datenbank aufgesetzt. \\
+    Um diese Zwei Container miteinander Kommunizieren zu lasen, ist es ntig ein sog. docker-compose.yml File zu erstellen. Dies enthält alle Informationen über verwendete container, deren Ports, sowie Speicher für Dateien (Volumes). Bei Testbetrieb wird der Datenbankcontainer aleinstehend bestrieben und mit einem anderen Port, keine Zugriffsprobleme zu generieren. In Produktion wird dann derselbe Container in den Containerverband übertragen und dort mit einem anderen Port weiterverwendet. \\
+    Erstellt wird dieser Containerverband mit den Consolenbefehlt der auf das docker-compose File zugreift. 
+    \begin{lstlisting}[language=bash]
+        docker build docker-compose.yml
+    \end{lstlisting}
+    Dann werden auch alle Logs in der Kommandozeile ausgegeben sowie 
+
+
 \subsubsection{Backend}
 \subsubsection{APIs}
 \subsubsection{Lageralgorithmus}
