@@ -1,4 +1,12 @@
 /* General Styles */
+
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('ethnocentric\ rg.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -27,7 +35,7 @@ body {
     align-items: center;
 }
 
-.navbar-right{
+.navbar-right {
     margin-right: 30px;
 }
 
@@ -53,6 +61,114 @@ body {
 }
 
 /* For testing purpose - adds space below the navbar */
-main {
+#main_image {
     margin-top: 60px;
+    /* background-iamge: url() */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#main_title {
+    font-family: "Ethnocentric";
+}
+
+#descripton {}
+
+#description #group_photo_container {}
+
+#description #group_photo_container img {
+    max-width: 30vw;
+    max-height: 50vh;
+}
+
+
+#desc_germ.visible,
+#desc_eng.visible {
+    display: block;
+    /* Show when the visible class is added */
+}
+
+#description #desc_germ {
+    display: block;
+
+}
+
+#description #desc_eng {
+    display: none;
+}
+
+#description button {
+    background: none;
+    color: inherit;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 7px;
+}
+
+
+
+/* Carousel container */
+/* Carousel container */
+#carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#project_team {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+}
+
+#first_bunch,
+#second_bunch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-shrink: 0;
+    width: 100%;
+    transition: transform 0.5s ease;
+    /* Smooth animation for sliding */
+}
+
+.member {
+    text-align: center;
+    margin: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 17vw;;
+}
+
+.member img{
+    max-width: 200px;
+}
+
+.carousel-btn {
+    background-color: #ccc;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+.carousel-btn:not(:disabled):hover {
+    background-color: #555;
 }

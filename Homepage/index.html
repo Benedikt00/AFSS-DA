@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll-Based Navbar</title>
     <link rel="stylesheet" href="./css/index.css">
+    <title>AFSS</title>
 </head>
 
 <body>
@@ -16,18 +17,115 @@
         </div>
         <nav class="navbar-right">
             <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="#">Projekt</a>
+            <a href="#">Gallerie</a>
+            <a href="#">Sponsors</a>
         </nav>
     </header>
 
-    <main>
-        <section style="height: 2000px; padding: 20px;">
-            <h1>Scroll Down to See Navbar Effect</h1>
-            <p>Content goes here...</p>
-        </section>
-    </main>
+    <div id="main_image">
+        <div id="main_title">
+            <h1>AFSS</h1>
+        </div>
+        <div id="under_title">
+            Automated F@ctory Storage System
+        </div>
+    </div>
+
+
+    <div id="description">
+
+        <div id="group_photo_container">
+            <img src="./images/gruppenphoto.png" alt="Gruppenphoto">
+        </div>
+
+        <div id="desc_text">
+
+            <div id="desc_germ">
+                <h1>Kurzbeschreibung</h1>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                    dolor sit amet.</p>
+            </div>
+
+            <div id="desc_eng">
+                <h1>Shortdescription</h1>
+                <p>Very english Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                    dolor sit amet.</p>
+            </div>
+
+            <button onclick="change_desc_lang()">Change language</button>
+
+        </div>
+
+    </div>
+
+    <div id="project_team">
+        <div id="carousel-container">
+            <button id="left-btn" class="carousel-btn" disabled>&#10094;</button>
+            <div id="project_team">
+                <div id="first_bunch">
+                    <div class="member">
+                        <img src="images/members/simbuerger.png" onerror="this.src='images/members/default.png';">
+                        <p id="name">Simbürger Benedikt</p>
+                        <p id="stuff_done">Maschienenbau, Softwareentwicklung, Projektleitung</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/members/sonvilla.png" onerror="this.src='images/members/default.png';">
+                        <p id="name">Sonvilla Vincent</p>
+                        <p id="stuff_done">SPS-Programmierung und Kommunikation</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/members/voglauer.png" onerror="this.src='images/members/default.png';">
+                        <p id="name">Voglauer Nikolaj</p>
+                        <p id="stuff_done">Schaltschrankprojektierung und Montage</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/members/widmann.png" onerror="this.src='images/members/default.png';">
+                        <p id="name">Widmann Elena</p>
+                        <p id="stuff_done">Sensorik und Sicherheitstechnik</p>
+                    </div>
+                </div>
+                <div id="second_bunch"><div class="member">
+                    <img src="images/members/wurnitsch.png" onerror="this.src='images/members/default.png';">
+                    <p id="name">Ing. Wurnitsch Bernhard</p>
+                    <p id="stuff_done">Projektbetreuung Werkstätte</p>
+                </div>
+                <div class="member">
+                    <img src="images/members/sallinger.png" onerror="this.src='images/members/default.png';">
+                    <p id="name">Dipl. Ing. Sallinger Christian</p>
+                    <p id="stuff_done">Projektbetreuung Theorie</p>
+                </div></div>
+                
+            </div>
+            <button id="right-btn" class="carousel-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+
 
     <script src="index.js"></script>
 </body>
