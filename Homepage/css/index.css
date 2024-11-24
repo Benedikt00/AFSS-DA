@@ -1,65 +1,5 @@
 /* General Styles */
 
-@font-face {
-    font-family: 'Ethnocentric';
-    src: url('ethnocentric\ rg.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgb(87, 87, 87);
-}
-
-/* Navbar Styles */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-right {
-    margin-right: 30px;
-}
-
-.logo {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.brand-name {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.navbar-right a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
-}
-
-.navbar-right a:hover {
-    color: #ff5733;
-}
-
 /* For testing purpose - adds space below the navbar */
 #main_image {
     margin-top: 60px;
@@ -171,4 +111,15 @@ body {
 
 .carousel-btn:not(:disabled):hover {
     background-color: #555;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer img{
+    max-height: 40px;
 }

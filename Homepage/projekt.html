@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Based Navbar</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/projekt.css">
+    <title>AFSS</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <img src="logo.png" alt="Logo" class="logo">
+            <span class="brand-name">My Website</span>
+        </div>
+        <nav class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="projekt.html">Projekt</a>
+            <a href="galerie.html">Gallerie</a>
+            <a href="sponsors.html">Sponsors</a>
+        </nav>
+    </header>
+
+    <footer>
+
+        <img src="./images/logo_transparent.png" alt="HTL-KLU-logo" href="https://www.htl-klu.at/willkommen">
+        <p>PROJEKTE DER HTL-MÖSSINGERSTRASSE</p>
+
+
+    </footer>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+
+<script>
+    let lastScrollY = window.scrollY;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        // Scrolling Down - Hide Navbar
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling Up - Show Navbar
+        navbar.style.transform = 'translateY(0)';
+    }
+
+    lastScrollY = currentScrollY;
+});
+</script>
+
+</html>
