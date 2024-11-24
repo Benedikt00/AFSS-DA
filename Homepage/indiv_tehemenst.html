@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll-Based Navbar</title>
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/projekt.css">
+    <link rel="stylesheet" href="./css/galerie.css">
     <title>AFSS</title>
 </head>
 
@@ -31,11 +31,12 @@
     </header>
     <main>
 
-        
+
     </main>
     <footer>
-
-        <img src="./images/logo_transparent.png" alt="HTL-KLU-logo" href="https://www.htl-klu.at/willkommen">
+        <a href="https://www.htl-klu.at/willkommen">
+            <img src="./images/logo_transparent.png" alt="HTL-KLU-logo">
+        </a>
         <p>PROJEKTE DER HTL-MÖSSINGERSTRASSE</p>
 
 
@@ -65,21 +66,21 @@
     });
 
     let lastScrollY = window.scrollY;
-const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY) {
-        // Scrolling Down - Hide Navbar
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling Up - Show Navbar
-        navbar.style.transform = 'translateY(0)';
-    }
+        if (currentScrollY > lastScrollY) {
+            // Scrolling Down - Hide Navbar
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling Up - Show Navbar
+            navbar.style.transform = 'translateY(0)';
+        }
 
-    lastScrollY = currentScrollY;
-});
+        lastScrollY = currentScrollY;
+    });
 </script>
 
 </html>

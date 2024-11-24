@@ -9,9 +9,14 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: rgb(87, 87, 87);
+    display: flex;
+    flex-direction: column; /* Flexbox for the body */
+    min-height: 100vh;
 }
 
+
 /* Navbar Styles */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -33,27 +38,98 @@ body {
     align-items: center;
 }
 
-.navbar-right {
-    margin-right: 30px;
-}
-
 .logo {
     height: 40px;
     margin-right: 10px;
 }
 
 .brand-name {
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: bold;
+    color: white;
+    font-family: "Ethnocentric";
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 30px;
 }
 
 .navbar-right a {
-    color: white;
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
 .navbar-right a:hover {
-    color: #ff5733;
+    color: #f39c12;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 180px;
+    margin-top: 20px;
+
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    text-align: left;
+    display: block;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+}
+
+/* Show the dropdown */
+.dropdown.open .dropdown-menu {
+    display: flex;
+}
+
+
+main {
+    flex: 1;
+    margin: 20px 0;
+    margin-top: 60px;
+    width: 100%;
+    text-align: left;
+    line-height: 1.6;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+footer img{
+    max-height: 40px;
 }
