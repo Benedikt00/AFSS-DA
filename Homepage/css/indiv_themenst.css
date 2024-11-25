@@ -1,0 +1,22 @@
+.head{
+    margin: 2vh 10vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.head .text{
+    width: 60%
+}
+
+.head .img_c{
+    width: 30%
+}
+
+.head .img_c img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+

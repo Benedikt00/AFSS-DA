@@ -5,6 +5,7 @@
 
 }
 
+
 #logos {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
@@ -38,3 +39,4 @@
 #spons_cont #logos #weidmueller {
     width: 30vw;
 }
+

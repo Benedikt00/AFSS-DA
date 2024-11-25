@@ -1,5 +1,4 @@
-
-#first_cont{
+#first_cont {
     margin-top: 3vh;
     display: flex;
     flex-direction: row;
@@ -8,24 +7,71 @@
     width: 100%;
 }
 
-#first_cont #project_desc{
+#first_cont #project_desc {
     padding-top: 3vh;
     width: 40%;
     background-color: rgb(97, 97, 97);
+    padding-left: 2vw;
+
 }
 
-#first_cont #pr_img_cont{
+#first_cont #pr_img_cont {
     width: 40%;
     overflow: hidden;
     padding: auto;
     background-color: rgb(97, 97, 97);
 }
 
-#first_cont #pr_img_cont img{
+#first_cont #pr_img_cont img {
     width: 80%;
     margin: auto;
 
 }
 
+#scema {
+    margin-top: 3vh;
+    width: 100%;
+    height: auto;
+}
 
+#scema img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#used_sw_df {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#scroll_container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.used_sw {
+    min-width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.used_sw img {
+    width: 10vw;
+    border-radius: 5vw;
+}
+
+.used_sw h3 {}
+
+.used_sw p {}
