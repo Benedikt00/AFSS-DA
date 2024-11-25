@@ -1,0 +1,40 @@
+#spons_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    max-width: 800px; /* Optional: Limit container width */
+    margin: 0 auto; /* Center container on the page */
+    padding: 20px;
+}
+
+#logos img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; /* Optional: Limit the height of logos */
+    object-fit: contain; /* Ensure the image scales proportionally */
+}
+
+#spons_cont #logos #igus {
+    width: 20vw;
+}
+
+#spons_cont #logos #knapp {
+    width: 20vw;
+}
+
+#spons_cont #logos #lapp {
+    width: 20vw;
+}
+
+#spons_cont #logos #weidmueller {
+    width: 30vw;
+}

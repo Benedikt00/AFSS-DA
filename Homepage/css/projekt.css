@@ -1,5 +1,31 @@
 
+#first_cont{
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40vh;
+    width: 100%;
+}
 
+#first_cont #project_desc{
+    padding-top: 3vh;
+    width: 40%;
+    background-color: rgb(97, 97, 97);
+}
+
+#first_cont #pr_img_cont{
+    width: 40%;
+    overflow: hidden;
+    padding: auto;
+    background-color: rgb(97, 97, 97);
+}
+
+#first_cont #pr_img_cont img{
+    width: 80%;
+    margin: auto;
+
+}
 
 
 
