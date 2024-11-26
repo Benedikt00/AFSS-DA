@@ -33,7 +33,7 @@
     -webkit-text-stroke: 0.5px white;
 }
 
-#descripton {
+#description {
     margin-top: 3vh;
     display: flex;
     flex-direction: row;
