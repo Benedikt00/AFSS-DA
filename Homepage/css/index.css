@@ -17,9 +17,10 @@
 }
 
 #first_look #front_picture img {
-    max-width: 100%;
-    height: auto;
-    filter: blur(2px);
+    margin-top: -10vh;
+    width: 100vw;
+    max-height: 100vh;
+    filter: blur(3px);
 }
 
 .center {
@@ -29,19 +30,34 @@
     transform: translate(-50%, -50%);
     font-size: 200px;
     font-family: 'Ethnocentric';
+    -webkit-text-stroke: 0.5px white;
 }
 
-#descripton {}
+#descripton {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 70vh;
+    width: 100%;
+}
 
 #description #group_photo_container {}
 
 #description #group_photo_container img {
-    margin: 100px;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    width: 30%;
     border: 2px solid black;
-    max-height: 80vh;
-    border-radius: 10%;
+    border-radius: 20%;
 }
 
+#description #desc_text {
+    margin-top: 10vh;
+    margin-right: 10vw;
+    width: 30%;
+    border-radius: 20%;
+}
 
 #desc_germ.visible,
 #desc_eng.visible {
