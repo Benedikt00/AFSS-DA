@@ -16,13 +16,30 @@
     font-family: "Ethnocentric";
 }
 
+#first_look #front_picture img {
+    max-width: 100%;
+    height: auto;
+    filter: blur(2px);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    font-family: 'Ethnocentric';
+}
+
 #descripton {}
 
 #description #group_photo_container {}
 
 #description #group_photo_container img {
-    max-width: 30vw;
-    max-height: 50vh;
+    margin: 100px;
+    border: 2px solid black;
+    max-height: 80vh;
+    border-radius: 10%;
 }
 
 
@@ -70,6 +87,7 @@
 #project_team {
     display: flex;
     width: 100%;
+    background-color: rgb(7, 73, 187);
     overflow: hidden;
     height: auto;
 }
@@ -94,11 +112,16 @@
 }
 
 .member img{
-    max-width: 200px;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .carousel-btn {
-    background-color: #ccc;
+    background-color: transparent;
     border: none;
     color: white;
     font-size: 24px;
@@ -108,11 +131,13 @@
 }
 
 .carousel-btn:disabled {
-    background-color: #888;
+    background-color: transparent;
+    visibility: hidden;
     cursor: not-allowed;
 }
 
 .carousel-btn:not(:disabled):hover {
-    background-color: #555;
+    background-color: transparent;
+    color: black;
 }
 
