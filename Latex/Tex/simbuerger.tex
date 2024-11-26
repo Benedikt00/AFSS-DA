@@ -24,6 +24,58 @@
 \subsubsection{Z-Achse ("Gabel")}
 \paragraph{Positionsbestimmung}
 
+Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet.
+
+\noindent\begin{minipage}{\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{7mm}
+    \begin{equation*}
+        X_s = \frac{1}{M} \cdot \displaystyle\sum_{i = 0}^{n} z_i \cdot m_i
+    \end{equation*}
+\end{minipage}%
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{align*}
+        &Z_s: \text{Z-Koordinate des Massenschwerpunkts} & &\left[m\right]\\
+        &M: \text{Gesamtmasse} & &\left[kg\right]\\
+        &z_1: \text{Z-Koordinate der Teilmasse} & &\left[m\right] \\
+        &m_1: \text{Masse der Teilmasse} & &\left[kg\right]
+    \end{align*}
+\end{minipage}
+\end{minipage} 
+
+\vspace{5mm}
+
+
+    \begin{table}[h!]
+        \centering
+        \centering
+            \begin{tabular}{c c c}
+                Gegenstand & Masse in kg & Position in mm\\
+                \hline
+                Motor & 0.3 & 21 \\
+                Z-Führungsschiene & 1 & 150 \\
+                Z-Achse & 0.3 & 180 
+            \end{tabular}
+        \caption{X-Achse unbeladen und eingefahren}
+        \end{table}
+        
+        \vspace{5mm}
+        \begin{table}
+            \centering
+            \begin{tabular}{c c c}
+                Gegenstand & Masse in kg & Position in mm\\ 
+                \hline
+                Motor & 0.3 & 21 \\
+                Z-Führungsschiene & 1 & 150 \\
+                Z-Achse & 1.3 & 380
+            \end{tabular}
+            \caption{X-Achse beim Ladevorgang}
+        \end{table}
+    
+    
+
+
+
 \subsubsection{Fertigung}
 
 \subsubsection{Umlenkrollen}
@@ -69,9 +121,28 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 \subsubsection{Aufbau}
 
 \subsubsection{Benutzeroberfläche}
+
+
+
 \subsubsection{Datenbanken}
 
-Als Datenbanksystem wurde aufgrund des guten Supports MySQL geqählt. Dies ist ein relationales Datenbankmanagementsystem welches in einem Docker-Container aufgesetzt wird. 
+Als Datenbanksystem wird aufgrund des guten Supports MySQL gewählt. Dies ist ein relationales Datenbankmanagementsystem welches in einem Docker-Container aufgesetzt wird. In diesem werden alle Daten gespeichert, die zur Auswahl sowie zur Ausliferung von Teilen nötig sind.
+
+\begin{figure}[h]
+    \includegraphics[width=0.6\textwidth]{DB-Schema.png}
+    \centering
+    \caption{Datenbankschema des AFSS}
+\end{figure}
+
+Wie in Abb. 4.2 ersichtlich, beinhäklt sich diese Datenbank fünf Tabellen. Diese hohe Komplexität resultiert daraus, dass diese Struktur eine 100\%ige Flexivilität in der Ablage von Bauteilen in einem überliegendem System bietet.
+
+Die Erste Tabelle beschreibt ein einziges theoretisches Bauteil. Dieses hat einen Namen, Gewicht, Beschreibung und Kategorien zur Filterung. Unter der Spalte 'picture' wird ein Dateiname gespeichert, der zu einem Bild zeigt, dass das Produkt abbildet.
+Die zweite beschreibt einen Container. Im Lagersystem entspricht dieser einer Box. Diese kann mehrere `stocks' beinhalten, sowie durch einen Barcode identifiziert werden. Weiters muss jeder Container immer eine aktuelle Position (`current\_location') besitzen, an der die Box gerade ist. Im ausgelagerten (und noch nicht eingelagerten) Zustand ist diese `location' Position 0. Das Ziel der Box wird in `target\_location' gespeichert. Stimmt die aktuelle mit der Zielposition überein, so ist die Box an ihrem Ziel angelangt. Die Kategorie `size' beschreibt die Größe eines Containers und lässt somit theoretisch zu, dass in Zukunft auch unterschiedlich große Boxen zuverlässig in die richtigen Lagerplätze eingelagert werden. `priority' wird nicht verwendet.
+
+Container und Artikel werden im sog. 'stock' verheiratet. Dieser kann als bauteilhaufen in einer Box verstanden werden. Es können also auch mehrere 'stocks' mit dem selben Container geben, dies würde mehreren verschiedenen Bauteilen in einem einzigen Copntainer entsprechen. Auch ist es möglich mehrere Container mit den selben 'stocks' abzubilden, welches ener aufteilung von Abuteilen auf mehrere Container entspräche.
+
+Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese entsprechen den Lagerplätzen. Sie sind einer darüberliegenden 'area' zugeordnet, welche einerseits einen Lagerschrank, aber weiters auch Module wie Vereinzelungsanalgen, abbilden kann. Standorte verfüghen weiters über eine Position welche in X, Y und Z-Richtung beschreibt, wo sich ein Standort im Referenzsystem des Lagers befindet. Auch die größe des Lagerplatzes wird abgebildet, um sicherzustellen, dass auf jeden fall nur die richtige Größe an Box eingelagert wird.
+
 
 \subsubsection{Docker}
 
@@ -87,8 +158,7 @@ Als Datenbanksystem wurde aufgrund des guten Supports MySQL geqählt. Dies ist e
     Um diese Zwei Container miteinander Kommunizieren zu lasen, ist es ntig ein sog. docker-compose.yml File zu erstellen. Dies enthält alle Informationen über verwendete container, deren Ports, sowie Speicher für Dateien (Volumes). Bei Testbetrieb wird der Datenbankcontainer aleinstehend bestrieben und mit einem anderen Port, keine Zugriffsprobleme zu generieren. In Produktion wird dann derselbe Container in den Containerverband übertragen und dort mit einem anderen Port weiterverwendet. \\
     Erstellt wird dieser Containerverband mit den Consolenbefehlt der auf das docker-compose File zugreift. 
     \begin{lstlisting}[language=bash]
-        docker build docker-compose.yml
-    \end{lstlisting}
+        docker build docker-compose.yml\end{lstlisting}
     Dann werden auch alle Logs in der Kommandozeile ausgegeben sowie 
 
 
