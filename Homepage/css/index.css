@@ -30,33 +30,33 @@
     transform: translate(-50%, -50%);
     font-size: 200px;
     font-family: 'Ethnocentric';
-    -webkit-text-stroke: 0.5px white;
+    text-shadow: 0px 0px 20px #e5e1e1;
 }
 
 #description {
+
+    margin: 10vh 10vw;
     margin-top: 3vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    height: 70vh;
-    width: 100%;
+    justify-content: space-between;
+    height: auto;
 }
 
-#description #group_photo_container {}
+#description #group_photo_container {
+    width: 30%;
+}
 
 #description #group_photo_container img {
-    margin-top: 10vh;
-    margin-left: 10vw;
-    width: 30%;
-    border: 2px solid black;
-    border-radius: 20%;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
+    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
 }
 
 #description #desc_text {
-    margin-top: 10vh;
-    margin-right: 10vw;
-    width: 30%;
-    border-radius: 20%;
+    width: 60%;
+    text-align: justify;
 }
 
 #desc_germ.visible,
@@ -67,7 +67,6 @@
 
 #description #desc_germ {
     display: block;
-
 }
 
 #description #desc_eng {
@@ -98,12 +97,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color:  rgb(76, 164, 231,0.4);
+    padding: 10vh;
 }
 
 #project_team {
     display: flex;
     width: 100%;
-    background-color: rgb(7, 73, 187);
     overflow: hidden;
     height: auto;
 }
@@ -136,10 +136,14 @@
     object-fit: cover;
 }
 
+.member #name {
+    font-weight: bold;
+}
+
 .carousel-btn {
     background-color: transparent;
     border: none;
-    color: white;
+    color: rgb(67, 67, 67);
     font-size: 24px;
     padding: 10px 15px;
     cursor: pointer;
