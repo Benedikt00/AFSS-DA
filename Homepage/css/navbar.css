@@ -47,11 +47,7 @@ body {
 .brand-name {
     font-size: 1.5em;
     font-weight: bold;
-<<<<<<< HEAD
-    color: rgb(0, 0, 0);
-=======
     color: black;
->>>>>>> 3aea196cfcd2be24e337c8766e3049754558d9ad
     font-family: "Ethnocentric";
 }
 
@@ -64,25 +60,16 @@ body {
 
 .navbar-right a {
     text-decoration: none;
-<<<<<<< HEAD
-    color: rgb(0, 0, 0);
-=======
     color: black;
->>>>>>> 3aea196cfcd2be24e337c8766e3049754558d9ad
     font-size: 1em;
     position: relative;
     padding: 5px 10px;
     transition: color 0.3s ease;
-    font-weight: 700;
 }
 
 .navbar-right a:hover {
-<<<<<<< HEAD
-    color: #5456ff;
-=======
     color: rgb(76, 164, 231);
 
->>>>>>> 3aea196cfcd2be24e337c8766e3049754558d9ad
 }
 
 /* Dropdown Styles */
