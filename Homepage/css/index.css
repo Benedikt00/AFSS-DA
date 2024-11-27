@@ -34,7 +34,11 @@
 }
 
 #description {
+
     margin: 10vh 10vw;
+
+    margin-top: 3vh;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
