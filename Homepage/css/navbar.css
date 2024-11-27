@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Ethnocentric';
-    src: url('ethnocentric\ rg.otf') format('otf');
+    src: url('ethnocentric\ rg.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -8,6 +8,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    /*font-family: 'Ethnocentric';*/
     background-color: rgb(239, 237, 237);
     display: flex;
     flex-direction: column; /* Flexbox for the body */
@@ -22,7 +23,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.8);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
@@ -46,7 +47,7 @@ body {
 .brand-name {
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
+    color: black;
     font-family: "Ethnocentric";
 }
 
@@ -59,7 +60,7 @@ body {
 
 .navbar-right a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1em;
     position: relative;
     padding: 5px 10px;
@@ -67,7 +68,8 @@ body {
 }
 
 .navbar-right a:hover {
-    color: #f39c12;
+    color: rgb(76, 164, 231);
+
 }
 
 /* Dropdown Styles */
@@ -84,7 +86,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #444;
+    background-color: rgba(255,255,255);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     z-index: 1000;
@@ -99,12 +101,12 @@ body {
     padding: 10px;
     text-align: left;
     display: block;
-    color: white;
+    color: black;
     transition: background-color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-    background-color: #555;
+    background-color: rgb(237, 237, 237);
 }
 
 /* Show the dropdown */

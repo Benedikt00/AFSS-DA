@@ -36,25 +36,26 @@
 #description {
 
     margin: 10vh 10vw;
-
     margin-top: 3vh;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 70vh;
+    height: auto;
 }
 
+#description #group_photo_container {
+    width: 30%;
+}
 
 #description #group_photo_container img {
-    width: 40%;
+    width: 100%;
     -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
     -moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
     box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
 }
 
 #description #desc_text {
-    width: 50%;
+    width: 60%;
     text-align: justify;
 }
 
@@ -96,6 +97,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color:  rgb(76, 164, 231,0.4);
+    padding: 10vh;
 }
 
 #project_team {
@@ -133,10 +136,14 @@
     object-fit: cover;
 }
 
+.member #name {
+    font-weight: bold;
+}
+
 .carousel-btn {
     background-color: transparent;
     border: none;
-    color: white;
+    color: rgb(67, 67, 67);
     font-size: 24px;
     padding: 10px 15px;
     cursor: pointer;
