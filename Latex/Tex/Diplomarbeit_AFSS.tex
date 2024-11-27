@@ -30,6 +30,7 @@
 \usepackage{tocloft}
 \usepackage[section]{placeins}
 \usepackage[nottoc,numbib]{tocbibind}
+\usepackage{ragged2e}
 
 
 \usepackage{emptypage}
@@ -45,7 +46,7 @@
 \renewcommand{\headruleskip}{3mm}
 \renewcommand{\footruleskip}{4mm}
 
-\usepackage[english,ngerman]{babel}
+\usepackage[main = ngerman, english]{babel}
 \usepackage[ddmmyyyy]{datetime}
 
 \newcommand{\todayD}{\the\day.\the\month.\the\year}   
@@ -127,8 +128,13 @@
     }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\babelprovide[import]{ngerman}
+
+
 
 \begin{document}
+
+
 \pagenumbering{gobble}
 
 \begin{figure}[h]

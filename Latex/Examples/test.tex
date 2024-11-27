@@ -1,21 +1,23 @@
 \documentclass[a4paper,12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{graphicx} % For including images
-\usepackage{wrapfig}  % For wrapping text around figures
-\usepackage{lipsum}   % For filler text
+\usepackage[main=ngerman,english]{babel} % Set main language
+
+% Use hyphenation rules specific to German:
+%\babelprovide[import]{ngerman} % Import hyphenation patterns for German
+\babelhyphenation[ngerman]{
+    %L\"o-sungs-ans\"atze
+    %Ver-bind-ungs-m\"og-lich-keit-en
+    HTL-Mössinger-straße
+    hypher-nation
+}
+
 
 \begin{document}
 
-\section*{Text Wrapping Around an Image}
+In diesem Text testen wir die \emph{Verbindungsmöglichkeiten}, 
+die \emph{HTL-Mössingerstraße} und die \emph{Lösungsansätze}.
 
-Here is an example of text wrapping around an image:
+\selectlanguage{english}
 
-\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
-    \includegraphics[width=\linewidth]{example-image} % Replace with your image file
-    \caption{Example Image} % Optional: Add a caption
-\end{wrapfigure}
-
-\lipsum[1-2] % Replace with your actual text. This is filler text.
+Switching to English text here does not affect hyphenation rules.
 
 \end{document}

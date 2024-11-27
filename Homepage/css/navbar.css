@@ -46,7 +46,7 @@ body {
 .brand-name {
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: "Ethnocentric";
 }
 
@@ -59,15 +59,16 @@ body {
 
 .navbar-right a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1em;
     position: relative;
     padding: 5px 10px;
     transition: color 0.3s ease;
+    font-weight: 700;
 }
 
 .navbar-right a:hover {
-    color: #f39c12;
+    color: #5456ff;
 }
 
 /* Dropdown Styles */
