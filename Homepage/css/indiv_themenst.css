@@ -38,3 +38,9 @@
     overflow: hidden;
 }
 
+.head .img_c #name {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(45, 45, 45);
+}
+
