@@ -29,18 +29,22 @@
         </nav>
     </header>
     <main>
+    
+    <div id="gallery_title" style="line-height: 0;">
+        <h1>Gallerie</h1>
+    </div>
 
-        <div class="gallery">
-            <button class="arrow left-arrow" onclick="navigate(-1)">&#8249;</button>
-            
-            <div class="photo-wrapper">
-                <div class="photo-preview left-preview"></div>
-                <img id="current-photo" src="" alt="Current Photo">
-                <div class="photo-preview right-preview"></div>
-            </div>
-            
-            <button class="arrow right-arrow" onclick="navigate(1)">&#8250;</button>
+    <div class="gallery">
+        <button class="arrow left-arrow" onclick="navigate(-1)">&#8249;</button>
+                
+        <div class="photo-wrapper">
+            <div class="photo-preview left-preview"></div>
+            <img id="current-photo" src="" alt="Current Photo">
+            <div class="photo-preview right-preview"></div>
         </div>
+                
+        <button class="arrow right-arrow" onclick="navigate(1)">&#8250;</button>
+    </div>
 
     </main>
     <footer>
@@ -60,16 +64,12 @@
 
     const photos = [
     // Replace with the paths of your photos
-    "images/gruppenphoto.png",
-    "images/galerie/20220430_164307.jpg",
-    "images/galerie/20220430_164312.jpg",
-    "images/galerie/20220430_164313.jpg",
-    "images/galerie/20220430_164555.jpg",
-    "images/galerie/20220430_164558.jpg",
     "images/galerie/1.jpg",
     "images/galerie/2.jpg",
     "images/galerie/3.jpg",
-    "images/galerie/4.jpg"
+    "images/galerie/4.jpg",
+    "images/galerie/5.jpg",
+    "images/galerie/6.jpg"
     ];
 
     let currentIndex = 0;

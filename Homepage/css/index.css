@@ -170,5 +170,6 @@
 .carousel-btn:not(:disabled):hover {
     background-color: transparent;
     color: black;
+    transform: scale(1.1);
 }
 
