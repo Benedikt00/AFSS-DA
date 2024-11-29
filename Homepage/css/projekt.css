@@ -28,6 +28,7 @@
 
 #first_cont #pr_img_cont img {
     width: 100%;
+    scale: 1.8;
 }
 
 #scema {
@@ -72,11 +73,26 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 5vw;
+    overflow: hidden;
 }
 
 .used_sw img {
     width: 10vw;
-    border-radius: 5vw;
+    height: auto;
+}
+
+.zoomed_out {
+    scale: 0.7;
+}
+
+.zoomed_in {
+    scale: 1.5;
+}
+
+.zoom_and_edges {
+    scale: 0.7;
+    border-radius: 5%;
 }
 
 .used_sw h3 {}
