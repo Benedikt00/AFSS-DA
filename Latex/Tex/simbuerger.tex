@@ -1,9 +1,9 @@
-\section{Hardwareentwicklung, Softwarebackend \\ und Benutzeroberfläche \textcolor{gray}{(Simbürger)}}
+\section{Hardwareentwicklung, Softwarebackend \\ und Benutzeroberfläche \textcolor{gray}{(Benedikt Simbürger)}}
 
 \subsection{Hardware}
 
-\subsubsection{Planung}
-Grundlegende Anforderungen zur planung der AFSS-Mechanik, sind die größe des Lifts an der \\HTL-Mössingerstraße, sowie möglichst einfache realisierung mit HTL-mitteln, möglichst wenig kompromisse in der Funktion oder zuverlässigkeit eingehen zu müssen.
+\subsubsection{Planung - Grundanforderungen}
+Grundlegende Anforderungen zur planung der AFSS-Mechanik, sind die größe des Lifts an der HTL-Mössingerstraße, sowie möglichst einfache realisierung mit HTL-mitteln, möglichst wenig kompromisse in der Funktion oder zuverlässigkeit eingehen zu müssen.
 Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf 2.3 m Länge um im Lift transportiert werden zu können und auf 1.9 m höhe aufgrund der Türhöhe im Keller. Weiters müssen auch noch Rollen an den Rahmen angebracht werden, um das Lager überhaubt erst ohne großen mehraufwand bewegen zu können. Diese Extrahöhe limitiert den Rahmen weiter.
 Nun soll dieser rund 2.25 m lange und 1.8 m hohen Raum optimal genutzt werden um eine möglichst große Lagerdichte sicherstellen zu können.
 Um möglichst gute erweiterbarkeit, sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sog. Item-Profile verwendert werden. 
@@ -11,33 +11,36 @@ Um möglichst gute erweiterbarkeit, sowie eine Fertigung an der Schule zu ermög
 \paragraph{Item}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
-    \vspace{-5mm}
+    \vspace{-7mm}
     \includegraphics[width=0.3\textwidth]{Item-Standartverbindungssatz.png}
-    \caption{Item Profil mit Standartverbindungssatz \cite{Item_svs}}
+    \centering
+    \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
 \end{wrapfigure}
 
 Das Item-Profilsystem, ist ein System welches Aluminium Extrusionen in verschiedenen Ausführungen, sowie viele Verbindungs-möglichkeiten zu sich selbst sowie andere mechanische Elemente bietet. Hierbei gibt es eine breite Auswahl an Profielen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen, werden 20x20-Extrusionen Verbaut. 
-Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit sog. Nutenstene mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, werden Standartverbindungssätze verwendet. 
-\\
+Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit sog. Nutenstene mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, werden Standartverbindungssätze verwendet. \\
+\vspace{4mm}[h]
 Die Anwendung im AFSS erfordert weiters recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot Profile verwendet
-
 
 \paragraph{V-Slot}
 
-\begin{wrapfigure}{r}{0.3\textwidth}
-    \vspace{-5mm}
-    \includegraphics[width=0.3\textwidth]{V-Wheel.png}
-    \caption{V-Slot mit V-Wheel \cite{v_slot_wheel}}
+\begin{wrapfigure}{R}{0.3\textwidth}
+    \includegraphics[width=0.3\textwidth]{V-Wheel.jpg}
+    \centering
+    \caption{V-Slot-Profil mit V-Wheel, Quelle: \cite{v_slot_wheel}}
 \end{wrapfigure}
 
-Auch V-Slot-Profile sind Aluminium Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile, mit Nutensteinen ect. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann. 
+Auch V-Slot-Profile sind Aluminium Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile, mit Nutensteinen ect. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann. Dies Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da diese einerseits auch breiter und mehr V-Wheels verwendet werden, sowie einen sehr großen Widerstandsmoment aufweißen. 
 
 
+\subsection{Vorgehensweise}
+Aufgrund der besoderen und sehr Komplexen anforderungen dieser Mechanik, erfolgt die Entwicklung in mehreren Iterationen. Nach Auslegung der Grundparameter wird eine Grundkonstruktion erstellt, um mögliche Lösungsansätze für die jeweiligen Komponenten zu skizzieren. Durch diese Grobe Planung, können viele Konzepte ohne großen Zeitaufwand iteriert werden und auch mögliche missverständnisse o. ä. frühzeitig aufgeklärt und überarbeitet werden. \\
+Um bestimmte elemente der Mechanik einzeln zu testen, werden auch mehrere Prototypen gebaut und die gewonnenen Erkentnisse in die finale Konstruktion miteingebunden. \\
 
 
 \subsubsection{Rahmen}
 
-Der Rahmen des AFSS bezeichnet jene Struktur, welche als äußerstes Gehäuse, sowie grundlegende mechanische Stabilität bietet. Es ist geplant, dass es die anforderungen von Maximalhöhe und -länge optimal ausnutzt sowie breite minimal hält.  
+Der Rahmen des AFSS bezeichnet jene Struktur, welche als äußerstes Gehäuse, sowie grundlegende mechanische Stabilität bietet. Es ist geplant, dass es die anforderungen von Maximalhöhe und -länge optimal ausnutzt sowie breite minimal hält. 
 
 \subsubsection{Y-Achse}
 \paragraph{Motorauslegung}
@@ -112,7 +115,7 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Dadurch dass diese der gesamten Spannkraft ausgesetzt. Dies erfordert spezielle Anforderungen an die Aufhängen als auch an die Umlenkrolle selbst. Diese soll primär eine 180° Wende des Zahnriemens ermöglichen, sowie sekundär eine Führung für den Riemen bieten. 
 Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteilen in welche Kugellager eingepresst werden.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \begin{subfigure}{.6\textwidth}
         \centering
@@ -129,7 +132,7 @@ Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteile
     \end{subfigure}
     %\caption{Dorn}
     %\label{fig:test}
-    \end{figure}
+\end{figure}
 
 Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
@@ -163,10 +166,25 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 
 \subsubsection{Grundlegendes}
 
+Um dem Endnutzer die möglichkeit zu geben, das AFSS möglichst einfach zu bedienen, sowie die komplexen Logik zu Lagersteuerung auszuführen, bedarf es eines Servers (Backend) und einer graphischen Benutzeroberfläche (GUI oder Frontend). Diese müssen eine Vielzahl an Verschiedenen Funktionen beinhalten.
+
 \subsubsection{Aufbau}
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{Software Howl.drawio.png}
+    \caption{Gesamtüberblick des Servers}
+\end{figure}
+
+Um diesen Anforderungen gerecht zu werden, muss eine Lösung mit sehr hohem grad an Freiheit in der Logik sowie UI gestaltung gewählt werden. Weiters muss es möglich sein, dass zukünftige Schülerinnen und Schüler diesen instandhalten und erweitern. Aus diesen Gründen, sowie den bereits vorhandenen Kentnissen, wird die Programmiersprache 'Python' als Grundlage des Servers verwendet.
+
+\paragraph{Python}
+
+
+\paragraph{Flask}
+
 
 \subsubsection{Benutzeroberfläche}
 
+\paragraph{JavaScript}
 
 
 \subsubsection{Datenbanken}
