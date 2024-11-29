@@ -154,9 +154,9 @@
     background-color: transparent;
     border: none;
     color: rgb(67, 67, 67);
-    font-size: 24px;
-    margin-right: 5vw;
-    margin-left: 5vw;
+    font-size: 42px;
+    margin-right: 3vw;
+    margin-left: 3vw;
     cursor: pointer;
     transition: background-color 0.3s;
 }

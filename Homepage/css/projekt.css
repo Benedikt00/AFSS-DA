@@ -13,21 +13,21 @@
     width: 40%;
     background-color:  rgba(96, 169, 225, 0.319);
     padding-left: 2vw;
-    -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
-    -moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
-    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
+    -webkit-box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
+    -moz-box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
+    box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
 }
 
 #first_cont #pr_img_cont {
     width: 30%;
     overflow: hidden;
-    -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
-    -moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
-    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
+    -webkit-box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
+    -moz-box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
+    box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
 }
 
 #first_cont #pr_img_cont img {
-    height: auto;
+    width: 100%;
 }
 
 #scema {
