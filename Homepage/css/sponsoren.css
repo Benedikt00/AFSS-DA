@@ -5,38 +5,62 @@
 
 }
 
+#spons_cont #thanks {
+    padding: 40px 0px;
+    color: rgb(42, 42, 42);
+}
 
 #logos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    grid-template-areas:
+        "knapp lapp" 
+        "igus maedler"
+        "weidm weidm";
+    grid-template-columns: 1fr 1fr;
+
     gap: 20px; /* Space between grid items */
     justify-items: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    max-width: 800px; /* Optional: Limit container width */
+    max-width: 70vw; /* Optional: Limit container width */
     margin: 0 auto; /* Center container on the page */
     padding: 20px;
 }
 
+#logos a {
+    width: 100%; /* Ensure grid areas are fully filled */
+    height: auto; /* Keep proportional height */
+    display: flex; /* Flexbox for inner content alignment */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
 #logos img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
-    max-height: 150px; /* Optional: Limit the height of logos */
+    max-height: 100px; /* Optional: Limit the height of logos */
     object-fit: contain; /* Ensure the image scales proportionally */
+    padding: 10px;
 }
 
 #spons_cont #logos #igus {
-    width: 20vw;
+    grid-area: igus;
+}
+#spons_cont #logos #maedler {
+    grid-area: maedler;
 }
 
 #spons_cont #logos #knapp {
-    width: 20vw;
+    grid-area: knapp;
+    max-width: 70%;
 }
 
 #spons_cont #logos #lapp {
-    width: 20vw;
+    grid-area: lapp;
+    max-width: 80%;
 }
 
 #spons_cont #logos #weidmueller {
-    width: 30vw;
+    grid-area: weidm;
+    max-width: 70%;
 }
 

@@ -154,9 +154,9 @@
     background-color: transparent;
     border: none;
     color: rgb(67, 67, 67);
-    font-size: 24px;
-    margin-right: 5vw;
-    margin-left: 5vw;
+    font-size: 42px;
+    margin-right: 3vw;
+    margin-left: 3vw;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -170,5 +170,6 @@
 .carousel-btn:not(:disabled):hover {
     background-color: transparent;
     color: black;
+    transform: scale(1.1);
 }
 
