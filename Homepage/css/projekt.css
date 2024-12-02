@@ -33,6 +33,7 @@
 #first_cont #pr_img_cont img {
     width: 100%;
     scale: 1.8;
+    margin-top: 9vh;
 }
 
 #scema {
@@ -42,7 +43,7 @@
 }
 
 #scema_desc {
-    padding-left: 7vw;
+    padding-left: 9vw;
 }
 
 #scema img {
@@ -51,12 +52,17 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20vh;
 }
 
 
 #used_sw_df {
     width: 80%;
     margin: 0 auto;
+}
+
+#used_sw_df h2 {
+    margin-left: -1vw;
 }
 
 #scroll_container {
