@@ -24,6 +24,10 @@
     width: 60%
 }
 
+.head .text p{
+    text-align: justify;
+}
+
 .head .img_c{
     
     padding: 20px 0vw;
