@@ -9,13 +9,17 @@
 }
 
 #first_cont #project_desc {
-    padding-top: 3vh;
+    padding: 4vh 3vw;
     width: 40%;
     background-color:  rgba(96, 169, 225, 0.319);
     padding-left: 2vw;
     -webkit-box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
     -moz-box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
     box-shadow: 13px 13px 41px -5px rgba(0,0,0,0.27);
+}
+
+#first_cont #project_desc p {
+    text-align: justify;
 }
 
 #first_cont #pr_img_cont {
