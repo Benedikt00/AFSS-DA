@@ -8,8 +8,7 @@ Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf 2.3
 Nun soll dieser rund 2.25 m lange und 1.8 m hohen Raum optimal genutzt werden um eine möglichst große Lagerdichte sicherstellen zu können.
 Um möglichst gute erweiterbarkeit, sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sog. Item-Profile verwendert werden. 
 
-\paragraph{Item}
-
+\paragraph{Item}\mbox{}\\
 \begin{wrapfigure}{r}{0.3\textwidth}
     \vspace{-7mm}
     \includegraphics[width=0.3\textwidth]{Item-Standartverbindungssatz.png}
@@ -22,8 +21,7 @@ Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit sog. Nutenstene 
 \vspace{4mm}[h]
 Die Anwendung im AFSS erfordert weiters recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot Profile verwendet
 
-\paragraph{V-Slot}
-
+\paragraph{V-Slot}\mbox{}\\
 \begin{wrapfigure}{R}{0.3\textwidth}
     \includegraphics[width=0.3\textwidth]{V-Wheel.jpg}
     \centering
@@ -61,6 +59,7 @@ Um bestimmte elemente der Mechanik einzeln zu testen, werden auch mehrere Protot
     \label{pts}
 \end{figure}
 
+\subsubsection{Fusion360}
 
 \subsubsection{Rahmen}
 
@@ -70,19 +69,33 @@ Weiters muss noch eingeplant werder, dass noch Rollen zum Transport angebracht w
 
 \subsubsection{X-Achse}
 Die X-Achse des AFSS ist das Mechanische Herzstück. Sie ist jene Achse, welche sich horizontal beweget. Sie hat einen langen Verfahrweg und hohen mechanische Anforderungen (sie muss ihr Eigengewicht und das Gewicht der YZ-Achse stützen). 
+Grundelement der X-Achse sind V-Slot C-Profile, welche oben und unten aufgehängt werden. Diese sind in 1.5m länge erhältlich, deshalb wird die ganze Achse darauf ausgelegt, 2 Stück also 3m Schiene zu verwenden. Diese sind weiters mit 6 Nivelierungsschrauben pro V-Profil ausgestattet, um diese möglichst Parallel zueinander sowie in Waage zu positionieren.
 
-\paragraph{Schlittenauslegung}
+\paragraph{Schlittenauslegung}\mbox{}\\
+Auf der X-Achse verläuft der X-Schlitten, dieser hat die Aufgabe die Y-Achse zu positionieren. Um dies zu bewerkstellingen, muss dieser alle nötigen Motoren und Sensoren beinhalten. Weiters muss er einen Angriffspunkt bieten, um diesen zu bewegen. Ausserdem soll der Schlitten horizontal und vertikal möglichst kompakt sein, um einen möglichst großen Verfahrweg in X- als auch Y- Richtung zu ermöglichen.
+Um eine möglichst Reibungsarme bewegung bewerkstelligen zu können, werden
 
+\paragraph{Antrieb}\mbox{}\\
+Angetrieben wird die X-Achse mit zwei Schrittmotoren, welche jeweils an einer Schiene (oben und unten) angebracht werden. Diese treiben mithilfe eines Zahnriemen die zwei X-Schlitten an. Als Zahnriemen wurde aufgrund der hohen Kraftübertragung, sowie großer Länge auf ein AT5-Zahnprofil mit 16 mm Riemenbreite der Firma Mähdler gesetzt. Dieser wird vom Motor über eine Entsprechende Zahnscheibe angetrieben, und am Shuttle befestigt. 
 
-\paragraph{Antrieb}
+\paragraph{Riemenspannung X-Achse} \mbox{}\\
+Da der Riemen für eine zuverlässige Kraftübertragung bei so langen Verfahrwegen eine relativ große Vorspannkraft benötigt wird, ist das Zahnriemenklemmelement auf der X-Achse auch dementsprechend auszuführen. Um den Zahnriemen zu greifen, muss ein Negativ in Aluminium gefräßt werden, in dieses der Zahnriemen dann auf beiden Seiten des Schlittens geklemmt wird. Die Aufhängung der einen Seite ist einfach mit den Item-Profilen verschraubt, lässt aber noch etwas platz, um den Riemen mit der Hand vorzuspannen. Auf der anderen Seite ist das Klembrett über zwei Gewindestangen mit dem restlichen Shuttle verbunden. Diese können festgezogen werden, um die nötigen Vorspannkräfte zu erzeugen. Ausserdem ist diese Spannvorrichtung in einem Formfaktor ausgeführt, welcher es erlaubt, dierekt darüber die Motoren der Y-Achse anzubringen. 
 
-\paragraph{Kabelführung}
+\paragraph{Achsenführung} \mbox{}\\
+Die Fürung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-Wheels werden von oben auf das C-Profil gedrückt. Jedes Rad wird einzeln aufgehangen. Weiters ist überall eine Schraube mit welcher das Rad weiter in die Führung hienein gedrückt werden kann, sowie ein bis zwei Klemmpunkte, um bei Betrieb die Last von der Spannschraube nehmen zu können. \b{Durch den Geringen Platz im Schlitten ist es durchaus ein Triumpf, dass alls diese Mechanik, neben der Spannelemente und Motoren in einem so kleinen Shuttel platz finden.} Auf der Seite des Schlittens werden noch weitere V-Wheels angebracht, welche die Spurführung übernehmen.
+Im oberen Schlitten werden nur diese Fuhrungsräder verbaut, da es nicht möglich und nötig ist, vertikale Kräfte zu unterstützen.
+
+\paragraph{Kabelführung} \mbox{}\\
+Um Sensoren und Aktoren der Y- und Z-Achse zu unterstützen, müss dementsprechende Leitungen auf das X-Shuttel verlegt werden. Die wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird pralell zum unteren C-Profil verlegt und unter berücksichtigung der Biegeradien am X-Shuttel befestigt. Bei dieser ist darauf zu achten, dass sie alle benötigten Leitungen, sowie genügent Freiraum für die Biegung einhält. Weiters müssen Signal- und Aktorstromkreise durch trennstege voneinander getrennt werden.\\
+Um die weiteren Geräte am  AFSS zu versorgen, müssen zusätzlich noch Kabelkanäle am Rahmen angebracht werden. 
+
+\paragraph{Sensoren}\mbox{}\\
+Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und ein Referenzierschalter. Bei der X-Achse werden als Endschalter mechanische Rolltaster verwendet. Diese werden neben den V-Slot-Profilen befestigt und von einem, vom Schlitten abstrehenden Arm ausgelöst. 
 
 \subsubsection{Y-Achse}
-\paragraph{Motorauslegung}
 
 \subsubsection{Z-Achse ("Gabel")}
-\paragraph{Positionsbestimmung}
+\paragraph{Positionsbestimmung}\mbox{}\\
 
 Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um die Konstrukiton beginnen zu können, werden hierfür ungefähre werte angenommen.
 
@@ -134,57 +147,70 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
 
 \subsubsection{Fertigung}
 
-\paragraph{Umlenkrollen}
+\paragraph{Umlenkrollen}\mbox{}\\
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Dadurch dass diese der gesamten Spannkraft ausgesetzt. Dies erfordert spezielle Anforderungen an die Aufhängen als auch an die Umlenkrolle selbst. Diese soll primär eine 180° Wende des Zahnriemens ermöglichen, sowie sekundär eine Führung für den Riemen bieten. 
 Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteilen in welche Kugellager eingepresst werden.
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{.6\textwidth}
-        \centering
-        \includegraphics[width=10cm]{AT5x16-Umlenkung.png}
-        \caption{Bauteilzeichnung Umlenkrolle}
-        \label{UmlenkrolleBTZ}
-        
-    \end{subfigure}%
-    \begin{subfigure}{.4\textwidth}
-        \centering
-        \includegraphics[width=5cm]{AT5x16-Umlenkung-Dorn.png}
-        \caption{Dorn}
-        \label{DornBTZ}
-    \end{subfigure}
-    %\caption{Dorn}
-    %\label{fig:test}
+    \includegraphics[width=0.8\textwidth]{AT5x16-Umlenkung.png}
+    \caption{Bauteilzeichnung Umlenkrolle}
+    \label{UmlenkrolleBTZ}
 \end{figure}
+
 
 Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
-    \setlength\itemsep{0mm}
+    \setlength\itemsep{-1mm} % Reduce space between items
     \item Zuerst die Frontfläche Plandrehen (900 U/min)
     \item Ungefär 30mm Länge auf das Aussenmaß von 36mm Plandrehen
     \item Mit 9.8mm Bohrer das mittlere Loch vorbohren (540 U/min)
-    \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue passung bringen (260 U/min)
-    \item Die Position Relativ zum Backenfutter makieren um beim neu einspannen Rundlaufgenauigkeit gewährzuleisten
+    \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue Passung bringen (260 U/min)
+    \item Die Position relativ zum Backenfutter markieren, um beim Neu-Einspannen Rundlaufgenauigkeit zu gewährleisten
     \item Zylinder bei ca. 26 mm Abstechen (540 U/min)
-    \item Umspannen und auf maß plandrehen (900 U/min)
-    \item Die Aussparung für die Lager mit Eckdrehmeissel beginnen, jedoch nach innen hin nur 6.8 mm 
-    \item Bei ca. 17 mm Lochdurchmesser den tatsächleichen Durchmesser mit der Digitalanzeige vergleichen und gegebenennfalls korrigieren
-    \item Bei 21.5 mm den Oberschlitten die restlichen 0.2 mm zustellen und die gesamte Tiefe plandrehen
-    \item Den Lochdurchmesser auf 21.95 erweitern, und dann in kleinen inkrementen zustellen bis das Lager gerade so nicht passt, um einen Pressitz zu gewährleisten, dies tritt bei Lagern mit 22 mm Aussendurchmesser bei rund 22.04 mm ein.
-    \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfühbar ist wurde auls Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
-    \item Mit dem Abstechmeisel wird in 2 mm inkrementen die Zahnriemenauflagefläche herausdrehen, bis auf 30.2 mm, sowie links und rechts den Rand 1mm extra dick lassen. (540 U/min)
-    \item Am Schluss wird der Rand auf Maß gedreht und die Tiefe fertiggedreht. 
-    \item Als letzten Schritt werden links und rechts die zwei lager eingepresst.
+    \item Umspannen und auf Maß Plandrehen (900 U/min)
+    \item Die Aussparung für die Lager mit Eckdrehmeißel beginnen, jedoch nach innen hin nur 6.8 mm
+    \item Bei ca. 17 mm Lochdurchmesser den tatsächlichen Durchmesser mit der Digitalanzeige vergleichen und gegebenenfalls korrigieren
+    \item Bei 21.5 mm den Oberschlitten die restlichen 0.2 mm zustellen und die gesamte Tiefe Plandrehen
+    \item Den Lochdurchmesser auf 21.95 erweitern und dann in kleinen Inkrementen zustellen, bis das Lager gerade so nicht passt, um einen Presssitz zu gewährleisten. Dies tritt bei Lagern mit 22 mm Außendurchmesser bei rund 22.04 mm ein.
+    \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfügbar ist, wurde als Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
+    \item Mit dem Abstechmeißel wird in 2 mm Inkrementen die Zahnriemenauflagefläche herausgedreht, bis auf 30.2 mm, sowie links und rechts den Rand 1 mm extra dick lassen. (540 U/min)
+    \item Am Schluss wird der Rand auf Maß gedreht und die Tiefe fertiggedreht.
+    \item Als letzten Schritt werden links und rechts die zwei Lager eingepresst.
 \end{itemize}
 
     Durch die Verhältnissmäßig großen Toleranzen bei den Lageraussendurchmessern wird bei 2 der 8 Lagerpassungen zusätztlich Lagerkleber verwendet um eine Zuverlässige Passung zu gewährleisten.
 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{AT5x16-Umlenkung-Dorn.png}
+            \caption{Dorn}
+            \label{ulr:dorn}
+        \end{subfigure}%
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{ulr-fertigung.jpg}
+            \caption{Fertigung}
+            \label{ulr:f1}
+        \end{subfigure}%
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{ulr-fertigung.jpg}
+            \caption{Fertig}
+            \label{ulr:f2}
+        \end{subfigure}
+        \caption{Umsetzung der Umlenkrollen}
+        \label{ulr}
+    \end{figure}
 
 \paragraph{Lasern}
 \paragraph{Fräsen}
 
 \subsubsection{Aufbau}
 
+\newpage
 \subsection{Software und Benutzeroberfläche}
 
 \subsubsection{Grundlegendes}
@@ -199,17 +225,17 @@ Um dem Endnutzer die möglichkeit zu geben, das AFSS möglichst einfach zu bedie
 
 Um diesen Anforderungen gerecht zu werden, muss eine Lösung mit sehr hohem grad an Freiheit in der Logik sowie UI gestaltung gewählt werden. Weiters muss es möglich sein, dass zukünftige Schülerinnen und Schüler diesen instandhalten und erweitern. Aus diesen Gründen, sowie den bereits vorhandenen Kentnissen, wird die Programmiersprache 'Python' als Grundlage des Servers verwendet.
 
-\paragraph{Python}
+\paragraph{Python}\mbox{}\\
 Python ist eine vielseitige, hochentwickelte Programmiersprache, die für ihre Einfachheit und Lesbarkeit bekannt ist und sich sowohl für Anfänger als auch für Profis eignet. Sie unterstützt mehrere Programmierparadigmen, darunter prozedurale, objektorientierte und funktionale Programmierung, und wird in Bereichen wie Webentwicklung, Datenanalyse, künstliche Intelligenz und wissenschaftlichem Rechnen häufig eingesetzt. \cite{python_wp}
 
-\paragraph{Flask}
+\paragraph{Flask}\mbox{}\\
 Flask ist ein leichtgewichtiges Web-Framework für Python, das durch seine Einfachheit und Flexibilität hervorsticht und sich ideal für kleinere Anwendungen oder Prototypen eignet. Es folgt einem minimalistischen Ansatz, bietet aber Erweiterungsmöglichkeiten, um komplexere Projekte zu realisieren. \cite{flask_wp}
 
 \subsubsection{Benutzeroberfläche}
 
 Um die Benutzeroberfläche zu realisieren muss eine Weboberflche erstellt werden. Auf dieser werden alle Inhalte angezeigt die für die Benutzung nötig sind. Sie wird vom Server zu verfügung gestellt, sobalt dieser eine http-Anfrage erhält. Um diese mit eigenen Inhalten und Funktionen zu befüllen, muss dies mit HTML geschehen.
 
-\paragraph{HTML}
+\paragraph{HTML}\mbox{}\\
 
 HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{html_wp}
 
@@ -217,12 +243,12 @@ Dadurch, dass sich viele Elemente des UI wiederholen, wie z.B. Navigationsleiste
 Um elemente wie Formularflöchen oder Datenanzeige, einfach mit den benötigten Daten anzuzeigen, gibt die möglichkeit Macros zu erstellen, welche von Flask mit den bestimmten Daten vorgerendert und in das restliche HTML eingefügt werden.
 Um HTML, welches grundsätzlich ohne Formatierung auskommt, zu stylen, muss CSS verwendet werden. 
 
-\paragraph{CSS}
+\paragraph{CSS}\mbox{}\\
 CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.
 
 Da auch Logik in der Webseite verbaut werden muss, muss zusätzlich auch Javascript verwendet werden, da HTML und CSS alleine, noch nicht gut genug mit dem Server Kommunizieren können.
 
-\paragraph{JavaScript}
+\paragraph{JavaScript}\mbox{}\\
 JavaScript (JS) ist eine vielseitige Programmiersprache, die hauptsächlich verwendet wird, um interaktive und dynamische Elemente auf Webseiten zu erstellen. Sie läuft direkt im Browser und ermöglicht Funktionen wie Animationen, Formularvalidierungen und die Kommunikation mit Servern in Echtzeit.
 
 Praktisch geschieht diese Kommunkation immer mithilfe diese Programmblocks
