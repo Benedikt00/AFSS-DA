@@ -1,0 +1,194 @@
+/* General Styles */
+/* General Reset */
+
+
+
+/* For testing purpose - adds space below the navbar */
+#main_image {
+    margin-top: 60px;
+    /* background-iamge: url() */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#main_title {
+    font-family: "Ethnocentric";
+}
+
+#front_picture{
+
+}
+
+#first_look #front_picture img {
+    margin-top: -10vh;
+    width: 100vw;
+    max-height: 100vh;
+
+}
+
+#img_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.center {  
+    font-size: 160px;
+    font-family: 'Ethnocentric';
+    text-shadow: 0px 0px 20px #e5e1e1;
+    margin: auto;
+}
+
+.center_under {
+    font-size: 25px;
+    font-family: 'Ethnocentric';
+    text-shadow: 0px 0px 10px #e5e1e1;
+    margin: auto;
+}
+
+#description {
+
+    margin: 10vw;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+}
+
+#description #group_photo_container {
+    width: 30%;
+}
+
+#description #group_photo_container img {
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
+    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.56);
+}
+
+#description #desc_text {
+    width: 60%;
+    text-align: justify;
+}
+
+#desc_germ.visible,
+#desc_eng.visible {
+    display: block;
+    /* Show when the visible class is added */
+}
+
+#description #desc_germ {
+    display: block;
+}
+
+#description #desc_eng {
+    display: none;
+}
+
+#description button {
+    background: none;
+    color: inherit;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 7px;
+}
+
+
+#members {
+    -webkit-box-shadow: 0px 0px 15px -3px #414141; 
+    box-shadow: 0px 0px 15px -3px #414141;
+    background-color:  rgba(96, 169, 225, 0.319);
+}
+
+#members #carousel-title {
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(70, 70, 70);
+}
+
+/* Carousel container */
+/* Carousel container */
+#carousel-container {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#project_team {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    color: rgb(45, 45, 45);
+}
+
+#first_bunch,
+#second_bunch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-shrink: 0;
+    width: 100%;
+    transition: transform 0.5s ease;
+    /* Smooth animation for sliding */
+}
+
+.member {
+    text-align: center;
+    margin: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 17vw;;
+}
+
+.member img{
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.member #name {
+    font-weight: bold;
+}
+
+.carousel-btn {
+    background-color: transparent;
+    border: none;
+    color: rgb(67, 67, 67);
+    font-size: 42px;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:disabled {
+    background-color: transparent;
+    visibility: hidden;
+    cursor: not-allowed;
+}
+
+.carousel-btn:not(:disabled):hover {
+    background-color: transparent;
+    color: black;
+    transform: scale(1.1);
+}
+

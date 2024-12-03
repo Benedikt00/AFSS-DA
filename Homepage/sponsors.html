@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Based Navbar</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/sponsoren.css">
+    <title>AFSS</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="brand-name">AFSS</span>
+        </div>
+        <nav class="navbar-right">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Projekt</a>
+                <div class="dropdown-menu">
+                    <a href="projekt.html">Projektdetails</a>
+                    <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
+                </div>
+            </div>
+            <a href="galerie.html">Gallerie</a>
+            <a href="sponsors.html">Sponsors</a>
+        </nav>
+    </header>
+    <main>
+
+        <div id="spons_cont">
+            <div id="thanks">
+                <h2>Wir möchten uns sehr herzlich bei unseren Sponsoren bedanken!</h2>
+            </div>
+            <div id="logos">
+                <a id="igus"><img src="images/sponsors/igus_logo.png" alt=""></a>
+                <a id="weidmueller"><img src="images/sponsors/Weidmüller_logo.svg" alt=""></a>
+                <a id="knapp"><img src="images/sponsors/Knapp_Logo.png" alt=""></a>
+                <a id="lapp"><img src="images/sponsors/Lapp_Logo_.png" alt=""></a>
+                <a id="maeder"><img src="images/sponsors/maedler_logo.png" alt=""></a>
+            </div>
+        </div>
+        
+
+    </main>
+    <footer>
+
+        <img src="./images/logo_transparent.png" alt="HTL-KLU-logo" href="https://www.htl-klu.at/willkommen">
+        <p>PROJEKTE DER HTL-MÖSSINGERSTRASSE</p>
+
+
+    </footer>
+
+
+
+    <script src="index.js"></script>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+        const dropdown = document.querySelector(".dropdown");
+
+        // Toggle dropdown on click
+        dropdownToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            dropdown.classList.toggle("open");
+        });
+
+        // Close dropdown if clicking outside
+        document.addEventListener("click", (e) => {
+            if (!dropdown.contains(e.target) && !dropdownToggle.contains(e.target)) {
+                dropdown.classList.remove("open");
+            }
+        });
+    });
+
+    let lastScrollY = window.scrollY;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        // Scrolling Down - Hide Navbar
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling Up - Show Navbar
+        navbar.style.transform = 'translateY(0)';
+    }
+
+    lastScrollY = currentScrollY;
+});
+</script>
+
+</html>

@@ -1,4 +1,5 @@
-\documentclass{article}
+\documentclass[12pt]{article}
+\linespread{1.15}
 \usepackage[utf8]{inputenc}  % Ensure this is loaded before biblatex
 \usepackage{biblatex}  % Load the biblatex package
 \addbibresource{./../Quellen/sources.bib}  % Add your .bib file
@@ -30,6 +31,7 @@
 \usepackage{tocloft}
 \usepackage[section]{placeins}
 \usepackage[nottoc,numbib]{tocbibind}
+\usepackage{ragged2e}
 
 
 \usepackage{emptypage}
@@ -45,7 +47,7 @@
 \renewcommand{\headruleskip}{3mm}
 \renewcommand{\footruleskip}{4mm}
 
-\usepackage[english,ngerman]{babel}
+\usepackage[main = ngerman, english]{babel}
 \usepackage[ddmmyyyy]{datetime}
 
 \newcommand{\todayD}{\the\day.\the\month.\the\year}   
@@ -85,9 +87,27 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codecomment}{rgb}{0.6,0.6,0.6}
 \definecolor{backcolour}{rgb}{0.92,0.92,0.91}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{codepurple}{rgb}{0.65, 0.12, 0.82}
 
+\lstdefinelanguage{JavaScript}{
+    keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+    keywordstyle=\color{NavyBlue},
+    ndkeywords={class, export, boolean, throw, implements, import, this},
+    ndkeywordstyle=\color{codegray},
+    identifierstyle=\color{black},
+    sensitive=false,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{codecomment},
+    stringstyle=\color{codepurple}\ttfamily,
+    morestring=[b]',
+    morestring=[b]"
+}
 
 \lstdefinestyle{mystyle}{
+    basicstyle=\fontsize{10}{12},
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codecomment},
     keywordstyle=\color{NavyBlue},
@@ -95,10 +115,10 @@
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize\bfseries,
     breakatwhitespace=false,         
-    %breaklines=true,                 
+    breaklines=true,                 
     captionpos=t,                    
     keepspaces=true,                 
-    %numbers=left,                    
+    numbers=left,
     numbersep=5pt,                  
     showspaces=false,                
     showstringspaces=false,
@@ -121,14 +141,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{AFSS - Automated Factory Storage System}
 \author{Benedikt Simbürger \\
-    \and Nikolaj Voglauer der allerechte \\
+    \and Nikolaj Voglauer \\
     \and Vincent Sonvilla \\
     \and Elena Widmann
     }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\babelprovide[import]{ngerman}
+
+
 
 \begin{document}
+
 \pagenumbering{gobble}
 
 \begin{figure}[h]

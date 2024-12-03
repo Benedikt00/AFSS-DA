@@ -1,18 +1,78 @@
-\section{Hardwareentwicklung, Softwarebackend \\ und Benutzeroberfläche \textcolor{gray}{(Simbürger)}}
+\section{Hardwareentwicklung, Softwarebackend \\ und Benutzeroberfläche \textcolor{gray}{(Benedikt Simbürger)}}
 
 \subsection{Hardware}
 
+\subsubsection{Planung - Grundanforderungen}
+Grundlegende Anforderungen zur planung der AFSS-Mechanik, sind die größe des Lifts an der HTL-Mössingerstraße, sowie möglichst einfache realisierung mit HTL-mitteln, möglichst wenig kompromisse in der Funktion oder zuverlässigkeit eingehen zu müssen.
+Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf 2.3 m Länge um im Lift transportiert werden zu können und auf 1.9 m höhe aufgrund der Türhöhe im Keller. Weiters müssen auch noch Rollen an den Rahmen angebracht werden, um das Lager überhaubt erst ohne großen mehraufwand bewegen zu können. Diese Extrahöhe limitiert den Rahmen weiter.
+Nun soll dieser rund 2.25 m lange und 1.8 m hohen Raum optimal genutzt werden um eine möglichst große Lagerdichte sicherstellen zu können.
+Um möglichst gute erweiterbarkeit, sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sog. Item-Profile verwendert werden. 
 
-
-\subsubsection{Planung}
 \paragraph{Item}
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \vspace{-7mm}
+    \includegraphics[width=0.3\textwidth]{Item-Standartverbindungssatz.png}
+    \centering
+    \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
+\end{wrapfigure}
+
+Das Item-Profilsystem, ist ein System welches Aluminium Extrusionen in verschiedenen Ausführungen, sowie viele Verbindungs-möglichkeiten zu sich selbst sowie andere mechanische Elemente bietet. Hierbei gibt es eine breite Auswahl an Profielen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen, werden 20x20-Extrusionen Verbaut. 
+Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit sog. Nutenstene mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, werden Standartverbindungssätze verwendet. \\
+\vspace{4mm}[h]
+Die Anwendung im AFSS erfordert weiters recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot Profile verwendet
+
 \paragraph{V-Slot}
+
+\begin{wrapfigure}{R}{0.3\textwidth}
+    \includegraphics[width=0.3\textwidth]{V-Wheel.jpg}
+    \centering
+    \caption{V-Slot-Profil mit V-Wheel, Quelle: \cite{v_slot_wheel}}
+\end{wrapfigure}
+
+Auch V-Slot-Profile sind Aluminium Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile, mit Nutensteinen ect. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann. Dies Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da diese einerseits auch breiter und mehr V-Wheels verwendet werden, sowie einen sehr großen Widerstandsmoment aufweißen. 
+
+
+\subsubsection{Vorgehensweise}
+Aufgrund der besoderen und sehr Komplexen anforderungen dieser Mechanik, erfolgt die Entwicklung in mehreren Iterationen. Nach Auslegung der Grundparameter wird eine Grundkonstruktion erstellt, um mögliche Lösungsansätze für die jeweiligen Komponenten zu skizzieren. Durch diese Grobe Planung, können viele Konzepte ohne großen Zeitaufwand iteriert werden und auch mögliche missverständnisse o. ä. frühzeitig aufgeklärt und überarbeitet werden. \\
+Um bestimmte elemente der Mechanik einzeln zu testen, werden auch mehrere Prototypen gebaut und die gewonnenen Erkentnisse in die finale Konstruktion miteingebunden. \\
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{pt_x.jpg}
+        \caption{X-Achse}
+        \label{pts:plt_x}
+    \end{subfigure}%
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{pt_y.jpg}
+        \caption{Y-Achse}
+        \label{pts:plt_y}
+    \end{subfigure}%
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{pt_lg.jpg}
+        \caption{Lagerregal}
+        \label{pts:plt_ls}
+    \end{subfigure}
+    \caption{Prototypen}
+    \label{pts}
+\end{figure}
+
 
 \subsubsection{Rahmen}
 
+Der Rahmen des AFSS bezeichnet jene Struktur, welche als äußerstes Gehäuse, sowie grundlegende mechanische Stabilität bietet. Es ist geplant, dass es die anforderungen von Maximalhöhe und -länge optimal ausnutzt sowie breite minimal hält. \\
+Umgesetzt wird dies mit einem Gerüst aus 40x40-Aluminium Extrusionen. Dieses hat weiters oben udn unten noch zwei Längsstreben, die dazu dienen, eine möglichst platzsparende aufhängung, der X-Achsen V-Slot-Profile, zu realsisieren. Auf einer Seite wird weiters eine Aussparung eingeplatn, um genug Freiraum übrig zu lassen, damit der Querförederer die Boxen reibungslos auf das Förderband bringen kann.\\
+Weiters muss noch eingeplant werder, dass noch Rollen zum Transport angebracht werden müssen. Dadurch, dass diese auswirkungen auf die Maximalhöhe haben, muss dass in die Auslegung der Y-Achse einfließen, um Bewegung durch Türen zu ermöglichen.
+
 \subsubsection{X-Achse}
+Die X-Achse des AFSS ist das Mechanische Herzstück. Sie ist jene Achse, welche sich horizontal beweget. Sie hat einen langen Verfahrweg und hohen mechanische Anforderungen (sie muss ihr Eigengewicht und das Gewicht der YZ-Achse stützen). 
 
 \paragraph{Schlittenauslegung}
+
 
 \paragraph{Antrieb}
 
@@ -24,16 +84,77 @@
 \subsubsection{Z-Achse ("Gabel")}
 \paragraph{Positionsbestimmung}
 
+Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um die Konstrukiton beginnen zu können, werden hierfür ungefähre werte angenommen.
+
+\noindent\begin{minipage}{\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{7mm}
+    \begin{equation*}
+        X_s = \frac{1}{M} \cdot \displaystyle\sum_{i = 0}^{n} z_i \cdot m_i
+    \end{equation*}
+\end{minipage}%
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{align*}
+        &Z_s: \text{Z-Koordinate des Massenschwerpunkts} & &\left[m\right]\\
+        &M: \text{Gesamtmasse} & &\left[kg\right]\\
+        &z_1: \text{Z-Koordinate der Teilmasse} & &\left[m\right] \\
+        &m_1: \text{Masse der Teilmasse} & &\left[kg\right]
+    \end{align*}
+\end{minipage}
+\end{minipage} 
+\vspace{5mm}
+
+    \begin{table}[h!]
+        \centering
+        \centering
+            \begin{tabular}{c c c}
+                Gegenstand & Masse in kg & Position in mm\\
+                \hline
+                Motor & 0.3 & 21 \\
+                Z-Schiene & 1 & 150 \\
+                Z-Gable & 0.3 & 180 
+            \end{tabular}
+        \caption{X-Achse unbeladen und eingefahren}
+        \end{table}
+    \begin{table}[h!]
+            \centering
+            \begin{tabular}{c c c}
+                Gegenstand & Masse in kg & Position in mm\\ 
+                \hline
+                Motor & 0.3 & 21 \\
+                Z-Schiene & 1 & 150 \\
+                Z-Gabel & 1.3 & 380
+            \end{tabular}
+            \caption{X-Achse beim Ladevorgang}
+        \end{table}
+
+        \vspace{5mm}
+        So werden zwei Schwerpunkte berechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt. 
+    
+
 \subsubsection{Fertigung}
 
-\subsubsection{Umlenkrollen}
+\paragraph{Umlenkrollen}
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Dadurch dass diese der gesamten Spannkraft ausgesetzt. Dies erfordert spezielle Anforderungen an die Aufhängen als auch an die Umlenkrolle selbst. Diese soll primär eine 180° Wende des Zahnriemens ermöglichen, sowie sekundär eine Führung für den Riemen bieten. 
 Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteilen in welche Kugellager eingepresst werden.
 
-\begin{figure}[h]
-    \includegraphics[width=0.5\textwidth]{AT5x16-Umlenkung.png}
+\begin{figure}[H]
     \centering
-    \caption{Bauteilzeichnung Umlenkrolle}
+    \begin{subfigure}{.6\textwidth}
+        \centering
+        \includegraphics[width=10cm]{AT5x16-Umlenkung.png}
+        \caption{Bauteilzeichnung Umlenkrolle}
+        \label{UmlenkrolleBTZ}
+        
+    \end{subfigure}%
+    \begin{subfigure}{.4\textwidth}
+        \centering
+        \includegraphics[width=5cm]{AT5x16-Umlenkung-Dorn.png}
+        \caption{Dorn}
+        \label{DornBTZ}
+    \end{subfigure}
+    %\caption{Dorn}
+    %\label{fig:test}
 \end{figure}
 
 Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
@@ -42,7 +163,7 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
     \item Zuerst die Frontfläche Plandrehen (900 U/min)
     \item Ungefär 30mm Länge auf das Aussenmaß von 36mm Plandrehen
     \item Mit 9.8mm Bohrer das mittlere Loch vorbohren (540 U/min)
-    \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue passung bringen (260U/min)
+    \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue passung bringen (260 U/min)
     \item Die Position Relativ zum Backenfutter makieren um beim neu einspannen Rundlaufgenauigkeit gewährzuleisten
     \item Zylinder bei ca. 26 mm Abstechen (540 U/min)
     \item Umspannen und auf maß plandrehen (900 U/min)
@@ -50,30 +171,162 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
     \item Bei ca. 17 mm Lochdurchmesser den tatsächleichen Durchmesser mit der Digitalanzeige vergleichen und gegebenennfalls korrigieren
     \item Bei 21.5 mm den Oberschlitten die restlichen 0.2 mm zustellen und die gesamte Tiefe plandrehen
     \item Den Lochdurchmesser auf 21.95 erweitern, und dann in kleinen inkrementen zustellen bis das Lager gerade so nicht passt, um einen Pressitz zu gewährleisten, dies tritt bei Lagern mit 22 mm Aussendurchmesser bei rund 22.04 mm ein.
+    \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfühbar ist wurde auls Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
+    \item Mit dem Abstechmeisel wird in 2 mm inkrementen die Zahnriemenauflagefläche herausdrehen, bis auf 30.2 mm, sowie links und rechts den Rand 1mm extra dick lassen. (540 U/min)
+    \item Am Schluss wird der Rand auf Maß gedreht und die Tiefe fertiggedreht. 
+    \item Als letzten Schritt werden links und rechts die zwei lager eingepresst.
 \end{itemize}
 
     Durch die Verhältnissmäßig großen Toleranzen bei den Lageraussendurchmessern wird bei 2 der 8 Lagerpassungen zusätztlich Lagerkleber verwendet um eine Zuverlässige Passung zu gewährleisten.
 
-    Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfühbar ist wurde auls Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
 
-\subsubsection{Lasern}
-\subsubsection{Fräsen}
+\paragraph{Lasern}
+\paragraph{Fräsen}
 
-
-\subsection{Konstruktion}
+\subsubsection{Aufbau}
 
 \subsection{Software und Benutzeroberfläche}
 
 \subsubsection{Grundlegendes}
 
+Um dem Endnutzer die möglichkeit zu geben, das AFSS möglichst einfach zu bedienen, sowie die komplexen Logik zu Lagersteuerung auszuführen, bedarf es eines Servers (Backend) und einer graphischen Benutzeroberfläche (GUI oder Frontend). Diese müssen eine Vielzahl an Verschiedenen Funktionen beinhalten.
+
 \subsubsection{Aufbau}
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{Software Howl.drawio.png}
+    \caption{Gesamtüberblick des Servers}
+\end{figure}
+
+Um diesen Anforderungen gerecht zu werden, muss eine Lösung mit sehr hohem grad an Freiheit in der Logik sowie UI gestaltung gewählt werden. Weiters muss es möglich sein, dass zukünftige Schülerinnen und Schüler diesen instandhalten und erweitern. Aus diesen Gründen, sowie den bereits vorhandenen Kentnissen, wird die Programmiersprache 'Python' als Grundlage des Servers verwendet.
+
+\paragraph{Python}
+Python ist eine vielseitige, hochentwickelte Programmiersprache, die für ihre Einfachheit und Lesbarkeit bekannt ist und sich sowohl für Anfänger als auch für Profis eignet. Sie unterstützt mehrere Programmierparadigmen, darunter prozedurale, objektorientierte und funktionale Programmierung, und wird in Bereichen wie Webentwicklung, Datenanalyse, künstliche Intelligenz und wissenschaftlichem Rechnen häufig eingesetzt. \cite{python_wp}
+
+\paragraph{Flask}
+Flask ist ein leichtgewichtiges Web-Framework für Python, das durch seine Einfachheit und Flexibilität hervorsticht und sich ideal für kleinere Anwendungen oder Prototypen eignet. Es folgt einem minimalistischen Ansatz, bietet aber Erweiterungsmöglichkeiten, um komplexere Projekte zu realisieren. \cite{flask_wp}
 
 \subsubsection{Benutzeroberfläche}
+
+Um die Benutzeroberfläche zu realisieren muss eine Weboberflche erstellt werden. Auf dieser werden alle Inhalte angezeigt die für die Benutzung nötig sind. Sie wird vom Server zu verfügung gestellt, sobalt dieser eine http-Anfrage erhält. Um diese mit eigenen Inhalten und Funktionen zu befüllen, muss dies mit HTML geschehen.
+
+\paragraph{HTML}
+
+HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{html_wp}
+
+Dadurch, dass sich viele Elemente des UI wiederholen, wie z.B. Navigationsleiste, bietet Falsk die Möglichkeit sog. 'Templates' zu verwenden. Diese können einmal definiert werden und dann an mehreren teilen der Webseite verwendet werden.
+Um elemente wie Formularflöchen oder Datenanzeige, einfach mit den benötigten Daten anzuzeigen, gibt die möglichkeit Macros zu erstellen, welche von Flask mit den bestimmten Daten vorgerendert und in das restliche HTML eingefügt werden.
+Um HTML, welches grundsätzlich ohne Formatierung auskommt, zu stylen, muss CSS verwendet werden. 
+
+\paragraph{CSS}
+CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.
+
+Da auch Logik in der Webseite verbaut werden muss, muss zusätzlich auch Javascript verwendet werden, da HTML und CSS alleine, noch nicht gut genug mit dem Server Kommunizieren können.
+
+\paragraph{JavaScript}
+JavaScript (JS) ist eine vielseitige Programmiersprache, die hauptsächlich verwendet wird, um interaktive und dynamische Elemente auf Webseiten zu erstellen. Sie läuft direkt im Browser und ermöglicht Funktionen wie Animationen, Formularvalidierungen und die Kommunikation mit Servern in Echtzeit.
+
+Praktisch geschieht diese Kommunkation immer mithilfe diese Programmblocks
+
+\begin{lstlisting}[language=JavaScript]
+    function sendData(data, callback) {
+        var xhr = new XMLHttpRequest();
+        var url = "{{url_for('main.add_stock')}}"; //Flask markup, um die richtige url zu erreichen, dies wird vor ausgabe auf der Webseite noch eingesetzt
+
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                callback(xhr.responseText)  //die funktion wir aufgerufen
+            }
+        };
+        var jsonData = JSON.stringify(data);
+        xhr.send(jsonData);
+    }
+\end{lstlisting}
+
+Dieser ermöglicht die Übergabe von Daten im JSON format, und einer Funktion, die die zurückgeschickten Daten verarbeitet. In der Praxis wird dieser so aufgerufen:
+
+\begin{lstlisting}[language=JavaScript]
+function add_to_db(){
+    sendData({"add_stock": {"barcode": barcode, "quantity": quant, "article": article}}, 
+    set_gen_stock)
+}
+
+function set_gen_stock(req){
+    document.getElementById("generated").innerHTML = req
+}\end{lstlisting}
+
+Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON konvertiert. Danach werden diese Daten zusammen mit einer Funktion, an 'send\_Data'. Wie bereits erwähnt, gibt der Webserver dann Daten zurück. In diesm Fall, werden dann Datten aus der DB vorvormattiert. Diese werden dann in der zuvor übergebenen Funktion, in der Webseite eingefügt.
+
+\paragraph{Serverseite}
+
+\begin{lstlisting}[language=Python]
+    @main.route("/add_stock", methods=["GET", "POST"])
+    def add_stock():
+        if request.method == "POST":
+            if request.data:
+                req = request.get_json()
+
+                if "add_stock" in req.keys():
+                            dt = req["add_stock"]
+                            new = Stock(
+                                container=db.session.query(Container)
+                                .filter_by(barcode=dt["barcode"])
+                                .first()
+                                .id,
+                                article=dt["article"],
+                                quantity=dt["quantity"],
+                            )
+
+                            db.session.add(new)
+                            db.session.commit()
+                            return "Sucsess"
+
+    return render_template("add_stock.html")
+ 
+\end{lstlisting}    
+
+
 \subsubsection{Datenbanken}
 
-Als Datenbanksystem wurde aufgrund des guten Supports MySQL geqählt. Dies ist ein relationales Datenbankmanagementsystem welches in einem Docker-Container aufgesetzt wird. 
+Als Datenbanksystem wird aufgrund des guten Supports MySQL gewählt. Dies ist ein relationales Datenbankmanagementsystem welches in einem Docker-Container aufgesetzt wird. In diesem werden alle Daten gespeichert, die zur Auswahl sowie zur Ausliferung von Teilen nötig sind.
+
+\begin{figure}[h]
+    \includegraphics[width=0.6\textwidth]{DB-Schema.png}
+    \centering
+    \caption{Datenbankschema des AFSS}
+    \label{DB-Scema}
+
+\end{figure}
+
+Wie in \ref{DB-Scema} ersichtlich, beinhäklt sich diese Datenbank fünf Tabellen. Diese hohe Komplexität resultiert daraus, dass diese Struktur eine 100\%ige Flexivilität in der Ablage von Bauteilen in einem überliegendem System bietet.
+
+Die Erste Tabelle beschreibt ein einziges theoretisches Bauteil. Dieses hat einen Namen, Gewicht, Beschreibung und Kategorien zur Filterung. Unter der Spalte 'picture' wird ein Dateiname gespeichert, der zu einem Bild zeigt, dass das Produkt abbildet.
+Die zweite beschreibt einen Container. Im Lagersystem entspricht dieser einer Box. Diese kann mehrere `stocks' beinhalten, sowie durch einen Barcode identifiziert werden. Weiters muss jeder Container immer eine aktuelle Position (`current\_location') besitzen, an der die Box gerade ist. Im ausgelagerten (und noch nicht eingelagerten) Zustand ist diese `location' Position 0. Das Ziel der Box wird in `target\_location' gespeichert. Stimmt die aktuelle mit der Zielposition überein, so ist die Box an ihrem Ziel angelangt. Die Kategorie `size' beschreibt die Größe eines Containers und lässt somit theoretisch zu, dass in Zukunft auch unterschiedlich große Boxen zuverlässig in die richtigen Lagerplätze eingelagert werden. `priority' wird nicht verwendet.
+
+Container und Artikel werden im sog. 'stock' verheiratet. Dieser kann als bauteilhaufen in einer Box verstanden werden. Es können also auch mehrere 'stocks' mit dem selben Container geben, dies würde mehreren verschiedenen Bauteilen in einem einzigen Copntainer entsprechen. Auch ist es möglich mehrere Container mit den selben 'stocks' abzubilden, welches ener aufteilung von Abuteilen auf mehrere Container entspräche.
+
+Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese entsprechen den Lagerplätzen. Sie sind einer darüberliegenden 'area' zugeordnet, welche einerseits einen Lagerschrank, aber weiters auch Module wie Vereinzelungsanalgen, abbilden kann. Standorte verfüghen weiters über eine Position welche in X, Y und Z-Richtung beschreibt, wo sich ein Standort im Referenzsystem des Lagers befindet. Auch die größe des Lagerplatzes wird abgebildet, um sicherzustellen, dass auf jeden fall nur die richtige Größe an Box eingelagert wird.
+
 
 \subsubsection{Docker}
+
+    \begin{wrapfigure}{r}{0.3\textwidth} % 'r' for right, 'l' for left
+        \vspace{-20px}
+        \includegraphics[width=0.3\textwidth]{docker-logo-011.png} % Replace with your image file
+        \caption{Docker-Logo: \cite{docker_logo}}
+    \end{wrapfigure}
+
+    Docker ist eine Umgebung, in der Softwareprojekte isoliert werden können. Da besonders auch bei Projekten mit großem Python anteil, viele Pakete mit verschiedenen Versoinen benötigt werden, ist es sehr hilfreich diese zu bündeln. \\
+    Umgesetzt wird dies mithilfe von Containern welche einen gesamten Programmteil als alleinstehende Einheit enthält. Diese werden über ein 'Dockerfile' configuriert, welches sich im selben Ordner wie die Python-Anwendung befindet. In diesem werden Parameter wie die Python-Version und die benötigten pip-Pakete sowie den Programmeinstiegspunkt angegeben. \\ 
+    Ein zweier Docker Conteianer wird mit einem MySQL-Image erstellt, dort wird die Datenbank aufgesetzt. \\
+    Um diese Zwei Container miteinander Kommunizieren zu lasen, ist es ntig ein sog. docker-compose.yml File zu erstellen. Dies enthält alle Informationen über verwendete container, deren Ports, sowie Speicher für Dateien (Volumes). Bei Testbetrieb wird der Datenbankcontainer aleinstehend bestrieben und mit einem anderen Port, keine Zugriffsprobleme zu generieren. In Produktion wird dann derselbe Container in den Containerverband übertragen und dort mit einem anderen Port weiterverwendet. \\
+    Erstellt wird dieser Containerverband mit den Consolenbefehlt der auf das docker-compose File zugreift. 
+    \begin{lstlisting}[language=bash]
+        docker build docker-compose.yml\end{lstlisting}
+    Dann werden auch alle Logs in der Kommandozeile ausgegeben sowie 
+
 
 \subsubsection{Backend}
 \subsubsection{APIs}

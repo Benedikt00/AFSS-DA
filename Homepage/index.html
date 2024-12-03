@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFSS-Projekthomepage</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+
+    <title>AFSS</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="brand-name">AFSS</span>
+        </div>
+        <nav class="navbar-right">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Projekt</a>
+                <div class="dropdown-menu">
+                    <a href="projekt.html">Projektdetails</a>
+                    <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
+                </div>
+            </div>
+            <a href="galerie.html">Gallerie</a>
+            <a href="sponsors.html">Sponsors</a>
+        </nav>
+    </header>
+    <main>
+    <div id="first_look">
+        <div id="front_picture">
+            <img src=".\images\Lager_ganz.png">
+            <div id="img_text">
+                <p class="center" style="line-height: 1;">AFSS</p>
+                <p class="center_under">Automated Factory Storage system</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="description">
+
+        <div id="group_photo_container">
+            <img src="./images/gruppenphoto.png" alt="Gruppenphoto">
+        </div>
+
+        <div id="desc_text">
+
+            <div id="desc_germ">
+                <h1>Kurzbeschreibung</h1>
+                <p>Die Werkstätte hat ein bestehendes Lager für Bauteile, die von Fachlehrern bestellt werden können.
+                    Jene Bestellungen werden dann von SchülerInnen zusammengestellt und geliefert.
+                    Die Verwaltung dieses Lagers gestaltet sich allerdings schwierig, da SchülerInnen beim Ein- und Auslagern
+                    schnell den Lagerplatz vertauschen und es so zu einer hohen Fehlerquote kommen. <br> <br>
+                    Unser automatisches Lagersystem sorgt dafür, dass BenutzerInnen nach der Eingabe des gewünschten 
+                    Bauteils oder Lagerplatzes die jeweilige Box gebracht bekommen.
+                    Neben der wesentlich geringeren Fehlerquote wäre das automatische Lagersystem auch ein beeindruckendes
+                    Vorzeigeprojekt der Schule. </p>
+            </div>
+
+            <div id="desc_eng">
+                <h1>Short description</h1>
+                <p>Very english Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                    dolor sit amet.</p>
+            </div>
+
+            <button onclick="change_desc_lang()">Change language</button>
+
+        </div>
+
+    </div>
+
+    <div id="members">
+        <div id="carousel-title">
+            <h1>UNSER TEAM</h1>
+        </div>
+        <div id="carousel-container">
+            <button id="left-btn" class="carousel-btn" disabled>&#10094;</button>
+            <div id="project_team">
+                <div id="first_bunch">
+                    <div class="member">
+                        <img src="images/members/simbuerger.jpg" onerror="this.src='images/members/default.png';">
+                        <p id="name">Simbürger Benedikt</p>
+                        <p id="stuff_done">Maschienenbau, Softwareentwicklung, Projektleitung</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/members/sonvilla.jpg" onerror="this.src='images/members/default.png';">
+                        <p id="name">Sonvilla Vincent</p>
+                        <p id="stuff_done">SPS-Programmierung und Kommunikation</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/members/voglauer.jpg" onerror="this.src='images/members/default.png';">
+                        <p id="name">Voglauer Nikolaj</p>
+                        <p id="stuff_done">Schaltschrankprojektierung und Montage</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/members/widmann.jpg" onerror="this.src='images/members/default.png';">
+                        <p id="name">Widmann Elena</p>
+                        <p id="stuff_done">Sensorik und Sicherheitstechnik</p>
+                    </div>
+                </div>
+                <div id="second_bunch">
+                    <div class="member">
+                        <img src="images/members/wurnitsch.png" onerror="this.src='images/members/default.png';">
+                        <p id="name">Ing. Wurnitsch Bernhard</p>
+                        <p id="stuff_done">Projektbetreuung Werkstätte</p>
+                    </div>
+                    <div class="member">
+                        <img src="images/members/sallinger.png" onerror="this.src='images/members/default.png';">
+                        <p id="name">Dipl. Ing. Sallinger Christian</p>
+                        <p id="stuff_done">Projektbetreuung Theorie</p>
+                    </div>
+                </div>
+
+            </div>
+            <button id="right-btn" class="carousel-btn">&#10095;</button>
+        </div>
+    </div>
+</main>
+    <footer>
+
+        <img src="./images/logo_transparent.png" alt="HTL-KLU-logo" href="https://www.htl-klu.at/willkommen">
+        <p>PROJEKTE DER HTL-MÖSSINGERSTRASSE</p>
+
+
+    </footer>
+
+
+
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+            const dropdown = document.querySelector(".dropdown");
+
+            // Toggle dropdown on click
+            dropdownToggle.addEventListener("click", (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle("open");
+            });
+
+            // Close dropdown if clicking outside
+            document.addEventListener("click", (e) => {
+                if (!dropdown.contains(e.target) && !dropdownToggle.contains(e.target)) {
+                    dropdown.classList.remove("open");
+                }
+            });
+        });
+
+
+
+        let lastScrollY = window.scrollY;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const dropdown = document.querySelector(".dropdown");
+
+
+            if (currentScrollY > lastScrollY) {
+                // Scrolling Down - Hide Navbar
+                navbar.style.transform = 'translateY(-100%)';
+
+                dropdown.classList.remove("open");
+
+            } else {
+                // Scrolling Up - Show Navbar
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+    </script>
+</body>
+
+</html>

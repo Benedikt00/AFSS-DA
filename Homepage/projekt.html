@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Based Navbar</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/projekt.css">
+    <title>AFSS</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="brand-name">AFSS</span>
+        </div>
+        <nav class="navbar-right">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Projekt</a>
+                <div class="dropdown-menu">
+                    <a href="projekt.html">Projektdetails</a>
+                    <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
+                </div>
+            </div>
+            <a href="galerie.html">Gallerie</a>
+            <a href="sponsors.html">Sponsors</a>
+        </nav>
+    </header>
+    <main>
+
+        <div id="first_cont">
+        <div id="project_desc">
+            <h1>Das Projekt</h1>
+            <p>Die Boxen werden mittels eines vertikal montiertem Portalroboters, an welchem eine Gabel montiert ist, 
+                sowie Förderbändern, zum Endkunden gebracht. Ein eigens entwickeltes Lagermanagementsystem lagert 
+                die über 200 Boxen pro Schrank optimal ein, um die Bedienung für den Endnutzer so einfach wie möglich 
+                zu machen. Durch ein möglichst modulares Design soll die Errichtung weiterer Anlagen, sowie die Anbindung 
+                weiterer Systeme, in der Zukunft vereinfacht werden.<br><br> 
+                Als Antrieb werden vorwiegend Schrittmotoren mit geschlossenem Regelkreis verwendet, welche von 
+                einem eigens errichtetem Schaltschrank aus gesteuert werden. Dieser dient auch als zentraler Knotenpunkt 
+                zwischen Sensorik, SPS, Server und den Motoren.
+                </p>
+        </div>
+        <div id="pr_img_cont" style="line-height: 0;">
+            <img src="images/gabel.png" alt="">
+        </div>
+        </div>
+        
+        <div id="scema">
+            <div id="scema_desc">
+                <h2>Blockschaltbild:</h2>
+            </div>
+            <div>
+                <img src="images/Hauptschema.drawio.png">
+            </div>
+        </div>
+
+        <div id="used_sw_df">
+            <h2>Verwendete Tools:</h2>
+            <div id="scroll_container">
+                <div class="used_sw">
+                    <img src="images/used_software/eplan_logo.png" class="zoomed_in">
+                    <h3>E-Plan</h3>
+                    <p>Elektoplanung</p>
+                </div>
+                <div class="used_sw">
+                    <img src="images/used_software/visual_studio_code_logo.png" class="zoomed_out" alt="">
+                    <h3>Visual-Studio-Code</h3>
+                    <p>Softwareentwicklung und Latex</p>
+                </div>
+                <div class="used_sw">
+                    <img src="images/used_software/fusion_logo.png" class="zoomed_out" alt="">
+                    <h3>Fusion360</h3>
+                    <p>Mechanische Konstruktion und Leiterplattendesign</p>
+                </div>
+                <div class="used_sw">
+                    <img src="images/used_software/github_logo.png" class="zoomed_out" alt="">
+                    <h3>GitHub</h3>
+                    <p>Source-Control</p>
+                </div>
+                <div class="used_sw">
+                    <img src="images/used_software/docker_logo.webp" alt="">
+                    <h3>Docker</h3>
+                    <p>Software-Deployment</p>
+                </div>
+                
+                <div class="used_sw">
+                    <img src="images/used_software/python_logo.png" alt="">
+                    <h3>Python</h3>
+                    <p>Backend</p>
+                </div>
+                <div class="used_sw">
+                    <img src="images/used_software/postman.svg" alt="">
+                    <h3>Postman</h3>
+                    <p>API Testing</p>
+                </div>
+                
+                <div class="used_sw">
+                    <img src="images/used_software/tiaportal_logo.jpg" class="zoom_and_edges" alt="">
+                    <h3>Siemens TIA-Portal</h3>
+                    <p>SPS-Programmierung</p>
+                </div>
+                <div class="used_sw">
+                    <img src="images/used_software/latex_logo.png" alt="">
+                    <h3>Latex</h3>
+                    <p>Diplomarbeit</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+
+        <img src="./images/logo_transparent.png" alt="HTL-KLU-logo" href="https://www.htl-klu.at/willkommen">
+        <p>PROJEKTE DER HTL-MÖSSINGERSTRASSE</p>
+
+
+    </footer>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+        const dropdown = document.querySelector(".dropdown");
+
+        // Toggle dropdown on click
+        dropdownToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            dropdown.classList.toggle("open");
+        });
+
+        // Close dropdown if clicking outside
+        document.addEventListener("click", (e) => {
+            if (!dropdown.contains(e.target) && !dropdownToggle.contains(e.target)) {
+                dropdown.classList.remove("open");
+            }
+        });
+    });
+
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+            // Scrolling Down - Hide Navbar
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling Up - Show Navbar
+            navbar.style.transform = 'translateY(0)';
+        }
+
+        lastScrollY = currentScrollY;
+    });
+</script>
+
+</html>
