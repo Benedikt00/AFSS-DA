@@ -1,0 +1,182 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{docker_logo}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1b2bb96ed22b86df4d43cc82eb0d0723}{%
+           family={cloudflight},
+           familyi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \strng{fullhash}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \strng{fullhashraw}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \strng{bibnamehash}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \strng{authorbibnamehash}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \strng{authornamehash}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \strng{authorfullhash}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \strng{authorfullhashraw}{1b2bb96ed22b86df4d43cc82eb0d0723}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.cloudflight.io/de/blog/docker-container-die-zukunft-moderner-applikationen-und-multi-cloud-deployments/
+      \endverb
+      \verb{url}
+      \verb https://www.cloudflight.io/de/blog/docker-container-die-zukunft-moderner-applikationen-und-multi-cloud-deployments/
+      \endverb
+    \endentry
+    \entry{Item_svs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=06fac78b304046dda09b903f7f5159ff}{%
+           family={elektro4000de},
+           familyi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{06fac78b304046dda09b903f7f5159ff}
+      \strng{fullhash}{06fac78b304046dda09b903f7f5159ff}
+      \strng{fullhashraw}{06fac78b304046dda09b903f7f5159ff}
+      \strng{bibnamehash}{06fac78b304046dda09b903f7f5159ff}
+      \strng{authorbibnamehash}{06fac78b304046dda09b903f7f5159ff}
+      \strng{authornamehash}{06fac78b304046dda09b903f7f5159ff}
+      \strng{authorfullhash}{06fac78b304046dda09b903f7f5159ff}
+      \strng{authorfullhashraw}{06fac78b304046dda09b903f7f5159ff}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \verb{urlraw}
+      \verb https://www.elektro4000.de/Kabel-Leitungen/Kabeltragsysteme/Stiel-Profilschienen/Verbinder/Item-Standard-Verbindungssatz-0-0-026-07::1743227.html
+      \endverb
+      \verb{url}
+      \verb https://www.elektro4000.de/Kabel-Leitungen/Kabeltragsysteme/Stiel-Profilschienen/Verbinder/Item-Standard-Verbindungssatz-0-0-026-07::1743227.html
+      \endverb
+    \endentry
+    \entry{v_slot_wheel}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=5e2fda1798ce953a9d4e9ae67f592ccc}{%
+           family={globalsources.com},
+           familyi={g\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \strng{fullhash}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \strng{fullhashraw}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \strng{bibnamehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \strng{authorbibnamehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \strng{authornamehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \strng{authorfullhash}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \strng{authorfullhashraw}{5e2fda1798ce953a9d4e9ae67f592ccc}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \verb{urlraw}
+      \verb https://www.globalsources.com/Plastic-coated/plastic-coated-bearing-1197379614p.html
+      \endverb
+      \verb{url}
+      \verb https://www.globalsources.com/Plastic-coated/plastic-coated-bearing-1197379614p.html
+      \endverb
+    \endentry
+    \entry{flask_wp}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Flask}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Flask
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Flask
+      \endverb
+    \endentry
+    \entry{html_wp}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Hypertext Markup Language}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Hypertext_Markup_Language
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Hypertext_Markup_Language
+      \endverb
+    \endentry
+    \entry{python_wp}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Python (Programmiersprache)}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Python_(Programmiersprache)
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Python_(Programmiersprache)
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

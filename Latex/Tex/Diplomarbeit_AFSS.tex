@@ -134,7 +134,7 @@
 
 \newcommand{\iu}{{i\mkern1mu}}
 \newcommand*\mathinhead[2]{\texorpdfstring{$\boldsymbol{#1}$}{#2}}
-
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
 
 \definecolor{mred}{rgb}{0.619, 0.2392, 0.3176}
 
@@ -156,13 +156,16 @@
 
 \pagenumbering{gobble}
 
+\setlength{\parindent}{0pt}
+
 \begin{figure}[h]
+    \vspace{-5mm}
     \includegraphics[width=0.5\textwidth]{HTL_Moessingerstraßen_Logo.png}
     \centering
 \end{figure}
 
 \begin{center}
-    \huge \textbf{HÖHERE TECHNISCHE BUNDESLEHRANSTALT} \\
+    \Large \textbf{HÖHERE TECHNISCHE BUNDESLEHRANSTALT} \\
     \vspace{5mm}
     \Large{KLAGENFURT, MÖSSINGERSTRASSE}
 
@@ -191,11 +194,12 @@
 
 \end{center}
 
-\vspace{20mm}
+\vspace{15mm}
 
 \begin{flushleft}
+    \linespread{1}
     \bgroup
-        \Large
+        \large
         \def\arraystretch{1.5}
         \begin{tabular}{p{5cm}l}
             eingereicht von & Benedikt Simbürger\\
@@ -208,7 +212,7 @@
 \end{flushleft}
 
 \vspace{7mm}
-\Large
+\large
 Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung der Reife- und Diplomprüfung des BMBWF in der letztgültigen Fassung.\par
 \begin{flushright}
     Klagenfurt, am 04.04.2025
@@ -224,7 +228,7 @@ Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung 
 \begin{center}
     \huge \textbf{EIDESSTATTLICHE ERKLÄRUNG}\\
     \vspace{7mm}
-    \Large
+    \large
     \begin{tabular}{p{14cm}}
         Ich versichere an Eides statt, dass ich diese Diplomarbeit
         selbstständig verfasst und keine anderen als die angegebenen
@@ -249,7 +253,7 @@ Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung 
             Benedikt Simbürger & & Vincent Sonvilla\\
         \end{tabular}
 
-        \vspace{40mm}
+        \vspace{35mm}
         \begin{tabular}{P{67mm}p{14mm}P{67mm}}
             \cline{1-1}
             \cline{3-3}
