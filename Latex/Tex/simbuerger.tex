@@ -121,16 +121,16 @@ Dadurch, dass die Y-Achse sowohl YZ-Shuttle als auch die Boxen aufheben muss, mu
 
 \vspace{5mm}
 
-Bei Konstruktion einer früheren Version des YZ-Shuttels wurde erfasst, dass das Shuttel bis zu 13 kg Wiegen kann. Dies wird zwar in einer späteren Iteration des Designvorgangs noch verbessert, dient jedoch als richtwert der Antriebsauslegung. 13 kg erzeugen ohne berücksichtigung von Reibung knapp 130 N. Die Antriebskraft der Schrittmotoren reicht auf jeden fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen, also das gesamte Gewicht immer unterstützen müssen, durchaus sinnvoll.
+Bei Konstruktion einer früheren Version des YZ-Shuttels wurde erfasst, dass das Shuttel bis zu 13 kg Wiegen kann. Dies wird zwar in einer späteren Iteration des Designvorgangs noch verbessert, dient jedoch als richtwert der Antriebsauslegung. 13 kg erzeugen ohne berücksichtigung von Reibung knapp 130 N. Die Antriebskraft der Schrittmotoren reicht auf jeden fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen, also das gesamte Gewicht der Z-Achse und der Kabelschlepkette immer unterstützen müssen, durchaus sinnvoll.
 
 
 \paragraph{Zahnriemen und Umlenkung}\mbox{}\\
 Als Zahnriemen wird auch bei der Y-Achse auf eine AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung ebendieses nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, muss er auch dort wieder Rückgeführt werden. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ain möglichst kompakter Formfaktor angestrebt werden muss, sowie andererseits eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot C-profil erforderlich ist. Aus diesem Grund wir eine konstrukiton aus Aluminium, welche sich selbst verhakt konstruiert. Sie muss Seitlich ann den Profilen verschraubt werden. Im forderen Überhang werden Aluminiumelemente eingehängt, welche die Aufhängung der Achse für die Umlenkung erlauben. 
 
 
-\paragraph{Positionsbestimmung der Zahnriemenaufgängung}\mbox{}\\
+\paragraph{Zahnriemenaufgängung}\mbox{}\\
 
-Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um die Konstrukiton beginnen zu können, werden hierfür ungefähre werte angenommen.
+Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um die Konstrukiton beginnen zu können, werden hierfür ungefähre Werte angenommen.
 
 \noindent\begin{minipage}{\textwidth}
 \begin{minipage}[t]{0.5\textwidth}
@@ -176,8 +176,39 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
         \end{table}
     \vspace{5mm}
 
-    So werden zwei Schwerpunkte errechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt. 
+    So werden zwei Schwerpunkte errechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt.
+    Weiters muss auch dieser Zahnriemen wieder gepannt werden, durch die geringere Zahnriemenlänge, wird auch der Spannmechanismus vekleinert. 
+    Leider muss dieser aus Platzgründen ausserflucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung kann durch folgenden Ausdruck approximiert werden.
     
+    \vspace{4mm}
+    \noindent\begin{minipage}{\textwidth}
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{equation*}
+            K(h) = \sqrt{h^2+d^2}+(l-h)
+        \end{equation*}
+        \begin{equation*}
+            K(h) = \sqrt{h^2+28^2}+(1500-h)
+        \end{equation*}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{-7mm}
+        \begin{align*}
+            &K(h): \text{theoretische Länge des Riemen} & &\left[mm\right]\\
+            &h: \text{Position des Schlittens} & &\left[mm\right]\\
+            &l: \text{Umlenkungsrollenabstand} & &\left[mm\right]\\
+            &d: \text{Abstand der Kleme zur Flucht} & &\left[mm\right]
+        \end{align*}
+    \end{minipage}
+    \end{minipage}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Zahnrimenenversatz.png}
+        \caption{Zahnriemenkontraktion grafisch dargestellt}
+        \label{zahnriemenversatz}
+    \end{figure}
+
+    Aus der Abbildung \ref{zahnriemenversatz} geht, wie schon intuitiv vermutet, hervor, dass ist diese Assymetrie nur dann ein Problem, wenn der Schlitten witunten ist. Ein konkretes maß kann folgendermaßen erhalten werden: \(K(80) - (750) = 4.24 \unit{mm}\). Der unterschied in der benötigten Riemenlänge zwischen der Mittelstellung (750 mm) und Ruheposition (80 mm über der Zahnscheibe) ist also rund 4 mm. Im anbetracht dessen, dass dies Länge auf zwei Seiten (Hin- und Rücklaufseitig) des Zahnriemen aufgeteilt wird (welcher etwas elastisch ist), sowie etwas biegung in der Umlenkungsaufhängung auftritt, wird diese Extraspannung toleriert.
 
 \paragraph{Shuttleführung}\mbox{}\\
 Das YZ-Shuttel wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil geführt. Dieses sind auf beiden Seiten jeweils oben und unten befestigt. Die Länge wird so gewählt, dass die Verwendung eines 1.5 m langen Profils perfekt ausreicht. Da dass YZ-Shuttel wesentlich weniger Kraft auf die Führung auswirkt können weniger Führungsräder verwendet werden. Die Hauptführungsräder werden so Positioniert,  dass sich ein Dreieck ergibt. Dieses dient dazu, dass sowohl beim Aufhängevorgang als auch beim Leerlauf immer eine Klemmung um die Führungsschiene entsteht. Hierbei sind jene V-Wheels, welche beim Aufhebevorgang belastet werden, doppelt ausgeführt. Wie schon bei der X-Achse sind auch hier wieder alle V-Wheel-abstände mit Schrauben einstellbar. Zusätzlich zur Hauptführung sind auch aussen jeweils noch zwei Führungsräder angebracht, um das Shuttel zusätzlich zu stabilisieren.
@@ -185,8 +216,11 @@ Das YZ-Shuttel wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil
 \paragraph{Sensoren}\mbox{}\\
 Da die Endschalter der Y-Achse kapazitiv ausgeführt sind, muss auf dem Shuttel ein Metallisches Gegenstück angebracht sein. Diese stehen uben und unten über und lösen so vor Kolission aus. Um die Sensoren anzubinden muss auch ein ASi-Client auf dem X-Shuttel angebracht werden.
 
-\subsubsection{Z-Achse}
+\paragraph{Kabelschleppkette}\mbox{}\\
+Um Versorgugn der Z-Achse herstellen zu können, muss eine Kabelschleppkette vom X- zum Y-Shuttel angebracht werden. Ach diese muss leider sonderanforderungen erfüllen. Da die Versorgung von unten asugeht, muss die Kabelschleppkette stehend eingebaut werden. Dies ist grundsätzlich eine äußerst ungünstige situation, da diese Schlepkette der beschleinugung des X-Shuttels ausgesetzt ist. Um ein Schwingen möglichst zu verhindern werden seitlich noch Führungselemente angebracht. Ausserdem sind die Anschlusellemente fest um die ersten Kettenglieder extra zu unterstützen.
 
+\subsubsection{Z-Achse}
+Als Z-Achse oder Gabel, wird jener Teil des AFSS bezeichnet, der die Boxen in das Lager ein- und ausfährt. Dierser ist am Y-Shuttel montiert.
 
 \subsubsection{Fertigung}
 
@@ -205,7 +239,7 @@ Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteile
 Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
     \setlength\itemsep{-1mm} % Reduce space between items
-    \item Zuerst die Frontfläche Plandrehen (900 U/min)
+    \item Zuerst die Frontfläche Plandrehen (Drehzahl: 900 U/min)
     \item Ungefär 30mm Länge auf das Aussenmaß von 36mm Plandrehen
     \item Mit 9.8mm Bohrer das mittlere Loch vorbohren (540 U/min)
     \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue Passung bringen (260 U/min)
@@ -279,15 +313,14 @@ Flask ist ein leichtgewichtiges Web-Framework für Python, das durch seine Einfa
 Um die Benutzeroberfläche zu realisieren muss eine Weboberflche erstellt werden. Auf dieser werden alle Inhalte angezeigt die für die Benutzung nötig sind. Sie wird vom Server zu verfügung gestellt, sobalt dieser eine http-Anfrage erhält. Um diese mit eigenen Inhalten und Funktionen zu befüllen, muss dies mit HTML geschehen.
 
 \paragraph{HTML}\mbox{}\\
-
-HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{html_wp}
+HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{html_wp}\\
 
 Dadurch, dass sich viele Elemente des UI wiederholen, wie z.B. Navigationsleiste, bietet Falsk die Möglichkeit sog. 'Templates' zu verwenden. Diese können einmal definiert werden und dann an mehreren teilen der Webseite verwendet werden.
 Um elemente wie Formularflöchen oder Datenanzeige, einfach mit den benötigten Daten anzuzeigen, gibt die möglichkeit Macros zu erstellen, welche von Flask mit den bestimmten Daten vorgerendert und in das restliche HTML eingefügt werden.
 Um HTML, welches grundsätzlich ohne Formatierung auskommt, zu stylen, muss CSS verwendet werden. 
 
 \paragraph{CSS}\mbox{}\\
-CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.
+CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.\\
 
 Da auch Logik in der Webseite verbaut werden muss, muss zusätzlich auch Javascript verwendet werden, da HTML und CSS alleine, noch nicht gut genug mit dem Server Kommunizieren können.
 
@@ -326,9 +359,15 @@ function set_gen_stock(req){
     document.getElementById("generated").innerHTML = req
 }\end{lstlisting}
 
-Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON konvertiert. Danach werden diese Daten zusammen mit einer Funktion, an 'send\_Data'. Wie bereits erwähnt, gibt der Webserver dann Daten zurück. In diesm Fall, werden dann Datten aus der DB vorvormattiert. Diese werden dann in der zuvor übergebenen Funktion, in der Webseite eingefügt.
+Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON konvertiert. Danach werden diese Daten zusammen mit einer Funktion, an 'send\_Data'. Wie bereits erwähnt, gibt der Server dann Daten zurück. In diesm Fall, werden dann Datten aus der DB vorformattiert. Diese werden dann in der zuvor übergebenen Funktion, in der Webseite eingefügt.
 
-\paragraph{Serverseite}
+\subsubsection{Backend}
+Das Backend des Servers ist für die Datenverarbeitung verantwortlich. Es ist wie bereits erwähnt in Python geschrieben und stellt mit dem Flask-Framework die Benutzeroberfläche zur Verfügung. \\
+Aufgebaut ist es in mehrere Bereiche. Einerseits die Webanwendung, sowie API (Application-Prgramming-Interface, Schnittstelle zwischen Anwendungen) als auch die Anbindung an die Datenbank sowie Verarbeitung der SPS-Befehle und API zugriff auf dies.
+
+\paragraph{Serverseite der Benutzeroberfläche}\mbox{}\\
+In Flask könne 'bleuprints' definiert werden. Dies sind Webseitelemente die einen Bestimmten URL-Vorsatz haben. So werden anfanges 'blueprints' für Hauptfunktionen ('/', also ohne Vorsatz), Datenbankinteraktionen ('/db\_interactions') usw. definiert. Die Funktionen dafür werden dann in jeweils eigenen Dateien geschrieben. Dies ermöglicht eine weit aus bessere Übersicht bei großen Projekten. \\
+Eine Funktion, die für die Verarbeitung der Anfragen einer bestimmten URL verantwortlich ist, sieht immer ähnlich aus.
 
 \begin{lstlisting}[language=Python]
     @main.route("/add_stock", methods=["GET", "POST"])
@@ -338,23 +377,31 @@ Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON 
                 req = request.get_json()
 
                 if "add_stock" in req.keys():
-                            dt = req["add_stock"]
-                            new = Stock(
-                                container=db.session.query(Container)
-                                .filter_by(barcode=dt["barcode"])
-                                .first()
-                                .id,
-                                article=dt["article"],
-                                quantity=dt["quantity"],
-                            )
+                    dt = req["add_stock"]
+                    new = Stock(
+                        container=db.session.query(Container)
+                        .filter_by(barcode=dt["barcode"])
+                        .first()
+                        .id,
+                        article=dt["article"],
+                        quantity=dt["quantity"],
+                    )
+                    db.session.add(new)
+                    db.session.commit()
+                    return "Sucsess"
 
-                            db.session.add(new)
-                            db.session.commit()
-                            return "Sucsess"
+        return render_template("add_stock.html")
+\end{lstlisting}  
 
-    return render_template("add_stock.html")
- 
-\end{lstlisting}    
+Anfangs wird mit einem Decorator (@main.route(...)) die gewünschte URL, sowie unterstützte http-Requests definiert. Decoratoren verändern oder erweitern die Eigenschaften von Funktionen. In diesem Fall wird in der Funktion (def ...()) definiert was geschieht, wenn ein erlaubter Request an der URL 'add\_stock' eintrifft. Dieser Funktionsname kann auch in den Flask-Vorlagen verwendet werden um URLs dynamisch zu vergeben.\\
+Weiters wird sortiert um welche art von Art von Anfrage es sich handelt. Bei GET-Anfragen wird typischerweise einfach nur das HTML der Webseite zurückgegeben. Bei POST-Anfragen werden zuerst die Daten dieser Anfrage eytrahiert und dann entschieden was damit gemacht werden soll. In diesem Fall wird, wenn des richtige Schlüsselwort in der Anfrage enthalten ist, ein Datenbankeintrag, mit den Daten aus dem Request, hinzugefügt. Schlussendlich wird ein Wert zurückgegeben, entweder ein HTML-Statuscode, vorgerendertes HTML oder, wie in diesem Fall, ein Text.
+
+\paragraph{SPS - Verbindung}
+
+
+
+\paragraph{Datenverarbeitung für SPS}
+
 
 
 \subsubsection{Datenbanken}
@@ -366,10 +413,9 @@ Als Datenbanksystem wird aufgrund des guten Supports MySQL gewählt. Dies ist ei
     \centering
     \caption{Datenbankschema des AFSS}
     \label{DB-Scema}
-
 \end{figure}
 
-Wie in \ref{DB-Scema} ersichtlich, beinhäklt sich diese Datenbank fünf Tabellen. Diese hohe Komplexität resultiert daraus, dass diese Struktur eine 100\%ige Flexivilität in der Ablage von Bauteilen in einem überliegendem System bietet.
+Wie in \ref{DB-Scema} ersichtlich, beinhalt diese Datenbank fünf Tabellen. Diese hohe Komplexität resultiert daraus, dass diese Struktur eine 100\%ige Flexibilität in der Ablage von Bauteilen in einem überliegendem System bietet.
 
 Die Erste Tabelle beschreibt ein einziges theoretisches Bauteil. Dieses hat einen Namen, Gewicht, Beschreibung und Kategorien zur Filterung. Unter der Spalte 'picture' wird ein Dateiname gespeichert, der zu einem Bild zeigt, dass das Produkt abbildet.
 Die zweite beschreibt einen Container. Im Lagersystem entspricht dieser einer Box. Diese kann mehrere `stocks' beinhalten, sowie durch einen Barcode identifiziert werden. Weiters muss jeder Container immer eine aktuelle Position (`current\_location') besitzen, an der die Box gerade ist. Im ausgelagerten (und noch nicht eingelagerten) Zustand ist diese `location' Position 0. Das Ziel der Box wird in `target\_location' gespeichert. Stimmt die aktuelle mit der Zielposition überein, so ist die Box an ihrem Ziel angelangt. Die Kategorie `size' beschreibt die Größe eines Containers und lässt somit theoretisch zu, dass in Zukunft auch unterschiedlich große Boxen zuverlässig in die richtigen Lagerplätze eingelagert werden. `priority' wird nicht verwendet.
@@ -396,10 +442,11 @@ Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese
         docker build docker-compose.yml\end{lstlisting}
     Dann werden auch alle Logs in der Kommandozeile ausgegeben sowie 
 
-
-\subsubsection{Backend}
 \subsubsection{APIs}
 \subsubsection{Lageralgorithmus}
+
+
+
 \subsubsection{Artikelsuche}
 \paragraph{TF-IDF und Rust Implementierung} \hspace{0pt} \\
 Der TF-IDF (Term Frequency-Inverse Document Frequency) Algorithmus, ist ein Weg um wichtige wörter aus Dokumenten zu extrahieren. Er wird verwendet um beispielsweise in Suchmaschienen, eine Suchanfrage mit Webpagecontent abzugleichen, und die am besten mit der Suchanfrage übereinsteimmenden Dokumente zu sortieren. \\
