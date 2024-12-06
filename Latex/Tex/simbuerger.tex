@@ -8,28 +8,25 @@ Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf 2.3
 Nun soll dieser rund 2.25 m lange und 1.8 m hohen Raum optimal genutzt werden um eine möglichst große Lagerdichte sicherstellen zu können.
 Um möglichst gute erweiterbarkeit, sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sog. Item-Profile verwendert werden. 
 
-\paragraph{Item}
-
 \begin{wrapfigure}{r}{0.3\textwidth}
-    \vspace{-7mm}
+    \vspace{0mm}
     \includegraphics[width=0.3\textwidth]{Item-Standartverbindungssatz.png}
     \centering
     \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
 \end{wrapfigure}
-
+\paragraph{Item}\mbox{}\\
 Das Item-Profilsystem, ist ein System welches Aluminium Extrusionen in verschiedenen Ausführungen, sowie viele Verbindungs-möglichkeiten zu sich selbst sowie andere mechanische Elemente bietet. Hierbei gibt es eine breite Auswahl an Profielen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen, werden 20x20-Extrusionen Verbaut. 
 Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit sog. Nutenstene mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, werden Standartverbindungssätze verwendet. \\
-\vspace{4mm}[h]
+
 Die Anwendung im AFSS erfordert weiters recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot Profile verwendet
 
-\paragraph{V-Slot}
 
 \begin{wrapfigure}{R}{0.3\textwidth}
     \includegraphics[width=0.3\textwidth]{V-Wheel.jpg}
     \centering
     \caption{V-Slot-Profil mit V-Wheel, Quelle: \cite{v_slot_wheel}}
 \end{wrapfigure}
-
+\paragraph{V-Slot}\mbox{}\\
 Auch V-Slot-Profile sind Aluminium Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile, mit Nutensteinen ect. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann. Dies Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da diese einerseits auch breiter und mehr V-Wheels verwendet werden, sowie einen sehr großen Widerstandsmoment aufweißen. 
 
 
@@ -61,6 +58,7 @@ Um bestimmte elemente der Mechanik einzeln zu testen, werden auch mehrere Protot
     \label{pts}
 \end{figure}
 
+\subsubsection{Fusion360}
 
 \subsubsection{Rahmen}
 
@@ -70,21 +68,69 @@ Weiters muss noch eingeplant werder, dass noch Rollen zum Transport angebracht w
 
 \subsubsection{X-Achse}
 Die X-Achse des AFSS ist das Mechanische Herzstück. Sie ist jene Achse, welche sich horizontal beweget. Sie hat einen langen Verfahrweg und hohen mechanische Anforderungen (sie muss ihr Eigengewicht und das Gewicht der YZ-Achse stützen). 
+Grundelement der X-Achse sind V-Slot C-Profile, welche oben und unten aufgehängt werden. Diese sind in 1.5 m länge erhältlich, deshalb wird die ganze Achse darauf ausgelegt, 2 Stück also 3 m Schiene zu verwenden. Diese sind weiters mit 6 Nivelierungsschrauben pro V-Profil ausgestattet, um diese möglichst Parallel zueinander sowie in Waage zu positionieren.
 
-\paragraph{Schlittenauslegung}
+\paragraph{Schlittenauslegung}\mbox{}\\
+Auf der X-Achse verläuft der X-Schlitten, dieser hat die Aufgabe die Y-Achse zu positionieren. Um dies zu bewerkstellingen, muss dieser alle nötigen Motoren und Sensoren beinhalten. Weiters muss er einen Angriffspunkt bieten, um diesen zu bewegen. Ausserdem soll der Schlitten horizontal und vertikal möglichst kompakt sein, um einen möglichst großen Verfahrweg in X- als auch Y- Richtung zu ermöglichen.
+Um eine möglichst Reibungsarme bewegung bewerkstelligen zu können, werden
 
+\paragraph{Antrieb}\mbox{}\\
+Angetrieben wird die X-Achse mit zwei Schrittmotoren, welche jeweils an einer Schiene (oben und unten) angebracht werden. Diese treiben mithilfe eines Zahnriemen die zwei X-Schlitten an. Als Zahnriemen wurde aufgrund der hohen Kraftübertragung, sowie großer Länge auf ein AT5-Zahnprofil mit 16 mm Riemenbreite der Firma Mähdler gesetzt. Dieser wird vom Motor über eine Entsprechende Zahnscheibe angetrieben, und am Shuttle befestigt. Als Schrittmotor wird aus einfachheitsgründen das selbe Modell wie bei der Y-Achse verwendet. Diese erzeigen auch genügend Moment um die X-Achse anzutreiben.
 
-\paragraph{Antrieb}
+\paragraph{Riemenspannung X-Achse} \mbox{}\\
+Da der Riemen für eine zuverlässige Kraftübertragung bei so langen Verfahrwegen eine relativ große Vorspannkraft benötigt wird, ist das Zahnriemenklemmelement auf der X-Achse auch dementsprechend auszuführen. Um den Zahnriemen zu greifen, muss ein Negativ in Aluminium gefräßt werden, in dieses der Zahnriemen dann auf beiden Seiten des Schlittens geklemmt wird. Die Aufhängung der einen Seite ist einfach mit den Item-Profilen verschraubt, lässt aber noch etwas platz, um den Riemen mit der Hand vorzuspannen. Auf der anderen Seite ist das Klembrett über zwei Gewindestangen mit dem restlichen Shuttle verbunden. Diese können festgezogen werden, um die nötigen Vorspannkräfte zu erzeugen. Ausserdem ist diese Spannvorrichtung in einem Formfaktor ausgeführt, welcher es erlaubt, dierekt darüber die Motoren der Y-Achse anzubringen. 
 
-\paragraph{Kabelführung}
+\paragraph{Achsenführung} \mbox{}\\
+Die Fürung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-Wheels werden von oben auf das C-Profil gedrückt. Jedes Rad wird einzeln aufgehangen. Weiters ist überall eine Schraube mit welcher das Rad weiter in die Führung hienein gedrückt werden kann, sowie ein bis zwei Klemmpunkte, um bei Betrieb die Last von der Spannschraube nehmen zu können. \textbf{Durch den Geringen Platz im Schlitten ist es durchaus ein Triumpf, dass alls diese Mechanik, neben der Spannelemente und Motoren in einem so kleinen Shuttel platz finden.} Auf der Seite des Schlittens werden noch weitere V-Wheels angebracht, welche die Spurführung übernehmen.
+Im oberen Schlitten werden nur diese Fuhrungsräder verbaut, da es nicht möglich und nötig ist, vertikale Kräfte zu unterstützen.
+
+\paragraph{Kabelführung} \mbox{}\\
+Um Sensoren und Aktoren der Y- und Z-Achse zu unterstützen, müss dementsprechende Leitungen auf das X-Shuttel verlegt werden. Die wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird pralell zum unteren C-Profil verlegt und unter berücksichtigung der Biegeradien am X-Shuttel befestigt. Bei dieser ist darauf zu achten, dass sie alle benötigten Leitungen, sowie genügent Freiraum für die Biegung einhält. Weiters müssen Signal- und Aktorstromkreise durch trennstege voneinander getrennt werden.\\
+Um die weiteren Geräte am  AFSS zu versorgen, müssen zusätzlich noch Kabelkanäle am Rahmen angebracht werden. 
+
+\paragraph{Sensoren}\mbox{}\\
+Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und ein Referenzierschalter. Bei der X-Achse werden als Endschalter mechanische Rolltaster verwendet. Diese werden neben den V-Slot-Profilen befestigt und von einem, vom Schlitten abstrehenden Arm ausgelöst. 
+
 
 \subsubsection{Y-Achse}
-\paragraph{Motorauslegung}
+Als Y-Achse wird jene Achse bezeichnet, die ihre Bewegung vertikal durchführt. Sie hat die Aufgabe, die Z-Achse bzw. das YZ-Shuttel auf Position zu bringen. Wichtig hierbei ist jedoch, dass die Y-Achse die Aufgabe des aufheben der Box übernimmt.
 
-\subsubsection{Z-Achse ("Gabel")}
-\paragraph{Positionsbestimmung}
+\paragraph{Antriebsauslegung}\mbox{}\\
+Dadurch, dass die Y-Achse sowohl YZ-Shuttle als auch die Boxen aufheben muss, muss der Antrieb dementsprechend dimensioniert werden. Als Formfaktor sol ein Nema23-Schrittmotor verwendet werden. Diese sind weit verbreitet und zu Servomotoren verhältnissmäßig kostengünstig. Als grundformfaktor wird ein 2 Nm Motor gewählt, nun soll überprüft werden, ob dieser die Last der YZ-Achse auch antreiben kann.
 
-Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um die Konstrukiton beginnen zu können, werden hierfür ungefähre werte angenommen.
+\vspace{5mm}
+\noindent\begin{minipage}{\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{equation*}
+        F = \frac{M}{\frac{d}{2} \cdot 1000} \cdot n
+    \end{equation*}
+    \begin{equation*}
+        F = \frac{2 \unit{Nm}}{\frac{30 \unit{mm}}{2} \cdot 1000} \cdot 2 = 266 \unit{N}
+    \end{equation*}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+    \vspace*{-5mm}
+    \begin{align*}
+        &F: \text{Antriebskraft der Y-Achse} & &\left[N\right]\\
+        &M: \text{Drehmoment eines Motors} & &\left[Nm\right]\\
+        &d: \text{Durchmesser der Antriebszahnscheibe} & &\left[mm\right]\\
+        &n: \text{Anzahl der Antriebe} & &
+    \end{align*}
+\end{minipage}
+\end{minipage}
+
+\vspace{5mm}
+
+Bei Konstruktion einer früheren Version des YZ-Shuttels wurde erfasst, dass das Shuttel bis zu 13 kg Wiegen kann. Dies wird zwar in einer späteren Iteration des Designvorgangs noch verbessert, dient jedoch als richtwert der Antriebsauslegung. 13 kg erzeugen ohne berücksichtigung von Reibung knapp 130 N. Die Antriebskraft der Schrittmotoren reicht auf jeden fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen, also das gesamte Gewicht der Z-Achse und der Kabelschlepkette immer unterstützen müssen, durchaus sinnvoll.
+
+
+\paragraph{Zahnriemen und Umlenkung}\mbox{}\\
+Als Zahnriemen wird auch bei der Y-Achse auf eine AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung ebendieses nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, muss er auch dort wieder Rückgeführt werden. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ain möglichst kompakter Formfaktor angestrebt werden muss, sowie andererseits eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot C-profil erforderlich ist. Aus diesem Grund wir eine konstrukiton aus Aluminium, welche sich selbst verhakt konstruiert. Sie muss Seitlich ann den Profilen verschraubt werden. Im forderen Überhang werden Aluminiumelemente eingehängt, welche die Aufhängung der Achse für die Umlenkung erlauben. 
+
+
+\paragraph{Zahnriemenaufgängung}\mbox{}\\
+
+Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um die Konstrukiton beginnen zu können, werden hierfür ungefähre Werte angenommen.
 
 \noindent\begin{minipage}{\textwidth}
 \begin{minipage}[t]{0.5\textwidth}
@@ -101,10 +147,11 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
         &m_1: \text{Masse der Teilmasse} & &\left[kg\right]
     \end{align*}
 \end{minipage}
-\end{minipage} 
+\end{minipage}
+
 \vspace{5mm}
 
-    \begin{table}[h!]
+    \begin{table}[H]
         \centering
         \centering
             \begin{tabular}{c c c}
@@ -127,64 +174,120 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
             \end{tabular}
             \caption{X-Achse beim Ladevorgang}
         \end{table}
+    \vspace{5mm}
 
-        \vspace{5mm}
-        So werden zwei Schwerpunkte berechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt. 
+    So werden zwei Schwerpunkte errechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt.
+    Weiters muss auch dieser Zahnriemen wieder gepannt werden, durch die geringere Zahnriemenlänge, wird auch der Spannmechanismus vekleinert. 
+    Leider muss dieser aus Platzgründen ausserflucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung kann durch folgenden Ausdruck approximiert werden.
     
+    \vspace{4mm}
+    \noindent\begin{minipage}{\textwidth}
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{equation*}
+            K(h) = \sqrt{h^2+d^2}+(l-h)
+        \end{equation*}
+        \begin{equation*}
+            K(h) = \sqrt{h^2+28^2}+(1500-h)
+        \end{equation*}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{-7mm}
+        \begin{align*}
+            &K(h): \text{theoretische Länge des Riemen} & &\left[mm\right]\\
+            &h: \text{Position des Schlittens} & &\left[mm\right]\\
+            &l: \text{Umlenkungsrollenabstand} & &\left[mm\right]\\
+            &d: \text{Abstand der Kleme zur Flucht} & &\left[mm\right]
+        \end{align*}
+    \end{minipage}
+    \end{minipage}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Zahnrimenenversatz.png}
+        \caption{Zahnriemenkontraktion grafisch dargestellt}
+        \label{zahnriemenversatz}
+    \end{figure}
+
+    Aus der Abbildung \ref{zahnriemenversatz} geht, wie schon intuitiv vermutet, hervor, dass ist diese Assymetrie nur dann ein Problem, wenn der Schlitten witunten ist. Ein konkretes maß kann folgendermaßen erhalten werden: \(K(80) - (750) = 4.24 \unit{mm}\). Der unterschied in der benötigten Riemenlänge zwischen der Mittelstellung (750 mm) und Ruheposition (80 mm über der Zahnscheibe) ist also rund 4 mm. Im anbetracht dessen, dass dies Länge auf zwei Seiten (Hin- und Rücklaufseitig) des Zahnriemen aufgeteilt wird (welcher etwas elastisch ist), sowie etwas biegung in der Umlenkungsaufhängung auftritt, wird diese Extraspannung toleriert.
+
+\paragraph{Shuttleführung}\mbox{}\\
+Das YZ-Shuttel wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil geführt. Dieses sind auf beiden Seiten jeweils oben und unten befestigt. Die Länge wird so gewählt, dass die Verwendung eines 1.5 m langen Profils perfekt ausreicht. Da dass YZ-Shuttel wesentlich weniger Kraft auf die Führung auswirkt können weniger Führungsräder verwendet werden. Die Hauptführungsräder werden so Positioniert,  dass sich ein Dreieck ergibt. Dieses dient dazu, dass sowohl beim Aufhängevorgang als auch beim Leerlauf immer eine Klemmung um die Führungsschiene entsteht. Hierbei sind jene V-Wheels, welche beim Aufhebevorgang belastet werden, doppelt ausgeführt. Wie schon bei der X-Achse sind auch hier wieder alle V-Wheel-abstände mit Schrauben einstellbar. Zusätzlich zur Hauptführung sind auch aussen jeweils noch zwei Führungsräder angebracht, um das Shuttel zusätzlich zu stabilisieren.
+
+\paragraph{Sensoren}\mbox{}\\
+Da die Endschalter der Y-Achse kapazitiv ausgeführt sind, muss auf dem Shuttel ein Metallisches Gegenstück angebracht sein. Diese stehen uben und unten über und lösen so vor Kolission aus. Um die Sensoren anzubinden muss auch ein ASi-Client auf dem X-Shuttel angebracht werden.
+
+\paragraph{Kabelschleppkette}\mbox{}\\
+Um Versorgugn der Z-Achse herstellen zu können, muss eine Kabelschleppkette vom X- zum Y-Shuttel angebracht werden. Ach diese muss leider sonderanforderungen erfüllen. Da die Versorgung von unten asugeht, muss die Kabelschleppkette stehend eingebaut werden. Dies ist grundsätzlich eine äußerst ungünstige situation, da diese Schlepkette der beschleinugung des X-Shuttels ausgesetzt ist. Um ein Schwingen möglichst zu verhindern werden seitlich noch Führungselemente angebracht. Ausserdem sind die Anschlusellemente fest um die ersten Kettenglieder extra zu unterstützen.
+
+\subsubsection{Z-Achse}
+Als Z-Achse oder Gabel, wird jener Teil des AFSS bezeichnet, der die Boxen in das Lager ein- und ausfährt. Dierser ist am Y-Shuttel montiert.
 
 \subsubsection{Fertigung}
 
-\paragraph{Umlenkrollen}
+\paragraph{Umlenkrollen}\mbox{}\\
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Dadurch dass diese der gesamten Spannkraft ausgesetzt. Dies erfordert spezielle Anforderungen an die Aufhängen als auch an die Umlenkrolle selbst. Diese soll primär eine 180° Wende des Zahnriemens ermöglichen, sowie sekundär eine Führung für den Riemen bieten. 
 Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteilen in welche Kugellager eingepresst werden.
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{.6\textwidth}
-        \centering
-        \includegraphics[width=10cm]{AT5x16-Umlenkung.png}
-        \caption{Bauteilzeichnung Umlenkrolle}
-        \label{UmlenkrolleBTZ}
-        
-    \end{subfigure}%
-    \begin{subfigure}{.4\textwidth}
-        \centering
-        \includegraphics[width=5cm]{AT5x16-Umlenkung-Dorn.png}
-        \caption{Dorn}
-        \label{DornBTZ}
-    \end{subfigure}
-    %\caption{Dorn}
-    %\label{fig:test}
+    \includegraphics[width=0.8\textwidth]{AT5x16-Umlenkung.png}
+    \caption{Bauteilzeichnung Umlenkrolle}
+    \label{UmlenkrolleBTZ}
 \end{figure}
+
 
 Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
-    \setlength\itemsep{0mm}
-    \item Zuerst die Frontfläche Plandrehen (900 U/min)
+    \setlength\itemsep{-1mm} % Reduce space between items
+    \item Zuerst die Frontfläche Plandrehen (Drehzahl: 900 U/min)
     \item Ungefär 30mm Länge auf das Aussenmaß von 36mm Plandrehen
     \item Mit 9.8mm Bohrer das mittlere Loch vorbohren (540 U/min)
-    \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue passung bringen (260 U/min)
-    \item Die Position Relativ zum Backenfutter makieren um beim neu einspannen Rundlaufgenauigkeit gewährzuleisten
+    \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue Passung bringen (260 U/min)
+    \item Die Position relativ zum Backenfutter markieren, um beim Neu-Einspannen Rundlaufgenauigkeit zu gewährleisten
     \item Zylinder bei ca. 26 mm Abstechen (540 U/min)
-    \item Umspannen und auf maß plandrehen (900 U/min)
-    \item Die Aussparung für die Lager mit Eckdrehmeissel beginnen, jedoch nach innen hin nur 6.8 mm 
-    \item Bei ca. 17 mm Lochdurchmesser den tatsächleichen Durchmesser mit der Digitalanzeige vergleichen und gegebenennfalls korrigieren
-    \item Bei 21.5 mm den Oberschlitten die restlichen 0.2 mm zustellen und die gesamte Tiefe plandrehen
-    \item Den Lochdurchmesser auf 21.95 erweitern, und dann in kleinen inkrementen zustellen bis das Lager gerade so nicht passt, um einen Pressitz zu gewährleisten, dies tritt bei Lagern mit 22 mm Aussendurchmesser bei rund 22.04 mm ein.
-    \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfühbar ist wurde auls Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
-    \item Mit dem Abstechmeisel wird in 2 mm inkrementen die Zahnriemenauflagefläche herausdrehen, bis auf 30.2 mm, sowie links und rechts den Rand 1mm extra dick lassen. (540 U/min)
-    \item Am Schluss wird der Rand auf Maß gedreht und die Tiefe fertiggedreht. 
-    \item Als letzten Schritt werden links und rechts die zwei lager eingepresst.
+    \item Umspannen und auf Maß Plandrehen (900 U/min)
+    \item Die Aussparung für die Lager mit Eckdrehmeißel beginnen, jedoch nach innen hin nur 6.8 mm
+    \item Bei ca. 17 mm Lochdurchmesser den tatsächlichen Durchmesser mit der Digitalanzeige vergleichen und gegebenenfalls korrigieren
+    \item Bei 21.5 mm den Oberschlitten die restlichen 0.2 mm zustellen und die gesamte Tiefe Plandrehen
+    \item Den Lochdurchmesser auf 21.95 erweitern und dann in kleinen Inkrementen zustellen, bis das Lager gerade so nicht passt, um einen Presssitz zu gewährleisten. Dies tritt bei Lagern mit 22 mm Außendurchmesser bei rund 22.04 mm ein.
+    \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfügbar ist, wurde als Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
+    \item Mit dem Abstechmeißel wird in 2 mm Inkrementen die Zahnriemenauflagefläche herausgedreht, bis auf 30.2 mm, sowie links und rechts den Rand 1 mm extra dick lassen. (540 U/min)
+    \item Am Schluss wird der Rand auf Maß gedreht und die Tiefe fertiggedreht.
+    \item Als letzten Schritt werden links und rechts die zwei Lager eingepresst.
 \end{itemize}
 
     Durch die Verhältnissmäßig großen Toleranzen bei den Lageraussendurchmessern wird bei 2 der 8 Lagerpassungen zusätztlich Lagerkleber verwendet um eine Zuverlässige Passung zu gewährleisten.
 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{AT5x16-Umlenkung-Dorn.png}
+            \caption{Dorn}
+            \label{ulr:dorn}
+        \end{subfigure}%
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{ulr-fertigung.jpg}
+            \caption{Fertigung}
+            \label{ulr:f1}
+        \end{subfigure}%
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{ulr-fertigung.jpg}
+            \caption{Fertig}
+            \label{ulr:f2}
+        \end{subfigure}
+        \caption{Umsetzung der Umlenkrollen}
+        \label{ulr}
+    \end{figure}
 
 \paragraph{Lasern}
 \paragraph{Fräsen}
 
 \subsubsection{Aufbau}
 
+\newpage
 \subsection{Software und Benutzeroberfläche}
 
 \subsubsection{Grundlegendes}
@@ -199,30 +302,29 @@ Um dem Endnutzer die möglichkeit zu geben, das AFSS möglichst einfach zu bedie
 
 Um diesen Anforderungen gerecht zu werden, muss eine Lösung mit sehr hohem grad an Freiheit in der Logik sowie UI gestaltung gewählt werden. Weiters muss es möglich sein, dass zukünftige Schülerinnen und Schüler diesen instandhalten und erweitern. Aus diesen Gründen, sowie den bereits vorhandenen Kentnissen, wird die Programmiersprache 'Python' als Grundlage des Servers verwendet.
 
-\paragraph{Python}
-Python ist eine vielseitige, hochentwickelte Programmiersprache, die für ihre Einfachheit und Lesbarkeit bekannt ist und sich sowohl für Anfänger als auch für Profis eignet. Sie unterstützt mehrere Programmierparadigmen, darunter prozedurale, objektorientierte und funktionale Programmierung, und wird in Bereichen wie Webentwicklung, Datenanalyse, künstliche Intelligenz und wissenschaftlichem Rechnen häufig eingesetzt. \cite{python_wp}
+\paragraph{Python}\mbox{}\\
+Python ist eine vielseitige und hochentwickelte Programmiersprache, die für ihre Einfachheit und Lesbarkeit bekannt ist und sich sowohl für Anfänger als auch für Fortgeschrittene eignet. Sie unterstützt mehrere Programmierphilosophien, darunter objektorientierte und funktionale Programmierung, und wird in Bereichen wie Webentwicklung, Datenanalyse, künstliche Intelligenz und wissenschaftlichem Rechnen häufig eingesetzt. \cite{python_wp}
 
-\paragraph{Flask}
+\paragraph{Flask}\mbox{}\\
 Flask ist ein leichtgewichtiges Web-Framework für Python, das durch seine Einfachheit und Flexibilität hervorsticht und sich ideal für kleinere Anwendungen oder Prototypen eignet. Es folgt einem minimalistischen Ansatz, bietet aber Erweiterungsmöglichkeiten, um komplexere Projekte zu realisieren. \cite{flask_wp}
 
 \subsubsection{Benutzeroberfläche}
 
 Um die Benutzeroberfläche zu realisieren muss eine Weboberflche erstellt werden. Auf dieser werden alle Inhalte angezeigt die für die Benutzung nötig sind. Sie wird vom Server zu verfügung gestellt, sobalt dieser eine http-Anfrage erhält. Um diese mit eigenen Inhalten und Funktionen zu befüllen, muss dies mit HTML geschehen.
 
-\paragraph{HTML}
-
-HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{html_wp}
+\paragraph{HTML}\mbox{}\\
+HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{html_wp}\\
 
 Dadurch, dass sich viele Elemente des UI wiederholen, wie z.B. Navigationsleiste, bietet Falsk die Möglichkeit sog. 'Templates' zu verwenden. Diese können einmal definiert werden und dann an mehreren teilen der Webseite verwendet werden.
 Um elemente wie Formularflöchen oder Datenanzeige, einfach mit den benötigten Daten anzuzeigen, gibt die möglichkeit Macros zu erstellen, welche von Flask mit den bestimmten Daten vorgerendert und in das restliche HTML eingefügt werden.
 Um HTML, welches grundsätzlich ohne Formatierung auskommt, zu stylen, muss CSS verwendet werden. 
 
-\paragraph{CSS}
-CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.
+\paragraph{CSS}\mbox{}\\
+CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.\\
 
 Da auch Logik in der Webseite verbaut werden muss, muss zusätzlich auch Javascript verwendet werden, da HTML und CSS alleine, noch nicht gut genug mit dem Server Kommunizieren können.
 
-\paragraph{JavaScript}
+\paragraph{JavaScript}\mbox{}\\
 JavaScript (JS) ist eine vielseitige Programmiersprache, die hauptsächlich verwendet wird, um interaktive und dynamische Elemente auf Webseiten zu erstellen. Sie läuft direkt im Browser und ermöglicht Funktionen wie Animationen, Formularvalidierungen und die Kommunikation mit Servern in Echtzeit.
 
 Praktisch geschieht diese Kommunkation immer mithilfe diese Programmblocks
@@ -257,9 +359,15 @@ function set_gen_stock(req){
     document.getElementById("generated").innerHTML = req
 }\end{lstlisting}
 
-Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON konvertiert. Danach werden diese Daten zusammen mit einer Funktion, an 'send\_Data'. Wie bereits erwähnt, gibt der Webserver dann Daten zurück. In diesm Fall, werden dann Datten aus der DB vorvormattiert. Diese werden dann in der zuvor übergebenen Funktion, in der Webseite eingefügt.
+Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON konvertiert. Danach werden diese Daten zusammen mit einer Funktion, an 'send\_Data'. Wie bereits erwähnt, gibt der Server dann Daten zurück. In diesm Fall, werden dann Datten aus der DB vorformattiert. Diese werden dann in der zuvor übergebenen Funktion, in der Webseite eingefügt.
 
-\paragraph{Serverseite}
+\subsubsection{Backend}
+Das Backend des Servers ist für die Datenverarbeitung verantwortlich. Es ist wie bereits erwähnt in Python geschrieben und stellt mit dem Flask-Framework die Benutzeroberfläche zur Verfügung. \\
+Aufgebaut ist es in mehrere Bereiche. Einerseits die Webanwendung, sowie API (Application-Prgramming-Interface, Schnittstelle zwischen Anwendungen) als auch die Anbindung an die Datenbank sowie Verarbeitung der SPS-Befehle und API zugriff auf dies.
+
+\paragraph{Serverseite der Benutzeroberfläche}\mbox{}\\
+In Flask könne 'bleuprints' definiert werden. Dies sind Webseitelemente die einen Bestimmten URL-Vorsatz haben. So werden anfanges 'blueprints' für Hauptfunktionen ('/', also ohne Vorsatz), Datenbankinteraktionen ('/db\_interactions') usw. definiert. Die Funktionen dafür werden dann in jeweils eigenen Dateien geschrieben. Dies ermöglicht eine weit aus bessere Übersicht bei großen Projekten. \\
+Eine Funktion, die für die Verarbeitung der Anfragen einer bestimmten URL verantwortlich ist, sieht immer ähnlich aus.
 
 \begin{lstlisting}[language=Python]
     @main.route("/add_stock", methods=["GET", "POST"])
@@ -269,23 +377,31 @@ Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON 
                 req = request.get_json()
 
                 if "add_stock" in req.keys():
-                            dt = req["add_stock"]
-                            new = Stock(
-                                container=db.session.query(Container)
-                                .filter_by(barcode=dt["barcode"])
-                                .first()
-                                .id,
-                                article=dt["article"],
-                                quantity=dt["quantity"],
-                            )
+                    dt = req["add_stock"]
+                    new = Stock(
+                        container=db.session.query(Container)
+                        .filter_by(barcode=dt["barcode"])
+                        .first()
+                        .id,
+                        article=dt["article"],
+                        quantity=dt["quantity"],
+                    )
+                    db.session.add(new)
+                    db.session.commit()
+                    return "Sucsess"
 
-                            db.session.add(new)
-                            db.session.commit()
-                            return "Sucsess"
+        return render_template("add_stock.html")
+\end{lstlisting}  
 
-    return render_template("add_stock.html")
- 
-\end{lstlisting}    
+Anfangs wird mit einem Decorator (@main.route(...)) die gewünschte URL, sowie unterstützte http-Requests definiert. Decoratoren verändern oder erweitern die Eigenschaften von Funktionen. In diesem Fall wird in der Funktion (def ...()) definiert was geschieht, wenn ein erlaubter Request an der URL 'add\_stock' eintrifft. Dieser Funktionsname kann auch in den Flask-Vorlagen verwendet werden um URLs dynamisch zu vergeben.\\
+Weiters wird sortiert um welche art von Art von Anfrage es sich handelt. Bei GET-Anfragen wird typischerweise einfach nur das HTML der Webseite zurückgegeben. Bei POST-Anfragen werden zuerst die Daten dieser Anfrage eytrahiert und dann entschieden was damit gemacht werden soll. In diesem Fall wird, wenn des richtige Schlüsselwort in der Anfrage enthalten ist, ein Datenbankeintrag, mit den Daten aus dem Request, hinzugefügt. Schlussendlich wird ein Wert zurückgegeben, entweder ein HTML-Statuscode, vorgerendertes HTML oder, wie in diesem Fall, ein Text.
+
+\paragraph{SPS - Verbindung}
+
+
+
+\paragraph{Datenverarbeitung für SPS}
+
 
 
 \subsubsection{Datenbanken}
@@ -297,10 +413,9 @@ Als Datenbanksystem wird aufgrund des guten Supports MySQL gewählt. Dies ist ei
     \centering
     \caption{Datenbankschema des AFSS}
     \label{DB-Scema}
-
 \end{figure}
 
-Wie in \ref{DB-Scema} ersichtlich, beinhäklt sich diese Datenbank fünf Tabellen. Diese hohe Komplexität resultiert daraus, dass diese Struktur eine 100\%ige Flexivilität in der Ablage von Bauteilen in einem überliegendem System bietet.
+Wie in \ref{DB-Scema} ersichtlich, beinhalt diese Datenbank fünf Tabellen. Diese hohe Komplexität resultiert daraus, dass diese Struktur eine 100\%ige Flexibilität in der Ablage von Bauteilen in einem überliegendem System bietet.
 
 Die Erste Tabelle beschreibt ein einziges theoretisches Bauteil. Dieses hat einen Namen, Gewicht, Beschreibung und Kategorien zur Filterung. Unter der Spalte 'picture' wird ein Dateiname gespeichert, der zu einem Bild zeigt, dass das Produkt abbildet.
 Die zweite beschreibt einen Container. Im Lagersystem entspricht dieser einer Box. Diese kann mehrere `stocks' beinhalten, sowie durch einen Barcode identifiziert werden. Weiters muss jeder Container immer eine aktuelle Position (`current\_location') besitzen, an der die Box gerade ist. Im ausgelagerten (und noch nicht eingelagerten) Zustand ist diese `location' Position 0. Das Ziel der Box wird in `target\_location' gespeichert. Stimmt die aktuelle mit der Zielposition überein, so ist die Box an ihrem Ziel angelangt. Die Kategorie `size' beschreibt die Größe eines Containers und lässt somit theoretisch zu, dass in Zukunft auch unterschiedlich große Boxen zuverlässig in die richtigen Lagerplätze eingelagert werden. `priority' wird nicht verwendet.
@@ -327,10 +442,11 @@ Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese
         docker build docker-compose.yml\end{lstlisting}
     Dann werden auch alle Logs in der Kommandozeile ausgegeben sowie 
 
-
-\subsubsection{Backend}
 \subsubsection{APIs}
 \subsubsection{Lageralgorithmus}
+
+
+
 \subsubsection{Artikelsuche}
 \paragraph{TF-IDF und Rust Implementierung} \hspace{0pt} \\
 Der TF-IDF (Term Frequency-Inverse Document Frequency) Algorithmus, ist ein Weg um wichtige wörter aus Dokumenten zu extrahieren. Er wird verwendet um beispielsweise in Suchmaschienen, eine Suchanfrage mit Webpagecontent abzugleichen, und die am besten mit der Suchanfrage übereinsteimmenden Dokumente zu sortieren. \\
