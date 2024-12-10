@@ -40,7 +40,7 @@
                     <h2>Hardwarenentwicklung, Softwarebackend und UI</h2>
                     <p>Ziel der Mechanik ist es, einen System zu entwickeln und umzusetzen, welches ein Lagerregal sowie einen Roboter, welcher dieses be- und entladen kann. Umgesetzt wird dies durch die Konstruktion eines horizontalen Portalroboters mit drei Achsen. Diese werden mittels Closed-Loop Schrittmotoren und Zahnriemen. Die Gabel, welche die Boxen aus dem Regal entnimmt wird mittels einer Spindel betrieben. Weiters muss ein Querförderer konstruiert werden, welcher die Boxen auf ein Forderband schiebt, welches diese dann zur Komissionierstation bringt. Dieses Design ist so Ausgeführt, dass durch errichtungen mehrerer Lagerschränke ein modulares Lager entsteht.</p>
                     <p>Die Software soll Lagerbestand verwalten sowie Aufträge and die SPS steuern und weiters eine Benutzeroberfläche zur verfügung stellt. Erreicht wird dies durch programmierung eines Python Servers welcher mittels Flask eine Webanwendung zur Bedienung zulässt. Die Datenbank zu Lagerverwaltung ist als MySQL-Server ausgeführt. Um mit der SPS zu kommunizieren wird ein API-Endpunkt aufgesetzt. Dieser gibt verarbetete Anweisungen an die SPS weiter, um auch bei Erweiterung der Anlage einen effizienten Betrieb zu ermögliche</p>
-                    <p style="color:gray">"Machanik brennt wenn die Software ned funkt"</p>
+                    <p style="color:gray">"Mechanik brennt wenn die Software ned funkt"</p>
                 </div>
                 <div class="img_c">
                     <img src="images/members/simbuerger.jpg" onerror="this.src='images/members/default.png';">
@@ -61,6 +61,7 @@
                 
                 <p>Zudem ist beim Lieferprozess entscheidend ob es sich um eine Aus- oder Einlieferung handelt. Im Falle der Auslieferung fährt man zuerst auf die vorgegebene Position, senkt dann den horizontalen Wert (y-Achse) und kann anchließend die Gabel (z-Achse) ansteuern. Als nächstes wird der horizontale Wert  wieder erhöht und die Gabel zurückgefahren. Schlussendlich kann der Auslieferungsprozess beginnen.
                 Beim Einliefern läuft dieser Prozess genau umgekehrt ab.</p>
+                <p style="color:gray">"Error 404: Sonne not found"</p>
             </div>            
         </div>
 
@@ -71,6 +72,7 @@
                     <p>Eine normgerechte Anlage muss sorgfältig geplant sein. Das AFSS wurde elektrisch mit dem Tool E-Plan entworfen und mechanisch wurde für den Schaltschrank ein digitaler Zwilling, in Fusion360, geführt.</p>
                     <p>Da das Projekt erweiterbar sein soll, war ein Schaltschrank nötig mit viel Platz. Herkömliche Schaltschränke in der benötigten Dimension wären unhantlich, da das AFSS mobil sein soll und zudem ist ein ordinärer Schaltschrank nicht im Budget gewesen. Die Wahl fiel daher auf einen ausgemusterten Serverschrank. In diesem können Module flexibel auf und abmontiert werden, auch eine Montage von Rädern ist kein Problem und er bietet auch genügend Stauraum für kommende Elektrik.</p>
                     <p>Elektrisch wird die Anlage von drei Netzteilen, mit unterschiedlicher Leistung, versorgt. Dabei haben die Aktoren und der Steuerkreis getrennte Versorgungen. Die Anlage wird mit Leitungschutzschaltern selektiv gesichert und die neun Schrittmotoren werden mit entsprechenden DC-Sicherungen gesichert. Weitere Bestandteile des Schaltschranks sind die SPS mit sammt ihren Karten, eine ET200 mit ASi-Master, Schrittmotorkarten als auch etwaige Elektrik (Motorschutzschalter, Relais, etc.). </p>
+                    <p style="color:gray">"Steht alles im Seyr-Rösch"</p>
                 </div>
                 <div class="img_c">
                     <img src="images/members/voglauer.jpg" onerror="this.src='images/members/default.png';">
@@ -90,7 +92,8 @@
                 <p>Die Sensoren sollen am Lager angebracht und so ausgewählt werden, dass sie die erforderten Funktionen erfüllen. Als mechanische Endschalter an den drei Achsen dienen Positionsschalter mit Rollhebel, induktive Sensoren und Endtaster. Zum Referenzieren werden Photo Interrupt Sensoren verwendet, für die eine zugehörige Platine entworfen werden muss. Zum Überprüfen, ob eine Box auf der gewünschten Position angekommen ist, werden Lichttaster verwendet. Zusätzlich wird ein Barcode-Scanner verwendet, um die Barcodes an den jeweiligen Boxen erfassen zu können.
                 </p>
                 <p>Zur Kommunikation zwischen den Sensoren und der SPS dient ein ASI-Bus. Um alle benötigten Sensoren einbinden zu können müssen drei ASI-Slaves eingeplant werden. Im Schaltschrank ist die ET 200 und der zugehörige ASI-Master zu finden. Um bis zu sieben Sensoren an einem ASI-Slave anschließen zu können, muss eine externe Platine entwickelt werden.</p>
-                <p>Die Mechanischen sowie Elektrischen Elemente müssen so ausgelegt sein, dass sowohl dem Nutzer als auch der Hardware bei normaler Benutzung kein unzumutbarer Schaden (Zerstörung von Komponenten oder Personenschaden) entsteht. Zusätzlich soll das.</p>
+                <p>Die Mechanischen sowie Elektrischen Elemente müssen so ausgelegt sein, dass sowohl dem Nutzer als auch der Hardware bei normaler Benutzung kein unzumutbarer Schaden (Zerstörung von Komponenten oder Personenschaden) entsteht.</p>
+                <p style="color:gray">"Immerhin gibts was zum Löten"</p>
             </div>
          
         </div>
