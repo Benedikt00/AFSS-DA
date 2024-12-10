@@ -10,31 +10,54 @@ wieso wirds verwendet oder warum --> vllt weil mix anderes verfügbar ist
 
     \subsubsection{Grundlagen}
     was muss man wissen um des Programm bzw. die Software bedienen zu können
-    \subsubsection{}
+
+    \subsubsection{Programmiersprachen}
+
+    \subsubsection{Libraryeinbindung}
+    \label{Libraryeinbindung}
 
 \subsection{Motorenansteuerung}
 
 \subsection{SPS-Server Kommunikation}
 
-    \subsubsection{Zur Auswahl stehende Kommunikationsprotokolle}
+    \subsubsection{Zur Auswahl stehende Kommunikationsprotokolle} 
+    \label{Kommunikationsprotokolle}
 
-    Kommunikationsprotokolle werden verwendet um den Datenaustausch zwischen unterschiedlichen Systemen zu ermöglichen.
-    Kommunikationsprotokolle finden auf der 7.Schicht des OSI-Modells statt.
-
-    Es gibt durchaus verschiedenste Protokolle nur wurden in diesem Projekt lediglich 2 getestet und miteinander verglichen. Nämlich OPC-UA und das http-Protokoll.
+    Kommunikationsprotokolle ermöglichen den Datenaustausch zwischen unterschiedlichen Systemen, indem sie Standards und Regeln für die Kommunikation definieren. Diese Protokolle werden üblicherweise der 7. Schicht (Anwendungsschicht) des OSI-Modells zugeordnet. In diesem Projekt wurden zwei Protokolle getestet und miteinander verglichen: OPC-UA und das HTTP-Protokoll.
 
 
          \paragraph{Allgemeines}
 
         
-           \paragraph{http} 
-            afsna
+           \paragraph{HTTP (Hypertext Transfer Protocol):}  \mbox{} \\
+           HTTP ist eines der bekanntesten Protokolle, welches für die Datenübertragung zwischen Clients und Servern verwendet wird. Es basiert auf einem Anforderungs-Antwort-Prinzip, bei dem ein Client (Bsp.: Webbrowser) Anfragen an einen Server sendet, welcher anschließend die entsprechenden Daten zurückschickt. Die Anfrage wird als HTTP Request und die Antwort als HTTP Response bezeichnet.
 
-            \paragraph{OPC-UA}
-            nsfns
+           
+
+            \paragraph{OPC-UA (Open Platform Communications - Unified Architecture):} \mbox{}  \\
+            OPC-UA (Open Platform Communications Unified Architecture) ist ein plattformunabhängiges Kommunikationsprotokoll, das speziell für industrielle Anwendungen entwickelt wurde. Es ermöglicht eine herstellerunabhängige Kommunikation zwischen verschiedenen Geräten bzw. Systemen.
+
+        
+
+        \paragraph{Funktionsweise}
+
+            \paragraph{HTTP (Hypertext Transfer Protocol):}
+        
+            
 
     
     \subsubsection{Verbindungsherstellung}
+    Aus den in Punkt \ref{Kommunikationsprotokolle} genannten Gründen wurde das HTTP Protokoll ausgewählt. Um in TIA-Portal die Verbindung via HTTP aufzubauen, benötigt man bestimmte Libraries die von Siemens zu Verfügung gestellt werden. Diese müssen dann wie im Punkt \ref{Libraryeinbindung} gezeigt eingebunden werden, um die Funktionsbausteine der Library nutzen zu können. 
+
+        \paragraph{Funktionsbausteine} \mbox{} \\
+        In der Library stehen dann folgende Bausteine zur Verfügung:
+
+        \begin{itemize}
+            \item GET
+            \item POST-PUT
+        \end{itemize}
+
+
 
     \subsubsection{Datenfilterung}
 
