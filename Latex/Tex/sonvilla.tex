@@ -31,7 +31,7 @@ wieso wirds verwendet oder warum --> vllt weil mix anderes verfügbar ist
         
            \paragraph{HTTP (Hypertext Transfer Protocol):}  \mbox{} \\
            HTTP ist eines der bekanntesten Protokolle, welches für die Datenübertragung zwischen Clients und Servern verwendet wird. Es basiert auf einem Anforderungs-Antwort-Prinzip, bei dem ein Client (Bsp.: Webbrowser) Anfragen an einen Server sendet, welcher anschließend die entsprechenden Daten zurückschickt. Die Anfrage wird als HTTP Request und die Antwort als HTTP Response bezeichnet.
-
+    
            
 
             \paragraph{OPC-UA (Open Platform Communications - Unified Architecture):} \mbox{}  \\
@@ -54,11 +54,28 @@ wieso wirds verwendet oder warum --> vllt weil mix anderes verfügbar ist
 
         \begin{itemize}
             \item GET
-            \item POST-PUT
+            \item POST-PUT \\
+            Mit dem POST-PUT Befehl werden Daten zum Server geschickt aber auch Daten erwartet. 
         \end{itemize}
 
 
-
     \subsubsection{Datenfilterung}
+    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welchen Befehl es sich handelt, und die Daten die erforderlich sind um diesen Befehl auszuführen.
+
+        \paragraph{Datenformatierung}
+        Die Daten werden in einem String geschickt welcher in zwei Teile aufgeteitlt wird. Der zeite Teil ist jedoch abhängig vom ersten.\\
+        
+        \begin{itemize}
+            \item 1.Teil: \\
+            IDXXXXAXX \\
+            Aus diesem Teil werden die ID-Nummer sowie der Auftrag herausgefiltert. Die ID-Nummer ist eine 4 stellige Nummer welche nach ID steht. Der Auftrag welcher ausgeführt werden muss steht in den zwei Stellen nach A.\\
+            Diese werden nach folgender Codierung ausgelesem:
+                \subitem 00: Kommissionierstation
+                \subitem 01: Förderband
+                \subitem 10: Lager 1 (Aus-/Einlagerung)
+                \subitem 11: Lager 1 (Querförderer)
+            \item 2.Teil:\\
+            
+        \end{itemize}
 
 \subsection{Herausforderungen}
