@@ -70,9 +70,8 @@ Weiters muss noch eingeplant werder, dass noch Rollen zum Transport angebracht w
 Die X-Achse des AFSS ist das Mechanische Herzstück. Sie ist jene Achse, welche sich horizontal beweget. Sie hat einen langen Verfahrweg und hohen mechanische Anforderungen (sie muss ihr Eigengewicht und das Gewicht der YZ-Achse stützen). 
 Grundelement der X-Achse sind V-Slot C-Profile, welche oben und unten aufgehängt werden. Diese sind in 1.5 m länge erhältlich, deshalb wird die ganze Achse darauf ausgelegt, 2 Stück also 3 m Schiene zu verwenden. Diese sind weiters mit 6 Nivelierungsschrauben pro V-Profil ausgestattet, um diese möglichst Parallel zueinander sowie in Waage zu positionieren.
 
-\paragraph{Schlittenauslegung}\mbox{}\\
+\paragraph{Grundanforderungen}\mbox{}\\
 Auf der X-Achse verläuft der X-Schlitten, dieser hat die Aufgabe die Y-Achse zu positionieren. Um dies zu bewerkstellingen, muss dieser alle nötigen Motoren und Sensoren beinhalten. Weiters muss er einen Angriffspunkt bieten, um diesen zu bewegen. Ausserdem soll der Schlitten horizontal und vertikal möglichst kompakt sein, um einen möglichst großen Verfahrweg in X- als auch Y- Richtung zu ermöglichen.
-Um eine möglichst Reibungsarme bewegung bewerkstelligen zu können, werden
 
 \paragraph{Antrieb}\mbox{}\\
 Angetrieben wird die X-Achse mit zwei Schrittmotoren, welche jeweils an einer Schiene (oben und unten) angebracht werden. Diese treiben mithilfe eines Zahnriemen die zwei X-Schlitten an. Als Zahnriemen wurde aufgrund der hohen Kraftübertragung, sowie großer Länge auf ein AT5-Zahnprofil mit 16 mm Riemenbreite der Firma Mähdler gesetzt. Dieser wird vom Motor über eine Entsprechende Zahnscheibe angetrieben, und am Shuttle befestigt. Als Schrittmotor wird aus einfachheitsgründen das selbe Modell wie bei der Y-Achse verwendet. Diese erzeigen auch genügend Moment um die X-Achse anzutreiben.
@@ -85,12 +84,11 @@ Die Fürung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-
 Im oberen Schlitten werden nur diese Fuhrungsräder verbaut, da es nicht möglich und nötig ist, vertikale Kräfte zu unterstützen.
 
 \paragraph{Kabelführung} \mbox{}\\
-Um Sensoren und Aktoren der Y- und Z-Achse zu unterstützen, müss dementsprechende Leitungen auf das X-Shuttel verlegt werden. Die wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird pralell zum unteren C-Profil verlegt und unter berücksichtigung der Biegeradien am X-Shuttel befestigt. Bei dieser ist darauf zu achten, dass sie alle benötigten Leitungen, sowie genügent Freiraum für die Biegung einhält. Weiters müssen Signal- und Aktorstromkreise durch trennstege voneinander getrennt werden.\\
-Um die weiteren Geräte am  AFSS zu versorgen, müssen zusätzlich noch Kabelkanäle am Rahmen angebracht werden. 
+Um Sensoren und Aktoren der Y- und Z-Achse zu unterstützen, müss dementsprechende Leitungen auf das X-Shuttel verlegt werden. Die wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird pralell zum unteren C-Profil verlegt und unter berücksichtigung der Biegeradien am X-Shuttel befestigt. Bei dieser ist darauf zu achten, dass sie alle benötigten Leitungen, sowie genügent Freiraum für die Biegung einhält \cite{igus_freitragend}. Weiters müssen Signal- und Aktorstromkreise durch trennstege voneinander getrennt werden.\\
+Um die weiteren Geräte am AFSS zu versorgen, müssen zusätzlich noch Verdrahtungskanäle am Rahmen angebracht werden. 
 
 \paragraph{Sensoren}\mbox{}\\
 Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und ein Referenzierschalter. Bei der X-Achse werden als Endschalter mechanische Rolltaster verwendet. Diese werden neben den V-Slot-Profilen befestigt und von einem, vom Schlitten abstrehenden Arm ausgelöst. 
-
 
 \subsubsection{Y-Achse}
 Als Y-Achse wird jene Achse bezeichnet, die ihre Bewegung vertikal durchführt. Sie hat die Aufgabe, die Z-Achse bzw. das YZ-Shuttel auf Position zu bringen. Wichtig hierbei ist jedoch, dass die Y-Achse die Aufgabe des aufheben der Box übernimmt.
@@ -123,10 +121,8 @@ Dadurch, dass die Y-Achse sowohl YZ-Shuttle als auch die Boxen aufheben muss, mu
 
 Bei Konstruktion einer früheren Version des YZ-Shuttels wurde erfasst, dass das Shuttel bis zu 13 kg Wiegen kann. Dies wird zwar in einer späteren Iteration des Designvorgangs noch verbessert, dient jedoch als richtwert der Antriebsauslegung. 13 kg erzeugen ohne berücksichtigung von Reibung knapp 130 N. Die Antriebskraft der Schrittmotoren reicht auf jeden fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen, also das gesamte Gewicht der Z-Achse und der Kabelschlepkette immer unterstützen müssen, durchaus sinnvoll.
 
-
 \paragraph{Zahnriemen und Umlenkung}\mbox{}\\
 Als Zahnriemen wird auch bei der Y-Achse auf eine AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung ebendieses nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, muss er auch dort wieder Rückgeführt werden. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ain möglichst kompakter Formfaktor angestrebt werden muss, sowie andererseits eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot C-profil erforderlich ist. Aus diesem Grund wir eine konstrukiton aus Aluminium, welche sich selbst verhakt konstruiert. Sie muss Seitlich ann den Profilen verschraubt werden. Im forderen Überhang werden Aluminiumelemente eingehängt, welche die Aufhängung der Achse für die Umlenkung erlauben. 
-
 
 \paragraph{Zahnriemenaufgängung}\mbox{}\\
 
@@ -149,32 +145,30 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
 \end{minipage}
 \end{minipage}
 
-\vspace{5mm}
+\begin{table}[H]
+    \centering
+    \centering
+        \begin{tabular}{c c c}
+            Gegenstand & Masse in kg & Position in mm\\
+            \hline
+            Motor & 0.3 & 21 \\
+            Z-Schiene & 1 & 150 \\
+            Z-Gable & 0.3 & 180 
+        \end{tabular}
+    \caption{X-Achse unbeladen und eingefahren}
+    \end{table}
+\begin{table}[H]
+        \centering
+        \begin{tabular}{c c c}
+            Gegenstand & Masse in kg & Position in mm\\ 
+            \hline
+            Motor & 0.3 & 21 \\
+            Z-Schiene & 1 & 150 \\
+            Z-Gabel & 1.3 & 380
+        \end{tabular}
+        \caption{X-Achse beim Ladevorgang}
+\end{table}
 
-    \begin{table}[H]
-        \centering
-        \centering
-            \begin{tabular}{c c c}
-                Gegenstand & Masse in kg & Position in mm\\
-                \hline
-                Motor & 0.3 & 21 \\
-                Z-Schiene & 1 & 150 \\
-                Z-Gable & 0.3 & 180 
-            \end{tabular}
-        \caption{X-Achse unbeladen und eingefahren}
-        \end{table}
-    \begin{table}[h!]
-            \centering
-            \begin{tabular}{c c c}
-                Gegenstand & Masse in kg & Position in mm\\ 
-                \hline
-                Motor & 0.3 & 21 \\
-                Z-Schiene & 1 & 150 \\
-                Z-Gabel & 1.3 & 380
-            \end{tabular}
-            \caption{X-Achse beim Ladevorgang}
-        \end{table}
-    \vspace{5mm}
 
     So werden zwei Schwerpunkte errechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt.
     Weiters muss auch dieser Zahnriemen wieder gepannt werden, durch die geringere Zahnriemenlänge, wird auch der Spannmechanismus vekleinert. 
@@ -217,10 +211,62 @@ Das YZ-Shuttel wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil
 Da die Endschalter der Y-Achse kapazitiv ausgeführt sind, muss auf dem Shuttel ein Metallisches Gegenstück angebracht sein. Diese stehen uben und unten über und lösen so vor Kolission aus. Um die Sensoren anzubinden muss auch ein ASi-Client auf dem X-Shuttel angebracht werden.
 
 \paragraph{Kabelschleppkette}\mbox{}\\
-Um Versorgugn der Z-Achse herstellen zu können, muss eine Kabelschleppkette vom X- zum Y-Shuttel angebracht werden. Ach diese muss leider sonderanforderungen erfüllen. Da die Versorgung von unten asugeht, muss die Kabelschleppkette stehend eingebaut werden. Dies ist grundsätzlich eine äußerst ungünstige situation, da diese Schlepkette der beschleinugung des X-Shuttels ausgesetzt ist. Um ein Schwingen möglichst zu verhindern werden seitlich noch Führungselemente angebracht. Ausserdem sind die Anschlusellemente fest um die ersten Kettenglieder extra zu unterstützen.
+Um Versorgugng der Z-Achse herstellen zu können, muss eine Kabelschleppkette vom X- zum Y-Shuttel angebracht werden. Ach diese muss leider sonderanforderungen erfüllen. Da die Versorgung von unten ausgeht, muss die Kabelschleppkette stehend eingebaut werden. Dies ist grundsätzlich eine äußerst ungünstige situation, da diese Schlepkette der beschleinugung des X-Shuttels ausgesetzt ist. Um ein Schwingen möglichst zu verhindern werden seitlich noch Führungselemente angebracht. Ausserdem sind die Anschlusellemente fest um die ersten Kettenglieder extra zu unterstützen. \cite{igus_vertikal}
 
 \subsubsection{Z-Achse}
-Als Z-Achse oder Gabel, wird jener Teil des AFSS bezeichnet, der die Boxen in das Lager ein- und ausfährt. Dierser ist am Y-Shuttel montiert.
+Als Z-Achse oder Gabel, wird jener Teil des AFSS bezeichnet, der die Boxen in das Lager ein- und ausfährt. Dieser ist in das YZ-Shuttel integriert. Es wird davon ausgegangen, dass um Boxen ein- und auszuheben ca. 210 mm überstand der Gabel benötigt wird. Dies ist also der Mindestverfahrweg der Z-Achse
+
+\paragraph{Linearführung}\mbox{}\\
+Geführt wird die Gabel mit zwei Führungsschienen von Igus. Diese bieten Optimale Stabilität sowie, in Verbindung mit einem Führungswagen, eine reibungsarme Bewegung. Wichtig ist jedoch, dass der Schwerpunkt der, am Führungswagenbefestigten Last, nicht mehr als die zweifache Wagenlänge über den Wagen hienausgeht. Danach kommt es zu sehr starker Verklemnmung, und ein Betrieb ist nur mehr schwer möglich. Da, bei einer Auslgeroperation der Schwerpunkt sehr weit übersteht, wird eine TS-01 Führungsschinen und -wagen kombination verwendet. Diese wirkt zwar recht überdimnensioniert doch da der Führungswagen so lang ist, kann ein reibungsarmer Betrieb gewährleiste werden. 
+
+\paragraph{Motor}\mbox{}\\
+Als Antrieb für die Z-Achse sollen zwei Nema-17 Schrittmotoren verwendet werden. Hier ist es nicht nötig eine closed-loop Steuerung zu verwenden, da bei jedem Hub auch referenziert werden kann. Weiters kann dadurch Kabelschlepkettenplatz gespart werden. 
+
+\paragraph{Spindelauslegung}\mbox{}\\
+Die Z-Achse wird mit einer Spindel angetrieben. Dies bietet Vorteile in Positionsgenauigkeit und Kraftübertragung. Jedoch ist es wichtig, die richtige Spindelsteigung auszuwählen, um die Ballance zwischen Geschwindigkeit und Kraft zu halten. Ziel ist es, für eine richtung des Hubs maximal 5 Sekunden zu benötigen. Sie wird über eine Zahnscheibe und Zahnrimen mit dem Motor verbinden.
+Berechnet werden kann diese Zeit mit folgenden Ausdruck:
+
+\vspace{5mm}
+\noindent\begin{minipage}{\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{equation*}
+        v = \frac{k}{n_{welle}} = \frac{k}{\frac{n_{motor}}{i}}
+    \end{equation*}
+    \begin{equation*}
+        F = \frac{M_{mot} \cdot i \cdot k}{n_{welle}} \cdot 2 \pi f \cdot \eta 
+    \end{equation*}
+\end{minipage}%
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{-7mm}
+    \begin{align*}
+        &M_{mot}: \text{Drehmoment} & &\left[\right]\\
+        &n_{mot}: \text{Drehzahl} & &\left[\right]\\
+        &k: \text{Wellensteigung} & &\left[\right]\\
+        &i: \text{Übersetzungsverhältniss} & &\left[\right]\\
+        &\eta: \text{Wirkungsgrad der Gewindeshraube} & &\left[\right]\\
+    \end{align*}
+\end{minipage}
+\end{minipage}
+
+\vspace{5mm}
+
+So wird berechent, dass eine DS10x12 Spindel mit ihren 12 mm Steigung, bei einer Motordrehzahl von 600 U/min (0.42 Nm) und einem Übersetzungsverhältniss von 2:1, ca. 4 Sekunden pro Richtung benötigt und mit einer Kraft von ca. 90 N bewegt wird. 
+
+\paragraph{Sensorik}\mbox{}\\
+
+Um auch die Endschlater der Z-Achse, sowie weitere Sensoren einzulesen, wird auch hier ein ASi-Slave montiert.
+
+\paragraph{Sensorik}\mbox{}\\
+
+
+\subsubsection{Lager}
+Das Lager soll die Boxen beeinhalten, und die Möglichkeit zulassen, dass dies von der Gabel ein- und ausgehobenwerden. Weiters muss, die Box in X- und Z-Richtung geführt werden, um Positionsgenauigkeit sicherzustellen, da sonst die Gabel möflicherweise in die Box fährt. Das Lager soll darauf ausgelegt werden, dass Boxen mit den Maßen 50x100x200mm verwendet werden können. Diese Boxen sind nach unten hinn verjüngt und haben oben eine Lippe, an der die Gabel greift.\\
+Umgesetzt wird dies mit eine Gerüst aus 40x40-Item-Profilen, welches im nachhienein in den restlichen Rahmen eingesetzt wird. Auf diese werden 20x40-Profile horizontal Aufgeschraubt, auf diesen stehen dann die Boxen. Vorne und hinten wird eine Kunststoffplatte aufgeschraubt welche leicht überstehen und somit die Box in Z-Richtung positioniert. Zwischen den Boxen wird ein Trennsteg eingebaut, welcher die Boxen in X-Richtung Positioniert sowie den richtigen Abstand zwischen den Boxen einzuhalten.
+
+\subsubsection{Querförderer}
+Da es dem Portalroboter nicht möglich ist, die Boxen dierekt auf das Förderband zu legen, muss hier noch ein System eingebunen werden, welches dies erledigt. Da die Boxen beim ein- und auslagern den gleichen Weg zurücklegen, muss dieser Querförderer, die Box sowohl auf das Förderband, sowie vom Förderband herunterbewegen kann. 
+Zu diesem Zweck wir eine weitere Gabel montiert, welche auf einem 20x40-V-Slot-Profil verläuft. Die Box wird dann hin- und her geschoben, um vom Lager auf das Fördeband umzuladen.
+
 
 \subsubsection{Fertigung}
 
@@ -234,7 +280,6 @@ Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteile
     \caption{Bauteilzeichnung Umlenkrolle}
     \label{UmlenkrolleBTZ}
 \end{figure}
-
 
 Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
@@ -303,29 +348,30 @@ Um dem Endnutzer die möglichkeit zu geben, das AFSS möglichst einfach zu bedie
 Um diesen Anforderungen gerecht zu werden, muss eine Lösung mit sehr hohem grad an Freiheit in der Logik sowie UI gestaltung gewählt werden. Weiters muss es möglich sein, dass zukünftige Schülerinnen und Schüler diesen instandhalten und erweitern. Aus diesen Gründen, sowie den bereits vorhandenen Kentnissen, wird die Programmiersprache 'Python' als Grundlage des Servers verwendet.
 
 \paragraph{Python}\mbox{}\\
-Python ist eine vielseitige und hochentwickelte Programmiersprache, die für ihre Einfachheit und Lesbarkeit bekannt ist und sich sowohl für Anfänger als auch für Fortgeschrittene eignet. Sie unterstützt mehrere Programmierphilosophien, darunter objektorientierte und funktionale Programmierung, und wird in Bereichen wie Webentwicklung, Datenanalyse, künstliche Intelligenz und wissenschaftlichem Rechnen häufig eingesetzt. \cite{python_wp}
+Python ist eine vielseitige und hochentwickelte Programmiersprache, die für ihre Einfachheit und Lesbarkeit bekannt ist und sich sowohl für Anfänger als auch für Fortgeschrittene eignet. Sie unterstützt mehrere Programmierphilosophien, darunter objektorientierte und funktionale Programmierung, und wird in Bereichen wie Webentwicklung, Datenanalyse, künstliche Intelligenz und wissenschaftlichem Rechnen häufig eingesetzt. \cite{chatgpt}
 
 \paragraph{Flask}\mbox{}\\
-Flask ist ein leichtgewichtiges Web-Framework für Python, das durch seine Einfachheit und Flexibilität hervorsticht und sich ideal für kleinere Anwendungen oder Prototypen eignet. Es folgt einem minimalistischen Ansatz, bietet aber Erweiterungsmöglichkeiten, um komplexere Projekte zu realisieren. \cite{flask_wp}
+Flask ist ein leichtgewichtiges Web-Framework für Python, das durch seine Einfachheit und Flexibilität hervorsticht und sich ideal für kleinere Anwendungen oder Prototypen eignet. Es folgt einem minimalistischen Ansatz, bietet aber Erweiterungsmöglichkeiten, um komplexere Projekte zu realisieren. \cite{chatgpt}
 
 \subsubsection{Benutzeroberfläche}
 
 Um die Benutzeroberfläche zu realisieren muss eine Weboberflche erstellt werden. Auf dieser werden alle Inhalte angezeigt die für die Benutzung nötig sind. Sie wird vom Server zu verfügung gestellt, sobalt dieser eine http-Anfrage erhält. Um diese mit eigenen Inhalten und Funktionen zu befüllen, muss dies mit HTML geschehen.
 
 \paragraph{HTML}\mbox{}\\
-HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{html_wp}\\
+HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. \cite{chatgpt}\\
 
 Dadurch, dass sich viele Elemente des UI wiederholen, wie z.B. Navigationsleiste, bietet Falsk die Möglichkeit sog. 'Templates' zu verwenden. Diese können einmal definiert werden und dann an mehreren teilen der Webseite verwendet werden.
 Um elemente wie Formularflöchen oder Datenanzeige, einfach mit den benötigten Daten anzuzeigen, gibt die möglichkeit Macros zu erstellen, welche von Flask mit den bestimmten Daten vorgerendert und in das restliche HTML eingefügt werden.
 Um HTML, welches grundsätzlich ohne Formatierung auskommt, zu stylen, muss CSS verwendet werden. 
 
 \paragraph{CSS}\mbox{}\\
-CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.\\
+CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Design und Layout von Webseiten zu gestalten. Sie ermöglicht die Trennung von Inhalt und Darstellung, indem sie Farben, Schriftarten, Abstände und andere visuelle Aspekte definiert.\cite{chatgpt}\\
 
 Da auch Logik in der Webseite verbaut werden muss, muss zusätzlich auch Javascript verwendet werden, da HTML und CSS alleine, noch nicht gut genug mit dem Server Kommunizieren können.
 
 \paragraph{JavaScript}\mbox{}\\
-JavaScript (JS) ist eine vielseitige Programmiersprache, die hauptsächlich verwendet wird, um interaktive und dynamische Elemente auf Webseiten zu erstellen. Sie läuft direkt im Browser und ermöglicht Funktionen wie Animationen, Formularvalidierungen und die Kommunikation mit Servern in Echtzeit.\\
+JavaScript (JS) ist eine vielseitige Programmiersprache, die hauptsächlich verwendet wird, um interaktive und dynamische Elemente auf Webseiten zu erstellen. Sie läuft direkt im Browser und ermöglicht Funktionen wie Animationen, Formularvalidierungen und die Kommunikation mit Servern in Echtzeit.\cite{chatgpt}\\
+
 Praktisch geschieht diese Server-Kommunkation immer mithilfe diese Programmblocks
 
 \begin{lstlisting}[language=JavaScript]
@@ -455,8 +501,9 @@ Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, a
     \item 'relation': eine Liste mit 'instruction\_id's', welch vor dieser Anweisung erfüllt sein müssen
 \end{itemize} 
 
-Bei Auswahl der zu schickenden Anweisung, wird zuerst die aktuell von der SPS gemachte Anweisung vermerkt, danach weird in allen Modulen des 'stacks' nachgeschaut, welche Anweisungen gemacht werden können. Zu diesem Zweck wird die 'relation' einer Anweisung mit den bereits gemachten Anweisungen verglichen, wenn bereits alle relevanten Anweisungen gemacht wurden, wird der Auftrag in 'to\_send' vermerkt. Schlussendlich wird einer der in 'to\_send' vermerkten Aufträge für die SPS übersetzt und an diese geschickt. 
-Wenn die SPS den Auftrag erhalten hat, schickt sie ein 'Acknowledge' mit der erhaltenen ID zurück. Der Auftrag wird dann aus den 'instructions\_to\_send' gelöscht und entweder wird einfach der nächste Auftrag in 'to\_send' geschickt oder der 'BMOS' Algorithmus wird erneut durchlaufen.
+Bei Auswahl der zu schickenden Anweisung, wird zuerst die aktuell von der SPS gemachte Anweisung vermerkt, danach weird in allen Modulen des 'stacks' nachgeschaut, welche Anweisungen jetzt ausgeführt werden können. Zu diesem Zweck wird die 'relation' einer Anweisung mit den bereits gemachten Anweisungen verglichen, wenn bereits alle relevanten Anweisungen gemacht wurden, wird der Auftrag in 'to\_send' vermerkt. Schlussendlich wird einer der in 'to\_send' vermerkten Aufträge für die SPS übersetzt und an diese geschickt. 
+Wenn die SPS den Auftrag erhalten hat, schickt sie ein 'acknowledge' mit der erhaltenen ID zurück. Der Auftrag wird dann aus den 'instructions\_to\_send' gelöscht und entweder wird einfach der nächste Auftrag in 'to\_send' geschickt oder der 'BMOS' Algorithmus wird erneut durchlaufen.
+
 
 \subsubsection{Datenbanken}
 
@@ -506,8 +553,8 @@ Im Fall dieser Anwendung werden die Daten aus der Artikeldatenbank als 'Dokument
 \\
 Durch den Relativ hohen Rechenaufwand bei dieser Suchoperation wird dieser in der Programmiersprache Rust implementert. Die Implementierung in Rust ist im vergleich zu Python schon bei relativ kleinen Datenmenge bis zu 5-mal schneller.
 
-\subparagraph{Rust}
-Rust ist eine sehr effiziente und schnelle Programmiersprache die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler. 
+\subparagraph{Rust}\mbox{}\\
+Rust ist eine sehr effiziente und schnelle Programmiersprache die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler.\cite{}
 
 Die Funktion dieses Algorithmus ist in drei unterteile Unterteilt.
 

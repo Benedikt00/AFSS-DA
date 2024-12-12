@@ -16,7 +16,7 @@
 *.vrb
 *.xml
 *.bcf
-
+*.synctex
 # PDF files (optional)
 *.pdf
 
