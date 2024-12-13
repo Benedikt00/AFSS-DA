@@ -4,7 +4,7 @@
 
 \subsubsection{Planung - Grundanforderungen}
 Grundlegende Anforderungen zur planung der AFSS-Mechanik, sind die größe des Lifts an der HTL-Mössingerstraße, sowie möglichst einfache realisierung mit HTL-mitteln, möglichst wenig kompromisse in der Funktion oder zuverlässigkeit eingehen zu müssen.
-Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf 2.3 m Länge um im Lift transportiert werden zu können und auf 1.9 m höhe aufgrund der Türhöhe im Keller. Weiters müssen auch noch Rollen an den Rahmen angebracht werden, um das Lager überhaubt erst ohne großen mehraufwand bewegen zu können. Diese Extrahöhe limitiert den Rahmen weiter.
+Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf 2.3 m Länge um im Lift transportiert werden zu können und auf 1.9 m höhe aufgrund der Türhöhe im Keller. Weiters müssen auch noch Rollen an den Rahmen angebracht werden, um das Lager  ohne großen mehraufwand bewegen zu können. Diese Extrahöhe limitiert den Rahmen weiter.
 Nun soll dieser rund 2.25 m lange und 1.8 m hohen Raum optimal genutzt werden um eine möglichst große Lagerdichte sicherstellen zu können.
 Um möglichst gute erweiterbarkeit, sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sog. Item-Profile verwendert werden. 
 
@@ -27,12 +27,12 @@ Die Anwendung im AFSS erfordert weiters recht lange Verfahrwege. Um dies kosteng
     \caption{V-Slot-Profil mit V-Wheel, Quelle: \cite{v_slot_wheel}}
 \end{wrapfigure}
 \paragraph{V-Slot}\mbox{}\\
-Auch V-Slot-Profile sind Aluminium Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile, mit Nutensteinen ect. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann. Dies Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da diese einerseits auch breiter und mehr V-Wheels verwendet werden, sowie einen sehr großen Widerstandsmoment aufweißen. 
+Auch V-Slot-Profile sind Aluminium Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile, mit Nutensteinen ect. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann. Dies Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da diese einerseits auch breiter und mehr V-Wheels verwendet werden, sowie einen sehr großen Widerstandsmoment aufweisen. 
 
 
 \subsubsection{Vorgehensweise}
-Aufgrund der besoderen und sehr Komplexen anforderungen dieser Mechanik, erfolgt die Entwicklung in mehreren Iterationen. Nach Auslegung der Grundparameter wird eine Grundkonstruktion erstellt, um mögliche Lösungsansätze für die jeweiligen Komponenten zu skizzieren. Durch diese Grobe Planung, können viele Konzepte ohne großen Zeitaufwand iteriert werden und auch mögliche missverständnisse o. ä. frühzeitig aufgeklärt und überarbeitet werden. \\
-Um bestimmte elemente der Mechanik einzeln zu testen, werden auch mehrere Prototypen gebaut und die gewonnenen Erkentnisse in die finale Konstruktion miteingebunden. \\
+Aufgrund der besonderen und sehr Komplexen Anforderungen dieser Mechanik, erfolgt die Entwicklung in mehreren Iterationen. Nach Auslegung der Grundparameter wird eine Grundkonstruktion erstellt, um mögliche Lösungsansätze für die jeweiligen Komponenten zu skizzieren. Durch diese Grobe Planung, können viele Konzepte mit geringerem Zeitaufwand iteriert werden und auch mögliche Missverständnisse o. ä. frühzeitig aufgeklärt und überarbeitet werden. Weiters werden bei diesem Prozess wichtige Fähigkeiten in der Bedienung der CAD-Software gewonnen und so die Geschwindigkeit der zukünftigen Designiterationen beschleunigt.\\
+Um bestimmte elemente der Mechanik einzeln zu testen, werden auch mehrere Prototypen gebaut und die gewonnenen Erkenntnisse in die finale Konstruktion miteingebunden. \\
 
 \begin{figure}[H]
     \centering
@@ -58,12 +58,25 @@ Um bestimmte elemente der Mechanik einzeln zu testen, werden auch mehrere Protot
     \label{pts}
 \end{figure}
 
+\paragraph{Rahmenbedingungen für die Fertigung}\mbox{}\\
+Damit die Fertigung der Machanik and der HTL-Mössingerstrasse in einem realistischen Zeitrahmen möglich ist, müssen gewisse Rahmenbedingungen bei der Planung beachtet werden.
+\begin{itemize}
+    \item Für Verbindungen mit geringer bis mittlerer mechanischen Beanspruchung werden Bauteile so geplant, dass diese im Lasercutter gefertigt werden können, sowie in den stärken die der Werkstätte zu Verfügung stehen (3, 4, und 5 mm). Wobei beachtet werden muss, dass die Acrylplatten gegossen sind, und dadurch recht hohe Toleranzen (bis zu + 0.3 mm) aufweisen.
+    \item Verbindungen zwischen Platten und Item- oder V-Slot-Profilen werden möglichst einheitlich gestaltet. Grundsätzlich gilt: Verbindungen mit Item-Baureihe (BR) 5 (20x20) werden grundsätzlich in M5 ausgeführt, ausser bei Platzmangel in M3. Verbindungen mit BR 8 (40x40) mit M8. 
+    \item Bei Bauteilen mit hoher Mechanischer Beanspruchung wird Aluminiumblech mit 5 mm stärke verwendet. Dies wird zwar CNC-gefräst, doch um bei der Fertigung zeit zu sparen, wir davon abgesehen, Taschen o. ä. einzuplanen. Stattdessen wird immer ein Flaches Profil verwendet, welches sich mit 2.5D Fräsverfahren mit durchgangsfräsen, ähnlich einem Lasercutter, fertigen lässt. Bei Aluminiumteilen wird darauf geachtet dass diese immer aus 5 mm dickem Aluminiumeloxal gefertig werden.
+\end{itemize}
+
 \subsubsection{Fusion360}
+Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine Breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. 
+
+\paragraph{Konstruktionsvorgang}\mbox{}\\
+Um ein so umfangreiches Projekt umsetzen zu können, muss auch bei der 3D-Planung möglichst viel Ordnung herrschen. Um möglichst effizient zu arbeiten, werden wiederverwendete Bauteile in einer eigens angelegten Bauteilbibliothek abgelegt. So können beispielsweise Aluminiumprofile in Normlängen, oder Sensoren, einfach die aktuelle Konstruktion eingefügt werden, ohne diese jedes mal neu zu Konstruieren. \\
+Auch in einer Konstruktion selbst ist auf die übersicht zu achten. Zu diesem Zweck ist es sehr sinnvoll, zusammenhängende Objekte in Komponenten zusammenzufassen. Diese sind vergleichbar mit Ordnern. Wie auch Ordner können auch Komponenten ineinander Verschachtelt werden. So ist es möglich eine sauberes Struktur umzusetzen, welche es beispielsweise vereinfacht einzelne Konstruktionsteile zu betrachten, oder Änderungen an nur diesen durchzuführen.
 
 \subsubsection{Rahmen}
 
 Der Rahmen des AFSS bezeichnet jene Struktur, welche als äußerstes Gehäuse, sowie grundlegende mechanische Stabilität bietet. Es ist geplant, dass es die anforderungen von Maximalhöhe und -länge optimal ausnutzt sowie breite minimal hält. \\
-Umgesetzt wird dies mit einem Gerüst aus 40x40-Aluminium Extrusionen. Dieses hat weiters oben udn unten noch zwei Längsstreben, die dazu dienen, eine möglichst platzsparende aufhängung, der X-Achsen V-Slot-Profile, zu realsisieren. Auf einer Seite wird weiters eine Aussparung eingeplatn, um genug Freiraum übrig zu lassen, damit der Querförederer die Boxen reibungslos auf das Förderband bringen kann.\\
+Umgesetzt wird dies mit einem Gerüst aus 40x40-Aluminium Extrusionen. Dieses hat weiters oben udn unten noch zwei Längsstreben, die dazu dienen, eine möglichst platzsparende Aufhängung, der X-Achsen V-Slot-Profile, zu realsisieren. Auf einer Seite wird weiters eine Aussparung eingeplatn, um genug Freiraum übrig zu lassen, damit der Querförederer die Boxen reibungslos auf das Förderband bringen kann.\\
 Weiters muss noch eingeplant werder, dass noch Rollen zum Transport angebracht werden müssen. Dadurch, dass diese auswirkungen auf die Maximalhöhe haben, muss dass in die Auslegung der Y-Achse einfließen, um Bewegung durch Türen zu ermöglichen.
 
 \subsubsection{X-Achse}
@@ -80,11 +93,11 @@ Angetrieben wird die X-Achse mit zwei Schrittmotoren, welche jeweils an einer Sc
 Da der Riemen für eine zuverlässige Kraftübertragung bei so langen Verfahrwegen eine relativ große Vorspannkraft benötigt wird, ist das Zahnriemenklemmelement auf der X-Achse auch dementsprechend auszuführen. Um den Zahnriemen zu greifen, muss ein Negativ in Aluminium gefräßt werden, in dieses der Zahnriemen dann auf beiden Seiten des Schlittens geklemmt wird. Die Aufhängung der einen Seite ist einfach mit den Item-Profilen verschraubt, lässt aber noch etwas platz, um den Riemen mit der Hand vorzuspannen. Auf der anderen Seite ist das Klembrett über zwei Gewindestangen mit dem restlichen Shuttle verbunden. Diese können festgezogen werden, um die nötigen Vorspannkräfte zu erzeugen. Ausserdem ist diese Spannvorrichtung in einem Formfaktor ausgeführt, welcher es erlaubt, dierekt darüber die Motoren der Y-Achse anzubringen. 
 
 \paragraph{Achsenführung} \mbox{}\\
-Die Fürung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-Wheels werden von oben auf das C-Profil gedrückt. Jedes Rad wird einzeln aufgehangen. Weiters ist überall eine Schraube mit welcher das Rad weiter in die Führung hienein gedrückt werden kann, sowie ein bis zwei Klemmpunkte, um bei Betrieb die Last von der Spannschraube nehmen zu können. \textbf{Durch den Geringen Platz im Schlitten ist es durchaus ein Triumpf, dass alls diese Mechanik, neben der Spannelemente und Motoren in einem so kleinen Shuttel platz finden.} Auf der Seite des Schlittens werden noch weitere V-Wheels angebracht, welche die Spurführung übernehmen.
-Im oberen Schlitten werden nur diese Fuhrungsräder verbaut, da es nicht möglich und nötig ist, vertikale Kräfte zu unterstützen.
+Die Führung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-Wheels werden von oben auf das C-Profil gedrückt. Jedes Rad wird einzeln aufgehangen. Weiters ist überall eine Schraube mit welcher das Rad weiter in die Führung hienein gedrückt werden kann, sowie ein bis zwei Klemmpunkte, um bei Betrieb die Last von der Spannschraube nehmen zu können. \textbf{Durch den Geringen Platz im Schlitten ist es durchaus ein Triumpf, dass alls diese Mechanik, neben der Spannelemente und Motoren in einem so kleinen Shuttel platz finden.} Auf der Seite des Schlittens werden noch weitere V-Wheels angebracht, welche die Spurführung übernehmen.
+Im oberen Schlitten werden nur diese Führungsräder verbaut, da es nicht möglich und nötig ist, vertikale Kräfte zu unterstützen.
 
 \paragraph{Kabelführung} \mbox{}\\
-Um Sensoren und Aktoren der Y- und Z-Achse zu unterstützen, müss dementsprechende Leitungen auf das X-Shuttel verlegt werden. Die wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird pralell zum unteren C-Profil verlegt und unter berücksichtigung der Biegeradien am X-Shuttel befestigt. Bei dieser ist darauf zu achten, dass sie alle benötigten Leitungen, sowie genügent Freiraum für die Biegung einhält \cite{igus_freitragend}. Weiters müssen Signal- und Aktorstromkreise durch trennstege voneinander getrennt werden.\\
+Um Sensoren und Aktoren der Y- und Z-Achse zu unterstützen, müssen dementsprechende Leitungen auf das X-Shuttel verlegt werden. Die wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird parallel zum unteren C-Profil verlegt und unter berücksichtigung der Biegeradien am X-Shuttel befestigt. Bei dieser ist darauf zu achten, dass sie alle benötigten Leitungen, sowie genügent Freiraum für die Biegung einhält \cite{igus_freitragend}. Weiters müssen Signal- und Aktorstromkreise durch trennstege voneinander getrennt werden.\\
 Um die weiteren Geräte am AFSS zu versorgen, müssen zusätzlich noch Verdrahtungskanäle am Rahmen angebracht werden. 
 
 \paragraph{Sensoren}\mbox{}\\
@@ -94,7 +107,7 @@ Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und 
 Als Y-Achse wird jene Achse bezeichnet, die ihre Bewegung vertikal durchführt. Sie hat die Aufgabe, die Z-Achse bzw. das YZ-Shuttel auf Position zu bringen. Wichtig hierbei ist jedoch, dass die Y-Achse die Aufgabe des aufheben der Box übernimmt.
 
 \paragraph{Antriebsauslegung}\mbox{}\\
-Dadurch, dass die Y-Achse sowohl YZ-Shuttle als auch die Boxen aufheben muss, muss der Antrieb dementsprechend dimensioniert werden. Als Formfaktor sol ein Nema23-Schrittmotor verwendet werden. Diese sind weit verbreitet und zu Servomotoren verhältnissmäßig kostengünstig. Als grundformfaktor wird ein 2 Nm Motor gewählt, nun soll überprüft werden, ob dieser die Last der YZ-Achse auch antreiben kann.
+Dadurch, dass die Y-Achse sowohl YZ-Shuttle als auch die Boxen aufheben muss, muss der Antrieb dementsprechend dimensioniert werden. Als Formfaktor sol ein Nema23-Schrittmotor verwendet werden. Diese sind weit verbreitet und zu Servomotoren verhältnismäßig kostengünstig. Als grundformfaktor wird ein 2 Nm Motor gewählt, nun soll überprüft werden, ob dieser die Last der YZ-Achse auch antreiben kann.
 
 \vspace{5mm}
 \noindent\begin{minipage}{\textwidth}
@@ -119,13 +132,12 @@ Dadurch, dass die Y-Achse sowohl YZ-Shuttle als auch die Boxen aufheben muss, mu
 
 \vspace{5mm}
 
-Bei Konstruktion einer früheren Version des YZ-Shuttels wurde erfasst, dass das Shuttel bis zu 13 kg Wiegen kann. Dies wird zwar in einer späteren Iteration des Designvorgangs noch verbessert, dient jedoch als richtwert der Antriebsauslegung. 13 kg erzeugen ohne berücksichtigung von Reibung knapp 130 N. Die Antriebskraft der Schrittmotoren reicht auf jeden fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen, also das gesamte Gewicht der Z-Achse und der Kabelschlepkette immer unterstützen müssen, durchaus sinnvoll.
+Bei Konstruktion einer früheren Version des YZ-Shuttels wurde erfasst, dass das Shuttel bis zu 13 kg Wiegen kann. Dies wird zwar in einer späteren Iteration des Designvorgangs noch verbessert, dient jedoch als richtwert der Antriebsauslegung. 13 kg erzeugen ohne Berücksichtigung von Reibung knapp 130 N. Die Antriebskraft der Schrittmotoren reicht auf jeden fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen, also das gesamte Gewicht der Z-Achse und der Kabelschleppkette immer unterstützen müssen, durchaus sinnvoll.
 
 \paragraph{Zahnriemen und Umlenkung}\mbox{}\\
-Als Zahnriemen wird auch bei der Y-Achse auf eine AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung ebendieses nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, muss er auch dort wieder Rückgeführt werden. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ain möglichst kompakter Formfaktor angestrebt werden muss, sowie andererseits eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot C-profil erforderlich ist. Aus diesem Grund wir eine konstrukiton aus Aluminium, welche sich selbst verhakt konstruiert. Sie muss Seitlich ann den Profilen verschraubt werden. Im forderen Überhang werden Aluminiumelemente eingehängt, welche die Aufhängung der Achse für die Umlenkung erlauben. 
+Als Zahnriemen wird auch bei der Y-Achse auf eine AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung ebendieses nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, muss er auch dort wieder rückgeführt werden. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ain möglichst kompakter Formfaktor angestrebt werden muss, sowie andererseits eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot C-profil erforderlich ist. Aus diesem Grund wir eine konstrukiton aus Aluminium, welche sich selbst verhakt konstruiert. Sie muss Seitlich ann den Profilen verschraubt werden. Im vorderen Überhang werden Aluminiumelemente eingehängt, welche die Aufhängung der Achse für die Umlenkung erlauben. 
 
 \paragraph{Zahnriemenaufgängung}\mbox{}\\
-
 Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um die Konstrukiton beginnen zu können, werden hierfür ungefähre Werte angenommen.
 
 \noindent\begin{minipage}{\textwidth}
@@ -156,8 +168,7 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
             Z-Gable & 0.3 & 180 
         \end{tabular}
     \caption{X-Achse unbeladen und eingefahren}
-    \end{table}
-\begin{table}[H]
+        \vspace{5mm}
         \centering
         \begin{tabular}{c c c}
             Gegenstand & Masse in kg & Position in mm\\ 
@@ -168,11 +179,9 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
         \end{tabular}
         \caption{X-Achse beim Ladevorgang}
 \end{table}
-
-
-    So werden zwei Schwerpunkte errechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt.
-    Weiters muss auch dieser Zahnriemen wieder gepannt werden, durch die geringere Zahnriemenlänge, wird auch der Spannmechanismus vekleinert. 
-    Leider muss dieser aus Platzgründen ausserflucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung kann durch folgenden Ausdruck approximiert werden.
+So werden zwei Schwerpunkte errechnet: ca. 130 mm im unbeladen und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Schuttels während dem Ladevorgang wichtiger ist als während einer Leerfahrt wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemen bei rund 200 mm liegt.
+Weiters muss auch dieser Zahnriemen wieder gepannt werden, durch die geringere Zahnriemenlänge, wird auch der Spannmechanismus vekleinert.
+Leider muss dieser aus Platzgründen ausserflucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung kann durch folgenden Ausdruck approximiert werden.
     
     \vspace{4mm}
     \noindent\begin{minipage}{\textwidth}
@@ -194,7 +203,7 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
         \end{align*}
     \end{minipage}
     \end{minipage}
-    
+
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{Zahnrimenenversatz.png}
@@ -202,7 +211,7 @@ Um die optimale Postiton der Zahnriemenaufhängung für die Y-Achse bestimmen zu
         \label{zahnriemenversatz}
     \end{figure}
 
-    Aus der Abbildung \ref{zahnriemenversatz} geht, wie schon intuitiv vermutet, hervor, dass ist diese Assymetrie nur dann ein Problem, wenn der Schlitten witunten ist. Ein konkretes maß kann folgendermaßen erhalten werden: \(K(80) - (750) = 4.24 \unit{mm}\). Der unterschied in der benötigten Riemenlänge zwischen der Mittelstellung (750 mm) und Ruheposition (80 mm über der Zahnscheibe) ist also rund 4 mm. Im anbetracht dessen, dass dies Länge auf zwei Seiten (Hin- und Rücklaufseitig) des Zahnriemen aufgeteilt wird (welcher etwas elastisch ist), sowie etwas biegung in der Umlenkungsaufhängung auftritt, wird diese Extraspannung toleriert.
+Aus der Abbildung \ref{zahnriemenversatz} geht, wie schon intuitiv vermutet, hervor, dass ist diese Assymetrie nur dann ein Problem, wenn der Schlitten witunten ist. Ein konkretes maß kann folgendermaßen erhalten werden: \(K(80) - (750) = 4.24 \unit{mm}\). Der unterschied in der benötigten Riemenlänge zwischen der Mittelstellung (750 mm) und Ruheposition (80 mm über der Zahnscheibe) ist also rund 4 mm. Im anbetracht dessen, dass dies Länge auf zwei Seiten (Hin- und Rücklaufseitig) des Zahnriemen aufgeteilt wird (welcher etwas elastisch ist), sowie etwas biegung in der Umlenkungsaufhängung auftritt, wird diese Extraspannung toleriert.
 
 \paragraph{Shuttleführung}\mbox{}\\
 Das YZ-Shuttel wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil geführt. Dieses sind auf beiden Seiten jeweils oben und unten befestigt. Die Länge wird so gewählt, dass die Verwendung eines 1.5 m langen Profils perfekt ausreicht. Da dass YZ-Shuttel wesentlich weniger Kraft auf die Führung auswirkt können weniger Führungsräder verwendet werden. Die Hauptführungsräder werden so Positioniert,  dass sich ein Dreieck ergibt. Dieses dient dazu, dass sowohl beim Aufhängevorgang als auch beim Leerlauf immer eine Klemmung um die Führungsschiene entsteht. Hierbei sind jene V-Wheels, welche beim Aufhebevorgang belastet werden, doppelt ausgeführt. Wie schon bei der X-Achse sind auch hier wieder alle V-Wheel-abstände mit Schrauben einstellbar. Zusätzlich zur Hauptführung sind auch aussen jeweils noch zwei Führungsräder angebracht, um das Shuttel zusätzlich zu stabilisieren.
@@ -253,11 +262,7 @@ Berechnet werden kann diese Zeit mit folgenden Ausdruck:
 So wird berechent, dass eine DS10x12 Spindel mit ihren 12 mm Steigung, bei einer Motordrehzahl von 600 U/min (0.42 Nm) und einem Übersetzungsverhältniss von 2:1, ca. 4 Sekunden pro Richtung benötigt und mit einer Kraft von ca. 90 N bewegt wird. 
 
 \paragraph{Sensorik}\mbox{}\\
-
 Um auch die Endschlater der Z-Achse, sowie weitere Sensoren einzulesen, wird auch hier ein ASi-Slave montiert.
-
-\paragraph{Sensorik}\mbox{}\\
-
 
 \subsubsection{Lager}
 Das Lager soll die Boxen beeinhalten, und die Möglichkeit zulassen, dass dies von der Gabel ein- und ausgehobenwerden. Weiters muss, die Box in X- und Z-Richtung geführt werden, um Positionsgenauigkeit sicherzustellen, da sonst die Gabel möflicherweise in die Box fährt. Das Lager soll darauf ausgelegt werden, dass Boxen mit den Maßen 50x100x200mm verwendet werden können. Diese Boxen sind nach unten hinn verjüngt und haben oben eine Lippe, an der die Gabel greift.\\
@@ -265,10 +270,21 @@ Umgesetzt wird dies mit eine Gerüst aus 40x40-Item-Profilen, welches im nachhie
 
 \subsubsection{Querförderer}
 Da es dem Portalroboter nicht möglich ist, die Boxen dierekt auf das Förderband zu legen, muss hier noch ein System eingebunen werden, welches dies erledigt. Da die Boxen beim ein- und auslagern den gleichen Weg zurücklegen, muss dieser Querförderer, die Box sowohl auf das Förderband, sowie vom Förderband herunterbewegen kann. 
-Zu diesem Zweck wir eine weitere Gabel montiert, welche auf einem 20x40-V-Slot-Profil verläuft. Die Box wird dann hin- und her geschoben, um vom Lager auf das Fördeband umzuladen.
+Zu diesem Zweck wir eine weitere, der Gabel ähnlichen Konstruktion montiert, welche auf einem 20x40-V-Slot-Profil verläuft. Die Box wird dann hin- und her geschoben, um vom Lager auf das Fördeband umzuladen. Dadurch ist es noch möglich, dass die Gabel der Z-Achse die Box in der Nulstellung ein- und aushebt.
 
 
 \subsubsection{Fertigung}
+
+\paragraph{Lasern}\mbox{}\\
+An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter zur Kunstoffverarbeitung zu verwenden. Um ein gewünstes Teil Ferigen zu können, muss die Kontour dieses als .dwg zur verfügung stehen. Dieses kann dann unter berücksichtigung der Materialstärke aus verschiedenen Farben geschnitten werden.
+
+
+\paragraph{Fräsen}\mbox{}\\
+Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu Bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren.  
+
+\paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
+Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene längen zuzuschneiden. 
+
 
 \paragraph{Umlenkrollen}\mbox{}\\
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Dadurch dass diese der gesamten Spannkraft ausgesetzt. Dies erfordert spezielle Anforderungen an die Aufhängen als auch an die Umlenkrolle selbst. Diese soll primär eine 180° Wende des Zahnriemens ermöglichen, sowie sekundär eine Führung für den Riemen bieten. 
@@ -285,7 +301,7 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
     \setlength\itemsep{-1mm} % Reduce space between items
     \item Zuerst die Frontfläche Plandrehen (Drehzahl: 900 U/min)
-    \item Ungefär 30mm Länge auf das Aussenmaß von 36mm Plandrehen
+    \item Ungefär 30mm Länge auf das Aussenmaß von 36 mm Plandrehen
     \item Mit 9.8mm Bohrer das mittlere Loch vorbohren (540 U/min)
     \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue Passung bringen (260 U/min)
     \item Die Position relativ zum Backenfutter markieren, um beim Neu-Einspannen Rundlaufgenauigkeit zu gewährleisten
@@ -297,11 +313,11 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
     \item Den Lochdurchmesser auf 21.95 erweitern und dann in kleinen Inkrementen zustellen, bis das Lager gerade so nicht passt, um einen Presssitz zu gewährleisten. Dies tritt bei Lagern mit 22 mm Außendurchmesser bei rund 22.04 mm ein.
     \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfügbar ist, wurde als Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
     \item Mit dem Abstechmeißel wird in 2 mm Inkrementen die Zahnriemenauflagefläche herausgedreht, bis auf 30.2 mm, sowie links und rechts den Rand 1 mm extra dick lassen. (540 U/min)
-    \item Am Schluss wird der Rand auf Maß gedreht und die Tiefe fertiggedreht.
+    \item Am Schluss wird der Rand Tiefe auf Maß gedreht.
     \item Als letzten Schritt werden links und rechts die zwei Lager eingepresst.
 \end{itemize}
 
-    Durch die Verhältnissmäßig großen Toleranzen bei den Lageraussendurchmessern wird bei 2 der 8 Lagerpassungen zusätztlich Lagerkleber verwendet um eine Zuverlässige Passung zu gewährleisten.
+    Durch die verhältnismäßig großen Toleranzen bei den Lageraussendurchmessern wird bei 2 der 8 Lagerpassungen zusätztlich Lagerkleber verwendet um eine Zuverlässige Passung zu gewährleisten.
 
     \begin{figure}[H]
         \centering
@@ -327,8 +343,7 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
         \label{ulr}
     \end{figure}
 
-\paragraph{Lasern}
-\paragraph{Fräsen}
+
 
 \subsubsection{Aufbau}
 
@@ -544,8 +559,6 @@ Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese
     Dann werden auch alle Logs in der Kommandozeile ausgegeben sowie 
 
 
-
-
 \subsubsection{Artikelsuche}
 \paragraph{TF-IDF und Rust Implementierung} \hspace{0pt} \\
 Der TF-IDF (Term Frequency-Inverse Document Frequency) Algorithmus, ist ein Weg um wichtige wörter aus Dokumenten zu extrahieren. Er wird verwendet um beispielsweise in Suchmaschienen, eine Suchanfrage mit Webpagecontent abzugleichen, und die am besten mit der Suchanfrage übereinsteimmenden Dokumente zu sortieren. \\
@@ -554,7 +567,7 @@ Im Fall dieser Anwendung werden die Daten aus der Artikeldatenbank als 'Dokument
 Durch den Relativ hohen Rechenaufwand bei dieser Suchoperation wird dieser in der Programmiersprache Rust implementert. Die Implementierung in Rust ist im vergleich zu Python schon bei relativ kleinen Datenmenge bis zu 5-mal schneller.
 
 \subparagraph{Rust}\mbox{}\\
-Rust ist eine sehr effiziente und schnelle Programmiersprache die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler.\cite{}
+Rust ist eine sehr effiziente und schnelle Programmiersprache die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler.\cite{chatgpt}
 
 Die Funktion dieses Algorithmus ist in drei unterteile Unterteilt.
 
@@ -650,11 +663,13 @@ fn cos_similarity(query_p: Vec<f64>, document_p: Vec<f64>) -> f64 {
     // Return the cosine similarity
     return dot_product / (abs_doc * abs_query);
 }\end{lstlisting}
-    Nach der Berechnung dieser für jedes Dokument werden alle Dokumente sortiert und ausgegeben.
+    Nach der Berechnung dieser für jedes Dokument werden alle Dokumente sortiert und ja nach anforderung die benötigte Anzahl ausgegeben.
 \end{enumerate}
 
 
-
+\subparagraph{Artikelsuche nach Kategorien}\mbox{}\\
+Um auche einen simpleren weg der Artikelfindung zur verfügung zu stellen, wird ausserdem die Möglichkeit implementiert, Artikel anhand von Attributen zu suchen. Zu diesem Zweck werden schon bei der Artikelerstellung Attribute für die Einträge 'Gruppen' und 'Kategorien' vergeben. In 'Gruppen' wird eine art Pfad angelegt, der die Suche eingrenzt. Beispielsweise würde so ein Eintrag folgende Daten Einthalten: ["Item", "Verbindungssatz"] enthalten. So kann bei der Artikelsuche zuerst die Überkategorie "Item" und dann die Unterkategorie "Verbindungssatz" aus mehreren verschiedenen ausgewählt werden. Um Bauteile weiter zu unterschieden, da es z.B. viele verschiedene Widerstände gibt, weren unter 'Kategorien' einzelheiten zum Produkt, wie Wert, Farbe o. ä. gespeichert.\\ 
+Diese Informationen werden auch vom TF-IDF verwendet, dienen aber spezieller dazu, möglichst sicher das gewünschte Bauteil in einem Durchcklickmenue zu finden.
 
 
 
