@@ -136,3 +136,20 @@ footer {
 footer img{
     max-height: 40px;
 }
+
+@media screen and (max-width: 481px){
+
+    .navbar {
+        background-color: rgb(240, 240, 240);
+    }
+
+    footer {
+        font-size: 2.3vw;
+    }
+
+    footer img {
+        max-width: 30vw;
+        height: auto;
+    }
+
+}

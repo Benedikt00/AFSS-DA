@@ -6,8 +6,9 @@
 }
 
 #spons_cont #thanks {
-    padding: 40px 0px;
+    padding: 20px 0px;
     color: rgb(42, 42, 42);
+    font-size: 1.3vw;
 }
 
 #logos {
@@ -45,6 +46,7 @@
 #spons_cont #logos #igus {
     grid-area: igus;
 }
+
 #spons_cont #logos #maedler {
     grid-area: maedler;
 }
@@ -64,3 +66,30 @@
     max-width: 70%;
 }
 
+@media screen and (max-width: 481px) {
+
+    #spons_cont #thanks {
+        font-size: 2.7vw;
+        text-align: center;
+        padding: 5vw;
+    }
+
+    #logos {
+        display: flex; /* Flexbox für ein Spaltenlayout */
+        flex-direction: column; /* Elemente vertikal anordnen */
+        gap: 20px; /* Abstand zwischen den Logos */
+        align-items: center; /* Zentriere die Logos */
+    }
+
+    #logos img {
+        max-width: 70vw;
+        padding: 3vh;
+    }
+
+    #logos a {
+        display: flex; /* Flexbox für inneres Alignment */
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Logos nehmen volle Breite ein */
+    }
+}
