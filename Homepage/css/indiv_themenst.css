@@ -28,8 +28,7 @@
     text-align: justify;
 }
 
-.head .img_c{
-    
+.head .img_c{  
     padding: 20px 0vw;
     width: 20%;
 }
@@ -48,3 +47,42 @@
     color: rgb(45, 45, 45);
 }
 
+@media screen and (max-width: 481px) {
+
+    #indiv_title h1{
+        font-size: 5.5vw;
+    }
+    
+    .head {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .head .img_c {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 65%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .head .img_c img {
+        width: 55%;
+    }
+
+    .head .text {
+        order: 2;
+        width: 100%;
+    }
+
+    .head .text h2{
+        font-size: 5vw;
+    }
+
+    .head .text p{
+        font-size: 3.5vw;
+    }
+
+}

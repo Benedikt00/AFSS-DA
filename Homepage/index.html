@@ -13,21 +13,34 @@
 
 <body>
     <header class="navbar">
-        <div class="navbar-left">
-            <span class="brand-name">AFSS</span>
-        </div>
-        <nav class="navbar-right">
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Projekt</a>
-                <div class="dropdown-menu">
-                    <a href="projekt.html">Projektdetails</a>
-                    <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
-                </div>
+        <div class="navbar_desktop">
+            <div class="navbar-left">
+                <a><span class="brand-name">AFSS</span></a>
             </div>
-            <a href="galerie.html">Gallerie</a>
-            <a href="sponsors.html">Sponsors</a>
-        </nav>
+            <nav class="navbar-right">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projekt</a>
+                    <div class="dropdown-menu">
+                        <a href="projekt.html">Projektdetails</a>
+                        <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
+                    </div>
+                </div>
+                <a href="galerie.html">Gallerie</a>
+                <a href="sponsors.html">Sponsors</a>
+            </nav>
+        </div>
+        
+        <div class="navbar_mobile">
+            <a href="#" class="mobile-menu-toggle">AFSS</a>
+            <div class="big-dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="projekt.html">Projektdetails</a>
+                <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="sponsors.html">Sponsors</a>
+            </div>
+        </div>
     </header>
     <main>
     <div id="first_look">
@@ -37,7 +50,6 @@
                 <p class="center" style="line-height: 1;">AFSS</p>
                 <p class="center_under">Automated Factory Storage system</p>
             </div>
-            
         </div>
     </div>
 
@@ -155,7 +167,6 @@
         });
 
 
-
         let lastScrollY = window.scrollY;
         const navbar = document.querySelector('.navbar');
 
@@ -177,6 +188,7 @@
 
             lastScrollY = currentScrollY;
         });
+    
 
     </script>
 </body>

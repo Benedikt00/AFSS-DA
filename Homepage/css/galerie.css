@@ -82,3 +82,33 @@
 .photo-preview.right-preview {
     right: 5%;
 }
+
+@media screen and (max-width: 481px) {
+
+    .photo-preview {
+        visibility: hidden;
+    }
+
+    .gallery {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .arrow {
+        font-size: 13vw;
+        padding: 0;
+    }
+
+    .arrow.left-arrow {
+        padding-left: 5vw;
+    }
+
+    .arrow.right-arrow {
+        padding-right: 5vw;
+    }
+
+    .photo-wrapper img {
+        width: 90%;
+    }
+
+}
