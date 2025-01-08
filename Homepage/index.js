@@ -42,6 +42,9 @@ function updateButtons() {
   rightButton.disabled = !showingFirstBunch;
 }
 
+const currentPage = document.body.dataset.page;
+
+if (currentPage === "index") {
 // Event listeners
 leftButton.addEventListener('click', () => {
   if (!showingFirstBunch) {
@@ -62,3 +65,23 @@ rightButton.addEventListener('click', () => {
 // Initialize
 secondBunch.style.transform = 'translateX(100%)'; // Position second bunch off-screen
 updateButtons();
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const bigDropdownMenu = document.querySelector(".big-dropdown-menu");
+
+  // Toggle dropdown menu on click
+  mobileMenuToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      bigDropdownMenu.classList.toggle("open");
+  });
+
+  // Close dropdown if clicking outside
+  document.addEventListener("click", (e) => {
+      if (!bigDropdownMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          bigDropdownMenu.classList.remove("open");
+      }
+  });
+});
