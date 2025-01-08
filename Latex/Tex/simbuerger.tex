@@ -67,7 +67,7 @@ Damit die Fertigung der Machanik and der HTL-Mössingerstrasse in einem realisti
 \end{itemize}
 
 \subsubsection{Fusion360}
-Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine Breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. 
+Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. 
 
 \paragraph{Konstruktionsvorgang}\mbox{}\\
 Um ein so umfangreiches Projekt umsetzen zu können, muss auch bei der 3D-Planung möglichst viel Ordnung herrschen. Um möglichst effizient zu arbeiten, werden wiederverwendete Bauteile in einer eigens angelegten Bauteilbibliothek abgelegt. So können beispielsweise Aluminiumprofile in Normlängen, oder Sensoren, einfach die aktuelle Konstruktion eingefügt werden, ohne diese jedes mal neu zu Konstruieren. \\
@@ -199,7 +199,7 @@ Leider muss dieser aus Platzgründen ausserflucht zum Zahnriemen angebracht werd
             &K(h): \text{theoretische Länge des Riemen} & &\left[mm\right]\\
             &h: \text{Position des Schlittens} & &\left[mm\right]\\
             &l: \text{Umlenkungsrollenabstand} & &\left[mm\right]\\
-            &d: \text{Abstand der Kleme zur Flucht} & &\left[mm\right]
+            &d: \text{Abstand der Klemme zur Flucht} & &\left[mm\right]
         \end{align*}
     \end{minipage}
     \end{minipage}
@@ -259,7 +259,7 @@ Berechnet werden kann diese Zeit mit folgenden Ausdruck:
 
 \vspace{5mm}
 
-So wird berechent, dass eine DS10x12 Spindel mit ihren 12 mm Steigung, bei einer Motordrehzahl von 600 U/min (0.42 Nm) und einem Übersetzungsverhältniss von 2:1, ca. 4 Sekunden pro Richtung benötigt und mit einer Kraft von ca. 90 N bewegt wird. 
+So wird berechent, dass eine DS10x12 Spindel mit ihren 12 mm Steigung, bei einer Motordrehzahl von 600 U/min (0.42 Nm) und einem Übersetzungsverhältniss von 2:1, ca. 4 Sekunden pro Richtung benötigt und mit einer Kraft von ca. 90 N bewegt wird. \\Dies entspricht unseren Anforderungen und somit wird diese Spindel gewählt. Um sie zu Lagern wird vorne und hinten der Durchmesser der Spindel verringert, sodass diese in Kugellager geführt werden können.
 
 \paragraph{Sensorik}\mbox{}\\
 Um auch die Endschlater der Z-Achse, sowie weitere Sensoren einzulesen, wird auch hier ein ASi-Slave montiert.
@@ -280,7 +280,7 @@ An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter
 
 
 \paragraph{Fräsen}\mbox{}\\
-Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu Bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren.  
+Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchnesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.
 
 \paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
 Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene längen zuzuschneiden. 
@@ -387,7 +387,7 @@ Da auch Logik in der Webseite verbaut werden muss, muss zusätzlich auch Javascr
 \paragraph{JavaScript}\mbox{}\\
 JavaScript (JS) ist eine vielseitige Programmiersprache, die hauptsächlich verwendet wird, um interaktive und dynamische Elemente auf Webseiten zu erstellen. Sie läuft direkt im Browser und ermöglicht Funktionen wie Animationen, Formularvalidierungen und die Kommunikation mit Servern in Echtzeit.\cite{chatgpt}\\
 
-Praktisch geschieht diese Server-Kommunkation immer mithilfe diese Programmblocks
+Praktisch geschieht diese Server-Kommunkation immer mithilfe diese Programmblocks:
 
 \begin{lstlisting}[language=JavaScript]
     function sendData(data, callback) {
