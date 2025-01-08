@@ -44,7 +44,7 @@ function updateButtons() {
 
 const currentPage = document.body.dataset.page;
 
-if (currentPage === "index.html") {
+if (currentPage === "index") {
 // Event listeners
 leftButton.addEventListener('click', () => {
   if (!showingFirstBunch) {
