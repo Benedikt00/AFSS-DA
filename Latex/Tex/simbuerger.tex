@@ -214,7 +214,7 @@ Leider muss dieser aus Platzgründen ausserflucht zum Zahnriemen angebracht werd
 Aus der Abbildung \ref{zahnriemenversatz} geht, wie schon intuitiv vermutet, hervor, dass ist diese Assymetrie nur dann ein Problem, wenn der Schlitten witunten ist. Ein konkretes maß kann folgendermaßen erhalten werden: \(K(80) - (750) = 4.24 \unit{mm}\). Der unterschied in der benötigten Riemenlänge zwischen der Mittelstellung (750 mm) und Ruheposition (80 mm über der Zahnscheibe) ist also rund 4 mm. Im anbetracht dessen, dass dies Länge auf zwei Seiten (Hin- und Rücklaufseitig) des Zahnriemen aufgeteilt wird (welcher etwas elastisch ist), sowie etwas biegung in der Umlenkungsaufhängung auftritt, wird diese Extraspannung toleriert.
 
 \paragraph{Shuttleführung}\mbox{}\\
-Das YZ-Shuttel wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil geführt. Dieses sind auf beiden Seiten jeweils oben und unten befestigt. Die Länge wird so gewählt, dass die Verwendung eines 1.5 m langen Profils perfekt ausreicht. Da dass YZ-Shuttel wesentlich weniger Kraft auf die Führung auswirkt können weniger Führungsräder verwendet werden. Die Hauptführungsräder werden so Positioniert,  dass sich ein Dreieck ergibt. Dieses dient dazu, dass sowohl beim Aufhängevorgang als auch beim Leerlauf immer eine Klemmung um die Führungsschiene entsteht. Hierbei sind jene V-Wheels, welche beim Aufhebevorgang belastet werden, doppelt ausgeführt. Wie schon bei der X-Achse sind auch hier wieder alle V-Wheel-abstände mit Schrauben einstellbar. Zusätzlich zur Hauptführung sind auch aussen jeweils noch zwei Führungsräder angebracht, um das Shuttel zusätzlich zu stabilisieren.
+Das YZ-Shuttel wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil geführt. Dieses sind auf beiden Seiten jeweils oben und unten befestigt. Die Länge wird so gewählt, dass die Verwendung eines 1.5 m langen Profils perfekt ausreicht. Da dass YZ-Shuttel wesentlich weniger Kraft auf die Führung auswirkt können weniger Führungsräder verwendet werden. Die Hauptführungsräder werden so Positioniert,  dass sich ein Dreieck ergibt. Dieses dient dazu, dass sowohl beim Aufhebevorgang als auch beim Leerlauf immer eine Klemmung um die Führungsschiene entsteht. Hierbei sind jene V-Wheels, welche beim Aufhebevorgang belastet werden, doppelt ausgeführt. Wie schon bei der X-Achse sind auch hier wieder alle V-Wheel-abstände mit Schrauben einstellbar. Zusätzlich zur Hauptführung sind auch aussen jeweils noch zwei Führungsräder angebracht, um das Shuttel zusätzlich zu stabilisieren.
 
 \paragraph{Sensoren}\mbox{}\\
 Da die Endschalter der Y-Achse kapazitiv ausgeführt sind, muss auf dem Shuttel ein Metallisches Gegenstück angebracht sein. Diese stehen uben und unten über und lösen so vor Kolission aus. Um die Sensoren anzubinden muss auch ein ASi-Client auf dem X-Shuttel angebracht werden.
@@ -280,11 +280,11 @@ An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter
 
 
 \paragraph{Fräsen}\mbox{}\\
-Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchnesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.
+Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchnesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
+Als Aluminiumlegierung wird hier die Legierung EN-AW 5754 (AlMg3) verwendet. Diese Legierung aus Aluminium und MAgnesium eignet sich sehr gut zum Fräßen und ist in der lage die mechanischen Beanspruchungen auszuhalten.
 
 \paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
 Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene längen zuzuschneiden. 
-
 
 \paragraph{Umlenkrollen}\mbox{}\\
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Dadurch dass diese der gesamten Spannkraft ausgesetzt. Dies erfordert spezielle Anforderungen an die Aufhängen als auch an die Umlenkrolle selbst. Diese soll primär eine 180° Wende des Zahnriemens ermöglichen, sowie sekundär eine Führung für den Riemen bieten. 
@@ -343,6 +343,8 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
         \label{ulr}
     \end{figure}
 
+\paragraph{Distanzhülsen}\mbox{}\\
+Bei den mesiten V-Wheels werden Distanzhülsen zur Klemmung benötigt. Dies müssen ein sehr spezielles Maß (13.4 mm Länge) haben. Deshalb müssen Hülsen mit einer Länge von 20 mm auf diese Länge heruntergedreht werden. Dies wird mit dem rechten Eckdrehmeißel bei einer Drehzahl von 740 U/min ausgeführt. Da relativ viele solcher Teile benötigt werden, wird beim Einspannen der Drehmeißel selbst als Endstopp verwendet, um ein relativ wiederhohlgenaues Maß zu erhalten sowie eine simple Durchführung zu erlauben. Es wird also der Meißel auf Position gefahren und das Werkstück eingespannt, so, dass es am Drehmeißel ansteht. Nun wird der Drehmeißel zurückgefahren und die Hülse kann einfach durch mehrere Plandrehoperationen, bis der Schlitten ansteht, gekürzt werden. Es muss also weder gemessen, noch die Digitalanzeige verändert werden, um schnell mehrere Teile hintereinander zu fertigen. 
 
 
 \subsubsection{Aufbau}
@@ -367,6 +369,9 @@ Python ist eine vielseitige und hochentwickelte Programmiersprache, die für ihr
 
 \paragraph{Flask}\mbox{}\\
 Flask ist ein leichtgewichtiges Web-Framework für Python, das durch seine Einfachheit und Flexibilität hervorsticht und sich ideal für kleinere Anwendungen oder Prototypen eignet. Es folgt einem minimalistischen Ansatz, bietet aber Erweiterungsmöglichkeiten, um komplexere Projekte zu realisieren. \cite{chatgpt}
+
+\paragraph{Python - Virtuelle Umgebung}\mbox{}\\
+
 
 \subsubsection{Benutzeroberfläche}
 
