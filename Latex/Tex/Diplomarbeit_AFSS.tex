@@ -1,7 +1,7 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, twoside]{article}
 \linespread{1.15}
 \usepackage[utf8]{inputenc}  % Ensure this is loaded before biblatex
-\usepackage{biblatex}  % Load the biblatex package
+\usepackage[sorting=none]{biblatex}  % Load the biblatex package
 \addbibresource{./../Quellen/sources.bib}  % Add your .bib file
 
 
@@ -32,7 +32,6 @@
 \usepackage[section]{placeins}
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{ragged2e}
-
 
 \usepackage{emptypage}
 \usepackage{fancyhdr}
@@ -151,6 +150,35 @@
 \babelprovide[import]{ngerman}
 
 
+\fancyhf{}
+
+\fancyhf[EHL]{\includegraphics[width=0.2\textwidth]{HTL_Moessingerstraßen_Logo.png}}
+\fancyhf[OHL]{\includegraphics[width=0.2\textwidth]{HTL_Moessingerstraßen_Logo.png}}
+
+\fancyhf[EHC]{\begin{tabular}{cc}
+    Simbürger & Sonvilla \\
+    Voglauer & Widmann \\
+\end{tabular}}
+
+\fancyhf[OHC]{\begin{tabular}{cc}
+    Simbürger & Sonvilla \\
+    Voglauer & Widmann\\
+\end{tabular}}
+
+
+\fancyhf[EFL]{\todayD}
+\fancyhf[EFR]{\thepage}
+\fancyhf[EHR]{\color{mred} ELEKTROTECHNIK}
+
+
+\fancyhf[OFR]{\todayD}
+\fancyhf[OFL]{\thepage}
+\fancyhf[OHR]{\color{mred} ELEKTROTECHNIK}
+
+\fancyhf[EFC]{Automated-Factory-Storage-System}
+\fancyhf[OFC]{Automated-Factory-Storage-System}
+
+\raggedbottom
 
 \begin{document}
 
@@ -269,34 +297,7 @@ Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung 
 \newpage
 
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhf[EHL]{\includegraphics[width=0.2\textwidth]{HTL_Moessingerstraßen_Logo.png}}
-\fancyhf[OHL]{\includegraphics[width=0.2\textwidth]{HTL_Moessingerstraßen_Logo.png}}
-
-\fancyhf[EHC]{\begin{tabular}{cc}
-    Simbürger & Sonvilla \\
-    Voglauer & Widmann \\
-\end{tabular}}
-
-\fancyhf[OHC]{\begin{tabular}{cc}
-    Simbürger & Sonvilla \\
-    Voglauer & Widmann\\
-\end{tabular}}
-
-\fancyhf[EHR]{\color{mred} ELEKTROTECHNIK}
-\fancyhf[OHR]{\color{mred} ELEKTROTECHNIK}
-
-\fancyhf[EFL]{\todayD}
-\fancyhf[OFL]{\todayD}
-
-\fancyhf[EFC]{Automated-Factory-Storage-System}
-\fancyhf[OFC]{Automated-Factory-Storage-System}
-
-\fancyhf[EFR]{\thepage}
-\fancyhf[OFR]{\thepage}
-
-
-\newpage
+\pagenumbering{arabic}
 \normalsize
 
 \section*{Kurzbeschreibung}
@@ -343,7 +344,6 @@ Diese Beschreibung wird für Wettbewerbe und PR-Aktivitäten verwendet. Diese In
 \egroup
 
 \newpage
-\pagenumbering{arabic}
 
 \section*{Abstract}
 \textcolor{blue}{Die Kurzbeschreibung in englischer Sprache sollte sinngemäß exakt der Kurzbeschreibung in deutscher Sprache entsprechen, siehe Abschnitt „Kurzbeschreibung“.}
@@ -360,6 +360,7 @@ Diese Beschreibung wird für Wettbewerbe und PR-Aktivitäten verwendet. Diese In
 \egroup
 
 \newpage
+
 \tableofcontents
 \newpage
 \section{Einleitung}
@@ -452,18 +453,45 @@ Die Überschriften der nachfolgenden Unterkapitel stellen lediglich Platzhalter 
 
 \color{black}
 \newpage
+\fancyhf[OHC]{
+    \centering
+    Benedikt Simbürger
+}
+\fancyhf[EHC]{
+    \centering
+    Benedikt Simbürger
+}
+
 
 \include{simbuerger}
 
 \newpage
-
+\fancyhf[OHC]{
+    \centering
+    Vincent Sonvilla}
+\fancyhf[EHC]{
+    \centering
+    Vincent Sonvilla}
 \include{sonvilla}
 
 \newpage
+\fancyhf[OHC]{
+    \centering
+    Nikolaj Voglauer}
+\fancyhf[EHC]{
+    \centering
+    Nikolaj Voglauer}
 \section{Titel der Individuellen Themenstellung (Nikolaj Voglauer)}
 
 \newpage
+\fancyhf[OHC]{
+    \centering
+    Elena Widmann}
+\fancyhf[EHC]{
+    \centering
+    Elena Widmann}
 \include{widmann}
+
 
 \newpage
 \section{Anhang}

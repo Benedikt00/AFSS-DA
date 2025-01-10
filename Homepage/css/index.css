@@ -3,10 +3,13 @@
 
 
 
-/* For testing purpose - adds space below the navbar */
+#main {
+    margin-top: 0;
+}
+
 #main_image {
     margin-top: 60px;
-    /* background-iamge: url() */
+    /* background-image: url() */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,15 +19,17 @@
     font-family: "Ethnocentric";
 }
 
+
 #front_picture{
+    position: relative;
 
 }
 
 #first_look #front_picture img {
-    margin-top: -10vh;
+    margin-top: -9vh;
     width: 100vw;
     max-height: 100vh;
-
+    display: block;
 }
 
 #img_text{
@@ -39,16 +44,16 @@
 }
 
 .center {  
-    font-size: 160px;
+    font-size: 10.4vw;
     font-family: 'Ethnocentric';
     text-shadow: 0px 0px 20px #e5e1e1;
     margin: auto;
 }
 
 .center_under {
-    font-size: 25px;
+    font-size: 1.65vw;
     font-family: 'Ethnocentric';
-    text-shadow: 0px 0px 10px #e5e1e1;
+    text-shadow: 0px 0px 5px #e5e1e1;
     margin: auto;
 }
 
@@ -192,3 +197,84 @@
     transform: scale(1.1);
 }
 
+@media screen and (max-width: 481px){
+
+    main {
+        margin: 0 !important;
+    }
+
+    #first_look {
+        margin-top: 5.8vh;
+    }
+
+    #front_picture {
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
+
+    #front_picture img {
+        margin-top: -4vh !important;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.05);
+    }
+    
+    .center {
+        font-size: 13vw;
+    }
+
+    .center_under {
+        font-size: 1.7vw;
+    }
+    
+    #description {
+        display: block;
+        margin: 7vh 14vw;
+    }
+
+    #description #group_photo_container {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #description #desc_text {
+        width: 100%;
+    }
+
+    #project_team {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        height: auto;
+        color: rgb(45, 45, 45);
+    }
+
+    #project_team #first_bunch {
+        display: grid;
+        grid-template-columns: 50% 50%; /* Two columns, each 50% */
+        grid-template-rows: auto auto; /* Two rows */
+        gap: 3vw; /* Adjust the gap between grid items if needed */
+    }
+
+    .member {
+        font-size: 3vw;
+        width: auto;
+    }
+
+    .member img{
+        width: 30vw;
+        height: auto;
+    }
+
+    .carousel-btn {
+        font-size: 4vh;
+    }
+
+
+}

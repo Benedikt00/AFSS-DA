@@ -12,21 +12,34 @@
 
 <body>
     <header class="navbar">
-        <div class="navbar-left">
-            <a href="index.html" style="text-decoration: none"><span class="brand-name">AFSS</span></a>
-        </div>
-        <nav class="navbar-right">
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Projekt</a>
-                <div class="dropdown-menu">
-                    <a href="projekt.html">Projektdetails</a>
-                    <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
-                </div>
+        <div class="navbar_desktop">
+            <div class="navbar-left">
+                <a href="index.html" style="text-decoration: none"><span class="brand-name">AFSS</span></a>
             </div>
-            <a href="galerie.html">Gallerie</a>
-            <a href="sponsors.html">Sponsors</a>
-        </nav>
+            <nav class="navbar-right">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projekt</a>
+                    <div class="dropdown-menu">
+                        <a href="projekt.html">Projektdetails</a>
+                        <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
+                    </div>
+                </div>
+                <a href="galerie.html">Gallerie</a>
+                <a href="sponsors.html">Sponsors</a>
+            </nav>
+        </div>
+
+        <div class="navbar_mobile">
+            <a href="#" class="mobile-menu-toggle">AFSS</a>
+            <div class="big-dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="projekt.html">Projektdetails</a>
+                <a href="indiv_themenst.html">Individuelle Themenstellungen</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="sponsors.html">Sponsors</a>
+            </div>
+        </div>
     </header>
     <main>
 
@@ -40,11 +53,11 @@
                     <h2>Hardwarenentwicklung, Softwarebackend und UI</h2>
                     <p>Ziel der Mechanik ist es, einen System zu entwickeln und umzusetzen, welches ein Lagerregal sowie einen Roboter, welcher dieses be- und entladen kann. Umgesetzt wird dies durch die Konstruktion eines horizontalen Portalroboters mit drei Achsen. Diese werden mittels Closed-Loop Schrittmotoren und Zahnriemen. Die Gabel, welche die Boxen aus dem Regal entnimmt wird mittels einer Spindel betrieben. Weiters muss ein Querförderer konstruiert werden, welcher die Boxen auf ein Forderband schiebt, welches diese dann zur Komissionierstation bringt. Dieses Design ist so Ausgeführt, dass durch errichtungen mehrerer Lagerschränke ein modulares Lager entsteht.</p>
                     <p>Die Software soll Lagerbestand verwalten sowie Aufträge and die SPS steuern und weiters eine Benutzeroberfläche zur verfügung stellt. Erreicht wird dies durch programmierung eines Python Servers welcher mittels Flask eine Webanwendung zur Bedienung zulässt. Die Datenbank zu Lagerverwaltung ist als MySQL-Server ausgeführt. Um mit der SPS zu kommunizieren wird ein API-Endpunkt aufgesetzt. Dieser gibt verarbetete Anweisungen an die SPS weiter, um auch bei Erweiterung der Anlage einen effizienten Betrieb zu ermögliche</p>
-                    <p style="color:gray">"Mechanik brennt wenn die Software ned funkt"</p>
+                    <p style="color:gray">"LER: light-emiting-resistor"</p>
                 </div>
                 <div class="img_c">
                     <img src="images/members/simbuerger.jpg" onerror="this.src='images/members/default.png';">
-                    <h3 id="name">Simbürger Benedikt</h3>
+                    <h3 id="name">Benedikt Simbürger</h3>
                 </div>
             </div>
         </div>
@@ -52,7 +65,7 @@
         <div class="head">
             <div class="img_c">
                 <img src="images/members/sonvilla.jpg" onerror="this.src='images/members/default.png';">
-                <h3 id="name">Sonvilla Vincent</h3>
+                <h3 id="name">Vincent Sonvilla</h3>
             </div>
             <div class="text">
                 <h2>SPS Programmierung</h2>
@@ -76,7 +89,7 @@
                 </div>
                 <div class="img_c">
                     <img src="images/members/voglauer.jpg" onerror="this.src='images/members/default.png';">
-                    <h3 id="name">Voglauer Nikolaj</h3>
+                    <h3 id="name">Nikolaj Voglauer</h3>
                 </div>
             </div>
         </div>
@@ -111,7 +124,7 @@
 
 
     <script src="index.js"></script>
-</body>
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const dropdownToggle = document.querySelector(".dropdown-toggle");
@@ -148,5 +161,5 @@
         lastScrollY = currentScrollY;
     });
 </script>
-
+</body>
 </html>
