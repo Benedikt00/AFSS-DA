@@ -10,15 +10,20 @@ Die Hardware-Endschalter begrenzen den maximal zulässigen Verfahrensbereich der
 Auf jeder der drei Achsen vom AFSS und auf dem Querförderer müssen Hardware-Endschalter montiert werden. Die Auswahl begrenzte sich hierbei auf die uns zur Verfügung gestellten Sensoren, welche ihren Funktion entsprechend auf den verschiedenen Positionen eingebaut werden.
 
 \paragraph{Positionsschalter mit Rollhebel}
-An der x-Achse werden als Hardware-Endschalter Positionsschalter mit Rollhebel verwendet. Davon besitzen drei jeweils einem Öffner- und einen Schließerkontakt \cite{schmersal_3}, wohingegen einer der Endschalter aus zwei Öffnerkontakten besteht \cite{schmersal_1}. Um Einheitlich zu bleiben und da es sicherheitstechnisch auch von Vorteil ist (Drahtbruchsicher) verwenden wir jeweils einen der Öffnerkontakte der Endschalter.
+An der x-Achse werden als Hardware-Endschalter Positionsschalter mit Rollhebel verwendet. Davon besitzen drei jeweils einem Öffner- und einen Schließerkontakt \cite{schmersal_3}, wohingegen einer der Endschalter aus zwei Öffnerkontakten besteht. \cite{schmersal_1} Um Einheitlich zu bleiben und da es sicherheitstechnisch auch von Vorteil ist (Drahtbruchsicherheit) verwenden wir jeweils einen der Öffnerkontakte der Endschalter.
 
 \paragraph{Induktive Endschalter}
-Als Hardware-Endschalter an der y-Achse werden induktive Sensoren verwendet. Sie besitzen jeweils einen Öffner- und einen Schließerkontakt \cite{induktiv_sensor}, wir verwenden jedoch ersteres um Drahtbruchsicher zu sein.
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \vspace{-20px}
+    \includegraphics[width=0.3\textwidth]{Sensors/Induktiver_Sensor.png}
+    \caption{Induktiver Sensor \cite{induktiv_sensor}}
+\end{wrapfigure}
+Als Hardware-Endschalter an der y-Achse werden induktive Sensoren verwendet. Sie funktionieren so, dass durch eine Spule ein Magenetfeld erzeugt wird, welches dann in einem sich dem Sensor frontseitig nähernden elektrisch leitendem Material Wirbelströme erzeugt. Dadurch verändert sich das Magnetfeld und die Kontakte des induktive Sensors werden über einen Schmitt-Trigger geschaltet. Die Sensoren besitzen jeweils einen Öffner- und einen Schließerkontakt, wir verwenden jedoch ersteres um Drahtbruchsicherheit zu gewährleisten.
 
 \paragraph{Endtaster}
+An der z-Achse und am Querförderer werden mechanische Endtaster verwendet. Auf einem Endtaster befindet sich ein Schließerkontakt in Form eines Tasters, welcher durch anfahren geschaltet wird.
 
 \subsubsection{Referenztaster}
-\paragraph{Autodesk Fusion 360}
 
 \subsubsection{Lichttaster}
 
