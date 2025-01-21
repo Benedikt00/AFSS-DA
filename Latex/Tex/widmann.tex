@@ -43,7 +43,11 @@ An der z-Achse und am Querförderer werden mechanische Endtaster verwendet. Auf 
 \end{figure}
 
 \subsubsection{Referenztaster}
-Um die Motoren auf Position fahren zu können, müssen diese an allen drei Achsen und am Querförderer referenziert werden. Hierfür werden Opto Interrupter verwendet. In diesen befindet sich eine LED, welche auf einen Photo Transistor trifft. Dieser schaltet daraufhin durch und es liegt eine Spannung am Emitter an. Wird jetzt jedoch der Lichtstrahl der LED unterbrochen, sperrt der Transistor. Bei der SPS Programmierung ist daher zu beachten, dass der Ausgang des Sensor beim Auslösen auf LOW geschalten wird.
+Um die Motoren auf Position fahren zu können, müssen diese an allen drei Achsen und am Querförderer referenziert werden. Hierfür werden Opto Interrupter verwendet. In diesen befindet sich eine LED, welche auf einen Photo Transistor trifft. Dieser schaltet daraufhin durch und es liegt eine Spannung am Emitter an. Wird jetzt jedoch der Lichtstrahl der LED unterbrochen, sperrt der Transistor. Bei der SPS Programmierung ist daher zu beachten, dass der Ausgang des Sensor beim Auslösen auf LOW geschalten wird.\\
+
+Da die Opto Interrupter über ASi-Bus mit der SPS verbunden werden sollen, welche eine Spannung von 24V liefert, aber nur mit einer viel niedrigeren Spannung betrieben werden dürfen, muss eine eigene Platine entworfen und gelötet werden. Hierfür wird die Software Fusion 360 verwendet, welche das Designen von Leiterplatten ermöglicht. Hergestellt werden diese dann durch unsere eigene schulinterne Leiterplattenfertigung.\\
+
+Die LED im Opto Interrupter hat einen Spannungsabfall von 1,2V und maximal dürfen 1,35V darüber abfallen. Deshalb benötigt die LED einen Vorwiderstand. Dieser kann über das Ohm'sche Gesetz berechnet werden.
 
 \subsubsection{Lichttaster}
 
