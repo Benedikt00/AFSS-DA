@@ -14,10 +14,11 @@ Um eine möglichst gute Erweiterbarkeit sowie eine Fertigung an der Schule zu er
     \includegraphics[width=0.3\textwidth]{Item-Standartverbindungssatz.png}
     \centering
     \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
+    \label{sfs_item}
 \end{wrapfigure}
 \paragraph{Item}\mbox{}\\
 Das Item-Profilsystem ist ein System, welches Aluminium-Extrusionen in verschiedenen Ausführungen sowie viele Verbindungsmöglichkeiten zu sich selbst sowie anderen mechanischen Elementen bietet. Hierbei gibt es eine breite Auswahl an Profilen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen werden 20x20-Extrusionen verwendet.
-Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit, sogenannte Nutensteine mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. Ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, werden Standardverbindungssätze verwendet.\\
+Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit, sogenannte Nutensteine mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. Ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, können Standardverbindungssätze wie in Abb. \ref{sfs_item} verwendet werden.\\
 
 Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot-Profile verwendet.
 
@@ -26,9 +27,10 @@ Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies koste
     \includegraphics[width=0.3\textwidth]{V-Wheel.jpg}
     \centering
     \caption{V-Slot-Profil mit V-Wheel, Quelle: \cite{v_slot_wheel}}
+    \label{v-wheel}
 \end{wrapfigure}
 \paragraph{V-Slot}\mbox{}\\
-Auch V-Slot-Profile sind Aluminium-Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile mit Nutensteinen etc. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann. Diese Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da einerseits auch breitere und mehr V-Wheels verwendet werden können, sowie einen sehr großen Widerstandsmoment aufweisen.
+Auch V-Slot-Profile sind Aluminium-Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile mit Nutensteinen etc. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann (siehe Abb. \ref{v-wheel}). Diese Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da einerseits auch breitere und mehr V-Wheels verwendet werden können, sowie einen sehr großen Widerstandsmoment aufweisen.
 
 
 \subsubsection{Vorgehensweise}
@@ -58,6 +60,7 @@ Um bestimmte Elemente der Mechanik einzeln zu testen, werden auch mehrere Protot
     \caption{Prototypen}
     \label{pts}
 \end{figure}
+\vspace{-3mm}
 
 \paragraph{Rahmenbedingungen für die Fertigung}\mbox{}\\
 Damit die Fertigung der Mechanik an der HTL-Mössingerstraße in einem realistischen Zeitrahmen möglich ist, müssen gewisse Rahmenbedingungen bei der Planung beachtet werden.
@@ -69,8 +72,6 @@ Damit die Fertigung der Mechanik an der HTL-Mössingerstraße in einem realistis
 
 %---corrigiert----
 
-\subsubsection{Fusion360}
-Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. 
 
 \paragraph{Konstruktionsvorgang}\mbox{}\\
 Um ein so umfangreiches Projekt umsetzen zu können, muss auch bei der 3D-Planung möglichst viel Ordnung herrschen. Um möglichst effizient zu arbeiten, werden wiederverwendete Bauteile in einer eigens angelegten Bauteilbibliothek abgelegt. So können beispielsweise Aluminiumprofile in Normlängen, oder Sensoren, einfach die aktuelle Konstruktion eingefügt werden, ohne diese jedes mal neu zu Konstruieren. \\
@@ -300,7 +301,7 @@ Umgesetzt wird diese Anforderungen, durch Fertigung von vier Aluminium-Drehteile
     \label{UmlenkrolleBTZ}
 \end{figure}
 
-Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
+Die Fertigung dieses Teils nach Abb. \ref{UmlenkrolleBTZ} lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
     \setlength\itemsep{-1mm} 
     \item Zuerst die Frontfläche Plandrehen (Drehzahl: 900 U/min)
@@ -314,13 +315,14 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
     \item Bei ca. 17 mm Lochdurchmesser den tatsächlichen Durchmesser mit der Digitalanzeige vergleichen und gegebenenfalls korrigieren
     \item Bei 21.5 mm den Oberschlitten die restlichen 0.2 mm zustellen und die gesamte Tiefe Plandrehen
     \item Den Lochdurchmesser auf 21.95 erweitern und dann in kleinen Inkrementen zustellen, bis das Lager gerade so nicht passt, um einen Presssitz zu gewährleisten. Dies tritt bei Lagern mit 22 mm Außendurchmesser bei rund 22.04 mm ein.
-    \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfügbar ist, wurde als Halterung ein Dorn gedreht, auf welchen das Drehteil aufgeschraubt wird.
-    \item Mit dem Abstechmeißel wird in 2 mm Inkrementen die Zahnriemenauflagefläche herausgedreht, bis auf 30.2 mm, sowie links und rechts den Rand 1 mm extra dick lassen. (540 U/min)
-    \item Am Schluss wird der Rand Tiefe auf Maß gedreht.
+    \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfügbar ist, wurde als Halterung ein Dorn nach Abb. \ref{ulr:dorn} gedreht, auf welchen das Drehteil aufgeschraubt wird.
+    \item Mit dem Abstechmeißel wird in 2 mm Inkrementen die Zahnriemenauflagefläche herausgedreht, bis auf 30.2 mm, sowie links und rechts den Rand 1 mm extra dick lassen (siehe Abb. \ref{ulr:f1} ). (540 U/min)
+    \item Am Schluss wird die Rand Tiefe auf Maß gedreht.
     \item Als letzten Schritt werden links und rechts die zwei Lager eingepresst.
 \end{itemize}
 
-    Durch die verhältnismäßig großen Toleranzen bei den Lageraussendurchmessern wird bei 2 der 8 Lagerpassungen zusätztlich Lagerkleber verwendet um eine zuverlässigen Halt zu gewährleisten, da bei diesen die Toleranzen nicht eingehalten wurden.
+    Durch die verhältnismäßig großen Toleranzen bei den Lageraussendurchmessern wird bei 2 der 8 Lagerpassungen zusätztlich Lagerkleber verwendet um eine zuverlässigen Halt zu gewährleisten, da bei diesen die Toleranzen nicht eingehalten wurden. \\
+    Nach diesem Vorgang sind die vier umlenkrollen fertig (siehe \ref{ulr:f2}) und können auf einem 8 mm Schaft montiert werden.
 
     \begin{figure}[H]
         \centering
@@ -333,13 +335,14 @@ Die Fertigung dieses Teils Lässt sich in folgende Teilschritte unterteilen:
         \begin{subfigure}{.3\textwidth}
             \centering
             \includegraphics[width=0.9\textwidth]{ulr-fertigung.jpg}
-            \caption{Fertigung}
+            \caption{Fertigung der Lauffläche}
             \label{ulr:f1}
         \end{subfigure}%
         \begin{subfigure}{.3\textwidth}
             \centering
             \includegraphics[width=0.9\textwidth]{Umlenkrollen_fertig.jpg}
-            \caption{Fertig}
+            \centering
+            \caption{Fertiggestellte \\Umlenkrollen}
             \label{ulr:f2}
         \end{subfigure}
         \caption{Umsetzung der Umlenkrollen}

@@ -33,6 +33,7 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{ragged2e}
 
+
 \usepackage{emptypage}
 \usepackage{fancyhdr}
 
@@ -58,7 +59,12 @@
 \counterwithin{table}{section}
 
 
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
 
+\let\oldsection\paragraph
+\renewcommand{\paragraph}[1]{\needspace{3\baselineskip}\oldsection{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Other Settings
