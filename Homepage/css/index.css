@@ -274,6 +274,8 @@
 
     .carousel-btn {
         font-size: 4vh;
+        -webkit-margin-start: 3vw; /* Entspricht margin-left */
+        -webkit-margin-end: 3vw;  /* Entspricht margin-right */
     }
 
 

@@ -9,15 +9,45 @@ Beim Verplanen der Endschalter ist zwischen Software- und Hardware-Endschalter z
 Die Hardware-Endschalter begrenzen den maximal zulässigen Verfahrensbereich der Achse. Bei ihnen wird nicht unterschieden, ob die Endschalter angefahren oder überfahren werden. Beim Anfahren der Schalter wird der Technologiealarm 531 ausgelöst. Er sperrt das Technologieobjekt und muss, bevor der Auslösebereich der Hardware-Endschalter wieder verlassen werden kann, quittiert werden. \cite{axis_manual}\\
 Auf jeder der drei Achsen vom AFSS und auf dem Querförderer müssen Hardware-Endschalter montiert werden. Die Auswahl begrenzte sich hierbei auf die uns zur Verfügung gestellten Sensoren, welche ihren Funktion entsprechend auf den verschiedenen Positionen eingebaut werden.
 
-\paragraph{Positionsschalter mit Rollhebel}
-An der x-Achse werden als Hardware-Endschalter Positionsschalter mit Rollhebel verwendet. Davon besitzen drei jeweils einem Öffner- und einen Schließerkontakt \cite{schmersal_3}, wohingegen einer der Endschalter aus zwei Öffnerkontakten besteht \cite{schmersal_1}. Um Einheitlich zu bleiben und da es sicherheitstechnisch auch von Vorteil ist (Drahtbruchsicher) verwenden wir jeweils einen der Öffnerkontakte der Endschalter.
+\paragraph{Positionsschalter mit Rollhebel} \mbox{}\\
+An der x-Achse werden als Hardware-Endschalter Positionsschalter mit Rollhebel verwendet. Davon besitzen drei jeweils einem Öffner- und einen Schließerkontakt \cite{schmersal_3}, wohingegen einer der Endschalter aus zwei Öffnerkontakten besteht. \cite{schmersal_1} Um Einheitlich zu bleiben und da es sicherheitstechnisch auch von Vorteil ist (Drahtbruchsicherheit) verwenden wir jeweils einen der Öffnerkontakte der Endschalter.
 
-\paragraph{Induktive Endschalter}
+\paragraph{Induktive Endschalter} \mbox{}\\
+Als Hardware-Endschalter an der y-Achse werden induktive Sensoren verwendet. Sie funktionieren so, dass durch eine Spule ein Magenetfeld erzeugt wird, welches dann in einem sich dem Sensor frontseitig nähernden elektrisch leitendem Material Wirbelströme erzeugt. Dadurch verändert sich das Magnetfeld und die Kontakte des induktive Sensors werden über einen Schmitt-Trigger geschaltet. Die Sensoren besitzen jeweils einen Öffner- und einen Schließerkontakt, wir verwenden jedoch ersteres um Drahtbruchsicherheit zu gewährleisten.
 
-\paragraph{Endtaster}
+\paragraph{Endtaster} \mbox{}\\
+An der z-Achse und am Querförderer werden mechanische Endtaster verwendet. Auf einem Endtaster befindet sich ein Schließerkontakt in Form eines Tasters, welcher durch anfahren geschaltet wird.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{Sensors/Induktiver_Sensor.png}
+        \caption{Induktiver Sensor \cite{induktiv_sensor}}
+        \label{ulr:dorn}
+    \end{subfigure}%
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{Sensors/Rollendschalter.png}
+        \caption{Rollendschalter \cite{schmersal_pic}}
+        \label{ulr:f1}
+    \end{subfigure}%
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{Sensors/Endtaster.jpg}
+        \caption{Endtaster}
+        \label{ulr:f2}
+    \end{subfigure}
+    \caption{Endschalter}
+    \label{ulr}
+\end{figure}
 
 \subsubsection{Referenztaster}
-\paragraph{Autodesk Fusion 360}
+Um die Motoren auf Position fahren zu können, müssen diese an allen drei Achsen und am Querförderer referenziert werden. Hierfür werden Opto Interrupter verwendet. In diesen befindet sich eine LED, welche auf einen Photo Transistor trifft. Dieser schaltet daraufhin durch und es liegt eine Spannung am Emitter an. Wird jetzt jedoch der Lichtstrahl der LED unterbrochen, sperrt der Transistor. Bei der SPS Programmierung ist daher zu beachten, dass der Ausgang des Sensor beim Auslösen auf LOW geschalten wird.\\
+
+Da die Opto Interrupter über ASi-Bus mit der SPS verbunden werden sollen, welche eine Spannung von 24V liefert, aber nur mit einer viel niedrigeren Spannung betrieben werden dürfen, muss eine eigene Platine entworfen und gelötet werden. Hierfür wird die Software Fusion 360 verwendet, welche das Designen von Leiterplatten ermöglicht. Hergestellt werden diese dann durch unsere eigene schulinterne Leiterplattenfertigung.\\
+
+Die LED im Opto Interrupter hat einen Spannungsabfall von 1,2V und maximal dürfen 1,35V darüber abfallen. Deshalb benötigt die LED einen Vorwiderstand. Dieser kann über das Ohm'sche Gesetz berechnet werden.
 
 \subsubsection{Lichttaster}
 
