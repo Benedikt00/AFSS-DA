@@ -17,8 +17,8 @@
 *.xml
 *.bcf
 *.synctex
+*.synctex(busy)
 # PDF files (optional)
-*.pdf
 
 # Build directories
 _build/
