@@ -13,25 +13,28 @@ Es soll nicht nur produzierbar, sondern auch reproduzierbar sein. Daher soll die
 
 
 \subsection{Potentielle Lösungen 2}
-\subsubsection{Lagermethoden 3/4}
+\subsubsection{Lagermethoden}
 Die Industrie gibt viele Vorbilder in, wie ein Boxenbasierendes Lagersystem aufgebaut sein kann. \\
-Eine sehr Platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. bei dieser Variante werden Boxen in mehreren Ebenen übereinander Gelagert. Auf jeder Ebene gibt es bewegliche Roboter, welche die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommisionierstation gelangt. Dieses System ist ist sehr Platzeffizient und ausfallsicher. Jedoch ist es schwer möglich ein solches System in Miniatur zu Bauen, da die Hardwarefertigung sehr komplex ist.\\
-Eine weitere Möglichkeit wäre ein Rotierendes Magazin, in welchem die Boxen auf einem horizontalen Karusell gelagert sind. Wenn ein bestimmtes Produkt benötigt wird, werden die Platformen soweit weiterrotiert, bis auf die gewüschte Box zugegriffen werden kann. Das Prinzip dieses Systems ist zwar recht simpel, jedoch ist es es schwierig die Mechanik der Rotation mit HTL-mitteln so zu bauen, dass ein Dauerbetrieb möglich ist. \\
+Eine sehr Platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. bei dieser Variante werden Boxen in mehreren Ebenen übereinander Gelagert. Auf jeder Ebene gibt es bewegliche Roboter, welche die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommisionierstation gelangt. Dieses System ist ist sehr platzeffizient und ausfallsicher. Jedoch ist es schwer möglich ein solches System in Miniatur zu Bauen, da die Hardwarefertigung sehr komplex ist.\\
+Eine weitere Möglichkeit wäre ein Rotierendes Magazin, in welchem die Boxen auf einem horizontalen Karusell gelagert sind. Wenn ein bestimmtes Produkt benötigt wird, werden die Platformen soweit weiterrotiert, bis auf die gewünschte Box zugegriffen werden kann. Das Prinzip dieses Systems ist zwar recht simpel, jedoch ist es es schwierig die Mechanik der Rotation mit HTL-mitteln so zu bauen, dass ein Dauerbetrieb möglich ist. \\
+Weiters gibt es die Möglichkeit, Ware vertikal, von oben zu Lagern. Über der Lagerstätte fährt dann ein Roboter, der in der Lage ist, die Boxen auszuheben und dann umzuschichten oder ein- und auszulagern. So kann eine recht hohe Lagerdichte erreicht werden, jedoch ist der Durchsatz etwas begrenzt, da, wenn Boxen benötigt werde, welche nicht am obersten Platz sind, erst alle anderen umgeschichtet werden müssen. Ausserdem ist so eine Lagervariante erst dann platzeffizienz, wenn sie sehr hoch gebaut wird. Wenige Lagen lohnen sich noch nicht da trotz geringer Höhe, sehr viel Fläche verbraucht wird.
 
 
 
 \subsubsection{Steuerung 4/9}
 
+
 \subsubsection{Schaltschrank 4/9}
 
 
 \subsection{Verfolgter Lösungsansatz 3/4}
-
-
+Nach Abwägung der Alternativen wurde sich bei der Auswahl der Lagermethode, an einem klassischen Palettenlager inspiriert. Der grundgedanke eines Portalsystems, welches mit einer Gabel Boxen in einem Regal ein- und aushebt. Diese Lagervariante behält die Ballance aus technischer Kopmlexität, sowie dem Umsetzungsvermögen an der HTL. Zudem ist gibt es bei dieser Variante ebenfalls effizienzsteigerungspotential, da die möglichkeit besteht, links und rechts des Roboters Bestand zu lagern. jedoch wird diese Variante nicht forciert, da die Komplexität eines solchen Mechanismus im kleinen Maßstab und mit eingeschränkter Fertigungstechnik recht schwierig ist.\\ Es wird also ein Lagersystem gewählt, bei dem zwei Achsen hin- und her Verfahren und eine art Gabel die Boxen ein und Aushebt. Um die Boxen zur Kommisionierstation zu Bringen wird ein Förderband verwendet, welches Längs zum Lager verläuft. Jedoch kann der LAgerroboter die Boxen nicht selbstständig auf das Förderband laden, zu diesem Zweck wid ein sog. Querförderer verwendet, der die Box von einem Temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An diese Förderband können ausserdem Weiterer solcher Lagerschränke aufgestellt werden, um mehr Lagerplatz zu schaffen, als auch weitere andere Systeme angschlossen werden. Ausserdem wird ein Lagerschrank als Komplettsystem konzipiert. Durch unterbringugn aller Systeme in einem einzigen Objekt, kann durch montage von Rollen einfach Transportfähigkeit sichergestellt werden.\\
+Zur Steuerung dieser Anlage wird auf eine SPS-Steuerung zurückgegriffen. Dies ist Industriestandard, und so eine möglichst nahe Abbildung einer großen Logistikanlage darstellen. \\
+Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank platz, der Ebenfalls fahrbar ist. Weiters sind alle Anschlüsse usw. darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen. 
 \subsection{Methodik 5}
 
 \subsubsection{Software 2}
-\subsubsection{Fusion360}
+
 Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. 
 
 \subsubsection{Hardware 2}
