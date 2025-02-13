@@ -18,6 +18,7 @@
 *.bcf
 *.synctex
 *.synctex(busy)
+*.pdf
 # PDF files (optional)
 
 # Build directories
