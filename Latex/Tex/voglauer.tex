@@ -40,9 +40,34 @@
 \subsubsection{Mechanische Planung}
 
     \paragraph{Modulprinzip}\mbox{}\\
-    Hier wird über die Module geschrieben, warum sind diese sinnvoll und wieso wird nicht eine große Platte verwendet. Welche Materialen sind möglich und welche werden wieso verwendet und wie werden vom Gewählten Material die Anforderungen erfüllt.
-    
+    Es wurden bereits die Anforderungen an die Module beschrieben. Doch es gäbe noch weitere Alternativen für den Innenraum des Serverschrankes, so könnte man eine große Platte verwenden und diese an die Profilschienen festschrauben. Eine weitere Option wäre eine plattenlose, dabei würde man die Hutschienen direkt auf die Profilschienen des Serverschrankes montieren.\\
+    Die große Platte entfällt als Möglichkeit insofern, da diese nicht in der Schule produzierbar gewesen wäre. Die plattenlose Option wäre eine kosteneffiziente Möglichkeit, allerdings gibt es viele Elemente, die im Schaltschrank nicht auf Hutschienen montiert werden können, diese bräuchten immer eine Montageplatte.\\
+    Damit ein einheitliches Design eingehalten werden kann, haben wir uns für das Modulprinzip entschlossen. Dieses ermöglicht es Elementen, die für Hutschienen ungeeignet sind, wie dem 24V-ASI-Gleichrichter, montiert zu werden und ist weiterhin in der Schule produzierbar.
+
+    \paragraph{Platten-Material}\mbox{}\\
+    Für die Materialwahl gab es zwei realistische Möglichkeiten. Die Modulplatten hätten vollständig aus Aluminium gefräst werden können oder aus Dibond. Die Aluplatten bieten den Vorteil der Leitfähigkeit und somit müsste man nur die Platte erden und die Elemente auf der Platte wären alle dementsprechend geerdet. Doch Aluminium ist teuer und ein wertvoller Werkstoff, da ein umsichtiger Umgang mit Ressourcen wichtig ist wurden dann doch die Dibond-Platten als Projektstandard definiert. Diese sind zwei dünne Platten aus Aluminium die auf einen Kunststoff aufgepresst werden. Dibond bietet keine elektrische Leitfähigkeit, folglich müssen alle Elemente zusätzlich geerdet werden. 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Dibond_Platten_ml.jpg}
+        \caption{Dibond-Platte, Quelle: \cite{Dibond-Platte}}
+        \label{fig:Dibond}
+    \end{figure}
+        
     \paragraph{Digitaler Zwilling}\mbox{}\\
+    Moderner Schaltschrankherstellung begenen im Herstellungsprozess oft große logistische Probleme. Jeder Prozessschritt ist eine Fehlerquelle und wenn Fehler nicht früh erkannt werden plfanzen sich diese fort. Damit zwischen den Prozessschritten keine Kommunikationsprobleme entstehen setzen viele Hersteller auf das Prinzip des digitalen Zwillings.\\
+    Dieser im Grunde ein digitaler Schaltschrank, welcher im ersten Prozessschritt, der Planung, ausgeplant wird und im Herrstellungsprozess, sei es der Schrankbau oder die Bestückung, wird einerseits immer derselbe digitale Zwilling aktualisiert und aber auch referenziert. Das heißt alle Prozessschritte beziehen sich auf den selben Plan bzw. digitalen Zwilling (siehe \ref{fig:digilaerZwilling}).\\
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{Cabinet-Building-Komax-SCB-Component-Printer.png}
+        \caption{Digitaler Zwilling, Quelle: \cite{digitaler_zwilling_bild}}
+        \label{fig:digilaerZwilling}
+    \end{figure}
+    
+    Es setzt ein breites Feld an Firmen auf dieses Prinzip. Firmen wie Weidmüller, Komax, Steinhauer und noch viele mehr haben eine Firmenzusammenarbeit die ohne einen digitalen Zwilling nicht möglich wäre\ref{smart_cabinet_building}.In diesem Fall werden die jeweiligen Prozessschritte meistens von einer neuen Firma übernommen, in diesem Bündnis ist der digitale Zwilling der Schlüssel zum Erfolg. Mann kann \\
+
+    ----
     Hier wird über das Prinzip eines digitalen Zwillings geschrieben und wieso dieser wichtig ist. "Um effektiv und recourcenschonend den Serverschrank umzubauen, ist es sinnvoll einen digitalen Zwilling..." 
     
     Wie fängt man einen digitalen Zwilling an?
