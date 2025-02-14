@@ -39,8 +39,11 @@ Die letzte Option war ein alter Serverschrank, dieser kommt mit vier Profilschie
 
 
 \subsection{Verfolgter Lösungsansatz 3/4}
-\subsubsection{Lagermethoden 1/4}
 
+\subsubsection{Lagermethoden }
+Nach Abwägung der Alternativen wurde sich bei der Auswahl der Lagermethode, an einem klassischen Palettenlager inspiriert. Der grundgedanke eines Portalsystems, welches mit einer Gabel Boxen in einem Regal ein- und aushebt. Diese Lagervariante behält die Ballance aus technischer Kopmlexität, sowie dem Umsetzungsvermögen an der HTL. Zudem ist gibt es bei dieser Variante ebenfalls effizienzsteigerungspotential, da die möglichkeit besteht, links und rechts des Roboters Bestand zu lagern. jedoch wird diese Variante nicht forciert, da die Komplexität eines solchen Mechanismus im kleinen Maßstab und mit eingeschränkter Fertigungstechnik recht schwierig ist.\\ Es wird also ein Lagersystem gewählt, bei dem zwei Achsen hin- und her Verfahren und eine art Gabel die Boxen ein und Aushebt. Um die Boxen zur Kommisionierstation zu Bringen wird ein Förderband verwendet, welches Längs zum Lager verläuft. Jedoch kann der LAgerroboter die Boxen nicht selbstständig auf das Förderband laden, zu diesem Zweck wid ein sog. Querförderer verwendet, der die Box von einem Temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An diese Förderband können ausserdem Weiterer solcher Lagerschränke aufgestellt werden, um mehr Lagerplatz zu schaffen, als auch weitere andere Systeme angschlossen werden. Ausserdem wird ein Lagerschrank als Komplettsystem konzipiert. Durch unterbringugn aller Systeme in einem einzigen Objekt, kann durch montage von Rollen einfach Transportfähigkeit sichergestellt werden.\\
+Zur Steuerung dieser Anlage wird auf eine SPS-Steuerung zurückgegriffen. Dies ist Industriestandard, und so eine möglichst nahe Abbildung einer großen Logistikanlage darstellen. \\
+Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank platz, der Ebenfalls fahrbar ist. Weiters sind alle Anschlüsse usw. darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen. 
 
 \subsubsection{Steuerung 1/4}
 
@@ -62,9 +65,13 @@ Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein
 Zur mechanischen Planung des AFSS wird weiteführend auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
 \subsubsection{Hardware 2}
 
+\subsubsection{Antriebe}
+
 \paragraph{Elektrik}\mbox{}\\
 Die elektrische Seite der Anlage besteht unter anderem aus 6 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und über einen Motorschutz wurd der Motor geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
 Die Motoren haben jeweils einen Encoder dabei. Somit müssen ein Motorkabel und ein Kabel für den Encoder verlegt werden. Beide Kabel müssen geschrimt sein. 
+
+
 
 \subsubsection{Fertigung 1}
 
