@@ -1,0 +1,92 @@
+\section{Allgemeiner Teil}
+
+\subsection{Ausgangssituation 1-2}
+Die HTL-Mössingerstraße arbeitet im Zuge der Werkstätte mit einer Factory, diese ist eine Miniatur-Firma bei der Lehrpersonal sowie SchülerInnen Bestellungen abgeben können. Diese Bestellungen werden dann von zugeteilten SchülerInnen abgearbeitet.\\
+In dieser Factory laufen die Bestellprozesse digital über eine schulinterne Website. Verwendet werden von der Factory 3D-Drucker, CNC-Fräsen, Lasercutter und diverse weitere Maschinen, um Angefordertes zu produzieren. Die Factory produziert primär Einzelteile und dazu gehört auch ein großes Repertoire an Bauteilen, die im Lager der Factory gelagert werden.\\ 
+Die Handhabung dieses Lagers erfolgt bisher manuell. SchülerInnen schreiben in einer digitalen Applikation mit, welche Teile ein- bzw. ausgelagert werden. SchülerInnen sind im Schnitt nur ein Schuljahr in der Factory. In dieser Zeitspanne ist es kaum möglich eine Routine einzuarbeiten und die Fehlerquote bei der Arbeit im Lager ist relativ hoch. Das führt zu fehlerhaften Lieferungen oder verzögerten Produktionsketten.\\
+Ein weiterer Nachteil des derzeitigen Lagers ist, die Örtlichkeit. Das Lager befindet sich zurzeit im Keller und ist dort fest verbaut. Die schweren Schränke und Regale können im Falle von Hochwasser, wie im Sommer 2023, weder schnell ausgelagert oder verschoben werden.\\ 
+Im Allgemeinen Schulgeschehen ergeben sich zudem Möglichkeiten der Migration fürs Lager, um Prozesswege der Factory effizienter zu gestalten. Mit dem derzeitigen Lager können keine potenziellen Optionen wahrgenommen werden. 
+
+\subsubsection{Anforderungen}
+
+Um die Automatisierung dieses Prozesses zu ermöglichen, soll ein System entwickelt sowie gebaut werden, welches eine lagernde Box automatisch zu einer Kommissionierstation bringt. An dieser soll die Möglichkeit bestehen, lagerndes Inventar anzufordern, Lagerbestand auszufassen oder aufzufüllen sowie Boxen wieder einzulagern.\\
+Weiters muss dieses System erweiterbar sein, um zukünftig neuen Lagerplatz hinzuzufügen, als auch die Möglichkeit zu bieten, andere Systeme wie Bauteilvereinzelung einzubinden.\\
+Auch soll das AFSS mobil sein – dies gilt sowohl für Mechanik als auch Elektrik, da es nicht am endgültigen Standort errichtet wird und um bei möglichen Umbauarbeiten einen einfachen Transport zu ermöglichen.\\
+Die Rahmenbedingungen zur Umsetzung dieser Ziele sind stark davon geprägt, dass alle mechanischen Bauteile, die eigens gefertigt werden müssen, so geplant werden, dass dies mit HTL-Mitteln möglich ist.\\
+Es soll nicht nur produzierbar, sondern auch reproduzierbar sein. Daher soll die Dokumentation der Funktion sowie des Umsetzungsprozess so erfolgen, dass die Weiterführung dieses Projekts durch andere Schülerinnen und Schüler möglich ist.\\
+
+
+
+\subsection{Potentielle Lösungen 2}
+\subsubsection{Lagermethoden}
+Die Industrie gibt viele Vorbilder in, wie ein Boxenbasierendes Lagersystem aufgebaut sein kann. \\
+Eine sehr Platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. bei dieser Variante werden Boxen in mehreren Ebenen übereinander Gelagert. Auf jeder Ebene gibt es bewegliche Roboter, welche die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommisionierstation gelangt. Dieses System ist ist sehr platzeffizient und ausfallsicher. Jedoch ist es schwer möglich ein solches System in Miniatur zu Bauen, da die Hardwarefertigung sehr komplex ist.\\
+Eine weitere Möglichkeit wäre ein Rotierendes Magazin, in welchem die Boxen auf einem horizontalen Karusell gelagert sind. Wenn ein bestimmtes Produkt benötigt wird, werden die Platformen soweit weiterrotiert, bis auf die gewünschte Box zugegriffen werden kann. Das Prinzip dieses Systems ist zwar recht simpel, jedoch ist es es schwierig die Mechanik der Rotation mit HTL-mitteln so zu bauen, dass ein Dauerbetrieb möglich ist. \\
+Weiters gibt es die Möglichkeit, Ware vertikal, von oben zu Lagern. Über der Lagerstätte fährt dann ein Roboter, der in der Lage ist, die Boxen auszuheben und dann umzuschichten oder ein- und auszulagern. So kann eine recht hohe Lagerdichte erreicht werden, jedoch ist der Durchsatz etwas begrenzt, da, wenn Boxen benötigt werde, welche nicht am obersten Platz sind, erst alle anderen umgeschichtet werden müssen. Ausserdem ist so eine Lagervariante erst dann platzeffizienz, wenn sie sehr hoch gebaut wird. Wenige Lagen lohnen sich noch nicht da trotz geringer Höhe, sehr viel Fläche verbraucht wird.
+
+
+
+\subsubsection{Steuerung 4/9}
+
+
+\subsubsection{Schaltschrank 4/9}
+Für die Elektronik gibt es mehrere Möglichkeiten der Umsetzung. Beleuchtet wurden im Entwicklungsprozess integrierte Bauweisen in das AFSS, neuwertige Schaltschränke sowie Umbaumöglichkeiten.\\
+Die erste Idee, die verfolgt wurde, war ein integrierter Schaltschrank im AFSS. Dieser hätte einen Rahmen aus Aluminiumprofilen, Plexiglasscheiben hätten die Komponenten vom Rest getrennt und die einzelnen Elemente wären auf eine gefrästen Aluminiumplatte montiert worden. Vorteil dieser Option ist eine kompakte Bauweise, man hätte keinen zusätzlichen Schrank. Nachteile sind Zusatzkosten, Lagerplatzverluste da das Lager nicht breiter gemacht werden kann und kein Platz für Erweiterungen.\\
+Ein neuer Schaltschrank wäre grundsätzlich die naheliegendste  Lösung. Für das AFSS hätte der Schaltschrank groß sein müssen, um alle Komponenten unterzubringen und um die Erweiterbarkeit zu gewährleisten. Vorteilhaft wäre, verminderter Bauaufwand und eine gute el. Sicherheit. Allerdings ist ein herkömmlicher Schaltschrank nicht mobil und ist somit für eine mobile Anlage ungeeignet, zudem kommen Zusatzkosten.\\	
+Die letzte Option war ein alter Serverschrank, dieser kommt mit vier Profilschienen, einer Lüftungsanlage und war groß genug, um die Anforderung der Erweiterbarkeit auch zu erfüllen. Zusätzlich gemacht gehört sind Module, die auf die Schienen montiert werden, auf diesen wären die el. Komponenten montiert. Die Module können aus kosteneffizienten Platten hergestellt werden. Um den Serverschrank mobil zu machen, müssten kleinere Umbauten durchgeführt werden.
+
+
+
+
+\subsection{Verfolgter Lösungsansatz 3/4}
+
+\subsubsection{Lagermethoden }
+Nach Abwägung der Alternativen wurde sich bei der Auswahl der Lagermethode, an einem klassischen Palettenlager inspiriert. Der grundgedanke eines Portalsystems, welches mit einer Gabel Boxen in einem Regal ein- und aushebt. Diese Lagervariante behält die Ballance aus technischer Kopmlexität, sowie dem Umsetzungsvermögen an der HTL. Zudem ist gibt es bei dieser Variante ebenfalls effizienzsteigerungspotential, da die möglichkeit besteht, links und rechts des Roboters Bestand zu lagern. jedoch wird diese Variante nicht forciert, da die Komplexität eines solchen Mechanismus im kleinen Maßstab und mit eingeschränkter Fertigungstechnik recht schwierig ist.\\ Es wird also ein Lagersystem gewählt, bei dem zwei Achsen hin- und her Verfahren und eine art Gabel die Boxen ein und Aushebt. Um die Boxen zur Kommisionierstation zu Bringen wird ein Förderband verwendet, welches Längs zum Lager verläuft. Jedoch kann der LAgerroboter die Boxen nicht selbstständig auf das Förderband laden, zu diesem Zweck wid ein sog. Querförderer verwendet, der die Box von einem Temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An diese Förderband können ausserdem Weiterer solcher Lagerschränke aufgestellt werden, um mehr Lagerplatz zu schaffen, als auch weitere andere Systeme angschlossen werden. Ausserdem wird ein Lagerschrank als Komplettsystem konzipiert. Durch unterbringugn aller Systeme in einem einzigen Objekt, kann durch montage von Rollen einfach Transportfähigkeit sichergestellt werden.\\
+Zur Steuerung dieser Anlage wird auf eine SPS-Steuerung zurückgegriffen. Dies ist Industriestandard, und so eine möglichst nahe Abbildung einer großen Logistikanlage darstellen. \\
+Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank platz, der Ebenfalls fahrbar ist. Weiters sind alle Anschlüsse usw. darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen. 
+
+\subsubsection{Steuerung 1/4}
+
+
+\subsubsection{Schaltschrank 1/4}
+Der Umbau vom Serverschrank war die beste Option. Es wird Altbestand verwertet, es ist eine kosteneffiziente Lösung die viel Freiheit zur Anpassung an spezielle Komponenten erlaubt. Zudem gibt es viel Platz für Erweiterungen und Räder an den Schrank zu montieren wäre kein großer Zusatzaufwand. 
+Eine gute Lösung für die Ansprüche.
+
+\subsection{Methodik 5}
+
+\subsubsection{Software 2}
+
+Zur Dokumentation der elektrischen Komponenten und deren Verbindungen wird E-Plan verwendet. E-Plan ist der Industriestandard und bietet unzählige Möglichkeiten für eine ausführliche Dokumentation. E-Plan hilft ein übersichtliches Schaltbild zu erstellen, und die Anlage lesbar festzuhalten. Auch im Planungsprozess ist E-Plan der Schlüssel zu einer vollständigen Planung.
+\paragraph{Fusion360/PCP}\mbox{}\\
+Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. *********PCP FEHLT NOCH*****
+\paragraph{Datenbank}\mbox{}\\
+\paragraph{Tia Portal}\mbox{}\\
+\paragraph{AutoCAD}\mbox{}\\
+Zur mechanischen Planung des AFSS wird weiteführend auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
+\subsubsection{Hardware 2}
+
+\subsubsection{Antriebe}
+
+\paragraph{Elektrik}\mbox{}\\
+Die elektrische Seite der Anlage besteht unter anderem aus 6 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und über einen Motorschutz wurd der Motor geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
+Die Motoren haben jeweils einen Encoder dabei. Somit müssen ein Motorkabel und ein Kabel für den Encoder verlegt werden. Beide Kabel müssen geschrimt sein. 
+
+
+
+\subsubsection{Fertigung 1}
+
+\paragraph{Lasern}\mbox{}\\
+An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter zur Kunstoffverarbeitung zu verwenden. Um ein gewünstes Teil Ferigen zu können, muss die Kontour dieses als .dwg zur verfügung stehen. Dieses kann dann unter berücksichtigung der Materialstärke aus verschiedenen Farben geschnitten werden.
+
+
+\paragraph{Fräsen}\mbox{}\\
+Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchnesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
+Als Aluminiumlegierung wird hier die Legierung EN-AW 5754 (AlMg3) verwendet. Diese Legierung aus Aluminium und Magnesium eignet sich sehr gut zum Fräßen und ist in der Lage, die mechanischen Beanspruchungen auszuhalten.
+
+\paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
+Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene längen zuzuschneiden. 
+
+
+\subsection{Sicherheitstechnik 1}
+
+\subsection{Kooperationspartner}

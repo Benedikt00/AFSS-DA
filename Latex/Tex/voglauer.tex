@@ -1,1 +1,88 @@
 \section{Elektroplanung und Realisierung \textcolor{gray}{(Nikolaj Voglauer)}}
+
+\subsection{Elektroplanung}
+\label{sec:Elektroplanung}
+
+\subsubsection{Einleitung - Grundanforderungen}
+    Die grundsätzliche Zielsetzung bei der elektrischen Planung, war die Anforderungen so zu erfüllen, dass die Lösung einerseits die Anforderungen von Erweiterbarkeit und Mobilität erfüllen und andererseits in der Schule beziehungsweise in der Werkstätte produzierbar waren. Weiterführend sollte die Umgebung im Serverschrank beachtet werden. Darunter fällt, dass die Module in die Breite von den, nur in die Tiefe verstellbaren, Profilschienen begrenzt werden.\\
+    In der Anlage sollten während dem Normalbetrieb alle Komponenten vor elektrischen Störungen geschützt sein. Der Fokus liegt hierbei auf dem Schutz von Messleitungen und Steuerleitungen, an diese gibt es besonders hohe Anforderung bezüglich Präzision.\\ 
+    Weiterführend sollte in der Planung stehts bedacht werden, dass die elektrischen Komponenten so verbaut werden, dass im Falle eines Fehlers sowohl Personen gut geschützt sind und dass die Geräte leicht auszuwechseln sind.\\
+
+\subsubsection{Elektrik spezififsche Anforderungen}
+\label{sec:Elektrik spezififsche Anforderungen}
+
+    \paragraph{Versogung}\mbox{}\\
+    Zur Verfügung steht dem AFSS eine 3-phasige Wechselspannung mit 400V Außenleiterspannung. Damit direkt angesteuert werden kann nur der Asynchronmotor für das Fließband. Alle anderen Elemente brauchen eine andere Spannungsebene. Die in Summe sieben Schrittmotoren brauchen 24 V mit einem möglichen Dauerstrom von über 20A. Die Logik bestehend aus Siemens-SPS mit verschiedensten Karten und einer ET200 mit Asi-Master. Diese benötigen ebenfalls 24 V und sollen getrennt versorgt werden, um bei Fehlern geschützte Logikkreise zu haben. Der Asi-Kreis benötigt eine eigene Asi-24V-Versorgung.
+
+    \paragraph{Ansteuerungen}\mbox{}\\
+    Angesteuert werden müssen 8 Motoren: 1 Asynchronmotor (250 W), 4 stärkere Schrittmotoren (2 Nm) und 3 schwächeren Schrittmotoren (40 Ncm). \\
+    Der Asynchromotor soll keine Drehzahlregelung haben und über eine Wendeschützschaltung angesteuert werden. Die Schrittmotoren sollen über Schrittmotortreiber angesteuert werden. Diese Treiber werden von den PTO-Karten der SPS angesteuert.
+
+    \paragraph{Sicherheit}\mbox{}\\
+    Für die Anlage soll ein Fehlerstromschutzschalter, ein Leitungsschutzschalter, ein Motorschutzschalter und für jeden Motor eine Gleichstromsicherung ausgelegt werden.\\ 
+    Um Fehler zu behandeln die potentiell von den elektrischen Schutzeinheiten nicht unterbrochen werden soll die Anlage über mehrere Not-Aus-Schalter verfügen. Zwei auf der Anlage, einer im Serverschrank/Schaltschrank und einer am Kommisionierplatz. Diese Positionierung soll es NutzerInnen ermöglichen aus jeder Position an der Anlage einen Not-Aus-Schalter zu erreichen.
+
+    \paragraph{Bedienelemente}\mbox{}\\
+    An physischen Bedienlementen sollen ein Schlüsselschalter zur Freigabe und ein dreiphasiger Drehstromschalter für eine manuelle Freischaltungsoption eingeplant werden.
+
+    \paragraph{Schaltschrank}\mbox{}\\
+    Grundsätzlich haben Schaltschränke genormte Anforderungen.\\
+    Dazu gehört eine Auslegung von Kabelkanäle, die die Kabel schützen soll und Umbauten nicht zusätzlich erschweren sollen. Freifliegende Kabel sollen unter allen Umständen verhindert werden. Das Gehäuse muss geerdet sein und die inneren Komponenten vor Staub und Schmutz schützen. Bei einem potenziellen Lichtbogen soll der Schaltschrank Personen in der Nähe schützen. Zudem muss der Schrank gegen thermische Einflüsse geschützt sein, gegebenenfalls soll der Schaltschrank über eine Belüftung verfügen.\\
+    Der Serverschrank schütz gegen Staub und Schutz und kommt mit einer Lüfteranlage, die die Abwärme von mehereren Gleichrichtern gut abführen kann. Zudem sind die Materialen des Schrankes vor korrosionsgeschützt.\\
+    Bei der Planung muss beachtet werden, dass die Erdung aller leitungsfähigen Elemente eingehalten wird. Außerdem dürfen Umbauten wie die Montage von Rädern keine der angeführten Anforderungen widersprechen.
+
+    \paragraph{Kabelauslegung}\mbox{}\\
+    Bei den Kabeln gibt es mehrere Punkte, die beachtet werden müssen beim Auslegen. Während Spannungsabfall bei den Längen des AFSS vernachlässigt, werden können muss besonders auf Schleppkettentauglichkeit geachtet werden. Steuer- und Messkabel müssen entsprechend geschirmt werden und entsprechend dem Strom muss der Querschnitt gewählt werden. Dabei sind die Querschnitte aber auch stark abhängig von den Schutzeinheiten im Schaltkreis.
+
+    \paragraph{Module}\mbox{}\\
+    Die Paneele/Module, auf welchen die elektrischen Komponenten montiert werden sollen, müssen ebenfalls alle Erdungserwartungen erfüllen und mechanisch den Belastungen standhalten. Dabei ist das Gewicht die beachtlichste Belastung. Eine gerechte Drahtverlegung muss gewährleistet sein und die Modularität der Paneele soll vorteilhaft ausgenutzt werden und sollen nicht das Projekt unnötig verkomplizieren. Kostentechnisch soll dabei ein möglichst billiges, aber standhaftes Material gewählt werden.
+
+\subsubsection{Mechanische Planung}
+
+    \paragraph{Modulprinzip}\mbox{}\\
+    Es wurden bereits die Anforderungen an die Module beschrieben. Doch es gäbe noch weitere Alternativen für den Innenraum des Serverschrankes, so könnte man eine große Platte verwenden und diese an die Profilschienen festschrauben. Eine weitere Option wäre eine plattenlose, dabei würde man die Hutschienen direkt auf die Profilschienen des Serverschrankes montieren.\\
+    Die große Platte entfällt als Möglichkeit insofern, da diese nicht in der Schule produzierbar gewesen wäre. Die plattenlose Option wäre eine kosteneffiziente Möglichkeit, allerdings gibt es viele Elemente, die im Schaltschrank nicht auf Hutschienen montiert werden können, diese bräuchten immer eine Montageplatte.\\
+    Damit ein einheitliches Design eingehalten werden kann, haben wir uns für das Modulprinzip entschlossen. Dieses ermöglicht es Elementen, die für Hutschienen ungeeignet sind, wie dem 24V-ASI-Gleichrichter, montiert zu werden und ist weiterhin in der Schule produzierbar.
+
+    \paragraph{Platten-Material}\mbox{}\\
+    Für die Materialwahl gab es zwei realistische Möglichkeiten. Die Modulplatten hätten vollständig aus Aluminium gefräst werden können oder aus Dibond. Die Aluplatten bieten den Vorteil der Leitfähigkeit und somit müsste man nur die Platte erden und die Elemente auf der Platte wären alle dementsprechend geerdet. Doch Aluminium ist teuer und ein wertvoller Werkstoff, da ein umsichtiger Umgang mit Ressourcen wichtig ist wurden dann doch die Dibond-Platten als Projektstandard definiert. Diese sind zwei dünne Platten aus Aluminium die auf einen Kunststoff aufgepresst werden. Dibond bietet keine elektrische Leitfähigkeit, folglich müssen alle Elemente zusätzlich geerdet werden. 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Dibond_Platten_ml.jpg}
+        \caption{Dibond-Platte, Quelle: \cite{Dibond-Platte}}
+        \label{fig:Dibond}
+    \end{figure}
+        
+    \paragraph{Digitaler Zwilling}\mbox{}\\
+    Moderner Schaltschrankherstellung begenen im Herstellungsprozess oft große logistische Probleme. Jeder Prozessschritt ist eine Fehlerquelle und wenn Fehler nicht früh erkannt werden plfanzen sich diese fort. Damit zwischen den Prozessschritten keine Kommunikationsprobleme entstehen setzen viele Hersteller auf das Prinzip des digitalen Zwillings.\\
+    Dieser im Grunde ein digitaler Schaltschrank, welcher im ersten Prozessschritt, der Planung, ausgeplant wird und im Herrstellungsprozess, sei es der Schrankbau oder die Bestückung, wird einerseits immer derselbe digitale Zwilling aktualisiert und aber auch referenziert. Das heißt alle Prozessschritte beziehen sich auf den selben Plan bzw. digitalen Zwilling (siehe \ref{fig:digilaerZwilling}).\\
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{Cabinet-Building-Komax-SCB-Component-Printer.png}
+        \caption{Digitaler Zwilling, Quelle: \cite{digitaler_zwilling_bild}}
+        \label{fig:digilaerZwilling}
+    \end{figure}
+    
+    Es setzt ein breites Feld an Firmen auf dieses Prinzip. Firmen wie Weidmüller, Komax, Steinhauer und noch viele mehr haben eine Firmenzusammenarbeit die ohne einen digitalen Zwilling nicht möglich wäre\cite{smart_cabinet_building}.In diesem Fall werden die jeweiligen Prozessschritte meistens von einer neuen Firma übernommen, in diesem Bündnis ist der digitale Zwilling der Schlüssel zum Erfolg. Mann kann dieses Prinzip der Dokumentation bzw. Planung als Industriestandard verstehen.\\
+    Um den Prozesss der Herstellung des Schaltschrankes möglichst nahe an die Praktiken aus der Industrie anzugleichen wird auch der Schaltschrank des AFSS mithilfe eines digitalen Zwillings geplant. Dieser wird in Fusion360 gezeichnet und soll den Sollzustand des Schaltschrankes abbilden.\\
+    Um den die Konstruktion anzufangen braucht es eine möglichst ausführliche Ausmessung des bereits bestehenden Serverschrankes. Besonders wichtig sind die Elemte die direkt am Umbau beteiligt sind, wie die Profilschienen, die Türen und die Lüfter.\\
+    
+    Wie fängt man einen digitalen Zwilling an?
+    -Abmessungen: Alle Abmessungen die gemacht wurden anführen
+
+    -Serverschrank in CAD Nachzeichnen: Dabei beschreiben was besonders wichtig ist, sowie das Bewegliche Teile in echt auch beweglich sein müssen in Fusion360. WIe waren die Schritte die beim Zeichnen gemacht wurden, mit was ich anfange.
+
+    -Module: Ist der Schaltchrank fertig übernommen aus der realität kann man anfangen mit einem Modul. Dabei fällt einem zum Beispiel schon eine sache auf, sowie die Tatsache, dass wenn man die Profilschinen an der selben Position lässt würden sich die Türen nicht schließen lassen. Folge daraus ist, die Profilschinen müssen verschoben werden. Der Aufbau des Serverschranks lässt dies zu.
+
+    -Weitere Module: diese werden dann auch in Fusion360 gezeichnet und dann in den digitalen Zwilling eingefügt. Dabei kann man schön erkennen wie die Module Anneinander gereiht gehören, welche Reihenfolge sinnvoll ist und ob sich die Menge an Elektrischen Einheiten auch ausgeht mit den Modulen. 
+
+    -Dieser soll auch immer die akktuelle version abbilden
+
+
+\subsection{Realisierung}
+\label{sec:Schaltplan}
+
+
+
