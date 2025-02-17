@@ -9,20 +9,27 @@ Im Allgemeinen Schulgeschehen ergeben sich zudem Möglichkeiten der Migration f�
 
 \subsubsection{Anforderungen}
 
-Um die Automatisierung dieses Prozesses zu ermöglichen, soll ein System entwickelt sowie gebaut werden, welches eine lagernde Box automatisch zu einer Kommissionierstation bringt. An dieser soll die Möglichkeit bestehen, lagerndes Inventar anzufordern, Lagerbestand auszufassen oder aufzufüllen sowie Boxen wieder einzulagern.\\
-Weiters muss dieses System erweiterbar sein, um zukünftig neuen Lagerplatz hinzuzufügen, als auch die Möglichkeit zu bieten, andere Systeme wie Bauteilvereinzelung einzubinden.\\
-Auch soll das AFSS mobil sein – dies gilt sowohl für Mechanik als auch Elektrik, da es nicht am endgültigen Standort errichtet wird und um bei möglichen Umbauarbeiten einen einfachen Transport zu ermöglichen.\\
-Die Rahmenbedingungen zur Umsetzung dieser Ziele sind stark davon geprägt, dass alle mechanischen Bauteile, die eigens gefertigt werden müssen, so geplant werden, dass dies mit HTL-Mitteln möglich ist.\\
-Es soll nicht nur produzierbar, sondern auch reproduzierbar sein. Daher soll die Dokumentation der Funktion sowie des Umsetzungsprozess so erfolgen, dass die Weiterführung dieses Projekts durch andere Schülerinnen und Schüler möglich ist.\\
+Um die Automatisierung dieses Prozesses zu ermöglichen, soll ein System entwickelt und gebaut werden, das eine lagernde Box automatisch zu einer Kommissionierstation bringt. An dieser Station soll die Möglichkeit bestehen, Inventar anzufordern, Lagerbestände auszugeben oder aufzufüllen sowie Boxen wieder einzulagern.
+\\
+Weiterhin muss dieses System erweiterbar sein, um zukünftig zusätzlichen Lagerplatz hinzuzufügen und die Integration anderer Systeme, wie beispielsweise einer Bauteilvereinzelung, zu ermöglichen.
+\\
+Zudem soll das AFSS mobil sein – sowohl mechanisch als auch elektrisch –, da es nicht am endgültigen Standort errichtet wird und einen einfachen Transport bei möglichen Umbauarbeiten ermöglichen soll.
+\\
+Die Rahmenbedingungen für die Umsetzung dieser Ziele sind stark davon geprägt, dass alle mechanischen Bauteile, die eigens gefertigt werden müssen, so konstruiert werden, dass ihre Herstellung mit den Mitteln der HTL möglich ist.
+\\
+Das System soll nicht nur produzierbar, sondern auch reproduzierbar sein. Daher muss die Dokumentation der Funktion sowie des Umsetzungsprozesses so erfolgen, dass das Projekt von nachfolgenden Schüler*innen weitergeführt werden kann.
 
 
 
 \subsection{Potentielle Lösungen 2}
 \subsubsection{Lagermethoden}
-Die Industrie gibt viele Vorbilder in, wie ein Boxenbasierendes Lagersystem aufgebaut sein kann. \\
-Eine sehr Platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. bei dieser Variante werden Boxen in mehreren Ebenen übereinander Gelagert. Auf jeder Ebene gibt es bewegliche Roboter, welche die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommisionierstation gelangt. Dieses System ist ist sehr platzeffizient und ausfallsicher. Jedoch ist es schwer möglich ein solches System in Miniatur zu Bauen, da die Hardwarefertigung sehr komplex ist.\\
-Eine weitere Möglichkeit wäre ein Rotierendes Magazin, in welchem die Boxen auf einem horizontalen Karusell gelagert sind. Wenn ein bestimmtes Produkt benötigt wird, werden die Platformen soweit weiterrotiert, bis auf die gewünschte Box zugegriffen werden kann. Das Prinzip dieses Systems ist zwar recht simpel, jedoch ist es es schwierig die Mechanik der Rotation mit HTL-mitteln so zu bauen, dass ein Dauerbetrieb möglich ist. \\
-Weiters gibt es die Möglichkeit, Ware vertikal, von oben zu Lagern. Über der Lagerstätte fährt dann ein Roboter, der in der Lage ist, die Boxen auszuheben und dann umzuschichten oder ein- und auszulagern. So kann eine recht hohe Lagerdichte erreicht werden, jedoch ist der Durchsatz etwas begrenzt, da, wenn Boxen benötigt werde, welche nicht am obersten Platz sind, erst alle anderen umgeschichtet werden müssen. Ausserdem ist so eine Lagervariante erst dann platzeffizienz, wenn sie sehr hoch gebaut wird. Wenige Lagen lohnen sich noch nicht da trotz geringer Höhe, sehr viel Fläche verbraucht wird.
+Die Industrie bietet viele Vorbilder dafür, wie ein boxenbasiertes Lagersystem aufgebaut sein kann.
+\\
+Eine besonders platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. Bei dieser Lösung werden Boxen in mehreren Ebenen übereinander gelagert. Auf jeder Ebene gibt es bewegliche Roboter, die die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommissionierstation transportiert wird. Dieses System ist sowohl platzsparend als auch ausfallsicher. Allerdings ist es schwierig, ein solches System in Miniatur nachzubauen, da die Hardwarefertigung sehr komplex ist.
+\\
+Eine weitere Möglichkeit wäre ein rotierendes Magazin, in dem die Boxen auf einem horizontalen Karussell gelagert sind. Wenn ein bestimmtes Produkt benötigt wird, rotiert das Karussell so lange weiter, bis die gewünschte Box zugänglich ist. Das Prinzip dieses Systems ist zwar recht simpel, jedoch stellt die mechanische Umsetzung der Rotation mit den Mitteln der HTL eine Herausforderung dar, insbesondere im Hinblick auf einen zuverlässigen Dauerbetrieb.
+\\
+Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über der Lagerstätte bewegt sich ein Roboter, der die Boxen ausheben, umschichten sowie ein- und auslagern kann. Dieses System ermöglicht eine hohe Lagerdichte, hat jedoch den Nachteil eines begrenzten Durchsatzes. Wenn eine Box benötigt wird, die nicht an oberster Stelle liegt, müssen erst alle darüberliegenden Boxen umgeschichtet werden. Zudem ist diese Lagervariante erst dann wirklich platzsparend, wenn sie sehr hoch gebaut wird. Bei wenigen Ebenen lohnt sie sich noch nicht, da trotz geringer Höhe bereits viel Fläche verbraucht wird.
 
 
 
@@ -41,9 +48,13 @@ Die letzte Option war ein alter Serverschrank, dieser kommt mit vier Profilschie
 \subsection{Verfolgter Lösungsansatz 3/4}
 
 \subsubsection{Lagermethoden }
-Nach Abwägung der Alternativen wurde sich bei der Auswahl der Lagermethode, an einem klassischen Palettenlager inspiriert. Der grundgedanke eines Portalsystems, welches mit einer Gabel Boxen in einem Regal ein- und aushebt. Diese Lagervariante behält die Ballance aus technischer Kopmlexität, sowie dem Umsetzungsvermögen an der HTL. Zudem ist gibt es bei dieser Variante ebenfalls effizienzsteigerungspotential, da die möglichkeit besteht, links und rechts des Roboters Bestand zu lagern. jedoch wird diese Variante nicht forciert, da die Komplexität eines solchen Mechanismus im kleinen Maßstab und mit eingeschränkter Fertigungstechnik recht schwierig ist.\\ Es wird also ein Lagersystem gewählt, bei dem zwei Achsen hin- und her Verfahren und eine art Gabel die Boxen ein und Aushebt. Um die Boxen zur Kommisionierstation zu Bringen wird ein Förderband verwendet, welches Längs zum Lager verläuft. Jedoch kann der LAgerroboter die Boxen nicht selbstständig auf das Förderband laden, zu diesem Zweck wid ein sog. Querförderer verwendet, der die Box von einem Temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An diese Förderband können ausserdem Weiterer solcher Lagerschränke aufgestellt werden, um mehr Lagerplatz zu schaffen, als auch weitere andere Systeme angschlossen werden. Ausserdem wird ein Lagerschrank als Komplettsystem konzipiert. Durch unterbringugn aller Systeme in einem einzigen Objekt, kann durch montage von Rollen einfach Transportfähigkeit sichergestellt werden.\\
-Zur Steuerung dieser Anlage wird auf eine SPS-Steuerung zurückgegriffen. Dies ist Industriestandard, und so eine möglichst nahe Abbildung einer großen Logistikanlage darstellen. \\
-Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank platz, der Ebenfalls fahrbar ist. Weiters sind alle Anschlüsse usw. darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen. 
+Nach Abwägung der Alternativen wurde bei der Auswahl der Lagermethode ein klassisches Palettenlager als Inspiration gewählt. Der Grundgedanke basiert auf einem Portalsystem, das mit einer Gabel Boxen in einem Regal ein- und aushebt. Diese Lagervariante vereint die Balance aus technischer Komplexität und dem Umsetzungsvermögen an der HTL. Zudem gibt es bei dieser Variante ebenfalls Potenzial zur Effizienzsteigerung, da die Möglichkeit besteht, links und rechts des Roboters Bestand zu lagern. Allerdings wird diese Variante nicht forciert, da die Komplexität eines solchen Mechanismus im kleinen Maßstab und mit eingeschränkter Fertigungstechnik recht schwierig umzusetzen ist.
+
+Es wurde also ein Lagersystem gewählt, bei dem zwei Achsen hin- und herfahren und eine Art Gabel die Boxen ein- und aushebt. Um die Boxen zur Kommissionierstation zu bringen, wird ein Förderband verwendet, das längs zum Lager verläuft. Der Lagerroboter kann die Boxen jedoch nicht selbstständig auf das Förderband laden. Zu diesem Zweck wird ein sogenannter Querförderer eingesetzt, der die Box von einem temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An dieses Förderband können außerdem weitere solcher Lagerschränke angeschlossen werden, um mehr Lagerplatz zu schaffen und auch andere Systeme anzubinden. Darüber hinaus wird ein Lagerschrank als Komplettsystem konzipiert. Durch die Unterbringung aller Systeme in einem einzigen Objekt kann die Transportfähigkeit durch die Montage von Rollen einfach sichergestellt werden.
+
+Zur Steuerung dieser Anlage wird eine SPS-Steuerung verwendet. Dies ist der Industriestandard und stellt eine möglichst nahe Abbildung einer großen Logistikanlage dar.
+
+Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank Platz, der ebenfalls fahrbar ist. Weiterhin sind alle Anschlüsse darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen.
 
 \subsubsection{Steuerung 1/4}
 
@@ -59,16 +70,32 @@ Eine gute Lösung für die Ansprüche.
 Zur Dokumentation der elektrischen Komponenten und deren Verbindungen wird E-Plan verwendet. E-Plan ist der Industriestandard und bietet unzählige Möglichkeiten für eine ausführliche Dokumentation. E-Plan hilft ein übersichtliches Schaltbild zu erstellen, und die Anlage lesbar festzuhalten. Auch im Planungsprozess ist E-Plan der Schlüssel zu einer vollständigen Planung.
 \paragraph{Fusion360/PCP}\mbox{}\\
 Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. *********PCP FEHLT NOCH*****
-\paragraph{Datenbank}\mbox{}\\
-\paragraph{Tia Portal}\mbox{}\\
-\paragraph{AutoCAD}\mbox{}\\
+\paragraph{AutoCAD - bin ioch nicht mit einverstanden BS}\mbox{}\\
 Zur mechanischen Planung des AFSS wird weiteführend auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
+
+
+\paragraph{Lagerverwaltungssoftware}\mbox{}\\
+Um Lagerbestand zu verwalten bedarf es eines ausgeklügelten Systems, welches einerseits eine Benutzerbedinenung zulässt, und andererseits die Logik der Auslagerung übernimmt. \\
+Eine Möglichkeit dies zu Erreichen, wäre eine Reine Softwarelösung nur auf SPS-Basis. Dies ist aber sehr sher umstöndlich und auch nicht Skalierbar. Auch die verwendung von graphischen Entwicklungswerkzeugen wie Node-Red wäre denkbar, jedoch ist es auch hier schwierig komplexe Operationen durchzuführen, wenngleich die Einbindung zur SPS einfacher ist.\\
+Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung eines eigenen Servers in einer Programmierhochsprache. Die SPS soll mit diesem Kommunizieren können. Ausserdem kann dieser Server eine Benutzeroberfläche für die Bedienung zur verfügung stellen, sowie die Steuerungslogik übernehmen. Dieser soll überdies auf eine Datenbank zugreifen, welche den Lagerbestand abbildet.
+
+
+\paragraph{Tia Portal}\mbox{}\\
+
 \subsubsection{Hardware 2}
 
 \subsubsection{Antriebe}
+Das elektrische Antriebssystem ist ein Kernbaustein des AFSS. Mit diesem werden alle beweglichen Aktoren betätigt. Hier ist es nötig, einen Kompromiss zwischen Leistung, Kosten und der Ansteuerbarkeit zu finden.
+\\
+Industrieservomotoren, die typischerweise mit 400 V, Frequenzumrichtern und Gebern betrieben werden, sind zwar sehr leistungsdicht und gut steuerbar, jedoch auch sehr teuer. Aus diesem Grund wurde schnell ein Antriebssystem aus Closed-Loop- und Open-Loop-Schrittmotoren angestrebt.
+\\
+Für alle Anwendungen mit hohen Drehmomenten (X- und Y-Achse) sollen Closed-Loop-Schrittmotoren im Formfaktor Nema23 verwendet werden. Diese können im Falle unerwarteter Laständerungen ohne Schrittverlust weiterbetrieben werden und sind zudem in den benötigten Drehmomentbereichen preiswert verfügbar. Weiters müssen Treiber für diese Motoren eingesetzt werden. Diese verarbeiten die Signale der SPS und steuern den Motor an. Zudem verarbeiten sie auch die Gebersignale. Falls eine Diskrepanz zwischen Gebersignal und Steuersignal erkannt wird, wird dies automatisch ausgeglichen.
+\\
+Für die Z-Achse (Gabel) sowie für den Querförderer ist lediglich ein Open-Loop (geberloser) Antrieb nötig. Auf der Z-Achse kommen zwei Nema17-Schrittmotoren zum Einsatz, und beim Querförderer wird ein Nema23-Motor verwendet. Bei diesen Achsen ist es relativ einfach, bei jedem Verfahren die tatsächliche aktuelle Position mit der vermuteten Position zu vergleichen, da jedes Mal über den Referenzierpunkt gefahren wird.
+
 
 \paragraph{Elektrik}\mbox{}\\
-Die elektrische Seite der Anlage besteht unter anderem aus 6 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und über einen Motorschutz wurd der Motor geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
+Die elektrische Seite der Anlage besteht unter anderem aus diesen 7 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und über einen Motorschutz wurd der Motor geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
 Die Motoren haben jeweils einen Encoder dabei. Somit müssen ein Motorkabel und ein Kabel für den Encoder verlegt werden. Beide Kabel müssen geschrimt sein. 
 
 
