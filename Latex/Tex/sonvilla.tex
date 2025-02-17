@@ -55,26 +55,33 @@ wieso wirds verwendet oder warum --> vllt weil mix anderes verfügbar ist
         \begin{itemize}
             \item GET
             \item POST-PUT \\
-            Mit dem POST-PUT Befehl werden Daten zum Server geschickt aber auch Daten erwartet. 
+            Mit dem POST-PUT Befehl werden Daten zum Server geschickt aber auch Daten erhalten. 
         \end{itemize}
 
 
     \subsubsection{Datenfilterung}
-    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welchen Befehl es sich handelt, und die Daten die erforderlich sind um diesen Befehl auszuführen.
+    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welche Aufgabe es sich handelt, und die Daten die erforderlich sind um diesen Befehl auszuführen.
 
-        \paragraph{Datenformatierung}
-        Die Daten werden in einem String geschickt welcher in zwei Teile aufgeteitlt wird. Der zeite Teil ist jedoch abhängig vom ersten.\\
+        \paragraph{Datenformatierung}\mbox{}\\
+        Die Daten werden in einem String geschickt, welcher in zwei Teile aufgeteilt wird. Der zweite Teil ist jedoch abhängig vom ersten. \\
         
         \begin{itemize}
             \item 1.Teil: \\
             IDXXXXAXX \\
             Aus diesem Teil werden die ID-Nummer sowie der Auftrag herausgefiltert. Die ID-Nummer ist eine 4 stellige Nummer welche nach ID steht. Der Auftrag welcher ausgeführt werden muss steht in den zwei Stellen nach A.\\
-            Diese werden nach folgender Codierung ausgelesem:
+            Diese werden nach folgender Codierung ausgelesen:
                 \subitem 00: Kommissionierstation
                 \subitem 01: Förderband
                 \subitem 10: Lager 1 (Aus-/Einlagerung)
                 \subitem 11: Lager 1 (Querförderer)
-            \item 2.Teil:\\
+            \item 2.Teil: \\
+            Der zweite Teil steht in Abhängigkeit zu ersten. Je nachdem welche Zahl nach A steht,also der Code welche Area angesprochen wird, ist der zweite Teil anders aufgebaut.
+                \subitem 00: 
+                \subitem 01:
+                \subitem 10: X-Position, Y-Position, Z-Position,Ein/-Auslagerung \\
+                Wobei nach jedem Symbol eine 4 stellige Zahl steht.Also X0000Y0000Z0000R0000 bedeutet, dass die 
+                X-Position 0, Y-Position 0, Z-Position 0 und es sich um eine Einlagerung handelt. 
+                \subitem 11:
             
         \end{itemize}
 
