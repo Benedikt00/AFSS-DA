@@ -68,8 +68,12 @@ Eine gute Lösung für die Ansprüche.
 \subsubsection{Software 2}
 
 Zur Dokumentation der elektrischen Komponenten und deren Verbindungen wird E-Plan verwendet. E-Plan ist der Industriestandard und bietet unzählige Möglichkeiten für eine ausführliche Dokumentation. E-Plan hilft ein übersichtliches Schaltbild zu erstellen, und die Anlage lesbar festzuhalten. Auch im Planungsprozess ist E-Plan der Schlüssel zu einer vollständigen Planung.
-\paragraph{Fusion360/PCP}\mbox{}\\
-Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden. *********PCP FEHLT NOCH*****
+
+\paragraph{Fusion360/PCB}\mbox{}\\
+Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden.\\
+
+Die volle Integration von Eagle in Fusion360 im Jahr 2020 macht es möglich, auch in Fusion360 Leiterplatten zu entwerfen und die dazugehörigen Schaltungen zu zeichnen. Der Verkauf des Programms Autodesk Eagle wird mit Juni 2026 eingestellt und ist somit nicht mehr Stand der Technik.\cite{Eagle_in_Fusion} Das Entwerfen von PCBs (Printed Circuit Boards) ist durch die Integration in Fusion360 nicht nur einfacher, sondern auch einheitlicher geworden. Außerdem kann durch die Zusammenführung der beiden Programme beim Kauf von Lizenzen gespart werden, und es wird ermöglicht, Projekte auf einer zentralen Entwurfsplattform umzusetzen.
+
 \paragraph{AutoCAD - bin ioch nicht mit einverstanden BS}\mbox{}\\
 Zur mechanischen Planung des AFSS wird weiteführend auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
 
@@ -84,7 +88,7 @@ Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung ei
 
 \subsubsection{Hardware 2}
 
-\subsubsection{Antriebe}
+\paragraph{Antriebe}\mbox{}\\
 Das elektrische Antriebssystem ist ein Kernbaustein des AFSS. Mit diesem werden alle beweglichen Aktoren betätigt. Hier ist es nötig, einen Kompromiss zwischen Leistung, Kosten und der Ansteuerbarkeit zu finden.
 \\
 Industrieservomotoren, die typischerweise mit 400 V, Frequenzumrichtern und Gebern betrieben werden, sind zwar sehr leistungsdicht und gut steuerbar, jedoch auch sehr teuer. Aus diesem Grund wurde schnell ein Antriebssystem aus Closed-Loop- und Open-Loop-Schrittmotoren angestrebt.
@@ -92,6 +96,11 @@ Industrieservomotoren, die typischerweise mit 400 V, Frequenzumrichtern und Gebe
 Für alle Anwendungen mit hohen Drehmomenten (X- und Y-Achse) sollen Closed-Loop-Schrittmotoren im Formfaktor Nema23 verwendet werden. Diese können im Falle unerwarteter Laständerungen ohne Schrittverlust weiterbetrieben werden und sind zudem in den benötigten Drehmomentbereichen preiswert verfügbar. Weiters müssen Treiber für diese Motoren eingesetzt werden. Diese verarbeiten die Signale der SPS und steuern den Motor an. Zudem verarbeiten sie auch die Gebersignale. Falls eine Diskrepanz zwischen Gebersignal und Steuersignal erkannt wird, wird dies automatisch ausgeglichen.
 \\
 Für die Z-Achse (Gabel) sowie für den Querförderer ist lediglich ein Open-Loop (geberloser) Antrieb nötig. Auf der Z-Achse kommen zwei Nema17-Schrittmotoren zum Einsatz, und beim Querförderer wird ein Nema23-Motor verwendet. Bei diesen Achsen ist es relativ einfach, bei jedem Verfahren die tatsächliche aktuelle Position mit der vermuteten Position zu vergleichen, da jedes Mal über den Referenzierpunkt gefahren wird.
+
+\paragraph{Sensoren}\mbox{}\\
+Die Sensoren sind wesentlich für eine sichere und korrekte Funktion des AFSS. Sie werden zur Übermittlung der genauen Position der Gabel eingesetzt, aber auch zum Überprüfen, ob die jeweiligen Boxen an den Zielpositionen angekommen sind.\\
+Zur Übertragung des Sensorsignals wird ein AS-i-Bus verwendet. Dieser bietet eine einfache Kommunikation zwischen den Sensoren und der SPS. Die Sensoren werden über den AS-i-Slave mit 24V versorgt, jedoch ist zu beachten, dass vereinzelte Sensoren mit einer niedrigeren Spannung betrieben werden müssen, um eine lange Lebensdauer und korrekte Funktion garantieren zu können.\\
+Aus Kostengründen werden an den verschiedenen Achsen unterschiedliche Arten von Sensoren als mechanische Endschalter eingesetzt. Ohne mechanische Endschalter würde die Gefahr bestehen, dass die Motoren nicht gestoppt werden und der Rahmen angefahren wird, was zu erheblichen Schäden am System führen kann. Die Achsen werden mittels eines Photo-Interrupters, der auf einer eigens entworfenen Platine untergebracht ist, referenziert. Zum Überprüfen, ob die jeweilige Box ihre Zielposition erreicht hat, werden Lichttaster eingebaut. Zur Zuordnung der Boxen und den sich darin befindenden Bauteile werden auf den Boxen Barcodes angebracht. Um diese einlesen zu können befindet sich auf der Kommissionierstation ein Barcodescanner, der die jeweilige EAN-Nummer an die SPS weitergibt, die diese wiederum an den Server weiterleitet.\\
 
 
 \paragraph{Elektrik}\mbox{}\\
