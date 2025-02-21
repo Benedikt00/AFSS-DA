@@ -34,8 +34,8 @@ Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über de
 
 
 \subsubsection{Steuerung 4/9}
-Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS verwendet. Diese bieten den Vorteil komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen, realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielweise digitalen Ein-/Ausgängen oder das Ansteuern von closed loops, verschiedenste Module. \\
-Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von größeren Verbrauchen auch zusätzliche Elemente. Auch steigt der Programmier-Aufwand,sowie die Komplexität des Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
+Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS verwendet. Diese bieten den Vorteil komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen, realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
+Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand,sowie die Komplexität des Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
 Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen, welche aber mit einem beträchlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden sind. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
 \subsubsection{Schaltschrank 4/9}
 Für die Elektronik gibt es mehrere Möglichkeiten der Umsetzung. Beleuchtet wurden im Entwicklungsprozess integrierte Bauweisen in das AFSS, neuwertige Schaltschränke sowie Umbaumöglichkeiten.\\
@@ -82,6 +82,8 @@ Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung ei
 
 
 \paragraph{Tia Portal}\mbox{}\\
+Ist die Software welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens, anzusteuern. Tia-Portal bietet die Möglichkeit in verschiedensten Programmiersprachen zu arbeiten. Nämlich mit einem Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph. Da Tia Portal speichertechnisch zu groß werden würde, wenn man jedwede Funktion die möglich ist einbindet, werden spezielle Funktionen die benötigt werdem, über Libraries eingebunden.
+\cite{TIA_Portal_Programmiersprachen}
 
 \subsubsection{Hardware 2}
 
