@@ -33,7 +33,7 @@ Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über de
 
 
 
-\subsubsection{Steuerung 4/9}
+\subsubsection{Steuerung (bitte keine vergangenheitsformen)4/9}
 Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS verwendet. Diese bieten den Vorteil komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen, realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
 Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand, sowie die Komplexität des \textbf{des is schon a bissi hoch gestochen} Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
 Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen \textbf{bitte näher erklären was des ist}, welche aber mit einem beträchlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden sind. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
@@ -50,12 +50,8 @@ Die letzte Option war ein alter Serverschrank, dieser kommt mit vier Profilschie
 
 \subsubsection{Lagermethoden }
 Nach Abwägung der Alternativen wurde bei der Auswahl der Lagermethode ein klassisches Palettenlager als Inspiration gewählt. Der Grundgedanke basiert auf einem Portalsystem, das mit einer Gabel Boxen in einem Regal ein- und aushebt. Diese Lagervariante vereint die Balance aus technischer Komplexität und dem Umsetzungsvermögen an der HTL. Zudem gibt es bei dieser Variante ebenfalls Potenzial zur Effizienzsteigerung, da die Möglichkeit besteht, links und rechts des Roboters Bestand zu lagern. Allerdings wird diese Variante nicht forciert, da die Komplexität eines solchen Mechanismus im kleinen Maßstab und mit eingeschränkter Fertigungstechnik recht schwierig umzusetzen ist.
-
+\\
 Es wurde also ein Lagersystem gewählt, bei dem zwei Achsen hin- und herfahren und eine Art Gabel die Boxen ein- und aushebt. Um die Boxen zur Kommissionierstation zu bringen, wird ein Förderband verwendet, das längs zum Lager verläuft. Der Lagerroboter kann die Boxen jedoch nicht selbstständig auf das Förderband laden. Zu diesem Zweck wird ein sogenannter Querförderer eingesetzt, der die Box von einem temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An dieses Förderband können außerdem weitere solcher Lagerschränke angeschlossen werden, um mehr Lagerplatz zu schaffen und auch andere Systeme anzubinden. Darüber hinaus wird ein Lagerschrank als Komplettsystem konzipiert. Durch die Unterbringung aller Systeme in einem einzigen Objekt kann die Transportfähigkeit durch die Montage von Rollen einfach sichergestellt werden.
-
-Zur Steuerung dieser Anlage wird eine SPS-Steuerung verwendet. Dies ist der Industriestandard und stellt eine möglichst nahe Abbildung einer großen Logistikanlage dar.
-
-Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank Platz, der ebenfalls fahrbar ist. Weiterhin sind alle Anschlüsse darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen.
 
 \subsubsection{Steuerung 1/4}
 Als Steuerung wurden eine SPS von Siemens ausgewählt, da das Basic Know-How für die Programmierung solcher, bereits in der Schule gelehrt wird. Zudem sind speicherprogrammierbare Steuerungen ideal für komplexere Anlagen und ermöglichen die Ansteuerung der Motoren sowie die Kommunikation mit dem Server realtiv simpel und bleiben dabei auch innerhalb der geforderten Zykluszeit. 
@@ -63,6 +59,8 @@ Als Steuerung wurden eine SPS von Siemens ausgewählt, da das Basic Know-How fü
 \subsubsection{Schaltschrank 1/4}
 Der Umbau vom Serverschrank war die beste Option. Es wird Altbestand verwertet, es ist eine kosteneffiziente Lösung die viel Freiheit zur Anpassung an spezielle Komponenten erlaubt. Zudem gibt es viel Platz für Erweiterungen und Räder an den Schrank zu montieren wäre kein großer Zusatzaufwand. 
 Eine gute Lösung für die Ansprüche.
+
+\textbf{bitte noch irgend so was unterbringenen: Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank Platz, Weiterhin sind alle Anschlüsse darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen.}
 
 \subsection{Methodik 5}
 
@@ -119,7 +117,7 @@ An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter
 
 
 \paragraph{Fräsen}\mbox{}\\
-Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchnesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
+Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchmesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
 Als Aluminiumlegierung wird hier die Legierung EN-AW 5754 (AlMg3) verwendet. Diese Legierung aus Aluminium und Magnesium eignet sich sehr gut zum Fräßen und ist in der Lage, die mechanischen Beanspruchungen auszuhalten.
 
 \paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
