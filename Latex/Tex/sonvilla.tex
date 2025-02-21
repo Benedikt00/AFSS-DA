@@ -23,25 +23,28 @@ wieso wirds verwendet oder warum --> vllt weil mix anderes verfügbar ist
     \subsubsection{Zur Auswahl stehende Kommunikationsprotokolle} 
     \label{Kommunikationsprotokolle}
 
-    Kommunikationsprotokolle ermöglichen den Datenaustausch zwischen unterschiedlichen Systemen, indem sie Standards und Regeln für die Kommunikation definieren. Diese Protokolle werden üblicherweise der 7. Schicht (Anwendungsschicht) des OSI-Modells zugeordnet. In diesem Projekt wurden zwei Protokolle getestet und miteinander verglichen: OPC-UA und das HTTP-Protokoll.
+    Kommunikationsprotokolle ermöglichen den Datenaustausch zwischen unterschiedlichen Systemen, indem sie Standards und Regeln für die Kommunikation definieren. In diesem Projekt wurden zwei Protokolle getestet und miteinander verglichen: OPC-UA sowie das HTTP-Protokoll.
 
 
          \paragraph{Allgemeines}
 
-        
-           \paragraph{HTTP (Hypertext Transfer Protocol):}  \mbox{} \\
-           HTTP ist eines der bekanntesten Protokolle, welches für die Datenübertragung zwischen Clients und Servern verwendet wird. Es basiert auf einem Anforderungs-Antwort-Prinzip, bei dem ein Client (Bsp.: Webbrowser) Anfragen an einen Server sendet, welcher anschließend die entsprechenden Daten zurückschickt. Die Anfrage wird als HTTP Request und die Antwort als HTTP Response bezeichnet.
-    
-           
-
-            \paragraph{OPC-UA (Open Platform Communications - Unified Architecture):} \mbox{}  \\
-            OPC-UA (Open Platform Communications Unified Architecture) ist ein plattformunabhängiges Kommunikationsprotokoll, das speziell für industrielle Anwendungen entwickelt wurde. Es ermöglicht eine herstellerunabhängige Kommunikation zwischen verschiedenen Geräten bzw. Systemen.
-
-        
+        \begin{itemize}
+            \item \textbf{HTTP (Hypertext Transfer Protocol):}  \mbox{} \\
+            HTTP ist eines der bekanntesten Protokolle, welches für die Datenübertragung zwischen Clients und Servern verwendet wird. Es basiert auf einem Anforderungs-Antwort-Prinzip, bei dem ein Client (Bsp.: Webbrowser) Anfragen an einen Server sendet, welcher anschließend die entsprechenden Daten zurückschickt. Die Anfrage wird als HTTP Request und die Antwort als HTTP Response bezeichnet.\cite{HTTP-Allgemein}
+            
+            \item \textbf{OPC-UA (Open Platform Communications - Unified Architecture):} \mbox{} \\
+            OPC-UA (Open Platform Communications Unified Architecture) ist ein plattformunabhängiges Kommunikationsprotokoll, das speziell für industrielle Anwendungen entwickelt wurde. Es ermöglicht eine herstellerunabhängige Kommunikation zwischen verschiedenen Geräten bzw. Systemen. \cite{OPC-UA}
+        \end{itemize}
 
         \paragraph{Funktionsweise}
 
-            \paragraph{HTTP (Hypertext Transfer Protocol):}
+            \begin{itemize}
+                \item \textbf{{HTTP (Hypertext Transfer Protocol):}} \mbox{} \\
+                
+            
+                \item \textbf{{OPC-UA (Open Platform Communications - Unified Architecture):}} \mbox{} \\
+                
+            \end{itemize}
         
             
 
@@ -76,12 +79,15 @@ wieso wirds verwendet oder warum --> vllt weil mix anderes verfügbar ist
                 \subitem 11: Lager 1 (Querförderer)
             \item 2.Teil: \\
             Der zweite Teil steht in Abhängigkeit zu ersten. Je nachdem welche Zahl nach A steht,also der Code welche Area angesprochen wird, ist der zweite Teil anders aufgebaut.
-                \subitem 00: 
-                \subitem 01:
-                \subitem 10: X-Position, Y-Position, Z-Position,Ein/-Auslagerung \\
-                Wobei nach jedem Symbol eine 4 stellige Zahl steht.Also X0000Y0000Z0000R0000 bedeutet, dass die 
-                X-Position 0, Y-Position 0, Z-Position 0 und es sich um eine Einlagerung handelt. 
-                \subitem 11:
+                \begin{itemize}
+                \item 00: 
+                \item 01:
+                \item{10: X-Position, Y-Position, Z-Position,Ein/-Auslagerung \\
+                Wobei nach jedem Symbol eine 4 stellige Zahl steht.Also X0000Y0000Z0000R0 bedeutet, dass die 
+                X-Position 0, Y-Position 0, Z-Position 0 und es sich um eine Auslagerung handelt.}
+                \item 11:
+                
+                \end{itemize}
             
         \end{itemize}
 
