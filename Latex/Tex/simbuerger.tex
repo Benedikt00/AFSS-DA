@@ -427,7 +427,7 @@ Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON 
 
 \subsubsection{Backend}
 Das Backend des Servers ist für die Datenverarbeitung verantwortlich. Es ist wie bereits erwähnt in Python geschrieben und stellt mit dem Flask-Framework die Benutzeroberfläche zur Verfügung. \\
-Aufgebaut ist es in mehrere Bereiche. Einerseits die Webanwendung, sowie API (Application-Prgramming-Interface, Schnittstelle zwischen Anwendungen) als auch die Anbindung an die Datenbank sowie Verarbeitung der SPS-Befehle und API zugriff auf dies.
+Aufgebaut ist es in mehrere Bereiche. Einerseits die Webanwendung, sowie API (Application-Prgramming-Interface, Schnittstelle zwischen Anwendungen) als auch die Anbindung an die Datenbank sowie Verarbeitung der SPS-Befehle und auch Zugriff auf die SPS.
 
 \paragraph{Serverseite der Benutzeroberfläche}\mbox{}\\
 In Flask könne 'bleuprints' definiert werden. Dies sind Webseitelemente die einen Bestimmten URL-Vorsatz haben. So werden anfanges 'blueprints' für Hauptfunktionen ('/', also ohne Vorsatz), Datenbankinteraktionen ('/db\_interactions') usw. definiert. Die Funktionen dafür werden dann in jeweils eigenen Dateien geschrieben. Dies ermöglicht eine weit aus bessere Übersicht bei großen Projekten. \\
