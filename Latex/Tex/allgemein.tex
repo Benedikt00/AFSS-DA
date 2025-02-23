@@ -33,11 +33,11 @@ Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über de
 
 
 
-\subsubsection{Steuerung 4/9}
+\subsubsection{Steuerung (bitte keine vergangenheitsformen)4/9}
 Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS verwendet. Diese bieten den Vorteil komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen, realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
-Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand,sowie die Komplexität des Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
-Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen, welche aber mit einem beträchlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden sind. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
-\subsubsection{Schaltschrank 4/9}
+Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand, sowie die Komplexität des \textbf{des is schon a bissi hoch gestochen} Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
+Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen \textbf{bitte näher erklären was des ist}, welche aber mit einem beträchlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden sind. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
+\subsubsection{Schaltschrank}
 Für die Elektronik gibt es mehrere Möglichkeiten der Umsetzung. Beleuchtet wurden im Entwicklungsprozess integrierte Bauweisen in das AFSS, neuwertige Schaltschränke sowie Umbaumöglichkeiten.\\
 Die erste Idee, die verfolgt wurde, war ein integrierter Schaltschrank im AFSS. Dieser hätte einen Rahmen aus Aluminiumprofilen, Plexiglasscheiben hätten die Komponenten vom Rest getrennt und die einzelnen Elemente wären auf eine gefrästen Aluminiumplatte montiert worden. Vorteil dieser Option ist eine kompakte Bauweise, man hätte keinen zusätzlichen Schrank. Nachteile sind Zusatzkosten, Lagerplatzverluste da das Lager nicht breiter gemacht werden kann und kein Platz für Erweiterungen.\\
 Ein neuer Schaltschrank wäre grundsätzlich die naheliegendste  Lösung. Für das AFSS hätte der Schaltschrank groß sein müssen, um alle Komponenten unterzubringen und um die Erweiterbarkeit zu gewährleisten. Vorteilhaft wäre, verminderter Bauaufwand und eine gute el. Sicherheit. Allerdings ist ein herkömmlicher Schaltschrank nicht mobil und ist somit für eine mobile Anlage ungeeignet, zudem kommen Zusatzkosten.\\	
@@ -50,12 +50,8 @@ Die letzte Option war ein alter Serverschrank, dieser kommt mit vier Profilschie
 
 \subsubsection{Lagermethoden }
 Nach Abwägung der Alternativen wurde bei der Auswahl der Lagermethode ein klassisches Palettenlager als Inspiration gewählt. Der Grundgedanke basiert auf einem Portalsystem, das mit einer Gabel Boxen in einem Regal ein- und aushebt. Diese Lagervariante vereint die Balance aus technischer Komplexität und dem Umsetzungsvermögen an der HTL. Zudem gibt es bei dieser Variante ebenfalls Potenzial zur Effizienzsteigerung, da die Möglichkeit besteht, links und rechts des Roboters Bestand zu lagern. Allerdings wird diese Variante nicht forciert, da die Komplexität eines solchen Mechanismus im kleinen Maßstab und mit eingeschränkter Fertigungstechnik recht schwierig umzusetzen ist.
-
+\\
 Es wurde also ein Lagersystem gewählt, bei dem zwei Achsen hin- und herfahren und eine Art Gabel die Boxen ein- und aushebt. Um die Boxen zur Kommissionierstation zu bringen, wird ein Förderband verwendet, das längs zum Lager verläuft. Der Lagerroboter kann die Boxen jedoch nicht selbstständig auf das Förderband laden. Zu diesem Zweck wird ein sogenannter Querförderer eingesetzt, der die Box von einem temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An dieses Förderband können außerdem weitere solcher Lagerschränke angeschlossen werden, um mehr Lagerplatz zu schaffen und auch andere Systeme anzubinden. Darüber hinaus wird ein Lagerschrank als Komplettsystem konzipiert. Durch die Unterbringung aller Systeme in einem einzigen Objekt kann die Transportfähigkeit durch die Montage von Rollen einfach sichergestellt werden.
-
-Zur Steuerung dieser Anlage wird eine SPS-Steuerung verwendet. Dies ist der Industriestandard und stellt eine möglichst nahe Abbildung einer großen Logistikanlage dar.
-
-Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank Platz, der ebenfalls fahrbar ist. Weiterhin sind alle Anschlüsse darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen.
 
 \subsubsection{Steuerung 1/4}
 Als Steuerung wurden eine SPS von Siemens ausgewählt, da das Basic Know-How für die Programmierung solcher, bereits in der Schule gelehrt wird. Zudem sind speicherprogrammierbare Steuerungen ideal für komplexere Anlagen und ermöglichen die Ansteuerung der Motoren sowie die Kommunikation mit dem Server realtiv simpel und bleiben dabei auch innerhalb der geforderten Zykluszeit. 
@@ -63,6 +59,8 @@ Als Steuerung wurden eine SPS von Siemens ausgewählt, da das Basic Know-How fü
 \subsubsection{Schaltschrank 1/4}
 Der Umbau vom Serverschrank war die beste Option. Es wird Altbestand verwertet, es ist eine kosteneffiziente Lösung die viel Freiheit zur Anpassung an spezielle Komponenten erlaubt. Zudem gibt es viel Platz für Erweiterungen und Räder an den Schrank zu montieren wäre kein großer Zusatzaufwand. 
 Eine gute Lösung für die Ansprüche.
+
+\textbf{bitte noch irgend so was unterbringenen: Die Steuerung sowie die Versorgung der Anlage finden in einem Schaltschrank Platz, Weiterhin sind alle Anschlüsse darauf ausgelegt, den Schaltschrank vom Lagerschrank zu trennen.}
 
 \subsection{Methodik 5}
 
@@ -75,7 +73,7 @@ Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein
 
 Die volle Integration von Eagle in Fusion360 im Jahr 2020 macht es möglich, auch in Fusion360 Leiterplatten zu entwerfen und die dazugehörigen Schaltungen zu zeichnen. Der Verkauf des Programms Autodesk Eagle wird mit Juni 2026 eingestellt und ist somit nicht mehr Stand der Technik.\cite{Eagle_in_Fusion} Das Entwerfen von PCBs (Printed Circuit Boards) ist durch die Integration in Fusion360 nicht nur einfacher, sondern auch einheitlicher geworden. Außerdem kann durch die Zusammenführung der beiden Programme beim Kauf von Lizenzen gespart werden, und es wird ermöglicht, Projekte auf einer zentralen Entwurfsplattform umzusetzen.
 
-\paragraph{AutoCAD - bin ioch nicht mit einverstanden BS}\mbox{}\\
+\paragraph{AutoCAD}\mbox{}\\
 Zur mechanischen Planung des AFSS wird weiteführend auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
 
 
@@ -85,7 +83,7 @@ Eine Möglichkeit dies zu Erreichen, wäre eine Reine Softwarelösung nur auf SP
 Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung eines eigenen Servers in einer Programmierhochsprache. Die SPS soll mit diesem Kommunizieren können. Ausserdem kann dieser Server eine Benutzeroberfläche für die Bedienung zur verfügung stellen, sowie die Steuerungslogik übernehmen. Dieser soll überdies auf eine Datenbank zugreifen, welche den Lagerbestand abbildet.
 
 
-\paragraph{Tia Portal}\mbox{}\\
+\paragraph{TIA Portal}\mbox{}\\
 Ist die Software welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens, anzusteuern. Tia-Portal bietet die Möglichkeit in verschiedensten Programmiersprachen zu arbeiten. Nämlich mit einem Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph. Da Tia Portal speichertechnisch zu groß werden würde, wenn man jedwede Funktion die möglich ist einbindet, werden spezielle Funktionen die benötigt werdem, über Libraries eingebunden.
 \cite{TIA_Portal_Programmiersprachen}
 
@@ -98,12 +96,12 @@ Industrieservomotoren, die typischerweise mit 400 V, Frequenzumrichtern und Gebe
 \\
 Für alle Anwendungen mit hohen Drehmomenten (X- und Y-Achse) sollen Closed-Loop-Schrittmotoren im Formfaktor Nema23 verwendet werden. Diese können im Falle unerwarteter Laständerungen ohne Schrittverlust weiterbetrieben werden und sind zudem in den benötigten Drehmomentbereichen preiswert verfügbar. Weiters müssen Treiber für diese Motoren eingesetzt werden. Diese verarbeiten die Signale der SPS und steuern den Motor an. Zudem verarbeiten sie auch die Gebersignale. Falls eine Diskrepanz zwischen Gebersignal und Steuersignal erkannt wird, wird dies automatisch ausgeglichen.
 \\
-Für die Z-Achse (Gabel) sowie für den Querförderer ist lediglich ein Open-Loop (geberloser) Antrieb nötig. Auf der Z-Achse kommen zwei Nema17-Schrittmotoren zum Einsatz, und beim Querförderer wird ein Nema23-Motor verwendet. Bei diesen Achsen ist es relativ einfach, bei jedem Verfahren die tatsächliche aktuelle Position mit der vermuteten Position zu vergleichen, da jedes Mal über den Referenzierpunkt gefahren wird.
+Für die Z-Achse (Gabel) sowie für den Querförderer ist lediglich ein Open-Loop (geberloser) Antrieb nötig. Auf der Z-Achse kommen zwei Nema17-Schrittmotoren zum Einsatz, und beim Querförderer wird ebenfalls ein Nema17-Motor verwendet. Bei diesen Achsen ist es relativ einfach, bei jedem Verfahren die tatsächliche aktuelle Position mit der vermuteten Position zu vergleichen, da jedes Mal über den Referenzierpunkt gefahren wird.
 
 \paragraph{Sensoren}\mbox{}\\
-Die Sensoren sind wesentlich für eine sichere und korrekte Funktion des AFSS. Sie werden zur Übermittlung der genauen Position der Gabel eingesetzt, aber auch zum Überprüfen, ob die jeweiligen Boxen an den Zielpositionen angekommen sind.\\
+Die Sensoren sind wesentlich für eine sichere und korrekte Funktion des AFSS. Sie werden zur Übermittlung der genauen Positionierung der Achsen eingesetzt, aber auch zum Überprüfen, ob die jeweiligen Boxen an den Zielpositionen angekommen sind.\\
 Zur Übertragung des Sensorsignals wird ein AS-i-Bus verwendet. Dieser bietet eine einfache Kommunikation zwischen den Sensoren und der SPS. Die Sensoren werden über den AS-i-Slave mit 24V versorgt, jedoch ist zu beachten, dass vereinzelte Sensoren mit einer niedrigeren Spannung betrieben werden müssen, um eine lange Lebensdauer und korrekte Funktion garantieren zu können.\\
-Aus Kostengründen werden an den verschiedenen Achsen unterschiedliche Arten von Sensoren als mechanische Endschalter eingesetzt. Ohne mechanische Endschalter würde die Gefahr bestehen, dass die Motoren nicht gestoppt werden und der Rahmen angefahren wird, was zu erheblichen Schäden am System führen kann. Die Achsen werden mittels eines Photo-Interrupters, der auf einer eigens entworfenen Platine untergebracht ist, referenziert. Zum Überprüfen, ob die jeweilige Box ihre Zielposition erreicht hat, werden Lichttaster eingebaut. Zur Zuordnung der Boxen und den sich darin befindenden Bauteile werden auf den Boxen Barcodes angebracht. Um diese einlesen zu können befindet sich auf der Kommissionierstation ein Barcodescanner, der die jeweilige EAN-Nummer an die SPS weitergibt, die diese wiederum an den Server weiterleitet.\\
+Aus Kostengründen werden an den verschiedenen Achsen unterschiedliche Arten von Sensoren als mechanische Endschalter eingesetzt. \textbf{macht irgendwie keinen sinn zuerst ned nur mech. es und dann gehts doch ned ohne, kannst eventuell auch aus ferfügbarkeitsgründen sagen, } Ohne mechanische Endschalter würde die Gefahr bestehen, dass die Motoren nicht gestoppt werden und der Rahmen angefahren wird, was zu erheblichen Schäden am System führen kann. Die Achsen werden mittels eines Photo-Interrupters, der auf einer eigens entworfenen Platine untergebracht ist, referenziert. Zum Überprüfen, ob die jeweilige Box ihre Zielposition erreicht hat, werden Lichttaster eingebaut. Zur Zuordnung der Boxen und den sich darin befindenden Bauteile werden auf den Boxen Barcodes angebracht. Um diese einlesen zu können befindet sich auf der Kommissionierstation ein Barcodescanner, der die jeweilige EAN-Nummer an die SPS weitergibt, die diese wiederum an den Server weiterleitet.\\
 
 
 \paragraph{Elektrik}\mbox{}\\
@@ -119,11 +117,11 @@ An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter
 
 
 \paragraph{Fräsen}\mbox{}\\
-Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchnesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
+Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchmesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
 Als Aluminiumlegierung wird hier die Legierung EN-AW 5754 (AlMg3) verwendet. Diese Legierung aus Aluminium und Magnesium eignet sich sehr gut zum Fräßen und ist in der Lage, die mechanischen Beanspruchungen auszuhalten.
 
 \paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
-Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene längen zuzuschneiden. 
+Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene Längen zuzuschneiden. 
 
 
 \subsection{Sicherheitstechnik 1}
