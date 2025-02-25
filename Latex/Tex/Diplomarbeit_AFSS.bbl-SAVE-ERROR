@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{pickengine}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4997c4e370012cb0cdfbf15bf2389b44}{%
+           family={Pickengine},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{4997c4e370012cb0cdfbf15bf2389b44}
+      \strng{fullhash}{4997c4e370012cb0cdfbf15bf2389b44}
+      \strng{fullhashraw}{4997c4e370012cb0cdfbf15bf2389b44}
+      \strng{bibnamehash}{4997c4e370012cb0cdfbf15bf2389b44}
+      \strng{authorbibnamehash}{4997c4e370012cb0cdfbf15bf2389b44}
+      \strng{authornamehash}{4997c4e370012cb0cdfbf15bf2389b44}
+      \strng{authorfullhash}{4997c4e370012cb0cdfbf15bf2389b44}
+      \strng{authorfullhashraw}{4997c4e370012cb0cdfbf15bf2389b44}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Pickengine}
+      \verb{urlraw}
+      \verb https://www.pickengine.com/
+      \endverb
+      \verb{url}
+      \verb https://www.pickengine.com/
+      \endverb
+    \endentry
     \entry{Item_svs}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=06fac78b304046dda09b903f7f5159ff}{%
@@ -33,8 +60,8 @@
       \strng{authornamehash}{06fac78b304046dda09b903f7f5159ff}
       \strng{authorfullhash}{06fac78b304046dda09b903f7f5159ff}
       \strng{authorfullhashraw}{06fac78b304046dda09b903f7f5159ff}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{urlday}{19}
       \field{urlmonth}{11}
@@ -61,8 +88,8 @@
       \strng{authornamehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \strng{authorfullhash}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \strng{authorfullhashraw}{5e2fda1798ce953a9d4e9ae67f592ccc}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{urlday}{19}
       \field{urlmonth}{11}
@@ -90,8 +117,8 @@
       \strng{authorfullhash}{275bc2840466945fc42987336265a331}
       \strng{authorfullhashraw}{275bc2840466945fc42987336265a331}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -123,8 +150,8 @@
       \strng{authorfullhash}{275bc2840466945fc42987336265a331}
       \strng{authorfullhashraw}{275bc2840466945fc42987336265a331}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -155,8 +182,8 @@
       \strng{authornamehash}{0523b13262b12c215d8009938f5c14f1}
       \strng{authorfullhash}{0523b13262b12c215d8009938f5c14f1}
       \strng{authorfullhashraw}{0523b13262b12c215d8009938f5c14f1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://openai.com/chatgpt}}
@@ -229,6 +256,97 @@
       \verb https://www.cloudflight.io/de/blog/docker-container-die-zukunft-moderner-applikationen-und-multi-cloud-deployments/
       \endverb
     \endentry
+    \entry{Dibond-Platte}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b4a3a9cc7199be59083b9d95e4cb0a3e}{%
+           family={copyservice-shop},
+           familyi={c\bibinithyphendelim s\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \strng{fullhash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \strng{fullhashraw}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \strng{bibnamehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \strng{authorbibnamehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \strng{authornamehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \strng{authorfullhash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \strng{authorfullhashraw}{b4a3a9cc7199be59083b9d95e4cb0a3e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.copyservice-shop.de/Alu-Verbundplatte-Dibond-A4-A3-etc
+      \endverb
+      \verb{url}
+      \verb https://www.copyservice-shop.de/Alu-Verbundplatte-Dibond-A4-A3-etc
+      \endverb
+    \endentry
+    \entry{digitaler_zwilling_bild}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=86889c1d215eb9acb1eee1e4ec60fa3a}{%
+           family={Komaxgroup},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \strng{fullhash}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \strng{fullhashraw}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \strng{bibnamehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \strng{authorbibnamehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \strng{authornamehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \strng{authorfullhash}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \strng{authorfullhashraw}{86889c1d215eb9acb1eee1e4ec60fa3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.komaxgroup.com/en/stories/experience-the-smart-cabinet-building-initiative-up-close-and-personal
+      \endverb
+      \verb{url}
+      \verb https://www.komaxgroup.com/en/stories/experience-the-smart-cabinet-building-initiative-up-close-and-personal
+      \endverb
+    \endentry
+    \entry{smart_cabinet_building}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=fcb0946e958e4bd808fd1839e070cae4}{%
+           family={building},
+           familyi={b\bibinitperiod},
+           given={Smart},
+           giveni={S\bibinitperiod},
+           prefix={cabinet},
+           prefixi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{fcb0946e958e4bd808fd1839e070cae4}
+      \strng{fullhash}{fcb0946e958e4bd808fd1839e070cae4}
+      \strng{fullhashraw}{fcb0946e958e4bd808fd1839e070cae4}
+      \strng{bibnamehash}{fcb0946e958e4bd808fd1839e070cae4}
+      \strng{authorbibnamehash}{fcb0946e958e4bd808fd1839e070cae4}
+      \strng{authornamehash}{fcb0946e958e4bd808fd1839e070cae4}
+      \strng{authorfullhash}{fcb0946e958e4bd808fd1839e070cae4}
+      \strng{authorfullhashraw}{fcb0946e958e4bd808fd1839e070cae4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.smart-cabinet-building.com/de/loesungsangebot/digitales_engineering/loesungsangebot_zukene3/index.jsp
+      \endverb
+      \verb{url}
+      \verb https://www.smart-cabinet-building.com/de/loesungsangebot/digitales_engineering/loesungsangebot_zukene3/index.jsp
+      \endverb
+    \endentry
     \entry{axis_manual}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
@@ -244,8 +362,8 @@
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -266,8 +384,8 @@
       \strng{authorfullhash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorfullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -294,8 +412,8 @@
       \strng{authorfullhash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorfullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -321,8 +439,8 @@
       \strng{authornamehash}{9d188b3c46c566e646eb30679bdfc626}
       \strng{authorfullhash}{9d188b3c46c566e646eb30679bdfc626}
       \strng{authorfullhashraw}{9d188b3c46c566e646eb30679bdfc626}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
