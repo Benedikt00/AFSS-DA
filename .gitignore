@@ -19,7 +19,7 @@
 *.synctex
 *.synctex(busy)
 *.pdf
-# PDF files (optional)
+
 
 # Build directories
 _build/

@@ -279,16 +279,6 @@ Zu diesem Zweck wir eine weitere, der Gabel ähnlichen Konstruktion montiert, we
 
 \subsubsection{Fertigung der Einzelteile}
 
-\paragraph{Lasern}\mbox{}\\
-An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter zur Kunstoffverarbeitung zu verwenden. Um ein gewünstes Teil Ferigen zu können, muss die Kontour dieses als .dwg zur verfügung stehen. Dieses kann dann unter berücksichtigung der Materialstärke aus verschiedenen Farben geschnitten werden.
-
-
-\paragraph{Fräsen}\mbox{}\\
-Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchnesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
-Als Aluminiumlegierung wird hier die Legierung EN-AW 5754 (AlMg3) verwendet. Diese Legierung aus Aluminium und Magnesium eignet sich sehr gut zum Fräßen und ist in der Lage, die mechanischen Beanspruchungen auszuhalten.
-
-\paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
-Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene längen zuzuschneiden. 
 
 \paragraph{Umlenkrollen}\mbox{}\\
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Dadurch dass diese der gesamten Spannkraft ausgesetzt. Dies erfordert spezielle Anforderungen an die Aufhängen als auch an die Umlenkrolle selbst. Diese soll primär eine 180° Wende des Zahnriemens ermöglichen, sowie sekundär eine Führung für den Riemen bieten. 
@@ -437,7 +427,7 @@ Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen, in JSON 
 
 \subsubsection{Backend}
 Das Backend des Servers ist für die Datenverarbeitung verantwortlich. Es ist wie bereits erwähnt in Python geschrieben und stellt mit dem Flask-Framework die Benutzeroberfläche zur Verfügung. \\
-Aufgebaut ist es in mehrere Bereiche. Einerseits die Webanwendung, sowie API (Application-Prgramming-Interface, Schnittstelle zwischen Anwendungen) als auch die Anbindung an die Datenbank sowie Verarbeitung der SPS-Befehle und API zugriff auf dies.
+Aufgebaut ist es in mehrere Bereiche. Einerseits die Webanwendung, sowie API (Application-Prgramming-Interface, Schnittstelle zwischen Anwendungen) als auch die Anbindung an die Datenbank sowie Verarbeitung der SPS-Befehle und auch Zugriff auf die SPS.
 
 \paragraph{Serverseite der Benutzeroberfläche}\mbox{}\\
 In Flask könne 'bleuprints' definiert werden. Dies sind Webseitelemente die einen Bestimmten URL-Vorsatz haben. So werden anfanges 'blueprints' für Hauptfunktionen ('/', also ohne Vorsatz), Datenbankinteraktionen ('/db\_interactions') usw. definiert. Die Funktionen dafür werden dann in jeweils eigenen Dateien geschrieben. Dies ermöglicht eine weit aus bessere Übersicht bei großen Projekten. \\
