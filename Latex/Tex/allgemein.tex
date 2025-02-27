@@ -1,8 +1,8 @@
 \section{Allgemeiner Teil}
 
-\subsection{Ausgangssituation 1-2}
+\subsection{Ausgangssituation}
 Die HTL-Mössingerstraße arbeitet im Zuge der Werkstätte mit einer Factory, diese ist eine Miniatur-Firma bei der Lehrpersonal sowie SchülerInnen Bestellungen abgeben können. Diese Bestellungen werden dann von zugeteilten SchülerInnen abgearbeitet.\\
-In dieser Factory laufen die Bestellprozesse digital über eine schulinterne Website. Verwendet werden von der Factory 3D-Drucker, CNC-Fräsen, Lasercutter und diverse weitere Maschinen, um Angefordertes zu produzieren. Die Factory produziert primär Einzelteile und dazu gehört auch ein großes Repertoire an Bauteilen, die im Lager der Factory gelagert werden.\\ 
+In dieser Factory laufen die Bestellprozesse digital über eine schulinterne Website. Verwendet werden von der Factory 3D-Drucker, CNC-Fräsen, Lasercutter und diverse weitere Maschinen, um Angefordertes zu produzieren. Die Factory stellt primär Einzelteile zur Verfügung, dazu gehört auch ein großes Repertoire an Bauteilen, die im Lager der Factory gelagert werden.\\ 
 Die Handhabung dieses Lagers erfolgt bisher manuell. SchülerInnen schreiben in einer digitalen Applikation mit, welche Teile ein- bzw. ausgelagert werden. SchülerInnen sind im Schnitt nur ein Schuljahr in der Factory. In dieser Zeitspanne ist es kaum möglich eine Routine einzuarbeiten und die Fehlerquote bei der Arbeit im Lager ist relativ hoch. Das führt zu fehlerhaften Lieferungen oder verzögerten Produktionsketten.\\
 Ein weiterer Nachteil des derzeitigen Lagers ist, die Örtlichkeit. Das Lager befindet sich zurzeit im Keller und ist dort fest verbaut. Die schweren Schränke und Regale können im Falle von Hochwasser, wie im Sommer 2023, weder schnell ausgelagert oder verschoben werden.\\ 
 Im Allgemeinen Schulgeschehen ergeben sich zudem Möglichkeiten der Migration fürs Lager, um Prozesswege der Factory effizienter zu gestalten. Mit dem derzeitigen Lager können keine potenziellen Optionen wahrgenommen werden. 
@@ -21,11 +21,11 @@ Das System soll nicht nur produzierbar, sondern auch reproduzierbar sein. Daher 
 
 
 
-\subsection{Potentielle Lösungen 2}
+\subsection{Potentielle Lösungen}
 \subsubsection{Lagermethoden}
 Die Industrie bietet viele Vorbilder dafür, wie ein boxenbasiertes Lagersystem aufgebaut sein kann.
 \\
-Eine besonders platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. Bei dieser Lösung werden Boxen in mehreren Ebenen übereinander gelagert. Auf jeder Ebene gibt es bewegliche Roboter, die die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommissionierstation transportiert wird. Dieses System ist sowohl platzsparend als auch ausfallsicher. Allerdings ist es schwierig, ein solches System in Miniatur nachzubauen, da die Hardwarefertigung sehr komplex ist.
+Eine besonders platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. Bei dieser Lösung werden Boxen in mehreren Ebenen übereinander gelagert. Auf jeder Ebene gibt es bewegliche Roboter, die die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommissionierstation transportiert wird. Dieses System ist sowohl platzsparend als auch sehr ausfallsicher. Allerdings ist es schwierig, ein solches System in Miniatur nachzubauen, da die Hardwarefertigung sehr komplex ist.
 \\
 Eine weitere Möglichkeit wäre ein rotierendes Magazin, in dem die Boxen auf einem horizontalen Karussell gelagert sind. Wenn ein bestimmtes Produkt benötigt wird, rotiert das Karussell so lange weiter, bis die gewünschte Box zugänglich ist. Das Prinzip dieses Systems ist zwar recht simpel, jedoch stellt die mechanische Umsetzung der Rotation mit den Mitteln der HTL eine Herausforderung dar, insbesondere im Hinblick auf einen zuverlässigen Dauerbetrieb.
 \\
@@ -37,10 +37,10 @@ Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über de
 Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS verwendet. Diese bieten den Vorteil komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen, realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
 Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand, sowie die Komplexität des \textbf{des is schon a bissi hoch gestochen} Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
 Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen \textbf{bitte näher erklären was des ist}, welche aber mit einem beträchlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden sind. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
-\subsubsection{Schaltschrank}
+\subsubsection{Schaltschrank (bitte keine vergangenheitsformen, weniger hätteund wäre)}
 Für die Elektronik gibt es mehrere Möglichkeiten der Umsetzung. Beleuchtet wurden im Entwicklungsprozess integrierte Bauweisen in das AFSS, neuwertige Schaltschränke sowie Umbaumöglichkeiten.\\
 Die erste Idee, die verfolgt wurde, war ein integrierter Schaltschrank im AFSS. Dieser hätte einen Rahmen aus Aluminiumprofilen, Plexiglasscheiben hätten die Komponenten vom Rest getrennt und die einzelnen Elemente wären auf eine gefrästen Aluminiumplatte montiert worden. Vorteil dieser Option ist eine kompakte Bauweise, man hätte keinen zusätzlichen Schrank. Nachteile sind Zusatzkosten, Lagerplatzverluste da das Lager nicht breiter gemacht werden kann und kein Platz für Erweiterungen.\\
-Ein neuer Schaltschrank wäre grundsätzlich die naheliegendste  Lösung. Für das AFSS hätte der Schaltschrank groß sein müssen, um alle Komponenten unterzubringen und um die Erweiterbarkeit zu gewährleisten. Vorteilhaft wäre, verminderter Bauaufwand und eine gute el. Sicherheit. Allerdings ist ein herkömmlicher Schaltschrank nicht mobil und ist somit für eine mobile Anlage ungeeignet, zudem kommen Zusatzkosten.\\	
+Ein neuer Schaltschrank wäre grundsätzlich die naheliegendste  Lösung. Für das AFSS hätte der Schaltschrank groß sein müssen, um alle Komponenten unterzubringen und um die Erweiterbarkeit zu gewährleisten. Vorteilhaft wäre, verminderter Bauaufwand und eine gute el. Sicherheit. Allerdings ist ein herkömmlicher Schaltschrank nicht mobil und ist somit für eine mobile Anlage ungeeignet, zudem entstehen Zusatzkosten.\\	
 Die letzte Option war ein alter Serverschrank, dieser kommt mit vier Profilschienen, einer Lüftungsanlage und war groß genug, um die Anforderung der Erweiterbarkeit auch zu erfüllen. Zusätzlich gemacht gehört sind Module, die auf die Schienen montiert werden, auf diesen wären die el. Komponenten montiert. Die Module können aus kosteneffizienten Platten hergestellt werden. Um den Serverschrank mobil zu machen, müssten kleinere Umbauten durchgeführt werden.
 
 
@@ -68,20 +68,20 @@ Zur Dokumentation der elektrischen Komponenten und deren Verbindungen wird E-Pla
 \paragraph{Fusion360/PCB}\mbox{}\\
 Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden.\\
 
-Die volle Integration von Eagle in Fusion360 im Jahr 2020 macht es möglich, auch in Fusion360 Leiterplatten zu entwerfen und die dazugehörigen Schaltungen zu zeichnen. Der Verkauf des Programms Autodesk Eagle wird mit Juni 2026 eingestellt und ist somit nicht mehr Stand der Technik.\cite{Eagle_in_Fusion} Das Entwerfen von PCBs (Printed Circuit Boards) ist durch die Integration in Fusion360 nicht nur einfacher, sondern auch einheitlicher geworden. Außerdem kann durch die Zusammenführung der beiden Programme beim Kauf von Lizenzen gespart werden, und es wird ermöglicht, Projekte auf einer zentralen Entwurfsplattform umzusetzen.
+Die volle Integration von Eagle in Fusion360 im Jahr 2020 macht es möglich, auch in Fusion360 Leiterplatten zu entwerfen und die dazugehörigen Schaltungen zu zeichnen. Der Verkauf des Programms Autodesk Eagle wird mit Juni 2026 eingestellt und ist somit nicht mehr Stand der Technik.\cite{Eagle_in_Fusion} Das Entwerfen von PCBs (Printed Circuit Boards) ist durch die Integration in Fusion360 nicht nur einfacher, sondern auch einheitlicher geworden. Außerdem kann durch die Zusammenführung der beiden Programme ermöglicht werden, dass Projekte auf einer zentralen Entwurfsplattform umgesetzt werden.
 
 \paragraph{AutoCAD}\mbox{}\\
-Zur mechanischen Planung des AFSS wird weiteführend auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
+Zur mechanischen Planung des AFSS wird auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
 
 
 \paragraph{Lagerverwaltungssoftware}\mbox{}\\
 Um Lagerbestand zu verwalten bedarf es eines ausgeklügelten Systems, welches einerseits eine Benutzerbedinenung zulässt, und andererseits die Logik der Auslagerung übernimmt. \\
-Eine Möglichkeit dies zu Erreichen, wäre eine Reine Softwarelösung nur auf SPS-Basis. Dies ist aber sehr sher umständlich und auch nicht Skalierbar. Auch die verwendung von graphischen Entwicklungswerkzeugen wie Node-Red wäre denkbar, jedoch ist es auch hier schwierig komplexe Operationen durchzuführen, wenngleich die Einbindung zur SPS einfacher ist.\\
+Eine Möglichkeit dies zu Erreichen, wäre eine reine Softwarelösung nur auf SPS-Basis. Dies ist aber sehr sher umständlich und auch nicht skalierbar. Auch die verwendung von graphischen Entwicklungswerkzeugen wie Node-Red wäre denkbar, jedoch ist es auch hier schwierig komplexe Operationen durchzuführen, wenngleich die Einbindung zur SPS einfacher ist.\\
 Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung eines eigenen Servers in einer Programmierhochsprache. Die SPS soll mit diesem Kommunizieren können. Ausserdem kann dieser Server eine Benutzeroberfläche für die Bedienung zur verfügung stellen, sowie die Steuerungslogik übernehmen. Dieser soll überdies auf eine Datenbank zugreifen, welche den Lagerbestand abbildet.
 
 
 \paragraph{TIA Portal}\mbox{}\\
-Ist die Software welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens, anzusteuern. Tia-Portal bietet die Möglichkeit in verschiedensten Programmiersprachen zu arbeiten. Nämlich mit einem Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph. Da Tia Portal speichertechnisch zu groß werden würde, wenn man jedwede Funktion die möglich ist einbindet, werden spezielle Funktionen die benötigt werden, über Libraries eingebunden.
+Ist die Software welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens, anzusteuern. TIA-Portal bietet die Möglichkeit in verschiedensten Programmiersprachen zu arbeiten. (Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph.) Zudem können externe Anwendungsspezifische Funktionsbausteine mit Bibliotheken eingebunden werden.
 \cite{TIA_Portal_Programmiersprachen}
 
 \subsubsection{Hardware 2}
@@ -91,9 +91,9 @@ Das elektrische Antriebssystem ist ein Kernbaustein des AFSS. Mit diesem werden 
 \\
 Industrieservomotoren, die typischerweise mit 400 V, Frequenzumrichtern und Gebern betrieben werden, sind zwar sehr leistungsdicht und gut steuerbar, jedoch auch sehr teuer. Aus diesem Grund wurde schnell ein Antriebssystem aus Closed-Loop- und Open-Loop-Schrittmotoren angestrebt.
 \\
-Für alle Anwendungen mit hohen Drehmomenten (X- und Y-Achse) sollen Closed-Loop-Schrittmotoren im Formfaktor Nema23 verwendet werden. Diese können im Falle unerwarteter Laständerungen ohne Schrittverlust weiterbetrieben werden und sind zudem in den benötigten Drehmomentbereichen preiswert verfügbar. Weiters müssen Treiber für diese Motoren eingesetzt werden. Diese verarbeiten die Signale der SPS und steuern den Motor an. Zudem verarbeiten sie auch die Gebersignale. Falls eine Diskrepanz zwischen Gebersignal und Steuersignal erkannt wird, wird dies automatisch ausgeglichen.
+Für alle Anwendungen mit hohen Drehmomenten (X- und Y-Achse) sollen Closed-Loop-Schrittmotoren im Formfaktor Nema23 verwendet werden. Diese können im Falle unerwarteter Laständerungen ohne Schrittverlust weiterbetrieben werden und sind zudem in den benötigten Drehmomentbereichen preiswert verfügbar. Jedoch müssen für diese Motoren Treiber eingesetzt werden. Diese verarbeiten die Signale der SPS und treiben den Motor an. Zudem verarbeiten sie auch die Gebersignale. Falls eine Diskrepanz zwischen Gebersignal und Steuersignal erkannt wird, wird dies automatisch ausgeglichen.
 \\
-Für die Z-Achse (Gabel) sowie für den Querförderer ist lediglich ein Open-Loop (geberloser) Antrieb nötig. Auf der Z-Achse kommen zwei Nema17-Schrittmotoren zum Einsatz, und beim Querförderer wird ebenfalls ein Nema17-Motor verwendet. Bei diesen Achsen ist es relativ einfach, bei jedem Verfahren die tatsächliche aktuelle Position mit der vermuteten Position zu vergleichen, da jedes Mal über den Referenzierpunkt gefahren wird.
+Für die Z-Achse (Gabel) sowie für den Querförderer ist lediglich ein Open-Loop (geberloser) Antrieb nötig. Hier werden Nema17 Motoren eingesetzt. Bei diesen Achsen ist es relativ einfach, bei jedem Verfahren die tatsächliche aktuelle Position mit der vermuteten Position zu vergleichen, da jedes Mal über den Referenzierpunkt gefahren wird.
 
 \paragraph{Sensoren}\mbox{}\\
 Die Sensoren sind wesentlich für eine sichere und korrekte Funktion des AFSS. Sie werden zur Übermittlung der genauen Positionierung der Achsen eingesetzt, aber auch zum Überprüfen, ob die jeweiligen Boxen an den Zielpositionen angekommen sind.\\
@@ -102,7 +102,7 @@ Ohne mechanische Endschalter würde die Gefahr bestehen, dass die Motoren nicht 
 
 
 \paragraph{Elektrik}\mbox{}\\
-Die elektrische Seite der Anlage besteht unter anderem aus diesen 7 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und über einen Motorschutz wurd der Motor geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
+Die elektrische Seite der Anlage besteht unter anderem aus diesen 7 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und mit einen Motorschutz wird der Motor \textbf{(vor überlast)} geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
 Die Motoren haben jeweils einen Encoder dabei. Somit müssen ein Motorkabel und ein Kabel für den Encoder verlegt werden. Beide Kabel müssen geschrimt sein. 
 
 
@@ -110,28 +110,27 @@ Die Motoren haben jeweils einen Encoder dabei. Somit müssen ein Motorkabel und 
 \subsubsection{Fertigung 1}
 
 \paragraph{Lasern}\mbox{}\\
-An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter zur Kunstoffverarbeitung zu verwenden. Um ein gewünstes Teil ferigen zu können, muss die Kontour dieses als .dwg zur verfügung stehen. Dieses kann dann unter berücksichtigung der Materialstärke aus verschiedenen Farben geschnitten werden.
+An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter zur Kunstoffverarbeitung zu verwenden. Um ein gewünschtes Teil fertigen zu können, muss die Kontour dieses als .dwg zur verfügung stehen. Dieses kann dann unter berücksichtigung der Materialstärke aus verschiedenen Farben geschnitten werden.
 
 
 \paragraph{Fräsen}\mbox{}\\
-Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt weren. Da der Fräser jedoch einen größeren Durchmesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
+Um Aluminiumteile zu fertigen steht eine 3-Achsen CNC-Fräse zur Verfügung. In dieser ist es möglich die Teile zu fräsen, die aufgrund ihrer hohen mechanischen Beanspruchung nicht aus Kunststoff gefertigt werden können, aus anderen Materialien herzustellen. Um dies zu bewerkstelligen, muss zuerst der G-Code in Filou-NC16 programmiert werden und kann dann in NC-Easy auf der CNC-Fräse ausgeführt werden. Da der Fräser jedoch einen größeren Durchmesser als der Laser hat, muss, wenn Ecken benötigt werden, eine Aussparung größer dem Durchmesser des Fräsers, eingeplant werden.\\
 Als Aluminiumlegierung wird hier die Legierung EN-AW 5754 (AlMg3) verwendet. Diese Legierung aus Aluminium und Magnesium eignet sich sehr gut zum Fräßen und ist in der Lage, die mechanischen Beanspruchungen auszuhalten.
 
 \paragraph{Aluminium-Extrusionen schneiden}\mbox{}\\
-Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene Längen zuzuschneiden. 
+Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte Länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene Längen präzise zuzuschneiden. 
 
-<<<<<<< HEAD
-\paragraph{3D-Druck \color{Red}{Vogi}}\mbox{}\\
-Verfahren, Slicer, STL-dateiformat
-=======
 \paragraph{3D-Drucken}\mbox{}\\
 Für die Herstellung von Kunststoffteilen, die im Lasercutter nicht gefertigt werden können, stehen den Schülern mehrere 3D-Drucker zur verfügung. Die Drucker können mit verschiedensten Materialen drucken, beispielsweise PLA oder ABS. Komplexe Bauteile die nicht über die räumlichen Begrenzungen der Drucker hinausgehen, können so gefertigt werden. Dazu wird ein 3D-Modell im stl.-Format benötigt, welches dann in einem Slicerprogramm in G-Code oder Bg-Code umgewandelt werden kann\cite{How_to_PrusaSlicer}. Schulintern wird hierzu primär der PrusaSlicer verwendet.
->>>>>>> a4f51dd5b7dab00f4c9f8e27ceb30dc55e6f0ba8
 
 \subsection{Sicherheitstechnik}
-Um eine langjährige korrekte Funktion des AFSS sicherstellen zu können, müssen diverse Sicherheitsvorkehrungen getroffen werden. Diese lassen sich unterteilen in die Sicherheit der Personen, die das Lagersystem bedienen, und in die Sicherheit des Systems selbst, vor Beschädigung durch Fremdeinwirkungen oder im eigenen Fehlerfall. Um die Sicherheitstechnik richtig umsetzen zu können, muss diese bereits im Vorhinein durchdacht und gut geplant werden.\\
-Um die Benutzerinnen und Benutzer gegen Verletzungen zu schützen muss das AFSS so positioniert werden, dass diese bei ordnungsgemäßen Gebrauch nicht in Gefahr geraten können. Der Schaltschrank sollte so ausgelegt und abgesichert werden, dass Personen nicht bei normaler Benutzung in Stromkreise geraten oder in Berührung mit unter Spannung stehenden Betriebsmitteln kommen können. Die Sicherheit von Personen hat oberste Priorität und wird über die Sicherheit des Systems gestellt. Sollte es dennoch zu einer gefährlichen Situation kommen, werden leicht sicht- und erreichbare Not-Aus-Taster verbaut, um die Person schnellstmöglich aus der Gefahrensituation bringen zu können.\\
+Um eine langjährige korrekte Funktion des AFSS sicherstellen zu können, müssen diverse Sicherheitsvorkehrungen getroffen werden. Diese lassen sich unterteilen in die Sicherheit der Personen, die das Lagersystem bedienen \textbf{oder warten?}, und in die Sicherheit des Systems selbst, vor Beschädigung durch Fremdeinwirkungen oder im eigenen Fehlerfall. Um die Sicherheitstechnik richtig umsetzen zu können, muss diese bereits im Vorhinein durchdacht und gut geplant werden.\\
+Um die Benutzerinnen und Benutzer gegen Verletzungen zu schützen muss das AFSS so positioniert werden, dass diese bei ordnungsgemäßen Gebrauch nicht in Gefahr geraten können. Der Schaltschrank sollte so ausgelegt und abgesichert werden, dass Personen nicht bei normaler Benutzung in Stromkreise geraten oder in Berührung mit unter Spannung stehenden Betriebsmitteln kommen können. Die Sicherheit von Personen hat oberste Priorität und wird über die Sicherheit des Systems gestellt. Sollte es dennoch zu einer gefährlichen Situation kommen, werden leicht sicht- und erreichbare Not-Aus-Taster verbaut, um die Person schnellstmöglich aus der Gefahrensituation bringen zu können. \textbf{nottaster undmenschen aus dem gefahrenbereich hat nix miteinander zu tun}\\
 Ebenfalls müssen die mechanischen sowie elektrischen Elemente so ausgelegt werden, dass Nutzer beim Normalgebrauch des AFSS diesem keine Schäden zufügen können. In den meisten Fällen sorgen die Sicherheitsvorkehrungen, die bereits für die Sicherheit der bedienenden Personen sorgen, auch gleichzeitig für Schutz gegen Fremdeinwirkung. Dazu gehört die Abgrenzung der empfindlichen Mechanik des Lagers durch bewusste Positionierung, sowie eine verschließbare Türe am Schaltschrank, die eine klare Trennung zwischen Elektrik und Nutzer gewährleistet.\\
 Damit die Motoren des Lagersystems nicht nur im Normalbetrieb zum Stoppen gebracht werden, sondern im Fehlerfalle auch die Grenzen der jeweiligen Achsen nicht überschreiten und so keine Schäden an der Mechanik anrichten können, werden neben den Software-Endschaltern zusätzliche Hardware-Endschalter eingebaut. Zur Sicherung der Motoren soll ein Überstromschutz eingebaut werden. Der Schaltschrank und die sich darin befindenden Elemente und deren Verkabelung sollen so geplant und verbaut werden, dass es zu keinen Kurzschlüssen, Bränden oder anderen Schäden kommen kann.
 
-\subsection{Kooperationspartner}
+\subsection{Kooperationspartner 2X weety, 2x vogi, 1x sonne  (fotos hinzufügen mach i sonst(BS) ),first come first serve}
+
+
+
+
