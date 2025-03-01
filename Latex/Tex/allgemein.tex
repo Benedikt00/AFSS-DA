@@ -34,9 +34,11 @@ Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über de
 
 
 \subsubsection{Steuerung (bitte keine vergangenheitsformen)4/9}
-Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS verwendet. Diese bieten den Vorteil komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen, realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
+Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS, verwendet. Diese bieten den Vorteil, komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielsweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
 Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand, sowie die Komplexität des \textbf{des is schon a bissi hoch gestochen} Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
-Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen \textbf{bitte näher erklären was des ist}, welche aber mit einem beträchlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden sind. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
+Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen, welche die Funktion dadurch realisieren, wie sie verdrahtet sind, über Relais, Schalter, etc. Diese sind aber mit einem beträchtlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
+
+
 \subsubsection{Schaltschrank (bitte keine vergangenheitsformen, weniger hätteund wäre)}
 Für die Elektronik gibt es mehrere Möglichkeiten der Umsetzung. Beleuchtet wurden im Entwicklungsprozess integrierte Bauweisen in das AFSS, neuwertige Schaltschränke sowie Umbaumöglichkeiten.\\
 Die erste Idee, die verfolgt wurde, war ein integrierter Schaltschrank im AFSS. Dieser hätte einen Rahmen aus Aluminiumprofilen, Plexiglasscheiben hätten die Komponenten vom Rest getrennt und die einzelnen Elemente wären auf eine gefrästen Aluminiumplatte montiert worden. Vorteil dieser Option ist eine kompakte Bauweise, man hätte keinen zusätzlichen Schrank. Nachteile sind Zusatzkosten, Lagerplatzverluste da das Lager nicht breiter gemacht werden kann und kein Platz für Erweiterungen.\\
@@ -54,7 +56,7 @@ Nach Abwägung der Alternativen wurde bei der Auswahl der Lagermethode ein klass
 Es wurde also ein Lagersystem gewählt, bei dem zwei Achsen hin- und herfahren und eine Art Gabel die Boxen ein- und aushebt. Um die Boxen zur Kommissionierstation zu bringen, wird ein Förderband verwendet, das längs zum Lager verläuft. Der Lagerroboter kann die Boxen jedoch nicht selbstständig auf das Förderband laden. Zu diesem Zweck wird ein sogenannter Querförderer eingesetzt, der die Box von einem temporären Lagerplatz auf das Förderband und wieder zurück schiebt. An dieses Förderband können außerdem weitere solcher Lagerschränke angeschlossen werden, um mehr Lagerplatz zu schaffen und auch andere Systeme anzubinden. Darüber hinaus wird ein Lagerschrank als Komplettsystem konzipiert. Durch die Unterbringung aller Systeme in einem einzigen Objekt kann die Transportfähigkeit durch die Montage von Rollen einfach sichergestellt werden.
 
 \subsubsection{Steuerung 1/4}
-Als Steuerung wurden eine SPS von Siemens ausgewählt, da das Basic Know-How für die Programmierung solcher, bereits in der Schule gelehrt wird. Zudem sind speicherprogrammierbare Steuerungen ideal für komplexere Anlagen und ermöglichen die Ansteuerung der Motoren sowie die Kommunikation mit dem Server realtiv simpel und bleiben dabei auch innerhalb der geforderten Zykluszeit. 
+Als Steuerung wurde eine SPS von Siemens ausgewählt, da das Basic Know-How für die Programmierung solcher, bereits in der Schule gelehrt wird. Zudem sind speicherprogrammierbare Steuerungen ideal für komplexere Anlagen und ermöglichen die Ansteuerung der Motoren sowie die Kommunikation mit dem Server relativ simpel und bleiben dabei auch innerhalb der geforderten Zykluszeit. 
 
 \subsubsection{Schaltschrank 1/4}
 Der Umbau vom Serverschrank war die beste Option. Es wird Altbestand verwertet, es ist eine kosteneffiziente Lösung die viel Freiheit zur Anpassung an spezielle Komponenten erlaubt. Zudem gibt es viel Platz für Erweiterungen und Räder an den Schrank zu montieren wäre kein großer Zusatzaufwand. Die elektrische Steuerung der Anlage, die Versogungsgeräte und weiter Elemente finden in diesem Schrank auch platz. Weiters kann mit dieser Option auch erreicht werden, dass der Schaltschrank mittels weniger Handgriffe vollkommen vom Lagerschrank getrennt werden kann.
@@ -81,11 +83,7 @@ Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung ei
 
 
 \paragraph{TIA Portal}\mbox{}\\
-<<<<<<< HEAD
-Ist die Software welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens, anzusteuern. Tia-Portal bietet die Möglichkeit in verschiedensten Programmiersprachen zu arbeiten. Nämlich mit einem Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph. Da Tia Portal speichertechnisch zu groß werden würde, wenn man jedwede Funktion die möglich ist einbindet, werden spezielle Funktionen die benötigt werden, über Libraries eingebunden.
-=======
-Ist die Software welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens, anzusteuern. TIA-Portal bietet die Möglichkeit in verschiedensten Programmiersprachen zu arbeiten. (Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph.) Zudem können externe Anwendungsspezifische Funktionsbausteine mit Bibliotheken eingebunden werden.
->>>>>>> e8eff89793bddb7236ae9365f17ab725caf813e5
+Ist die Software, welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens anzusteuern.TIA-Portal bietet die Möglichkeit, in verschiedensten Programmiersprachen zu arbeiten (Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph.) Zudem können externe Anwendungsspezifische Funktionsbausteine mit Bibliotheken eingebunden werden.
 \cite{TIA_Portal_Programmiersprachen}
 
 \subsubsection{Hardware 2}
@@ -135,11 +133,14 @@ Damit die Motoren des Lagersystems nicht nur im Normalbetrieb zum Stoppen gebrac
 
 \subsection{Kooperationspartner 2X weety, 2x vogi, 1x sonne  (fotos hinzufügen mach i sonst(BS) ),first come first serve}
 
-\subsubsection{KNAPP}
+\subsubsection{KNAPP (Vogi)}
 
-\subsubsection{Weidmüller}
+\subsubsection{Weidmüller (Vogi)}
 
 \subsubsection{Igus}
+"Die Firma igus ist Hersteller von Hochleistungspolymeren für Bewegung, mit Sitz in Köln (Deutschland). Seit 1964 entwickeln und produzieren sie sogenannte motion plastics, innovative Produkte aus schmierfreien Kunststoffen. Dazu zählen unter anderem Energieketten, Kabel, Gleitlager, Gewindetechnik, Roboter sowie intelligente Sensorik, die den Kund:innen von igus, dabei helfen, ihre Technik zu verbessern und Kosten zu senken. Die meisten Produkte werden im Spritzgussverfahren hergestellt, von dem sich auch der Firmenname ableitet: \textbf{igus} = \textbf{I}ndustriespritz\textbf{gus}s." \cite{igus} \\
+Igus unterstützt unser Projekt durch die Bereitstellung der benötigten Kabelschleppketten, Linearführungen sowie Spindeln.
+
 
 \subsubsection{LAPP (witi)}
 
