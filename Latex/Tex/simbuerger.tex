@@ -101,7 +101,7 @@ Der Schlitten sollte sowohl horizontal als auch vertikal möglichst kompakt kons
 Angetrieben wird die X-Achse mit zwei Schrittmotoren, welche jeweils an einer Schiene (oben und unten) angebracht werden. Diese treiben mithilfe eines Zahnriemens die zwei X-Schlitten an. Als Zahnriemen wurde aufgrund der hohen Kraftübertragung sowie der großen Länge ein AT5-Zahnprofil mit 16 mm Riemenbreite der Firma Mähdler gewählt. Dieser wird vom Motor über eine entsprechende Zahnscheibe angetrieben und am Shuttle befestigt. Als Schrittmotor wird aus Einfachheitsgründen dasselbe Modell wie bei der Y-Achse verwendet. Diese erzeugen auch genügend Moment, um die X-Achse anzutreiben.
 
 \paragraph{Riemenspannung X-Achse} \mbox{}\\
-Da der Riemen für eine zuverlässige Kraftübertragung bei so langen Verfahrwegen eine relativ große Vorspannkraft benötigt, ist das Zahnriemenklemmelement auf der X-Achse auch dementsprechend auszuführen. Um den Zahnriemen zu greifen, muss ein Negativ in Aluminium gefräst werden, in dieses der Zahnriemen dann auf beiden Seiten des Schlittens geklemmt wird. Die Aufhängung der einen Seite ist einfach mit den Item-Profilen verschraubt, lässt aber noch etwas Platz, um den Riemen mit der Hand vorzuspannen. Auf der anderen Seite ist das Klembrett über zwei Gewindestangen mit dem restlichen Shuttle verbunden. Diese können festgezogen werden, um die nötigen Vorspannkräfte zu erzeugen. Außerdem ist diese Spannvorrichtung in einem Formfaktor ausgeführt, welcher es erlaubt, direkt darüber die Motoren der Y-Achse anzubringen.
+Da der Riemen für eine zuverlässige Kraftübertragung bei so langen Verfahrwegen eine relativ große Vorspannkraft benötigt, ist das Zahnriemenklemmelement auf der X-Achse auch dementsprechend auszuführen. Um den Zahnriemen zu greifen, werden Teile mit Negativverzahnung 3D-gedruckt, in dieses der Zahnriemen dann auf beiden Seiten des Schlittens geklemmt wird. Die Aufhängung der einen Seite ist einfach mit den Item-Profilen verschraubt, lässt aber noch etwas Platz, um den Riemen mit der Hand vorzuspannen. Auf der anderen Seite ist das Klembrett über zwei Gewindestangen mit dem restlichen Shuttle verbunden. Diese können festgezogen werden, um die nötigen Vorspannkräfte zu erzeugen (siehe \ref{X-Achse_a1}). Außerdem ist diese Spannvorrichtung in einem Formfaktor ausgeführt, welcher es erlaubt, direkt darüber die Motoren der Y-Achse anzubringen (siehe \ref{X-Achse_a2}).
 
 \paragraph{Achsenführung} \mbox{}\\
 Die Führung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-Wheels werden von oben auf das C-Profil gedrückt. Jedes Rad wird einzeln aufgehängt. Weiters ist überall eine Schraube, mit welcher das Rad weiter in die Führung hineingedrückt werden kann, sowie ein bis zwei Klemmpunkte, um bei Betrieb die Last von der Spannschraube nehmen zu können. Durch den geringen Platz im Schlitten ist es durchaus eine Herausforderung, dass all diese Mechanik neben den Spannelementen und Motoren in einem so kleinen Shuttle Platz finden. Auf der Seite des Schlittens werden noch weitere V-Wheels angebracht, welche die Spurführung übernehmen.
@@ -114,6 +114,49 @@ Um die weiteren Geräte am AFSS zu versorgen, müssen zusätzlich noch Verdrahtu
 
 \paragraph{Sensoren}\mbox{}\\
 Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und ein Referenzierschalter. Bei der X-Achse werden als Endschalter mechanische Rolltaster verwendet. Diese werden neben den V-Slot-Profilen befestigt und von einem, vom Schlitten abstreifenden Arm ausgelöst.
+
+
+%zwei abbildungen nebeneinander mit legende
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.94\textwidth]{X-Achse_a1.png}
+        \caption{X-Schuttle Ansicht hinten\\ (Motor rechts und Rollen ausgeblendet)}
+        \label{X-Achse_a1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.94\textwidth]{X-Achse_a2.png}
+        \caption{X-Schuttle Ansicht vorne \\(Motor rechts und Profil vorne ausgeblendet)}
+        \label{X-Achse_a2}
+    \end{subfigure}
+    %caption with boxes of color as legend and a descritption for the color, side by side
+    \begin{tikzpicture}
+        \fill[green] (0,0) rectangle (0.5,0.5);
+        \node[right] at (0.6,0.25) {Rollen Feste Seitig};
+        \fill[red] (0,-1) rectangle (0.5,-0.5);
+        \node[right] at (0.6,-0.75) {Rollen Mitte};
+        \fill[blue] (5,0) rectangle (5.5,0.5);
+        \node[right] at (5.6, 0.25) {Spannelement};
+        \fill[yellow] (5,-1) rectangle (5.5, -0.5);
+        \node[right] at (5.6,-0.75) {Spannelement Fest};
+        \draw[black] (10,0) rectangle (10.5, 0.5);
+        \node[right] at (10.6, 0.25) {Seitliche Rollen};
+        \fill[black] (10,-1) rectangle (10.5,-0.5);
+        \node[right] at (10.6,-0.75) {Sensorauslöse};
+        \fill[yellow] (5,-1) rectangle (5.5, -0.5);
+        \node[right] at (5.6,-0.75) {Spannelement Fest};
+        \fill[Apricot] (5,-2) rectangle (5.5, -1.5);
+        \node[right] at (5.6,-1.75) {Rollen Spannseitig};
+
+    \end{tikzpicture}
+    \caption{X-Achse}
+    \label{X-Achse_ansichten}
+\end{figure}
+
+
+
 
 \subsubsection{Y-Achse}
 Als Y-Achse wird jene Achse bezeichnet, die ihre Bewegung vertikal durchführt. Sie hat die Aufgabe, die Z-Achse bzw. das YZ-Shuttle auf Position zu bringen. Wichtig hierbei ist jedoch, dass die Y-Achse die Aufgabe des Aufhebens der Box übernimmt.
@@ -156,12 +199,12 @@ Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu
 \begin{minipage}[t]{0.5\textwidth}
     \vspace{7mm}
     \begin{equation*}
-        X_s = \frac{1}{M} \cdot \displaystyle\sum_{i = 0}^{n} z_i \cdot m_i
+        Z_s = \frac{1}{M} \cdot \displaystyle\sum_{i = 0}^{n} z_i \cdot m_i
     \end{equation*}
 \end{minipage}%
 \begin{minipage}[t]{0.5\textwidth}
     \begin{align*}
-        &Z_s: \text{Z-Koordinate des Massenschwerpunkts} & &\left[m\right]\\
+        &Z_s: \text{Position des Massenschwerpunkts} & &\left[m\right]\\
         &M: \text{Gesamtmasse} & &\left[kg\right]\\
         &z_1: \text{Z-Koordinate der Teilmasse} & &\left[m\right] \\
         &m_1: \text{Masse der Teilmasse} & &\left[kg\right]
@@ -194,8 +237,10 @@ Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu
 So werden zwei Schwerpunkte errechnet: ca. 130 mm im unbeladenen Zustand und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Shuttles während dem Ladevorgang wichtiger ist als während einer Leerfahrt, wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemens bei rund 200 mm liegt.\\
 Weiters muss auch dieser Zahnriemen wieder gespannt werden. Durch die geringere Zahnriemenlänge wird auch der Spannmechanismus verkleinert.
 Leider muss dieser aus Platzgründen außerhalb der Flucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung können durch folgenden Ausdruck, der die Länge, die der Zahnriemen bei einer bestimmten Position braucht, um spannungslos zu sein, approximiert, ermittelt werden. (Hierbei wird von einem linearen Zusammenhang zwischen der Kraft auf die Aufhängung und der Längenkontraktion ausgegangen. In der Realität würde jedoch die Elastizität des Zahnriemens sowie jene der Aufhängung Auswirkungen haben, aber diese verringern die Auswirkungen nur zu unseren Gunsten).
-    \vspace{4mm}
+\\
+
     \noindent\begin{minipage}{\textwidth}
+        \vspace{4mm}
     \begin{minipage}[t]{0.5\textwidth}
         \begin{equation*}
             K(h) = \sqrt{h^2+d^2}+(l-h)
