@@ -18,7 +18,7 @@
 *.bcf
 *.synctex
 *.synctex(busy)
-*.pdf
+Diplomarbeit_AFSS.pdf
 
 
 # Build directories
