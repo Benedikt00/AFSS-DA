@@ -322,6 +322,58 @@ Dies entspricht unseren Anforderungen, und somit wird diese Spindel gewählt. Um
 \paragraph{Sensorik}\mbox{}\\
 Um auch die Endschalter der Z-Achse, sowie weitere Sensoren einzulesen, wird auch hier ein ASi-Slave montiert.
 
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.94\textwidth]{yz-schnitt1.png}
+        \caption{YZ-Achse, zweite Hälfte ausgeblendet}
+        \label{yz-schnitt1}
+        \begin{tikzpicture}
+            \draw[black] (0,0.2) rectangle (0.5, -0.2);
+            \node[right] at (0.6,0) {Schleppkettenaufhängung};
+
+            \fill[red] (0,-0.2) rectangle (0.5, -0.8);
+            \node[right] at (0.6,-0.4) {Riemen Spannelement};
+
+            \fill[green] (0,-0.6) rectangle (0.5,-1.2);
+            \node[right] at (0.6,-0.8) {Rollen};
+
+            \fill[blue] (0,-1) rectangle (0.5,-1.4);
+            \node[right] at (0.6,-1.2) {Endschalterauslöser};
+
+            \fill[black] (0,-1.4) rectangle (0.5,-1.8);
+            \node[right] at (0.6,-1.6) {Z-Antrieb};
+
+            \fill[yellow] (0,-1.8) rectangle (0.5,-2.2);
+            \node[right] at (0.6,-2) {Z-Gabel};
+            
+
+        \end{tikzpicture}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.94\textwidth]{yz-schnitt2.png}
+        \caption{YZ-Achse von unten, zweite Hälfte}
+        \label{yz-schnitt2}
+        \begin{tikzpicture}
+            \fill[black] (0,0.2) rectangle (0.5, -0.2);
+            \node[right] at (0.6,0) {Y-Achse Endschalterauslöser};
+
+            \draw[black] (0,-0.2) rectangle (0.5, -0.6);
+            \node[right] at (0.6,-0.4) {Z-Achse Endschalter};
+
+
+        \end{tikzpicture}
+    \end{subfigure}
+    %caption with boxes of color as legend and a descritption for the color, side by side
+    \caption{YZ-Achse}
+    \label{YZ-Achse_ansichten}
+\end{figure}
+
+
+
 \subsubsection{Lager}
 Das Lager soll die Boxen beinhalten und die Möglichkeit zulassen, dass diese von der Gabel ein- und ausgehoben werden. Weiterhin muss die Box in X- und Z-Richtung geführt werden, um die Positionsgenauigkeit sicherzustellen, da sonst die Gabel möglicherweise in die Box fährt. Das Lager soll darauf ausgelegt werden, dass Boxen mit den Maßen 50x100x200 mm verwendet werden können. Diese Boxen sind nach unten hin verjüngt und haben oben eine Lippe, an der die Gabel greift.
 Umgesetzt wird dies mit einem Gerüst aus 40x40-Item-Profilen, welches im Nachhinein in den restlichen Rahmen eingesetzt wird. Auf diese werden 20x40-Profile horizontal aufgeschraubt, auf denen die Boxen stehen. Vorne und hinten wird eine Kunststoffplatte aufgeschraubt, welche leicht übersteht und somit die Box in Z-Richtung positioniert. Zwischen den Boxen wird ein Trennsteg eingebaut, welcher die Boxen in X-Richtung positioniert sowie den richtigen Abstand zwischen den Boxen einhält.
