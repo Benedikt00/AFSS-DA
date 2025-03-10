@@ -316,7 +316,7 @@ Berechnet werden kann diese Zeit mit folgendem Ausdruck:
 
 \vspace{5mm}
 
-So wird berechnet, dass eine DS10x12-Spindel mit ihrer \SI{12}{\mm} Steigung, bei einer Motordrehzahl von  (\SI{0.42}{\newton\meter}) und einem Übersetzungsverhältnis von 2:1, ca. 4 Sekunden pro Richtung benötigt und mit einer Kraft von ca. \SI{90}{\newton} bewegt wird.\\
+So wird berechnet, dass eine DS10x12-Spindel mit ihrer \SI{12}{\mm} Steigung, bei einer Motordrehzahl von {\SI{600}{\Umdrehung\per\minute}} (\SI{0.42}{\newton\meter}) und einem Übersetzungsverhältnis von 2:1, ca. 4 Sekunden pro Richtung benötigt und mit einer Kraft von ca. \SI{90}{\newton} bewegt wird.\\
 Dies entspricht unseren Anforderungen, und somit wird diese Spindel gewählt. Um sie zu lagern, wird vorne und hinten der Durchmesser der Spindel verringert, sodass diese in Kugellagern geführt werden kann.
 
 \paragraph{Sensorik}\mbox{}\\
@@ -375,7 +375,7 @@ Um auch die Endschalter der Z-Achse, sowie weitere Sensoren einzulesen, wird auc
 
 
 \subsubsection{Lager}
-Das Lager soll die Boxen beinhalten und die Möglichkeit zulassen, dass diese von der Gabel ein- und ausgehoben werden. Weiterhin muss die Box in X- und Z-Richtung geführt werden, um die Positionsgenauigkeit sicherzustellen, da sonst die Gabel möglicherweise in die Box fährt. Das Lager soll darauf ausgelegt werden, dass Boxen mit den Maßen 50x100x200 mm verwendet werden können. Diese Boxen sind nach unten hin verjüngt und haben oben eine Lippe, an der die Gabel greift.
+Das Lager soll die Boxen beinhalten und die Möglichkeit zulassen, dass diese von der Gabel ein- und ausgehoben werden. Weiterhin muss die Box in X- und Z-Richtung geführt werden, um die Positionsgenauigkeit sicherzustellen, da sonst die Gabel möglicherweise in die Box fährt. Das Lager soll darauf ausgelegt werden, dass Boxen mit den Maßen \qtyproduct{50 x 100 x 200}{\milli\metre} verwendet werden können. Diese Boxen sind nach unten hin verjüngt und haben oben eine Lippe, an der die Gabel greift.
 Umgesetzt wird dies mit einem Gerüst aus 40x40-Item-Profilen, welches im Nachhinein in den restlichen Rahmen eingesetzt wird. Auf diese werden 20x40-Profile horizontal aufgeschraubt, auf denen die Boxen stehen. Vorne und hinten wird eine Kunststoffplatte aufgeschraubt, welche leicht übersteht und somit die Box in Z-Richtung positioniert. Zwischen den Boxen wird ein Trennsteg eingebaut, welcher die Boxen in X-Richtung positioniert sowie den richtigen Abstand zwischen den Boxen einhält.
 
 \subsubsection{Querförderer}
@@ -399,19 +399,19 @@ Um diese Anforderungen umzusetzen, werden vier Aluminium-Drehteile gefertigt, in
 Die Fertigung dieses Teils nach Abb. \ref{UmlenkrolleBTZ} lässt sich in folgende Teilschritte unterteilen:
 \begin{itemize}
     \setlength\itemsep{-1mm} 
-    \item Zuerst die Frontfläche plandrehen (Drehzahl: 900 U/min)
-    \item Ungefähr 30mm Länge auf das Aussenmaß von 36 mm längsdrehen
-    \item Mit 9.8mm Bohrer das mittlere Loch vorbohren (540 U/min)
-    \item Mit 10mm Reibeisen und viel Öl das Loch auf eine genaue Passung bringen (260 U/min)
+    \item Zuerst die Frontfläche plandrehen (Drehzahl: \SI{900}{\Umdrehung\per\minute})
+    \item Ungefähr \SI{30}{mm} Länge auf das Aussenmaß von \SI{36}{mm} längsdrehen
+    \item Mit \SI{9.8}{mm} Bohrer das mittlere Loch vorbohren (\SI{540}{\Umdrehung\per\minute})
+    \item Mit \SI{10}{mm} Reibeisen und viel Öl das Loch auf eine genaue Passung bringen (\SI{260}{\Umdrehung\per\minute})
     \item Die Position relativ zum Backenfutter markieren, um beim Neu-Einspannen Rundlaufgenauigkeit zu gewährleisten
-    \item Zylinder bei ca. 26 mm abstechen (540 U/min)
-    \item Umspannen und auf Maß plandrehen (900 U/min)
-    \item Die Aussparung für die Lager mit Eckdrehmeißel beginnen, jedoch nach innen hin nur 6.8 mm
-    \item Bei ca. 17 mm Lochdurchmesser den tatsächlichen Durchmesser mit der Digitalanzeige vergleichen und gegebenenfalls korrigieren
-    \item Bei 21.5 mm den Oberschlitten die restlichen 0.2 mm zustellen und die gesamte Tiefe plandrehen
-    \item Den Lochdurchmesser auf 21.95 erweitern und dann in kleinen Inkrementen zustellen, bis das Lager gerade so nicht passt, um einen Presssitz zu gewährleisten. Dies tritt bei Lagern mit 22 mm Außendurchmesser bei rund 22.04 mm ein.
+    \item Zylinder bei ca. \SI{26}{mm} abstechen (\SI{540}{\Umdrehung\per\minute})
+    \item Umspannen und auf Maß plandrehen (\SI{900}{\Umdrehung\per\minute})
+    \item Die Aussparung für die Lager mit Eckdrehmeißel beginnen, jedoch nach innen hin nur \SI{6.8}{mm}
+    \item Bei ca. \SI{17}{mm} Lochdurchmesser den tatsächlichen Durchmesser mit der Digitalanzeige vergleichen und gegebenenfalls korrigieren
+    \item Bei \SI{21.5}{mm} den Oberschlitten die restlichen \SI{0.2}{mm} zustellen und die gesamte Tiefe plandrehen
+    \item Den Lochdurchmesser auf \SI{21.95}{mm} erweitern und dann in kleinen Inkrementen zustellen, bis das Lager gerade so nicht passt, um einen Presssitz zu gewährleisten. Dies tritt bei Lagern mit \SI{22}{mm} Außendurchmesser bei rund \SI{22.045}{mm} ein.
     \item Da für die Einsparung der Riemenführungsfläche kein Angriffspunkt verfügbar ist, wurde als Halterung ein Dorn nach Abb. \ref{ulr:dorn} gedreht, auf welchen das Drehteil aufgeschraubt wird.
-    \item Mit dem Abstechmeißel wird in 2 mm Inkrementen die Zahnriemenauflagefläche herausgedreht, bis auf 30.2 mm, sowie links und rechts den Rand 1 mm extra dick lassen (siehe Abb. \ref{ulr:f1} ). (540 U/min)
+    \item Mit dem Abstechmeißel wird in \SI{2}{mm} Inkrementen die Zahnriemenauflagefläche herausgedreht, bis auf \SI{21.95}{mm}, sowie links und rechts den Rand \SI{1}{mm} extra dick lassen (siehe Abb. \ref{ulr:f1} ). (\SI{540}{\Umdrehung\per\minute})
     \item Am Schluss wird die Rand Tiefe auf Maß gedreht.
     \item Als letzten Schritt werden links und rechts die zwei Lager eingepresst.
 \end{itemize}
@@ -445,7 +445,7 @@ Die Fertigung dieses Teils nach Abb. \ref{UmlenkrolleBTZ} lässt sich in folgend
     \end{figure}
 
 \paragraph{Distanzhülsen}\mbox{}\\
-Bei den meisten V-Wheels werden Distanzhülsen zur Klemmung benötigt. Diese müssen ein sehr spezielles Maß (13.4 mm Länge) haben. Deshalb müssen Hülsen mit einer Länge von 20 mm auf diese Länge heruntergedreht werden. Dies wird mit dem rechten Eckdrehmeißel bei einer Drehzahl von 740 U/min ausgeführt. Da relativ viele solcher Teile benötigt werden, wird beim Einspannen der Drehmeißel selbst als Endstopp verwendet, um ein relativ wiederholgenaues Maß zu erhalten sowie eine simple Durchführung zu erlauben. Es wird also der Meißel auf Position gefahren und das Werkstück eingespannt, sodass es am Drehmeißel ansteht. Nun wird der Drehmeißel zurückgefahren und die Hülse kann einfach durch mehrere Plandrehoperationen, bis der Schlitten ansteht, gekürzt werden. Es muss also weder gemessen noch die Digitalanzeige verändert werden, um schnell mehrere Teile hintereinander zu fertigen.
+Bei den meisten V-Wheels werden Distanzhülsen zur Klemmung benötigt. Diese müssen ein sehr spezielles Maß (\SI{13.4}{\mm} Länge) haben. Deshalb müssen Hülsen mit einer Länge von 20 mm auf diese Länge heruntergedreht werden. Dies wird mit dem rechten Eckdrehmeißel bei einer Drehzahl von 740 U/min ausgeführt. Da relativ viele solcher Teile benötigt werden, wird beim Einspannen der Drehmeißel selbst als Endstopp verwendet, um ein relativ wiederholgenaues Maß zu erhalten sowie eine simple Durchführung zu erlauben. Es wird also der Meißel auf Position gefahren und das Werkstück eingespannt, sodass es am Drehmeißel ansteht. Nun wird der Drehmeißel zurückgefahren und die Hülse kann einfach durch mehrere Plandrehoperationen, bis der Schlitten ansteht, gekürzt werden. Es muss also weder gemessen noch die Digitalanzeige verändert werden, um schnell mehrere Teile hintereinander zu fertigen.
 
 \paragraph{Zahnscheiben}\mbox{}\\
 Da die Welle des Motors recht kurz ist und die Motoraufhängung Platz wegnimmt, ist es erforderlich, die Zahnscheibe unkonventionell mit dem Motor zu verbinden. Es werden also in der Zahnriemen-Kontaktfläche zwei Löcher gebohrt, angesenkt und mit M4-Gewinde versehen, um dort 2 M4-Wurmschrauben einzuschrauben. Bei der Länge der Wurmschrauben muss darauf geachtet werden, dass sie im montierten Zustand vollständig unter der Oberfläche liegen, um den Zahnriemen nicht zu beschädigen.
