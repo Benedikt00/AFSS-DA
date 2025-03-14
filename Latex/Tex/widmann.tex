@@ -92,7 +92,7 @@ Nach Fertigstellung des Schaltplans kann in Fusion ein passendes Leiterplattendo
 \end{figure}
 
 Wenn die Bauteile alle platziert und verbunden worden sind, sowie ein Polygon über die gesamte Platine gezogen worden ist, muss diese noch auf Fehler geprüft werden. Auch hier ist eine bereits fertige Datei, welche die benötigten Design Rules für Fusion360 beinhaltet, auf der Schulwebsite zu finden. Wichtig ist, damit die Platine zur Produktion in der Leiterplattenfertigung der HTL eingereicht werden kann, muss diese den vorgegebenen Anforderungen entsprechen. Dazu gehört, dass sich das HTL-Logo auf der Platine befindet und die Texteinstellungen Font: Vector, Ratio: \qty{16}{\percent} und Size: min \qty{70}{mil} entsprechen. Auch die Breite der Kupferbahnen darf nicht zu klein sein (hier: \qty{32}{mil}).\\
-Nach Einreichung des Fertigungsauftrags wird die Platine von Schülerinnen und Schülern der HTL gefertigt. Der Prozess startet mit dem Reinigen des Basismaterials, um es daraufhin mit dem Negativtrockenresist (Trockenfilm) zu laminieren. In den nächsten Schritten werden die Layout-Informationen mit einem Belichter auf das Laminat übertragen und das unbelichtete Laminat mit einer Natrium-Carbonat Lösung von der Platine entfernt. Daraufhin werden durch Ätzen mit einer Eisen-III-Chlorid-Lösung strukturierte Kupferflächen freigestellt. Als Nächstes werden die Löcher in die Kupferpads gebohrt und die Platine auf ihre korrekte Größe zugeschnitten. Durch das Legen der Leiterplatte in eine Entschichtlösung aus \qty{5}{\percent}{igem} Kaliumcarbonat mit Wasser werden Ätzresiste von der Platine entfernt. Zu guter Letzt wird die Platine mit einem Versiegelunglack versiegelt, um sie vor Umwelteinflüssen und Korrosion zu schützen.
+Nach Einreichung des Fertigungsauftrags wird die Platine von Schülerinnen und Schülern der HTL gefertigt. Der Prozess startet mit dem Reinigen des Basismaterials, um es daraufhin mit dem Negativtrockenresist (Trockenfilm) zu laminieren. In den nächsten Schritten werden die Layout-Informationen mit einem Belichter auf das Laminat übertragen und das unbelichtete Laminat mit einer Natrium-Carbonat Lösung von der Platine entfernt. Daraufhin werden durch Ätzen mit einer Eisen-III-Chlorid-Lösung strukturierte Kupferflächen freigestellt. Als Nächstes werden die Löcher in die Kupferpads gebohrt und die Platine auf ihre korrekte Größe zugeschnitten. Durch das Legen der Leiterplatte in eine Entschichtlösung aus \qty{5}{\percent}{igem} Kaliumcarbonat mit Wasser werden Ätzresiste von der Platine entfernt. Zu guter Letzt wird die Platine mit einem Versiegelungslack versiegelt, um sie vor Umwelteinflüssen und Korrosion zu schützen.
 
 \paragraph{Platinentestung und Messung} \mbox{}\\
 Um die korrekte Funktionsweise der Referenzplatine sicher zu stellen, muss diese nach dem Löten getestet werden. An der Klemme X1 wurden Spannungswerte zwischen \qtyrange{19.7}{21.3}{\volt} gemessen. Obwohl die Spannungen unter den gewünschten \qty{24}{\volt} liegen können die Platinen problemlos verwendet werden, da die verwendeten AS-i-Slaves einen minimalen HIGH-Eingangsschaltpegel von \qty{10}{\volt} besitzen.\cite{AS-i-Slave}
@@ -100,26 +100,34 @@ Um die korrekte Funktionsweise der Referenzplatine sicher zu stellen, muss diese
 \subsubsection{Lichttaster}
 
 \subsubsection{Barcode-Scanner}
-Durch anbringen eines sich nicht wiederholenden Barcodes auf jeder Box wird eine gute Möglichkeit geschaffen, in der Software den Behälter und die sich darin befindenden Bauteile einander zuzuordnen. Unter der Voraussetzung, dass die Benutzerinnen und Benutzer vor jeder Wiedereinlagerung ihrer Box zuerst dessen Barcode einscannen, wird die Wahrscheinlichkeit, dass der Lagerplatz einer Box falsch abgespeichert wird, verkleinert. Somit sinkt die Chance, dass bei Bestellen eines Bauteils die falsche Komponente geliefert wird. Das erfassen des Barcodes findet mittels eines Barcodescanners der Firma SICK statt, welcher bei der Kommissionierstation untergebracht ist, um eine einfache Bedienung gewährleisten zu können.\\
+\begin{wrapfigure}{R}{0.34\textwidth}
+    \vspace{-20px}
+    \includegraphics[width=0.34\textwidth]{Sensors/Barcodescanner.png}
+    \caption{Barcodescanner CLV61x-2Port}
+    \label{BarScan}
+\end{wrapfigure}
+
+Durch anbringen eines sich nicht wiederholenden Barcodes auf jeder Box wird eine gute Möglichkeit geschaffen, in der Software den Behälter und die sich darin befindenden Bauteile einander zuzuordnen. Unter der Voraussetzung, dass die Benutzerinnen und Benutzer vor jeder Wiedereinlagerung ihrer Box zuerst dessen Barcode einscannen, wird die Wahrscheinlichkeit, dass der Lagerplatz einer Box falsch abgespeichert wird, verkleinert. Somit sinkt die Chance, dass bei Bestellen eines Bauteils die falsche Komponente geliefert wird. Das erfassen des Barcodes findet mittels eines Barcodescanners der Firma SICK statt (siehe Abb.\ref{BarScan}), welcher bei der Kommissionierstation untergebracht ist, um eine einfache Bedienung gewährleisten zu können.\\
 Der uns zur Verfügung gestellte Barcodescanner (CLV61x-2Port) ist in der Lage alle gängigen Codearten einzulesen.\cite{Barcodescanner} Barcodes wurden so entwickelt, dass bereits beim Einlesen erkannt wird, wo dieser anfängt und aufhört, damit beim einscannen nicht auf die richtige Ausrichtung geachtet werden muss.
 
-\paragraph{Einbindung ins TIA-Portal}\mbox{}\\
+\paragraph{Einbindung ins TIA-Portal \cite{BarScan_Handbuch}}\mbox{}\\
 Damit der eingelesene Barcode an den Webserver weitergegeben werden kann, muss dieser im Siemens TIA-Portal abgespeichert werden. Mit der CPU verbunden wird der Scanner über PROFINET. Hierbei handelt es sich um einen auf Industrial Ethernet basierenden Kommunikationsstandard und eine Weiterentwicklung des PROFIBUS Vorgängers. Über ihn lässt sich die gescannte Nummer ganz einfach an die SPS übermitteln.\\
 Im TIA-Portal Projekt muss, um eine Verbindung zum Barcodescanner herstellen zu können, die zugehörige Gerätebeschreibungsdatei (GSD-Datei) installiert werden. Dies funktioniert über das Gerätebeschreibungsdateien verwalten Fenster im TIA-Portal. Nach der Installation ist das Gerät im Hardwarekatalog unter \enquote{Weitere Feldgeräte} zu finden. Die benötigte Datei wird auf der Internetseite des Herstellers als Download zur Verfügung gestellt.
 
 \paragraph{Auslesen des Barcodes}\mbox{}\\
 Wenn eine Verbindung zum Gerät hergestellt wurde, müssen die Parametermodule eingefügt und richtig eingestellt werden. Diese werden über den Hardware-Katalog ausgewählt und eingefügt, für eine Übersicht der eingefügten Module siehe Abb.\ref{BarScan_TIA}. Wichtig ist, bei den Baugruppenparametereinstellungen von \enquote{\mbox{47\_Communication Mode\_1}} \enquote{No Handshake} auszuwählen und bei \enquote{\mbox{99\_End Remote Config}}
 \enquote{Don't save parameters perm.} einzustellen. Um die verwendeten Art von Barcodes einscannen zu können muss darauf geachtet werden, dass er unter \enquote{\mbox{22\_UPC EAN GTIN\_1}} ausgewählt und somit eingeschaltet ist.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Sensors/BarScan_Geräteübersicht.png}
+    \caption{Barcodescanner Geräteübersicht im TIA-Portal\cite{BarScan_pic}}
+    \label{BarScan_TIA}
+\end{figure}
+
 Die vom Barcodescanner belegten Ein- und Ausgangsadressen sind in der Geräteübersicht ersichtlich (siehe Abb.\ref{BarScan_TIA}). Ein TriggerBit wird verwendet um das Einlesen eines Barcodes zu starten, dabei handelt es sich um das zweite Bit des \enquote{\mbox{Ctrl Bits out\_1}} Moduls (hier: Q129.0). Bei steigender Flanke des ToggleBits wird der Laser eingeschaltet, erst bei der fallenden Flanke wird daraufhin der Code eingelesen.\\
 Die eingelesenen Daten liegen ab dem ersten Input Byte (hier: ab IB128.0). Auf dem ersten Input Byte wird am vierten Bit ein ToggleBit mitgeführt. Am zweiten Byte(IB129.0) befindet sich ein Zähler, der mitzählt, wie viele Codes bereits eingelesen wurden. Das vierte Input Byte (IB131.0) gibt die Länge des eingelesenen Strings an. Ab dem sechsten Byte (IB133.0) stehen die eigentlichen Daten des Barcodes.\\
-Um die Daten des Barcodes überprüfen zu können eignet sich eine wie in Abb.\ref{} abgebildete Beobachtungstabelle. Wichtig ist, dass beim Einfügen der Ein- und Ausgangsadressen das richtige Zeichenformat ausgewählt wird. Um eine Überprüfung durchzuführen lässt sich das ToggleBit zum Starten es Einlesevorgangs über Eingabe von TRUE und FALSE setzen, und daraufhin ein Code scannen. Die einzelnen Input Bytes werden daraufhin in der Tabelle angezeigt.
-
-\begin{wrapfigure}{r}{0.4\textwidth}
-    \vspace{-20px}
-    \includegraphics[width=0.5\textwidth]{Sensors/BarScan_Geräteübersicht.png}
-    \caption{Barcodescanner Geräteübersicht im TIA-Portal}
-    \label{BarScan_TIA}
-\end{wrapfigure}
+Um die Daten des Barcodes überprüfen zu können eignet sich eine wie in Abb.\ref{} abgebildete Beobachtungstabelle. Wichtig ist, dass beim Einfügen der Ein- und Ausgangsadressen das richtige Zeichenformat ausgewählt wird. Um eine Überprüfung durchzuführen lässt sich das ToggleBit zum Starten es Einlesevorgangs über Eingabe von TRUE und FALSE setzen, und daraufhin ein Code scannen. Die einzelnen Input Bytes werden daraufhin in der Tabelle angezeigt. \textbf{Foto einfügen!!}
 
 \subsection{AS-Interface}
 
