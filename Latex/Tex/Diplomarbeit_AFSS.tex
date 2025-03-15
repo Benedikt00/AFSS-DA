@@ -33,8 +33,9 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{ragged2e}
 \usepackage{pdfpages}
-
-
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage{siunitx}
+\sisetup{locale = DE} 
 \usepackage{emptypage}
 \usepackage{fancyhdr}
 
@@ -67,7 +68,8 @@
 \let\oldsection\paragraph
 \renewcommand{\paragraph}[1]{\needspace{3\baselineskip}\oldsection{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newcommand{\uni}[1]{\ensuremath{\, \mathrm{#1}}}
+\DeclareSIUnit{\Umdrehung}{U}
 % Other Settings
 \usepackage[dvipsnames]{xcolor}
 
@@ -83,6 +85,10 @@
 %    linkcolor=black,
 %    urlcolor=black
 %}
+
+\sisetup{
+detect-all
+}
 
 
 %% codestuff
@@ -140,7 +146,6 @@
 
 \newcommand{\iu}{{i\mkern1mu}}
 \newcommand*\mathinhead[2]{\texorpdfstring{$\boldsymbol{#1}$}{#2}}
-\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
 
 \definecolor{mred}{rgb}{0.619, 0.2392, 0.3176}
 
