@@ -42,7 +42,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             Funktionsbausteine können genutzt werden, um Unterprogramme für unterschiedliche Anwendungen zu erstellen. Außerdem werden sie genutzt um das Anwenderprogramm zu strukturieren. Bei mehrfacher Verwendung von Funktionsbausteinen empfiehlt sich die Verwendung von Multiinstanz-DBs.
             \cite{Programmierleitfaden_für_S7-1500}
         
-        \item[4.]   \textbf{Global-DB(Datenbausteine)} \\
+        \item[4.] \textbf{Global-DB(Datenbausteine)} \\
             Globale Datenbausteine speichern variable Daten, die dem kompletten Programm zur Verfügung stehen. Wie in Abb.\ref{Zugriff auf Global-DB} ersichtlich, bedeutet das ,dass alle Bausteine Zugriff auf den Global-DB haben.
 
             \begin{figure}[h]
@@ -55,14 +55,26 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             In Globalen Datanbausteinen können jegliche Datentypen genutzt werden.\\
             Globale DBs werden verwendet, wenn Daten in verschiedenen Programmteilen bzw. Bausteinen benötigt werden.
             \cite{Programmierleitfaden_für_S7-1500}
+
+        \item[5.] \textbf{Instanzen} \\
+            Wird ein Funktionsbaustein aufgerufen, so nennt man das Instanz. Die Daten der Instanz, werden im sogenannten Instanzdatenbaustein gespeichert. Instanz-DBs werden automatisch nach den Vorgaben des Funktionsbausteins erzeugt und können somit nicht direkt geändert werden. Der Instanz-DB hat einen dauerhaften Speicher, welcher die Schnittstellen Input, Output, InOut sowie Static beihaltet. Zusätzlich besitzt der Instanz-DB einen flüchtigen Datenspeicher in dem tempöräre Variablen gespeichert werden. Diese sind dadurch immer nur für einen Zyklus gültig.
+            
+        \item[6.] \textbf{Multiinstanzen} \\
+            Bei Multiinstanzen speichert der Funktionsbausetein seine Daten in den Instanz-DB des übergeordneten Funktionsbaustein. Das heißt es wird in einem FB ein anderer FB aufgerufen. Dieser speichert seine Daten dann im Instanz-Db des Funktionsbausteins, welcher ihn aufgerufen hat. Multiinstanzen helfen das Programm übersichtlicher sowie strukturierter zu halten, da man mehrere Instanzen in einer Instanz vereint.
+
     \end{itemize}
 
     \subsubsection{Technologieobjekte}
+    Technologieobjekte dienen dazu die Ansteuerung und Handhabung von technischen Funktionen, insbesondere von Motoren, Achsen, etc. zu vereinfachen. Es existieren eine Vielzahl an unterschiedlichen Technologieobjekten. In nachfolgenden Absätzen werden die für das Projekt relevanten Technologieobjekte genauer erklärt.
+
+
 
     \subsubsection{Programmiersprachen}
 
-    \subsubsection{Librarys}
-    \label{Libraryeinbindung}
+
+    \subsubsection{Bilbliotheken}
+    \label{Bibliotheken}
+
 
 \subsection{Motorenansteuerung}
 
@@ -98,7 +110,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
     
     \subsubsection{Verbindungsherstellung}
-    Aus den in Punkt \ref{Kommunikationsprotokolle} genannten Gründen wurde das HTTP Protokoll ausgewählt. Um in TIA-Portal die Verbindung via HTTP aufzubauen, benötigt man bestimmte Libraries die von Siemens zu Verfügung gestellt werden. Diese müssen dann wie im Punkt \ref{Libraryeinbindung} gezeigt eingebunden werden, um die Funktionsbausteine der Library nutzen zu können. 
+    Aus den in Punkt \ref{Kommunikationsprotokolle} genannten Gründen wurde das HTTP Protokoll ausgewählt. Um in TIA-Portal die Verbindung via HTTP aufzubauen, benötigt man bestimmte Libraries die von Siemens zu Verfügung gestellt werden. Diese müssen dann wie im Punkt \ref{Bibliotheken} gezeigt eingebunden werden, um die Funktionsbausteine der Library nutzen zu können. 
 
         \paragraph{Funktionsbausteine} \mbox{} \\
         In der Library stehen dann folgende Bausteine zur Verfügung:
