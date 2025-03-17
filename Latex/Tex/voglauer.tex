@@ -40,16 +40,16 @@
 \subsubsection{Mechanische Planung}
 
     \paragraph{Schaltschrankrahmen}\mbox{}\\
+    \begin{wrapfigure}{r}{0.5\textwidth}
+        \vspace{-30px}
+        \includegraphics[width=0.5\textwidth]{Vogis Bilder/Serverschrank_original.jpg}
+        \caption{Serverschrank bei Übergabe an das AFSS-Team}
+        \vspace{-10px}
+        \label{fig:Serverschrank_original}
+    \end{wrapfigure}
     Bevor man sich den Details des Schaltschrankes widmet, muss vorerst der Rahmen festgelegt werden. Grundsätzlich würde man einen herkömmlichen Schaltschrank verwenden, allerdings sind diese teuer und erfüllen auch nicht unsere Anforderung der Mobilität. Deswegen wurden mehrere alternative Optionen in Betracht gezogen. Anfangs wurde der Ansatz verfolgt die elektrischen Komponenten in den Lagerschrank selbst einzubauen. Dabei hätte man entweder einen eigenen Abteil ins AFSS einplanen können, der auch mittels entsprechendem Material räumlich getrennt wäre, oder man hätte die Elemente fluide unterbringen können. Mit Letzteren ist gemeint, dass in dem ganzen Schrank verteilt die elektirschen Komponenten montiert wären.\\
     Die fluide Variante benötigt sorgfälltige Planung und auch sorgfälltige Absprache mit der restlichen mechanischen Planung des AFSS. Dafür hätte man eine kompacktes Design aber das Risiko für Verletzungen und Schäden wäre höher, da man die elektrischen Komponenten nur schwer räumlich trennen könnte, so wie es die Wände eines Schaltschrankes machen. Aufbauend auf dem fehlenden Sicherheitsaspekt und der Tatsache, dass die benötigte Kommunikation in einer Entwicklungsphase nicht möglich wäre, wurde sich gegen die fluide Option entschieden.\\
     Wesendlich realistischer ist der Ansatz ein eigenes kleines Abteil in den Schrank einzubauen. Der Rahmen wäre, sowie das Lager, aus Aluminiumprofilen gebaut und die jeweiligen Seiten würden mit Kunstsoffen verkleidet werden. Um die räumliche Trennung zu gewährleisten. Diese Option wäre Kommunikationstechnisch möglich, da man sich mit der restlichen mechanischen Planung nur auf die Außenmase und Position dieses Abteils einigen müsste. Allerdings bedeutet ein intigriertes Abteil auch weniger Lagerplätze und einen merkbaren Zusatzaufwand in der Realisierung. Da so viele Lagerplätze wie möglich verwirklicht werden sollen wurde sich gegen diese Variante entschieden.\\
-    \begin{wrapfigure}{r}{0.5\textwidth}
-        \vspace{-30px}
-        \includegraphics[width=0.5\textwidth]{Serverschrank_original.jpg}
-        \caption{Serverschrank bei Übergabe ans AFSS-Team}
-        \vspace{-20px}
-        \label{fig:Serverschrank_original}
-    \end{wrapfigure}
     Auf der weiteren Suche nach einer Alternative zum herkömmlichen Schaltschrank wurde die Möglichkeit, einen alten Serverschrank zu recyclen erkannt. Ein fertig gebauter Schrank, der im Fehlerfall die Umgebung ausreichend schützt und keine Zusatzkosten mit sich bring war die beste Option. Die im Inneneren bereits vorhandenen Profilschienen bieten viele Möglichkeiten für die Elektrik montiert zu weden. Zudem bietet der Innenraum des Serverschrankes viel Platz und auch die Möglichkeit die Elektrik, wenn nötig, zügig zu erweitern, da man die Profilschienen sehr indiviuell nutzen kann.\\
     Es wurde sich somit entschieden den Serverschrank zu einem Schaltschrank umzubauen. Im Zuge des Umbaus würde der Innenraum umgebaut werden und der Serverschrank müsste auch mobil gemacht werden. 
     \paragraph{Modulprinzip}\mbox{}\\
@@ -60,30 +60,31 @@
     Damit ein einheitliches Design eingehalten werden kann, wurde sich für ein Modulprinzip entschlossen. Dieses ermöglicht es allen Elementen, auch für die, die für Hutschienen ungeeignet sind, montiert zu werden und ist dennoch in der Schule produzierbar.
 
     \paragraph{Platten-Material}\mbox{}\\
+    Für die Materialwahl gab es drei realistische Möglichkeiten. Die Modulplatten hätten vollständig aus Aluminium oder aus Dibond gefräst werden können. Als dritte Option hätte man die Platten aus einem Kunststoff lasern oder fräsen können. Die Aluplatten bieten den Vorteil der Leitfähigkeit und somit müsste man nur die Platte erden und die Elemente auf der Platte wären alle dementsprechend geerdet. Beim einer reinen Kunststoffplatte gibt es keine Leitfähigkeit und zusätzlich bieten die meisten Kunststoffe keine ausreichende mechanische Stabilität.\\
     \begin{wrapfigure}{r}{0.5\textwidth}
         \vspace{-30px}
         \includegraphics[width=0.5\textwidth]{Dibond_Platten_ml.jpg}
         \caption{Dibond-Platte, Quelle: \cite{Dibond-Platte}}
         \vspace{-20px}
         \label{fig:Sommerprototyp}
-    \end{wrapfigure}
-    Für die Materialwahl gab es drei realistische Möglichkeiten. Die Modulplatten hätten vollständig aus Aluminium oder aus Dibond gefräst werden können. Als dritte Option hätte man die Platten aus einem Kunststoff lasern oder fräsen können. Die Aluplatten bieten den Vorteil der Leitfähigkeit und somit müsste man nur die Platte erden und die Elemente auf der Platte wären alle dementsprechend geerdet. Beim einer reinen Kunststoffplatte gibt es keine Leitfähigkeit und zusätzlich bieten die meisten Kunststoffe keine ausreichende mechanische Stabilität.\\    
+    \end{wrapfigure}    
     Aluminium erfüllt alle Anforderungen, ist aber teuer und ein wertvoller Werkstof. Da ein umsichtiger Umgang mit Ressourcen wichtig ist wurden nach einer Alternative gesucht. Dibond wurde daraufhin als Projektstandard für die Module definiert. Dieser Stoff besteht aus zwei dünnen Aluminiumplatten die auf einen Kunststoff aufgepresst werden. Dibond bietet keine elektrische Leitfähigkeit, folglich müssen alle Elemente zusätzlich geerdet werden aber das leichte Gewicht und die hohe mechanische Stabilität machen Dibond zur besten Option.
 
     \paragraph{Digitaler Zwilling}\mbox{}\\
     Moderner Schaltschrankherstellung begegnen im Herstellungsprozess oft große logistische Probleme. Jeder Prozessschritt ist eine Fehlerquelle und wenn Fehler nicht früh erkannt werden, pflanzen sich diese fort. Damit zwischen den Prozessschritten keine Kommunikationsprobleme entstehen setzen viele Hersteller auf das Prinzip des digitalen Zwillings.\\
     Dieser ist im Grunde ein digitaler Schaltschrank, welcher im ersten Prozessschritt, der Planung, ausgeplant wird und im Herstellungsprozess, sei es der Schrankbau oder die Bestückung, wird einerseits immer derselbe digitale Zwilling aktualisiert und aber auch referenziert. Das heißt alle Prozessschritte beziehen sich auf denselben Plan bzw. digitalen Zwilling (siehe \ref{fig:digilaerZwilling}).
-    \begin{figure}[H]
+    \begin{figure}[h]
         \centering
         \includegraphics[width=0.9\textwidth]{Cabinet-Building-Komax-SCB-Component-Printer.png}
         \caption{Digitaler Zwilling, Quelle: \cite{digitaler_zwilling_bild}}
         \label{fig:digilaerZwilling}
     \end{figure}
-    
     Es setzt auch ein breites Feld an Firmen auf dieses Prinzip. Firmen wie Weidmüller, Komax, Steinhauer und noch viele mehr haben eine Firmenzusammenarbeit, die ohne einen digitalen Zwilling nicht möglich wäre \cite{smart_cabinet_building}. In diesem Fall werden die jeweiligen Prozessschritte meistens von einer neuen Firma übernommen. In diesem Bündnis ist der digitale Zwilling der Schlüssel zum Erfolg. Man kann dieses Prinzip der Dokumentation bzw. Planung als Industriestandard verstehen.\\
     Um den Prozess der Herstellung des Schaltschrankes möglichst nahe an die Praktiken aus der Industrie anzugleichen, wird auch der Schaltschrank des AFSS mithilfe eines digitalen Zwillings geplant. Dieser wird in Fusion360 gezeichnet und soll den Sollzustand des Schaltschrankes abbilden.\\
     Um die Konstruktion anzufangen, braucht es eine möglichst ausführliche Ausmessung des bereits bestehenden Serverschrankes. Besonders wichtig sind die Elemente die direkt am Umbau beteiligt sind, wie die Profilschienen (Abstände der Löcher, Abstände der Profilschienen zueinander und detaillierte Abmessungen der Profilschienen selbst.), die Türen und die Lüfter.\\
-    \paragraph{Digitaler Zwilling - Schritte}\mbox{}\\ 
+
+    \paragraph{Digitaler Zwilling - Umsetzung}\mbox{}\\ 
+
     \begin{wrapfigure}{r}{0.3\textwidth}
         \vspace{-20px}
         \includegraphics[width=0.3\textwidth]{Prototyp_Serverschrank.PNG}
@@ -106,7 +107,7 @@
         \label{fig:Clean_Serverschrank}
     \end{wrapfigure}
 
-    Mit dem fertig konstruierten Serverschrank, kann dann die Planung der Module beginnen. Dafür wird vorerst ein Konzept erstellt. Durchgedacht wird welche elektrischen Baugruppen wo im Schaltschrank platziert werden sollen. Das Konzept richtet sich einerseits nach der Vorgabe, zusammengehörige Elemente sollen auf dasselbe Modul kommen, und andererseits zusammenhängende Module sollen sich möglichst nahe sein. 
+    Mit dem fertig konstruierten Serverschrank, kann dann die Planung der Module beginnen. Dafür wird vorerst ein Konzept erstellt. Durchgedacht wird welche elektrischen Baugruppen wo im Schaltschrank platziert werden sollen. Das Konzept richtet sich einerseits nach der Vorgabe, zusammengehörige elektrische Komponenten sollen auf dasselbe Modul kommen, und andererseits zusammenhängende Module sollen sich möglichst nahe sein. 
     \paragraph{Modul 1 - Bedienelemente}\mbox{}\\
     Es sollen im Schaltschrank ein Notaus, ein Schlüsselschalter und ein Drehstromschalter verbaut werden. Diese Elemente werden gemeinsam auf einem Modul verbaut, da sie alle Bedienelemente sind.
     \paragraph{Modul 2 bis 3 - Schutzorgane und Versorgungen}\mbox{}\\
@@ -120,9 +121,14 @@
     \paragraph{Modul 6 - Schrittmotoren}\mbox{}\\
     Für die stärkeren Schrittmotoren werden Treiber verwendet die direkt auf einen Untergund montiert werden müssen. Die vierTreiber werden auf eine eigene Platte montiert. Auch auf diesem Modul ist ein Verdrahtungskanal nötig.
     \paragraph{Modul 7 - Ausgangsmodul}\mbox{}\\
-    Am Ausgangsmodul soll einen Verdrahtungskanal haben und eine durchgängige Huttschiene. Auf diese Hutschine kommen Elemente wie die Motorschütz, Relais, die Treiber für die schwächeren Schrittmotoren und eine ausführliche Menge an Reihenklemmen.\\
+    Am Ausgangsmodul soll einen Verdrahtungskanal haben und eine durchgängige Huttschiene. Auf diese Hutschine kommen Elemente wie die Motorschütz, Relais, die Treiber für die schwächeren Schrittmotoren und eine ausführliche Menge an Reihenklemmen.
     \paragraph{Modul 8 - Erdungsmodul}\mbox{}\\
-    Etwaige Kabel des AFSS haben einen Schrim der geerdet gehört. Deswegen ist eine Erdungsplatte nötig die aus leitfähigen Aluminium gemacht werden soll. Auf dieser ist eine Ankerschiene geplant. Zudem sollen in dieses Modul vier rechteckige Ausfräsungen gemacht werden, in welche der nichtsteckbare Teil der RJ45-Stecker hineinpasst.\\
+    Etwaige Kabel des AFSS haben einen Schrim der geerdet gehört. Deswegen ist eine Erdungsplatte nötig die aus leitfähigen Aluminium gemacht werden soll. Auf dieser ist eine Ankerschiene zur Erdung von Leiterschirmen geplant. Zudem sollen in dieses Modul vier rechteckige Ausfräsungen gemacht werden, in welche die Buchse des RJ45-Stecker hineinpasst.
+
+    \paragraph{Fusion 360}\mbox{}\\
+    Die einzelnden Module wurden, nachdem die Konzeptionierung beendet wurde, in Fusion360 gezeichnet. Dafür wurden zuerst die einzelnden Komponenten wie Hutschinen, Verdrahtungskanäle, Gleichrichter und alle anderen Komponenten als unabhängige Konstruktion gezeichnet. Damit wurde eine breite Bibliothek an Komponenten erstellt, mit dieser kann man dan wesendlich einfacher den digitalen Schaltschrank bestücken. 
+    -Beispielbilder
+
 
     -Module: Ist der Schaltchrank fertig übernommen aus der realität kann man anfangen mit einem Modul. Dabei fällt einem zum Beispiel schon eine sache auf, sowie die Tatsache, dass wenn man die Profilschinen an der selben Position lässt würden sich die Türen nicht schließen lassen. Folge daraus ist, die Profilschinen müssen verschoben werden. Der Aufbau des Serverschranks lässt dies zu.
 
