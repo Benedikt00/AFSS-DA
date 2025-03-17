@@ -28,7 +28,7 @@
     \paragraph{Schaltschrank}\mbox{}\\
     Grundsätzlich haben Schaltschränke genormte Anforderungen (IEC 60208 und IEC 61439).\\
     Dazu gehört eine Auslegung von Kabelkanäle, die die Kabel schützen soll und Umbauten nicht zusätzlich erschweren sollen. Freifliegende Kabel sollen unter allen Umständen verhindert werden. Das Gehäuse muss geerdet sein und die inneren Komponenten vor Staub und Schmutz schützen. Bei einem potenziellen Lichtbogen soll der Schaltschrank Personen in der Nähe schützen. Zudem muss der Schrank gegen thermische Einflüsse geschützt sein, gegebenenfalls soll der Schaltschrank über eine Belüftung verfügen.\\
-    Der Serverschrank schütz gegen Staub und Schutz und kommt mit einer Lüfteranlage, die die Abwärme von mehereren Gleichrichtern gut abführen kann. Zudem sind die Materialen des Schrankes vor Korrosion geschützt. \cite{Schaltschrank-Anforderungen} \\
+    Der Serverschrank, für den wir uns entschieden haben, schütz gegen Staub und Schutz und kommt mit einer Lüfteranlage, die die Abwärme von mehereren Gleichrichtern gut abführen kann. Zudem sind die Materialen des Schrankes vor Korrosion geschützt. \cite{Schaltschrank-Anforderungen} \\
     Bei der Planung muss beachtet werden, dass die Erdung aller leitungsfähigen Elemente eingehalten wird. Außerdem dürfen Umbauten wie die Montage von Rädern keine der angeführten Anforderungen widersprechen.
 
     \paragraph{Kabelauslegung}\mbox{}\\
@@ -39,6 +39,19 @@
 
 \subsubsection{Mechanische Planung}
 
+    \paragraph{Schaltschrankrahmen}\mbox{}\\
+    Bevor man sich den Details des Schaltschrankes widmet, muss vorerst der Rahmen festgelegt werden. Grundsätzlich würde man einen herkömmlichen Schaltschrank verwenden, allerdings sind diese teuer und erfüllen auch nicht unsere Anforderung der Mobilität. Deswegen wurden mehrere alternative Optionen in Betracht gezogen. Anfangs wurde der Ansatz verfolgt die elektrischen Komponenten in den Lagerschrank selbst einzubauen. Dabei hätte man entweder einen eigenen Abteil ins AFSS einplanen können, der auch mittels entsprechendem Material räumlich getrennt wäre, oder man hätte die Elemente fluide unterbringen können. Mit Letzteren ist gemeint, dass in dem ganzen Schrank verteilt die elektirschen Komponenten montiert wären.\\
+    Die fluide Variante benötigt sorgfälltige Planung und auch sorgfälltige Absprache mit der restlichen mechanischen Planung des AFSS. Dafür hätte man eine kompacktes Design aber das Risiko für Verletzungen und Schäden wäre höher, da man die elektrischen Komponenten nur schwer räumlich trennen könnte, so wie es die Wände eines Schaltschrankes machen. Aufbauend auf dem fehlenden Sicherheitsaspekt und der Tatsache, dass die benötigte Kommunikation in einer Entwicklungsphase nicht möglich wäre, wurde sich gegen die fluide Option entschieden.\\
+    Wesendlich realistischer ist der Ansatz ein eigenes kleines Abteil in den Schrank einzubauen. Der Rahmen wäre, sowie das Lager, aus Aluminiumprofilen gebaut und die jeweiligen Seiten würden mit Kunstsoffen verkleidet werden. Um die räumliche Trennung zu gewährleisten. Diese Option wäre Kommunikationstechnisch möglich, da man sich mit der restlichen mechanischen Planung nur auf die Außenmase und Position dieses Abteils einigen müsste. Allerdings bedeutet ein intigriertes Abteil auch weniger Lagerplätze und einen merkbaren Zusatzaufwand in der Realisierung. Da so viele Lagerplätze wie möglich verwirklicht werden sollen wurde sich gegen diese Variante entschieden.\\
+    \begin{wrapfigure}{r}{0.5\textwidth}
+        \vspace{-30px}
+        \includegraphics[width=0.5\textwidth]{Serverschrank_original.jpg}
+        \caption{Serverschrank bei Übergabe ans AFSS-Team}
+        \vspace{-20px}
+        \label{fig:Serverschrank_original}
+    \end{wrapfigure}
+    Auf der weiteren Suche nach einer Alternative zum herkömmlichen Schaltschrank wurde die Möglichkeit, einen alten Serverschrank zu recyclen erkannt. Ein fertig gebauter Schrank, der im Fehlerfall die Umgebung ausreichend schützt und keine Zusatzkosten mit sich bring war die beste Option. Die im Inneneren bereits vorhandenen Profilschienen bieten viele Möglichkeiten für die Elektrik montiert zu weden. Zudem bietet der Innenraum des Serverschrankes viel Platz und auch die Möglichkeit die Elektrik, wenn nötig, zügig zu erweitern, da man die Profilschienen sehr indiviuell nutzen kann.\\
+    Es wurde sich somit entschieden den Serverschrank zu einem Schaltschrank umzubauen. Im Zuge des Umbaus würde der Innenraum umgebaut werden und der Serverschrank müsste auch mobil gemacht werden. 
     \paragraph{Modulprinzip}\mbox{}\\
     Im Zuge dieses Projektes wurde das Innenleben des Schaltschrankes auf mehrere Module getrennt. Die Anforderungen an diese wurden schon beschrieben, doch ursprünglich waren weitere Alternativen für den Innenraum des Serverschrankes in Diskussion.\\
     Anstatt von mehreren Modulen, die später genauer beschrieben werden, könnte man eine durchgehende Platte verwenden und diese an die Profilschienen des Serverschrankes festschrauben. Der große Vorteil einer durchgehenden Platte ist, man könnte die Elemente so anordnen, dass die Fläche von Leerräumen  minimiert wird. Die große Platte entfällt als Möglichkeit allerdings insofern, da diese nicht in der Schule produzierbar gewesen wäre.\\
@@ -67,7 +80,7 @@
         \label{fig:digilaerZwilling}
     \end{figure}
     
-    Es setzt auch ein breites Feld an Firmen auf dieses Prinzip. Firmen wie Weidmüller, Komax, Steinhauer und noch viele mehr haben eine Firmenzusammenarbeit, die ohne einen digitalen Zwilling nicht möglich wäre \cite{smart_cabinet_building}. In diesem Fall werden die jeweiligen Prozessschritte meistens von einer neuen Firma übernommen, in diesem Bündnis ist der digitale Zwilling der Schlüssel zum Erfolg. Man kann dieses Prinzip der Dokumentation bzw. Planung als Industriestandard verstehen.\\
+    Es setzt auch ein breites Feld an Firmen auf dieses Prinzip. Firmen wie Weidmüller, Komax, Steinhauer und noch viele mehr haben eine Firmenzusammenarbeit, die ohne einen digitalen Zwilling nicht möglich wäre \cite{smart_cabinet_building}. In diesem Fall werden die jeweiligen Prozessschritte meistens von einer neuen Firma übernommen. In diesem Bündnis ist der digitale Zwilling der Schlüssel zum Erfolg. Man kann dieses Prinzip der Dokumentation bzw. Planung als Industriestandard verstehen.\\
     Um den Prozess der Herstellung des Schaltschrankes möglichst nahe an die Praktiken aus der Industrie anzugleichen, wird auch der Schaltschrank des AFSS mithilfe eines digitalen Zwillings geplant. Dieser wird in Fusion360 gezeichnet und soll den Sollzustand des Schaltschrankes abbilden.\\
     Um die Konstruktion anzufangen, braucht es eine möglichst ausführliche Ausmessung des bereits bestehenden Serverschrankes. Besonders wichtig sind die Elemente die direkt am Umbau beteiligt sind, wie die Profilschienen (Abstände der Löcher, Abstände der Profilschienen zueinander und detaillierte Abmessungen der Profilschienen selbst.), die Türen und die Lüfter.\\
     \paragraph{Digitaler Zwilling - Schritte}\mbox{}\\ 
@@ -117,7 +130,7 @@
 
     -Dieser soll auch immer die akktuelle version abbilden
 
-
+    \paragraph{Räder}
 \subsection{Realisierung}
 \label{sec:Schaltplan}
 
