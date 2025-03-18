@@ -124,18 +124,30 @@
     Am Ausgangsmodul soll einen Verdrahtungskanal haben und eine durchgängige Huttschiene. Auf diese Hutschine kommen Elemente wie die Motorschütz, Relais, die Treiber für die schwächeren Schrittmotoren und eine ausführliche Menge an Reihenklemmen.
     \paragraph{Modul 8 - Erdungsmodul}\mbox{}\\
     Etwaige Kabel des AFSS haben einen Schrim der geerdet gehört. Deswegen ist eine Erdungsplatte nötig die aus leitfähigen Aluminium gemacht werden soll. Auf dieser ist eine Ankerschiene zur Erdung von Leiterschirmen geplant. Zudem sollen in dieses Modul vier rechteckige Ausfräsungen gemacht werden, in welche die Buchse des RJ45-Stecker hineinpasst.
-
+    \begin{wrapfigure}{r}{0.3\textwidth}
+        \vspace{0px}
+        \includegraphics[width=0.3\textwidth]{Vogis Bilder/SITOP_Konstruiert.png}
+        \caption{Siemens SITOP in Fusion360}
+        \vspace{-30px}
+        \label{fig:SITOP_Konstrueiert}
+    \end{wrapfigure}
     \paragraph{Fusion 360}\mbox{}\\
-    Die einzelnden Module wurden, nachdem die Konzeptionierung beendet wurde, in Fusion360 gezeichnet. Dafür wurden zuerst die einzelnden Komponenten wie Hutschinen, Verdrahtungskanäle, Gleichrichter und alle anderen Komponenten als unabhängige Konstruktion gezeichnet. Damit wurde eine breite Bibliothek an Komponenten erstellt, mit dieser kann man dan wesendlich einfacher den digitalen Schaltschrank bestücken. 
-    -Beispielbilder
-
-
-    -Module: Ist der Schaltchrank fertig übernommen aus der realität kann man anfangen mit einem Modul. Dabei fällt einem zum Beispiel schon eine sache auf, sowie die Tatsache, dass wenn man die Profilschinen an der selben Position lässt würden sich die Türen nicht schließen lassen. Folge daraus ist, die Profilschinen müssen verschoben werden. Der Aufbau des Serverschranks lässt dies zu.
-
-    -Weitere Module: diese werden dann auch in Fusion360 gezeichnet und dann in den digitalen Zwilling eingefügt. Dabei kann man schön erkennen wie die Module Anneinander gereiht gehören, welche Reihenfolge sinnvoll ist und ob sich die Menge an Elektrischen Einheiten auch ausgeht mit den Modulen. 
-
-    -Dieser soll auch immer die akktuelle version abbilden
-
+    Die einzelnden Module wurden, nachdem die Konzeptionierung beendet wurde, in Fusion360 gezeichnet. Dafür wurden zuerst die einzelnden Komponenten wie Hutschinen, Verdrahtungskanäle, Gleichrichter und alle anderen Komponenten als unabhängige Konstruktion gezeichnet. Damit wurde eine breite Bibliothek an Komponenten erstellt, mit dieser kann man dann wesentlich einfacher den digitalen Schaltschrank bestücken. Bei den jeweiligen Elementen ist es nicht wichtig kleinere Details miteinzubeziehen, vielmehr die Außenmase und die Positionen von Montagelöchern oder des Klemmmechanismuses für die Hutschiene sollen akkurat abgebildet sein (siehe \ref{fig:SITOP_Konstrueiert}).
+    \begin{wrapfigure}{r}{0.4\textwidth}
+        \vspace{0px}
+        \includegraphics[width=0.4\textwidth]{Vogis Bilder/Bestuekter_Schaltschrank_Fusion.jpg}
+        \caption{Der Schaltschrank in Fusion gezeichnet}
+        \vspace{-30px}
+        \label{fig:Schaltschrank_bestueckt_Fusion}
+    \end{wrapfigure}
+    \paragraph{Fusion 360}\mbox{}\\
+    Nachdem man die einzelnen elektrischen Komponenten gezeichnet hat, wurde in Fusion die erste Platte gezeichnet. Hierbei muss man nicht direkt die richtige Größe einschätzen, da Fusion späte Änderungen gut zulässt. Nachdem man eine Platte im Serverschrank konstruiert hat, kann man die Hutschienen und Verdrahtungskanäle einfügen. Daraufhin kann man die Unterkonstruktion bestücken. Beim Einfügen von Konstruktionen in andere Konstruktionen bleiben die kopierten Elemente mit der originalen Zeichnung verknüpft. Diese Verknüpfung wurde bei den Elemten gelassen, die keine Änderungen erwarten doch bei Komponenten wie eines Verdrahtungskanals sollte man die Verknüpfung trennen um das Element zuschneiden zu können. Eine Verknüpfung bedeutet, dass Veränderungen nur in der ursprünglichen Zeichnung getätigt werden können. So wurde Modul nach Modul ausgeplant.\\
+    Beim Zeichnen fiel auf, dass die Module aus dem Serverschrank, beziehungsweise Schaltschrank, rausragten. Es wurde erkannt, dass die Profilschienen nach innen verschoben werden müssen um zu ermöglichen, dass sich die Wände des Schaltschrankes auch schließen lassen. Die Bauart des Serverschrankes erlaubt eine solche Veränderung.\\ 
+    Es wurden, bis auf das Erdungsmodul, alle Module auf diese Art konstruiert. Man konnte schön erkennen welche Reihenfolgen sinnvoll sind und wie sich welche Komponenten am besten montieren lassen können. Beispielsweise wurde ausgetestet ob bei gewissen elektrischen Komponenten eine vertikale Montage zielführend waren. In der Abbildung \ref{fig:Schaltschrank_bestueckt_Fusion} sieht man die fertige Konstruktion des Schaltschrankes.\\
+    Zu dieser Version des Schaltschrankes ist zu sagen, dass ab der Realisierung des Geplanten, dieser digitale Plan sich fließend transformiert, zum digitalen Zwilling. Dieser Zwilling gehört nach der Realisierung konstant gepflegt. Das Erdungsmodul beispielsweise, welches erst mitten in der Realisierung eingeplant und gemacht wurde, muss in den digitalen Zwilling nachträglich hinzugefügt werden.
+    \paragraph{AutoCAD}\mbox{}\\
+    Nachem der digitale Plan/Zwilling vollständig ausgeplant wurde, mussten die jeweiligen Platten gefräst werden.Um die Platten auch fräsen zu können müssen diese zuerst als DXF-Datei in Filou-NC eingefügt werden. Dazu mussten die einzelnen Module in AutoCAD nachgezeichnet werden. Idealerweise hätte man hierfür nur die Oberfläche der Platten in Fusion zur Skizze gemacht und diese dann als DXF exportiert. Bei einem nachträglichen Ausmessen der 3D-Konstruktion wurde allerdings festgestellt, dass sich die Maße der Löcher der Profilschiene nicht mit der Realität decken. Zudem wurden weitere minimale Abweichungen festgestellt. Keiner der Fehler war so gravierend, dass man die Konstruktion des Schaltschrankes nicht weiterverwenden könnt aber für eine präzise Fräsung war die Fusion-Konstruktion nicht geeignet. Deswegen wurden sorgfälltig alle Module in AutoCAD nachgezeichnet.\\ 
+    Beim Nachzeichnen wurde alle fehlerhaften Mase ausgebessert. Mit den ausgebesserten Mase wurde festgestellt, dass sich beim Modul 6 die vier Schrittmotortreiber nicht vertikal nebeneinander ausgehen. Deswegen wurde in AutoCAD einer der Treiber vertikal angeordnet.
     \paragraph{Räder}
 \subsection{Realisierung}
 \label{sec:Schaltplan}
