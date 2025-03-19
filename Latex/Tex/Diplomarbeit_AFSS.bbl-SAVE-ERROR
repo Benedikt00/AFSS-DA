@@ -499,6 +499,35 @@
       \verb https://www.opc-router.de/was-ist-opc-ua/
       \endverb
     \endentry
+    \entry{Schaltschrank-Anforderungen}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a21be47e6ad732c3758a7bf13ef6346d}{%
+           family={buerklin},
+           familyi={b\bibinitperiod}}}%
+      }
+      \strng{namehash}{a21be47e6ad732c3758a7bf13ef6346d}
+      \strng{fullhash}{a21be47e6ad732c3758a7bf13ef6346d}
+      \strng{fullhashraw}{a21be47e6ad732c3758a7bf13ef6346d}
+      \strng{bibnamehash}{a21be47e6ad732c3758a7bf13ef6346d}
+      \strng{authorbibnamehash}{a21be47e6ad732c3758a7bf13ef6346d}
+      \strng{authornamehash}{a21be47e6ad732c3758a7bf13ef6346d}
+      \strng{authorfullhash}{a21be47e6ad732c3758a7bf13ef6346d}
+      \strng{authorfullhashraw}{a21be47e6ad732c3758a7bf13ef6346d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{17}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.buerklin.com/de/elektronik-kompetenz/instandhaltung/sicherheit-im-schaltschrankbau/
+      \endverb
+      \verb{url}
+      \verb https://www.buerklin.com/de/elektronik-kompetenz/instandhaltung/sicherheit-im-schaltschrankbau/
+      \endverb
+    \endentry
     \entry{Dibond-Platte}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=b4a3a9cc7199be59083b9d95e4cb0a3e}{%
@@ -683,8 +712,8 @@
       \strng{authorfullhash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorfullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -827,6 +856,7 @@
       \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
+      \field{extraname}{1}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -840,6 +870,64 @@
       \endverb
       \verb{url}
       \verb https://cdn.sick.com/media/pdf/4/44/644/dataSheet_CLV615-D2410_1068608_de.pdf
+      \endverb
+    \endentry
+    \entry{BarScan_Handbuch}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
+           family={SICK},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{fullhash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{fullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{bibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorbibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://de.scribd.com/document/483825902/SICK-Lector-CLV6XX-PNDP-V1-1-TIA-DE-pdf
+      \endverb
+      \verb{url}
+      \verb https://de.scribd.com/document/483825902/SICK-Lector-CLV6XX-PNDP-V1-1-TIA-DE-pdf
+      \endverb
+    \endentry
+    \entry{BarScan_pic}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
+           family={SICK},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{fullhash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{fullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{bibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorbibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Produktbild}
+      \verb{urlraw}
+      \verb https://cdn.sick.com/media/pim/5/35/135/IM0058135.png
+      \endverb
+      \verb{url}
+      \verb https://cdn.sick.com/media/pim/5/35/135/IM0058135.png
       \endverb
     \endentry
   \enddatalist
