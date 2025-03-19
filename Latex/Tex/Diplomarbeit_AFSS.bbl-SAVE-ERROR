@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global/global}
-    \entry{pickengine}{misc}{}{}
+  \datalist[entry]{none/global//global/global}
+    \entry{pickengine}{misc}{}
       \name{author}{1}{}{%
         {{hash=4997c4e370012cb0cdfbf15bf2389b44}{%
            family={Pickengine},
@@ -27,12 +27,10 @@
       }
       \strng{namehash}{4997c4e370012cb0cdfbf15bf2389b44}
       \strng{fullhash}{4997c4e370012cb0cdfbf15bf2389b44}
-      \strng{fullhashraw}{4997c4e370012cb0cdfbf15bf2389b44}
       \strng{bibnamehash}{4997c4e370012cb0cdfbf15bf2389b44}
       \strng{authorbibnamehash}{4997c4e370012cb0cdfbf15bf2389b44}
       \strng{authornamehash}{4997c4e370012cb0cdfbf15bf2389b44}
       \strng{authorfullhash}{4997c4e370012cb0cdfbf15bf2389b44}
-      \strng{authorfullhashraw}{4997c4e370012cb0cdfbf15bf2389b44}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -46,7 +44,7 @@
       \verb https://www.pickengine.com/
       \endverb
     \endentry
-    \entry{Eagle_in_Fusion}{misc}{}{}
+    \entry{Eagle_in_Fusion}{misc}{}
       \name{author}{1}{}{%
         {{hash=983ea436405fa9ab72f858e1f1b874a7}{%
            family={Autodesk},
@@ -54,12 +52,10 @@
       }
       \strng{namehash}{983ea436405fa9ab72f858e1f1b874a7}
       \strng{fullhash}{983ea436405fa9ab72f858e1f1b874a7}
-      \strng{fullhashraw}{983ea436405fa9ab72f858e1f1b874a7}
       \strng{bibnamehash}{983ea436405fa9ab72f858e1f1b874a7}
       \strng{authorbibnamehash}{983ea436405fa9ab72f858e1f1b874a7}
       \strng{authornamehash}{983ea436405fa9ab72f858e1f1b874a7}
       \strng{authorfullhash}{983ea436405fa9ab72f858e1f1b874a7}
-      \strng{authorfullhashraw}{983ea436405fa9ab72f858e1f1b874a7}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -75,7 +71,7 @@
       \verb https://www.autodesk.com/de/support/technical/article/caas/sfdcarticles/sfdcarticles/DEU/Autodesk-EAGLE-now-included-with-Fusion-360.html
       \endverb
     \endentry
-    \entry{TIA_Portal_Programmiersprachen}{misc}{}{}
+    \entry{TIA_Portal_Programmiersprachen}{misc}{}
       \name{author}{1}{}{%
         {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
            family={Siemens},
@@ -83,12 +79,10 @@
       }
       \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{fullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
@@ -105,7 +99,7 @@
       \verb https://www.automation.siemens.com/sce-static/learning-training-documents/tia-portal/hw-config-s7-1200/programming-guideline-de.pdf
       \endverb
     \endentry
-    \entry{How_to_PrusaSlicer}{misc}{}{}
+    \entry{How_to_PrusaSlicer}{misc}{}
       \name{author}{1}{}{%
         {{hash=7cad62a52994cc90c61721ce8dcaf899}{%
            family={Josef\bibnamedelima Prusa},
@@ -117,12 +111,10 @@
       }
       \strng{namehash}{7cad62a52994cc90c61721ce8dcaf899}
       \strng{fullhash}{7cad62a52994cc90c61721ce8dcaf899}
-      \strng{fullhashraw}{7cad62a52994cc90c61721ce8dcaf899}
       \strng{bibnamehash}{7cad62a52994cc90c61721ce8dcaf899}
       \strng{authorbibnamehash}{7cad62a52994cc90c61721ce8dcaf899}
       \strng{authornamehash}{7cad62a52994cc90c61721ce8dcaf899}
       \strng{authorfullhash}{7cad62a52994cc90c61721ce8dcaf899}
-      \strng{authorfullhashraw}{7cad62a52994cc90c61721ce8dcaf899}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -138,7 +130,61 @@
       \verb https://help.prusa3d.com/de/article/erster-druck-mit-prusaslicer_1753
       \endverb
     \endentry
-    \entry{igus}{misc}{}{}
+    \entry{knapp}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=477364c6e0713bc42546546e7344729a}{%
+           family={knapp},
+           familyi={k\bibinitperiod}}}%
+      }
+      \strng{namehash}{477364c6e0713bc42546546e7344729a}
+      \strng{fullhash}{477364c6e0713bc42546546e7344729a}
+      \strng{bibnamehash}{477364c6e0713bc42546546e7344729a}
+      \strng{authorbibnamehash}{477364c6e0713bc42546546e7344729a}
+      \strng{authornamehash}{477364c6e0713bc42546546e7344729a}
+      \strng{authorfullhash}{477364c6e0713bc42546546e7344729a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.knapp.com/
+      \endverb
+      \verb{url}
+      \verb https://www.knapp.com/
+      \endverb
+    \endentry
+    \entry{weidmueller}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=574ca99393463f5ee79f2beceea3532c}{%
+           family={weidmueller},
+           familyi={w\bibinitperiod}}}%
+      }
+      \strng{namehash}{574ca99393463f5ee79f2beceea3532c}
+      \strng{fullhash}{574ca99393463f5ee79f2beceea3532c}
+      \strng{bibnamehash}{574ca99393463f5ee79f2beceea3532c}
+      \strng{authorbibnamehash}{574ca99393463f5ee79f2beceea3532c}
+      \strng{authornamehash}{574ca99393463f5ee79f2beceea3532c}
+      \strng{authorfullhash}{574ca99393463f5ee79f2beceea3532c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.weidmueller.at/de/unternehmen/unser_unternehmen/wer_wir_sind/index.jsp
+      \endverb
+      \verb{url}
+      \verb https://www.weidmueller.at/de/unternehmen/unser_unternehmen/wer_wir_sind/index.jsp
+      \endverb
+    \endentry
+    \entry{igus}{misc}{}
       \name{author}{1}{}{%
         {{hash=275bc2840466945fc42987336265a331}{%
            family={igus},
@@ -146,15 +192,13 @@
       }
       \strng{namehash}{275bc2840466945fc42987336265a331}
       \strng{fullhash}{275bc2840466945fc42987336265a331}
-      \strng{fullhashraw}{275bc2840466945fc42987336265a331}
       \strng{bibnamehash}{275bc2840466945fc42987336265a331}
       \strng{authorbibnamehash}{275bc2840466945fc42987336265a331}
       \strng{authornamehash}{275bc2840466945fc42987336265a331}
       \strng{authorfullhash}{275bc2840466945fc42987336265a331}
-      \strng{authorfullhashraw}{275bc2840466945fc42987336265a331}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{1}
@@ -168,7 +212,7 @@
       \verb https://www.igus.at/unternehmen
       \endverb
     \endentry
-    \entry{lapp}{misc}{}{}
+    \entry{lapp}{misc}{}
       \name{author}{1}{}{%
         {{hash=f9e98b328044a9689e0d48e3d253f6a0}{%
            family={lapp},
@@ -176,14 +220,12 @@
       }
       \strng{namehash}{f9e98b328044a9689e0d48e3d253f6a0}
       \strng{fullhash}{f9e98b328044a9689e0d48e3d253f6a0}
-      \strng{fullhashraw}{f9e98b328044a9689e0d48e3d253f6a0}
       \strng{bibnamehash}{f9e98b328044a9689e0d48e3d253f6a0}
       \strng{authorbibnamehash}{f9e98b328044a9689e0d48e3d253f6a0}
       \strng{authornamehash}{f9e98b328044a9689e0d48e3d253f6a0}
       \strng{authorfullhash}{f9e98b328044a9689e0d48e3d253f6a0}
-      \strng{authorfullhashraw}{f9e98b328044a9689e0d48e3d253f6a0}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{3}
@@ -197,7 +239,7 @@
       \verb https://www.lapp.com/de/at/unternehmen/ueber-lapp-oesterreich/e/000123
       \endverb
     \endentry
-    \entry{mädler}{misc}{}{}
+    \entry{mädler}{misc}{}
       \name{author}{1}{}{%
         {{hash=786bd28f73b2ab12bb63b72d727477d6}{%
            family={mädler},
@@ -205,14 +247,12 @@
       }
       \strng{namehash}{786bd28f73b2ab12bb63b72d727477d6}
       \strng{fullhash}{786bd28f73b2ab12bb63b72d727477d6}
-      \strng{fullhashraw}{786bd28f73b2ab12bb63b72d727477d6}
       \strng{bibnamehash}{786bd28f73b2ab12bb63b72d727477d6}
       \strng{authorbibnamehash}{786bd28f73b2ab12bb63b72d727477d6}
       \strng{authornamehash}{786bd28f73b2ab12bb63b72d727477d6}
       \strng{authorfullhash}{786bd28f73b2ab12bb63b72d727477d6}
-      \strng{authorfullhashraw}{786bd28f73b2ab12bb63b72d727477d6}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{3}
@@ -226,7 +266,7 @@
       \verb https://www.maedler.de/Static/Videos
       \endverb
     \endentry
-    \entry{Item_svs}{misc}{}{}
+    \entry{Item_svs}{misc}{}
       \name{author}{1}{}{%
         {{hash=06fac78b304046dda09b903f7f5159ff}{%
            family={elektro4000de},
@@ -234,14 +274,12 @@
       }
       \strng{namehash}{06fac78b304046dda09b903f7f5159ff}
       \strng{fullhash}{06fac78b304046dda09b903f7f5159ff}
-      \strng{fullhashraw}{06fac78b304046dda09b903f7f5159ff}
       \strng{bibnamehash}{06fac78b304046dda09b903f7f5159ff}
       \strng{authorbibnamehash}{06fac78b304046dda09b903f7f5159ff}
       \strng{authornamehash}{06fac78b304046dda09b903f7f5159ff}
       \strng{authorfullhash}{06fac78b304046dda09b903f7f5159ff}
-      \strng{authorfullhashraw}{06fac78b304046dda09b903f7f5159ff}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{urlday}{19}
       \field{urlmonth}{11}
@@ -254,7 +292,7 @@
       \verb https://www.elektro4000.de/Kabel-Leitungen/Kabeltragsysteme/Stiel-Profilschienen/Verbinder/Item-Standard-Verbindungssatz-0-0-026-07::1743227.html
       \endverb
     \endentry
-    \entry{v_slot_wheel}{misc}{}{}
+    \entry{v_slot_wheel}{misc}{}
       \name{author}{1}{}{%
         {{hash=5e2fda1798ce953a9d4e9ae67f592ccc}{%
            family={globalsources.com},
@@ -262,12 +300,10 @@
       }
       \strng{namehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \strng{fullhash}{5e2fda1798ce953a9d4e9ae67f592ccc}
-      \strng{fullhashraw}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \strng{bibnamehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \strng{authorbibnamehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \strng{authornamehash}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \strng{authorfullhash}{5e2fda1798ce953a9d4e9ae67f592ccc}
-      \strng{authorfullhashraw}{5e2fda1798ce953a9d4e9ae67f592ccc}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -282,7 +318,7 @@
       \verb https://www.globalsources.com/Plastic-coated/plastic-coated-bearing-1197379614p.html
       \endverb
     \endentry
-    \entry{igus_freitragend}{misc}{}{}
+    \entry{igus_freitragend}{misc}{}
       \name{author}{1}{}{%
         {{hash=275bc2840466945fc42987336265a331}{%
            family={igus},
@@ -290,12 +326,10 @@
       }
       \strng{namehash}{275bc2840466945fc42987336265a331}
       \strng{fullhash}{275bc2840466945fc42987336265a331}
-      \strng{fullhashraw}{275bc2840466945fc42987336265a331}
       \strng{bibnamehash}{275bc2840466945fc42987336265a331}
       \strng{authorbibnamehash}{275bc2840466945fc42987336265a331}
       \strng{authornamehash}{275bc2840466945fc42987336265a331}
       \strng{authorfullhash}{275bc2840466945fc42987336265a331}
-      \strng{authorfullhashraw}{275bc2840466945fc42987336265a331}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -315,7 +349,7 @@
       \verb https://www.igus.at/service/kontakt/energieketten-tipps-fuer-freitragende-bewegung
       \endverb
     \endentry
-    \entry{igus_vertikal}{misc}{}{}
+    \entry{igus_vertikal}{misc}{}
       \name{author}{1}{}{%
         {{hash=275bc2840466945fc42987336265a331}{%
            family={igus},
@@ -323,12 +357,10 @@
       }
       \strng{namehash}{275bc2840466945fc42987336265a331}
       \strng{fullhash}{275bc2840466945fc42987336265a331}
-      \strng{fullhashraw}{275bc2840466945fc42987336265a331}
       \strng{bibnamehash}{275bc2840466945fc42987336265a331}
       \strng{authorbibnamehash}{275bc2840466945fc42987336265a331}
       \strng{authornamehash}{275bc2840466945fc42987336265a331}
       \strng{authorfullhash}{275bc2840466945fc42987336265a331}
-      \strng{authorfullhashraw}{275bc2840466945fc42987336265a331}
       \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -348,7 +380,7 @@
       \verb https://www.igus.at/service/kontakt/energieketten-tipps-stehende-anwendungen
       \endverb
     \endentry
-    \entry{chatgpt}{misc}{}{}
+    \entry{chatgpt}{misc}{}
       \name{author}{1}{}{%
         {{hash=0523b13262b12c215d8009938f5c14f1}{%
            family={OpenAI},
@@ -356,12 +388,10 @@
       }
       \strng{namehash}{0523b13262b12c215d8009938f5c14f1}
       \strng{fullhash}{0523b13262b12c215d8009938f5c14f1}
-      \strng{fullhashraw}{0523b13262b12c215d8009938f5c14f1}
       \strng{bibnamehash}{0523b13262b12c215d8009938f5c14f1}
       \strng{authorbibnamehash}{0523b13262b12c215d8009938f5c14f1}
       \strng{authornamehash}{0523b13262b12c215d8009938f5c14f1}
       \strng{authorfullhash}{0523b13262b12c215d8009938f5c14f1}
-      \strng{authorfullhashraw}{0523b13262b12c215d8009938f5c14f1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -374,7 +404,7 @@
       \field{year}{2024}
       \field{urldateera}{ce}
     \endentry
-    \entry{ws_s7}{misc}{}{}
+    \entry{ws_s7}{misc}{}
       \name{author}{1}{}{%
         {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
            family={Siemens},
@@ -382,15 +412,13 @@
       }
       \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{fullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -407,7 +435,36 @@
       \verb https://cache.industry.siemens.com/dl/files/059/109814059/att_1117153/v1/109814059_WebserverFramework_DOC_v10_de.pdf
       \endverb
     \endentry
-    \entry{Programmierleitfaden_für_S7-1500}{misc}{}{}
+    \entry{Arbeitsweise_der_SPS}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4456d6c3f160cc5d8e94c5b29011e8b9}{%
+           family={Beufsschule-Gmunden},
+           familyi={B\bibinithyphendelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4456d6c3f160cc5d8e94c5b29011e8b9}
+      \strng{fullhash}{4456d6c3f160cc5d8e94c5b29011e8b9}
+      \strng{bibnamehash}{4456d6c3f160cc5d8e94c5b29011e8b9}
+      \strng{authorbibnamehash}{4456d6c3f160cc5d8e94c5b29011e8b9}
+      \strng{authornamehash}{4456d6c3f160cc5d8e94c5b29011e8b9}
+      \strng{authorfullhash}{4456d6c3f160cc5d8e94c5b29011e8b9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{SPS-Grundlagen}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bs-gmunden1.ac.at/fileadmin/user_upload/Berufsschule-Gmunden1/Import/Lehrstoffe/SPS_S7_TIA-Portal/1._S7-1200-1500_Grundlagen.pdf
+      \endverb
+      \verb{url}
+      \verb https://bs-gmunden1.ac.at/fileadmin/user_upload/Berufsschule-Gmunden1/Import/Lehrstoffe/SPS_S7_TIA-Portal/1._S7-1200-1500_Grundlagen.pdf
+      \endverb
+    \endentry
+    \entry{Programmierleitfaden_für_S7-1500}{misc}{}
       \name{author}{1}{}{%
         {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
            family={Siemens},
@@ -415,12 +472,10 @@
       }
       \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{fullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \field{extraname}{3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -437,7 +492,37 @@
       \verb https://www.automation.siemens.com/sce-static/learning-training-documents/tia-portal/hw-config-s7-1200/programming-guideline-de.pdf
       \endverb
     \endentry
-    \entry{HTTP-Allgemein}{misc}{}{}
+    \entry{Technologieobjekte}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
+           family={Siemens},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
+      \field{extraname}{4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Technologieobjekte}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cache.industry.siemens.com/dl/files/134/109743134/att_925648/v2/109743134_S7-1500T_TechnologyObjects_DOC_v10_de.pdf
+      \endverb
+      \verb{url}
+      \verb https://cache.industry.siemens.com/dl/files/134/109743134/att_925648/v2/109743134_S7-1500T_TechnologyObjects_DOC_v10_de.pdf
+      \endverb
+    \endentry
+    \entry{HTTP-Allgemein}{misc}{}
       \name{author}{1}{}{%
         {{hash=05011fe5bea6facbac565aec3e1037d9}{%
            family={Glossar},
@@ -447,14 +532,12 @@
       }
       \strng{namehash}{05011fe5bea6facbac565aec3e1037d9}
       \strng{fullhash}{05011fe5bea6facbac565aec3e1037d9}
-      \strng{fullhashraw}{05011fe5bea6facbac565aec3e1037d9}
       \strng{bibnamehash}{05011fe5bea6facbac565aec3e1037d9}
       \strng{authorbibnamehash}{05011fe5bea6facbac565aec3e1037d9}
       \strng{authornamehash}{05011fe5bea6facbac565aec3e1037d9}
       \strng{authorfullhash}{05011fe5bea6facbac565aec3e1037d9}
-      \strng{authorfullhashraw}{05011fe5bea6facbac565aec3e1037d9}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{18}
@@ -468,7 +551,7 @@
       \verb https://www.xovi.de/was-bedeutet-http/#:~:text=HTTP%20ist%20die%20Abk%C3%BCrzung%20f%C3%BCr,Client%20und%20Webserver%20verwendet%20wird.
       \endverb
     \endentry
-    \entry{OPC-UA}{misc}{}{}
+    \entry{OPC-UA}{misc}{}
       \name{author}{1}{}{%
         {{hash=da7c28899177f06dc2e940f1295cce91}{%
            family={Router},
@@ -478,12 +561,10 @@
       }
       \strng{namehash}{da7c28899177f06dc2e940f1295cce91}
       \strng{fullhash}{da7c28899177f06dc2e940f1295cce91}
-      \strng{fullhashraw}{da7c28899177f06dc2e940f1295cce91}
       \strng{bibnamehash}{da7c28899177f06dc2e940f1295cce91}
       \strng{authorbibnamehash}{da7c28899177f06dc2e940f1295cce91}
       \strng{authornamehash}{da7c28899177f06dc2e940f1295cce91}
       \strng{authorfullhash}{da7c28899177f06dc2e940f1295cce91}
-      \strng{authorfullhashraw}{da7c28899177f06dc2e940f1295cce91}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -499,7 +580,7 @@
       \verb https://www.opc-router.de/was-ist-opc-ua/
       \endverb
     \endentry
-    \entry{Schaltschrank-Anforderungen}{misc}{}{}
+    \entry{Schaltschrank-Anforderungen}{misc}{}
       \name{author}{1}{}{%
         {{hash=a21be47e6ad732c3758a7bf13ef6346d}{%
            family={buerklin},
@@ -507,12 +588,10 @@
       }
       \strng{namehash}{a21be47e6ad732c3758a7bf13ef6346d}
       \strng{fullhash}{a21be47e6ad732c3758a7bf13ef6346d}
-      \strng{fullhashraw}{a21be47e6ad732c3758a7bf13ef6346d}
       \strng{bibnamehash}{a21be47e6ad732c3758a7bf13ef6346d}
       \strng{authorbibnamehash}{a21be47e6ad732c3758a7bf13ef6346d}
       \strng{authornamehash}{a21be47e6ad732c3758a7bf13ef6346d}
       \strng{authorfullhash}{a21be47e6ad732c3758a7bf13ef6346d}
-      \strng{authorfullhashraw}{a21be47e6ad732c3758a7bf13ef6346d}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -528,7 +607,7 @@
       \verb https://www.buerklin.com/de/elektronik-kompetenz/instandhaltung/sicherheit-im-schaltschrankbau/
       \endverb
     \endentry
-    \entry{Dibond-Platte}{misc}{}{}
+    \entry{Dibond-Platte}{misc}{}
       \name{author}{1}{}{%
         {{hash=b4a3a9cc7199be59083b9d95e4cb0a3e}{%
            family={copyservice-shop},
@@ -536,12 +615,10 @@
       }
       \strng{namehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
       \strng{fullhash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
-      \strng{fullhashraw}{b4a3a9cc7199be59083b9d95e4cb0a3e}
       \strng{bibnamehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
       \strng{authorbibnamehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
       \strng{authornamehash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
       \strng{authorfullhash}{b4a3a9cc7199be59083b9d95e4cb0a3e}
-      \strng{authorfullhashraw}{b4a3a9cc7199be59083b9d95e4cb0a3e}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -557,7 +634,7 @@
       \verb https://www.copyservice-shop.de/Alu-Verbundplatte-Dibond-A4-A3-etc
       \endverb
     \endentry
-    \entry{digitaler_zwilling_bild}{misc}{}{}
+    \entry{digitaler_zwilling_bild}{misc}{}
       \name{author}{1}{}{%
         {{hash=86889c1d215eb9acb1eee1e4ec60fa3a}{%
            family={Komaxgroup},
@@ -565,14 +642,12 @@
       }
       \strng{namehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
       \strng{fullhash}{86889c1d215eb9acb1eee1e4ec60fa3a}
-      \strng{fullhashraw}{86889c1d215eb9acb1eee1e4ec60fa3a}
       \strng{bibnamehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
       \strng{authorbibnamehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
       \strng{authornamehash}{86889c1d215eb9acb1eee1e4ec60fa3a}
       \strng{authorfullhash}{86889c1d215eb9acb1eee1e4ec60fa3a}
-      \strng{authorfullhashraw}{86889c1d215eb9acb1eee1e4ec60fa3a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{13}
@@ -586,7 +661,7 @@
       \verb https://www.komaxgroup.com/en/stories/experience-the-smart-cabinet-building-initiative-up-close-and-personal
       \endverb
     \endentry
-    \entry{smart_cabinet_building}{misc}{}{}
+    \entry{smart_cabinet_building}{misc}{}
       \name{author}{1}{}{%
         {{hash=fcb0946e958e4bd808fd1839e070cae4}{%
            family={building},
@@ -598,14 +673,12 @@
       }
       \strng{namehash}{fcb0946e958e4bd808fd1839e070cae4}
       \strng{fullhash}{fcb0946e958e4bd808fd1839e070cae4}
-      \strng{fullhashraw}{fcb0946e958e4bd808fd1839e070cae4}
       \strng{bibnamehash}{fcb0946e958e4bd808fd1839e070cae4}
       \strng{authorbibnamehash}{fcb0946e958e4bd808fd1839e070cae4}
       \strng{authornamehash}{fcb0946e958e4bd808fd1839e070cae4}
       \strng{authorfullhash}{fcb0946e958e4bd808fd1839e070cae4}
-      \strng{authorfullhashraw}{fcb0946e958e4bd808fd1839e070cae4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{13}
@@ -619,7 +692,61 @@
       \verb https://www.smart-cabinet-building.com/de/loesungsangebot/digitales_engineering/loesungsangebot_zukene3/index.jsp
       \endverb
     \endentry
-    \entry{axis_manual}{misc}{}{}
+    \entry{elektronet_steuerstromkreis_geerdet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7bd8bb99bc03251c13812ac924b0d3b2}{%
+           family={elektronet},
+           familyi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bd8bb99bc03251c13812ac924b0d3b2}
+      \strng{fullhash}{7bd8bb99bc03251c13812ac924b0d3b2}
+      \strng{bibnamehash}{7bd8bb99bc03251c13812ac924b0d3b2}
+      \strng{authorbibnamehash}{7bd8bb99bc03251c13812ac924b0d3b2}
+      \strng{authornamehash}{7bd8bb99bc03251c13812ac924b0d3b2}
+      \strng{authorfullhash}{7bd8bb99bc03251c13812ac924b0d3b2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.elektro.net/media/file/DYh4uat3cf/187f5a2f/DE_07_10_PP08.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.elektro.net/media/file/DYh4uat3cf/187f5a2f/DE_07_10_PP08.pdf
+      \endverb
+    \endentry
+    \entry{beckhoff_steuerstromkreis_geerdet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=43ba0371c03ad7bc0ed0283609a935df}{%
+           family={beckhoff},
+           familyi={b\bibinitperiod}}}%
+      }
+      \strng{namehash}{43ba0371c03ad7bc0ed0283609a935df}
+      \strng{fullhash}{43ba0371c03ad7bc0ed0283609a935df}
+      \strng{bibnamehash}{43ba0371c03ad7bc0ed0283609a935df}
+      \strng{authorbibnamehash}{43ba0371c03ad7bc0ed0283609a935df}
+      \strng{authornamehash}{43ba0371c03ad7bc0ed0283609a935df}
+      \strng{authorfullhash}{43ba0371c03ad7bc0ed0283609a935df}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Online}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://infosys.beckhoff.com/index.php?content=../content/1031/xts_hygienic_design_ba/7170992011.html&id=8528766451858564804
+      \endverb
+      \verb{url}
+      \verb https://infosys.beckhoff.com/index.php?content=../content/1031/xts_hygienic_design_ba/7170992011.html&id=8528766451858564804
+      \endverb
+    \endentry
+    \entry{axis_manual}{misc}{}
       \name{author}{1}{}{%
         {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
            family={Siemens},
@@ -627,21 +754,19 @@
       }
       \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{fullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
-      \field{extraname}{4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
       \field{title}{S7-1500/S7-1500T Achsfunktionen V5.0 im TIA Portal V16}
     \endentry
-    \entry{schmersal_3}{misc}{}{}
+    \entry{schmersal_3}{misc}{}
       \name{author}{1}{}{%
         {{hash=8ea2a0140c990c7292d13748d1f2507f}{%
            family={Schmersal},
@@ -649,15 +774,13 @@
       }
       \strng{namehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{fullhash}{8ea2a0140c990c7292d13748d1f2507f}
-      \strng{fullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{bibnamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorbibnamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authornamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorfullhash}{8ea2a0140c990c7292d13748d1f2507f}
-      \strng{authorfullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -669,7 +792,7 @@
       \verb https://products.schmersal.com/de_AT/export/product/846/pdf
       \endverb
     \endentry
-    \entry{schmersal_1}{misc}{}{}
+    \entry{schmersal_1}{misc}{}
       \name{author}{1}{}{%
         {{hash=8ea2a0140c990c7292d13748d1f2507f}{%
            family={Schmersal},
@@ -677,15 +800,13 @@
       }
       \strng{namehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{fullhash}{8ea2a0140c990c7292d13748d1f2507f}
-      \strng{fullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{bibnamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorbibnamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authornamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorfullhash}{8ea2a0140c990c7292d13748d1f2507f}
-      \strng{authorfullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -697,7 +818,7 @@
       \verb https://products.schmersal.com/de_AT/export/product/6992/pdf
       \endverb
     \endentry
-    \entry{schmersal_pic}{misc}{}{}
+    \entry{schmersal_pic}{misc}{}
       \name{author}{1}{}{%
         {{hash=8ea2a0140c990c7292d13748d1f2507f}{%
            family={Schmersal},
@@ -705,12 +826,10 @@
       }
       \strng{namehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{fullhash}{8ea2a0140c990c7292d13748d1f2507f}
-      \strng{fullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{bibnamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorbibnamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authornamehash}{8ea2a0140c990c7292d13748d1f2507f}
       \strng{authorfullhash}{8ea2a0140c990c7292d13748d1f2507f}
-      \strng{authorfullhashraw}{8ea2a0140c990c7292d13748d1f2507f}
       \field{extraname}{3}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
@@ -725,7 +844,7 @@
       \verb https://products.schmersal.com/de_AT/z4vh-335-02z-m20-101167776.html#mz-expanded-view-708407000705
       \endverb
     \endentry
-    \entry{induktiv_sensor}{misc}{}{}
+    \entry{induktiv_sensor}{misc}{}
       \name{author}{1}{}{%
         {{hash=9d188b3c46c566e646eb30679bdfc626}{%
            family={Pepperl+Fuchs},
@@ -733,14 +852,12 @@
       }
       \strng{namehash}{9d188b3c46c566e646eb30679bdfc626}
       \strng{fullhash}{9d188b3c46c566e646eb30679bdfc626}
-      \strng{fullhashraw}{9d188b3c46c566e646eb30679bdfc626}
       \strng{bibnamehash}{9d188b3c46c566e646eb30679bdfc626}
       \strng{authorbibnamehash}{9d188b3c46c566e646eb30679bdfc626}
       \strng{authornamehash}{9d188b3c46c566e646eb30679bdfc626}
       \strng{authorfullhash}{9d188b3c46c566e646eb30679bdfc626}
-      \strng{authorfullhashraw}{9d188b3c46c566e646eb30679bdfc626}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -752,7 +869,7 @@
       \verb https://files.pepperl-fuchs.com/webcat/navi/productInfo/pds/326162-0005_ger.pdf?v=20240130135820
       \endverb
     \endentry
-    \entry{TP808}{misc}{}{}
+    \entry{TP808}{misc}{}
       \name{author}{1}{}{%
         {{hash=d569e3a106a1623d669464203ed8bf34}{%
            family={Semiconductors},
@@ -762,14 +879,12 @@
       }
       \strng{namehash}{d569e3a106a1623d669464203ed8bf34}
       \strng{fullhash}{d569e3a106a1623d669464203ed8bf34}
-      \strng{fullhashraw}{d569e3a106a1623d669464203ed8bf34}
       \strng{bibnamehash}{d569e3a106a1623d669464203ed8bf34}
       \strng{authorbibnamehash}{d569e3a106a1623d669464203ed8bf34}
       \strng{authornamehash}{d569e3a106a1623d669464203ed8bf34}
       \strng{authorfullhash}{d569e3a106a1623d669464203ed8bf34}
-      \strng{authorfullhashraw}{d569e3a106a1623d669464203ed8bf34}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{28}
@@ -783,7 +898,7 @@
       \verb https://www.sivago.com.cn/upload/pdf/2022/TP808.pdf
       \endverb
     \endentry
-    \entry{led_grün}{misc}{}{}
+    \entry{led_grün}{misc}{}
       \name{author}{1}{}{%
         {{hash=c7841aeceb7bba01c24219ce83a8334d}{%
            family={Kingbright},
@@ -791,14 +906,12 @@
       }
       \strng{namehash}{c7841aeceb7bba01c24219ce83a8334d}
       \strng{fullhash}{c7841aeceb7bba01c24219ce83a8334d}
-      \strng{fullhashraw}{c7841aeceb7bba01c24219ce83a8334d}
       \strng{bibnamehash}{c7841aeceb7bba01c24219ce83a8334d}
       \strng{authorbibnamehash}{c7841aeceb7bba01c24219ce83a8334d}
       \strng{authornamehash}{c7841aeceb7bba01c24219ce83a8334d}
       \strng{authorfullhash}{c7841aeceb7bba01c24219ce83a8334d}
-      \strng{authorfullhashraw}{c7841aeceb7bba01c24219ce83a8334d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{10}
@@ -812,7 +925,7 @@
       \verb https://cdn-reichelt.de/documents/datenblatt/A500/LED5MMSTGE_LED5MMSTGN_LED5MMSTRT~KIN.pdf
       \endverb
     \endentry
-    \entry{AS-i-Slave}{misc}{}{}
+    \entry{AS-i-Slave}{misc}{}
       \name{author}{1}{}{%
         {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
            family={Siemens},
@@ -820,15 +933,13 @@
       }
       \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{fullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
-      \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
-      \field{extraname}{5}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{extraname}{6}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{14}
@@ -842,7 +953,7 @@
       \verb https://mall.industry.siemens.com/mall/Catalog/DatasheetDownload?downloadUrl=teddatasheet%2F%3Fformat%3DPDF%26caller%3DMall%26mlfbs%3D3RK2200-0CE02-0AA2%26language%3Dde
       \endverb
     \endentry
-    \entry{Barcodescanner}{misc}{}{}
+    \entry{Barcodescanner}{misc}{}
       \name{author}{1}{}{%
         {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
            family={SICK},
@@ -850,15 +961,13 @@
       }
       \strng{namehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{fullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{fullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{bibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorbibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{14}
@@ -872,7 +981,7 @@
       \verb https://cdn.sick.com/media/pdf/4/44/644/dataSheet_CLV615-D2410_1068608_de.pdf
       \endverb
     \endentry
-    \entry{BarScan_Handbuch}{misc}{}{}
+    \entry{BarScan_Handbuch}{misc}{}
       \name{author}{1}{}{%
         {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
            family={SICK},
@@ -880,15 +989,13 @@
       }
       \strng{namehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{fullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{fullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{bibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorbibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{14}
@@ -902,7 +1009,7 @@
       \verb https://de.scribd.com/document/483825902/SICK-Lector-CLV6XX-PNDP-V1-1-TIA-DE-pdf
       \endverb
     \endentry
-    \entry{BarScan_pic}{misc}{}{}
+    \entry{BarScan_pic}{misc}{}
       \name{author}{1}{}{%
         {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
            family={SICK},
@@ -910,15 +1017,13 @@
       }
       \strng{namehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{fullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{fullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{bibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorbibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
       \field{extraname}{3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
