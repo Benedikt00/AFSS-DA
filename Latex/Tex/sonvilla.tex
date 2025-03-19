@@ -7,7 +7,17 @@
 
 Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von Siemens zur Programmierung, Konfiguration und Diagnose von Automatisierungssystemen. Es ermöglicht die Steuerung von SPS (Speicherprogrammierbare Steuerungen), HMI (Bedienpanels) und Antrieben in einer einzigen Umgebung.
 
-    \subsubsection{Programm erstellen}
+    \subsubsection{Allgemeines}
+
+        \paragraph{Arbeitsweise einer SPS} \mbox{} \\
+        Eine SPS arbeitet zyklisch. In Abb. \ref{Arbeitsweise_einer_SPS} wird gezeigt wie ein solcher Zyklus aussieht. Bei erstmaligem Starten oder Neustarten der SPS werden zuerst alle Ausgänge, Merker, etc. auf Null gesetzt. Danach startet die zyklische Arbeitsweise. Zuerst wird eine Prozessabbild der Eingänge gemacht. Mit diesen Eingangswerten wird dann das Programm ausgeführt. Anschließend wird ein Prozessabbild der Ausgänge gemacht. Dieses wird dann an die Ausgänge übergeben. Danach beginnt der Zyklus von vorne. \cite{Arbeitsweise_der_SPS}
+        \begin{figure}[h]
+            \includegraphics[width=0.9\textwidth]{Sonne/Arbeitsweise_einer_SPS.png}
+            \caption{Arbeitsweise einer SPS \cite{Arbeitsweise_der_SPS}}
+            \label{Arbeitsweise_einer_SPS}
+        \end{figure}
+
+        noch Datentypen, ... maybe
 
     \subsubsection{Programmbausteine}
     
@@ -67,7 +77,48 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     \subsubsection{Technologieobjekte}
     Technologieobjekte dienen dazu die Ansteuerung und Handhabung von technischen Funktionen, insbesondere von Motoren, Achsen, etc. zu vereinfachen. Es existieren eine Vielzahl an unterschiedlichen Technologieobjekten. In nachfolgenden Absätzen werden die für das Projekt relevanten Technologieobjekte genauer erklärt.
 
+    \begin{itemize}
 
+        \item[1.] \textbf{Positionierachse (PositioningAxis)} \\
+            Dieses Technologieobjekt dienz zur genauen Positionierung einer Achse, sowie der Rückmeldung der aktuellen Achsposition. Zusätzlich wird die Zielposition automatisch gehalten. \\
+            Für die Positionierachse stehen folgende Motion Control Anweisungen zur Verfügung: 
+            \begin{itemize}
+                \item Home \\
+                    Aktives oder passives Referenzieren der Achse.
+                \item MoveAbsolut \\
+                    Fahren der Achse auf eine absolute Position.
+                \item MoveRelativ \\
+                    Fahren der Achse auf eine Position relativ zur aktuellen Position.
+                \item MoveSuperimposed \\
+                    Starten einer überlagerten Bewegung zu einer bereits laufenden Bewegung.
+                \item TorqueLimiting \\
+                    Aktivieren einer Momentbegrenzung oder Festanschlagserkennung.
+                \item SetSensor \\
+                    Umschalten des Gebers für die Achse. 
+                    \cite{Technologieobjekte}
+            \end{itemize}
+            
+
+        \item[2.] \textbf{Gleichlaufachse (SynchronousAxis)} \\
+            Das Technologieobjekt Gleichlaufachse enthält alle Funktionen des Technologieobjekts Positionierachse. Zusätzlich lässt sich die Achse mit einer Leitachse verschalten, sodass diese der Positionsänderung der Leitachse folgt. Dieses Technologieobjekt wird verwendet um synchrone bzw. positionsabhängige Bearbeitungsvorgänge auszuführen. \\
+            Der Gleichlaufachse stehen folgende zusätzliche Motion Control Anweisungen zur Verfügung:
+            \begin{itemize}
+                \item GearIn \\
+                    Starten eines relativen Gleichlaufs einer Leit- und Fogeachse.
+                \item GearInPos \\
+                    Starten eines absoluten Gleichlaufs einer Leit- und Fogeachse unter Vorgabe einer Synchronposition.
+                \item PhasingAbsolut \\
+                    Absolutes Verschieben des Leitwertbeugs whärend eines aktiven Gleichlaufs.
+                \item PhasingRelativ \\
+                    Relatives Verschieben des Leitwertbeugs whärend eines aktiven Gleichlaufs.
+                \item CamIn \\
+                    Start eines absoluten Kurvenscheibengleichlaufs.
+                \item SynchronizedMotionSimulation \\
+                    Simulation eines aktiven Gleichlaufs. 
+                    \cite{Technologieobjekte}
+            \end{itemize}
+             
+    \end{itemize}
 
     \subsubsection{Programmiersprachen}
 
