@@ -9,26 +9,29 @@ Nun soll dieser rund \SI{2.25}{\meter} lange und \SI{1.8}{\meter} hohe Raum opti
 Um eine möglichst gute Erweiterbarkeit sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sogenannte Item-Profile verwendet werden.
 
 
-\begin{wrapfigure}{r}{0.3\textwidth}
-    \vspace{0mm}
-    \includegraphics[width=0.3\textwidth]{Item-Standartverbindungssatz.png}
-    \centering
-    \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
-    \label{sfs_item}
-\end{wrapfigure}
+
 \paragraph{Item}\mbox{}\\
 Das Item-Profilsystem ist ein System, welches Aluminium-Extrusionen in verschiedenen Ausführungen sowie viele Verbindungsmöglichkeiten zu sich selbst sowie anderen mechanischen Elementen bietet. Hierbei gibt es eine breite Auswahl an Profilen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen werden 20x20-Extrusionen verwendet.
 Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit, sogenannte Nutensteine mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. Ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, können Standardverbindungssätze wie in Abb. \ref{sfs_item} verwendet werden.\\
 
 Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot-Profile verwendet.
 
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{Item-Standartverbindungssatz.png}
+        \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
+        \label{sfs_item}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{V-Wheel.jpg}
+        \caption{V-Slot-Profil mit V-Wheel, Quelle: \cite{v_slot_wheel}}
+        \label{v-wheel}
+    \end{minipage}
+\end{figure}
 
-\begin{wrapfigure}{R}{0.3\textwidth}
-    \includegraphics[width=0.3\textwidth]{V-Wheel.jpg}
-    \centering
-    \caption{V-Slot-Profil mit V-Wheel, Quelle: \cite{v_slot_wheel}}
-    \label{v-wheel}
-\end{wrapfigure}
+
 \paragraph{V-Slot}\mbox{}\\
 Auch V-Slot-Profile sind Aluminium-Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile mit Nutensteinen etc. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann (siehe Abb. \ref{v-wheel}). Diese Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da einerseits auch breitere und mehr V-Wheels verwendet werden können, sowie einen sehr großen Widerstandsmoment aufweisen.
 
@@ -66,7 +69,7 @@ Um bestimmte Elemente der Mechanik einzeln zu testen, werden auch mehrere Protot
 Damit die Fertigung der Mechanik an der HTL-Mössingerstraße in einem realistischen Zeitrahmen möglich ist, müssen gewisse Rahmenbedingungen bei der Planung beachtet werden.
 \begin{itemize}
     \item Für Verbindungen mit geringer bis mittlerer mechanischer Beanspruchung werden Bauteile so geplant, dass diese im Lasercutter gefertigt werden können, sowie in den Stärken, die der Werkstätte zur Verfügung stehen (\qtylist{3;4;5}{\milli\meter}). Dabei muss beachtet werden, dass die Acrylplatten gegossen sind und dadurch recht hohe Toleranzen (bis zu +\SI{0.3}{\milli\meter}) aufweisen.
-    \item Verbindungen zwischen Platten und Item- oder V-Slot-Profilen werden möglichst einheitlich gestaltet. Grundsätzlich gilt: Verbindungen mit Item-Baureihe (BR) 5 (20x20) werden grundsätzlich in M5 ausgeführt, außer bei Platzmangel in M3. Verbindungen mit BR 8 (40x40) werden in M8 ausgeführt.
+    \item Verbindungen zwischen Platten und Item- oder V-Slot-Profilen werden möglichst einheitlich gestaltet. Grundsätzlich gilt: Verbindungen mit Item-Baureihe BR5 (20x20) werden grundsätzlich in M5 ausgeführt, außer bei Platzmangel in M3. Verbindungen mit BR 8 (40x40) werden in M8 ausgeführt.
     \item Bei Bauteilen mit hoher mechanischer Beanspruchung wird Aluminiumblech mit 5 mm Stärke verwendet. Dieses wird zwar CNC-gefräst, doch um bei der Fertigung Zeit zu sparen, wird davon abgesehen, Taschen o. Ä. einzuplanen. Stattdessen wird immer ein flaches Profil verwendet, welches sich mit 2.5D-Fräsverfahren mit Durchgangsfräsen, ähnlich einem Lasercutter, fertigen lässt. Bei Aluminiumteilen wird darauf geachtet, dass diese immer aus \SI{5}{\mm} dickem Aluminiumeloxal gefertigt werden.
 \end{itemize}
 
@@ -661,11 +664,11 @@ Diese Objekt kann dann einfach in einen Anderen Programmteil importiert werden, 
 
 \subsubsection{Lageralgorithmus für SPS}\mbox{}\\
 
-\begin{wrapfigure}{R}{0.6\textwidth}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.52\textwidth]{stack.png}
+    \includegraphics[width=0.7\textwidth]{stack.png}
     \caption{Diagramm der BMOS bereitstellung}
-\end{wrapfigure}
+\end{figure}
 
 Die Auftrage sind im Einkaufswagen o.ä. im Format 'Location -\> Location' hinterlegt. Um dies in eine Opeation zu zerlegen die die SPS versteht, wird eine Box-Moveing-Operation erstellt. Diese enthält alle Teilschritte, wie Schlittenposition oder Fördebandstracke, um eine Box von Position A zu Position B zu bringen. 
 Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, aufgeteilt und dann dem 'stack' zugeführt. Diese Instruktion enthält Daten wie:
@@ -826,5 +829,6 @@ Um auche einen simpleren weg der Artikelfindung zur verfügung zu stellen, wird 
 Diese Informationen werden auch vom TF-IDF verwendet, dienen aber spezieller dazu, möglichst sicher das gewünschte Bauteil in einem Durchcklickmenue zu finden.
 
 \subsubsection{Fazit}
+Die Serverseitige Software des AFSS, also WMS und Benutzeriberfläche, wurde im laufe des Projekts sehr kompex. Dadurch war es eine sehr gute Entscheidung den Server in Hochsprachen auszuführen. Um einen zuverlässigen Dauerbetrieb zu gewähleisten, wäre es jedoch noch nötig Unittests für wichtige funkitonen wie APIs oder den Lageralgorithmus zu implementieren. Weiters müsse dis Benutzeroberfläche noch Bedienerfreindlicher gestaltet werden, da diese momentan noch eher rudimentär ausgeführt ist. Ausserdem wären noch kleinere "quality-of-live" änderungen durchzuführen. Insgesamt sit die Software aber schone sehr ausgereift und kann die Anforderung, der Lagersteuerung und -verwaltung durchführen. 
 
 
