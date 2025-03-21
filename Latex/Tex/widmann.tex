@@ -104,7 +104,7 @@ Um die korrekte Funktionsweise der Referenzplatine sicher zu stellen, muss diese
 \begin{wrapfigure}{R}{0.34\textwidth}
     \vspace{-20px}
     \includegraphics[width=0.34\textwidth]{Sensors/Barcodescanner.png}
-    \caption{Barcodescanner CLV61x-2Port}
+    \caption{Barcodescanner CLV61x-2Port\cite{BarScan_pic}}
     \label{BarScan}
 \end{wrapfigure}
 
@@ -122,13 +122,20 @@ Wenn eine Verbindung zum Gerät hergestellt wurde, müssen die Parametermodule e
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{Sensors/BarScan_Geräteübersicht.png}
-    \caption{Barcodescanner Geräteübersicht im TIA-Portal\cite{BarScan_pic}}
+    \caption{Barcodescanner Geräteübersicht im TIA-Portal}
     \label{BarScan_TIA}
 \end{figure}
 
 Die vom Barcodescanner belegten Ein- und Ausgangsadressen sind in der Geräteübersicht ersichtlich (siehe Abb.\ref{BarScan_TIA}). Ein TriggerBit wird verwendet um das Einlesen eines Barcodes zu starten, dabei handelt es sich um das zweite Bit des \enquote{\mbox{Ctrl Bits out\_1}} Moduls (hier: Q129.0). Bei steigender Flanke des ToggleBits wird der Laser eingeschaltet, erst bei der fallenden Flanke wird daraufhin der Code eingelesen.\\
 Die eingelesenen Daten liegen ab dem ersten Input Byte (hier: ab IB128.0). Auf dem ersten Input Byte wird am vierten Bit ein ToggleBit mitgeführt. Am zweiten Byte(IB129.0) befindet sich ein Zähler, der mitzählt, wie viele Codes bereits eingelesen wurden. Das vierte Input Byte (IB131.0) gibt die Länge des eingelesenen Strings an. Ab dem sechsten Byte (IB133.0) stehen die eigentlichen Daten des Barcodes.\\
-Um die Daten des Barcodes überprüfen zu können eignet sich eine wie in Abb.\ref{} abgebildete Beobachtungstabelle. Wichtig ist, dass beim Einfügen der Ein- und Ausgangsadressen das richtige Zeichenformat ausgewählt wird. Um eine Überprüfung durchzuführen lässt sich das ToggleBit zum Starten es Einlesevorgangs über Eingabe von TRUE und FALSE setzen, und daraufhin ein Code scannen. Die einzelnen Input Bytes werden daraufhin in der Tabelle angezeigt. \textbf{Foto einfügen!!}
+Um die Daten des Barcodes überprüfen zu können eignet sich eine wie in Abb.\ref{BarScan_BTabelle} abgebildete Beobachtungstabelle. Wichtig ist, dass beim Einfügen der Ein- und Ausgangsadressen das richtige Anzeigeformat ausgewählt wird. Um eine Überprüfung durchzuführen lässt sich das ToggleBit zum Starten es Einlesevorgangs über Eingabe von TRUE und FALSE setzen, und daraufhin ein Code scannen. Die einzelnen Input Bytes werden daraufhin in der Tabelle angezeigt.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Sensors/BarScan_Beobachtungstabelle.png}
+    \caption{Barcodescanner Beobachtungstabelle im TIA-Portal}
+    \label{BarScan_BTabelle}
+\end{figure}
 
 \subsection{AS-Interface}
 
