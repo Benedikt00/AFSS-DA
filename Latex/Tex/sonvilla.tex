@@ -3,6 +3,7 @@
 
 \subsection{Aufgabenstellung}
 
+
 \subsection{Tia-Portal Grundlagen}
 
 Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von Siemens zur Programmierung, Konfiguration und Diagnose von Automatisierungssystemen. Es ermöglicht die Steuerung von SPS (Speicherprogrammierbare Steuerungen), HMI (Bedienpanels) und Antrieben in einer einzigen Umgebung.
@@ -121,32 +122,46 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     \end{itemize}
 
     \subsubsection{Programmiersprachen}
-    In Tia Portal stehen unterschidiedliche Programmiersprachen zu Verfügung. Je nach Präferenz bzw. Aufgabe ist das Nutzen der richtigen Sprache von Vorteil. Daher folgt hier eine Auflistung der möglichen Programmiersprachen, welche sich in textbasierte oder graphische Sprachen unterteilen. 
+    In Tia Portal stehen unterschidiedliche Programmiersprachen zu Verfügung. Je nach Präferenz bzw. Aufgabe ist das Nutzen der richtigen Sprache von Vorteil. Daher folgt hier eine Auflistung der möglichen Programmiersprachen, welche sich in textbasierte(tb.) oder graphische(gr.) Sprachen unterteilen. 
 
     \begin{itemize}
-        \item [1.] \textbf{Funktionsplan(FUP) - Funktion Block Diagramm(FDP)} \\
+        \item [1.] \textbf{Funktionsplan(FUP), gr.} \\
             FUP ist eine graphisch augebaute Programmiersprache. Sie besteht aus unterschiedlichen Bausteinen, in Blockdarstellung, welche graphisch durch Linien verknüpft werden. Die Signalverarbeitung bei FUP läuft von links nach rechts. Die Programmierlogik in FUP ist übersichtlich und schnell nachzuvollziehen, weswegen diese Sprache für Anfänger relativ gut geeignet ist. 
             \cite{Programmiersprachen_der_SPS}
 
-        \item[2.] \textbf{Kontaktplan(KOP) - Ladder Diagram(LD)} \\
+        \item[2.] \textbf{Kontaktplan(KOP), gr.} \\
             Der Kontakplan ähnelt einem Stromlaufplan, der anstatt von oben nach unten von links nach rechts verläuft. Für die Programmierung werden Symoble wie Öffner, Schließer und Ausgänge verwendet. Da nicht für jeden Baustein ein Symbol verfügbar ist, werden solche Bausteine in FUP dargestellt. Der logische Verlauf der Schaltung ist dabei von links nach rechts und von oben nach unten.
             \cite{Programmiersprachen_der_SPS}
 
-        \item[3.] \textbf{Anweisungsliste(AWL)} \\
+        \item[3.] \textbf{Anweisungsliste(AWL), tb.}\\
             AWL ist eine textbasierte Programmiersprache, welche an Assembler angelehnt ist. Die Programmiersprache AWL wird hauptsächlich zur logischen Verknüpfung von Ein- und Ausgängen verwendet.In AWL werden Anweisungen in der Reihenfolge geschrieben, in der sie ausgeführt werden sollen. Da AWL für die Programmierung von größeren Projekten eher ungeeignet ist, wird es in neueren Programmen immer weniger verwendet.
             \cite{Anweisungsliste}
 
+        \item[4.] \textbf{S7-Graph, gr.} \\
+            S7-Graph wird verwendet um Ablaufsteuerungen übersichtlich und schnell zu programmieren. Die zu ausführenden Aktionen werden in unterchiedliche Einzelschritte aufgeteitlt. Zwischen diesen Einzelschritten befinden sich Transitionen. Transitionen sind Weiterschaltbedingungen welche erfüllt werden müssen damit zum nächsten Schritt weitergeschaltet wird. Der Ablauf der Steuerung erfolgt von oben nach unten. 
+
+        \item[5.] \textbf{Structered Code Language (SCL), tb.} \\
+            SCL ist eine höhere Programmiersprache, welche sich an Pascal orientiert. SCL ist für mathematische Funktionen, sowie das Programmieren von Schleifen oder if-Bedingungen besser geeignet als andere Programmiersprachen der SPS. In SCL hat man trotzdem Zugriff auf die typischen Elemente einer SPS, wie Eingänge, Ausgänge, Zeiten, Merker, Bausteinaufrufe usw.
+            \cite{SCL}
 
     \end{itemize}
 
 
-    \subsubsection{Bilbliotheken}
-    \label{Bibliotheken}
+    \subsubsection{Bilbliotheken } \mbox{}
+    In Tia Portal sind nicht alle Funktionen integriert zur welcher die SPS fähig wäre. Deswegen gibt es Bibliotheken um projektspezifische Funktionen in das Programm zu intergrieren. Bibliotheken können zusätzlich dazu genutzt werden um projektspezifische Bausteine oder Funktionen auch für andere Programme zugänglich zu machen. Generell kann man Bibliotheken in zwei unterschiedliche Arten unterteilen: Projektbibliothek (Project library) und Global Bibliothek (Global library). Projektbibliotheken sind im Projekt integriert und werdem im Projekt verwaltet. Dies ermöglicht eine Wiederverwendung von Bausteinen, Funktionen, usw. innerhalb des Programms. Globale Bibliotheken hingegen sind projektunabhängig und können deshalb innerhalb von mehreren Projekten verwendet werden. In Bibliotheken gibt es dann wieder zwei unterschiedliche Möglichkeiten der Ablagerung. Man unterscheidet zwischen Kopiervorlagen (Master copies) und Typen (Types). Elemente die in "Kopiervorlagen" gespeichert sind, sind mit dem kopierten Element nicht verbunden. Typen hingegen sind mit ihren Verwendungsstellen im Projekt verbunden. Das heißt wenn Type verändert werden, wird dies im Projekt automatisch aktualisiert. Im Falle, das ein Typ gelöscht wird, werden alle Verwendungen automatisch mitgelöscht.  
+    \cite{Programmierleitfaden_für_S7-1500}
+
+
+        \paragraph{Wie werden Bibliotheken ins Projekt eingebunden?} \mbox{} \\
+        \label{Bilbliotheken}
+        Bibliotheken in Tia Portal hinzuzufügen ist intuitiv und simpel. Der erste Schritt ist das Downloaden der richtigen Bibliothek. Diese können Online auf Websiten, von Siemens, gefunden werden. Um diese jedoch herunterzuladen braucht man einen dazu berechtigten Siemens-Account. Ist die richtige Bibliothek gefunden und heruntergeladen, kommt man zum zweiten Schritt. Zuerst wird Tia Portal geöffnet. Dann geht man auf die Projektansicht. Daraufhin findet man ganz rechts, als vierten Reiter von oben den Punkt Bibliotheken. Klickt an auf diesen erscheint ein Fenster, welches der Höhe nach in zwei Teile aufgeteilt ist. Die obere Hälfte ist für die Projektbibliothek. In der unteren Hälfte findet man die Globalen Bibliotheken. Um nun eine neue Bibliothek einzubinden klickt man auf das zweite Symbol von links "Globale Bibliothek öffnen". Das Symbol ist ein Buch mit einem grünen Pfel rechs oben. Jetzt öffnet sich wieder ein Fenster. Hier ist dann der Ordner mit der zu integrierenden Bibliothek auszuwählen und anschließend die Datei mit dem Datenformat .alxx (xx ... Version Tia-Portal (18)) zu öffnen. Anschließend ist die gewünschte Bibliothek verfügbar. Jegliche Bausteine die diese Bibliothek zur Verfügung stellt,können nun per Drag-and-Drop ins Programm gezogen werden.
+        \cite{Bibliotheken}
 
 
 \subsection{Motorenansteuerung}
 
 \subsection{SPS-Server Kommunikation}
+Da die Lagerlogik auf einem Server ausgeführt weird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es die nötigen Informationen, sowie die Übertragung der Aufgabenstellung auszuführen. 
 
     \subsubsection{Zur Auswahl stehende Kommunikationsprotokolle} 
     \label{Kommunikationsprotokolle}
@@ -154,7 +169,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     Kommunikationsprotokolle ermöglichen den Datenaustausch zwischen unterschiedlichen Systemen, indem sie Standards und Regeln für die Kommunikation definieren. In diesem Projekt wurden zwei Protokolle getestet und miteinander verglichen: OPC-UA sowie das HTTP-Protokoll.
 
 
-         \paragraph{Allgemeines}
+    \paragraph{Allgemeines}
 
         \begin{itemize}
             \item \textbf{HTTP (Hypertext Transfer Protocol):}  \mbox{} \\
@@ -164,11 +179,20 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             OPC-UA (Open Platform Communications Unified Architecture) ist ein plattformunabhängiges Kommunikationsprotokoll, das speziell für industrielle Anwendungen entwickelt wurde. Es ermöglicht eine herstellerunabhängige Kommunikation zwischen verschiedenen Geräten bzw. Systemen. \cite{OPC-UA}
         \end{itemize}
 
-        \paragraph{Funktionsweise}
+    \paragraph{Funktionsweise}
 
             \begin{itemize}
                 \item \textbf{{HTTP (Hypertext Transfer Protocol):}} \mbox{} \\
-                
+                Eine Kommunikation mit dem Http Protokoll findet wie folgt statt. Wie oben bereits erwähnt funktioniert das HTTP- Protokoll nach dem Anforderungs-Antwort-Prinzip. Wie in Abb. \ref{HTTP-Client_Server_Kommunikation} ersichtlich wir als Erstes eine Anfrage vom Cleint zum Server gesendet (HTTP-Request). Darufhin wird diese Anfrage vom Server beanrbeitet und dieser sendet dann die geforderten Informationen zurück (HTTP-Response). Danach ist die Verbindung beendet.
+                \cite{HTTP-Client_Server_Kommunikation}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width = 0.8\textwidth]{Sonne/HTTP-Client_Server_Kommunikation.jpg}
+                    \caption{HTTP-Client-Server Kommunikation 
+                    \cite{HTTP-Client_Server_Kommunikation}}
+                    \label{HTTP-Client_Server_Kommunikation}
+                \end{figure}
             
                 \item \textbf{{OPC-UA (Open Platform Communications - Unified Architecture):}} \mbox{} \\
                 
