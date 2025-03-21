@@ -40,13 +40,12 @@
 \subsubsection{Mechanische Planung}
 
     \paragraph{Schaltschrankrahmen}\mbox{}\\
-    \begin{wrapfigure}{r}{0.5\textwidth}
-        \vspace{-30px}
+    \begin{figure}[h]
+        \centering
         \includegraphics[width=0.5\textwidth]{Vogis Bilder/Serverschrank_original.jpg}
         \caption{Serverschrank bei Übergabe an das AFSS-Team}
-        \vspace{-10px}
         \label{fig:Serverschrank_original}
-    \end{wrapfigure}
+    \end{figure}
     Bevor man sich den Details des Schaltschrankes widmet, muss vorerst der Rahmen festgelegt werden. Grundsätzlich würde man einen herkömmlichen Schaltschrank verwenden, allerdings sind diese teuer und erfüllen auch nicht unsere Anforderung der Mobilität. Deswegen wurden mehrere alternative Optionen in Betracht gezogen. Anfangs wurde der Ansatz verfolgt die elektrischen Komponenten in den Lagerschrank selbst einzubauen. Dabei hätte man entweder einen eigenen Abteil ins AFSS einplanen können, der auch mittels entsprechendem Material räumlich getrennt wäre, oder man hätte die Elemente fluide unterbringen können. Mit Letzteren ist gemeint, dass in dem ganzen Schrank verteilt die elektirschen Komponenten montiert wären.\\
     Die fluide Variante benötigt sorgfälltige Planung und auch sorgfälltige Absprache mit der restlichen mechanischen Planung des AFSS. Dafür hätte man eine kompacktes Design aber das Risiko für Verletzungen und Schäden wäre höher, da man die elektrischen Komponenten nur schwer räumlich trennen könnte, so wie es die Wände eines Schaltschrankes machen. Aufbauend auf dem fehlenden Sicherheitsaspekt und der Tatsache, dass die benötigte Kommunikation in einer Entwicklungsphase nicht möglich wäre, wurde sich gegen die fluide Option entschieden.\\
     Wesendlich realistischer ist der Ansatz ein eigenes kleines Abteil in den Schrank einzubauen. Der Rahmen wäre, sowie das Lager, aus Aluminiumprofilen gebaut und die jeweiligen Seiten würden mit Kunstsoffen verkleidet werden. Um die räumliche Trennung zu gewährleisten. Diese Option wäre Kommunikationstechnisch möglich, da man sich mit der restlichen mechanischen Planung nur auf die Außenmase und Position dieses Abteils einigen müsste. Allerdings bedeutet ein intigriertes Abteil auch weniger Lagerplätze und einen merkbaren Zusatzaufwand in der Realisierung. Da so viele Lagerplätze wie möglich verwirklicht werden sollen wurde sich gegen diese Variante entschieden.\\
@@ -61,13 +60,12 @@
 
     \paragraph{Platten-Material}\mbox{}\\
     Für die Materialwahl gab es drei realistische Möglichkeiten. Die Modulplatten hätten vollständig aus Aluminium oder aus Dibond gefräst werden können. Als dritte Option hätte man die Platten aus einem Kunststoff lasern oder fräsen können. Die Aluplatten bieten den Vorteil der Leitfähigkeit und somit müsste man nur die Platte erden und die Elemente auf der Platte wären alle dementsprechend geerdet. Beim einer reinen Kunststoffplatte gibt es keine Leitfähigkeit und zusätzlich bieten die meisten Kunststoffe keine ausreichende mechanische Stabilität.\\
-    \begin{wrapfigure}{r}{0.5\textwidth}
-        \vspace{-30px}
+    \begin{figure}[h]
+        \centering
         \includegraphics[width=0.5\textwidth]{Dibond_Platten_ml.jpg}
         \caption{Dibond-Platte, Quelle: \cite{Dibond-Platte}}
-        \vspace{-20px}
         \label{fig:Sommerprototyp}
-    \end{wrapfigure}    
+    \end{figure}  
     Aluminium erfüllt alle Anforderungen, ist aber teuer und ein wertvoller Werkstof. Da ein umsichtiger Umgang mit Ressourcen wichtig ist wurden nach einer Alternative gesucht. Dibond wurde daraufhin als Projektstandard für die Module definiert. Dieser Stoff besteht aus zwei dünnen Aluminiumplatten die auf einen Kunststoff aufgepresst werden. Dibond bietet keine elektrische Leitfähigkeit, folglich müssen alle Elemente zusätzlich geerdet werden aber das leichte Gewicht und die hohe mechanische Stabilität machen Dibond zur besten Option.
 
     \paragraph{Digitaler Zwilling}\mbox{}\\
@@ -85,13 +83,12 @@
 
     \paragraph{Digitaler Zwilling - Umsetzung}\mbox{}\\ 
 
-    \begin{wrapfigure}{r}{0.3\textwidth}
-        \vspace{-20px}
+    \begin{figure}[h]
+        \centering
         \includegraphics[width=0.3\textwidth]{Prototyp_Serverschrank.PNG}
         \caption{Sommerprototyp eines Serverschrankes}
-        \vspace{-20px}
         \label{fig:Sommerprototyp}
-    \end{wrapfigure}
+    \end{figure}
     Als Erstes muss der Serverschrank, wie bereits erwähnt ausführlich ausgemessen werden. Äußere Höhe, innere Höhe, Äußere Breite, innere Breite und noch Vieles mehr muss richtig gemessen werden.    
     Bei den Messungen werden Messschieber und bei größeren Abständen Maßbänder verwendet. Um die mechanische Konstruktion zu erleichtern, werden alle Daten digital festgehalten.   
     Während die Messungen des Serverschranks für den finalen digitalen Zwilling wichtig werden, gibt es aber auch noch andere Punkte, beispielsweise bestand lange die Frage, ob das Modulkonzept so möglich sei. Aufgrund dessen und des Umfanges der Diplomarbeit sowie der begrenzten Zeit wird ein erster Entwurf eines Serverschrankes in Fusion360 konstruiert und weiters ein Probemodul gezeichnet. Die Maße dieses digitalen Prototyps sind von einem Standard-Serverschrank aus dem Internet übernommen.
@@ -99,13 +96,12 @@
     Eine Erkenntnis des Prototyps ist, dass man den Serverschrank nicht als ein großes Element konstruieren sollte, da wenn ein Fehler spät erkannt wird dieser so gut wie nicht mehr zu beheben ist. Wenn die Konstruktion allerdings auf viele verschiedene Elemente aufgeteilt wird, dann ist der Schaden bei einem Fehler begrenzt. 
 
     Nachdem das Grundprinzip erfolgreich konstruiert wurde, ist der Serverschrank auf Grundlage der echten Maße zu konstruieren. Die gelernten Erkenntnisse werden dabei bestmöglich miteinbezogen.\\    
-    \begin{wrapfigure}{r}{0.35\textwidth} % 'r' for right, 'l' for left
-        \vspace{-20px}
+    \begin{figure}[h]
+        \centering
         \includegraphics[width=0.35\textwidth]{Schaltschrank_ohne_Module.PNG} 
         \caption{Serverschrank konstruiert}
-        \vspace{-50px}
         \label{fig:Clean_Serverschrank}
-    \end{wrapfigure}
+    \end{figure}
 
     Mit dem fertig konstruierten Serverschrank, kann dann die Planung der Module beginnen. Dafür wird vorerst ein Konzept erstellt. Durchgedacht wird welche elektrischen Baugruppen wo im Schaltschrank platziert werden sollen. Das Konzept richtet sich einerseits nach der Vorgabe, zusammengehörige elektrische Komponenten sollen auf dasselbe Modul kommen, und andererseits zusammenhängende Module sollen sich möglichst nahe sein. 
     \paragraph{Modul 1 - Bedienelemente}\mbox{}\\
@@ -124,22 +120,20 @@
     Am Ausgangsmodul soll einen Verdrahtungskanal haben und eine durchgängige Huttschiene. Auf diese Hutschine kommen Elemente wie die Motorschütz, Relais, die Treiber für die schwächeren Schrittmotoren und eine ausführliche Menge an Reihenklemmen.
     \paragraph{Modul 8 - Erdungsmodul}\mbox{}\\
     Etwaige Kabel des AFSS haben einen Schrim der geerdet gehört. Deswegen ist eine Erdungsplatte nötig die aus leitfähigen Aluminium gemacht werden soll. Auf dieser ist eine Ankerschiene zur Erdung von Leiterschirmen geplant. Zudem sollen in dieses Modul vier rechteckige Ausfräsungen gemacht werden, in welche die Buchse des RJ45-Stecker hineinpasst.
-    \begin{wrapfigure}{r}{0.3\textwidth}
-        \vspace{0px}
+    \begin{figure}[h]
+        \centering
         \includegraphics[width=0.3\textwidth]{Vogis Bilder/SITOP_Konstruiert.png}
         \caption{Siemens SITOP in Fusion360}
-        \vspace{-30px}
         \label{fig:SITOP_Konstrueiert}
-    \end{wrapfigure}
+    \end{figure}
     \paragraph{Module - 3D Konstruktion}\mbox{}\\
     Die einzelnden Module wurden, nachdem die Konzeptionierung beendet wurde, in Fusion360 gezeichnet. Dafür wurden zuerst die einzelnden Komponenten wie Hutschinen, Verdrahtungskanäle, Gleichrichter und alle anderen Komponenten als unabhängige Konstruktion gezeichnet. Damit wurde eine breite Bibliothek an Komponenten erstellt, mit dieser kann man dann wesentlich einfacher den digitalen Schaltschrank bestücken. Bei den jeweiligen Elementen ist es nicht wichtig kleinere Details miteinzubeziehen, vielmehr die Außenmase und die Positionen von Montagelöchern oder des Klemmmechanismuses für die Hutschiene sollen akkurat abgebildet sein (siehe \ref{fig:SITOP_Konstrueiert}).
-    \begin{wrapfigure}{r}{0.4\textwidth}
-        \vspace{0px}
+    \begin{figure}[h]
+        \centering
         \includegraphics[width=0.4\textwidth]{Vogis Bilder/Bestuekter_Schaltschrank_Fusion.jpg}
         \caption{Der Schaltschrank in Fusion gezeichnet}
-        \vspace{-30px}
         \label{fig:Schaltschrank_bestueckt_Fusion}
-    \end{wrapfigure}
+    \end{figure}
     \paragraph{Fusion 360}\mbox{}\\
     Nachdem man die einzelnen elektrischen Komponenten gezeichnet hat, wurde in Fusion die erste Platte gezeichnet. Hierbei muss man nicht direkt die richtige Größe einschätzen, da Fusion späte Änderungen gut zulässt. Nachdem man eine Platte im Serverschrank konstruiert hat, kann man die Hutschienen und Verdrahtungskanäle einfügen. Daraufhin kann man die Unterkonstruktion bestücken. Beim Einfügen von Konstruktionen in andere Konstruktionen bleiben die kopierten Elemente mit der originalen Zeichnung verknüpft. Diese Verknüpfung wurde bei den Elemten gelassen, die keine Änderungen erwarten doch bei Komponenten wie eines Verdrahtungskanals sollte man die Verknüpfung trennen um das Element zuschneiden zu können. Eine Verknüpfung bedeutet, dass Veränderungen nur in der ursprünglichen Zeichnung getätigt werden können. So wurde Modul nach Modul ausgeplant.\\
     Beim Zeichnen fiel auf, dass die Module aus dem Serverschrank, beziehungsweise Schaltschrank, rausragten. Es wurde erkannt, dass die Profilschienen nach innen verschoben werden müssen um zu ermöglichen, dass sich die Wände des Schaltschrankes auch schließen lassen. Die Bauart des Serverschrankes erlaubt eine solche Veränderung.\\ 
@@ -147,19 +141,13 @@
     Zu dieser Version des Schaltschrankes ist zu sagen, dass ab der Realisierung des Geplanten, dieser digitale Plan sich fließend transformiert, zum digitalen Zwilling. Dieser Zwilling gehört nach der Realisierung konstant gepflegt. Das Erdungsmodul beispielsweise, welches erst mitten in der Realisierung eingeplant und gemacht wurde, muss in den digitalen Zwilling nachträglich hinzugefügt werden.
     \paragraph{AutoCAD}\mbox{}\\
     Nachem der digitale Plan/Zwilling vollständig ausgeplant wurde, mussten die jeweiligen Platten gefräst werden.Um die Platten auch fräsen zu können müssen diese zuerst als DXF-Datei in Filou-NC eingefügt werden. Dazu mussten die einzelnen Module in AutoCAD nachgezeichnet werden.     
-    \begin{figure}[h]
-        \centering
-        \vspace{-10px}
-        \includegraphics[width=0.7\textwidth]{Vogis Bilder/Beispielsmodul_in_AUTOCAD.png}
-        \caption{Beispielbild aus AutoCAD}
-        \vspace{-10px}
-        \label{fig:AutoCAD-Beispielbild}
-    \end{figure}
++
     Idealerweise hätte man hierfür nur die Oberfläche der Platten in Fusion zur Skizze gemacht und diese dann als DXF exportiert. Bei einem nachträglichen Ausmessen der 3D-Konstruktion wurde allerdings festgestellt, dass sich die Maße der Löcher der Profilschiene nicht mit der Realität decken. Zudem wurden weitere minimale Abweichungen festgestellt. Keiner der Fehler war so gravierend, dass man die digitale Konstruktion des Schaltschrankes nicht weiterverwenden könnte aber für eine präzise Fräsung aufbauend auf der Fusion-Konstruktion waren die Abweichungen zu groß. Deswegen wurden alle Module in AutoCAD sorgfälltig nachgezeichnet.\\     
     Beim Nachzeichnen wurden alle fehlerhaften Mase ausgebessert. Mit den richtigen Masen wurde festgestellt, dass sich gewisse Module nicht wie geplant ausgingen. Beim Modul 6 gingen sich die vier Schrittmotortreiber nicht vertikal nebeneinander aus. Deswegen wurde in AutoCAD einer der Treiber vertikal angeordnet und weiterführend wurde die Änderung auch in Fusion nachgebessert.
     \paragraph{Räder}\mbox{}\\
     In der Transformation vom Serverschrank zum Schaltschrank des AFSS gehört auch, dass der Schrank mobil gemacht wird. Dazu wurden zwei flexible und zwei starre Räder zur Verfügung gestellt. Planungstechnisch wurden diesbezüglich besprochen, dass die Räder direkt an das bestehende Gerüst geschraubt werden. Montiert werden die Räder mit simplen Schrauben und Muttern. Die Räder wurden in AutoCAD nicht gezeichnet, da es keinen sinnerfüllten Zweck gab. 
 \subsubsection{Elektrische Planung (E-Plan)}
+\label{sec:Elektrische Planung}
     Für das Zeichnen eines E-Plans ist ein großes Produktwissen nötig. Um sich dieses zu beschaffen wurde die mechanische Seite zuerst geplant, da man im  Zuge dieser die elektrischen Komponenten sehr gut kennenlernt. Als ein großteil der mechanischen Seite für den Schaltschrank ausgeplant war wurde der E-Plan parallel zur mechanischen Planung angefangen. Als Schüler wurde die E-Plan Education Version verwendet. Diese Version ist kostenlos und bietet alle Funktionen die für die Planung des AFSS nötig sind.
     \paragraph{E-Plan Allgemein}\mbox{}\\
     Die Firma E-Plan bietet verschiedenste Möglichkeiten zur Planung und Dokumentation von elektrischen Anlagen. Das Programm bietet auch die Möglichkeit eines Aufbauplanes, in diesem werden die elektrischen Komponeten der Anlage in einer 2D-Ansicht dargestellt. Diese Art des Aufbauplanes ist weit verbreitet und übersichtlich, doch die Stärke liegt beim herkömmlichen Schaltschrank. Da beim AFSS-Schaltschrank wesentlich mehr zu beachten ist wurde der Aufbauplan nicht in E-Plan sonder in Fusion 360 gezeichnet. Zu dieser Entscheidung kam es einerseits da der Serverschrank als ganzes umgeplant gehörte, zum Schaltschrank, und andererseits da die persönlichen Kenntnisse in Fusion wesentlich besser waren.\\
@@ -172,14 +160,69 @@
     \paragraph{Schaltplan - Zeichenprozess}\mbox{}\\
     E-Plan benötigt immer ein Vorlage-Projekt nach dem es sich orientieren kann, ein Basisprojekt. Für dieses wurde ein Projekt aus der Werkstätte verwendet namens "2022-09-HU Basisprojekt (1).zw9".\\\\ 
     Der Schaltplan orientiert sich wie erwähnt am Stromfluss. Damit wurden zuerst der Fehlerstromschutzschalter und der Leitungsschutzschalter sowie der dreiphasige Drehschalter gezeichnet. Diese Elemente sichern die Anlage, bzw dienen zur manuellen freischaltung aller Elemente, und müssen allen anderen Komponenten vorgeschaltet sein.\\\\
-    Auf der zweiten Seite befinden sich alle Netzteile für die normale 24V DC Spannung. Es sind in Summe drei Netzteile auf dieser Seite die jeweils an L1, L2, L3 und PE angeschlossen gehören. Deswegen wurden die vier Leiter zuerst in Klemmen geführt, dort mit Querverbindern so verbunden, dass man ohne potentiell gefährliche Drahtbrücken alle Netzteile versorgen kann. Von diesen querverbundenen Reihenklemmen wurden auch Abgänge für den Asynchronmotor eingezeichnet und ein Abgang für die Versorgung des ASI-Netzteils.\\ Zwei der Netzteile (Deutronic und SITOP) können 20A auf der 24V-Seite schalten. Diese leistungsstarke Versorgung wird verwendet um die Schrittmotoren zu versorgen. Diese beiden Gleichrichter-Netzteile teilen sich die Schrittmotoren auf. Drei auf die Deutronic und vier auf die SITOP. Von der SITOP bekommen wir zwei 24V Ausgänge. Der Eine wird mit einem von zwei Feed-In-Modulen verbudnen. Der Zweite wird direkt mit einem ungesicherten und kleineren Schrittmotor verbunden. Die Deutronic bietet einen Ausgang, dieser wird mit dem zweiten Feed-In-Modul verbunden. Damit war auf dieser Seite die Versorgung von den Schrittmotoren vollendet. Überbleibt noch das Netzteil von der Firma Meanwell. Dieses ist mit 10A leistungsschwächer. Doch die Leistung wird nicht benötig werden, da dieses Netzteil nur zur Versorgung von den Logikkreisen verwendet wird. Das bedeutet, von den beiden 24V DC Ausgängen dieses Netzteils wurden Verbindungen zur SPS, ET200 und internen sowie externen Not-Aus Schaltern gezeichent. Auf dieser Seite bedeutet dies Klemmen mit Abgängen.\\Was jetzt noch übergeblieben ist sind die 24V-DC-Minuspole der Netzteile. Die Reihenklemmen wurden über Querverbinder mitteinander zusammenverbunden und im Anschluss auch mit den PE-Klemmen der 230V Seite verbundnen. Die Entscheidung den Steuerstromkreis zu Erden beruht auf der Norm EN60204-1. Demnach hilft die Erdung gegen EMV-Probleme und gewährleistet im Fehlerfall die Abschalltung. \cite{elektronet_steuerstromkreis_geerdet}\cite{beckhoff_steuerstromkreis_geerdet}\\\\
-    Die nächste Seite ist ein Nachtrag, denn anfänglich wurde nicht bedacht, dass der ASI-Kreis eine eignene 24V-DC-ASI-Versorgung braucht. Auf die zweite Seite wurde demnach die ASI-Versorgung gezeichnet sowie der Anschluss an den ET200-ASI-Master. Eingehend sind auf dieser Seite der L1, N und und ein Set, letzteres ist ein Eingang beim ASI-Master und wird von der SPS aus gesetzt, und ausgehend ist der ASI-BUS vom ASI-Master.\\\\begin{align*}
+    Auf der zweiten Seite befinden sich alle Netzteile für die normale 24V DC Spannung. Es sind in Summe drei Netzteile auf dieser Seite die jeweils an L1, L2, L3 und PE angeschlossen gehören. Deswegen wurden die vier Leiter zuerst in Klemmen geführt, dort mit Querverbindern so verbunden, dass man ohne potentiell gefährliche Drahtbrücken alle Netzteile versorgen kann. Von diesen querverbundenen Reihenklemmen wurden auch Abgänge für den Asynchronmotor eingezeichnet und ein Abgang für die Versorgung des ASI-Netzteils.\\ Zwei der Netzteile (Deutronic und SITOP) können 20A auf der 24V-Seite schalten. Diese leistungsstarke Versorgung wird verwendet um die Schrittmotoren zu versorgen. Diese beiden Gleichrichter-Netzteile teilen sich die Schrittmotoren auf. Drei auf die Deutronic und vier auf die SITOP. Von der SITOP bekommen wir zwei 24V Ausgänge. Der Eine wird mit einem von zwei Feed-In-Modulen verbudnen. Der Zweite wird direkt mit einem ungesicherten und kleineren Schrittmotor verbunden. Die Deutronic bietet einen Ausgang, dieser wird mit dem zweiten Feed-In-Modul verbunden. Damit war auf dieser Seite die Versorgung von den Schrittmotoren vollendet. Überbleibt noch das Netzteil von der Firma Meanwell. Dieses ist mit 10A leistungsschwächer. Doch die Leistung wird nicht benötig werden, da dieses Netzteil nur zur Versorgung von den Logikkreisen verwendet wird. Das bedeutet, von den beiden 24V DC Ausgängen dieses Netzteils wurden Verbindungen zur SPS, ET200 und internen sowie externen Not-Aus Schaltern gezeichent. Auf dieser Seite bedeutet dies Klemmen mit Abgängen.\\    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{Vogis Bilder/Netzteile_Schaltplan.png}
+        \caption{Schaltplan: Netzteile}
+        \label{fig:Netzteile}
+    \end{figure}Was jetzt noch übergeblieben ist sind die 24V-DC-Minuspole der Netzteile. Die Reihenklemmen wurden über Querverbinder mitteinander zusammenverbunden und im Anschluss auch mit den PE-Klemmen der 230V Seite verbundnen. Die Entscheidung den Steuerstromkreis zu Erden beruht auf der Norm EN60204-1. Demnach hilft die Erdung gegen EMV-Probleme und gewährleistet im Fehlerfall die Abschalltung. \cite{elektronet_steuerstromkreis_geerdet}\cite{beckhoff_steuerstromkreis_geerdet}\\\\
+    Die nächste Seite ist ein Nachtrag, denn anfänglich wurde nicht bedacht, dass der ASI-Kreis eine eignene 24V-DC-ASI-Versorgung braucht. Auf die zweite Seite wurde demnach die ASI-Versorgung gezeichnet sowie der Anschluss an den ET200-ASI-Master. Eingehend sind auf dieser Seite der L1, N und und ein Set, letzteres ist ein Eingang beim ASI-Master und wird von der SPS aus gesetzt, und ausgehend ist der ASI-BUS vom ASI-Master.\\\\
     Auf der dritten Seite wurde der Versorgungsanschluss von SPS und ET200 gezeichnet. Eingehend sind 24V einmal für die SPS sowie für die ET200 und der jeweilige Minuspol dazu. Auf dieser Seite wurden die Drahtverbindungen gezeichnet, die die SPS, die Ein und Ausgangskarten sowie die beiden PTO-Karten versorgt.\\\\
     Auf der vierten Seite findet sich das erste Feed-In-Modul von Weidmüller. Hierbei eingehend sind 24V, mit Minuspol, von der SITOP und ausgehend sind die Brückenverbindungen von den DC-Sicherungen. Das wären zwei mal Brücken für 24V, zwei mal Brücken für GND und eine Brücke für den BUS dieser Bugruppe.\\\\
-    Auf den nächsten beiden Seiten finden sich jweils eine 8A-DC-Sicherung. Eingehend sind die bereits genannten Brücken, diese gehen dann auch weiter zur nächsten Sicherung, und ausgehend sind einmal + und - für die stärkeren Schrittmotoren. Wie erwähnt sind das Seite 5 und 6.\\\\
-    Auf Seite 7 findet sich eine 2A-DC-Sicherung für einen von drei schwächeren Schrittmotor. Diese hat ebenfalls die Brückenverbindung eingehend, allerdings hört die Brückenverbindung mot dieser Sicherung auf. Das bedeutet ein Feed-In-Modul versorgt drei Sicherungen. Abgehend hat diese Sicherung + und - für den passenden Schrittmotor.\\\\
-    
-    Ursprünglich waren die drei netzteile , dnan kanmmm asi
+    Auf den nächsten beiden Seiten finden sich jweils eine 8A-DC-Sicherung. Eingehend sind die bereits genannten Brücken, diese gehen dann auch weiter zur nächsten Sicherung, und ausgehend sind einmal + und - für die stärkeren Schrittmotoren. Wie erwähnt sind das Seite fünf und sechs.\\\\
+    Auf Seite sieben findet sich eine 2A-DC-Sicherung für einen von drei schwächeren Schrittmotor. Diese hat ebenfalls die Brückenverbindung eingehend, allerdings hört die Brückenverbindung mot dieser Sicherung auf. Das bedeutet ein Feed-In-Modul versorgt drei Sicherungen. Abgehend hat diese Sicherung + und - für den passenden Schrittmotor.\\\\
+    Ab der Seite acht wiederholen sich die letzten vier Seiten, mit dem Unterschied dass die gebrückte Versorgungsleitung nicht von der SITOP kommt, sonder von der Deutronic. Auf der Ersten ist damit wieder das Feed-In-Modul für die zweite Baugruppe. Somit hat man auf den drei folgendes Seiten drei DC-Sicherungen (8A, 8A, 2A), auf jeder Seite jeweils eine und von jeder Sicherung zwei Abgänge für die Schrittmotoren.\\\\
+    Ab Seite 13 sind vier fast idente Schaltpläne. Der Grundaufbau ist immer gleich, man kommt mit der Versorgung von den Sicherungen und geht damit in die Schrittmotorkarte Type CL57C von Nanotec. Von den Treibern wurden dann Verbindungen zu einem Schrittmotor gezogen und zum zugehörigen Geber.\\
+    Wenn wir diesen Teil des Schaltplanes von der Motorseite aus betrachten gibt es für den Motor die Anschlüsse A+, A-, B+, B-. Das sind die Anschlüsse für die zwei Pole eines Schrittmotores. Der Geber, welcher mit dem Motor über einen Welle kekoppelt ist, hat die Anschlüsse EB+, EB-, EA+, EA-  und für die Versorgung VCC und GND. Der Treiber CL57C hat Ausgänge die genau dieselbe Bezeichnung haben. Die gleichnnamigen Anschlüsse wurden miteinander verbunden. \\Da der Motor nicht im Schaltschrank sondern am Lagerregal verbaut wird muss vom Treiber zum Motor beziehungsweise Geber ein Kabel verlegt werden. Dies wiederum bedeuet, dass wir im Schaltschrank vom Treiber zuerst auf Reihenklemmen gehen und an diese Reihenklemmen dann die Kabel geklemmt werden. Für den Schrittmotoren wird ein 5 adriges Kabel (inklusive PE) verwendet mit der Kabelbezeichnung "ÖLFLEX® CLASSIC FD 810 CY 5G0,75". Der PE Leiter wird an die Erdung des Schaltschrankes angeklemmt und dieses Kabel hat, um die elektromagnetische Verträglichkeit zu gewährleisten, eine Schirmung. Die Schirmung muss, um zu funktionieren, an die Schaltschrank-Erdung gelegt werden, weil damit der Schirm eine Senke sein kann für die von den Leitern abgestrahlten elektromagnetischen Wellen. Das Kabel wird auf einer Ankerschiene mit der entsprechenden Zugentlastungsklemme, auf dem Erdungsmodul, nicht nur zugentlastet sondern auch geerdet. Dabei muss dann aber bedacht werden, dass die Klemme Kontakt zum Schirm haben muss, und die Ankerschiene geerdet sein muss. Der Schirm sowie die Erdung dessen wurde im Schaltplan hinzugefügt. \\
+    Bezüglich den Motorkabeln wurde ebenfalls die Farbe der Adern bedacht. Während beim "ÖLFLEX® CLASSIC FD 810 CY 5G0,75" die Adern durchgängig nummeriert sind sind es die Adern des Schrittmotors nicht. Diese haben die Farben Schwarz, Grün, Rot und Blau. Da man beim Verdrahten nicht immer wissen kann welche Farbe zu welchem Anschluss führt, wurde auch dies im Schaltplan gezeichnet.\\Auch der Geber benötigt ein Kabel. Für diesen wurde auf Patch-Kabel gesetzt. Das achtadrige "FL CAT5 PATCH 10,0" bietet die Möglichkeit RJ45 Stecker zu verwenden. Diese befinden sich jeweils an den Enden und ersparen im Schaltschrank eine Menge Reihenklemmen, da man nur für die Buchse eine Aussparung bedenken muss. Vor allem im Entwicklungsprozess ist das komfortable An und Abstecken ein großer Vorteil aufgrund der Zeitersparnis. Aber auch im späteren Normalbetrieb ist es von Vorteil, bei zum Beispiel einer Umsiedelung des AFSS, die Kabel einfach abstecken zu können. Auch diese Kabel haben einen Schrim der über den RJ45 Stecker geerdet werden kann.\\
+    Damit wäre die Kommunikation von Treiber, Motor und Geber gezeichent. Doch es gehört auch die Kommunikation zur SPS dazu. Der Treiber hat folgende Kontakte: PUL+, PUL-, DIR+, DIR-, ENA+, ENA- und ALM, BRK, COM-. Alle Anschlüsse mit einem - am Ende beschreiben den Minuspol zum jweiligen Gegenstück mit +. Da In unserem Fall alle + Kontakte von der selben SPS kommen und damit alle die selbe Spannung referenzieren können PUL-, DIR-, ENA- und COM- zusammengeschlossen werden und daraufhin zur Sammelschiene der Minuspole geklemmt werden. PUL+ steht für pulse und reguliert die Geschwindigkeit der Drehung,  DIR+ steht für direction und reguliert die Drehrichtung, ENA+ steht für enable und Ab Seite 13 sind vier fast idente Schaltpläne. Der Grundaufbau ist immer gleich, man kommt mit der Versorgung von den Sicherungen und geht damit in die Schrittmotorkarte Type CL57C von Nanotec. Von den Treibern wurden dann Verbindungen zu einem Schrittmotor gezogen und zum zugehörigen Geber.\\
+    Wenn wir diesen Teil des Schaltplanes von der Motorseite aus betrachten gibt es für den Motor die Anschlüsse A+, A-, B+, B-. Das sind die Anschlüsse für die zwei Pole eines Schrittmotores. Der Geber, welcher mit dem Motor über einen Welle kekoppelt ist, hat die Anschlüsse EB+, EB-, EA+, EA-  und für die Versorgung VCC und GND. Der Treiber CL57C hat Ausgänge die genau dieselbe Bezeichnung haben. Die gleichnnamigen Anschlüsse wurden miteinander verbunden. \\
+    Da der Motor nicht im Schaltschrank sondern am Lagerregal verbaut wird muss vom Treiber zum Motor beziehungsweise Geber ein Kabel verlegt werden. Dies wiederum bedeuet, dass wir im Schaltschrank vom Treiber zuerst auf Reihenklemmen gehen und an diese Reihenklemmen dann die Kabel geklemmt werden. Für den Schrittmotoren wird ein 5 adriges Kabel (inklusive PE) verwendet mit der Kabelbezeichnung "ÖLFLEX® CLASSIC FD 810 CY 5G0,75". Der PE Leiter wird an die Erdung des Schaltschrankes angeklemmt und dieses Kabel hat, um die elektromagnetische Verträglichkeit zu gewährleisten, eine Schirmung. Die Schirmung muss, um zu funktionieren, an die Schaltschrank-Erdung gelegt werden, weil damit der Schirm eine Senke sein kann für die von den Leitern abgestrahlten elektromagnetischen Wellen. Das Kabel wird auf einer Ankerschiene mit der entsprechenden Zugentlastungsklemme, auf dem Erdungsmodul, nicht nur zugentlastet sondern auch geerdet. Dabei muss dann aber bedacht werden, dass die Klemme Kontakt zum Schirm haben muss, und die Ankerschiene geerdet sein muss. Der Schirm sowie die Erdung dessen wurde im Schaltplan hinzugefügt.    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{Vogis Bilder/Schaltplan_SM1.png}
+        \caption{13te Seite des Schaltplans, SM ohne Bremse}
+        \label{fig:SMohneBremse}
+    \end{figure}
+    \\Bezüglich den Motorkabeln wurde ebenfalls die Farbe der Adern bedacht. Während beim "ÖLFLEX® CLASSIC FD 810 CY 5G0,75" die Adern durchgängig nummeriert sind sind es die Adern des Schrittmotors nicht. Diese haben die Farben Schwarz, Grün, Rot und Blau. Da man beim Verdrahten nicht immer wissen kann welche Farbe zu welchem Anschluss führt, wurde auch dies im Schaltplan gezeichnet.\cite{Nema_SM_Kontaktbezeichnung}\\
+    Auch der Geber benötigt ein Kabel. Für diesen wurde auf Patch-Kabel gesetzt. Das achtadrige "FL CAT5 PATCH 10,0" bietet die Möglichkeit RJ45 Stecker zu verwenden. Diese befinden sich jeweils an den Enden und ersparen im Schaltschrank eine Menge Reihenklemmen, da man nur für die Buchse eine Aussparung bedenken muss. Vor allem im Entwicklungsprozess ist das komfortable An und Abstecken ein großer Vorteil aufgrund der Zeitersparnis. Aber auch im späteren Normalbetrieb ist es von Vorteil, bei zum Beispiel einer Umsiedelung des AFSS, die Kabel einfach abstecken zu können. Auch diese Kabel haben einen Schrim der über den RJ45 Stecker geerdet werden kann.\\
+    Damit wäre die Kommunikation von Treiber, Motor und Geber gezeichent. Doch es gehört auch die Kommunikation zur SPS dazu. Der Treiber hat folgende Kontakte: PUL+, PUL-, DIR+, DIR-, ENA+, ENA- und ALM, BRK, COM-. Alle Anschlüsse mit einem - am Ende beschreiben den Minuspol zum jweiligen Gegenstück mit +. Da In unserem Fall alle + Kontakte von der selben SPS kommen und damit alle die selbe Spannung referenzieren können PUL-, DIR-, ENA- und COM- zusammengeschlossen werden und daraufhin zur Sammelschiene der Minuspole geklemmt werden. PUL+ steht für pulse und reguliert die Geschwindigkeit der Drehung,  DIR+ steht für direction und reguliert die Drehrichtung, ENA+ steht für enable und entsperrt den Treiber beziehungsweise gibt frei, dass ein Ansteuerung gewünscht ist. BRK steht für break und würde benötigt werden, wenn eine Bremse angedacht wäre, was sie in diesem Fall aber nicht ist. ALM steht für arlarm und ist ein Ausgang der einen erkannten Fehler meldet.\\
+    ALM wurde mit der Eingangskarte verbunden und PUL+, DIR+ und ENA+ wurden an die zugehörigen Kontakte bei den PTO Karten der SPS gezeichnet.\\     
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Vogis Bilder/Schaltplan_SM_bremse.png}
+        \caption{Zusätzliche Kurzschließung von Spulen bei horizontalen Antrieben}
+        \label{fig:SMmitBrems}
+    \end{figure}
+    Während die ersten beiden SM-Treiber Schrittmotoren ansteuern die keine Bremsfunktion brauchen, da sie den Apparat nur horizontal bewegen und damit bei plötzlichem Ausfall, die Anlage auf dieser Achse zum Stillstand kommt, brauchen die anderen Zwei eine Bremsfunktion. Die zwei restlichen SM-Treiber steuern Motoren an, die zum Heben des Gabelapparates sind, uns wenn diese auf einmal ausfallen würden, würde die Schwerkraft das Konstrukt zu Boden fallen lassen. Deswegen sollen im Fehlerfall Relaiskontakte die Spulen der Schrittmotoren kurzschließen und damit eine bremsende Wirkung ermöglichen. Dabei funktioniert das Prinzip so, dass bei plötzicher Spannungsabwesenheit das Relais loslässt und die Spulen kurzgeschlossen sind. Das heißt im spannungsfreien Zustand sind die Spulen kurzgeschlossen siehe Abbildung \ref{fig:SMmitBremse}.\\\\ 
+    Auf den darauf folgenden zwei Seiten befindet sich die Steuerung von den schwächeren Schrittmotoren. Auch diese haben Treiber und Motoren aber keine Geber.\\
+    Auch die Geber für die schwächeren Schrittmotoren haben einen enable-Eingang. Dieser ist jedoch dann enabled wenn der Eingang Spannungsfrei ist. Aufgrund dieser Eigenschaft gibt es die Gefahr, dass die Schrittmotoren schneller losfahren als die SPS die Spannung aufgebaut hat. Beispielsweise wenn die Anlage einen Neustart durchführt könnte diese Situation entstehen. Deswegen werden die Eingänge Invertiert. Ein Relaiskontakt, ein Öffner, setzt den EN-Eingang immer auf 24V, erst sobald die SPS das Relais ansteuert kann der Treiber enabeled werden. Bei drei Treiber macht dies drei Relais. Auf der 17ten Seite befinden sich somit die Relais und deren Öffnerkontakte. Anfänglich wurden hier fälschlicher Weiße Schließer eingeplant, im Verlauf der Arbeit wurde diese Entscheidung hinterfragt und demnach auch ausgebessert. Auf der darauf folhgenden Seite finden sich die Treiber und Schrittmotoren.\\
+    Zu den Treibern kann man sagen, dass alle Treiber ähnlich aufgebaut sind. Wieder gibt es einen Kontakt zur Geschwindigkeitsregelung (CLK+ und CLK-), einen zur Richtungsbestimmung (CW+ und CW-) und den bereits besprochenen Freigabeeingang (EN+ und EN-). Weiterführend haben die Treiber noch Anschlüsse für die Versorgungsspannung und A+, A-, B+ und B- für die Schrittmotoren. Die Massekontakte werden wieder alle zusammengeschlossen und weitergefürht zur gemeinsamen Masse.\\ 
+    Auch für diese Motoren werden die selben Kabel verwendet wie zuvor. Wieder gilt, dass die Schirmung bei der Zugentlastung geerdet wird und auch die Farben der Adern wurden im Schaltplan eingezeichnet.\\
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{Vogis Bilder/SM_Klein_Schaltplan.png}
+        \caption{40Ncm Schrittmotoren im Schaltplan}
+        \label{fig:SMkleine}
+    \end{figure}
+    Auch hier wurden die Steuerkontakte von den Treiben an die PTO-Karten der SPS angeschlossen.\\\\
+    Auf der 19ten Seite befinden sich Not-Aus-Schaltungen und die Relais die dem Vertikalantrieb die Bremsfunjktion geben. In Summe sind es vier Not-Aus und zusätzlich noch ein Schlüsselschalter zur Freigabe. Für die fünf Sensoren gibt es drei Versorgungsleitungen, je nach räumlicher Position teilen sich die Komponenten eine Leitung, und alle haben jeweils einen Abgang zur SPS-Eingangskarte. Die Relais bekommen ihre Versorgung von der SPS und haben Abgänge zur gemeinsamen Masse. Die Funktion der Relais wurde bereits beschrieben.\\\\ 
+    Die nächste Seite zeigt die ganze Steuerung des Asynchromotors, welcher das Förderband antreibt. Hierfür gibt es Schütz die in einer Wendeschützschaltung den Asynchronmotor ansteuern. Es ist keine Drehzahlregelung nötig. Die Schütze blockieren sich gegenseitig und werden angesteuert über zwei Relais. Diese Relais werden direkt von der SPS angesteuert. Beim Asynchronmotor gibt es noch einen Motorschutzschalter, dessen genauere Auslegung im Verlauf der Diplomarbeit noch genauer beschrieben wird.\\\\
+    Die Seiten 21 und 22 zeigen die PTO-Karten der SPS. PTO steht Pulse-Train-Output und steuert die Treiber an. Ursprünglich wären für diese Aufgaben PWM-Karten von Weidmüller verwendet worden, es ist allerdings bei Testversuchen aufgefallen, dass diese nicht in der Lage sind variable Frequenzen zu erzeugen. Damit musst eine Alternative her. Die Siemens PTO-Karten sind fähig die Frequenzen auch während dem Betrieb zu ändern und damit ermöglichen sie sanftes Anfahren der Schrittmotoren.Eine PTO-Karte kann vier Schrittmotoren steuern.\\
+    Diese Karten haben mehrere Ausgänge und Eingänge. Im Fall des AFSS gehen vier mal die PUL+ und DIR+ und ENA+ aus und eingehend sind die vier ALM (Arlarmmeldungen). Das sind die Kontakte von den vier stärkeren Treibern und damit ist die erste PTO-Karte voll ausgenutzt. Mit der Zweiten werden die Drei schwächeren Treiber angesteuert. Diese mal wieder mit den unterschiedlich benannten Kontakten.\\\\
+    Auf der folgendnen Seite befindet sich die Eingangskarte der SPS mit den Eingängen. Dabei werden primär die Zustände der Not-Aus-Schalter abgefragt und die des Schlüsselfreigabeschalters.\\\\
+    Auf der Seite 24 befindet sich die Ausgangskarte der Siemens SPS. Mit dieser werden ausschließlich nur Relais angesteuert. Diese sind für die Invertierung der Enable-Eingänge der Treiber zuständig, für das Steuern der Schütze für den Asynchronmotor und zuletzt auch für die Bremsfunktion. Damit ist die Schaltung zur Steuerung aller Schrittmotoren fertig. Auf den folgenden Seiten wurde dann die Schaltung der ASI-Sensoren gezeichnet\\\\ 
+    Bezüglich dem ASI-Netzt ist zu wiederholen, dass der ASI-Master mit den Slaves über einen zweiadrigen ASI-Bus kommuniziert. Für diesen Bus gibt es ein eigenes Kabel, aber da mit dem Material gearbeitet werden muss, was vorhanden ist wird beim AFSS das selbe fünf adrige Ölflex verwendet wie für die Motoren. In diesem ungünstigen Fall werden von den fünf adern am Ende nur zwei verwendet.\\
+    Bezüglich den Slaves ist zu sagen, dass ursprünglich ein Slave mit sieben Inputs gedacht. Dieser wäre in der Schule genügend vorhanden gewesen. Allerdings ist bei Testläufen es nicht gelungen eine Kommunikation zwischen diesen Slaves und dem Siemens ASI-Master herzustellen. Deswegen werden anstatt vier Slaves mit sieben Eingängen nun sieben ASI-Slaves von Siemens mit jeweils vier Eingängen verwendet. Der genaue Typ ist 3RK2200-0CE02-0AA2 und es ist möglich mit diesem zu kommunizieren.\\
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{Vogis Bilder/ASI_Schaltplan_sensoren.png}
+        \caption{Verbindung der Sensoren mit den ASI-Slaves}
+        \label{fig:ASI_Sensoren}
+    \end{figure}
+    Der Bus fährt auf mit Steckverbinder erweiternde Reihenklemmen, von denen dann auf die jeweiligen Slaves. Es sind immer zwei Slaves räumlich beieinander und werden gemeinsam mit Reihenklemmen auf dem AFSS auf Hutschienen montiert. Der siebte Slave ist alleine. Wie die Sensoren mit den ASI-Slaves verbunden sind sieht man auf der Abbildung \ref{fig:ASI_Sensoren} und für eine genaue Erklärung zu den Sensoren siehe Kapitel \ref{sec:Sensorik}.\\
+    In Summe erstreckt sich der genaue Schaltplan der ASI-Slaves über die letzten vier Seiten.\\\\
     ---Wie wurden Motorschütz ausgelegt---
     ---Wie wurden FI und LS ausgelegt---
     ---ASI-SLaves ursprünglich mit sieben anschlüssen, waren dann nicht kompartibel---
