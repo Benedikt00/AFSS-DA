@@ -183,7 +183,7 @@ Da die Lagerlogik auf einem Server ausgeführt weird und die SPS nur das ausfüh
 
             \begin{itemize}
                 \item \textbf{{HTTP (Hypertext Transfer Protocol):}} \mbox{} \\
-                Eine Kommunikation mit dem Http Protokoll findet wie folgt statt. Wie oben bereits erwähnt funktioniert das HTTP- Protokoll nach dem Anforderungs-Antwort-Prinzip. Wie in Abb. \ref{HTTP-Client_Server_Kommunikation} ersichtlich wir als Erstes eine Anfrage vom Cleint zum Server gesendet (HTTP-Request). Darufhin wird diese Anfrage vom Server beanrbeitet und dieser sendet dann die geforderten Informationen zurück (HTTP-Response). Danach ist die Verbindung beendet.
+                Eine Kommunikation mit dem HTTP Protokoll findet wie folgt statt. Wie oben bereits erwähnt funktioniert das HTTP- Protokoll nach dem Anforderungs-Antwort-Prinzip. Wie in Abb. \ref{HTTP-Client_Server_Kommunikation} ersichtlich wir als Erstes eine Anfrage vom Client zum Server gesendet (HTTP-Request). Darufhin wird diese Anfrage vom Server bearbeitet und dieser sendet dann die geforderten Informationen zurück (HTTP-Response). Danach ist die Verbindung beendet.
                 \cite{HTTP-Client_Server_Kommunikation}
 
                 \begin{figure}[h]
@@ -195,34 +195,52 @@ Da die Lagerlogik auf einem Server ausgeführt weird und die SPS nur das ausfüh
                 \end{figure}
             
                 \item \textbf{{OPC-UA (Open Platform Communications - Unified Architecture):}} \mbox{} \\
-                
+                Auch bei OPC UA gibt es Server und Clients. Dabei stellt der Server Daten bereit und die Clients können diese Daten abfragen oder Werte überschreiben. Dies ermöglicht einen sichere sowie zuverlässige Datenübertragung. 
+                \cite{OPC-UA}
             \end{itemize}
+
+            
+    \paragraph{Welches Prorokoll wurde gewählt?} \mbox{} \\
+    Bei diesem Projekt wurde das HTTP Protokoll ausgewählt um die Kommunikation zwischen SPS und Server auszuführen. Das HTTP Protokoll wurde ausgewählt, da die SPS direkt mit dem Server kommunizieren kann. Bei OPC-UA hätte ein zusätzlicher Server gehostet werden müssen. Dieser OPC-UA Server hätte dann mit dem eigentlichen Server, welcher die Lagerlogik übernimmt, kommuniziert. Die SPS hätte dann auf den OPC-UA Server zugegriffen und nicht direkt auf den Zielserver. Um diesen zusätzlichen Aufwand sowie weitere Fehlerquellen zu vermeiden, wurde das HTTP Protokoll ausgewählt.
         
             
 
     
     \subsubsection{Verbindungsherstellung}
-    Aus den in Punkt \ref{Kommunikationsprotokolle} genannten Gründen wurde das HTTP Protokoll ausgewählt. Um in TIA-Portal die Verbindung via HTTP aufzubauen, benötigt man bestimmte Libraries die von Siemens zu Verfügung gestellt werden. Diese müssen dann wie im Punkt \ref{Bibliotheken} gezeigt eingebunden werden, um die Funktionsbausteine der Library nutzen zu können. 
+    Aus den in Punkt \ref{Kommunikationsprotokolle} genannten Gründen wurde das HTTP Protokoll ausgewählt. Um in TIA-Portal die Verbindung via HTTP aufzubauen, benötigt man bestimmte Libraries die von Siemens zu Verfügung gestellt werden. Diese müssen dann wie im Punkt \ref{Bilbliotheken} gezeigt eingebunden werden, um die Funktionsbausteine der Library nutzen zu können. 
 
         \paragraph{Funktionsbausteine} \mbox{} \\
-        In der Library stehen dann folgende Bausteine zur Verfügung:
+        In der Library für das HTTP Protokoll stehen dann folgende Bausteine zur Verfügung:
 
         \begin{itemize}
             \item GET
-            \item POST-PUT \\
-            Mit dem POST-PUT Befehl werden Daten zum Server geschickt aber auch Daten erhalten. 
+            \item POST-PUT 
         \end{itemize}
+    
+    Als Baustein zur Verbindungsherstellung wurde der POST-Befehl ausgewählt, da mit diesem unbegränzte Datenmengen geschickt werden können. Damit der Baustein nun eine Verbindung herstellen kann müssen folgende Parameter angegeben werden: \textbf{URL} [string], die zu schickenden Daten \textbf{data} [string] und ein Speicherplatz für die empfangenen Daten \textbf{response Data} [Array of Char]. Die restlichen Eingabeparameter, welche in Abb. \ref{POST-PUT_Baustein} ersichtlich sind,  müssen nicht unbedingt ausgefüllt werden, sondern werden automatisch vorausgefüllt. Standardmäßig ist die richtige Methode (POST) schon ausgewählt, da die Eingabe \textbf{method} automatisch mit \textbf{0} ausgefüllt wird. 
 
+    \begin{figure} [h]
+        \centering
+        \includegraphics[width = 0.7\textwidth] {Sonne/POST-PUT_Baustein.png}
+        \caption{POST-Put  Baustein \cite{HTTP-Bausteine}}
+        \label{POST-PUT_Baustein}
+    \end{figure}
+
+    Wird nun die Eingabe \textbf{execute} HIGH, so wird der Baustein einmalig ausgeführt. Rechnet man mit einem häufigeren Datenaustausch, mit Hilfe dieses Bausteins, so empfiehlt es sich den Parameter \textbf{keep Connenction} auf \textbf{true} zu setzten. Dadurch bleibt die Verbindung mit dem Zielserver erhalten und weitere Kommunikationen werden dadurch schneller ausgeführt. 
+
+    \subsubsection{Datenaustausch}
+    Die SPS und der Server arbeiten mit verschiedenen Datentypen. Bei dem Datenaustauch erwartet der Server die Daten in einem json-Format. Deswegen müssen die Daten welche gesendet werden zuerst in dieses Format gebracht werden. Um dies in Tia-Portal zu realisieren wird die Bibilothek LStream eingebunden. Mit dieser werden dann Daten aus einem json-Datenbaum in ein Array of Byte umgewandelt. Dieses Array of Byte wird anschließend in den Datentyp string umgewandelt. Nun kann dieser string an den POST-Datenbaustein weitergegeben werden. \\
+    Ist nun der Datenaustauch abgeschlossen, so sind die Daten als Array of Char verfügbar. Da man in Tia-Portal nur umständlich mit diesem Datenformat umgehen kann, wird das Array of Char nun in das Datenformat string umgewandelt. Die Daten sind nun noch immer nicht einzeln verfügbar, weswegen man nun diesen string nach den Daten filtern muss.
 
     \subsubsection{Datenfilterung}
-    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welche Aufgabe es sich handelt, und die Daten die erforderlich sind um diesen Befehl auszuführen.
+    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welche Aufgabe es sich handelt  und die Daten welche erforderlich sind um diese Aufgabe auszuführen.
 
         \paragraph{Datenformatierung}\mbox{}\\
         Die Daten werden in einem String geschickt, welcher in zwei Teile aufgeteilt wird. Der zweite Teil ist jedoch abhängig vom ersten. \\
-        
+        In folgenden Punkten dient x immer als Platzhalter für eine Nummer null bis neun. 
         \begin{itemize}
             \item 1.Teil: \\
-            IDXXXXAXX \\
+            IDxxxxAxx  \\
             Aus diesem Teil werden die ID-Nummer sowie der Auftrag herausgefiltert. Die ID-Nummer ist eine 4 stellige Nummer welche nach ID steht. Der Auftrag welcher ausgeführt werden muss steht in den zwei Stellen nach A.\\
             Diese werden nach folgender Codierung ausgelesen:
                 \subitem 00: Kommissionierstation
@@ -232,12 +250,14 @@ Da die Lagerlogik auf einem Server ausgeführt weird und die SPS nur das ausfüh
             \item 2.Teil: \\
             Der zweite Teil steht in Abhängigkeit zu ersten. Je nachdem welche Zahl nach A steht,also der Code welche Area angesprochen wird, ist der zweite Teil anders aufgebaut.
                 \begin{itemize}
-                \item 00: 
-                \item 01:
-                \item{10: X-Position, Y-Position, Z-Position,Ein/-Auslagerung \\
-                Wobei nach jedem Symbol eine 4 stellige Zahl steht.Also X0000Y0000Z0000R0 bedeutet, dass die 
-                X-Position 0, Y-Position 0, Z-Position 0 und es sich um eine Auslagerung handelt.}
-                \item 11:
+                \item 00: SB\\
+                Bei diesem Befehl muss der Barcodescanner angesteuert werden um an der Kommissionierstation einen Barcode einzuscannen.
+                \item 01: P+-xxxx \\
+                Gibt an um wie viel sich das Förderband bewegen muss [in mm]. Vor der Zahl steht jedoch entweder ein plus oder minus um festzulegen in welche Richtung sich das Förderband bewegen muss. 
+                \item 10: XxxxxYxxxxZxxxxRx \\
+                Nach jeder Achse X,Y,Z steht ein vierstelliger Wert, welcher angibt auf welcher Position sich der gewünschte Lagerplatz befindet. Der Wert nach R ist entweder 0 oder 1 und gibt an ob es sich um eine Einlagerung (1) oder Auslagerung (0) handet.
+                \item 11: Pxxxx \\
+                Nach P steht ebenso ein vierstelliger Wert, der angibt auf welche Position der Querförderer gefahren werden muss. 
                 
                 \end{itemize}
             
