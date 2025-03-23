@@ -161,7 +161,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 \subsection{Motorenansteuerung}
 
 \subsection{SPS-Server Kommunikation}
-Da die Lagerlogik auf einem Server ausgeführt weird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es die nötigen Informationen, sowie die Übertragung der Aufgabenstellung auszuführen. 
+Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es die nötigen Informationen, sowie die Übertragung der Aufgabenstellung auszuführen. 
 
     \subsubsection{Zur Auswahl stehende Kommunikationsprotokolle} 
     \label{Kommunikationsprotokolle}
@@ -226,17 +226,18 @@ Da die Lagerlogik auf einem Server ausgeführt weird und die SPS nur das ausfüh
         \label{POST-PUT_Baustein}
     \end{figure}
 
-    Wird nun die Eingabe \textbf{execute} HIGH, so wird der Baustein einmalig ausgeführt. Rechnet man mit einem häufigeren Datenaustausch, mit Hilfe dieses Bausteins, so empfiehlt es sich den Parameter \textbf{keep Connenction} auf \textbf{true} zu setzten. Dadurch bleibt die Verbindung mit dem Zielserver erhalten und weitere Kommunikationen werden dadurch schneller ausgeführt. 
+    Wird nun die Eingabe \textbf{execute} HIGH, so wird der Baustein einmalig ausgeführt. Rechnet man mit einem häufigeren Datenaustausch, mit Hilfe dieses Bausteins, so empfiehlt es sich den Parameter \textbf{keep Connenction} auf \textbf{true} zu setzten. Dadurch bleibt die Verbindung mit dem Zielserver erhalten und weitere Kommunikationen werden schneller ausgeführt. 
 
     \subsubsection{Datenaustausch}
+    \label{Datenaustausch}
     Die SPS und der Server arbeiten mit verschiedenen Datentypen. Bei dem Datenaustauch erwartet der Server die Daten in einem json-Format. Deswegen müssen die Daten welche gesendet werden zuerst in dieses Format gebracht werden. Um dies in Tia-Portal zu realisieren wird die Bibilothek LStream eingebunden. Mit dieser werden dann Daten aus einem json-Datenbaum in ein Array of Byte umgewandelt. Dieses Array of Byte wird anschließend in den Datentyp string umgewandelt. Nun kann dieser string an den POST-Datenbaustein weitergegeben werden. \\
-    Ist nun der Datenaustauch abgeschlossen, so sind die Daten als Array of Char verfügbar. Da man in Tia-Portal nur umständlich mit diesem Datenformat umgehen kann, wird das Array of Char nun in das Datenformat string umgewandelt. Die Daten sind nun noch immer nicht einzeln verfügbar, weswegen man nun diesen string nach den Daten filtern muss.
+    Ist nun der Datenaustauch abgeschlossen, so sind die empfangenen Daten als Array of Char verfügbar. Da man in Tia-Portal nur umständlich mit diesem Datenformat umgehen kann, wird das Array of Char nun in das Datenformat string umgewandelt. Die Daten sind nun noch immer nicht einzeln verfügbar, weswegen man nun diesen string nach den Daten filtern muss.
 
     \subsubsection{Datenfilterung}
     Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welche Aufgabe es sich handelt  und die Daten welche erforderlich sind um diese Aufgabe auszuführen.
 
         \paragraph{Datenformatierung}\mbox{}\\
-        Die Daten werden in einem String geschickt, welcher in zwei Teile aufgeteilt wird. Der zweite Teil ist jedoch abhängig vom ersten. \\
+        Die Daten werden in einem string geschickt, welcher in zwei Teile aufgeteilt wird. Der zweite Teil ist jedoch abhängig vom ersten. \\
         In folgenden Punkten dient x immer als Platzhalter für eine Nummer null bis neun. 
         \begin{itemize}
             \item 1.Teil: \\
@@ -262,5 +263,41 @@ Da die Lagerlogik auf einem Server ausgeführt weird und die SPS nur das ausfüh
                 \end{itemize}
             
         \end{itemize}
+
+    \subsubsection{Tia-Portal Programm}
+    Im Programm werden zwei Funktionsbausteine aufgerufen. Nämlich FB\_Kommunikation und FB\_Datenfiltern. FB\_Kommunikation übernimmt den Datenaustausch zwischen Server und SPS. In diesem Baustein werden zuerst die Daten die an den Server geschickt werden, wie in Punkt \ref{Datenaustausch} erklärt ins richtige Datenformat(string) gebracht. Darufhin wird der HTTP POST-Aufruf ausgeführt und die empfangenen Daten wie in \ref{Datenaustausch} gezeigt wieder ins richtige Datenformat gebracht. Somit ist die Aufgabe dieses Datenbausteins erfüllt. Nun erfolgt der Aufruf des zweiten Funktionsbausteins FB\_Datenfiltern. Dieser Funktionsbaustein ist in unterschiedliche Funktionsbausteine aufgeteilt. Der erste dieser Funktionsbausteine filtert nach ID sowie der Area (Aufgabe). Darufhin wird der Baustein FB\_Kommunikation innerhalb des Bausteins FB\_Datenfiltern aufgerufen, um sofort die ID-Nummer an den Server zurück zu schicken, damit dieser weiß das die SPS den Auftrag erhalten hat. Die restlichen Bausteine die im FB\_Datenfiltern enthalten sind, warten darauf, dass sie von ihrer Area, beispielsweise 01, angesprochen werden. Sollte dies der Fall sein so Filtern sie die benötigten Informationen um den Auftrag auszuführen. Nach dem Aufruf beider Bausteine sind nun die geforderten Informationen verfügbar. Bei beiden Funktionsbausteinen handelt es sich um Multiinstanzen, um das Programm übersichtlicher zu halten. 
+
+    \paragraph{Wie schaut so ein Baustein aus? (am Beispiel ``ID + Area")} 
+    \mbox{} \\
+    Alle Bausteine zur Datenfilterung wurden in SCL programmiert. Als Eingabe ist der Datenstring welcher die Daten beinhaltet. In diesem wird zuerst nach ID gefiltert (Zeile 1). Dies liefert die Position von ID innerhalb ddes Strings. Darufhin werden alle Zeichen links von ID + ID wegelöscht (Zeilen 2 - 5). Nun weiss man das rechts von ID eine vierstellige Nummer (ID-Nummer) steht. Da alles links von dieser Nummer weggeschnitten wurde, weiß man das diese Nummer ganz links im string ist. Deswegen werden die ersten vier Stellen von links genommen und dem Ausgang Q\_Info\_ID zugewiesen (Zeile 6). Dieser Ausgang ist für das gesamte Programm erreichbar. Das selbe Suchen und Löschen der Zeichen links vom Gesuchten wird ebenfalls für A (Area / Auftrag) erledigt (Zeilen 10 - 13). Da man den Wert von Area, welcher den Auftrag definiert, vergleichen will um den richtigen Baustein auszuführen, werden die zwei Zeichen links von A, von denen wir wissen das es Zahlen sind, in das Datenformat int konvertiert und dem Ein-Ausgang IQ\_Info\_Area zugewiesen (Zeilen 19-23). \\
+
+    \begin{lstlisting}[language=Pascal]
+        #T_Int := FIND(IN1 := #I_Datenstring, IN2 := 'ID');
+IF #T_Int > 0 THEN
+    #X_Info_ID := #T_Int + 1;
+    #X_String_bearbeitet := DELETE(IN := #I_Datenstring, L := #X_Info_ID, P := 1); //Alles bis inkl. X wegschneiden
+    
+    #Q_Info_ID := LEFT(IN := #X_String_bearbeitet, L := 4);               // 4 Zeichen links von X nehmen
+    
+END_IF;
+
+#T_Int := FIND(IN1 := #I_Datenstring, IN2 := 'A');
+IF #T_Int > 0 THEN
+    #X_Info_Area := #T_Int + 0;
+    #X_String_bearbeitet := DELETE(IN := #I_Datenstring, L := #X_Info_Area, P := 1);
+    
+    // Lager herausfinden                      10: Lager 1      11: Puscher (Lager 1)       00: Komissionierstation
+    //(zurzeit nur 1 Lager verfuegbar)          20: Lager 2      21: Puscher (Lager 2)       01: Foerderband
+    // -->nur 00/01/10/11 relevant             30: Lager 3      31: Puscher (Lager 3)
+    
+    #Area_Info_1_string := LEFT(IN := #X_String_bearbeitet, L := 2);
+    STRG_VAL(IN := #Area_Info_1_string,                                         
+             FORMAT := #Area_convert_Format_auswaehlen,
+             P := 1,
+             OUT => #IQ_Info_Area);
+    
+END_IF;
+    \end{lstlisting}
+
 
 \subsection{Herausforderungen}
