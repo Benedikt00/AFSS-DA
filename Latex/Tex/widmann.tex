@@ -119,14 +119,14 @@ Während das SPS-Programm von der CPU durchlaufen wird, überprüft dieses immer
     \caption{SICK Sensoren}
 \end{figure}
 
-\subsubsection{Barcode-Scanner}
+\subsubsection{Barcode-Scanner} \label{sec:Barcodescanner}
 Durch anbringen eines sich nicht wiederholenden Barcodes auf jeder Box wird eine gute Möglichkeit geschaffen, in der Software den Behälter und die sich darin befindenden Bauteile einander zuzuordnen. Unter der Voraussetzung, dass die Benutzerinnen und Benutzer vor jeder Wiedereinlagerung ihrer Box zuerst dessen Barcode einscannen, wird die Wahrscheinlichkeit, dass der Lagerplatz einer Box falsch abgespeichert wird, verkleinert. Somit sinkt die Chance, dass bei Bestellen eines Bauteils die falsche Komponente geliefert wird. Das erfassen des Barcodes findet mittels eines Barcodescanners der Firma SICK statt (siehe Abb.\ref{BarScan}), welcher bei der Kommissionierstation untergebracht ist, um eine einfache Bedienung gewährleisten zu können.\\
 Der uns zur Verfügung gestellte Barcodescanner (CLV61x-2Port) ist in der Lage alle gängigen Codearten einzulesen.\cite{Barcodescanner} Barcodes wurden so entwickelt, dass bereits beim Einlesen erkannt wird, wo dieser anfängt und aufhört, damit beim einscannen nicht auf die richtige Ausrichtung geachtet werden muss.
 
 
 
 \paragraph{Einbindung ins TIA-Portal \cite{BarScan_Handbuch}}\mbox{}\\
-Damit der eingelesene Barcode an den Webserver weitergegeben werden kann, muss dieser im Siemens TIA-Portal abgespeichert werden. Mit der CPU verbunden wird der Scanner über PROFINET. Hierbei handelt es sich um einen auf Industrial Ethernet basierenden Kommunikationsstandard und eine Weiterentwicklung des PROFIBUS Vorgängers. Über ihn lässt sich die gescannte Nummer ganz einfach an die SPS übermitteln.\\
+Damit der eingelesene Barcode an den Webserver weitergegeben werden kann, muss dieser im Siemens TIA-Portal abgespeichert werden. Mit der CPU verbunden wird der Scanner über PROFINET. Hierbei handelt es sich um einen auf Industrial Ethernet basierenden Kommunikationsstandard und eine Weiterentwicklung des PROFIBUS Vorgängers. Für eine ausführlichere Erklärung der verschiedenen Feldbussysteme siehe Kapitel \ref{sec:Feldbussysteme}. Über ihn lässt sich die gescannte Nummer ganz einfach an die SPS übermitteln.\\
 Im TIA-Portal Projekt muss, um eine Verbindung zum Barcodescanner herstellen zu können, die zugehörige Gerätebeschreibungsdatei (GSD-Datei) installiert werden. Dies funktioniert über das Gerätebeschreibungsdateien verwalten Fenster im TIA-Portal. Nach der Installation ist das Gerät im Hardwarekatalog unter \enquote{Weitere Feldgeräte} zu finden. Die benötigte Datei wird auf der Internetseite des Herstellers als Download zur Verfügung gestellt.
 
 \paragraph{Auslesen des Barcodes}\mbox{}\\
@@ -146,14 +146,36 @@ Um die Daten des Barcodes überprüfen zu können eignet sich eine wie in Abb.\r
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Sensors/BarScan_Beobachtungstabelle.png}
+    \includegraphics[width=0.9\textwidth]{Sensors/BarScan_Beobachtungstabelle.png}
     \caption{Barcodescanner Beobachtungstabelle im TIA-Portal}
     \label{BarScan_BTabelle}
 \end{figure}
 
 \subsection{AS-Interface}
+\subsubsection{Feldbussysteme \cite{Feldbussysteme}} \label{sec:Feldbussysteme}
+\paragraph{Allgemeines}\mbox{}\\
+Ein Feldbus ist ein Bussystem, das Feldgeräte (Sensoren) und Stellglieder (Aktoren) mit einem Automatisierungsgerät, beispielsweise einer SPS, verbindet. Über den Feldbus findet die Kommunikation statt. Wenn die Nachrichten mehrerer Kommunikationsteilnehmer über die selbe Leitung gesendet werden, muss festgelegt sein, wer (Kennung), was(Messwert oder Befehl), wann (Initative) über den Bus sendet. Es existiert bereit eine Vielzahl an unterschiedlichen Bussystemen, zu den in der Automatisierungstechnik gebräuchlichsten gehören PROFIBUS, PROFINET, Industrial Ethernet, Modbus, AS-Interface, CANopen und EtherCAT. Da die verschiedenen Bussysteme unterschiedliche Datentransferzeiten und Fehlererkennungsmöglichkeiten haben, werden oft in einem Projekt mehrere Feldbusse auf den verschiedenen Automatisierungsebenen verwendet. In Abb.\ref{Feldbussysteme} ist ein solches Projekt mit unterschiedlichen Bussystemen ersichtlich.\\
 
-\subsubsection{Allgemeines}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Sensors/Feldbussysteme.png}
+    \caption{Topologie verschiedener Feldbussysteme \cite{Topologie_Bussysteme}}
+    \label{Feldbussysteme}
+\end{figure}
+
+\paragraph{PROFIBUS \cite{Profibus}}\mbox{}\\
+Bei PROFIBUS (Process Field Bus) handelt es sich um ein der standardisiertes Bussystem das vor allem in der Automatisierungstechnik zu Hause ist. Es ist ein Multi-Master-System, das bedeutet, dass die Kommunikationsabläufe von mehreren Mastern gesteuert werden können. Die am häufigsten verwendete Schnittstelle in einem PROFIBUS-System ist RS485. Zur Datenübertragung wird meist ein 9-poliger Sub-D-Stecker verwendet. Die Anzahl der Teilnehmer ist je PROFIBUS SUB-Netz auf 32 beschränkt, somit ergibt sich eine maximale Anzahl von 128 Teilnehmern. PROFIBUS bietet den Vorteil, dass es sehr einfach in gängige Automatisierungssysteme integriert werden kann. Die Kabelfarbe von PROFIBUS ist violett, was auch beim Verbinden im TIA-Portal ersichtlich ist.
+
+\paragraph{PROFINET \cite{Profinet}}\mbox{}\\
+Wie bereits in Kapitel \ref{sec:Barcodescanner} erwähnt wurde handelt es sich bei PROFINET (Process Field Network) um eine Weiterentwicklung von PROFIBUS. Es basiert auf Industrial Ethernet und wurde von Siemens und den Mitgliedsfirmen der PROFIBUS-Nutzerorganisation entwickelt. PROFINET-Geräte werden ausschließlich über Switches miteinander verbunden, wobei viele Geräte, sowie eine SPS, bereits einen Switch mit mehreren Anschlüssen integriert haben. Der Vorteil von PROFINET ist, dass es das bekannte 7-schichtige OSI-Modell auf ein 4-schichtiges TCP/IP-Modell reduziert. Der Unterschied zum älteren PROFIBUS liegt vor allem in der Funktion große Datenmengen übertragen zu können und der Echtzeitfähigkeit von PROFINET. Außerdem ist die Anzahl der Teilnehmer in einem PROFINET-System praktisch unbegrenzt, da jeder Teilnehmer eine eigene IP-Adresse besitzt. Bei der Projektierung im TIA-Portal müssen die Kommunkationspartner einem gemeinsamen PROFINET zugewiesen werden und zusätzlich muss jedem Gerät ein PROFINET-Name zugewiesen werden, nur die IP-Adresse des Geräts genügt nicht. Die Kabelfarbe ist Grün, was sich auch im TIA-Portal wiederspiegelt.
+
+\paragraph{ASi}\mbox{}\\
+
+\paragraph{Auswahl des Feldbussystems}\mbox{}\\
+Da es sich bei PROFINET um ein von Siemens mitentwickeltes Feldbussystem handelt und dieses einfach in Siemens-Steuerungssystemen eingesetzt werden kann, bietet es eine ideale Möglichkeit, die Siemens SPS und den Siemens ASi-Master miteinander zu verbinden. Auch am Barcodescanner befindet sich eine PROFINET-Schnittstelle, womit dieser ganz einfach an die SPS angeschlossen werden kann.\\
+Da die Sensoren jedoch nicht über PROFINET-Schnittstellen verfügen, mussten sie über einen anderen Weg in das PROFINET-System oder ein anderes Feldbussystem integriert werden. Da im Werkstättenunterricht AS-Interface zur Kommunikation zwischen SPS und Sensoren verwendet wird, fiel die erste Wahl auch auf ASi zur Einbindung der Sensorik.
+
+\textbf{Die Weidmüller alternative}
 
 \subsubsection{Programmierung im TIA-Portal}
 
@@ -177,6 +199,6 @@ Das fertige Lagersystem soll planmäßig in der Factory der HTL untergebracht we
 Für den Fall, dass ein händischer Zugriff zu den Bauteilen benötigt wird z.B. bei einem Stromausfall, lässt sich das Lager durch die darauf befestigten Rollen einfach für den benötigten Zeitraum an einen leichter zugänglichen Ort verschieben.\\
 Dem AFSS kann jedoch nicht nur durch den Menschen beschädigt werden, sonder auch sich selbst Schaden zurichten. Ziel der Sicherheitstechnik ist es auch in diesem Falle den verursachten Schaden zu minimieren und wenn möglich, sogar ganz zu verhindern. Einen weiteren wichtigen Teil zur Sicherheitstechnik trägt die am Lagersystem befestigte Sensorik bei. Damit die x-Schlitten oder das yz-Shuttle nicht in das Gerüst fahren, und dieses dadurch beschädigen, befinden sich Endschalter auf jeder Achse. Wenn diese ausgelöst werden, wird das Technologieobjekt gesperrt und die Motoren werden sofort gestoppt. Außerdem wird durch das Referenzieren der Motoren bei jedem Neustart des Systems verhindert, dass sich die Koordinaten der Boxen verändern. Ansonsten könnte es passieren, dass Boxen, beim Versuch diese auszulagern, nicht richtig von der Gabel angehoben werden und auf den Boden fallen. Zusätzlich überprüfen die Lichttaster, ob die Box während des Ein- und Auslagerungsprozesses an den Zwischenpositionen angekommen ist.\\
 Nicht nur das Lager selbst, sondern auch die Antriebe und die sich im Schaltschrank befindenden Betriebsmittel müssen abgesichert werden. Falls ein zu hoher Strom fließt, zum Beispiel bei einem Kurzschluss, wird der Stromkreis durch einen Leitungsschutzschalter unterbrochen. Speziell für den Asynchronmotor des Fließbands wurde ein eigener Motorschütz eingebaut, um diesen vor Überstrom abzusichern. Weiters befinden sich drei Relais im Schaltschrank, die an die Enable-Kontakte der Motortreiberkarten angeschlossen werden.\\
-Es ist besonders wichtig, das AFSS auch für den Fall eines Stromausfalls abzusichern. Gefährdet wäre dadurch in erster Linie das yz-Shuttle. Wenn sich dieses irgendwo zwischen oberer und unterer x-Achse befindet, besteht die Gefahr, dass es durch die Schwerkraft nach unten fällt. Durch die dabei entstehenden Kräfte könnte nicht nur das Shuttle selbst, sondern das ganze Gerüst des Lagers beschädigt werden. Außerdem wird durch das drehen der Motoren in dessen Spulen ein Strom induziert, welcher in weiterer Folge Schäden an anderen Betriebsmitteln anrichten kann. Da die verwendeten Schrittmotoren nicht mit eigenen Bremsen ausgestattet sind, musste ein eigenes Sicherheitskonzept entwickelt werden. Vor den Synchronmotoren der y-Achse werden Relais mit Wechslerkontakten eingebaut. Durch kurzschließen der Spulen des Motors wird verhindert, dass das Shuttle Richtung Boden fällt. Es wird dadurch abgebremst und bewegt sich langsam nach unten. Für eine ausführlichere Erklärung siehe \ref{sec:Elektrische Planung}.
+Es ist besonders wichtig, das AFSS auch für den Fall eines Stromausfalls abzusichern. Gefährdet wäre dadurch in erster Linie das yz-Shuttle. Wenn sich dieses irgendwo zwischen oberer und unterer x-Achse befindet, besteht die Gefahr, dass es durch die Schwerkraft nach unten fällt. Durch die dabei entstehenden Kräfte könnte nicht nur das Shuttle selbst, sondern das ganze Gerüst des Lagers beschädigt werden. Außerdem wird durch das drehen der Motoren in dessen Spulen ein Strom induziert, welcher in weiterer Folge Schäden an anderen Betriebsmitteln anrichten kann. Da die verwendeten Schrittmotoren nicht mit eigenen Bremsen ausgestattet sind, musste ein eigenes Sicherheitskonzept entwickelt werden. Vor den Synchronmotoren der y-Achse werden Relais mit Wechslerkontakten eingebaut. Durch kurzschließen der Spulen des Motors wird verhindert, dass das Shuttle Richtung Boden fällt. Es wird dadurch abgebremst und bewegt sich langsam nach unten. Für eine ausführlichere Erklärung siehe Kapitel \ref{sec:Elektrische Planung}.
 
 \subsection{Fazit}
