@@ -158,7 +158,11 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
         \cite{Bibliotheken}
 
 
-\subsection{Motorenansteuerung}
+\subsection{Motoransteuerung}
+
+\subsubsection{Motion Control Anweisungen}
+
+\subsubsection{Synchronisation}
 
 \subsection{SPS-Server Kommunikation}
 Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es die nötigen Informationen, sowie die Übertragung der Aufgabenstellung auszuführen. 
@@ -253,8 +257,8 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
                 \begin{itemize}
                 \item 00: SB\\
                 Bei diesem Befehl muss der Barcodescanner angesteuert werden um an der Kommissionierstation einen Barcode einzuscannen.
-                \item 01: P+-xxxx \\
-                Gibt an um wie viel sich das Förderband bewegen muss [in mm]. Vor der Zahl steht jedoch entweder ein plus oder minus um festzulegen in welche Richtung sich das Förderband bewegen muss. 
+                \item 01: P $\pm$xxxx \\
+                Gibt an um wie viel sich das Förderband (in mm) bewegen muss. Vor der Zahl steht jedoch entweder ein plus oder minus um festzulegen in welche Richtung sich das Förderband bewegen muss. 
                 \item 10: XxxxxYxxxxZxxxxRx \\
                 Nach jeder Achse X,Y,Z steht ein vierstelliger Wert, welcher angibt auf welcher Position sich der gewünschte Lagerplatz befindet. Der Wert nach R ist entweder 0 oder 1 und gibt an ob es sich um eine Einlagerung (1) oder Auslagerung (0) handet.
                 \item 11: Pxxxx \\
