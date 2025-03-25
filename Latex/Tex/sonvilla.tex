@@ -3,6 +3,7 @@
 
 \subsection{Aufgabenstellung}
 
+
 \subsection{Tia-Portal Grundlagen}
 
 Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von Siemens zur Programmierung, Konfiguration und Diagnose von Automatisierungssystemen. Es ermöglicht die Steuerung von SPS (Speicherprogrammierbare Steuerungen), HMI (Bedienpanels) und Antrieben in einer einzigen Umgebung.
@@ -121,32 +122,50 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     \end{itemize}
 
     \subsubsection{Programmiersprachen}
-    In Tia Portal stehen unterschidiedliche Programmiersprachen zu Verfügung. Je nach Präferenz bzw. Aufgabe ist das Nutzen der richtigen Sprache von Vorteil. Daher folgt hier eine Auflistung der möglichen Programmiersprachen, welche sich in textbasierte oder graphische Sprachen unterteilen. 
+    In Tia Portal stehen unterschidiedliche Programmiersprachen zu Verfügung. Je nach Präferenz bzw. Aufgabe ist das Nutzen der richtigen Sprache von Vorteil. Daher folgt hier eine Auflistung der möglichen Programmiersprachen, welche sich in textbasierte(tb.) oder graphische(gr.) Sprachen unterteilen. 
 
     \begin{itemize}
-        \item [1.] \textbf{Funktionsplan(FUP) - Funktion Block Diagramm(FDP)} \\
+        \item [1.] \textbf{Funktionsplan(FUP), gr.} \\
             FUP ist eine graphisch augebaute Programmiersprache. Sie besteht aus unterschiedlichen Bausteinen, in Blockdarstellung, welche graphisch durch Linien verknüpft werden. Die Signalverarbeitung bei FUP läuft von links nach rechts. Die Programmierlogik in FUP ist übersichtlich und schnell nachzuvollziehen, weswegen diese Sprache für Anfänger relativ gut geeignet ist. 
             \cite{Programmiersprachen_der_SPS}
 
-        \item[2.] \textbf{Kontaktplan(KOP) - Ladder Diagram(LD)} \\
+        \item[2.] \textbf{Kontaktplan(KOP), gr.} \\
             Der Kontakplan ähnelt einem Stromlaufplan, der anstatt von oben nach unten von links nach rechts verläuft. Für die Programmierung werden Symoble wie Öffner, Schließer und Ausgänge verwendet. Da nicht für jeden Baustein ein Symbol verfügbar ist, werden solche Bausteine in FUP dargestellt. Der logische Verlauf der Schaltung ist dabei von links nach rechts und von oben nach unten.
             \cite{Programmiersprachen_der_SPS}
 
-        \item[3.] \textbf{Anweisungsliste(AWL)} \\
+        \item[3.] \textbf{Anweisungsliste(AWL), tb.}\\
             AWL ist eine textbasierte Programmiersprache, welche an Assembler angelehnt ist. Die Programmiersprache AWL wird hauptsächlich zur logischen Verknüpfung von Ein- und Ausgängen verwendet.In AWL werden Anweisungen in der Reihenfolge geschrieben, in der sie ausgeführt werden sollen. Da AWL für die Programmierung von größeren Projekten eher ungeeignet ist, wird es in neueren Programmen immer weniger verwendet.
             \cite{Anweisungsliste}
 
+        \item[4.] \textbf{S7-Graph, gr.} \\
+            S7-Graph wird verwendet um Ablaufsteuerungen übersichtlich und schnell zu programmieren. Die zu ausführenden Aktionen werden in unterchiedliche Einzelschritte aufgeteitlt. Zwischen diesen Einzelschritten befinden sich Transitionen. Transitionen sind Weiterschaltbedingungen welche erfüllt werden müssen damit zum nächsten Schritt weitergeschaltet wird. Der Ablauf der Steuerung erfolgt von oben nach unten. 
+
+        \item[5.] \textbf{Structered Code Language (SCL), tb.} \\
+            SCL ist eine höhere Programmiersprache, welche sich an Pascal orientiert. SCL ist für mathematische Funktionen, sowie das Programmieren von Schleifen oder if-Bedingungen besser geeignet als andere Programmiersprachen der SPS. In SCL hat man trotzdem Zugriff auf die typischen Elemente einer SPS, wie Eingänge, Ausgänge, Zeiten, Merker, Bausteinaufrufe usw.
+            \cite{SCL}
 
     \end{itemize}
 
 
-    \subsubsection{Bilbliotheken}
-    \label{Bibliotheken}
+    \subsubsection{Bilbliotheken } \mbox{}
+    In Tia Portal sind nicht alle Funktionen integriert zur welcher die SPS fähig wäre. Deswegen gibt es Bibliotheken um projektspezifische Funktionen in das Programm zu intergrieren. Bibliotheken können zusätzlich dazu genutzt werden um projektspezifische Bausteine oder Funktionen auch für andere Programme zugänglich zu machen. Generell kann man Bibliotheken in zwei unterschiedliche Arten unterteilen: Projektbibliothek (Project library) und Global Bibliothek (Global library). Projektbibliotheken sind im Projekt integriert und werdem im Projekt verwaltet. Dies ermöglicht eine Wiederverwendung von Bausteinen, Funktionen, usw. innerhalb des Programms. Globale Bibliotheken hingegen sind projektunabhängig und können deshalb innerhalb von mehreren Projekten verwendet werden. In Bibliotheken gibt es dann wieder zwei unterschiedliche Möglichkeiten der Ablagerung. Man unterscheidet zwischen Kopiervorlagen (Master copies) und Typen (Types). Elemente die in "Kopiervorlagen" gespeichert sind, sind mit dem kopierten Element nicht verbunden. Typen hingegen sind mit ihren Verwendungsstellen im Projekt verbunden. Das heißt wenn Type verändert werden, wird dies im Projekt automatisch aktualisiert. Im Falle, das ein Typ gelöscht wird, werden alle Verwendungen automatisch mitgelöscht.  
+    \cite{Programmierleitfaden_für_S7-1500}
 
 
-\subsection{Motorenansteuerung}
+        \paragraph{Wie werden Bibliotheken ins Projekt eingebunden?} \mbox{} \\
+        \label{Bilbliotheken}
+        Bibliotheken in Tia Portal hinzuzufügen ist intuitiv und simpel. Der erste Schritt ist das Downloaden der richtigen Bibliothek. Diese können Online auf Websiten, von Siemens, gefunden werden. Um diese jedoch herunterzuladen braucht man einen dazu berechtigten Siemens-Account. Ist die richtige Bibliothek gefunden und heruntergeladen, kommt man zum zweiten Schritt. Zuerst wird Tia Portal geöffnet. Dann geht man auf die Projektansicht. Daraufhin findet man ganz rechts, als vierten Reiter von oben den Punkt Bibliotheken. Klickt an auf diesen erscheint ein Fenster, welches der Höhe nach in zwei Teile aufgeteilt ist. Die obere Hälfte ist für die Projektbibliothek. In der unteren Hälfte findet man die Globalen Bibliotheken. Um nun eine neue Bibliothek einzubinden klickt man auf das zweite Symbol von links "Globale Bibliothek öffnen". Das Symbol ist ein Buch mit einem grünen Pfel rechs oben. Jetzt öffnet sich wieder ein Fenster. Hier ist dann der Ordner mit der zu integrierenden Bibliothek auszuwählen und anschließend die Datei mit dem Datenformat .alxx (xx ... Version Tia-Portal (18)) zu öffnen. Anschließend ist die gewünschte Bibliothek verfügbar. Jegliche Bausteine die diese Bibliothek zur Verfügung stellt,können nun per Drag-and-Drop ins Programm gezogen werden.
+        \cite{Bibliotheken}
+
+
+\subsection{Motoransteuerung}
+
+\subsubsection{Motion Control Anweisungen}
+
+\subsubsection{Synchronisation}
 
 \subsection{SPS-Server Kommunikation}
+Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es die nötigen Informationen, sowie die Übertragung der Aufgabenstellung auszuführen. 
 
     \subsubsection{Zur Auswahl stehende Kommunikationsprotokolle} 
     \label{Kommunikationsprotokolle}
@@ -154,7 +173,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     Kommunikationsprotokolle ermöglichen den Datenaustausch zwischen unterschiedlichen Systemen, indem sie Standards und Regeln für die Kommunikation definieren. In diesem Projekt wurden zwei Protokolle getestet und miteinander verglichen: OPC-UA sowie das HTTP-Protokoll.
 
 
-         \paragraph{Allgemeines}
+    \paragraph{Allgemeines}
 
         \begin{itemize}
             \item \textbf{HTTP (Hypertext Transfer Protocol):}  \mbox{} \\
@@ -164,41 +183,69 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             OPC-UA (Open Platform Communications Unified Architecture) ist ein plattformunabhängiges Kommunikationsprotokoll, das speziell für industrielle Anwendungen entwickelt wurde. Es ermöglicht eine herstellerunabhängige Kommunikation zwischen verschiedenen Geräten bzw. Systemen. \cite{OPC-UA}
         \end{itemize}
 
-        \paragraph{Funktionsweise}
+    \paragraph{Funktionsweise}
 
             \begin{itemize}
                 \item \textbf{{HTTP (Hypertext Transfer Protocol):}} \mbox{} \\
-                
+                Eine Kommunikation mit dem HTTP Protokoll findet wie folgt statt. Wie oben bereits erwähnt funktioniert das HTTP- Protokoll nach dem Anforderungs-Antwort-Prinzip. Wie in Abb. \ref{HTTP-Client_Server_Kommunikation} ersichtlich wir als Erstes eine Anfrage vom Client zum Server gesendet (HTTP-Request). Darufhin wird diese Anfrage vom Server bearbeitet und dieser sendet dann die geforderten Informationen zurück (HTTP-Response). Danach ist die Verbindung beendet.
+                \cite{HTTP-Client_Server_Kommunikation}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width = 0.8\textwidth]{Sonne/HTTP-Client_Server_Kommunikation.jpg}
+                    \caption{HTTP-Client-Server Kommunikation 
+                    \cite{HTTP-Client_Server_Kommunikation}}
+                    \label{HTTP-Client_Server_Kommunikation}
+                \end{figure}
             
                 \item \textbf{{OPC-UA (Open Platform Communications - Unified Architecture):}} \mbox{} \\
-                
+                Auch bei OPC UA gibt es Server und Clients. Dabei stellt der Server Daten bereit und die Clients können diese Daten abfragen oder Werte überschreiben. Dies ermöglicht einen sichere sowie zuverlässige Datenübertragung. 
+                \cite{OPC-UA}
             \end{itemize}
+
+            
+    \paragraph{Welches Prorokoll wurde gewählt?} \mbox{} \\
+    Bei diesem Projekt wurde das HTTP Protokoll ausgewählt um die Kommunikation zwischen SPS und Server auszuführen. Das HTTP Protokoll wurde ausgewählt, da die SPS direkt mit dem Server kommunizieren kann. Bei OPC-UA hätte ein zusätzlicher Server gehostet werden müssen. Dieser OPC-UA Server hätte dann mit dem eigentlichen Server, welcher die Lagerlogik übernimmt, kommuniziert. Die SPS hätte dann auf den OPC-UA Server zugegriffen und nicht direkt auf den Zielserver. Um diesen zusätzlichen Aufwand sowie weitere Fehlerquellen zu vermeiden, wurde das HTTP Protokoll ausgewählt.
         
             
 
     
     \subsubsection{Verbindungsherstellung}
-    Aus den in Punkt \ref{Kommunikationsprotokolle} genannten Gründen wurde das HTTP Protokoll ausgewählt. Um in TIA-Portal die Verbindung via HTTP aufzubauen, benötigt man bestimmte Libraries die von Siemens zu Verfügung gestellt werden. Diese müssen dann wie im Punkt \ref{Bibliotheken} gezeigt eingebunden werden, um die Funktionsbausteine der Library nutzen zu können. 
+    Aus den in Punkt \ref{Kommunikationsprotokolle} genannten Gründen wurde das HTTP Protokoll ausgewählt. Um in TIA-Portal die Verbindung via HTTP aufzubauen, benötigt man bestimmte Libraries die von Siemens zu Verfügung gestellt werden. Diese müssen dann wie im Punkt \ref{Bilbliotheken} gezeigt eingebunden werden, um die Funktionsbausteine der Library nutzen zu können. 
 
         \paragraph{Funktionsbausteine} \mbox{} \\
-        In der Library stehen dann folgende Bausteine zur Verfügung:
+        In der Library für das HTTP Protokoll stehen dann folgende Bausteine zur Verfügung:
 
         \begin{itemize}
             \item GET
-            \item POST-PUT \\
-            Mit dem POST-PUT Befehl werden Daten zum Server geschickt aber auch Daten erhalten. 
+            \item POST-PUT 
         \end{itemize}
+    
+    Als Baustein zur Verbindungsherstellung wurde der POST-Befehl ausgewählt, da mit diesem unbegränzte Datenmengen geschickt werden können. Damit der Baustein nun eine Verbindung herstellen kann müssen folgende Parameter angegeben werden: \textbf{URL} [string], die zu schickenden Daten \textbf{data} [string] und ein Speicherplatz für die empfangenen Daten \textbf{response Data} [Array of Char]. Die restlichen Eingabeparameter, welche in Abb. \ref{POST-PUT_Baustein} ersichtlich sind,  müssen nicht unbedingt ausgefüllt werden, sondern werden automatisch vorausgefüllt. Standardmäßig ist die richtige Methode (POST) schon ausgewählt, da die Eingabe \textbf{method} automatisch mit \textbf{0} ausgefüllt wird. 
 
+    \begin{figure} [h]
+        \centering
+        \includegraphics[width = 0.7\textwidth] {Sonne/POST-PUT_Baustein.png}
+        \caption{POST-Put  Baustein \cite{HTTP-Bausteine}}
+        \label{POST-PUT_Baustein}
+    \end{figure}
+
+    Wird nun die Eingabe \textbf{execute} HIGH, so wird der Baustein einmalig ausgeführt. Rechnet man mit einem häufigeren Datenaustausch, mit Hilfe dieses Bausteins, so empfiehlt es sich den Parameter \textbf{keep Connenction} auf \textbf{true} zu setzten. Dadurch bleibt die Verbindung mit dem Zielserver erhalten und weitere Kommunikationen werden schneller ausgeführt. 
+
+    \subsubsection{Datenaustausch}
+    \label{Datenaustausch}
+    Die SPS und der Server arbeiten mit verschiedenen Datentypen. Bei dem Datenaustauch erwartet der Server die Daten in einem json-Format. Deswegen müssen die Daten welche gesendet werden zuerst in dieses Format gebracht werden. Um dies in Tia-Portal zu realisieren wird die Bibilothek LStream eingebunden. Mit dieser werden dann Daten aus einem json-Datenbaum in ein Array of Byte umgewandelt. Dieses Array of Byte wird anschließend in den Datentyp string umgewandelt. Nun kann dieser string an den POST-Datenbaustein weitergegeben werden. \\
+    Ist nun der Datenaustauch abgeschlossen, so sind die empfangenen Daten als Array of Char verfügbar. Da man in Tia-Portal nur umständlich mit diesem Datenformat umgehen kann, wird das Array of Char nun in das Datenformat string umgewandelt. Die Daten sind nun noch immer nicht einzeln verfügbar, weswegen man nun diesen string nach den Daten filtern muss.
 
     \subsubsection{Datenfilterung}
-    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welche Aufgabe es sich handelt, und die Daten die erforderlich sind um diesen Befehl auszuführen.
+    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welche Aufgabe es sich handelt  und die Daten welche erforderlich sind um diese Aufgabe auszuführen.
 
         \paragraph{Datenformatierung}\mbox{}\\
-        Die Daten werden in einem String geschickt, welcher in zwei Teile aufgeteilt wird. Der zweite Teil ist jedoch abhängig vom ersten. \\
-        
+        Die Daten werden in einem string geschickt, welcher in zwei Teile aufgeteilt wird. Der zweite Teil ist jedoch abhängig vom ersten. \\
+        In folgenden Punkten dient x immer als Platzhalter für eine Nummer null bis neun. 
         \begin{itemize}
             \item 1.Teil: \\
-            IDXXXXAXX \\
+            IDxxxxAxx  \\
             Aus diesem Teil werden die ID-Nummer sowie der Auftrag herausgefiltert. Die ID-Nummer ist eine 4 stellige Nummer welche nach ID steht. Der Auftrag welcher ausgeführt werden muss steht in den zwei Stellen nach A.\\
             Diese werden nach folgender Codierung ausgelesen:
                 \subitem 00: Kommissionierstation
@@ -208,15 +255,53 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             \item 2.Teil: \\
             Der zweite Teil steht in Abhängigkeit zu ersten. Je nachdem welche Zahl nach A steht,also der Code welche Area angesprochen wird, ist der zweite Teil anders aufgebaut.
                 \begin{itemize}
-                \item 00: 
-                \item 01:
-                \item{10: X-Position, Y-Position, Z-Position,Ein/-Auslagerung \\
-                Wobei nach jedem Symbol eine 4 stellige Zahl steht.Also X0000Y0000Z0000R0 bedeutet, dass die 
-                X-Position 0, Y-Position 0, Z-Position 0 und es sich um eine Auslagerung handelt.}
-                \item 11:
+                \item 00: SB\\
+                Bei diesem Befehl muss der Barcodescanner angesteuert werden um an der Kommissionierstation einen Barcode einzuscannen.
+                \item 01: P $\pm$xxxx \\
+                Gibt an um wie viel sich das Förderband (in mm) bewegen muss. Vor der Zahl steht jedoch entweder ein plus oder minus um festzulegen in welche Richtung sich das Förderband bewegen muss. 
+                \item 10: XxxxxYxxxxZxxxxRx \\
+                Nach jeder Achse X,Y,Z steht ein vierstelliger Wert, welcher angibt auf welcher Position sich der gewünschte Lagerplatz befindet. Der Wert nach R ist entweder 0 oder 1 und gibt an ob es sich um eine Einlagerung (1) oder Auslagerung (0) handet.
+                \item 11: Pxxxx \\
+                Nach P steht ebenso ein vierstelliger Wert, der angibt auf welche Position der Querförderer gefahren werden muss. 
                 
                 \end{itemize}
             
         \end{itemize}
+
+    \subsubsection{Tia-Portal Programm}
+    Im Programm werden zwei Funktionsbausteine aufgerufen. Nämlich FB\_Kommunikation und FB\_Datenfiltern. FB\_Kommunikation übernimmt den Datenaustausch zwischen Server und SPS. In diesem Baustein werden zuerst die Daten die an den Server geschickt werden, wie in Punkt \ref{Datenaustausch} erklärt ins richtige Datenformat(string) gebracht. Darufhin wird der HTTP POST-Aufruf ausgeführt und die empfangenen Daten wie in \ref{Datenaustausch} gezeigt wieder ins richtige Datenformat gebracht. Somit ist die Aufgabe dieses Datenbausteins erfüllt. Nun erfolgt der Aufruf des zweiten Funktionsbausteins FB\_Datenfiltern. Dieser Funktionsbaustein ist in unterschiedliche Funktionsbausteine aufgeteilt. Der erste dieser Funktionsbausteine filtert nach ID sowie der Area (Aufgabe). Darufhin wird der Baustein FB\_Kommunikation innerhalb des Bausteins FB\_Datenfiltern aufgerufen, um sofort die ID-Nummer an den Server zurück zu schicken, damit dieser weiß das die SPS den Auftrag erhalten hat. Die restlichen Bausteine die im FB\_Datenfiltern enthalten sind, warten darauf, dass sie von ihrer Area, beispielsweise 01, angesprochen werden. Sollte dies der Fall sein so Filtern sie die benötigten Informationen um den Auftrag auszuführen. Nach dem Aufruf beider Bausteine sind nun die geforderten Informationen verfügbar. Bei beiden Funktionsbausteinen handelt es sich um Multiinstanzen, um das Programm übersichtlicher zu halten. 
+
+    \paragraph{Wie schaut so ein Baustein aus? (am Beispiel ``ID + Area")} 
+    \mbox{} \\
+    Alle Bausteine zur Datenfilterung wurden in SCL programmiert. Als Eingabe ist der Datenstring welcher die Daten beinhaltet. In diesem wird zuerst nach ID gefiltert (Zeile 1). Dies liefert die Position von ID innerhalb ddes Strings. Darufhin werden alle Zeichen links von ID + ID wegelöscht (Zeilen 2 - 5). Nun weiss man das rechts von ID eine vierstellige Nummer (ID-Nummer) steht. Da alles links von dieser Nummer weggeschnitten wurde, weiß man das diese Nummer ganz links im string ist. Deswegen werden die ersten vier Stellen von links genommen und dem Ausgang Q\_Info\_ID zugewiesen (Zeile 6). Dieser Ausgang ist für das gesamte Programm erreichbar. Das selbe Suchen und Löschen der Zeichen links vom Gesuchten wird ebenfalls für A (Area / Auftrag) erledigt (Zeilen 10 - 13). Da man den Wert von Area, welcher den Auftrag definiert, vergleichen will um den richtigen Baustein auszuführen, werden die zwei Zeichen links von A, von denen wir wissen das es Zahlen sind, in das Datenformat int konvertiert und dem Ein-Ausgang IQ\_Info\_Area zugewiesen (Zeilen 19-23). \\
+
+    \begin{lstlisting}[language=Pascal]
+        #T_Int := FIND(IN1 := #I_Datenstring, IN2 := 'ID');
+IF #T_Int > 0 THEN
+    #X_Info_ID := #T_Int + 1;
+    #X_String_bearbeitet := DELETE(IN := #I_Datenstring, L := #X_Info_ID, P := 1); //Alles bis inkl. X wegschneiden
+    
+    #Q_Info_ID := LEFT(IN := #X_String_bearbeitet, L := 4);               // 4 Zeichen links von X nehmen
+    
+END_IF;
+
+#T_Int := FIND(IN1 := #I_Datenstring, IN2 := 'A');
+IF #T_Int > 0 THEN
+    #X_Info_Area := #T_Int + 0;
+    #X_String_bearbeitet := DELETE(IN := #I_Datenstring, L := #X_Info_Area, P := 1);
+    
+    // Lager herausfinden                      10: Lager 1      11: Puscher (Lager 1)       00: Komissionierstation
+    //(zurzeit nur 1 Lager verfuegbar)          20: Lager 2      21: Puscher (Lager 2)       01: Foerderband
+    // -->nur 00/01/10/11 relevant             30: Lager 3      31: Puscher (Lager 3)
+    
+    #Area_Info_1_string := LEFT(IN := #X_String_bearbeitet, L := 2);
+    STRG_VAL(IN := #Area_Info_1_string,                                         
+             FORMAT := #Area_convert_Format_auswaehlen,
+             P := 1,
+             OUT => #IQ_Info_Area);
+    
+END_IF;
+    \end{lstlisting}
+
 
 \subsection{Herausforderungen}
