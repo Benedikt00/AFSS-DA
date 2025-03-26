@@ -40,7 +40,6 @@ An der yz-Achse werden vier und am Querförderer zwei Stück mechanische Endtast
         \label{tast_sens}
     \end{subfigure}
     \caption{Endschalter}
-    \label{ulr}
 \end{figure}
 
 \subsubsection{Referenztaster}
@@ -96,30 +95,52 @@ Wenn die Bauteile alle platziert und verbunden worden sind, sowie ein Polygon ü
 Nach Einreichung des Fertigungsauftrags wird die Platine von Schülerinnen und Schülern der HTL gefertigt. Der Prozess startet mit dem Reinigen des Basismaterials, um es daraufhin mit dem Negativtrockenresist (Trockenfilm) zu laminieren. In den nächsten Schritten werden die Layout-Informationen mit einem Belichter auf das Laminat übertragen und das unbelichtete Laminat mit einer Natrium-Carbonat Lösung von der Platine entfernt. Daraufhin werden durch Ätzen mit einer Eisen-III-Chlorid-Lösung strukturierte Kupferflächen freigestellt. Als Nächstes werden die Löcher in die Kupferpads gebohrt und die Platine auf ihre korrekte Größe zugeschnitten. Durch das Legen der Leiterplatte in eine Entschichtlösung aus \qty{5}{\percent}{igem} Kaliumcarbonat mit Wasser werden Ätzresiste von der Platine entfernt. Zu guter Letzt wird die Platine mit einem Versiegelungslack versiegelt, um sie vor Umwelteinflüssen und Korrosion zu schützen.
 
 \paragraph{Platinentestung und Messung} \mbox{}\\
-Um die korrekte Funktionsweise der Referenzplatine sicher zu stellen, muss diese nach dem Löten getestet werden. An der Klemme X1 wurden Spannungswerte zwischen \qtyrange{19.7}{21.3}{\volt} gemessen. Obwohl die Spannungen unter den gewünschten \qty{24}{\volt} liegen können die Platinen problemlos verwendet werden, da die verwendeten AS-i-Slaves einen minimalen HIGH-Eingangsschaltpegel von \qty{10}{\volt} besitzen.\cite{AS-i-Slave}
+Um die korrekte Funktionsweise der Referenzplatine sicher zu stellen, muss diese nach dem Löten getestet werden. Zum Betrachten der fertigen Platine siehe Abb.\ref{Ref_fertig}. An der Klemme X1 wurden Spannungswerte zwischen \qtyrange{19.7}{21.3}{\volt} gemessen. Obwohl die Spannungen unter den gewünschten \qty{24}{\volt} liegen können die Platinen problemlos verwendet werden, da die verwendeten AS-i-Slaves einen minimalen HIGH-Eingangsschaltpegel von \qty{10}{\volt} besitzen.\cite{AS-i-Slave}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Sensors/ref_FertigePlatine.jpg}
+    \caption{Fertige Referenzplatine}
+    \label{Ref_fertig}
+\end{figure}
 
 \subsubsection{Lichttaster}
+Zum Überprüfen, ob während des Ein- oder Auslagerns eine Box auf der richtigen Position angekommen ist, werden Lichttaster verwendet. Insgesamt werden zwei am AFSS montiert, davon einer an der z-Achse und einer am Querförderer. Es handelt sich bei den hierbei verwendeten Reflexionslichttaster um Sensoren der Firma SICK vom Typ W4 WTBxx (siehe Abb.\ref{lichttaster}).\\
+Ursprünglich hätten diese Aufgaben von Lichtschranken übernommen werden sollen, da diese bereits vor Ort verfügbar waren. Lichtschranken funktionieren, indem sie einen Rotlichtstrahl auf einen Reflektor werfen, dessen Reflektion daraufhin wieder vom Sensor erkannt wird. Im Lichtschranken befinden sich Schaltkontakten, die daraufhin geöffnet oder geschlossen werden. Wird nun jedoch der Lichtstrahl unterbrochen, fallen die Schaltkontakte in ihren Anfangszustand zurück. Die Lichtschranken haben jedoch den Nachteil, dass sie immer ein zusätzliches reflektierendes Gegenstück benötigen. Die stattdessen verwendeten Lichttaster mit Hintergrundausblendung funktionieren nach dem selben Prinzip, jedoch bieten sie den Vorteil, dass sie auch die Distanz des Objektes zum Sensor erfassen. Somit können Objekte unabhängig von ihrer Farbe und Oberfläche erkannt werden, soweit sie sich innerhalb des einstellbaren Tastbereiches befinden.\cite{Lichttaster_und_Schranken} Der empfohlene Schaltabstand des Lichttasters liegt zwischen \qtyrange{40}{140}{\milli\meter}, wodurch er sich für die Aufgaben im Projekt ideal eignet. Über die Teach-in Funktion des Sensors lässt dieser sich ganz einfach durch drücken der Teach-Taste auf den richtigen Schaltabstand einstellen.\cite{Lichttaster_datasheet}\\
+Während das SPS-Programm von der CPU durchlaufen wird, überprüft dieses immer an den jeweiligen Zwischenschritten, ob es ein Signal des zuständigen Lichttasters erhalten hat, bevor das Programm fortgesetzt wird. Somit wird sichergestellt, dass die Boxen im Querförderer richtig positioniert worden sind und von der z-Achse richtig gegriffen werden können. Ansonsten könnte passieren, dass eine von der Gabel angehobene Box hinunterfällt, da diese nicht richtig positioniert war.
 
-\subsubsection{Barcode-Scanner}
-\begin{wrapfigure}{R}{0.34\textwidth}
-    \vspace{-20px}
-    \includegraphics[width=0.34\textwidth]{Sensors/Barcodescanner.png}
-    \caption{Barcodescanner CLV61x-2Port\cite{BarScan_pic}}
-    \label{BarScan}
-\end{wrapfigure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.4\textwidth}
+        \centering
+        \includegraphics[width=0.4\textwidth]{Sensors/Lichttaster_new.png}
+        \caption{Lichttaster W4 WTBxx\cite{Lichttaster_pic}}
+        \label{lichttaster}
+    \end{subfigure}
+    \begin{subfigure}{.4\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{Sensors/Barcodescanner.png}
+        \caption{Barcodescanner CLV61x-2Port\cite{BarScan_pic}}
+        \label{BarScan}
+    \end{subfigure}
+    \caption{SICK Sensoren}
+\end{figure}
 
+\subsubsection{Barcode-Scanner} \label{sec:Barcodescanner}
 Durch anbringen eines sich nicht wiederholenden Barcodes auf jeder Box wird eine gute Möglichkeit geschaffen, in der Software den Behälter und die sich darin befindenden Bauteile einander zuzuordnen. Unter der Voraussetzung, dass die Benutzerinnen und Benutzer vor jeder Wiedereinlagerung ihrer Box zuerst dessen Barcode einscannen, wird die Wahrscheinlichkeit, dass der Lagerplatz einer Box falsch abgespeichert wird, verkleinert. Somit sinkt die Chance, dass bei Bestellen eines Bauteils die falsche Komponente geliefert wird. Das erfassen des Barcodes findet mittels eines Barcodescanners der Firma SICK statt (siehe Abb.\ref{BarScan}), welcher bei der Kommissionierstation untergebracht ist, um eine einfache Bedienung gewährleisten zu können.\\
 Der uns zur Verfügung gestellte Barcodescanner (CLV61x-2Port) ist in der Lage alle gängigen Codearten einzulesen.\cite{Barcodescanner} Barcodes wurden so entwickelt, dass bereits beim Einlesen erkannt wird, wo dieser anfängt und aufhört, damit beim einscannen nicht auf die richtige Ausrichtung geachtet werden muss.
 
+
+
 \paragraph{Einbindung ins TIA-Portal \cite{BarScan_Handbuch}}\mbox{}\\
-Damit der eingelesene Barcode an den Webserver weitergegeben werden kann, muss dieser im Siemens TIA-Portal abgespeichert werden. Mit der CPU verbunden wird der Scanner über PROFINET. Hierbei handelt es sich um einen auf Industrial Ethernet basierenden Kommunikationsstandard und eine Weiterentwicklung des PROFIBUS Vorgängers. Über ihn lässt sich die gescannte Nummer ganz einfach an die SPS übermitteln.\\
+Damit der eingelesene Barcode an den Webserver weitergegeben werden kann, muss dieser im Siemens TIA-Portal abgespeichert werden. Mit der CPU verbunden wird der Scanner über PROFINET. Hierbei handelt es sich um einen auf Industrial Ethernet basierenden Kommunikationsstandard und eine Weiterentwicklung des PROFIBUS Vorgängers. Für eine ausführlichere Erklärung der verschiedenen Feldbussysteme siehe Kapitel \ref{sec:Feldbussysteme}. Über ihn lässt sich die gescannte Nummer ganz einfach an die SPS übermitteln.\\
 Im TIA-Portal Projekt muss, um eine Verbindung zum Barcodescanner herstellen zu können, die zugehörige Gerätebeschreibungsdatei (GSD-Datei) installiert werden. Dies funktioniert über das Gerätebeschreibungsdateien verwalten Fenster im TIA-Portal. Nach der Installation ist das Gerät im Hardwarekatalog unter \enquote{Weitere Feldgeräte} zu finden. Die benötigte Datei wird auf der Internetseite des Herstellers als Download zur Verfügung gestellt.
 
 \paragraph{Auslesen des Barcodes}\mbox{}\\
 Wenn eine Verbindung zum Gerät hergestellt wurde, müssen die Parametermodule eingefügt und richtig eingestellt werden. Diese werden über den Hardware-Katalog ausgewählt und eingefügt, für eine Übersicht der eingefügten Module siehe Abb.\ref{BarScan_TIA}. Wichtig ist, bei den Baugruppenparametereinstellungen von \enquote{\mbox{47\_Communication Mode\_1}} \enquote{No Handshake} auszuwählen und bei \enquote{\mbox{99\_End Remote Config}}
 \enquote{Don't save parameters perm.} einzustellen. Um die verwendeten Art von Barcodes einscannen zu können muss darauf geachtet werden, dass er unter \enquote{\mbox{22\_UPC EAN GTIN\_1}} ausgewählt und somit eingeschaltet ist.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Sensors/BarScan_Geräteübersicht.png}
     \caption{Barcodescanner Geräteübersicht im TIA-Portal}
@@ -130,30 +151,63 @@ Die vom Barcodescanner belegten Ein- und Ausgangsadressen sind in der Geräteüb
 Die eingelesenen Daten liegen ab dem ersten Input Byte (hier: ab IB128.0). Auf dem ersten Input Byte wird am vierten Bit ein ToggleBit mitgeführt. Am zweiten Byte(IB129.0) befindet sich ein Zähler, der mitzählt, wie viele Codes bereits eingelesen wurden. Das vierte Input Byte (IB131.0) gibt die Länge des eingelesenen Strings an. Ab dem sechsten Byte (IB133.0) stehen die eigentlichen Daten des Barcodes.\\
 Um die Daten des Barcodes überprüfen zu können eignet sich eine wie in Abb.\ref{BarScan_BTabelle} abgebildete Beobachtungstabelle. Wichtig ist, dass beim Einfügen der Ein- und Ausgangsadressen das richtige Anzeigeformat ausgewählt wird. Um eine Überprüfung durchzuführen lässt sich das ToggleBit zum Starten es Einlesevorgangs über Eingabe von TRUE und FALSE setzen, und daraufhin ein Code scannen. Die einzelnen Input Bytes werden daraufhin in der Tabelle angezeigt.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Sensors/BarScan_Beobachtungstabelle.png}
+    \includegraphics[width=0.9\textwidth]{Sensors/BarScan_Beobachtungstabelle.png}
     \caption{Barcodescanner Beobachtungstabelle im TIA-Portal}
     \label{BarScan_BTabelle}
 \end{figure}
 
 \subsection{AS-Interface}
+\subsubsection{Feldbussysteme \cite{Feldbussysteme}} \label{sec:Feldbussysteme}
+\paragraph{Allgemeines}\mbox{}\\
+Ein Feldbus ist ein Bussystem, das Feldgeräte (Sensoren) und Stellglieder (Aktoren) mit einem Automatisierungsgerät, beispielsweise einer SPS, verbindet. Über den Feldbus findet die Kommunikation statt. Wenn die Nachrichten mehrerer Kommunikationsteilnehmer über die selbe Leitung gesendet werden, muss festgelegt sein, wer (Kennung), was(Messwert oder Befehl), wann (Initative) über den Bus sendet. Es existiert bereit eine Vielzahl an unterschiedlichen Bussystemen, zu den in der Automatisierungstechnik gebräuchlichsten gehören PROFIBUS, PROFINET, Industrial Ethernet, Modbus, AS-Interface, CANopen und EtherCAT. Da die verschiedenen Bussysteme unterschiedliche Datentransferzeiten und Fehlererkennungsmöglichkeiten haben, werden oft in einem Projekt mehrere Feldbusse auf den verschiedenen Automatisierungsebenen verwendet. In Abb.\ref{Feldbussysteme} ist ein solches Projekt mit unterschiedlichen Bussystemen ersichtlich.\\
 
-\subsubsection{Allgemeines}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Sensors/Feldbussysteme.png}
+    \caption{Topologie verschiedener Feldbussysteme \cite{Topologie_Bussysteme}}
+    \label{Feldbussysteme}
+\end{figure}
+
+\paragraph{PROFIBUS \cite{Profibus}}\mbox{}\\
+Bei PROFIBUS (Process Field Bus) handelt es sich um ein der standardisiertes Bussystem das vor allem in der Automatisierungstechnik zu Hause ist. Es ist ein Multi-Master-System, das bedeutet, dass die Kommunikationsabläufe von mehreren Mastern gesteuert werden können. Die am häufigsten verwendete Schnittstelle in einem PROFIBUS-System ist RS485. Zur Datenübertragung wird meist ein 9-poliger Sub-D-Stecker verwendet. Die Anzahl der Teilnehmer ist je PROFIBUS SUB-Netz auf 32 beschränkt, somit ergibt sich eine maximale Anzahl von 128 Teilnehmern. PROFIBUS bietet den Vorteil, dass es sehr einfach in gängige Automatisierungssysteme integriert werden kann. Die Kabelfarbe von PROFIBUS ist violett, was auch beim Verbinden im TIA-Portal ersichtlich ist.
+
+\paragraph{PROFINET \cite{Profinet}}\mbox{}\\
+Wie bereits in Kapitel \ref{sec:Barcodescanner} erwähnt wurde handelt es sich bei PROFINET (Process Field Network) um eine Weiterentwicklung von PROFIBUS. Es basiert auf Industrial Ethernet und wurde von Siemens und den Mitgliedsfirmen der PROFIBUS-Nutzerorganisation entwickelt. PROFINET-Geräte werden ausschließlich über Switches miteinander verbunden, wobei viele Geräte, sowie eine SPS, bereits einen Switch mit mehreren Anschlüssen integriert haben. Der Vorteil von PROFINET ist, dass es das bekannte 7-schichtige OSI-Modell auf ein 4-schichtiges TCP/IP-Modell reduziert. Der Unterschied zum älteren PROFIBUS liegt vor allem in der Funktion große Datenmengen übertragen zu können und der Echtzeitfähigkeit von PROFINET. Außerdem ist die Anzahl der Teilnehmer in einem PROFINET-System praktisch unbegrenzt, da jeder Teilnehmer eine eigene IP-Adresse besitzt. Bei der Projektierung im TIA-Portal müssen die Kommunkationspartner einem gemeinsamen PROFINET zugewiesen werden und zusätzlich muss jedem Gerät ein PROFINET-Name zugewiesen werden, nur die IP-Adresse des Geräts genügt nicht. Die Kabelfarbe ist Grün, was sich auch im TIA-Portal wiederspiegelt.
+
+\paragraph{ASi \cite{ASi}}\mbox{}\\
+Bei ASi (Actuator-Sensor-Interface) handelt es sich um eine Feldbussystem, welches in der Automatisierungstechnik zur Verbindung von Sensoren und Aktoren mit einem Steuerungselement dient. Eingesetzt wird das AS-Interface in der Feldebene und wird vorwiegend zur Übertragung von Prozessdaten verwendet. Es funktioniert nach dem Master-Slave-Prinzip, bei dem ein ASi-Master für die Kommunikation mit seinen Slaves zuständig ist. Der Datenverkehr findet hierbei in Form einer zyklischen Abfrage statt. In einem Zyklus sendet der Master Informationen an die Slaves, die daraufhin wieder eine Antwort zurücksenden. Der große Vorteil an ASi ist, dass die Daten- und Stromübertragung über ein einziges Kabel passiert. Hierbei handelt es sich um ein gelbes 2-adriges Profilkabel, in dem sich ein brauner (Plus) und ein blauer (Minus) Leiter befindet. Die Betriebsspannung eines AS-i-Systems liegt bei \qty{30}{\volt}. Wenn ein Feldgerät eine zusätzliche Hilfsspannung (\qty{24}{\volt}) benötigt, wird ein schwarzes Profilkabel verwendet. Bei der Verwendung von ASi können durch die Reduzierung der benötigten Kabel die Installationskosten erheblich gesenkt werden. Außerdem ist die Verkabelung übersichtlicher und Verdrahtungsfehler können besser vermieden werden. Beim Anschließen eines Asi-Kabels an eine Feldgerät wird die Durchdringungstechnik verwendet. Dabei durchdringen bei der Montage zwei sich am Anschluss befindende Dornen die Isolierung des Kabels, und stellen darüber eine Verbindung zum Netzwerk her.
+
+\paragraph{Auswahl des Feldbussystems}\mbox{}\\
+Da es sich bei PROFINET um ein von Siemens mitentwickeltes Feldbussystem handelt und dieses einfach in Siemens-Steuerungssystemen eingesetzt werden kann, bietet es eine ideale Möglichkeit, die Siemens SPS und die Siemens ET200SP, auf der der ASi-Master zu finden ist, miteinander zu verbinden. Auch am Barcodescanner befindet sich eine PROFINET-Schnittstelle, womit dieser ganz einfach an die SPS angeschlossen werden kann.\\
+Da die Sensoren jedoch nicht über PROFINET-Schnittstellen verfügen, mussten sie über einen anderen Weg in das PROFINET-System oder ein anderes Feldbussystem integriert werden. Da im Werkstättenunterricht AS-Interface zur Kommunikation zwischen SPS und Sensoren verwendet wird, fiel auch für diese Projekt die erste Wahl darauf. Für einen längeren Zeitraum wurde in der Projektplanung ein I/O-Modul als Alternative zu AS-Interface in Betracht gezogen. Auf diesem hätten sich 4xM12-Buchsen als Digitaleingänge befunden, an die 8 Sensoren angeschlossen hätten werden können. Das Modul hätte über eine M8-Buchse mit dem Subbus verbunden werden können. Jedoch konnten die gewünschten I/O-Module dem Projekt nicht zur Verfügung gestellt werden, wodurch die Entscheidung wieder auf ASi zurückfiel. Da hierfür bereits ein ASi-Master, die zugehörige Spannungsversorgung und ein Teil der benötigten ASi-Slaves in der Schule verfügbar waren, stellte die Planänderung kein Problem dar.
 
 \subsubsection{Programmierung im TIA-Portal}
+Damit die Verarbeitung der Sensorsignale und die Ansteuerung der Motoren in einem gemeinsamen Programm stattfindet, musste auch das AS-Interface in das TIA-Portal eingebunden werden. Da sich der verwendete ASi-Master auf einem Modul einer Siemens ET200SP befindet, müssen beide in der Netzansicht des Programms hinzugefügt werden. Durch Eingabe der Produktnummer in den Hardware-Katalog auf der rechten Seite kann die ET200SP hinzugefügt werden. Da es sich bei dieser jedoch nicht um eine eigene CPU handelt, muss eine PROFINET-Verbindung zur SPS im Programm hergestellt werden. Im Katalog findet sich auch der ASi-Master, welcher dann als Modul der ET200SP eingefügt werden kann. Weil auch die für das Projekt verwendeten ASi-Slaves von Siemens sind, können diese auch einfach über den Hardware-Katalog hinzugefügt werden. Wie in Abb.\ref{ASi-Netzansicht} zu erkennen ist, können auch der ASi-Master und dessen Slaves ganz einfach im Programm miteinander verbunden werden.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Sensors/ASi_Geräteübersicht.png}
+    \caption{Netzsicht im TIA-Portal mit ASi-Master und Slaves}
+    \label{ASi-Netzansicht}
+\end{figure}
+
+Es ist besonders wichtig, dass in den Geräteeigenschaften der ET200SP die richtige Firmware-Version eingestellt ist, da sonst keine Verbindung zur Komponente hergestellt werden kann. Die Version der Firmware lässt sich in der Registerkarte Online-Zugänge unter \enquote{Online \& Diagnose} nachschauen, falls diese für das Gerät nicht bekannt ist. Unter \enquote{Slave Konfigurationstabelle} in den Geräteeigenschaften des ASi-Masters finden sich dich den Slaves zugeteilten Eingangsadressen und ASi-Adressen. Die Adressen lassen sich hier auch ändern, was in erster Linie bei den ASi-Adressen benötigt wird, da diese nicht der Reihe nach zugeteilt werden. Die einem Slave zugeteilte Adresse kann an den Status-LEDs des ASi-Masters erlesen werden. An den LEDs \enquote{\mbox{SL\_Xy (A)}} und \enquote{\mbox{SL\_xY (B)}} lässt sich durch eine Blinkfolge die richtige Adresse herausfinden.\cite{ASi-Master_Handbuch}\\
+In einer Beobachtungstabelle lässt sich die Verbindung zu den an den ASi-Slaves angeschlossenen Sensoren einfach überprüfen. Nach Einfügen der zugehörigen Eingangsadresse, Herstellen einer Online-Verbindung und Starten des Beobachtens wird das aktuelle Sensorsignal angezeigt.
 
 \subsubsection{Verkabelung}
-unterschiedliche Varianten erklären und abwiegen
+\textbf{wie viele slaves und warum}
+\textbf{unterschiedliche Varianten erklären und abwiegen}
 
 \subsection{Sicherheitstechnik}
 \subsubsection{Aufgabenstellung}
 Die Sicherheitstechnik soll so ausgelegt sein, dass beim Normalbetrieb keine Verletzungsgefahr für die Benutzerinnen und Benutzer besteht. Außerdem soll sie dafür sorgen, dass das System während des Betriebs sich selbst keinen Schaden zufügen kann. Zusätzlich soll sie Fehler, die durch menschliche Bedienung beim Einlagern entstehen, minimieren. Somit kann die korrekter Funktion des AFSS über mehrere Jahre hinweg sicher gestellt werden.
 
-\subsubsection{Personenschutz}\label{Personenschutz}
+\subsubsection{Personenschutz}\label{sc: Personenschutz}
 Der Personenschutz hat die oberste Priorität. Er sorgt dafür, dass bei ordinärem Gebrauch die Benutzerinnen und Benutzer vor Verletzungen geschützt sind. Weiters soll er verhindern, dass Personen in elektrische Stromkreise geraten, oder mit unter Spannung stehenden Betriebsmitteln in Berührung kommen. Bei Wechselstrom mit \qty{50}{\hertz} liegt der in den Vorschriften festgelegte Grenzwert der Spannung, ab dem ein lebensgefährlicher Körperstrom fließen kann, bereits bei \qty{50}{\volt}. Bei Gleichstrom ist dieser Grenzwert bei \qty{120}{\volt} festgelegt.\cite{SeyrRösch} Durch den großen Strom wird die Signalleitung der Nerven und Muskeln gestört, und es kann zu Herzkammerflimmern sowie Atemproblemen kommen.\cite{Gefahr_el_Strom}\\
 Für den Fall, dass eine Person trotz getroffener Sicherheitsvorkehrungen in den Stromkreis gerät, werden mehrere leicht zugängliche Not-Stop-Schalter am System angebracht, um schnell den Strom abschalten zu können. Als außenstehende Person ist es besonders wichtig, beim Entfernen der bereits in den Stromkreis geratenen Person, sich nicht selbst in Gefahr zu bringen oder auch in den Stromkreis zu kommen.\\
-Als Abgrenzung zwischen Benutzerinnen und Benutzer und dem Schaltschrank ist dieser von außen versiegelt und lässt sich nur mit einem zugehörigen Schlüssel öffnen. Somit wird ein allseitigen Berührungsschutz sichergestellt und zusätzlich wird verhindert, dass Personen ohne Befugnis im Schaltschrank Änderungen durchführen können, und sich dadurch verletzen.
+Als Abgrenzung zwischen Benutzerinnen und Benutzer und dem Schaltschrank ist dieser von außen versiegelt und lässt sich nur mit einem zugehörigen Schlüssel öffnen. Somit wird ein allseitigen Berührungsschutz sichergestellt und zusätzlich wird verhindert, dass Personen ohne Befugnis im Schaltschrank Änderungen durchführen können, und sich dadurch verletzen. Im Schaltschrank befindet sich ein Fehlerstrom-Schutzschalter (FI), welcher bei \qty{30}{\milli\ampere} auslöst, und somit zum Personenschutz beiträgt.
 
 \subsubsection{Schutz des Systems}
 Damit auch umgekehrt das AFSS vor Fehlern durch Nutzerinnen und Nutzer geschützt ist, müssen auch hierfür eigene Sicherheitsvorkehrungen getroffen werden. Nur so kann für eine langjährige fehlerfreie Funktion des Systems gesorgt werden.
@@ -163,5 +217,6 @@ Das fertige Lagersystem soll planmäßig in der Factory der HTL untergebracht we
 Für den Fall, dass ein händischer Zugriff zu den Bauteilen benötigt wird z.B. bei einem Stromausfall, lässt sich das Lager durch die darauf befestigten Rollen einfach für den benötigten Zeitraum an einen leichter zugänglichen Ort verschieben.\\
 Dem AFSS kann jedoch nicht nur durch den Menschen beschädigt werden, sonder auch sich selbst Schaden zurichten. Ziel der Sicherheitstechnik ist es auch in diesem Falle den verursachten Schaden zu minimieren und wenn möglich, sogar ganz zu verhindern. Einen weiteren wichtigen Teil zur Sicherheitstechnik trägt die am Lagersystem befestigte Sensorik bei. Damit die x-Schlitten oder das yz-Shuttle nicht in das Gerüst fahren, und dieses dadurch beschädigen, befinden sich Endschalter auf jeder Achse. Wenn diese ausgelöst werden, wird das Technologieobjekt gesperrt und die Motoren werden sofort gestoppt. Außerdem wird durch das Referenzieren der Motoren bei jedem Neustart des Systems verhindert, dass sich die Koordinaten der Boxen verändern. Ansonsten könnte es passieren, dass Boxen, beim Versuch diese auszulagern, nicht richtig von der Gabel angehoben werden und auf den Boden fallen. Zusätzlich überprüfen die Lichttaster, ob die Box während des Ein- und Auslagerungsprozesses an den Zwischenpositionen angekommen ist.\\
 Nicht nur das Lager selbst, sondern auch die Antriebe und die sich im Schaltschrank befindenden Betriebsmittel müssen abgesichert werden. Falls ein zu hoher Strom fließt, zum Beispiel bei einem Kurzschluss, wird der Stromkreis durch einen Leitungsschutzschalter unterbrochen. Speziell für den Asynchronmotor des Fließbands wurde ein eigener Motorschütz eingebaut, um diesen vor Überstrom abzusichern. Weiters befinden sich drei Relais im Schaltschrank, die an die Enable-Kontakte der Motortreiberkarten angeschlossen werden.\\
-Es ist besonders wichtig, das AFSS auch für den Fall eines Stromausfalls abzusichern. Gefährdet wäre dadurch in erster Linie das yz-Shuttle. Wenn sich dieses irgendwo zwischen oberer und unterer x-Achse befindet, besteht die Gefahr, dass es durch die Schwerkraft nach unten fällt. Durch die dabei entstehenden Kräfte könnte nicht nur das Shuttle selbst, sondern das ganze Gerüst des Lagers beschädigt werden. Außerdem wird durch das drehen der Motoren in dessen Spulen ein Strom induziert, welcher in weiterer Folge Schäden an anderen Betriebsmitteln anrichten kann. Da die verwendeten Schrittmotoren nicht mit eigenen Bremsen ausgestattet sind, musste ein eigenes Sicherheitskonzept entwickelt werden. Vor den Synchronmotoren der y-Achse werden Relais mit Wechslerkontakten eingebaut. Durch Kurzschließen der Eingänge des Motors wird verhindert, dass das Shuttle Richtung Boden fällt, sondern abgebremst wird und sich langsam nach unten bewegt. Für eine ausführlichere Erklärung siehe 
+Es ist besonders wichtig, das AFSS auch für den Fall eines Stromausfalls abzusichern. Gefährdet wäre dadurch in erster Linie das yz-Shuttle. Wenn sich dieses irgendwo zwischen oberer und unterer x-Achse befindet, besteht die Gefahr, dass es durch die Schwerkraft nach unten fällt. Durch die dabei entstehenden Kräfte könnte nicht nur das Shuttle selbst, sondern das ganze Gerüst des Lagers beschädigt werden. Außerdem wird durch das drehen der Motoren in dessen Spulen ein Strom induziert, welcher in weiterer Folge Schäden an anderen Betriebsmitteln anrichten kann. Da die verwendeten Schrittmotoren nicht mit eigenen Bremsen ausgestattet sind, musste ein eigenes Sicherheitskonzept entwickelt werden. Vor den Synchronmotoren der y-Achse werden Relais mit Wechslerkontakten eingebaut. Durch kurzschließen der Spulen des Motors wird verhindert, dass das Shuttle Richtung Boden fällt. Es wird dadurch abgebremst und bewegt sich langsam nach unten. Für eine ausführlichere Erklärung siehe Kapitel \ref{sec:Elektrische Planung}.
+
 \subsection{Fazit}
