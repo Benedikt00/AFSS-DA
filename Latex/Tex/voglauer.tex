@@ -146,6 +146,44 @@
     Beim Nachzeichnen wurden alle fehlerhaften Mase ausgebessert. Mit den richtigen Masen wurde festgestellt, dass sich gewisse Module nicht wie geplant ausgingen. Beim Modul 6 gingen sich die vier Schrittmotortreiber nicht vertikal nebeneinander aus. Deswegen wurde in AutoCAD einer der Treiber vertikal angeordnet und weiterführend wurde die Änderung auch in Fusion nachgebessert.
     \paragraph{Räder}\mbox{}\\
     In der Transformation vom Serverschrank zum Schaltschrank des AFSS gehört auch, dass der Schrank mobil gemacht wird. Dazu wurden zwei flexible und zwei starre Räder zur Verfügung gestellt. Planungstechnisch wurden diesbezüglich besprochen, dass die Räder direkt an das bestehende Gerüst geschraubt werden. Montiert werden die Räder mit simplen Schrauben und Muttern. Die Räder wurden in AutoCAD nicht gezeichnet, da es keinen sinnerfüllten Zweck gab. 
+\subsubsection{Die elektrischen Komponenten}
+\label{sec:Die elektrischen Komponenten}
+    Das AFSS verfügt über eine große  Bandbreite von elektrischen Komponenten. Jede Art von Elementen ist zur besseren Verständlichkeit kurz aufgelistet, bevor im nächsten Kapitel die jeweiligen Funktionen beleuchtet werden.
+    \paragraph{Übersicht der Komponenten}\mbox{}\\
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|l|l|c|}
+            \hline
+            \textbf{Allgemeine Bezeichnung} & \textbf{Typenbezeichnung} & \textbf{Funktion} \\ \hline
+            Trennschalter & / & Manuelle Trennung vom Netz \\ \hline
+            Schlüsselschalter & / & Freigabeschalter \\ \hline
+            Not-Aus-Schalter & / & Manueller Not-Aus \\ \hline
+            FI & TYP A 30mA & Fehlerstromschutzschalter \\ \hline
+            LS & C13 & Leitungsschutzschalter \\ \hline
+            Telemecanique & TSX-SUP-A054 & 400/24V ASI-Netzteil \\ \hline
+            SITOP & 6EP1436-3BA00-8AA0 & 400/24V Netzteil \\ \hline
+            Deutronic & DP500IP/3-24 & 400/24V Netzteil \\ \hline
+            Meanwell-Netzteil & DRT-240-24 & 400/24V Netzteil \\ \hline
+            Telemecanique & TSX-SUP-A054 & 400/24V ASI-Netzteil \\ \hline
+            SPS & 6ES7515-2AN03-0AB0 & Steuereinheit \\ \hline
+            SPS-DI-Karte & 6ES7521-1BL00-0AB0 & Digitale Eingänge \\ \hline
+            SPS-DO-Karte & 6ES7522-1BL01-0AB0 & Digitale Ausgänge \\ \hline
+            SPS-PTO-Karte & 6ES7553-1AA00-0AB0 & Erzeugung von PWM-Signalen \\ \hline
+            ET 200 SP& 6ES7155-6AU01-0CN0 & dezentrale Peripherie \\ \hline
+            ET 200 Busadapter & 6ES7193-6AR00-0AA0 & Busanschluss \\ \hline
+            ET 200 ASI Master & 3RK7137-6SA00-0BC1 & ASI-Master \\ \hline
+            ET 200 Steckadbater & 6ES7193-6BP20-0DC0 & Steckadapter für ASI-Master \\ \hline
+            Feed-In-Modul & 2081870000 & Eingang zu DC-Sicherungen \\ \hline
+            8A-DC-Sicherung & 2080600000 & Sicherung von SM \\ \hline
+            2A-DC-Sicherung & 2080480000 & Sicherung von SM \\ \hline
+
+
+        \end{tabular}
+        \caption{Übersicht der elektrischen Komponenten}
+        \label{tab:elektrische_komponenten}
+    \end{table}
+
+    \paragraph{Spezififsche Erklärungen}\mbox{}\\
 \subsubsection{Elektrische Planung (E-Plan)}
 \label{sec:Elektrische Planung}
     Für das Zeichnen eines E-Plans ist ein großes Produktwissen nötig. Um sich dieses zu beschaffen wurde die mechanische Seite zuerst geplant, da man im  Zuge dieser die elektrischen Komponenten sehr gut kennenlernt. Als ein großteil der mechanischen Seite für den Schaltschrank ausgeplant war wurde der E-Plan parallel zur mechanischen Planung angefangen. Als Schüler wurde die E-Plan Education Version verwendet. Diese Version ist kostenlos und bietet alle Funktionen die für die Planung des AFSS nötig sind.

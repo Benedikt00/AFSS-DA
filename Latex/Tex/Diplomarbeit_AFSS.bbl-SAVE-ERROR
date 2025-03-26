@@ -860,6 +860,37 @@
       \verb https://infosys.beckhoff.com/index.php?content=../content/1031/xts_hygienic_design_ba/7170992011.html&id=8528766451858564804
       \endverb
     \endentry
+    \entry{Nema_SM_Kontaktbezeichnung}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=482cd24d4868060bf2d31ef45e317f1b}{%
+           family={Stepperonline},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{482cd24d4868060bf2d31ef45e317f1b}
+      \strng{fullhash}{482cd24d4868060bf2d31ef45e317f1b}
+      \strng{fullhashraw}{482cd24d4868060bf2d31ef45e317f1b}
+      \strng{bibnamehash}{482cd24d4868060bf2d31ef45e317f1b}
+      \strng{authorbibnamehash}{482cd24d4868060bf2d31ef45e317f1b}
+      \strng{authornamehash}{482cd24d4868060bf2d31ef45e317f1b}
+      \strng{authorfullhash}{482cd24d4868060bf2d31ef45e317f1b}
+      \strng{authorfullhashraw}{482cd24d4868060bf2d31ef45e317f1b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Nema-SM-Steckerbelegung}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/29e7hdam
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/29e7hdam
+      \endverb
+    \endentry
     \entry{axis_manual}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
@@ -875,8 +906,8 @@
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
       \field{extraname}{5}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Online}
@@ -1083,7 +1114,7 @@
       \verb https://mall.industry.siemens.com/mall/Catalog/DatasheetDownload?downloadUrl=teddatasheet%2F%3Fformat%3DPDF%26caller%3DMall%26mlfbs%3D3RK2200-0CE02-0AA2%26language%3Dde
       \endverb
     \endentry
-    \entry{Barcodescanner}{misc}{}{}
+    \entry{BarScan_pic}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
            family={SICK},
@@ -1098,8 +1129,36 @@
       \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Produktbild}
+      \verb{urlraw}
+      \verb https://cdn.sick.com/media/pim/5/35/135/IM0058135.png
+      \endverb
+      \verb{url}
+      \verb https://cdn.sick.com/media/pim/5/35/135/IM0058135.png
+      \endverb
+    \endentry
+    \entry{Barcodescanner}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
+           family={SICK},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{fullhash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{fullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{bibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorbibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
+      \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{14}
@@ -1127,7 +1186,7 @@
       \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
       \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -1138,34 +1197,6 @@
       \field{title}{SICK Lector6xx CLV6xx Funktionsbaustein: Technische Informationen}
       \field{year}{2025}
       \field{dateera}{ce}
-    \endentry
-    \entry{BarScan_pic}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=b1de57a076206eae4b4e1c032b93c88f}{%
-           family={SICK},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{fullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{fullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{bibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{authorbibnamehash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{authornamehash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{authorfullhash}{b1de57a076206eae4b4e1c032b93c88f}
-      \strng{authorfullhashraw}{b1de57a076206eae4b4e1c032b93c88f}
-      \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Online}
-      \field{title}{Produktbild}
-      \verb{urlraw}
-      \verb https://cdn.sick.com/media/pim/5/35/135/IM0058135.png
-      \endverb
-      \verb{url}
-      \verb https://cdn.sick.com/media/pim/5/35/135/IM0058135.png
-      \endverb
     \endentry
     \entry{SeyrRösch}{book}{}{}
       \name{author}{5}{}{%
