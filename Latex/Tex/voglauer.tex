@@ -146,10 +146,11 @@
     Beim Nachzeichnen wurden alle fehlerhaften Mase ausgebessert. Mit den richtigen Masen wurde festgestellt, dass sich gewisse Module nicht wie geplant ausgingen. Beim Modul 6 gingen sich die vier Schrittmotortreiber nicht vertikal nebeneinander aus. Deswegen wurde in AutoCAD einer der Treiber vertikal angeordnet und weiterführend wurde die Änderung auch in Fusion nachgebessert.
     \paragraph{Räder}\mbox{}\\
     In der Transformation vom Serverschrank zum Schaltschrank des AFSS gehört auch, dass der Schrank mobil gemacht wird. Dazu wurden zwei flexible und zwei starre Räder zur Verfügung gestellt. Planungstechnisch wurden diesbezüglich besprochen, dass die Räder direkt an das bestehende Gerüst geschraubt werden. Montiert werden die Räder mit simplen Schrauben und Muttern. Die Räder wurden in AutoCAD nicht gezeichnet, da es keinen sinnerfüllten Zweck gab. 
+    \newpage
 \subsubsection{Die elektrischen Komponenten}
 \label{sec:Die elektrischen Komponenten}
     Das AFSS verfügt über eine große  Bandbreite von elektrischen Komponenten. Jede Art von Elementen ist zur besseren Verständlichkeit kurz aufgelistet, bevor im nächsten Kapitel die jeweiligen Funktionen beleuchtet werden.
-    \paragraph{Übersicht der Komponenten}\mbox{}\\
+    \paragraph{Übersicht der Komponenten}\mbox{}
     \begin{table}[h!]
         \centering
         \begin{tabular}{|l|l|c|}
@@ -158,6 +159,7 @@
             Trennschalter & / & Manuelle Trennung vom Netz \\ \hline
             Schlüsselschalter & / & Freigabeschalter \\ \hline
             Not-Aus-Schalter & / & Manueller Not-Aus \\ \hline
+            Motorschutzschalter & / & Schutz für ASM \\ \hline
             FI & TYP A 30mA & Fehlerstromschutzschalter \\ \hline
             LS & C13 & Leitungsschutzschalter \\ \hline
             Telemecanique & TSX-SUP-A054 & 400/24V ASI-Netzteil \\ \hline
@@ -173,17 +175,20 @@
             ET 200 Busadapter & 6ES7193-6AR00-0AA0 & Busanschluss \\ \hline
             ET 200 ASI Master & 3RK7137-6SA00-0BC1 & ASI-Master \\ \hline
             ET 200 Steckadbater & 6ES7193-6BP20-0DC0 & Steckadapter für ASI-Master \\ \hline
-            Feed-In-Modul & 2081870000 & Eingang zu DC-Sicherungen \\ \hline
+            ASI-Slaves & 3RK2200-0CE02-0AA2 & Nimmt Sensoren auf \\ \hline
+            Feed-In-Modul & 2081870000 & Eingang zu DC-Sicherungen \\ \hline            
+            Service Schnittstelle & IE-FC-SET-SPDEK001-KY-P & Schnittstelle für externen Zugriff \\ \hline
             8A-DC-Sicherung & 2080600000 & Sicherung von SM \\ \hline
             2A-DC-Sicherung & 2080480000 & Sicherung von SM \\ \hline
-
-
+            SM-Treiber groß & CL57T(V4.0) & Ansteuerung von SM \\ \hline
+            SM-Treiber klein & TB6560 & Ansteuerung von SM \\ \hline
+            SM 2Nm & 23E1K-20 & Antrieb X und Y Achse \\ \hline
+            SM 40Ncm & 17HS4417P1-X4 & Antrieb für Gabel und Querförderer \\ \hline
+            ASM & Spörk Antriebssysteme & Antrieb für Förderband \\ \hline
         \end{tabular}
         \caption{Übersicht der elektrischen Komponenten}
         \label{tab:elektrische_komponenten}
     \end{table}
-
-    \paragraph{Spezififsche Erklärungen}\mbox{}\\
 \subsubsection{Elektrische Planung (E-Plan)}
 \label{sec:Elektrische Planung}
     Für das Zeichnen eines E-Plans ist ein großes Produktwissen nötig. Um sich dieses zu beschaffen wurde die mechanische Seite zuerst geplant, da man im  Zuge dieser die elektrischen Komponenten sehr gut kennenlernt. Als ein großteil der mechanischen Seite für den Schaltschrank ausgeplant war wurde der E-Plan parallel zur mechanischen Planung angefangen. Als Schüler wurde die E-Plan Education Version verwendet. Diese Version ist kostenlos und bietet alle Funktionen die für die Planung des AFSS nötig sind.
@@ -205,7 +210,7 @@
         \caption{Schaltplan: Netzteile}
         \label{fig:Netzteile}
     \end{figure}Was jetzt noch übergeblieben ist sind die 24V-DC-Minuspole der Netzteile. Die Reihenklemmen wurden über Querverbinder mitteinander zusammenverbunden und im Anschluss auch mit den PE-Klemmen der 230V Seite verbundnen. Die Entscheidung den Steuerstromkreis zu Erden beruht auf der Norm EN60204-1. Demnach hilft die Erdung gegen EMV-Probleme und gewährleistet im Fehlerfall die Abschalltung. \cite{elektronet_steuerstromkreis_geerdet}\cite{beckhoff_steuerstromkreis_geerdet}\\\\
-    Die nächste Seite ist ein Nachtrag, denn anfänglich wurde nicht bedacht, dass der ASI-Kreis eine eignene 24V-DC-ASI-Versorgung braucht. Auf die zweite Seite wurde demnach die ASI-Versorgung gezeichnet sowie der Anschluss an den ET200-ASI-Master. Eingehend sind auf dieser Seite der L1, N und und ein Set, letzteres ist ein Eingang beim ASI-Master und wird von der SPS aus gesetzt, und ausgehend ist der ASI-BUS vom ASI-Master.\\\\
+    Die nächste Seite ist ein Nachtrag, denn anfänglich wurde nicht bedacht, dass der ASI-Kreis eine eignene 24V-DC-ASI-Versorgung braucht. Auf die zweite Seite wurde demnach die ASI-Versorgung gezeichnet sowie der Anschluss an den ET200-ASI-Master. Eingehend sind auf dieser Seite der L1, N und und ein Set, letzteres ist ein Eingang beim ASI-Master und wird von der SPS aus gesetzt, und ausgehend ist der ASI-BUS vom ASI-Master. Weiters befindet sich auf dieser Seite auch die Verdrahtung der Service Schnittstelle. Diese wird auch zusätzlich mit einem zweiphasigen Leitungsschutzschalter gesichert.\\\\
     Auf der dritten Seite wurde der Versorgungsanschluss von SPS und ET200 gezeichnet. Eingehend sind 24V einmal für die SPS sowie für die ET200 und der jeweilige Minuspol dazu. Auf dieser Seite wurden die Drahtverbindungen gezeichnet, die die SPS, die Ein und Ausgangskarten sowie die beiden PTO-Karten versorgt.\\\\
     Auf der vierten Seite findet sich das erste Feed-In-Modul von Weidmüller. Hierbei eingehend sind 24V, mit Minuspol, von der SITOP und ausgehend sind die Brückenverbindungen von den DC-Sicherungen. Das wären zwei mal Brücken für 24V, zwei mal Brücken für GND und eine Brücke für den BUS dieser Bugruppe.\\\\
     Auf den nächsten beiden Seiten finden sich jweils eine 8A-DC-Sicherung. Eingehend sind die bereits genannten Brücken, diese gehen dann auch weiter zur nächsten Sicherung, und ausgehend sind einmal + und - für die stärkeren Schrittmotoren. Wie erwähnt sind das Seite fünf und sechs.\\\\
@@ -252,27 +257,46 @@
     Auf der folgendnen Seite befindet sich die Eingangskarte der SPS mit den Eingängen. Dabei werden primär die Zustände der Not-Aus-Schalter abgefragt und die des Schlüsselfreigabeschalters.\\\\
     Auf der Seite 24 befindet sich die Ausgangskarte der Siemens SPS. Mit dieser werden ausschließlich nur Relais angesteuert. Diese sind für die Invertierung der Enable-Eingänge der Treiber zuständig, für das Steuern der Schütze für den Asynchronmotor und zuletzt auch für die Bremsfunktion. Damit ist die Schaltung zur Steuerung aller Schrittmotoren fertig. Auf den folgenden Seiten wurde dann die Schaltung der ASI-Sensoren gezeichnet\\\\ 
     Bezüglich dem ASI-Netzt ist zu wiederholen, dass der ASI-Master mit den Slaves über einen zweiadrigen ASI-Bus kommuniziert. Für diesen Bus gibt es ein eigenes Kabel, aber da mit dem Material gearbeitet werden muss, was vorhanden ist wird beim AFSS das selbe fünf adrige Ölflex verwendet wie für die Motoren. In diesem ungünstigen Fall werden von den fünf adern am Ende nur zwei verwendet.\\
-    Bezüglich den Slaves ist zu sagen, dass ursprünglich ein Slave mit sieben Inputs gedacht. Dieser wäre in der Schule genügend vorhanden gewesen. Allerdings ist bei Testläufen es nicht gelungen eine Kommunikation zwischen diesen Slaves und dem Siemens ASI-Master herzustellen. Deswegen werden anstatt vier Slaves mit sieben Eingängen nun sieben ASI-Slaves von Siemens mit jeweils vier Eingängen verwendet. Der genaue Typ ist 3RK2200-0CE02-0AA2 und es ist möglich mit diesem zu kommunizieren.\\
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.9\textwidth]{Vogis Bilder/ASI_Schaltplan_sensoren.png}
-        \caption{Verbindung der Sensoren mit den ASI-Slaves}
+        \caption{Sensoren mit den ASI-Slaves, erste Seite von vier}
         \label{fig:ASI_Sensoren}
     \end{figure}
+    Bezüglich den Slaves ist zu sagen, dass ursprünglich ein Slave mit sieben Inputs gedacht. Dieser wäre in der Schule genügend vorhanden gewesen. Allerdings ist bei Testläufen es nicht gelungen eine Kommunikation zwischen diesen Slaves und dem Siemens ASI-Master herzustellen. Deswegen werden anstatt vier Slaves mit sieben Eingängen nun sieben ASI-Slaves von Siemens mit jeweils vier Eingängen verwendet. Der genaue Typ ist 3RK2200-0CE02-0AA2 und es ist möglich mit diesem zu kommunizieren.\\
     Der Bus fährt auf mit Steckverbinder erweiternde Reihenklemmen, von denen dann auf die jeweiligen Slaves. Es sind immer zwei Slaves räumlich beieinander und werden gemeinsam mit Reihenklemmen auf dem AFSS auf Hutschienen montiert. Der siebte Slave ist alleine. Wie die Sensoren mit den ASI-Slaves verbunden sind sieht man auf der Abbildung \ref{fig:ASI_Sensoren} und für eine genaue Erklärung zu den Sensoren siehe Kapitel \ref{sec:Sensorik}.\\
     In Summe erstreckt sich der genaue Schaltplan der ASI-Slaves über die letzten vier Seiten.
     \paragraph{Topologieansichten}\mbox{}\\
     Nachdem alle Seiten gezeichnet und überarbeitet wurden, wurden für den ASI-Bus und den PROFIBUS noch passende Topologieansichten gezeichnet. Diese bieten eine übersichtliche Darstellung der Buse.
     \paragraph{Übersichtsblätter}\mbox{}\\
     Daraufhin wurden noch zwei Übersichtsblätter gezeichnet. Auf diesen ist die gewünschte Anreihung der Siemens SPS und ihren Karten sowie der ET200 mit ihrem ASI-Master.
-
-
-    ---Wie wurden Motorschütz ausgelegt---
-    ---Wie wurden FI und LS ausgelegt---
-    ---Tabelle--- 
-\subsection{Die Auslegung von den jeweiligen Komponenten (Tabelle mit allen Komponenten machen?)---Vor die E-Planung setzen um im Folgekapitel nicht konstat erklären zu müssen was welches teil macht}
+\subsection{Die Auslegung verschiedenster Schaltschrankkomponeten}
+    \paragraph{Fehlerstomschutzschalter}\mbox{}\\
+    Der FI ist ein Schutzorgan, welches im Fehlerfall den Stromkreis unterbricht. Dieser erkennt wenn der Summenstrom von L1, L2, L3 und N nicht mehr gleich Null ist und schaltet dann ab.\\
+    Beim FI gibt es verschiedenste Arten. Die älteste wäre der TYP AC, es gibt aber auch noch TYP A, B und F sowie Weitere. Von den genannten Typen wurde für das AFSS ein Fehlerstromschutzschalter der Variante A gewählt, da bei dieser Anlage das erkennen von Wechselströmen und Pulsströmen genügt. Das liegt daran, dass kein Spezialfall vorliegt, der einen anderen Typen fordern würde \cite{FI-Typen}.
+    \paragraph{Leitungsschutzschalter}\mbox{}\\
+    Beim Leitungsschutzschalter gibt es die Schaltcharakteristik sowie den Bemessungsstrom der gewählt gehört. Da im AFSS die ASM zu hochen Anlaufströmen führt wurde Charakteristik des Typs C gewählt, dieser ist anzuwenden in Schaltkreisen mit Motoren oder Handwerkzeug \cite{SeyrRösch}. Für den Bemessungsstrom wurde 13 A ausgewählt, da dieser Wert der nächsthöhere zum Nennstrom war. Der Nennstrom wurde ermittelt aus der Summe der einzelnen Nennströme der Verbraucher multipliziert mit einem Gleichzeitigkeitsfaktor. Bei letzterem Faktor wurde geschätzt wie viele Verbraucher gleichzeitig laufen werden. Die Gabel-Antriebe beispielsweise werden nie gleichzeitig zu irgendeinem anderem Motor ein oder ausfahren. 
+    \paragraph{Motorschutzschalter}\mbox{}\\
+    Der Asynchromotor hat im Falle des AFSS einen Nennstrom von 1,9 A. Beim AFSS wird ein Standardmotorschutzschalter verwendet, der auf den Nennstrom des Motors angepasst wurde. 
+    \paragraph{Leiterquerschnitte}\mbox{}\\
+    Der Leiterquerschnitt ist abhängig vom Spannungsabfall, der aufgrund von kurzen Längen im Schaltschrank irrelevant ist, von Verlegeart und Nennstrom. Der Leiterquerschnitt hängt auch immer mit den Sicherungselementen zusammen, da der Leiter so lange den Strömen standhalten muss, bis das Schutzelement ausgelöst hat. Deswegen wird im AFSS ein Leiterquerschnitt von 2,5 mm² verwendet, bis zu entsprechenden Sicherheitslementen und von dort aus wird dann auf 0,75 mm² reduziert \cite{SeyrRösch}.\\ 
+    Alle Erdungskontakte werden mit 2,5 mm² verdrahtet um alle potentiellen Fehlerströme auszuhalten.\\
+    Die Farben der einzelnen Drähte werden mit dem Schulinternen Standard entschieden beziehungsweise festgelegt.
 \subsection{Realisierung}
     \paragraph{Filou-NC}\mbox{}\\
+    \paragraph{Fräsen}\mbox{}\\
+    \paragraph{Fräsen-Nachbearbeitung}\mbox{}\\
+    \paragraph{Rädermontage}\mbox{}\\
+    \paragraph{Profilschienen-Verschiebung}\mbox{}\\
+    \paragraph{Folierung der Frontscheibe}\mbox{}\\
+    \paragraph{Die Verdrahtung}\mbox{}\\
+    ---Farbcode der Schule---
+    rot, blau plus minus,
+    gelb ausgänge
+    orange eingänge
+    ---Erwähnen wie die Verdahtung hilft Fehler aufzudecken---
+    \paragraph{Einbau von Service-Schnittstelle}\mbox{}\\ 
+    \paragraph{Verwendetes Werkzeug}\mbox{}\\
 
 
 
