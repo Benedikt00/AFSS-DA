@@ -20,7 +20,8 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
         noch Datentypen, ... maybe
 
-    \subsubsection{Programmbausteine}
+    \subsubsection[Programmbausteine]
+    {Programmbausteine \cite{Programmierleitfaden_für_S7-1500}}
     
     In TIA Portal werden Programmbausteine genutzt, um Steuerungsprogramme modular und strukturiert zu gestalten. Dadurch werden Programme übersichtlicher, wiederverwendbar und effizienter. Es gibt unterschiedliche Arten von Programmierbausteinen:
 
@@ -41,17 +42,14 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
                 \item Behandlung von Fehlern
             \end{itemize}
             Werden in einem Programm mehrere OBs aufgerufen, so werden die OBs in aufsteigender Reihenfolge der OB-Nummer abgearbeitet. 
-            \cite{Programmierleitfaden_für_S7-1500}
 
         \item[2.] \textbf{FC(Funktionen)} \\
             Funktion haben keinen zyklischen Datenspeicher, deswegen können Bausteinparameter nicht bis zum nächsten Aufruf gespeichert werden. Darum müssen Funktionen bei jedem Aufruf mit Aktualparametern versorgt werden. Um kein zufälliges Verhalten enstehen zu lassen sind die Werte immer mit einem Defaultwert vorbelegt. Will man die Daten einer Funktion dauerhaft speichern, so muss man einen globalen Datenbaustein verwenden.\\
             Funktionen werden verwendet, um häufig wiederkehrende Anwendungen durchzuführen.
-            \cite{Programmierleitfaden_für_S7-1500}
             
         \item[3.] \textbf{FB(Funktionsbausteine)} \\
             Im Gegensatz zu Funktionen haben Funktionsbausteine einen zyklischen Datenspeicher -Instanz DB-, in welchem Werte dauerhaft gespiechert werden.Dadurch behalten statische Variablen ihren Wert von Zyklus zu Zyklus. Wie bei Funktionen sind die Werte mit einem Defaultwert vorbelegt.\\
             Funktionsbausteine können genutzt werden, um Unterprogramme für unterschiedliche Anwendungen zu erstellen. Außerdem werden sie genutzt um das Anwenderprogramm zu strukturieren. Bei mehrfacher Verwendung von Funktionsbausteinen empfiehlt sich die Verwendung von Multiinstanz-DBs.
-            \cite{Programmierleitfaden_für_S7-1500}
         
         \item[4.] \textbf{Global-DB(Datenbausteine)} \\
             Globale Datenbausteine speichern variable Daten, die dem kompletten Programm zur Verfügung stehen. Wie in Abb.\ref{Zugriff auf Global-DB} ersichtlich, bedeutet das ,dass alle Bausteine Zugriff auf den Global-DB haben.
@@ -65,7 +63,6 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
             In Globalen Datanbausteinen können jegliche Datentypen genutzt werden.\\
             Globale DBs werden verwendet, wenn Daten in verschiedenen Programmteilen bzw. Bausteinen benötigt werden.
-            \cite{Programmierleitfaden_für_S7-1500}
 
         \item[5.] \textbf{Instanzen} \\
             Wird ein Funktionsbaustein aufgerufen, so nennt man das Instanz. Die Daten der Instanz, werden im sogenannten Instanzdatenbaustein gespeichert. Instanz-DBs werden automatisch nach den Vorgaben des Funktionsbausteins erzeugt und können somit nicht direkt geändert werden. Der Instanz-DB hat einen dauerhaften Speicher, welcher die Schnittstellen Input, Output, InOut sowie Static beihaltet. Zusätzlich besitzt der Instanz-DB einen flüchtigen Datenspeicher in dem tempöräre Variablen gespeichert werden. Diese sind dadurch immer nur für einen Zyklus gültig.
@@ -75,7 +72,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
     \end{itemize}
 
-    \subsubsection{Technologieobjekte}
+    \subsubsection[Technologieobjekte]{Technologieobjekte \cite{Technologieobjekte}}
     Technologieobjekte dienen dazu die Ansteuerung und Handhabung von technischen Funktionen, insbesondere von Motoren, Achsen, etc. zu vereinfachen. Es existieren eine Vielzahl an unterschiedlichen Technologieobjekten. In nachfolgenden Absätzen werden die für das Projekt relevanten Technologieobjekte genauer erklärt.
 
     \begin{itemize}
@@ -96,7 +93,6 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
                     Aktivieren einer Momentbegrenzung oder Festanschlagserkennung.
                 \item SetSensor \\
                     Umschalten des Gebers für die Achse. 
-                    \cite{Technologieobjekte}
             \end{itemize}
             
 
@@ -116,7 +112,6 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
                     Start eines absoluten Kurvenscheibengleichlaufs.
                 \item SynchronizedMotionSimulation \\
                     Simulation eines aktiven Gleichlaufs. 
-                    \cite{Technologieobjekte}
             \end{itemize}
              
     \end{itemize}
@@ -159,10 +154,124 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
 
 \subsection{Motoransteuerung}
+Eine weitere Hauptaufgabe der SPS ist es die Ansteuerung der Motoren zu vollziehen. Hierbei stehen die Daten zur Verfügung, welche vom Server geschickt werden. Dies beinhaltet für die Motoransteuerung folgende Aufgaben: Positionsfahren (Ein/Auslagerung), Ansteuerung des Motors des Querförderes sowie die Ansterung der Asynchronmaschine des Förderbandes. Bei allen Motoren, bis auf den Motor für das Förderband, handelt es sich um Schrittmotoren. Es werden zwei unterschiedliche Motortypen verwendet: Nema 23 Closed Loop und Nema 17, wobei Nema 23 der stärkere der beiden Motoren ist. Die Nema 23 Motoren werden für das Ansteuern der X- und Y-Achse verwendet. Der Querförderer sowie die Z-Achse über die Nema 17 Motoren. Zu bedenken ist, das jede Achse von zwei Motoren angetrieben wird und sich daher eine Anzahl von 7 Schrittmotoren plus einen Asynchronmotor ergibt. Für jeden der Schrittmotoren gibt es eine Schrittmotortreiber. Dieser regelt den Motor anhand der Kontrollsiganle, die dieser von der SPS bekommt. 
+
+\subsubsection[Kontrollsiganle für den Motortreiber]
+{Kontrollsiganle für den Motortreiber \cite{User-Manual_CL57T}}
+
+Die zwei Hauptsignale die der Treiber von der SPS bekommt sind ein PTO-Signal sowie ein boolsches Signal welches für die Drehrichtung verwendet wird(Direktion). Zusätzlich dazu gibt es ein zweites Boolsches Signal für die Freigabe des Motors (Enable). Ein Signal kommt jedoch vom Motortreiber. Nämlich ein Alarmsignal (Alarm), welches gesendet wird, wenn der Motortreiber folgende Fehler erfährt: Überspannung, Überstrom, Kurzschluss sowie Positionsschleppfehler.
+
+    \begin{itemize}
+        \item [1.] \textbf{Pulse Train Output (PTO)} \\
+        Das PTO-Signal besteht aus verschidenen Pulsen mit Ein- zu Auszeit im Verhältnis 50\% : 50\%. Für jeden dieser Pulse bewegt sich der Motor um einen Schritt. Wie groß dieser Schritt ist hängt davon ab wie viele Schritte es benötigt um eine volle Umdrehung des Motors zu vollziehen. Dies kann man am Schrittmotortreiber einstellen. Bei diesem Projekt ist eine Umdrehung des Motors in 1600 Schritte eingeteilt. Das heißt das PTO Modul muss 1600 solcher Pulse schicken damit sich der Motor einmal dreht. Das heißt die SPS regelt die Frequenz mit welcher die Pulse hinausgeschickt werden und somit die Geschwindigkeit des Motors. 
+
+        \item [2.] \textbf{Direktion} \\
+        Dieses Signal ist wie bereits erwähnt ein boolsches Signal. Dies bedeutet, dass das Signal nur zwei Zustände besitzt. Entweder HIGH oder LOW. Diese Signal bestimmt die Richtung, in welche sich der Motor dreht. Entweder im Uhrzeigersinn (CW) oder gegen den Uhrzeigersinn (CCW). Bei einem HIGH Signal dreht der Motor gegen den Uhrzeigersinn und bei einem LOW Signal im Uhrzeigersinn.
+
+        \item [3.] \textbf{Enable} \\
+        Hat wie das Direktion-Signal zwei Zustände: HIGH und LOW. Dieses SIgnal ist jedoch logisch invertiert. Dies bedeutet das bei einem HIGH Signal der Motor gesperrt ist. Der Motor ist nur bei einem LOW-Signal freigegeben. 
+
+        \item [4.] \textbf{Alarm} \\
+        Auch ein boolsches Signal mit HIGH und LOW. Sobald der Motortreiber oben genannte Probleme erfährt, wird dieses Signal auf HIGH gesetzt. So sieht man auch in der SPS, dass es zu einem Fehler am Motortreiber gekommen ist. 
+
+    \end{itemize}
+
+Um falsche Ausführungen sowie Abweichungen zu vermeiden, müssen die in Abb. \ref{Sequenzdiagramm} gezeigten ,minimal und maximal Werte, eingehalten werden. Damit ein Signal als HIGH aufgefasst wird muss es über \qty{3.5}{\volt} haben. Soll es jedoch als LOW gesehen werden, so muss die Spannung des Signals unter \qty{0.5}{\volt} fallen. Die Periode des PTO Signals muss länger als \qty{5}{\micro\second} sein, um eine sichere Abarbeitung zu garantieren. Auch darf die Pulsweite, sowie die Zeit die der Puls auf LOW ist, nicht unter \qty{2.5}{\micro\second} fallen. Zusätzlich muss das Enable-Signal mindestens \qty{5}{\micro\second} vor dem Direktion Signal und \qty{10}{\micro\second} vor dem PTO Signal am Motortreiber anstehen. Wie in Abb. \ref{Sequenzdiagramm} zu sehen, muss das Direktion-Signal auch mindestens \qty{5}{\micro\second} vor dem PTO Signal ankommen. 
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width = \textwidth]{Sonne/PUL_DIR_ENA-Motor.png}
+        \caption{Sequenzdiagramm der Kontrollsignale \cite{User-Manual_CL57T}}
+        \label{Sequenzdiagramm}
+    \end{figure}
+
 
 \subsubsection{Motion Control Anweisungen}
+Um den Motor in der SPS durch das Programm steuern zu können, wird zuerst das Technologieobjekt für diesen Motor erstellt und mit den richtigen Daten ausgefüllt. Danach ist dieses Technologieobjekt durch Motion Control Anweisungen steuerbar. In folgenden Abschnitten werden alle für das Projekt relevanten Motion Control Anweisungen erklärt. 
+
+\begin{enumerate}
+    \item \textbf{MC\_Power} \\
+        Diese Motion Control Anweisung gibt ein Technologieobjekt frei beziehungsweise sperrt es. Wird der Parameter enabel auf HIGH gesetzt so wird das Technologieobjekt freigegeben. Das Technologieobjekt ist solange freigegeben, solange enable auf HIGH ist. Am Parameter Status kann man dann erkennen ob das Technologieobjekt freigegeben wurde oder nicht.
+
+    \item \textbf{MC\_Home} \\
+        Wird verwendet um eine Achse zu referenzieren. Die Dynamikwerte mit welcher dieser Baustein ausgeführt wird, sind jene die in der Konfiguration des Technologieobjekts voreingestellt wurden. Es wird unterschiedlich referenziert, je nach dem welcher Wert (0-13) am Parameter Mode anliegt. Ausgeführt wird diese Motion Control Anweisung sobald eine steigende Flanke am Parameter execute erfasst wird. Referenziert ist die Achse erst wenn der Parameter Done auf HIGH umschaltet. 
+
+    \item \textbf{MC\_MoveAbsolut} \\
+        Mit dieser Anweisung wird eine Achse auf eine absolute Position gefahren. Die Parameter Velocity (Geschwindigkeit), Jerk (Ruck), Acceleration (Beschleunigung) und Deceleration (Verzögerung) können bestimmt werden. Werden diese nicht ausgefüllt oder mit einem Wert kleiner null ausgefüllt so werden die voreingestellten Werte übernommen. Diese Motion Control Anweisung kann nur ausgeführt werden, wenn das Technologieobjekt bereits referenziert ist. Wird ausgeführt sobal am Parameter execute eine steigende Flanke registriert wird. Wenn die Zielposition erreicht wird, schaltet der Paramterer Done auf HIGH. 
+
+    \item \textbf{MC\_GearIn} \\
+        Startet einen Getriebegleichlauf zwischen einer Leit- und einer Flogeachse. Dies kann sowohl in Bewegung als auch im Stillstand erfolgen. Als Leitachse können folgende Technologieobjekte ausgewählt werden: Positionierachse, Gleichlaufachse, Externer Geber und Leitachsstellvertreter. Als Folgeachse kann jedoch nur das Technologieobjekt Gleichlaufachse agieren. Der Auftrag wird gestartet sobalb am Parameter execute eine steigende Flanke kommt. Die Snychronisation ist fertiggestellt, wenn der Parameter InGear auf HIGH schaltet.
+
+\end{enumerate}
+
+\subsubsection{Konfiguration Technologieobjekt}
+Um die Technologieojekte nutzen zu können müssen die korrekt konfiguriert werden. In nachfolgenden Absätzen wird Schritt für Schritt erkärt wie man ein solches Technologieobjekt für den Nema23 Motor konfiguriert. 
+
+\paragraph{Positionierachse}
+    
+        \begin{enumerate}
+            \item Technologieobjekte
+            \item Neues Objekthinzufügen
+            \item Motion Control
+            \item TO\_PositioningAxis
+            \item Konfiguration
+            
+                \begin{itemize}
+
+                \item Antrieb $\rightarrow$ Local Modules $\rightarrow$ PTO Modul auszuwählen
+                \item Mechanik $\rightarrow$ Spindelsteigung: $= 134,9942$
+                \item Dynamik-Voreinstellung: 
+                    \subitem Geschwindigkeit:
+                        \qty{300}{\milli\meter/\second}
+                    \subitem Beschleunigung: 
+                        \qty{6000}{\milli\meter/\square\second}
+                    \subitem Verzögerung:
+                        \qty{6000}{\milli\meter/\square\second}
+                \item Positionsgrenzen
+                    \subitem HW-Endschalter aktivieren
+                    \subitem Variablen wählen
+                    \subitem Pegelauswahl: oberer Pegel
+                \item Dynamikgrenzen
+                    \subitem Geschwindigkeit:
+                        \qty{1000}{\milli\meter/\second}
+                    \subitem Beschleunigung: 
+                        \qty{20000}{\milli\meter/\square\second}
+                    \subitem Verzögerung:
+                        \qty{20000}{\milli\meter/\square\second}
+                \item Referenzieren $\rightarrow$ aktives Referenzieren
+                    \subitem Variable wählen
+                    \subitem Pegelauswahl: oberer Pegel
+                    \subitem Refernzierrichtung: Positiv
+                    \subitem Refernziergeschwindigkeit:
+                        \qty{25}{\milli\meter/\second}
+                
+                \end{itemize}
+        \end{enumerate}
+
+\paragraph{Gleichlaufachse} \mbox{} \\
+Bei der Gleichlaufachse muss bei der Konfiguration ein Schritt mehr gemacht werden. Unter Konfiguration - Leitwertverschaltung wird eine Leitwertverschaltung hinzugefügt in dem man auf ``hinzufügen'' klickt und anschließend das Technologieobjekt auswählt dem die Gleichlaufachse folgen soll.
+
+
 
 \subsubsection{Synchronisation}
+Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die zwei Motoren ,welche zusammenarbeiten, synchronisiert werden. Dies wird in der Software, durch die Motion Control Anweisung MC\_GearIn, geschafft. Bei dem Slave muss es sich wie bereits gesagt um eine Gleichlaufachse (TO\_SynchronousAxis) handeln. Da die beiden Achsen hardware technisch verbunden sind, muss die Synchronisation im Stillstand erfolgen. Ausgeführt wird die Synchronisation bei einer steigenden Flanke am Parameter Execute. Die Folgeachse bleibt nun solange synchron zur Leitachse, bis es entweder, zu einem MC\_GearOut Auftrag kommt oder die Freigabe der Folgeachse, durch ein LOW Signal am Parameter enable des MC\_Power Bausteins (Folgeachse), nicht mehr vorhanden ist. Ein Sperren der Leitachse über MC\_Power (Leitachse) führt nicht zu einem Synchronisationsverlust. Die voreingestellten Werte bei den Parametern RationNumerator(1) sowie RatioDenominator(1) können übernommen werden. Diese werden nur geändert falls zwischen den zu synchronisierenden Motoren, ein Getriebe vorhanden ist, was bei diesem Projekt jedoch nicht der Fall ist. Ansonsten bleibt der Getriebefaktor bei 1. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.6\textwidth]{Sonne/MC_GearIn.png}    
+    \caption{Baustein MC\_GearIn}
+    \label{MC_GearIn}
+\end{figure}
+
+\subsubsection{Ansteuerung des Förderbands}
+Die Ansteuerung des Förderbands erfolgt im Gegensatz zu den anderen Motoren nicht über Motortreiber. Die Asynchronmaschine des Förderbands wird schlicht und einfach über Relais mit der Spannungsversorgung verbunden oder getrennt. Die Ansteuerung der Relais erfolgt dann über die Digitalausgänge der SPS. 
+
+\subsubsection{Tia-Portal Programm}
+Durch die SPS-Server Kommunikation stehen die benötigten Daten sowie der Auftrag, welcher ausgeführt werdern muss zu Verfügung. 
+
+    \paragraph{Ein-/Auslagerung}
+    Bei dieser Aufgabe stehen als Informationen die X,Y,Z -Werte der Lagerposition zu Verfügung und ob es sich um eine Ein- oder Auslagerung handelt. Bei einer Einlagerung muss die Box zuerst beim Querförderer geholt werden. Dann wird die Box auf die Zielposition gelagert. 
+
 
 \subsection{SPS-Server Kommunikation}
 Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es die nötigen Informationen, sowie die Übertragung der Aufgabenstellung auszuführen. 
@@ -253,7 +362,7 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
                 \subitem 10: Lager 1 (Aus-/Einlagerung)
                 \subitem 11: Lager 1 (Querförderer)
             \item 2.Teil: \\
-            Der zweite Teil steht in Abhängigkeit zu ersten. Je nachdem welche Zahl nach A steht,also der Code welche Area angesprochen wird, ist der zweite Teil anders aufgebaut.
+            Der zweite Teil steht in Abhängigkeit zum Ersten. Je nachdem welche Zahl nach A steht,also der Code welche Area angesprochen wird, ist der zweite Teil anders aufgebaut.
                 \begin{itemize}
                 \item 00: SB\\
                 Bei diesem Befehl muss der Barcodescanner angesteuert werden um an der Kommissionierstation einen Barcode einzuscannen.
