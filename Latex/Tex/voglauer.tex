@@ -140,6 +140,7 @@
     Es wurden, bis auf das Erdungsmodul, alle Module auf diese Art konstruiert. Man konnte schön erkennen welche Reihenfolgen sinnvoll sind und wie sich welche Komponenten am besten montieren lassen können. Beispielsweise wurde ausgetestet ob bei gewissen elektrischen Komponenten eine vertikale Montage zielführend waren. In der Abbildung \ref{fig:Schaltschrank_bestueckt_Fusion} sieht man die fertige Konstruktion des Schaltschrankes.\\
     Zu dieser Version des Schaltschrankes ist zu sagen, dass ab der Realisierung des Geplanten, dieser digitale Plan sich fließend transformiert, zum digitalen Zwilling. Dieser Zwilling gehört nach der Realisierung konstant gepflegt. Das Erdungsmodul beispielsweise, welches erst mitten in der Realisierung eingeplant und gemacht wurde, muss in den digitalen Zwilling nachträglich hinzugefügt werden.
     \paragraph{AutoCAD}\mbox{}\\
+    \label{AutoCAD}
     Nachem der digitale Plan/Zwilling vollständig ausgeplant wurde, mussten die jeweiligen Platten gefräst werden.Um die Platten auch fräsen zu können müssen diese zuerst als DXF-Datei in Filou-NC eingefügt werden. Dazu mussten die einzelnen Module in AutoCAD nachgezeichnet werden.     
 +
     Idealerweise hätte man hierfür nur die Oberfläche der Platten in Fusion zur Skizze gemacht und diese dann als DXF exportiert. Bei einem nachträglichen Ausmessen der 3D-Konstruktion wurde allerdings festgestellt, dass sich die Maße der Löcher der Profilschiene nicht mit der Realität decken. Zudem wurden weitere minimale Abweichungen festgestellt. Keiner der Fehler war so gravierend, dass man die digitale Konstruktion des Schaltschrankes nicht weiterverwenden könnte aber für eine präzise Fräsung aufbauend auf der Fusion-Konstruktion waren die Abweichungen zu groß. Deswegen wurden alle Module in AutoCAD sorgfälltig nachgezeichnet.\\     
@@ -283,20 +284,58 @@
     Alle Erdungskontakte werden mit 2,5 mm² verdrahtet um alle potentiellen Fehlerströme auszuhalten.\\
     Die Farben der einzelnen Drähte werden mit dem Schulinternen Standard entschieden beziehungsweise festgelegt.
 \subsection{Realisierung}
-    \paragraph{Filou-NC}\mbox{}\\
-    \paragraph{Fräsen}\mbox{}\\
-    \paragraph{Fräsen-Nachbearbeitung}\mbox{}\\
+    Nach der Planung kommt die Realisierung des Geplanten. Bei dieser gibt es mehrere Schritte. Diese werden nun näher beleuchtet.
     \paragraph{Rädermontage}\mbox{}\\
+    Der erste Schritt vom Serverschrank zum Schaltschrank des AFSS war die Mobilmachung. Dem Serverschrank wurden vier Räder in den unteren Ecken gegeben. Dafür wurden in den bestehenden Boden für jedes Rad vier Löcher manuell gebohrt. Die Räder wurden daraufhin mit Schrauben, Beilegscheiben und Muttern montiert.\\
+    Bei den Rädern handelt es sich um Zwei fixierte und Zwei die sich um 360° drehen können. Wichtig war, dass sich ein Paar nicht diagonal zueinander sondern nebeneinander montiert wird. Wären die Flexiblen diagonal zueinander könnnte man mit dem Schaltschrank im besten Fall nur in eine Richtung fahren. Angeordnet wurden die Räder vergleichbar zu einem Einkaufswagen.  
+    \paragraph{Filou-NC}\mbox{}\\
+    Nachdem die Module in AutoCAD neugezeichnet (siehe Abschnitt \ref{AutoCAD}) wurden, konnten die DXF-Dateien in Filou-NC importiert werden.\\
+    In Filou-NC wird die gesammte DXF-Datei importiert. Danach kann man unerwünschte Teile der Zeichnung löschen, wenn beispielsweise mehrere Module in der selben Zeichnung vorhanden sind müssen die, die nicht gefräst werden gelöscht werden. Daraufhin sollte die Zeichnung noch bereinigt werden, das heißt, dass doppelte Linien gelöscht werden. Das Programm liefert hierfür ein fertiges Tool. Gewisse Längen der Zeichnung müssen nun noch unterbrochen werden. Das dient dazu, dass beim Fräsvorgang die Platte immer zumindest an den Unterbrechungen mit der ursprünglichen Platte verbunden bleibt. Verhindert wird, dass sich die Platte verschiebt und somit nicht mehr an den richtigen Stellen gefräst wird.\\
+    Nachdem die DXF-Zeichnung vorbereitet wurde muss nun der Fräsablauf programmiert werden. Dazu muss im Programm dem Ablauf ein Startpunkt vergeben werden und der Nullpunkt der Zeichnung gesetzt werden. Daraufhin kann man das in echt eingespannte Werkzeug auch digital im Programm einfügen. Damit das Programm weiß wie groß der Durchmesser des Werkzeuges ist und wie die Spitze des Werkzeuges aussieht. Nachdem das Werkzeug eingefügt wurde ist die Sprühdüse, zur Kühlung, einzuschalten und daraufhin kann man die Konturen der Zeichnung mit dem Werkzeug abfahren. Beim festlegen der Fräsbahnen ist darauf zu achten, dass die richtige Anzahl an Zustellungen eigestellt wurde. Zustellungen legen fest, dass nicht die ganze Dicke des Materials auf einmal abgetragen werden. Bei dickerem Material ist dies nötig um das Werkzeug zu schützen.\\
+    Wenn diese Schritte erfogleich ausgeführt wurden kann ein NC-Code exportiert werden. 
+    \paragraph{Fräsen}\mbox{}\\
+    Der genannte NC-Code kann nun auf die CNC-Fräse geladen werden. Bei der Fräse ist nun noch der Nullpunkt zu setzen und die Werkzeuglänge zu kalibrieren. Bei der Nullpunktsetzung ist es wichtig zu beachten, dass keines der Spannelemente, die die Platte auf den Frästisch fixieren, beim fräsen im Weg sein wird.\\
+    Daraufhin kann der Fräsvorgang gestartet werden. Währenddessen ist zu beachten, dass bei der Sprühdüse genügend Flüssigkeit rauskommt, da dies manuell einzustellen ist. Ebenfalls ist das Werkzeug zu beobachten, ob unerwartete Ereignisse auftretten, beispielsweise Rauch oder Dampfbildung.\\ 
+    Nach einem gelungenen Fräsvorgang wird die gesammte Fräse gereinigt und die Platte entnommen.\\
+    Im angewandten Fall des AFSS wurde zu erst nur ein Modul gefräst und vollständig fertiggestellt, damit festgestellt werden kann, ob die Maße stimmen. Das erste Modul passte und danach wurden alle verbleibenden Platten an zwei Tagen gefräst.
+
+    \paragraph{Fräsen-Nachbearbeitung}\mbox{}\\
+    Nachdem die Platte von der Fräse genommen wurde, hat diese viele scharfe Kanten. Diese werden mit entspechendem Werkzeug entgratet. Rückstände von der Kühlflüssigkeit oder Kunststoff beziehungsweise Metallspäne wurden sorgfältig abgewischt.
+    \paragraph{Module-Fertigstellung}\mbox{}\\
+    Den Module müssen nun bestückt werden. Dazu wurden die Profilschinen und Montagekanäle abgelängt und mit M5 Schrauben und Muttern montiert.\\
+    Die Elemente die nicht auf Profilschienen montiert werden, wurden mit den für das jeweilige Elemt vorgesehenen Schrauben und Muttern montiert.\\
+    Auf die gennanten Profilschinen (Siemens oder Hutschiene) wurden noch die passenden Elemnte aufgesteckt.\\
+    Die Platten konnten nun in den Schaltschrank, auf die vorhandenen Schienen montiert werden. Doch diese mussten zuvor nach innen versetzt werden. 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{Vogis Bilder/Schaltschrank_only_module.jpg}
+        \caption{Schaltschrank mit eingebauten Modulen}
+        \label{fig:Schaltschrank_onlyModule}
+    \end{figure}    
     \paragraph{Profilschienen-Verschiebung}\mbox{}\\
+    Zwei Profilschienen wurden um ca. 300 mm nach innen versetzt. Dafür wurden die Winkel, die die Profilschienen an den Serverschrank befestigten, gelöst und weiter innen neu montiert. Das war deswegen möglich, da die Winkel an einer weiteren Profilschiene montiert waren. Diese bisher nicht gennate Profilschiene besteht im Schaltschrank vier mal und ist oben und unten quer befestigt (siehe Abildung \ref{fig:Clean_Serverschrank}). Nachdem dieser Schritt gemacht wurde konnten die Modulplatten an die verschobenen Profilschienen geschraubt werden (Schaltschrank ohne verdrahtung siehe Abbildung \ref{fig:Schaltschrank_onlyModule}).  
     \paragraph{Folierung der Frontscheibe}\mbox{}\\
+    Da der Schaltschrank des AFSS mobil ist, wurde entschieden, dass auch für nicht eingeweihte Personen stehts klar sein soll, wessen Schaltschrank dies ist. Dafür wurde der Schaltschrank mit einer Folierung versehen. Auf dieser ist sind die Teammitglieder aufgelistet, unter anderem FL. Wurnitsch, damit ist die Zugehörigkeit deutlich gekennzeichnet (siehe Abbildung \ref{fig:Schaltschrank_foliert}). Die Folierung wurde mit Hilfe der in der Schule vorhandenen Stickerschneidemaschine gemacht.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{Vogis Bilder/Schaltschrank_foliert.jpg}
+        \caption{Schaltschrank mit Folierung}
+        \label{fig:Schaltschrank_foliert}
+    \end{figure}
     \paragraph{Die Verdrahtung}\mbox{}\\
-    ---Farbcode der Schule---
-    rot, blau plus minus,
-    gelb ausgänge
-    orange eingänge
-    ---Erwähnen wie die Verdahtung hilft Fehler aufzudecken---
+    Nachem alle Modifikationen am Serverschrank vollzogen waren und alle Module eingebaut waren war die Transformation vom Serverschrank zum Schaltschrank fast vollzogen. Es fehlte noch die Verdrahtung.\\
+    Zu dieser ist zu sagen, dass eine vollständige Verdrahtung der ganzen Anlage sich zeitlich nicht ausgegangen hätte. Deswegen wurde sich auf einen Kompromiss geeinigt. Dieser besagt, dass genügend verdrahtet wird, sodass die X-Achse ansteuerbar ist.\\
+    Beim Verdrahten wurden die bereits gennanten Querschnitte beachtet aber auch die schulinterne Leitinie zur Drahtfarbe im Schaltschrank wurde beachtet. Diese besagt: Rot für Versorgungen, Blau für Minus, Gelb für Ausgänge, von beispielsweise der SPS, und Orange für Eingänge, von  beispielsweiseSensoren.\\
+    Beim Verdrahten wird unweigerlich der Schaltplan wieder und wieder durchdacht. Dabei fallen Fehler oder Verbesserungsmöglichkeiten schnell auf. Auch beim Verdrahten des Schaltschrankes des AFSS sind Fehler und Verbesserungspotentialle aufgefallen, beispielsweise, dass die Adern der Encoder-Kabel zwar Farben hatten, diese aber nicht am Schaltplan zugeteilt werden. Ein anderes Beispiel wäre, dass bei den PTO Module alle Eingänge verschoben waren. Diese und weitere Punkte wurden unverzüglich nachgebessert beziehungsweise hinzugezeichnet.\\
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{Vogis Bilder/Schaltschrank_verkabelt.jpg}
+        \caption{Schaltschrank mit Verdrahtung}
+        \label{fig:Schaltschrank_verkabelt}
+    \end{figure}
     \paragraph{Einbau von Service-Schnittstelle}\mbox{}\\ 
-    \paragraph{Verwendetes Werkzeug}\mbox{}\\
+    Als letzte Modifikation wurde eine Service-Schnittstelle von Weidmüller in die rechte Metalwand des Schaltschrankes eingebaut. Dazu wurden manuell auf die Seitenwand die Maße angezeichnet die ausgeschnitten gehören. Entlang dieser Markierungen wurd daraufhin, unter beachtung aller dafür notwendigen Schutzmaßnahmen, mit einem Winkelschleifer geschnitten. Dieser hatte für das Schneiden von Metall dieser Stärke den entsprechenden Aufsatz. 
+\subsection{Fazit}\mbox{}\\
 
 
 
