@@ -500,9 +500,13 @@ Nach Fertigung der Beuteile erfolgt auch der zusammenbau des sehr komplexen unte
 
 
 \subsubsection{Fazit}
-In der Mechanik des AFSS sind nach aktuellem stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. 
+In der Mechanik des AFSS sind nach aktuellem stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. Das Gesamtkonstrukt (wie in \ref{AFSS-mech-ges} ersichtlich) beinhält dann die gesamte Mechanik 
 
-
+\begin{figure}[h]
+    \includegraphics[width=0.9\textwidth]{mech_gesamt.PNG}
+    \caption{Gesamtkonstruktion}
+    \label{AFSS-mech-ges}
+\end{figure}
 
 \newpage
 \subsection{Software und Benutzeroberfläche}
@@ -829,6 +833,6 @@ Um auche einen simpleren weg der Artikelfindung zur verfügung zu stellen, wird 
 Diese Informationen werden auch vom TF-IDF verwendet, dienen aber spezieller dazu, möglichst sicher das gewünschte Bauteil in einem Durchcklickmenue zu finden.
 
 \subsubsection{Fazit}
-Die Serverseitige Software des AFSS, also WMS und Benutzeriberfläche, wurde im laufe des Projekts sehr kompex. Dadurch war es eine sehr gute Entscheidung den Server in Hochsprachen auszuführen. Um einen zuverlässigen Dauerbetrieb zu gewähleisten, wäre es jedoch noch nötig Unittests für wichtige funkitonen wie APIs oder den Lageralgorithmus zu implementieren. Weiters müsse dis Benutzeroberfläche noch Bedienerfreindlicher gestaltet werden, da diese momentan noch eher rudimentär ausgeführt ist. Ausserdem wären noch kleinere "quality-of-live" änderungen durchzuführen. Insgesamt sit die Software aber schone sehr ausgereift und kann die Anforderung, der Lagersteuerung und -verwaltung durchführen. 
+Die Serverseitige Software des AFSS, also WMS und Benutzeriberfläche, wurde im laufe des Projekts sehr kompex. Dadurch war es eine sehr gute Entscheidung den Server in Hochsprachen auszuführen. Um einen zuverlässigen Dauerbetrieb zu gewähleisten, wäre es jedoch noch nötig Unittests für wichtige funkitonen wie APIs oder den Lageralgorithmus zu implementieren. Weiters müsse dis Benutzeroberfläche noch Bedienerfreindlicher gestaltet werden, da diese momentan noch eher rudimentär ausgeführt ist. Ausserdem wären noch kleinere "quality-of-live" änderungen durchzuführen. Insgesamt sit die Software aber schone sehr ausgereift und kann die Anforderung, der Lagersteuerung und -verwaltung durchführen.
 
 
