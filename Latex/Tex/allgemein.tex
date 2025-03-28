@@ -33,7 +33,7 @@ Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über de
 
 
 
-\subsubsection{Steuerung (bitte keine vergangenheitsformen)4/9}
+\subsubsection{Steuerung}
 Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS, verwendet. Diese bieten den Vorteil, komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielsweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
 Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand, sowie die Komplexität des \textbf{des is schon a bissi hoch gestochen} Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
 Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen, welche die Funktion dadurch realisieren, wie sie verdrahtet sind, über Relais, Schalter, etc. Diese sind aber mit einem beträchtlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
@@ -44,8 +44,6 @@ Für die Elektronik gibt es mehrere Möglichkeiten der Umsetzung. Beleuchtet wur
 Die erste Idee, die verfolgt wurde, war ein integrierter Schaltschrank im AFSS. Dieser hätte einen Rahmen aus Aluminiumprofilen, Plexiglasscheiben hätten die Komponenten vom Rest getrennt und die einzelnen Elemente wären auf eine gefrästen Aluminiumplatte montiert worden. Vorteil dieser Option ist eine kompakte Bauweise, man hätte keinen zusätzlichen Schrank. Nachteile sind Zusatzkosten, Lagerplatzverluste da das Lager nicht breiter gemacht werden kann und kein Platz für Erweiterungen.\\
 Ein neuer Schaltschrank wäre grundsätzlich die naheliegendste  Lösung. Für das AFSS hätte der Schaltschrank groß sein müssen, um alle Komponenten unterzubringen und um die Erweiterbarkeit zu gewährleisten. Vorteilhaft wäre, verminderter Bauaufwand und eine gute el. Sicherheit. Allerdings ist ein herkömmlicher Schaltschrank nicht mobil und ist somit für eine mobile Anlage ungeeignet, zudem entstehen Zusatzkosten.\\	
 Die letzte Option war ein alter Serverschrank, dieser kommt mit vier Profilschienen, einer Lüftungsanlage und war groß genug, um die Anforderung der Erweiterbarkeit auch zu erfüllen. Zusätzlich gemacht gehört sind Module, die auf die Schienen montiert werden, auf diesen wären die el. Komponenten montiert. Die Module können aus kosteneffizienten Platten hergestellt werden. Um den Serverschrank mobil zu machen, müssten kleinere Umbauten durchgeführt werden.
-
-
 
 
 \subsection{Verfolgter Lösungsansatz }
@@ -63,7 +61,7 @@ Der Umbau vom Serverschrank war die beste Option. Es wird Altbestand verwertet, 
 Eine gute Lösung für die Ansprüche.
 \subsection{Methodik 5}
 
-\subsubsection{Software 2}
+\subsubsection{Software}
 
 Zur Dokumentation der elektrischen Komponenten und deren Verbindungen wird E-Plan verwendet. E-Plan ist der Industriestandard und bietet unzählige Möglichkeiten für eine ausführliche Dokumentation. E-Plan hilft ein übersichtliches Schaltbild zu erstellen, und die Anlage lesbar festzuhalten. Auch im Planungsprozess ist E-Plan der Schlüssel zu einer vollständigen Planung.
 
@@ -86,7 +84,7 @@ Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung ei
 Ist die Software, welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens anzusteuern. Tia-Portal bietet die Möglichkeit, in verschiedensten Programmiersprachen zu arbeiten (Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph.) Zudem können externe Anwendungsspezifische Funktionsbausteine mit Bibliotheken eingebunden werden.
 \cite{TIA_Portal_Programmiersprachen}
 
-\subsubsection{Hardware 2}
+\subsubsection{Hardware}
 
 \paragraph{Antriebe}\mbox{}\\
 Das elektrische Antriebssystem ist ein Kernbaustein des AFSS. Mit diesem werden alle beweglichen Aktoren betätigt. Hier ist es nötig, einen Kompromiss zwischen Leistung, Kosten und der Ansteuerbarkeit zu finden.
@@ -109,7 +107,7 @@ Die Motoren haben jeweils einen Encoder dabei. Somit müssen ein Motorkabel und 
 
 
 
-\subsubsection{Fertigung 1}
+\subsubsection{Fertigung}
 
 \paragraph{Lasern}\mbox{}\\
 An der HTL-Mössingerstraße ist es den SchülerInnen möglich einen Lasercutter zur Kunstoffverarbeitung zu verwenden. Um ein gewünschtes Teil fertigen zu können, muss die Kontour dieses als .dwg zur verfügung stehen. Dieses kann dann unter berücksichtigung der Materialstärke aus verschiedenen Farben geschnitten werden.
@@ -145,7 +143,7 @@ KNAPP ist seit der ersten Stunde ein Unterstützer des Projektes AFSS. Die Mater
 \end{figure}
 
 
-\subsubsection{Weidmüller GMBH}
+\subsubsection{Weidmüller GmBH}
 
 Weidmüller wurde 1850 von Carl August Weidmüller als Unternehmen in der Textilindustrie gegründet. Heute ist die Firma in mehr als 80 Ländern vertreten und arbeitet in der Branche Elektrotechnik und Automatisierung. Konkret deckt Weidmüller ein breites Spektrum an Produkten ab. Einerseits werden viele Komponenten für den Schaltschrankbau hergestellt, sowie die neuartigen Push-In-Klemmen, und andererseits hat das Unternehmen auch Produkte in Richtung Digitalisierung sowie Komponenten für den PV-Bereich. \cite{weidmueller}\\
 Weidmüller stellte dem AFSS viele Komponenten für den Schaltschrank zur Verfügung, wie die genannten Push-In-Klemmen, aber auch DC-Sicherungen, Feldbuskoppler und PWM/Schrittmotorkarten. Die Firma ermöglichte mit ihren Materialspenden, dass das Projekt so weitergeführt werden konnte. 
@@ -157,7 +155,7 @@ Weidmüller stellte dem AFSS viele Komponenten für den Schaltschrank zur Verfü
     \label{fig:weidmueller_logo}
 \end{figure}
 
-\subsubsection{Igus}
+\subsubsection{igus GmbH}
 Die Firma igus ist Hersteller von Hochleistungspolymeren für Bewegungs-Applikationen. Sie entwickeln und produzieren sogenannte motion plastics, Produkte aus schmierfreien Kunststoffen. Dazu zählen unter anderem Energieketten, Kabel, Gleitlager, Gewindetechnik, Roboter sowie intelligente Sensorik. Der Firmenname leitet sich davon her, das die meisten Produkte im Spritzgussverfahren hergestellt werden.\\
 \textbf{igus} = \textbf{I}ndustriespritz\textbf{gus}s. \cite{igus} \\
 Igus unterstützte das Projekt durch die Bereitstellung der benötigten Kabelschleppketten, Linearführungen, sowie Spindeln. Zusätzlich wird Online eine Software von igus gestellt, welche gratis zur Verfügung steht, die zur Konfiguration der benötigten Teile genutzt wurde.
