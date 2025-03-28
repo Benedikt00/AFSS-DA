@@ -84,13 +84,13 @@
 %\color[rgb]{0.5,0.5,0.5} %grey
 
 %uncomment to make the links not display the red border
-%\hypersetup{
-%    colorlinks,
-%    citecolor=black,
-%    filecolor=black,
-%    linkcolor=black,
-%    urlcolor=black
-%}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 \sisetup{
 detect-all
@@ -320,62 +320,55 @@ Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung 
 
 \section*{Kurzbeschreibung}
 
-Das Bauteillager der Werkstätte der HTL-Mössingerstraße, ist aktuell eine Kombination aus Schränken und Facher, bei welchen von Hand Ein- und Ausgelagert werden muss. Da dies sehr Zeitaufwändig und Fehleranfällig ist, soll eine automatische Lösung abhilfe schaffen. \\ \\
-Ziel des Projekts "Automated-Factory-Storage-System" ist es, eine Gesamtlösung für ein automatische Kleinteillagersystem, nach dem Vorbild der Industrie zu entwickeln. So soll unter anderem ein Realitätsbezug vom im Unterricht gelernten zu schaffen. Deshalb werden auch alle Steuerungskomponenten, so industrienahe wie möglich ausgeführt.
+Das Bauteillager der Werkstätte der HTL-Mössingerstraße ist aktuell eine Kombination aus Schränken und Fächern, bei denen von Hand ein- und ausgelagert werden muss. Da dies sehr zeitaufwendig und fehleranfällig ist, soll eine automatische Lösung Abhilfe schaffen. \\
 
+Ziel des Projekts "Automated-Factory-Storage-System" ist es, eine Gesamtlösung für ein automatisches Kleinteillagersystem nach dem Vorbild der Industrie zu entwickeln. So soll unter anderem ein Realitätsbezug zu dem im Unterricht Gelernten geschaffen werden. Deshalb werden auch alle Steuerungskomponenten so industrienah wie möglich ausgeführt. Außerdem wird es möglichst erweiterbar ausgeführt, um zukünftige Erweiterungen zu ermöglichen.\\
 
+Die Mechanik besteht aus einem eigens entwickelten Miniatur-Hochregallager, welches ähnlich eines Palettenlagersystems Boxen aus einem Regal mit rund 200 Lagerplätzen ein- und ausheben kann. Über einen Querförderer werden die Boxen auf ein Förderband gebracht und können dann zu einer Kommissionierstation gefahren werden. Als Grundlage wird hier auf Aluminiumprofilsysteme zurückgegriffen. Die Aktorik besteht aus Schrittmotoren.\\
 
-\subsection*{Aufgabenstellung}
-\begin{itemize}
-    \item Warum ist die Themenstellung von Interesse?
-    \item Was ist die vorgegebene Zielsetzung?
-    \item Welche Ergebnisse sind zu erreichen?
-\end{itemize}
+Zur Steuerung wird ein Serverschrank zu einem Schaltschrank umgebaut, welcher alle Sicherungs- und Steuerungskomponenten beinhaltet. Alle Verbindungen zwischen Schaltschrank und Mechanik sind außerdem leicht absteckbar, und das Lager sowie der Schaltschrank sind mobil, um diese leicht transportieren zu können.\\
 
-\subsection*{Realisierung}
-\begin{itemize}
-    \item Von welchem Stand der Technik im Umfeld der Aufgabenstellung wurde ausgegan-gen?
-    \item Welche Lösungsansätze sind grundsätzlich möglich?
-    \item Warum wurde ein bestimmter Lösungsansatz gewählt?
-    \item Welche experimentelle, konstruktive oder softwaretechnische Methodik wurde angewendet?
-    \item Auf welche fachtheoretischen Grundlagen wurde aufgebaut?
-    \item Welche wirtschaftlichen Überlegungen wurden angestellt?
-\end{itemize}
+Die Ansteuerung erfolgt über eine SPS. Diese steuert die Schrittmotoren und verarbeitet die Sensorsignale. Diese bestehen aus Referenz- und Endschaltersignalen für alle Achsen und werden über einen Feldbus zusammengefasst. \\
 
-\subsection*{Ergebnisse}
-\begin{itemize}
-    \item Worin besteht der konkrete Beitrag zur Lösung der Aufgabenstellung (Prototyp, Entwurfsplanung, Softwareprodukt, Businessplan etc.)?
-    \item Kann das Ergebnis durch eine typische Grafik, ein Diagramm bzw. ein Foto illus-triert werden?
-    \item Kann in die Vollversion der Diplomarbeit Einsicht genommen werden?
-\end{itemize}
+Die SPS kommuniziert dann mit einer selbst programmierten Lagerverwaltungssoftware, welche den Lagerbestand verwaltet und eine Benutzeroberfläche bietet. Den Benutzenden ist es hier möglich, Artikel zu bestellen und den Lagerbestand zu ändern.\\
 
-\color{black}
-\vspace*{\fill}
-\section*{}
-
+Außerdem werden die Mechanik sowie die Elektrik so ausgelegt, dass ein möglichst sicherer Betrieb möglich ist, um sowohl Mensch als auch Maschine nicht zu schaden.
+\\\\
 \bgroup
     \def\arraystretch{1.5}
     \begin{tabular}{p{48mm}p{113mm}}
-        \textbf{Kurztitel:} & \textcolor{blue}{Kurztitel der Diplomarbeit (etwa. 30 Zeichen)}\\
-        \textbf{Schlüsselwörter:} & \textcolor{blue}{Maximal fünf aussagekräftige und durch Kommas getrennte Schlüsselwörter, welche die Inhalte möglichst gut beschreiben.}
+        \textbf{Kurztitel:} & Automated-Factory-Storage-System\\
+        \textbf{Schlüsselwörter:} & Hochregallager, Lagerverwaltung, Schaltschrankbau, SPS-Programmierung
     \end{tabular}
 \egroup
 
 \newpage
 
-\section*{Abstract}
-\textcolor{blue}{Die Kurzbeschreibung in englischer Sprache sollte sinngemäß exakt der Kurzbeschreibung in deutscher Sprache entsprechen, siehe Abschnitt „Kurzbeschreibung“.}
+\section*{Short Description}
 
-\vspace*{\fill}
-\section*{}
+The component storage of the HTL-Mössingerstraße workshop is currently a combination of cabinets and compartments, where storage and retrieval must be done manually. Since this process is very time-consuming and error-prone, an automated solution is intended to provide relief. \\
 
-\bgroup{}
+The goal of the "Automated-Factory-Storage-System" project is to develop a complete solution for an automated small-parts storage system modeled on industrial standards. This will help create a practical reference to the knowledge learned in class. Therefore, all control components will be implemented as industry-oriented as possible. Additionally, the system will be designed to be modular to allow future expansions.\\
+
+The mechanical system consists of a custom-developed miniature high-bay storage system that, similar to a pallet racking system, can lift and store boxes from a rack with approximately 200 storage spaces. A transverse conveyor transports the boxes onto a conveyor belt, which can then move them to a picking station. The system is based on aluminum profile structures. The actuators consist of stepper motors.\\
+
+For control, a server cabinet will be converted into a control cabinet, which will house all safety and control components. All connections between the control cabinet and the mechanical system are easily detachable. Both the storage system and the control cabinet are mobile to ensure easy transport.\\
+
+The control system operates via a PLC. This PLC controls the stepper motors and processes sensor signals. These signals consist of reference and limit switch signals for all axes and are consolidated via a fieldbus. \\
+
+The PLC then communicates with a self-developed warehouse management software that manages inventory and provides a user interface. Users can place orders and modify inventory levels.\\
+
+Furthermore, the mechanical and electrical systems are designed to ensure the highest possible level of safety to protect both humans and machines.
+\\\\
+\bgroup
     \def\arraystretch{1.5}
     \begin{tabular}{p{48mm}p{113mm}}
-        \textbf{Short title:} & \\
-        \textbf{Keywords:} & 
+        \textbf{Short Title:} & Automated-Factory-Storage-System\\
+        \textbf{Keywords:} & High-bay warehouse, warehouse management, control cabinet construction, PLC programming
     \end{tabular}
-\egroup{}
+\egroup
+
+
 
 \newpage
 
