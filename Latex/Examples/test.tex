@@ -1,23 +1,36 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[main=ngerman,english]{babel} % Set main language
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{imakeidx}
 
-% Use hyphenation rules specific to German:
-%\babelprovide[import]{ngerman} % Import hyphenation patterns for German
-\babelhyphenation[ngerman]{
-    %L\"o-sungs-ans\"atze
-    %Ver-bind-ungs-m\"og-lich-keit-en
-    HTL-Mössinger-straße
-    hypher-nation
+\makeindex % Enables index creation
+
+\lstset{
+  language=C++, 
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{blue}, 
+  commentstyle=\color{gray},  
+  stringstyle=\color{green!50!black}, 
+  numbers=none,
+  frame=none
 }
-
 
 \begin{document}
 
-In diesem Text testen wir die \emph{Verbindungsmöglichkeiten}, 
-die \emph{HTL-Mössingerstraße} und die \emph{Lösungsansätze}.
+\begin{lstlisting}
+display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+display.display();
+\end{lstlisting}
 
-\selectlanguage{english}
+\begin{center}
+    Code-Snippet \ref{codesnippet:display} : Display start
+\end{center}
 
-Switching to English text here does not affect hyphenation rules.
+\index{Code-Snippet \ref{codesnippet:display} - Display start} % Adds to index
+\label{codesnippet:display}
+
+\newpage % Ensures index appears at the end
+
+\printindex % Prints the index
 
 \end{document}
