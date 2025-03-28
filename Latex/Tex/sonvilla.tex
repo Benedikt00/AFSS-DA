@@ -11,7 +11,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     \subsubsection{Allgemeines}
 
         \paragraph{Arbeitsweise einer SPS} \mbox{} \\
-        Eine SPS arbeitet zyklisch. In Abb. \ref{Arbeitsweise_einer_SPS} wird gezeigt wie ein solcher Zyklus aussieht. Bei erstmaligem Starten oder Neustarten der SPS werden zuerst alle Ausgänge, Merker, etc. auf Null gesetzt. Danach startet die zyklische Arbeitsweise. Zuerst wird ein Prozessabbild der Eingänge gemacht. Mit diesen Eingangswerten wird dann das Programm ausgeführt. Anschließend wird ein Prozessabbild der Ausgänge gemacht. Dieses wird dann an die Ausgänge übergeben. Danach beginnt der Zyklus von vorne. \cite{Arbeitsweise_der_SPS}
+        Eine SPS arbeitet zyklisch. In Abb. \ref{Arbeitsweise_einer_SPS} wird gezeigt wie ein solcher Zyklus aussieht. Bei erstmaligem Starten oder Neustarten der SPS werden zuerst alle Ausgänge, Merker, etc. auf Null gesetzt. Danach startet die zyklische Arbeitsweise. Zunächst wird ein Prozessabbild der Eingänge gemacht. Mit diesen Eingangswerten wird dann das Programm ausgeführt. Anschließend wird ein Prozessabbild der Ausgänge gemacht. Dieses wird dann an die Ausgänge übergeben. Danach beginnt der Zyklus von vorne. \cite{Arbeitsweise_der_SPS}
         \begin{figure}[h]
             \includegraphics[width=0.9\textwidth]{Sonne/Arbeitsweise_einer_SPS.png}
             \caption{Arbeitsweise einer SPS \cite{Arbeitsweise_der_SPS}}
@@ -34,7 +34,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
                 \label{Organisationsbausteine}
             \end{figure}
 
-            Organisationsbausteine steuern unterschidiedliche Vorgänge:
+            Organisationsbausteine steuern unterschiedliche Vorgänge:
             \begin{itemize}
                 \item Anlaufverhalten der Steuerung
                 \item Zyklische Programmbearbeitung
@@ -44,12 +44,12 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             Werden in einem Programm mehrere OBs aufgerufen, so werden die OBs in aufsteigender Reihenfolge der OB-Nummer abgearbeitet. 
 
         \item[2.] \textbf{FC(Funktionen)} \\
-            Funktion haben keinen zyklischen Datenspeicher, deswegen können Bausteinparameter nicht bis zum nächsten Aufruf gespeichert werden. Darum müssen Funktionen bei jedem Aufruf mit Aktualparametern versorgt werden. Um kein zufälliges Verhalten enstehen zu lassen sind die Werte immer mit einem Defaultwert vorbelegt. Will man die Daten einer Funktion dauerhaft speichern, so muss man einen globalen Datenbaustein verwenden.\\
-            Funktionen werden verwendet, um häufig wiederkehrende Anwendungen durchzuführen.
+            Funktion haben keinen zyklischen Datenspeicher, deswegen können Bausteinparameter nicht bis zum nächsten Aufruf gespeichert werden. Daher müssen Funktionen bei jedem Aufruf mit Aktualparametern versorgt werden. Um kein zufälliges Verhalten enstehen zu lassen sind die Werte immer mit einem Defaultwert vorbelegt. Will man die Daten einer Funktion dauerhaft speichern, so muss ein globaler Datenbaustein verwendet werden.\\
+            Funktionen werden eingesetzt, um häufig wiederkehrende Anwendungen durchzuführen.
             
         \item[3.] \textbf{FB(Funktionsbausteine)} \\
-            Im Gegensatz zu Funktionen haben Funktionsbausteine einen zyklischen Datenspeicher -Instanz DB-, in welchem Werte dauerhaft gespiechert werden.Dadurch behalten statische Variablen ihren Wert von Zyklus zu Zyklus. Wie bei Funktionen sind die Werte mit einem Defaultwert vorbelegt.\\
-            Funktionsbausteine können genutzt werden, um Unterprogramme für unterschiedliche Anwendungen zu erstellen. Außerdem werden sie genutzt um das Anwenderprogramm zu strukturieren. Bei mehrfacher Verwendung von Funktionsbausteinen empfiehlt sich die Verwendung von Multiinstanz-DBs.
+            Im Gegensatz zu Funktionen haben Funktionsbausteine einen zyklischen Datenspeicher -Instanz DB-, in welchem Werte dauerhaft gespeichert werden. Dadurch behalten statische Variablen ihren Wert von Zyklus zu Zyklus. Wie bei Funktionen sind die Werte mit einem Defaultwert vorbelegt.\\
+            Funktionsbausteine können genutzt werden, um Unterprogramme für unterschiedliche Anwendungen zu erstellen. Dies erleichtert das Strukturieren eines Anwenderprogramms. Bei mehrfacher Verwendung von Funktionsbausteinen empfiehlt sich die Verwendung von Multiinstanz-DBs.
         
         \item[4.] \textbf{Global-DB(Datenbausteine)} \\
             Globale Datenbausteine speichern variable Daten, die dem kompletten Programm zur Verfügung stehen. Wie in Abb.\ref{Zugriff auf Global-DB} ersichtlich, bedeutet das ,dass alle Bausteine Zugriff auf den Global-DB haben.
@@ -65,10 +65,10 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             Globale DBs werden verwendet, wenn Daten in verschiedenen Programmteilen bzw. Bausteinen benötigt werden.
 
         \item[5.] \textbf{Instanzen} \\
-            Wird ein Funktionsbaustein aufgerufen, so nennt man das Instanz. Die Daten der Instanz, werden im sogenannten Instanzdatenbaustein gespeichert. Instanz-DBs werden automatisch nach den Vorgaben des Funktionsbausteins erzeugt und können somit nicht direkt geändert werden. Der Instanz-DB hat einen dauerhaften Speicher, welcher die Schnittstellen Input, Output, InOut sowie Static beihaltet. Zusätzlich besitzt der Instanz-DB einen flüchtigen Datenspeicher in dem tempöräre Variablen gespeichert werden. Diese sind dadurch immer nur für einen Zyklus gültig.
+            Wird ein Funktionsbaustein aufgerufen, so nennt man das Instanz. Die Daten der Instanz, werden im sogenannten Instanzdatenbaustein gespeichert. Instanz-DBs werden automatisch nach den Vorgaben des Funktionsbausteins erzeugt und können somit nicht direkt geändert werden. Der Instanz-DB hat einen dauerhaften Speicher, welcher die Schnittstellen Input, Output, InOut sowie Static beihaltet. Zusätzlich besitzt der Instanz-DB einen flüchtigen Datenspeicher in dem temporäre Variablen gespeichert werden. Diese sind dadurch immer nur für einen Zyklus gültig.
             
         \item[6.] \textbf{Multiinstanzen} \\
-            Bei Multiinstanzen speichert der Funktionsbausetein seine Daten in den Instanz-DB des übergeordneten Funktionsbaustein. Das heißt es wird in einem FB ein anderer FB aufgerufen. Dieser speichert seine Daten dann im Instanz-Db des Funktionsbausteins, welcher ihn aufgerufen hat. Multiinstanzen helfen das Programm übersichtlicher sowie strukturierter zu halten, da man mehrere Instanzen in einer Instanz vereint.
+            Bei Multiinstanzen speichert der Funktionsbaustein seine Daten in den Instanz-DB des übergeordneten Funktionsbaustein. Das heißt es wird in einem FB ein anderer FB aufgerufen. Dieser speichert seine Daten dann im Instanz-Db des Funktionsbausteins, welcher ihn aufgerufen hat. Multiinstanzen helfen das Programm übersichtlicher sowie strukturierter zu halten, da man mehrere Instanzen in einer Instanz vereint.
 
     \end{itemize}
 
@@ -78,7 +78,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     \begin{itemize}
 
         \item[1.] \textbf{Positionierachse (PositioningAxis)} \\
-            Dieses Technologieobjekt dienz zur genauen Positionierung einer Achse, sowie der Rückmeldung der aktuellen Achsposition. Zusätzlich wird die Zielposition automatisch gehalten. \\
+            Dieses Technologieobjekt dient zur genauen Positionierung einer Achse, sowie der Rückmeldung der aktuellen Achsposition. Zusätzlich wird die Zielposition automatisch gehalten. \\
             Für die Positionierachse stehen folgende Motion Control Anweisungen zur Verfügung: 
             \begin{itemize}
                 \item Home \\
@@ -143,40 +143,40 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
 
     \subsubsection{Bilbliotheken } \mbox{}
-    In Tia Portal sind nicht alle Funktionen integriert zur welcher die SPS fähig wäre. Deswegen gibt es Bibliotheken um projektspezifische Funktionen in das Programm zu intergrieren. Bibliotheken können zusätzlich dazu genutzt werden um projektspezifische Bausteine oder Funktionen auch für andere Programme zugänglich zu machen. Generell kann man Bibliotheken in zwei unterschiedliche Arten unterteilen: Projektbibliothek (Project library) und Global Bibliothek (Global library). Projektbibliotheken sind im Projekt integriert und werdem im Projekt verwaltet. Dies ermöglicht eine Wiederverwendung von Bausteinen, Funktionen, usw. innerhalb des Programms. Globale Bibliotheken hingegen sind projektunabhängig und können deshalb innerhalb von mehreren Projekten verwendet werden. In Bibliotheken gibt es dann wieder zwei unterschiedliche Möglichkeiten der Ablagerung. Man unterscheidet zwischen Kopiervorlagen (Master copies) und Typen (Types). Elemente die in "Kopiervorlagen" gespeichert sind, sind mit dem kopierten Element nicht verbunden. Typen hingegen sind mit ihren Verwendungsstellen im Projekt verbunden. Das heißt wenn Type verändert werden, wird dies im Projekt automatisch aktualisiert. Im Falle, das ein Typ gelöscht wird, werden alle Verwendungen automatisch mitgelöscht.  
+    In Tia Portal sind nicht alle Funktionen integriert zur welcher die SPS fähig wäre. Deswegen gibt es Bibliotheken, um projektspezifische Funktionen in das Programm zu intergrieren. Bibliotheken können zusätzlich dazu genutzt werden um projektspezifische Bausteine oder Funktionen auch für andere Programme zugänglich zu machen. Generell kann man Bibliotheken in zwei unterschiedliche Arten unterteilen: Projektbibliothek (Project library) und Global Bibliothek (Global library). Projektbibliotheken sind im Projekt integriert und werden im Projekt verwaltet. Dies ermöglicht eine Wiederverwendung von Bausteinen, Funktionen, usw. innerhalb des Programms. Globale Bibliotheken hingegen sind projektunabhängig und können deshalb innerhalb von mehreren Projekten verwendet werden. In Bibliotheken gibt es dann wieder zwei unterschiedliche Möglichkeiten der Ablagerung. Man unterscheidet zwischen Kopiervorlagen (Master copies) und Typen (Types). Elemente, die in "Kopiervorlagen" gespeichert sind, sind mit dem kopierten Element nicht verbunden. Typen hingegen sind mit ihren Verwendungsstellen im Projekt verbunden. Das heißt, wenn Type verändert werden, wird dies im Projekt automatisch aktualisiert. Im Falle, dass ein Typ gelöscht wird, werden alle Verwendungen automatisch mitgelöscht.  
     \cite{Programmierleitfaden_für_S7-1500}
 
 
         \paragraph{Wie werden Bibliotheken ins Projekt eingebunden?} \mbox{} \\
         \label{Bilbliotheken}
-        Bibliotheken in Tia Portal hinzuzufügen ist intuitiv und simpel. Der erste Schritt ist das Downloaden der richtigen Bibliothek. Diese können Online auf Websiten, von Siemens, gefunden werden. Um diese jedoch herunterzuladen braucht man einen dazu berechtigten Siemens-Account. Ist die richtige Bibliothek gefunden und heruntergeladen, kommt man zum zweiten Schritt. Zuerst wird Tia Portal geöffnet. Dann geht man auf die Projektansicht. Daraufhin findet man ganz rechts, als vierten Reiter von oben den Punkt Bibliotheken. Klickt an auf diesen erscheint ein Fenster, welches der Höhe nach in zwei Teile aufgeteilt ist. Die obere Hälfte ist für die Projektbibliothek. In der unteren Hälfte findet man die Globalen Bibliotheken. Um nun eine neue Bibliothek einzubinden klickt man auf das zweite Symbol von links "Globale Bibliothek öffnen". Das Symbol ist ein Buch mit einem grünen Pfel rechs oben. Jetzt öffnet sich wieder ein Fenster. Hier ist dann der Ordner mit der zu integrierenden Bibliothek auszuwählen und anschließend die Datei mit dem Datenformat .alxx (xx ... Version Tia-Portal (18)) zu öffnen. Anschließend ist die gewünschte Bibliothek verfügbar. Jegliche Bausteine die diese Bibliothek zur Verfügung stellt,können nun per Drag-and-Drop ins Programm gezogen werden.
+        Bibliotheken in Tia Portal hinzuzufügen ist intuitiv und simpel. Der erste Schritt ist das Downloaden der richtigen Bibliothek. Diese können Online auf Websiten, von Siemens, gefunden werden. Um diese jedoch herunterzuladen, braucht man einen dazu berechtigten Siemens-Account. Ist die richtige Bibliothek gefunden und heruntergeladen, kommt man zum zweiten Schritt. Zuerst wird Tia Portal geöffnet. Dann geht man auf die Projektansicht. Daraufhin findet man ganz rechts, als vierten Reiter von oben den Punkt Bibliotheken. Klickt an auf diesen erscheint ein Fenster, welches der Höhe nach in zwei Teile aufgeteilt ist. Die obere Hälfte ist für die Projektbibliothek. In der unteren Hälfte findet man die Globalen Bibliotheken. Um nun eine neue Bibliothek einzubinden, klickt man auf das zweite Symbol von links "Globale Bibliothek öffnen". Das Symbol ist ein Buch mit einem grünen Pfeil rechts oben. Jetzt öffnet sich wieder ein Fenster. Hier befindet sich  dann der Ordner, aus dem die zu integrierende Bibliothek ausgewählt wird. Im Anschluss wird die Datei mit dem Datenformat .alxx (xx ... Version Tia-Portal (18)) geöffnet. Nun ist die gewünschte Bibliothek verfügbar. Alle Bausteine die diese Bibliothek zur Verfügung stellt,können nun per Drag-and-Drop ins Programm gezogen werden.
         \cite{Bibliotheken}
 
 
 \subsection{Motoransteuerung}
-Eine weitere Hauptaufgabe der SPS ist es die Ansteuerung der Motoren zu vollziehen. Hierbei stehen die Daten zur Verfügung, welche vom Server geschickt werden. Dies beinhaltet für die Motoransteuerung folgende Aufgaben: Positionsfahren (Ein/Auslagerung), Ansteuerung des Motors des Querförderes sowie die Ansterung der Asynchronmaschine des Förderbandes. Bei allen Motoren, bis auf den Motor für das Förderband, handelt es sich um Schrittmotoren. Es werden zwei unterschiedliche Motortypen verwendet: Nema 23 Closed Loop und Nema 17, wobei Nema 23 der stärkere der beiden Motoren ist. Die Nema 23 Motoren werden für das Ansteuern der X- und Y-Achse verwendet. Der Querförderer sowie die Z-Achse über die Nema 17 Motoren. Zu bedenken ist, das jede Achse von zwei Motoren angetrieben wird und sich daher eine Anzahl von 7 Schrittmotoren plus einen Asynchronmotor ergibt. Für jeden der Schrittmotoren gibt es eine Schrittmotortreiber. Dieser regelt den Motor anhand der Kontrollsiganle, die dieser von der SPS bekommt. 
+Eine weitere Hauptaufgabe der SPS ist es, die Ansteuerung der Motoren zu vollziehen. Hierbei stehen die Daten zur Verfügung, welche vom Server geschickt werden. Dies beinhaltet für die Motoransteuerung folgende Aufgaben: Positionsfahren (Ein/Auslagerung), Ansteuerung des Motors des Querförderes sowie die Ansteuerung der Asynchronmaschine des Förderbandes. Bei allen Motoren, bis auf den Motor für das Förderband, handelt es sich um Schrittmotoren. Es werden zwei unterschiedliche Motortypen verwendet: Nema 23 Closed Loop und Nema 17, wobei Nema 23 der stärkere der beiden Motoren ist. Die Nema 23 Motoren werden für das Ansteuern der X- und Y-Achse verwendet. Der Querförderer sowie die Z-Achse über die Nema 17 Motoren. Zu bedenken ist, dass jede Achse von zwei Motoren angetrieben wird und sich daher eine Anzahl von 7 Schrittmotoren plus einen Asynchronmotor ergibt. Für jeden der Schrittmotoren gibt es eine Schrittmotortreiber. Dieser regelt den Motor anhand der Kontrollsignale, die dieser von der SPS bekommt. 
 
-\subsubsection[Kontrollsiganle für den Motortreiber]
-{Kontrollsiganle für den Motortreiber \cite{User-Manual_CL57T}}
+\subsubsection[Kontrollsignale für den Motortreiber]
+{Kontrollsignale für den Motortreiber \cite{User-Manual_CL57T}}
 
-Die zwei Hauptsignale die der Treiber von der SPS bekommt sind ein PTO-Signal sowie ein boolsches Signal welches für die Drehrichtung verwendet wird(Direktion). Zusätzlich dazu gibt es ein zweites Boolsches Signal für die Freigabe des Motors (Enable). Ein Signal kommt jedoch vom Motortreiber. Nämlich ein Alarmsignal (Alarm), welches gesendet wird, wenn der Motortreiber folgende Fehler erfährt: Überspannung, Überstrom, Kurzschluss sowie Positionsschleppfehler.
+Die zwei Hauptsignale die der Treiber von der SPS bekommt, sind ein PTO-Signal sowie ein boolsches Signal, welches für die Drehrichtung verwendet wird(Direktion). Zusätzlich dazu gibt es ein zweites Boolsches Signal für die Freigabe des Motors (Enable). Ein weiteres Signal geht vom Motortreiber aus. Nämlich ein Alarmsignal (Alarm), welches gesendet wird, wenn der Motortreiber folgende Fehler erfährt: Überspannung, Überstrom, Kurzschluss sowie Positionsschleppfehler.
 
     \begin{itemize}
         \item [1.] \textbf{Pulse Train Output (PTO)} \\
-        Das PTO-Signal besteht aus verschidenen Pulsen mit Ein- zu Auszeit im Verhältnis 50\% : 50\%. Für jeden dieser Pulse bewegt sich der Motor um einen Schritt. Wie groß dieser Schritt ist hängt davon ab wie viele Schritte es benötigt um eine volle Umdrehung des Motors zu vollziehen. Dies kann man am Schrittmotortreiber einstellen. Bei diesem Projekt ist eine Umdrehung des Motors in 1600 Schritte eingeteilt. Das heißt das PTO Modul muss 1600 solcher Pulse schicken damit sich der Motor einmal dreht. Das heißt die SPS regelt die Frequenz mit welcher die Pulse hinausgeschickt werden und somit die Geschwindigkeit des Motors. 
+        Das PTO-Signal besteht aus verschiedenen Pulsen mit Ein- zu Auszeit im Verhältnis 50 : 50 Prozent. Für jeden dieser Pulse bewegt sich der Motor um einen Schritt. Wie groß dieser Schritt ist hängt davon ab, wie viele Schritte benötigt werden um eine volle Umdrehung des Motors zu vollziehen. Dies kann man am Schrittmotortreiber einstellen. Bei diesem Projekt ist eine Umdrehung des Motors in 1600 Schritte eingeteilt. Das heißt, das PTO Modul schickt 1600 solcher Pulse , damit sich der Motor einmal dreht. Das heißt die SPS regelt die Frequenz mit welcher die Pulse hinausgeschickt werden und somit die Geschwindigkeit des Motors. 
 
         \item [2.] \textbf{Direktion} \\
-        Dieses Signal ist wie bereits erwähnt ein boolsches Signal. Dies bedeutet, dass das Signal nur zwei Zustände besitzt. Entweder HIGH oder LOW. Diese Signal bestimmt die Richtung, in welche sich der Motor dreht. Entweder im Uhrzeigersinn (CW) oder gegen den Uhrzeigersinn (CCW). Bei einem HIGH Signal dreht der Motor gegen den Uhrzeigersinn und bei einem LOW Signal im Uhrzeigersinn.
+        Dieses Signal ist wie bereits erwähnt ein boolsches Signal. Dies bedeutet, dass das Signal nur zwei Zustände besitzt. Entweder HIGH oder LOW. Dieses Signal bestimmt die Richtung, in welche sich der Motor dreht. Entweder im Uhrzeigersinn (CW) oder gegen den Uhrzeigersinn (CCW). Bei einem HIGH Signal dreht der Motor gegen den Uhrzeigersinn und bei einem LOW Signal im Uhrzeigersinn.
 
         \item [3.] \textbf{Enable} \\
-        Hat wie das Direktion-Signal zwei Zustände: HIGH und LOW. Dieses SIgnal ist jedoch logisch invertiert. Dies bedeutet das bei einem HIGH Signal der Motor gesperrt ist. Der Motor ist nur bei einem LOW-Signal freigegeben. 
+        Hat wie das Direktion-Signal zwei Zustände: HIGH und LOW. Dieses Signal ist jedoch logisch invertiert. Dies bedeutet, dass bei einem HIGH Signal der Motor gesperrt ist. Der Motor ist nur bei einem LOW-Signal freigegeben. 
 
         \item [4.] \textbf{Alarm} \\
-        Auch ein boolsches Signal mit HIGH und LOW. Sobald der Motortreiber oben genannte Probleme erfährt, wird dieses Signal auf HIGH gesetzt. So sieht man auch in der SPS, dass es zu einem Fehler am Motortreiber gekommen ist. 
+        Ist ebenfalls ein boolsches Signal mit HIGH und LOW. Sobald der Motortreiber oben genannte Probleme erkennt, wird dieses Signal auf HIGH gesetzt. So sieht man auch in der SPS, dass es zu einem Fehler am Motortreiber gekommen ist. 
 
     \end{itemize}
 
-Um falsche Ausführungen sowie Abweichungen zu vermeiden, müssen die in Abb. \ref{Sequenzdiagramm} gezeigten ,minimal und maximal Werte, eingehalten werden. Damit ein Signal als HIGH aufgefasst wird muss es über \qty{3.5}{\volt} haben. Soll es jedoch als LOW gesehen werden, so muss die Spannung des Signals unter \qty{0.5}{\volt} fallen. Die Periode des PTO Signals muss länger als \qty{5}{\micro\second} sein, um eine sichere Abarbeitung zu garantieren. Auch darf die Pulsweite, sowie die Zeit die der Puls auf LOW ist, nicht unter \qty{2.5}{\micro\second} fallen. Zusätzlich muss das Enable-Signal mindestens \qty{5}{\micro\second} vor dem Direktion Signal und \qty{10}{\micro\second} vor dem PTO Signal am Motortreiber anstehen. Wie in Abb. \ref{Sequenzdiagramm} zu sehen, muss das Direktion-Signal auch mindestens \qty{5}{\micro\second} vor dem PTO Signal ankommen. 
+Um falsche Ausführungen sowie Abweichungen zu vermeiden, müssen die in Abb. \ref{Sequenzdiagramm} gezeigten ,Minimal- und Maximalwerte, eingehalten werden. Damit ein Signal als HIGH aufgefasst wird, muss es über \qty{3.5}{\volt} haben. Soll es jedoch als LOW gesehen werden, so muss die Spannung des Signals unter \qty{0.5}{\volt} fallen. Die Periode des PTO Signals muss länger als \qty{5}{\micro\second} sein, um eine sichere Abarbeitung zu garantieren. Auch darf die Pulsweite, sowie die Zeit die der Puls auf LOW ist, nicht unter \qty{2.5}{\micro\second} fallen. Zusätzlich muss das Enable-Signal mindestens \qty{5}{\micro\second} vor dem Direktion Signal und \qty{10}{\micro\second} vor dem PTO Signal am Motortreiber anstehen. Wie in Abb. \ref{Sequenzdiagramm} zu sehen, muss das Direktion-Signal auch mindestens \qty{5}{\micro\second} vor dem PTO Signal ankommen. 
 
     \begin{figure}[h]
         \centering
@@ -191,13 +191,13 @@ Um den Motor in der SPS durch das Programm steuern zu können, wird zuerst das T
 
 \begin{enumerate}
     \item \textbf{MC\_Power} \\
-        Diese Motion Control Anweisung gibt ein Technologieobjekt frei beziehungsweise sperrt es. Wird der Parameter enabel auf HIGH gesetzt so wird das Technologieobjekt freigegeben. Das Technologieobjekt ist solange freigegeben, solange enable auf HIGH ist. Am Parameter Status kann man dann erkennen ob das Technologieobjekt freigegeben wurde oder nicht.
+        Diese Motion Control Anweisung gibt ein Technologieobjekt frei beziehungsweise sperrt es. Wird der Parameter enabel auf HIGH gesetzt, so wird das Technologieobjekt freigegeben. Das Technologieobjekt ist solange freigegeben, solange enable auf HIGH ist. Am Parameter Status kann man dann erkennen, ob das Technologieobjekt freigegeben wurde oder nicht.
 
     \item \textbf{MC\_Home} \\
-        Wird verwendet um eine Achse zu referenzieren. Die Dynamikwerte mit welcher dieser Baustein ausgeführt wird, sind jene die in der Konfiguration des Technologieobjekts voreingestellt wurden. Es wird unterschiedlich referenziert, je nach dem welcher Wert (0-13) am Parameter Mode anliegt. Ausgeführt wird diese Motion Control Anweisung sobald eine steigende Flanke am Parameter execute erfasst wird. Referenziert ist die Achse erst wenn der Parameter Done auf HIGH umschaltet. 
+        Wird verwendet um eine Achse zu referenzieren. Die Dynamikwerte mit welcher dieser Baustein ausgeführt wird, sind jene, die in der Konfiguration des Technologieobjekts voreingestellt wurden. Es wird unterschiedlich referenziert, je nach dem welcher Wert (0-13) am Parameter Mode anliegt. Ausgeführt wird diese Motion Control Anweisung sobald eine steigende Flanke am Parameter execute erfasst wird. Referenziert ist die Achse erst, wenn der Parameter Done auf HIGH umschaltet. 
 
     \item \textbf{MC\_MoveAbsolut} \\
-        Mit dieser Anweisung wird eine Achse auf eine absolute Position gefahren. Die Parameter Velocity (Geschwindigkeit), Jerk (Ruck), Acceleration (Beschleunigung) und Deceleration (Verzögerung) können bestimmt werden. Werden diese nicht ausgefüllt oder mit einem Wert kleiner null ausgefüllt so werden die voreingestellten Werte übernommen. Diese Motion Control Anweisung kann nur ausgeführt werden, wenn das Technologieobjekt bereits referenziert ist. Wird ausgeführt sobal am Parameter execute eine steigende Flanke registriert wird. Wenn die Zielposition erreicht wird, schaltet der Paramterer Done auf HIGH. 
+        Mit dieser Anweisung wird eine Achse auf eine absolute Position gefahren. Die Parameter Velocity (Geschwindigkeit), Jerk (Ruck), Acceleration (Beschleunigung) und Deceleration (Verzögerung) können bestimmt werden. Werden diese nicht ausgefüllt oder mit einem Wert kleiner null ausgefüllt, so werden die voreingestellten Werte übernommen. Diese Motion Control Anweisung kann nur ausgeführt werden, wenn das Technologieobjekt bereits referenziert ist. Ist das der Fall so wird das Technologieobjekt ausgeführt, wenn es am Parameter execute eine steigende Flanke erkennt. Wenn die Zielposition erreicht wird, schaltet der Paramterer Done auf HIGH. 
 
     \item \textbf{MC\_GearIn} \\
         Startet einen Getriebegleichlauf zwischen einer Leit- und einer Flogeachse. Dies kann sowohl in Bewegung als auch im Stillstand erfolgen. Als Leitachse können folgende Technologieobjekte ausgewählt werden: Positionierachse, Gleichlaufachse, Externer Geber und Leitachsstellvertreter. Als Folgeachse kann jedoch nur das Technologieobjekt Gleichlaufachse agieren. Der Auftrag wird gestartet sobalb am Parameter execute eine steigende Flanke kommt. Die Snychronisation ist fertiggestellt, wenn der Parameter InGear auf HIGH schaltet.
@@ -205,13 +205,13 @@ Um den Motor in der SPS durch das Programm steuern zu können, wird zuerst das T
 \end{enumerate}
 
 \subsubsection{Konfiguration Technologieobjekt}
-Um die Technologieojekte nutzen zu können müssen die korrekt konfiguriert werden. In nachfolgenden Absätzen wird Schritt für Schritt erkärt wie man ein solches Technologieobjekt für den Nema23 Motor konfiguriert. 
+Um die Technologieojekte nutzen zu können, müssen diese korrekt konfiguriert werden. In nachfolgenden Absätzen wird Schritt für Schritt erkärt, wie man ein solches Technologieobjekt für den Nema23 Motor konfiguriert. 
 
 \paragraph{Positionierachse}
     
         \begin{enumerate}
             \item Technologieobjekte
-            \item Neues Objekthinzufügen
+            \item Neues Objekt hinzufügen
             \item Motion Control
             \item TO\_PositioningAxis
             \item Konfiguration
@@ -249,12 +249,12 @@ Um die Technologieojekte nutzen zu können müssen die korrekt konfiguriert werd
         \end{enumerate}
 
 \paragraph{Gleichlaufachse} \mbox{} \\
-Bei der Gleichlaufachse muss bei der Konfiguration ein Schritt mehr gemacht werden. Unter Konfiguration - Leitwertverschaltung wird eine Leitwertverschaltung hinzugefügt in dem man auf ``hinzufügen'' klickt und anschließend das Technologieobjekt auswählt dem die Gleichlaufachse folgen soll.
+Bei der Gleichlaufachse ist bei der Konfiguration ein zusätzlicher Schritt vorzunehmen. Unter Konfiguration - Leitwertverschaltung wird eine Leitwertverschaltung hinzugefügt, in dem man auf ``hinzufügen'' klickt und anschließend das Technologieobjekt auswählt, dem die Gleichlaufachse folgen soll.
 
 
 
 \subsubsection{Synchronisation}
-Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die zwei Motoren ,welche zusammenarbeiten, synchronisiert werden. Dies wird in der Software, durch die Motion Control Anweisung MC\_GearIn, geschafft. Bei dem Slave muss es sich wie bereits gesagt um eine Gleichlaufachse (TO\_SynchronousAxis) handeln. Da die beiden Achsen hardware technisch verbunden sind, muss die Synchronisation im Stillstand erfolgen. Ausgeführt wird die Synchronisation bei einer steigenden Flanke am Parameter Execute. Die Folgeachse bleibt nun solange synchron zur Leitachse, bis es entweder, zu einem MC\_GearOut Auftrag kommt oder die Freigabe der Folgeachse, durch ein LOW Signal am Parameter enable des MC\_Power Bausteins (Folgeachse), nicht mehr vorhanden ist. Ein Sperren der Leitachse über MC\_Power (Leitachse) führt nicht zu einem Synchronisationsverlust. Die voreingestellten Werte bei den Parametern RationNumerator(1) sowie RatioDenominator(1) können übernommen werden. Diese werden nur geändert falls zwischen den zu synchronisierenden Motoren, ein Getriebe vorhanden ist, was bei diesem Projekt jedoch nicht der Fall ist. Ansonsten bleibt der Getriebefaktor bei 1. 
+Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die zwei Motoren, welche zusammenarbeiten, synchronisiert werden. Dies wird in der Software, durch die Motion Control Anweisung MC\_GearIn, geschafft. Bei dem Slave muss es sich, wie beschrieben um eine Gleichlaufachse (TO\_SynchronousAxis) handeln. Da die beiden Achsen hardware technisch verbunden sind, muss die Synchronisation im Stillstand erfolgen. Ausgeführt wird die Synchronisation bei einer steigenden Flanke am Parameter Execute. Die Folgeachse bleibt nun solange synchron zur Leitachse, bis es entweder, zu einem MC\_GearOut Auftrag kommt oder die Freigabe der Folgeachse, durch ein LOW Signal am Parameter enable des MC\_Power Bausteins (Folgeachse), nicht mehr vorhanden ist. Ein Sperren der Leitachse über MC\_Power (Leitachse) führt nicht zu einem Synchronisationsverlust. Die voreingestellten Werte bei den Parametern RationNumerator(1) sowie RatioDenominator(1) können übernommen werden. Diese werden nur geändert falls zwischen den zu synchronisierenden Motoren, ein Getriebe vorhanden ist, was bei diesem Projekt jedoch nicht der Fall ist. Ansonsten bleibt der Getriebefaktor bei 1. 
 
 \begin{figure}[h]
     \centering
@@ -267,14 +267,14 @@ Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die
 Die Ansteuerung des Förderbands erfolgt im Gegensatz zu den anderen Motoren nicht über Motortreiber. Die Asynchronmaschine des Förderbands wird schlicht und einfach über Relais mit der Spannungsversorgung verbunden oder getrennt. Die Ansteuerung der Relais erfolgt dann über die Digitalausgänge der SPS. 
 
 \subsubsection{Tia-Portal Programm}
-Durch die SPS-Server Kommunikation stehen die benötigten Daten sowie der Auftrag, welcher ausgeführt werdern muss zu Verfügung. 
+Durch die SPS-Server Kommunikation stehen die benötigten Daten sowie der Auftrag, welcher ausgeführt werden muss, zu Verfügung. 
 
     \paragraph{Ein-/Auslagerung}
     Bei dieser Aufgabe stehen als Informationen die X,Y,Z -Werte der Lagerposition zu Verfügung und ob es sich um eine Ein- oder Auslagerung handelt. Bei einer Einlagerung muss die Box zuerst beim Querförderer geholt werden. Dann wird die Box auf die Zielposition gelagert. 
 
 
 \subsection{SPS-Server Kommunikation}
-Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es die nötigen Informationen, sowie die Übertragung der Aufgabenstellung auszuführen. 
+Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es, die nötigen Informationen, sowie die Übertragung des Auftrags auszuführen. 
 
     \subsubsection{Zur Auswahl stehende Kommunikationsprotokolle} 
     \label{Kommunikationsprotokolle}
@@ -314,7 +314,7 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
 
             
     \paragraph{Welches Prorokoll wurde gewählt?} \mbox{} \\
-    Bei diesem Projekt wurde das HTTP Protokoll ausgewählt um die Kommunikation zwischen SPS und Server auszuführen. Das HTTP Protokoll wurde ausgewählt, da die SPS direkt mit dem Server kommunizieren kann. Bei OPC-UA hätte ein zusätzlicher Server gehostet werden müssen. Dieser OPC-UA Server hätte dann mit dem eigentlichen Server, welcher die Lagerlogik übernimmt, kommuniziert. Die SPS hätte dann auf den OPC-UA Server zugegriffen und nicht direkt auf den Zielserver. Um diesen zusätzlichen Aufwand sowie weitere Fehlerquellen zu vermeiden, wurde das HTTP Protokoll ausgewählt.
+    Bei diesem Projekt wurde das HTTP Protokoll ausgewählt, um die Kommunikation zwischen SPS und Server auszuführen. Das HTTP Protokoll wurde ausgewählt, da die SPS direkt mit dem Server kommunizieren kann. Bei OPC-UA hätte ein zusätzlicher Server gehostet werden müssen. Dieser OPC-UA Server hätte dann mit dem eigentlichen Server, welcher die Lagerlogik übernimmt, kommuniziert. Die SPS hätte dann auf den OPC-UA Server zugegriffen und nicht direkt auf den Zielserver. Um diesen zusätzlichen Aufwand sowie weitere Fehlerquellen zu vermeiden, wurde das HTTP Protokoll ausgewählt.
         
             
 
@@ -339,15 +339,15 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
         \label{POST-PUT_Baustein}
     \end{figure}
 
-    Wird nun die Eingabe \textbf{execute} HIGH, so wird der Baustein einmalig ausgeführt. Rechnet man mit einem häufigeren Datenaustausch, mit Hilfe dieses Bausteins, so empfiehlt es sich den Parameter \textbf{keep Connenction} auf \textbf{true} zu setzten. Dadurch bleibt die Verbindung mit dem Zielserver erhalten und weitere Kommunikationen werden schneller ausgeführt. 
+    Wird nun die Eingabe \textbf{execute} HIGH, so wird der Baustein einmalig ausgeführt. Rechnet man mit einem häufigeren Datenaustausch, mit Hilfe dieses Bausteins, so empfiehlt es sich den Parameter \textbf{keep Connenction} auf \textbf{true} zu setzen. Dadurch bleibt die Verbindung mit dem Zielserver erhalten und weitere Kommunikationen werden schneller ausgeführt. 
 
     \subsubsection{Datenaustausch}
     \label{Datenaustausch}
-    Die SPS und der Server arbeiten mit verschiedenen Datentypen. Bei dem Datenaustauch erwartet der Server die Daten in einem json-Format. Deswegen müssen die Daten welche gesendet werden zuerst in dieses Format gebracht werden. Um dies in Tia-Portal zu realisieren wird die Bibilothek LStream eingebunden. Mit dieser werden dann Daten aus einem json-Datenbaum in ein Array of Byte umgewandelt. Dieses Array of Byte wird anschließend in den Datentyp string umgewandelt. Nun kann dieser string an den POST-Datenbaustein weitergegeben werden. \\
+    Die SPS und der Server arbeiten mit verschiedenen Datentypen. Bei dem Datenaustauch erwartet der Server die Daten in einem json-Format. Deswegen müssen die Daten, welche gesendet werden, zuerst in dieses Format gebracht werden. Um dies in Tia-Portal zu realisieren wird die Bibilothek LStream eingebunden. Mit dieser werden dann Daten aus einem json-Datenbaum in ein Array of Byte umgewandelt. Dieses Array of Byte wird anschließend in den Datentyp string umgewandelt. Nun kann dieser string an den POST-Datenbaustein weitergegeben werden. \\
     Ist nun der Datenaustauch abgeschlossen, so sind die empfangenen Daten als Array of Char verfügbar. Da man in Tia-Portal nur umständlich mit diesem Datenformat umgehen kann, wird das Array of Char nun in das Datenformat string umgewandelt. Die Daten sind nun noch immer nicht einzeln verfügbar, weswegen man nun diesen string nach den Daten filtern muss.
 
     \subsubsection{Datenfilterung}
-    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden um welche Aufgabe es sich handelt  und die Daten welche erforderlich sind um diese Aufgabe auszuführen.
+    Die vom Server geschickten Daten werden in einem Befehl geschickt. Aus diesem Befehl muss herausgelesen werden, um welche Aufgabe es sich handelt  und welche Daten erforderlich sind, um diese Aufgabe auszuführen.
 
         \paragraph{Datenformatierung}\mbox{}\\
         Die Daten werden in einem string geschickt, welcher in zwei Teile aufgeteilt wird. Der zweite Teil ist jedoch abhängig vom ersten. \\
@@ -355,7 +355,7 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
         \begin{itemize}
             \item 1.Teil: \\
             IDxxxxAxx  \\
-            Aus diesem Teil werden die ID-Nummer sowie der Auftrag herausgefiltert. Die ID-Nummer ist eine 4 stellige Nummer welche nach ID steht. Der Auftrag welcher ausgeführt werden muss steht in den zwei Stellen nach A.\\
+            Aus diesem Teil werden die ID-Nummer sowie der Auftrag herausgefiltert. Die ID-Nummer ist eine 4 stellige Nummer welche nach ID steht. Der auszuführende Auftrag steht in den zwei Stellen nach A.\\
             Diese werden nach folgender Codierung ausgelesen:
                 \subitem 00: Kommissionierstation
                 \subitem 01: Förderband
@@ -367,9 +367,9 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
                 \item 00: SB\\
                 Bei diesem Befehl muss der Barcodescanner angesteuert werden um an der Kommissionierstation einen Barcode einzuscannen.
                 \item 01: P $\pm$xxxx \\
-                Gibt an um wie viel sich das Förderband (in mm) bewegen muss. Vor der Zahl steht jedoch entweder ein plus oder minus um festzulegen in welche Richtung sich das Förderband bewegen muss. 
+                Gibt an um wie viel sich das Förderband (in mm) bewegen muss. Vor der Zahl steht jedoch entweder ein plus oder minus um festzulegen, in welche Richtung sich das Förderband bewegen muss. 
                 \item 10: XxxxxYxxxxZxxxxRx \\
-                Nach jeder Achse X,Y,Z steht ein vierstelliger Wert, welcher angibt auf welcher Position sich der gewünschte Lagerplatz befindet. Der Wert nach R ist entweder 0 oder 1 und gibt an ob es sich um eine Einlagerung (1) oder Auslagerung (0) handet.
+                Nach jeder Achse X,Y,Z steht ein vierstelliger Wert, der die Position des gewünschten Lagerplatzes angibt. Der Wert nach R ist entweder 0 oder 1 und gibt an ob es sich um eine Einlagerung (1) oder Auslagerung (0) handet.
                 \item 11: Pxxxx \\
                 Nach P steht ebenso ein vierstelliger Wert, der angibt auf welche Position der Querförderer gefahren werden muss. 
                 
@@ -378,11 +378,11 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
         \end{itemize}
 
     \subsubsection{Tia-Portal Programm}
-    Im Programm werden zwei Funktionsbausteine aufgerufen. Nämlich FB\_Kommunikation und FB\_Datenfiltern. FB\_Kommunikation übernimmt den Datenaustausch zwischen Server und SPS. In diesem Baustein werden zuerst die Daten die an den Server geschickt werden, wie in Punkt \ref{Datenaustausch} erklärt ins richtige Datenformat(string) gebracht. Darufhin wird der HTTP POST-Aufruf ausgeführt und die empfangenen Daten wie in \ref{Datenaustausch} gezeigt wieder ins richtige Datenformat gebracht. Somit ist die Aufgabe dieses Datenbausteins erfüllt. Nun erfolgt der Aufruf des zweiten Funktionsbausteins FB\_Datenfiltern. Dieser Funktionsbaustein ist in unterschiedliche Funktionsbausteine aufgeteilt. Der erste dieser Funktionsbausteine filtert nach ID sowie der Area (Aufgabe). Darufhin wird der Baustein FB\_Kommunikation innerhalb des Bausteins FB\_Datenfiltern aufgerufen, um sofort die ID-Nummer an den Server zurück zu schicken, damit dieser weiß das die SPS den Auftrag erhalten hat. Die restlichen Bausteine die im FB\_Datenfiltern enthalten sind, warten darauf, dass sie von ihrer Area, beispielsweise 01, angesprochen werden. Sollte dies der Fall sein so Filtern sie die benötigten Informationen um den Auftrag auszuführen. Nach dem Aufruf beider Bausteine sind nun die geforderten Informationen verfügbar. Bei beiden Funktionsbausteinen handelt es sich um Multiinstanzen, um das Programm übersichtlicher zu halten. 
+    Im Programm werden zwei Funktionsbausteine aufgerufen. Nämlich FB\_Kommunikation und FB\_Datenfiltern. FB\_Kommunikation übernimmt den Datenaustausch zwischen Server und SPS. In diesem Baustein werden zuerst die Daten die an den Server geschickt werden, wie in Punkt \ref{Datenaustausch} erklärt, ins richtige Datenformat(string) gebracht. Darufhin wird der HTTP POST-Aufruf ausgeführt und die empfangenen Daten, wie in \ref{Datenaustausch} gezeigt, wieder ins richtige Datenformat gebracht. Somit ist die Aufgabe dieses Datenbausteins erfüllt. Nun erfolgt der Aufruf des zweiten Funktionsbausteins FB\_Datenfiltern. Dieser Funktionsbaustein ist in unterschiedliche Funktionsbausteine aufgeteilt. Der erste dieser Funktionsbausteine filtert nach ID sowie der Area (Aufgabe). Daraufhin wird der Baustein FB\_Kommunikation innerhalb des Bausteins FB\_Datenfiltern aufgerufen, um sofort die ID-Nummer an den Server zurück zu schicken, damit dieser weiß, dass die SPS den Auftrag erhalten hat. Die restlichen Bausteine die im FB\_Datenfiltern enthalten sind, warten darauf, dass sie von ihrer Area, beispielsweise 01, angesprochen werden. Sollte dies der Fall sein, so filtern sie die für den AUftrag benötigten Informationen. Nach dem Aufruf beider Bausteine sind nun die geforderten Informationen verfügbar. Bei beiden Funktionsbausteinen handelt es sich um Multiinstanzen, um das Programm übersichtlicher zu halten. 
 
-    \paragraph{Wie schaut so ein Baustein aus? (am Beispiel ``ID + Area")} 
+    \paragraph{SCL-Bausteine (am Beispiel ``ID + Area")} 
     \mbox{} \\
-    Alle Bausteine zur Datenfilterung wurden in SCL programmiert. Als Eingabe ist der Datenstring welcher die Daten beinhaltet. In diesem wird zuerst nach ID gefiltert (Zeile 1). Dies liefert die Position von ID innerhalb ddes Strings. Darufhin werden alle Zeichen links von ID + ID wegelöscht (Zeilen 2 - 5). Nun weiss man das rechts von ID eine vierstellige Nummer (ID-Nummer) steht. Da alles links von dieser Nummer weggeschnitten wurde, weiß man das diese Nummer ganz links im string ist. Deswegen werden die ersten vier Stellen von links genommen und dem Ausgang Q\_Info\_ID zugewiesen (Zeile 6). Dieser Ausgang ist für das gesamte Programm erreichbar. Das selbe Suchen und Löschen der Zeichen links vom Gesuchten wird ebenfalls für A (Area / Auftrag) erledigt (Zeilen 10 - 13). Da man den Wert von Area, welcher den Auftrag definiert, vergleichen will um den richtigen Baustein auszuführen, werden die zwei Zeichen links von A, von denen wir wissen das es Zahlen sind, in das Datenformat int konvertiert und dem Ein-Ausgang IQ\_Info\_Area zugewiesen (Zeilen 19-23). \\
+    Alle Bausteine zur Datenfilterung wurden in SCL programmiert. Als Eingabe dient der string, welcher die Daten beinhaltet. In diesem wird zuerst nach ID gefiltert (Zeile 1). Dies liefert die Position von ID innerhalb des Strings. Daraufhin werden alle Zeichen links von ID + ID wegelöscht (Zeilen 2 - 5). Nun weiß man das rechts von ID eine vierstellige Nummer (ID-Nummer) steht. Da alles links von dieser Nummer weggeschnitten wurde, weiß man das diese Nummer ganz links im string ist. Deswegen werden die ersten vier Stellen von links genommen und dem Ausgang Q\_Info\_ID zugewiesen (Zeile 6). Dieser Ausgang ist für das gesamte Programm erreichbar. Dasselbe Suchen und Löschen der Zeichen links vom Gesuchten wird ebenfalls für A (Area / Auftrag) erledigt (Zeilen 10 - 13). Da man den Wert von Area, welcher den Auftrag definiert, vergleichen will um den richtigen Baustein auszuführen, werden die zwei Zeichen links von A, von denen wir wissen das es Zahlen sind, in das Datenformat int konvertiert und dem Ein-Ausgang IQ\_Info\_Area zugewiesen (Zeilen 19-23). \\
 
     \begin{lstlisting}[language=Pascal]
         #T_Int := FIND(IN1 := #I_Datenstring, IN2 := 'ID');
