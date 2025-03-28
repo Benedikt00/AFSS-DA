@@ -552,7 +552,7 @@ JavaScript (JS) ist eine vielseitige Programmiersprache, die hauptsächlich verw
 
 Praktisch geschieht diese Server-Kommunkation immer mithilfe diese Programmblocks:
 
-\begin{lstlisting}[language=JavaScript]
+\begin{lstlisting}[language=JavaScript, caption=XHR-Kommunikationsblock]
     function sendData(data, callback) {
         var xhr = new XMLHttpRequest();
         var url = "{{url_for('main.add_stock')}}"; //Flask markup, um die richtige url zu erreichen, dies wird vor ausgabe auf der Webseite noch eingesetzt
@@ -572,7 +572,7 @@ Praktisch geschieht diese Server-Kommunkation immer mithilfe diese Programmblock
 
 Dieser ermöglicht die Übergabe von Daten im JSON format, und einer Funktion, die die zurückgeschickten Daten verarbeitet. In der Praxis wird dieser so aufgerufen:
 
-\begin{lstlisting}[language=JavaScript]
+\begin{lstlisting}[language=JavaScript, caption=JSON-Beispiel]
 function add_to_db(){
     sendData({"add_stock": {"barcode": barcode, "quantity": quant, "article": article}}, 
     set_gen_stock)
@@ -587,15 +587,14 @@ Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen und in JS
 \subsubsection{Backend}
 Das Backend des Servers ist für die Datenverarbeitung verantwortlich. Es ist, wie bereits erwähnt, in Python geschrieben und stellt mit dem Flask-Framework die Benutzeroberfläche zur Verfügung. \\
 Aufgebaut ist es in mehrere Bereiche: Einerseits die Webanwendung sowie die API (Application Programming Interface, Schnittstelle zwischen Anwendungen), die Anbindung an die Datenbank, die Verarbeitung der SPS-Befehle und auch der Zugriff auf die SPS.
- 
-%corrigiertz
+
 
 
 \paragraph{Serverseite der Benutzeroberfläche}\mbox{}\\
 In Flask könne 'bleuprints' definiert werden. Dies sind Webseitelemente die einen Bestimmten URL-Vorsatz haben. So werden anfanges 'blueprints' für Hauptfunktionen ('/', also ohne Vorsatz), Datenbankinteraktionen ('/db\_interactions') usw. definiert. Die Funktionen dafür werden dann in jeweils eigenen Dateien geschrieben. Dies ermöglicht eine weit aus bessere Übersicht bei großen Projekten. \\
 Eine Funktion, die für die Verarbeitung der Anfragen einer bestimmten URL verantwortlich ist, sieht immer ähnlich aus.
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python, caption=Blueprint Beispiel]
     @main.route("/add_stock", methods=["GET", "POST"])
     def add_stock():
         if request.method == "POST":
@@ -619,6 +618,7 @@ Eine Funktion, die für die Verarbeitung der Anfragen einer bestimmten URL veran
         return render_template("add_stock.html")
 \end{lstlisting}  
 
+
 Anfangs wird mit einem Decorator (@main.route(...)) die gewünschte URL, sowie unterstützte http-Requests definiert. Decoratoren verändern oder erweitern die Eigenschaften von Funktionen. In diesem Fall wird in der Funktion (def ...()) definiert was geschieht, wenn ein erlaubter Request an der URL 'add\_stock' eintrifft. Dieser Funktionsname kann auch in den Flask-Vorlagen verwendet werden um URLs dynamisch zu vergeben.\\
 Weiters wird sortiert um welche art von Art von Anfrage es sich handelt. Bei GET-Anfragen wird typischerweise einfach nur das HTML der Webseite zurückgegeben. Bei POST-Anfragen werden zuerst die Daten dieser Anfrage eytrahiert und dann entschieden was damit gemacht werden soll. In diesem Fall wird, wenn des richtige Schlüsselwort in der Anfrage enthalten ist, ein Datenbankeintrag, mit den Daten aus dem Request, hinzugefügt. Schlussendlich wird ein Wert zurückgegeben, entweder ein HTML-Statuscode, vorgerendertes HTML oder, wie in diesem Fall, ein Text.
 
@@ -627,7 +627,7 @@ Weiters wird sortiert um welche art von Art von Anfrage es sich handelt. Bei GET
 \paragraph{SPS - Verbindung}\mbox{}\\
 Die Daten für die SPS werden in einem Ähnlichen vefahren zu verfügung gestellt. Nun schickt nicht die Benutzeroberfläche oder der Browser eine Anfrage an das Backend, sondern die SPS. Der Programmblock zur Verarbeitung dieser Anfrage sieht folgenderaßen aus:
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python, caption={Schnittstelle für die SPS}]
 @api.route("/afss", methods=["GET", "POST"])
 def afss():   
     request_data = {...} #aus platzgruenden verkuerzt
@@ -736,7 +736,7 @@ Die Funktion dieses Algorithmus ist in drei unterteile Unterteilt.
     \item Term Frequenz \\
     Die Termfrequenz gibt an, wie oft ein angegebenes Wort in einem Dokument vorhanen ist. Dies wird durch die Folgende Funktion kalkuliert.
     
-    \begin{lstlisting}[language=Rust]
+    \begin{lstlisting}[language=Rust, caption={Berechnung der Termfrequenz}]
 fn term_frequency(document: &str, term: &str) -> f64 {
     // Store the lowercase document as a String to ensure it lives long enough
     let lower_document = document.to_lowercase(); 
@@ -765,7 +765,7 @@ fn term_frequency(document: &str, term: &str) -> f64 {
 
     \item Die zweite Komponente ist dann die Inverse Dokument Frequenz. Diese gewichtet, die Anzahl der Dokumente in dem das gesuchte Wort enthalten ist relativ zur Gesamtdokumentanzahl vorkommt. Häufig vorkommende Worte wie z.B. 'und' werden hierbei weniger gewichtet als einzigartige Wörter.
 
-\begin{lstlisting}[language=Rust]
+\begin{lstlisting}[language=Rust, caption={Berechnung der Inversen Dokumentenfrequenz}]
 fn inverse_document_frequency(term: &str, all_documents: &Vec<String>) -> f64 {
     let mut num_documents_with_this_term = 0;
 
@@ -791,10 +791,9 @@ fn inverse_document_frequency(term: &str, all_documents: &Vec<String>) -> f64 {
     }
 }
 \end{lstlisting}
-
-    \item Nun liegt Liste davon vor, wie oft ein Wort in den Suchdaten vorkommt, als auch, wie oft ein Suchbegriff in einem bestimmten Dokument ist. \\ Als nächsten Schritt werden diese beiden Werte für jeden Suchbegriff miteinander multipliziert und ergeben somit einen Vektor der die Suchwörter in Relation zu jedem einzelnen Dokument stellt.
+     \item Nun liegt Liste davon vor, wie oft ein Wort in den Suchdaten vorkommt, als auch, wie oft ein Suchbegriff in einem bestimmten Dokument ist. \\ Als nächsten Schritt werden diese beiden Werte für jeden Suchbegriff miteinander multipliziert und ergeben somit einen Vektor der die Suchwörter in Relation zu jedem einzelnen Dokument stellt.
     \item Als letzten Schritt wird der zuvor errechnete Dokumentenvektor (der IDF jedes Suchterms in jedem Dokument) mit dem Suchvektor verglichen. Die geschieht mit der sog. Kosinus-Ähnlichkeit.
-    \begin{lstlisting}[language=Rust]
+    \begin{lstlisting}[language=Rust, caption={Berechnung der Cosinusähnlichkeit}]
 fn cos_similarity(query_p: Vec<f64>, document_p: Vec<f64>) -> f64 {
     // Ensure that both vectors have the same length
     if query_p.len() != document_p.len() {
