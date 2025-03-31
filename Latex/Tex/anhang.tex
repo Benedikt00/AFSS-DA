@@ -1,14 +1,19 @@
+
+\section{Resümee}
+
+
 \section{Anhang}
 
 \subsection{Abmessungen (BSVN)}
 
-\subsection{E-Plan}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{abmessungen_rahmen.pdf}
+    \centering
+    \caption{Abmessungen Rahmen}
+\end{figure}
 
-\textcolor{blue}{Im Anhang befinden sich weitere Detailinformationen des Projekts wie\\
-•	Datenblattauszüge, Fertigungsunterlagen (PCB-Layouts, Gehäusezeichnungen, 3D-Druckunterlagen, Montageanleitungen,…) etc.\\
-•	sämtliche geforderten Projektmanagementdokumente\\
-•	ein Businessplan (optional)
-}
+
+\subsection{E-Plan}
 
 \subsection{Projektmanagement (Witi)}
 \textcolor{blue}{In diesem Kapitel soll auf das Projektmanagement des Projektes eingegangen werden. Zu Beginn empfiehlt es sich, die einzelnen Bereiche des Projektmanagements zu erklären und anschließend in einzelnen Kapiteln zu behandeln.}
@@ -75,6 +80,41 @@
 
 \subsection{Inbetriebnahme}
 
+\subsubsection{Server}
+
+Der Server kann auf zwei unterschiedliche Arten in Betrieb genommen werden.  
+
+\paragraph{Entwicklungsmodus} \mbox{}\\ 
+
+Um beim Entwickeln einen angenehmeren Prozessablauf zu ermöglichen, kann der Server klassisch durch Starten des Programms mit Python ausgeführt werden.  
+Hierzu sollte zuerst eine neue virtuelle Python-Umgebung aufgesetzt und die Pakete aus der Datei \texttt{requirements.txt} geladen werden. Alternativ kann die beim Entwickeln verwendete virtuelle Umgebung im \texttt{.conda}-Ordner genutzt werden.  
+
+Nach Aktivierung der virtuellen Umgebung kann der Server durch Ausführen des Befehls  
+\begin{verbatim}
+python __init__.py
+\end{verbatim}  
+im Ordner \texttt{Prototyp\_2} gestartet werden.  
+Im Terminal erscheinen dann die Logs des Einschaltvorgangs, einschließlich der IP-Adresse und des Ports, auf dem der Server läuft.  
+Jedoch muss die Datenbank, um eine Verbindung herstellen zu können, separat gestartet werden.  
+Die Verbindungsdaten für die Datenbank sowie viele weitere Konfigurationen können in der Datei \texttt{config.py} angepasst werden.  
+
+\paragraph{Docker} \mbox{}\\
+
+Für einen Serverbetrieb in einer Produktionsumgebung besteht die Möglichkeit, den Server über einen Docker-Container zu starten.  
+Nach der Installation von Docker muss im übergeordneten Ordner von \texttt{Prototyp\_2}, in dem sich die Datei \texttt{docker-compose.yml} befindet, folgender Befehl ausgeführt werden:  
+
+\begin{verbatim}
+docker compose -f 'docker-compose.yml' up -d --build
+\end{verbatim}  
+
+Dadurch wird ein Container erstellt, der anschließend entweder in Docker-Desktop oder über die Kommandozeile gestartet werden kann.  
+Da die Datenbank beim ersten Start auf einer Fremdmaschine noch kein Setup durchlaufen hat, ist es ratsam, sie mit einer Sicherungsdatei aus dem Ordner \texttt{DB\_export} aufzusetzen.  
+Danach bleiben die Daten auch nach dem Abschalten des Containers erhalten.  
+
+Jedoch ist es nach der Implementierung des Rust-Pakets noch nicht möglich, die benötigten Bibliotheken zu installieren, da diese nicht im \texttt{docker-compose.yml} enthalten sind. 
+
+
+
 \subsubsection{Schaltschrank}
     Der Schaltschrank ist möglichst benutzerfreundlich. Zum Inbetriebnehmen ist eine Starkstromleitung an den dafür vorgesehenen Klemmen zu legen. Ist dies gegeben muss der Dreh-Trennschalter nun geschalten werden und die Anlage wird versorgt. Um die Anlage freizugeben ist der Schlüsselschalter zu betätigen.\\
     Beim Inbetriebnehmen ist zu beachten, dass keine Warnleuchten an den elektirschen Komponenten leuchten und es ist auf untypische Geräusche oder Gerüche zu achten. Bei etwaigen Auffälligkeiten ist die Anlage sofort mitels Trennschalter freizuschalten und daraufhin soll die Quelle der Auffälligkeit gefunden werden und, wenn vorhanden, der Fehler behoben werden.\\
@@ -103,7 +143,6 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
 
 
 \newpage
-<<<<<<< HEAD
 \subsubsection{Elektrik}
 \begin{longtable}{|p{7cm}|r|r|}
     \hline
@@ -154,12 +193,7 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
     \textbf{Summe} & & € 10 390,25 \\
 \end{longtable}
 \newpage
-
-
-\subsection{Besprechungsprotokolle}
-=======
 \subsection{Besprechungsprotokolle (SV)}
->>>>>>> 582f49f3e85007b3741810f20e58f739d2e7ecd8
 %include pdf file as image, on howl page with label
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{../Protokolls/Projektbesprechung_0.pdf}
