@@ -28,6 +28,8 @@
 \usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage{array}
+\usepackage{tabularx}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage{tocloft}
 \usepackage[section]{placeins}
 \usepackage[nottoc,numbib]{tocbibind}
@@ -99,6 +101,9 @@ detect-all
 
 %% codestuff
 \usepackage{listings, listings-rust}
+\renewcommand{\lstlistingname}{Code-Snippet}
+
+\renewcommand{\lstlistlistingname}{Code-Snippets}
 \setlength{\parindent}{8pt}
 \usepackage{indentfirst}
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -122,7 +127,9 @@ detect-all
     commentstyle=\color{codecomment},
     stringstyle=\color{codepurple}\ttfamily,
     morestring=[b]',
-    morestring=[b]"
+    morestring=[b]",
+    xleftmargin=1cm,
+    captionpos=b
 }
 
 \lstdefinestyle{mystyle}{
@@ -142,7 +149,9 @@ detect-all
     showspaces=false,                
     showstringspaces=false,
     showtabs=false,                  
-    tabsize=2
+    tabsize=2,
+    xleftmargin=1cm,
+    captionpos=b
 }
 % -- Setting up the custom style:
 \lstset{style=mystyle}
@@ -288,24 +297,22 @@ Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung 
 
     \vspace{10mm}
     Verfasser/Verfasserin\\
+    \vspace{10mm}
+    \begin{tabular}{P{67mm}cP{67mm}}
+        \includegraphics[width=60mm]{sign_simbuerger.jpg} & & \includegraphics[width=60mm]{sign_sonvilla.jpg} \\
+        \cline{1-1}
+        \cline{3-3}
+        Benedikt Simbürger & & Vincent Sonvilla\\
+    \end{tabular}
     
-    \vspace{40mm}
-    \bgroup
-        \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-        \def\arraystretch{1.5}
-        \begin{tabular}{P{67mm}p{14mm}P{67mm}}
-            \cline{1-1}
-            \cline{3-3}
-            Benedikt Simbürger & & Vincent Sonvilla\\
-        \end{tabular}
 
-        \vspace{35mm}
-        \begin{tabular}{P{67mm}p{14mm}P{67mm}}
-            \cline{1-1}
-            \cline{3-3}
-            Nikolaj Voglauer & & Elena Widmann\\
-        \end{tabular}
-    \egroup
+    
+    \begin{tabular}{P{67mm}cP{67mm}}
+        \includegraphics[width=60mm]{sign_voglauer.png} & & \includegraphics[width=60mm]{sign_widmann.jpg} \\
+        \cline{1-1}
+        \cline{3-3}
+        Nikolaj Voglauer & & Elena Widmann\\
+    \end{tabular}
 
     \vspace*{\fill}
     \raggedleft Klagenfurt, am 04.04.2025
@@ -421,7 +428,15 @@ Furthermore, the mechanical and electrical systems are designed to ensure the hi
 
 
 \newpage
+\fancyhf[EHC]{\begin{tabular}{cc}
+    Simbürger & Sonvilla \\
+    Voglauer & Widmann \\
+\end{tabular}}
 
+\fancyhf[OHC]{\begin{tabular}{cc}
+    Simbürger & Sonvilla \\
+    Voglauer & Widmann\\
+\end{tabular}}
 \include{anhang}
 
 \newpage
@@ -438,5 +453,5 @@ Furthermore, the mechanical and electrical systems are designed to ensure the hi
 \renewcommand{\cfttabpresnum}{Tab. }
 \setlength{\cfttabnumwidth}{2cm}
 \listoftables
-
+\lstlistoflistings
 \end{document}
