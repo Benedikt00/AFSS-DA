@@ -2,13 +2,14 @@
 
 \subsection{Abmessungen (BSVN)}
 
-\subsection{E-Plan}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{abmessungen_rahmen.pdf}
+    \centering
+    \caption{Abmessungen Rahmen}
+\end{figure}
 
-\textcolor{blue}{Im Anhang befinden sich weitere Detailinformationen des Projekts wie\\
-•	Datenblattauszüge, Fertigungsunterlagen (PCB-Layouts, Gehäusezeichnungen, 3D-Druckunterlagen, Montageanleitungen,…) etc.\\
-•	sämtliche geforderten Projektmanagementdokumente\\
-•	ein Businessplan (optional)
-}
+
+\subsection{E-Plan}
 
 \subsection{Projektmanagement (Witi)}
 \textcolor{blue}{In diesem Kapitel soll auf das Projektmanagement des Projektes eingegangen werden. Zu Beginn empfiehlt es sich, die einzelnen Bereiche des Projektmanagements zu erklären und anschließend in einzelnen Kapiteln zu behandeln.}
@@ -53,6 +54,14 @@
 \newpage
 
 \subsection{Inbetriebnahme}
+
+\subsubsection{Server}
+Der Server kann durch zwei unterschiedliche Arten in Betrieb genommen werden.\\
+Um beim Entwickeln einen angenehmeren Prozessablauf zu erlauben, kann der Server ganz klassisch durch Starten des Programms mit Python gestartet werden. Hierzu sollte zuerst eine neue Virtuelle Python umgebung aufgesetzt werden, und die Pakete aus dem "requirements.txt" geladen, oder die bei Entwickeln verwendete Virtuelle Umgebung in ".conda" Ordner Verwendet werden. Nach Aktivierung der Virtuellen Umgebung, kann durch ausführen des Befehls "python .\_\_init\_\_.py" im Ordner "Prototyp\_2" der Server gestartet werden. Im Terminal erscheinen dann die Logs des Einschaltvorgangs, wo auch die IP-Adresse und Port aufscheint, auf dem der Server läuft. Jedoch muss, um mit der Datenbank verbindung aufnehmen zu können, diese extra gestartet werden. Die Verbindungsdaten für die DB und viele andere Konfiguratonen können im "config.py" geändert werden.\\
+Für einen Serverbetreb in einer Produktionsumgebung gibt es eigentlich die Möglichkeit den Server über einen Docker Container zu Starten. Nach installation von Docker, muss im Ordner über dem Projkt ("Prototyp\_2"), wo sich das File "docker-compose.yml" befindet, der Befehl "docker compose -f 'docker-compose.yml' up -d --build" ausgeführt werden. Danach wird ein Container erstellt. Diese kann dann entweder in Docker-Desktop oder über die Kommandozeile gestartet werden. Da die Datenbank beim ersten Starten auf einer Fremdmaschine jedoc noch kein Setup unterlaufen hat, ist es ratsam, diese mit einem save-file aus dem Ornder "DB\_export" aufzusetzen. Danach bleiben die Daten auch bei Abschaltung des Containers erhalten. Jedoch ist nach der Implementierung des Rust Pakets, das installieren der Libraries schwierig, und nicht im Compose enthalten.\\
+
+
+
 \color{blue}
 Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht trivial die einzelnen Komponenten korrekt zu konfigurieren und das Gesamtsystem in Betrieb zu nehmen. In diesem Kapitel soll eine vollständige, präzise und trotzdem möglichst kompak-te Anleitung zur Inbetriebnahme des Systems dargelegt werden. Die Schritte sollen in dem Detailgrad beschrieben werden, dass ein durchschnittlicher Schüler des vierten Jahrganges das Projekt in Betrieb nehmen kann. Exemplarisch sollten Punkte wie die folgenden be-handelt werden – die Aufzählung ist nicht vollständig):
 \begin{itemize}
