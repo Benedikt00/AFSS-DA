@@ -1,15 +1,24 @@
+
+\section{Resümee}
+
+
 \section{Anhang}
 
 \subsection{Abmessungen (BSVN)}
 
+<<<<<<< HEAD
 \subsection{E-Plan}
 \newpage
+=======
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{abmessungen_rahmen.pdf}
+    \centering
+    \caption{Abmessungen Rahmen}
+\end{figure}
+>>>>>>> dceed3876735e862bab10feb1fae81db6179fa41
 
-\textcolor{blue}{Im Anhang befinden sich weitere Detailinformationen des Projekts wie\\
-•	Datenblattauszüge, Fertigungsunterlagen (PCB-Layouts, Gehäusezeichnungen, 3D-Druckunterlagen, Montageanleitungen,…) etc.\\
-•	sämtliche geforderten Projektmanagementdokumente\\
-•	ein Businessplan (optional)
-}
+
+\subsection{E-Plan}
 
 \subsection{Projektmanagement (Witi)}
 \textcolor{blue}{In diesem Kapitel soll auf das Projektmanagement des Projektes eingegangen werden. Zu Beginn empfiehlt es sich, die einzelnen Bereiche des Projektmanagements zu erklären und anschließend in einzelnen Kapiteln zu behandeln.}
@@ -17,13 +26,22 @@
 \subsubsection{Aufgabenstellung des Gesamtprojekts}
 \textcolor{blue}{Fügen Sie an dieser Stelle den Text der genehmigten Aufgabenstellung ein, der in die Diplomarbeitsdatenbank  eingegeben wurde.}
 
-\subsubsection{Scrum-Projektplan}
-\textcolor{blue}{Fügen Sie hier den vollständigen Scrum-Projektplan, wobei die Nummern der Tasks mit der Arbeitszeitaufzeichnung übereinstimmen müssen. Der Scrum-Projektplan kann auf mehrere Seiten aufgeteilt werden.}
+\subsubsection{Produktstrukturplan}
+\vspace{5mm}
 
 \bgroup
     \centering
-    \includegraphics[width=0.6\textwidth]{Scrum_Projektplan_mit_Tasks.png}
-    \captionof{figure}{Scrum Projektplan mit Tasks}
+    \includegraphics[width=0.9\textwidth]{WorkBreakdownStructure.png}
+    \captionof{figure}{Produktstrukturplan}
+\egroup
+
+\subsubsection{Prjektstrukturplan}
+\vspace{5mm}
+
+\bgroup
+    \centering
+    \includegraphics[width=0.9\textwidth]{ProjektStrukturPlan.png}
+    \captionof{figure}{Projektstrukturplan}
 \egroup
 
 \newpage
@@ -67,6 +85,41 @@
 
 \subsection{Inbetriebnahme}
 
+\subsubsection{Server}
+
+Der Server kann auf zwei unterschiedliche Arten in Betrieb genommen werden.  
+
+\paragraph{Entwicklungsmodus} \mbox{}\\ 
+
+Um beim Entwickeln einen angenehmeren Prozessablauf zu ermöglichen, kann der Server klassisch durch Starten des Programms mit Python ausgeführt werden.  
+Hierzu sollte zuerst eine neue virtuelle Python-Umgebung aufgesetzt und die Pakete aus der Datei \texttt{requirements.txt} geladen werden. Alternativ kann die beim Entwickeln verwendete virtuelle Umgebung im \texttt{.conda}-Ordner genutzt werden.  
+
+Nach Aktivierung der virtuellen Umgebung kann der Server durch Ausführen des Befehls  
+\begin{verbatim}
+python __init__.py
+\end{verbatim}  
+im Ordner \texttt{Prototyp\_2} gestartet werden.  
+Im Terminal erscheinen dann die Logs des Einschaltvorgangs, einschließlich der IP-Adresse und des Ports, auf dem der Server läuft.  
+Jedoch muss die Datenbank, um eine Verbindung herstellen zu können, separat gestartet werden.  
+Die Verbindungsdaten für die Datenbank sowie viele weitere Konfigurationen können in der Datei \texttt{config.py} angepasst werden.  
+
+\paragraph{Docker} \mbox{}\\
+
+Für einen Serverbetrieb in einer Produktionsumgebung besteht die Möglichkeit, den Server über einen Docker-Container zu starten.  
+Nach der Installation von Docker muss im übergeordneten Ordner von \texttt{Prototyp\_2}, in dem sich die Datei \texttt{docker-compose.yml} befindet, folgender Befehl ausgeführt werden:  
+
+\begin{verbatim}
+docker compose -f 'docker-compose.yml' up -d --build
+\end{verbatim}  
+
+Dadurch wird ein Container erstellt, der anschließend entweder in Docker-Desktop oder über die Kommandozeile gestartet werden kann.  
+Da die Datenbank beim ersten Start auf einer Fremdmaschine noch kein Setup durchlaufen hat, ist es ratsam, sie mit einer Sicherungsdatei aus dem Ordner \texttt{DB\_export} aufzusetzen.  
+Danach bleiben die Daten auch nach dem Abschalten des Containers erhalten.  
+
+Jedoch ist es nach der Implementierung des Rust-Pakets noch nicht möglich, die benötigten Bibliotheken zu installieren, da diese nicht im \texttt{docker-compose.yml} enthalten sind. 
+
+
+
 \subsubsection{Schaltschrank}
     Der Schaltschrank ist möglichst benutzerfreundlich. Zum Inbetriebnehmen ist eine Starkstromleitung an den dafür vorgesehenen Klemmen zu legen. Ist dies gegeben muss der Dreh-Trennschalter nun geschalten werden und die Anlage wird versorgt. Um die Anlage freizugeben ist der Schlüsselschalter zu betätigen.\\
     Beim Inbetriebnehmen ist zu beachten, dass keine Warnleuchten an den elektirschen Komponenten leuchten und es ist auf untypische Geräusche oder Gerüche zu achten. Bei etwaigen Auffälligkeiten ist die Anlage sofort mitels Trennschalter freizuschalten und daraufhin soll die Quelle der Auffälligkeit gefunden werden und, wenn vorhanden, der Fehler behoben werden.\\
@@ -96,9 +149,13 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
 
 \newpage
 <<<<<<< HEAD
+<<<<<<< HEAD
 \subsubsection{Elektrische Komponenten (Voglauer)}
 Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiegend vor langer Zeit getätigt. Daher sind spezifische Kaufdaten nicht bekannt, die folgenden Daten schätzen somit den aktuellen Preis der Komponenten ab.\\ 
 \paragraph{Kapital von der Schule}
+=======
+\subsubsection{Elektrik}
+>>>>>>> dceed3876735e862bab10feb1fae81db6179fa41
 \begin{longtable}{|p{7cm}|r|r|}
     \hline
     \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
@@ -221,10 +278,12 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 \paragraph{Gesamtwert der elektrischen Komponenten}\mbox{}\\
     Alle Komponenten gemeinsam verfügen über einen Geschätzten Wert von 10 109,71 €.
 \newpage
+<<<<<<< HEAD
 \subsection{Besprechungsprotokolle}
 =======
+=======
+>>>>>>> dceed3876735e862bab10feb1fae81db6179fa41
 \subsection{Besprechungsprotokolle (SV)}
->>>>>>> 582f49f3e85007b3741810f20e58f739d2e7ecd8
 %include pdf file as image, on howl page with label
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{../Protokolls/Projektbesprechung_0.pdf}
@@ -433,6 +492,90 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 \end{longtable}
 \newpage
 
+\subsubsection{Sonvilla}
+\begin{longtable}{|l|p{10cm}|r|}
+    \hline
+    \textbf{Datum} & \textbf{Tätigkeit} & \textbf{Stunden} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Datum} & \textbf{Tätigkeit} & \textbf{Stunden} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+    4.10.2023	&	Besprechung des weiteren vorgehens mit WB	&	0.5 \\
+    9.10.2023	&	Gruppenbesprechung für das weitere Vorgehen	&	1.0 \\
+    29.11.2023	&	RSTT Ausfahrer + Lasern Schlitten	&	4.5 \\
+    10.1.2024	&	Testversuch ET200 SPS Stepdrive inkl. Meeting Knapp	&	4.0 \\
+    16.1.2024	&	Motor ansteuern	&	4.0 \\
+    18.1.2024	&	Schritt-Motor ansteuern	&	4.0 \\
+    19.1.2024	&	Schritt-Motor ansteuern	&	3.0 \\
+    30.1.2024	&	Inventur/ Sortierung Knapp-Sponsoring	&	4.0 \\
+    6.2.2024	&	Induktiver Sensor testen	&	1.5 \\
+    7.2.2024	&	OPC UA Client	&	4.5 \\
+    20.2.2024	&   OPC UA Client 	&	1.0 \\
+    27.2.2024	&	Http-Kommunikation	&	4.0 \\
+    13.3.2024	&	Absprache mit Wurnitsch bez. Pflichtenheft	&	2.0 \\
+    14.3.2024	&	Http-Kommunikation	&	2.5 \\
+    23.4.2024	&	STT-Fortsetzung 	&	2.0 \\
+    25.4.2024	&	STT-Fortsetzung, Verkabelung	&	4.0 \\
+    7.5.2024	&	STT-Fortsetzung,	&	1.5 \\
+    14.6.2024	&	Z-Prototyp Bauteile Vorbereitung	&	1.0 \\
+    21.6.2024	&	Z-PT, Schaltschrank, SPS-Com	&	4.5 \\
+    10.9.2024	&	Meeting Weidmüller	&	1.3 \\
+    17.9.2024	&	Autolager Demontieren für Bauteilbeschaffung	&	2.5 \\
+    18.9.2024	&	Förderband Abmessen, Verbindungstest, Sensorensicherun	&	2.0 \\\\
+    26.9.2024	&	Igus, Mororen ansteuern	&	3.0 \\
+    3.10.2024	&	Profile bearbeiten	&	1.5\\
+    4.10.2024	&	Sensoren testen	&	2.0\\
+    9.10.2024	&	Raumeinrichtung	&	3.0\\
+    15.10.2024	&	Profile bearbeiten	&	3.5\\
+    21.10.2024	&	Rahmenbau beginn	&	2.0\\
+    22.10.2024	&	Rahmenbauu + Drehstrom	&	3.5\\
+    23.10.2024	&	Rahmenbau	&	3.5\\
+    24.10.2024	&	Rahmenbau	&	3.5\\
+    6.11.2024	&	Weidmüller DP Inbetriebnahme	&	3.5\\
+    7.11.2024	&	Weidmülller ansteuern	&	3.5\\
+    8.11.2024	&	Weidmülller ansteuern	&	3.5\\
+    12.11.2024	&	Drehen	&	2.0\\
+    15.11.2024	&	Fräsen	&	2.0\\
+    19.11.2024	&	Drehen, Fräsen	&	1.5\\
+    22.11.2024	&	SPS programmieren	&	3.5\\
+    26.11.2024	&	SPS programmieren	&	3.5\\
+    29.11.2024	&	Blockschaltbild, Diplomarbeit	&	3.5\\
+    3.12.2024	&	Drehen, Diplomarbeit	&	3.5\\
+    6.12.2024	&   Diplomarbeit	&	3.5\\
+    10.12.2024	&	Diplomarbeit	&	3.5\\
+    13.12.2024	&	E-Plan 	&	3.5\\
+    7.1.2025	&	CNC-Fräsen	&	3.5\\
+    10.1.2025	&	Rahmen Zusammenbau	&	4.5\\
+    14.1.2025	&	Zusammenbau Rahmen, SPS	&	4.0\\
+    15.1.2025	&	Zusammenbau Rahmen, Kabel verlegen	&	4.5\\
+    17.1.2025	&	Tag der offenen Tür	&	6.5\\
+    24.1.2025	&	Lasern, Förderband  &	3.5\\
+    4.2.2025	&	SPS <--> Server	&	3.5\\
+    21.2.2025	&   Fräsen	&	3.0\\
+    25.2.2025	&	Zusammenbauen	&	4.0\\
+    6.5.2025	&	DA-Schreiben	&	2.0\\
+    11.3.2025	&	DA-schreiben	&	2.0\\
+    14.3.2025	&	Verkabelung     &	4.0\\
+    18.3.2025	&	Verkabelung	&	5.0\\
+    19.3.2025   &   DA schreiben    &   2.0 \\
+    22.3.2025   &   DA schreiben    &   5.0 \\
+    23.3.2025   &   DA schreiben    &   2.0 \\
+    25.3.2025	&	Synchronisation der Schrittmotoren	&	4.0\\
+    26.3.2025   &   DA Schreiben    &   5.0 \\
+    27.3.2025   &   DA Schreiben    &   3.0 \\
+    28.3.2025	&	DA schreiben	&	3.0\\
+\end{longtable}
+\newpage
 
 \subsubsection{Voglauer}
 \begin{longtable}{|l|p{10cm}|r|}
@@ -450,7 +593,7 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     \endfoot
 
     \hline
-    \endlastfoot
+    \endlastfoot 
     4.10.2023	&	Besprechung des weiteren vorgehens mit WB	&	0.5	\\
 9.10.2023	&	Gruppenbesprechung für das weitere Vorgehen	&	1	\\
 29.11.2023	&	RSTT Ausfahrer + Lasern Schlitten	&	3	\\
