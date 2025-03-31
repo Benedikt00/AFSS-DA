@@ -267,7 +267,7 @@ Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu
 \end{table}
 So werden zwei Schwerpunkte errechnet: ca. \SI{130}{\mm} im unbeladenen Zustand und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Shuttles während dem Ladevorgang wichtiger ist als während einer Leerfahrt, wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemens bei rund 200 mm liegt.\\
 Weiters muss auch dieser Zahnriemen wieder gespannt werden. Durch die geringere Zahnriemenlänge wird auch der Spannmechanismus verkleinert.
-Leider muss dieser aus Platzgründen außerhalb der Flucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung können durch folgenden Ausdruck, der die Länge, die der Zahnriemen bei einer bestimmten Position braucht, um spannungslos zu sein, approximiert, ermittelt werden. (Hierbei wird von einem linearen Zusammenhang zwischen der Kraft auf die Aufhängung und der Längenkontraktion ausgegangen. In der Realität würde jedoch die Elastizität des Zahnriemens sowie jene der Aufhängung Auswirkungen haben, aber diese verringern die Auswirkungen nur zu unseren Gunsten).
+Leider muss dieser aus Platzgründen außerhalb der Flucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung können durch folgenden Ausdruck, der die Länge, die der Zahnriemen bei einer bestimmten Position braucht, um spannungslos zu sein, approximiert, ermittelt werden. (Hierbei wird von einem linearen Zusammenhang zwischen der Kraft auf die Aufhängung und der Längenkontraktion ausgegangen. In der Realität würde jedoch die Elastizität des Zahnriemens sowie jene der Aufhängung Auswirkungen haben, aber diese verringern die Auswirkungen).
 \\
 
     \noindent\begin{minipage}{\textwidth}
@@ -494,15 +494,22 @@ Nach Fertigung der Einzelteile kann das AFSS sukksesive zusammengebaut werden.
 Gestartet wird mit der Montage des Rahmen. Hierfür werden zuerst alle Aluminiumprofile auf Länge zugeschnitten und Gewinde in den Enden geschnitten. Da nicht genug Profile in der Gesamtlänge des AFSS verfügbar sind, müssen teils noch Verbinder eingesetzt werden. An den Ecken werden die Profile dann mit Standardverbindungssätzen verbunden. Unten werden dann noch die Rollen montiert.
 
 \paragraph{X-Achse} \mbox{}\\
-Nachdem die Aufhängungen für die V-Slot Profile gefräßt sind, werden diese an den Rahmen angeschraubt. Auf die V-Slot Profile werden das Nivellierungssystem aufgeschraubt, dann werden die Profile an der Aufhängung befestigt. \\
+Nachdem die Aufhängungen für die V-Slot Profile gefräßt sind, werden diese an den Rahmen angeschraubt. Auf die V-Slot Profile werden das Nivellierungssystem aufgeschraubt, dann werden die Profile, wie in Abb. \ref{ramreal}, an der Aufhängung befestigt. \\
 Danach werden die Umlenkrollen- und die Motoraufhängungen montiert. In diese werden dann Umlenkrollen und Motoren montiert. \\
-Nach Fertigung der Beuteile erfolgt auch der zusammenbau des sehr komplexen unteren X-Shuttels relativ reibungslos. Die Stoßverbindung der V-Slot-Profile kann jedoch nicht 100\%ig ausgerichtet werden, deshalb werden dies Übergänge noch abgeschliffen.
+Nach Fertigung der Bauteile erfolgt auch der zusammenbau des sehr komplexen unteren X-Shuttels relativ reibungslos. Die Stoßverbindung der V-Slot-Profile kann jedoch nicht 100\%ig ausgerichtet werden, deshalb werden dies Übergänge noch abgeschliffen.
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Rahmen_rael.jpg}
+    \caption{Aufgebauter Rahmen und X-Achse}
+    \label{ramreal}
+\end{figure}
 
 \subsubsection{Fazit}
-In der Mechanik des AFSS sind nach aktuellem stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. Das Gesamtkonstrukt (wie in \ref{AFSS-mech-ges} ersichtlich) beinhält dann die gesamte Mechanik 
+In der Mechanik des AFSS sind nach aktuellem stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. Das Gesamtkonstrukt (wie in \ref{AFSS-mech-ges} ersichtlich) beinhält dann die gesamte Mechanik. Erst dadurch, dass eine volle Konstruktion erstellt wurde, war es dann möglich mit den Aufbau zu beginnen.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{mech_gesamt.PNG}
     \caption{Gesamtkonstruktion}
     \label{AFSS-mech-ges}
@@ -717,7 +724,7 @@ Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese
     Erstellt wird dieser Containerverband mit den Consolenbefehlt der auf das docker-compose File zugreift. 
     \begin{lstlisting}[language=bash]
         docker build docker-compose.yml\end{lstlisting}
-    Dann werden auch alle Logs in der Kommandozeile ausgegeben sowie 
+    Dann werden auch alle Logs in der Kommandozeile ausgegeben. 
 
 
 \subsubsection{Artikelsuche}
@@ -728,7 +735,7 @@ Im Fall dieser Anwendung werden die Daten aus der Artikeldatenbank als 'Dokument
 Durch den Relativ hohen Rechenaufwand bei dieser Suchoperation wird dieser in der Programmiersprache Rust implementert. Die Implementierung in Rust ist im vergleich zu Python schon bei relativ kleinen Datenmenge bis zu 5-mal schneller.
 
 \subparagraph{Rust}\mbox{}\\
-Rust ist eine sehr effiziente und schnelle Programmiersprache die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler.\cite{chatgpt}
+Rust ist eine sehr effiziente und schnelle Programmiersprache die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler.\cite{gpt_rust}
 
 Die Funktion dieses Algorithmus ist in drei unterteile Unterteilt.
 
@@ -826,12 +833,15 @@ fn cos_similarity(query_p: Vec<f64>, document_p: Vec<f64>) -> f64 {
     Nach der Berechnung dieser für jedes Dokument werden alle Dokumente sortiert und ja nach anforderung die benötigte Anzahl ausgegeben.
 \end{enumerate}
 
+Das Aufraufen der Rust-Funtionen von Python aus, ist nicht nativ unterstützt. Die einbindung erfolgt millels PyO3/maturin.
 
 \subparagraph{Artikelsuche nach Kategorien}\mbox{}\\
-Um auche einen simpleren weg der Artikelfindung zur verfügung zu stellen, wird ausserdem die Möglichkeit implementiert, Artikel anhand von Attributen zu suchen. Zu diesem Zweck werden schon bei der Artikelerstellung Attribute für die Einträge 'Gruppen' und 'Kategorien' vergeben. In 'Gruppen' wird eine art Pfad angelegt, der die Suche eingrenzt. Beispielsweise würde so ein Eintrag folgende Daten Einthalten: ["Item", "Verbindungssatz"] enthalten. So kann bei der Artikelsuche zuerst die Überkategorie "Item" und dann die Unterkategorie "Verbindungssatz" aus mehreren verschiedenen ausgewählt werden. Um Bauteile weiter zu unterschieden, da es z.B. viele verschiedene Widerstände gibt, weren unter 'Kategorien' einzelheiten zum Produkt, wie Wert, Farbe o. ä. gespeichert.\\ 
-Diese Informationen werden auch vom TF-IDF verwendet, dienen aber spezieller dazu, möglichst sicher das gewünschte Bauteil in einem Durchcklickmenue zu finden.
+Um auch einen simpleren Weg der Artikelfindung zur Verfügung zu stellen, wird außerdem die Möglichkeit implementiert, Artikel anhand von Attributen zu suchen. Zu diesem Zweck werden schon bei der Artikelerstellung Attribute für die Einträge \textit{Gruppen} und \textit{Kategorien} vergeben. In \textit{Gruppen} wird eine Art Pfad angelegt, der die Suche eingrenzt. Beispielsweise würde so ein Eintrag folgende Daten enthalten: \texttt{['Item', 'Verbindungssatz']}. So kann bei der Artikelsuche zuerst die Überkategorie \texttt{'Item'} und dann die Unterkategorie \texttt{'Verbindungssatz'} aus mehreren verschiedenen ausgewählt werden. Um Bauteile weiter zu unterscheiden, da es z. B. viele verschiedene Widerstände gibt, werden unter \textit{Kategorien} Einzelheiten zum Produkt, wie Wert, Farbe o. Ä., gespeichert.\\  
+Diese Informationen werden auch vom TF-IDF verwendet, dienen aber spezieller dazu, möglichst sicher das gewünschte Bauteil in einem Durchklickmenü zu finden.
+
 
 \subsubsection{Fazit}
-Die Serverseitige Software des AFSS, also WMS und Benutzeriberfläche, wurde im laufe des Projekts sehr kompex. Dadurch war es eine sehr gute Entscheidung den Server in Hochsprachen auszuführen. Um einen zuverlässigen Dauerbetrieb zu gewähleisten, wäre es jedoch noch nötig Unittests für wichtige funkitonen wie APIs oder den Lageralgorithmus zu implementieren. Weiters müsse dis Benutzeroberfläche noch Bedienerfreindlicher gestaltet werden, da diese momentan noch eher rudimentär ausgeführt ist. Ausserdem wären noch kleinere "quality-of-live" änderungen durchzuführen. Insgesamt sit die Software aber schone sehr ausgereift und kann die Anforderung, der Lagersteuerung und -verwaltung durchführen.
+Die serverseitige Software des AFSS, also das WMS und die Benutzeroberfläche, wurde im Laufe des Projekts sehr komplex. Dadurch war es eine sehr gute Entscheidung, den Server in einer Hochsprache auszuführen.
+Um einen zuverlässigen Dauerbetrieb zu gewährleisten, wäre es jedoch noch nötig, Unittests für wichtige Funktionen wie APIs oder den Lageralgorithmus zu implementieren. Weiterhin müsste die Benutzeroberfläche noch benutzerfreundlicher gestaltet werden, da sie momentan noch eher rudimentär ausgeführt ist. Außerdem wären noch kleinere 'Quality-of-Life'-Änderungen durchzuführen. Insgesamt ist die Software aber bereits sehr ausgereift und kann die Anforderungen der Lagersteuerung und -verwaltung erfüllen.
 
 
