@@ -15,11 +15,25 @@
 
 \subsection{E-Plan}
 
-\subsection{Projektmanagement (Witi)}
-\textcolor{blue}{In diesem Kapitel soll auf das Projektmanagement des Projektes eingegangen werden. Zu Beginn empfiehlt es sich, die einzelnen Bereiche des Projektmanagements zu erklären und anschließend in einzelnen Kapiteln zu behandeln.}
+\subsection{Projektmanagement}
+In diesem Kapitel wird auf das Projektmanagement des AFSS eingegangen. Dieses umfasst die zu Beginn des Projekts ausgearbeitete Aufgabenstellung und die einzelnen Arbeitspakete der jeweiligen Schülerin und Schüler. Außerdem wurde ein Produktstrukturplan angefertigt, in dem die Teilbereiche des Projekts und dessen zuständige Schülerin oder Schüler erkennbar ist. Ein weiterer Teil es Projektmanagements ist der Projektstrukturplan, welcher die unterschiedlichen Arbeitsschritte des Projekts veranschaulicht. Dieses Kapitel beinhaltet auch die in MS Project angefertigte Terminplanung.
 
 \subsubsection{Aufgabenstellung des Gesamtprojekts}
-\textcolor{blue}{Fügen Sie an dieser Stelle den Text der genehmigten Aufgabenstellung ein, der in die Diplomarbeitsdatenbank  eingegeben wurde.}
+\paragraph{Ausgangslage}\mbox{}\\
+Die Werkstätte hat ein bestehendes Lager für Bauteile, die von Fachlehrern bestellt werden können. Jene Bestellungen werden dann von Schülerinnen und Schüler zusammengestellt und geliefert. Die Verwaltung dieses Lagers gestaltet sich allerdings schwierig, da Schülerinnen und Schüler beim manuellen Ein- und Auslagern z.B. den Lagerplatz vertauschen und es zu Fehlern kommt.
+
+\paragraph{Untersuchungsanliegen der individuellen Themenstellungen}\mbox{}\\
+Das Hauptanliegen dieser Diplomarbeit ist es, eine Anlage zu entwickeln, errichten und in Betrieb zu nehmen. Das bestehende System, mit manueller Handhabung, ist aufgrund des stetigen Bedienerwechsels sowie deren Ungenauigkeit, fehleranfällig. Der dadurch entstehende Mehraufwand verbraucht zusätzliche Ressourcen des Lehrpersonals. Um das Lehrpersonal sowie die Schülerinnen und Schüler zu entlasten, soll hier eine automatisierte Lösung entstehen. Es soll erwogen werden, welche Lösungen nötig sind, um ein Produkt zu planen und zu bauen, sodass dieses auch von nachfolgenden Schülerinnen und Schülern für zukünftige Anforderungen erweitert werden kann. Auch die Schnittstellen zwischen Hardware und Software, sowie die Ansteuerung der Mechanik soll in diesem Rahmen untersucht werden. Zudem soll die Sicherheit der Benutzerinnen und Benutzer immer gewährleistet sein.\\
+\textbf{Simbürger Benedikt:} Programmierung des Backend und Hardwareentwicklung\\
+\textbf{Sonvilla Vincent:} SPS-Programmierung und Serverkommunikation\\
+\textbf{Voglauer Nikolaj:} Schaltschrankbau und Verkabelung sowie Hardwareentwicklung für Querförderer und Förderband\\
+\textbf{Widmann Elena:} Auslegen elektrischen Komponenten, Ansteuerungen über Bussysteme und Sicherheitskonzeptionierung
+
+\paragraph{Zielsetzung}\mbox{}\\
+Erstellung einer Anlage, welche automatisch die gewünschte Ware mittels eines dreiachsigen Roboters, bereitstellt. Über eine Website soll eine Bestellung eingereicht werden können und der Server soll dann mit der SPS kommunizieren. Die Anlage lagert die Bestellung aus und nach Gebrauch wieder ein. Das effiziente Lagersystem soll ein hochtechnisiertes Vorzeigeprojekt der Schule werden.
+
+\paragraph{Geplantes Ergebnis der individuellen Themenstellungen}\mbox{}\\
+Die vom Benutzer gewünschten Bauteile werden aus einem Lagerplatz zu einer Kommissionier-Station gebracht und wieder zurückgestellt. Zum Herausheben der Bauteile, welche sich in Boxen befinden, ist ein vertikal montierter Portalroboter, an welchem eine Gabel montiert ist, verbaut. Ein Querförderer schiebt die angeforderten Boxen zwischen einem Förderband, welches die Boxen zum Endkunden befördert, und dem Lagersystem hin- und her. Die Bestellung ist über einen Web-Server möglich, welcher mit einer SPS kommuniziert.
 
 \subsubsection{Produktstrukturplan}
 \vspace{5mm}
@@ -30,7 +44,7 @@
     \captionof{figure}{Produktstrukturplan}
 \egroup
 
-\subsubsection{Prjektstrukturplan}
+\subsubsection{Projektstrukturplan}
 \vspace{5mm}
 
 \bgroup
@@ -41,6 +55,13 @@
 
 \newpage
 \subsubsection{Terminplanung}
+\vspace{5mm}
+
+\bgroup
+    \centering
+    \includegraphics[width=1\textwidth]{Terminplanung.png}
+    \captionof{figure}{Terminplanung in MS Project}
+\egroup
 
 \newpage
 
@@ -71,6 +92,20 @@
     \item Herstellung von Modulen 
     \item Umbauten am Serverschrank
     \item Verdrahtung des Schaltschrankes
+\end{itemize}
+
+\paragraph{Sensorik (Widmann)}
+\begin{itemize}
+    \item Auswahl der Sensoren
+    \item Referenzplatine
+    \item Funktionsprüfungen und Messungen
+    \item AS-Interface
+\end{itemize}
+
+\paragraph{Sicherheitstechnik (Widmann)}
+\begin{itemize}
+    \item Entwicklung eines Sicherheitskonzepts
+    \item Realisierung
 \end{itemize}
 
 
