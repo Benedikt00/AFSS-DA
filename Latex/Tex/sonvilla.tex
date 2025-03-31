@@ -18,7 +18,6 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             \label{Arbeitsweise_einer_SPS}
         \end{figure}
 
-        noch Datentypen, ... maybe
 
     \subsubsection[Programmbausteine]
     {Programmbausteine \cite{Programmierleitfaden_für_S7-1500}}
@@ -254,7 +253,7 @@ Bei der Gleichlaufachse ist bei der Konfiguration ein zusätzlicher Schritt vorz
 
 
 \subsubsection{Synchronisation}
-Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die zwei Motoren, welche zusammenarbeiten, synchronisiert werden. Dies wird in der Software, durch die Motion Control Anweisung MC\_GearIn, geschafft. Bei dem Slave muss es sich, wie beschrieben um eine Gleichlaufachse (TO\_SynchronousAxis) handeln. Da die beiden Achsen hardware technisch verbunden sind, muss die Synchronisation im Stillstand erfolgen. Ausgeführt wird die Synchronisation bei einer steigenden Flanke am Parameter Execute. Die Folgeachse bleibt nun solange synchron zur Leitachse, bis es entweder, zu einem MC\_GearOut Auftrag kommt oder die Freigabe der Folgeachse, durch ein LOW Signal am Parameter enable des MC\_Power Bausteins (Folgeachse), nicht mehr vorhanden ist. Ein Sperren der Leitachse über MC\_Power (Leitachse) führt nicht zu einem Synchronisationsverlust. Die voreingestellten Werte bei den Parametern RationNumerator(1) sowie RatioDenominator(1) können übernommen werden. Diese werden nur geändert falls zwischen den zu synchronisierenden Motoren, ein Getriebe vorhanden ist, was bei diesem Projekt jedoch nicht der Fall ist. Ansonsten bleibt der Getriebefaktor bei 1. 
+Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die zwei Motoren, welche zusammenarbeiten, synchronisiert werden. Dies wird in der Software, durch die Motion Control Anweisung MC\_GearIn, geschafft. Bei dem Slave muss es sich, wie beschrieben um eine Gleichlaufachse (TO\_SynchronousAxis) handeln. Da die beiden Achsen hardware technisch verbunden sind, muss die Synchronisation im Stillstand erfolgen. Ausgeführt wird die Synchronisation bei einer steigenden Flanke am Parameter Execute. Die Folgeachse bleibt nun solange synchron zur Leitachse, bis es entweder, zu einem MC\_GearOut Auftrag kommt oder die Freigabe der Folgeachse, durch ein LOW Signal am Parameter enable des MC\_Power Bausteins (Folgeachse), nicht mehr vorhanden ist. Ein Sperren der Leitachse über MC\_Power (Leitachse) führt nicht zu einem Synchronisationsverlust. Die voreingestellten Werte bei den Parametern RationNumerator(1) sowie RatioDenominator(1) können übernommen werden. Diese werden nur geändert falls zwischen den zu synchronisierenden Motoren, ein Getriebe vorhanden ist, was bei diesem Projekt jedoch nicht der Fall ist. Ansonsten bleibt der Getriebefaktor bei 1.
 
 \begin{figure}[h]
     \centering
@@ -264,14 +263,120 @@ Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die
 \end{figure}
 
 \subsubsection{Ansteuerung des Förderbands}
-Die Ansteuerung des Förderbands erfolgt im Gegensatz zu den anderen Motoren nicht über Motortreiber. Die Asynchronmaschine des Förderbands wird schlicht und einfach über Relais mit der Spannungsversorgung verbunden oder getrennt. Die Ansteuerung der Relais erfolgt dann über die Digitalausgänge der SPS. 
+\label{Ansteuerung des Förderbandes}
+Die Ansteuerung des Förderbands erfolgt im Gegensatz zu den anderen Motoren nicht über Motortreiber. Die Asynchronmaschine des Förderbands wird schlicht und einfach über Relais mit der Spannungsversorgung verbunden oder getrennt. Die Ansteuerung der Relais erfolgt dann über die Digitalausgänge der SPS. Die Relais schalten jeweils die drei Phasen. Eine Richtungsumkehr wird durch eine Vertauschung zweier Phasen erreicht. Deswegen ist das Relais 1 so verschalten, dass das Förderband im Uhrzeigersinn läuft. Beim zweiten Relais sind dann zwei Phasen vertauscht sodass es zu einer Richtungsumkehr kommt. Dies bedeutet das bei Ansteuern des Relais 1 sich das Förderband im Uhrzeigersinn (+ Richtung ) läuft und beim Ansteuern des  Relais 2 gegen den Uhrzeigersinn (- Richtung). Jedes dieser Relais beistzt auch Hilfskontakte. Diese werden so verkabelt, dass eine Ansteuerung des einen Relais nur geht, sofern das andere Relais nicht angesteurt ist. Dieder Aufbau gleicht einer Wendeschützschaltung. \\
+Nun wird bestimmt wie lange man ein Relais ansteuern muss, damit das Förderband eine bestimmte Strecke zurücklegt. Aufgrund des hohen Zeitaufwandes dieses Projektes konnte folgender Ansatz noch nicht umgesetzt werden. Der Ansatz wäre es, das Förderband per Direktstart anlaufen zu lassen. Daraufhin wäre die Distanz, die das Förderband nach einer bestimmten Zeit zurücklegt zu messen und mehrere Datenpunkte anzulegen. Beispielsweise bei \qty{0.5}{\second}, \qty{1}{\second}, \qty{2}{\second} und \qty{5}{\second}. Dann wäre eine Regressionsrechnung durchzuführen, um eine Funktion für die zurückgelegte Strecke, in Abhängigkeit von der Zeit zu bekommen. Von dieser Funktion wäre nun eine Umkehrfunktion zu erstellen. Diese liefert dann, die Zeit die es braucht um eine bestimmte Wegstrecke zurückzulegen. Mit dieser Funktion kann dann in Tia-Portal gearbeitet werden, in dem man die gewünschte Wegstrecke einsetzt und den zugehörigen Zeitwert bekommt. Dieser Zeitwert ist dann die Zeit, wie lange die Relais angesteuert werden sollen. 
 
 \subsubsection{Tia-Portal Programm}
 Durch die SPS-Server Kommunikation stehen die benötigten Daten sowie der Auftrag, welcher ausgeführt werden muss, zu Verfügung. 
 
-    \paragraph{Ein-/Auslagerung}
-    Bei dieser Aufgabe stehen als Informationen die X,Y,Z -Werte der Lagerposition zu Verfügung und ob es sich um eine Ein- oder Auslagerung handelt. Bei einer Einlagerung muss die Box zuerst beim Querförderer geholt werden. Dann wird die Box auf die Zielposition gelagert. 
+    \paragraph{Ein-/Auslagerung} \mbox{} \\
+    Bei dieser Aufgabe stehen als Informationen die X,Y,Z -Werte der Lagerposition zu Verfügung und ob es sich um eine Ein- oder Auslagerung handelt. Die Lagerposition ist bei der Box links, oben. Die Tiefe also der Z-Wert ist nur wie weit die Z-Achse nach vorne fährt. 
+    
+    \subparagraph{Einlagerung} \mbox{} \\
+    Bei einer Einlagerung muss die Box zuerst beim Querförderer geholt werden. Dann wird die Box auf die Zielposition gelagert. Um nun den X-Wert und Y-Wert, welcher angefahren wird, zu bestimmen, wird folgende Rechnung angewendet:
 
+    \vspace{-6mm}
+
+    \begin{equation*}
+        \begin{split}
+                X_{Wert} = X_{Lagerposition} + 50
+                \\
+                Y_{Wert} = Y_{Lagerposition} + 30  
+        \end{split} 
+    \end{equation*}
+
+    Dann wird der Z-Wert angefahren und die Box anschließend auf:
+
+    \vspace{-6mm}
+    \begin{equation*}
+        Y_{Wert} = Y_{Lagerposition} - 20
+    \end{equation*}
+
+    gesenkt. \\
+    Daraufhin kann die Z-Achse wieder eingefahren werden (Z-Wert = 0). 
+
+    \subparagraph{Auslagerung} \mbox{} \\
+    Zuerst die zu auslagernde Box anfahren. 
+
+    \vspace{-6mm}
+
+    \begin{equation*}
+        \begin{split}
+                X_{Wert} = X_{Lagerposition} + 50
+                \\
+                Y_{Wert} = Y_{Lagerposition} - 20  
+        \end{split} 
+    \end{equation*}
+
+    Dann wieder die Z-Achse auf den gegebenen Wert ansteuern und die Box auf:
+
+    \vspace{-6mm}
+    \begin{equation*}
+        Y_{Wert} = Y_{Lagerposition} + 30
+    \end{equation*}
+    heben.
+
+    Nun die Box wieder einfahren (Z-Wert = 0). Daraufhin die Position des Querförderes anfahren. Damit wäre der Befehl ``Auslagerung'' abgeschlossen.
+
+
+    \paragraph{Querförderer} \mbox{} \\ 
+    Der Querförderer fördert Boxen von Lager auf das Förderband und umgekehrt. Er wird über einen Motor angesteuert. Wenn der Querförderer angesteuert wird, stehen nur die Information zu Verfügung, auf welche Position dieser fahren soll. 
+
+    \paragraph{Förderband} \mbox{} \\
+    Beim Ansteuern des Förderbands liegen folgende Informationen vor. Zu fahrende Strecke und die Richtung (plus oder minus). Die Richtung wird darüber bestimmt, welches Relais man ansteuert. Relais 1 für plus und Relais 2 für minus. Wie weit nun das Förderband fährt wird über die Einzeit des Relais bestimmt. Die Zeit wie lange das Relais ein sein soll, hängt von der zurückzulegenden Strecke ab. Diese Information steht zu Verfügung, weshalb man diese in die Funktion einsetzt, welche man wie in Punkt \ref{Ansteuerung des Förderbandes} gezeigt ermittelt hat, und bekommt so die Zeit welche an das Relais ansteuert. Die Bewegung des Förderbands erfolgt immer relativ zur aktuellen Position und nich absolut. 
+
+
+    \paragraph{Beispiel für eine solche Ausführung}
+    Befehle könnten in folgender Reihenfolge kommen:
+
+        \begin{enumerate}
+            \item A01 P+1000
+            \item A11 P2500
+            \item A11 P0000
+            \item A10 X0100Y0500Z0250R1
+        \end{enumerate}
+
+    Wie werden diese ausgeführt? \\
+
+        \begin{itemize}
+            \item[1. Auftrag] A01: steht für eine Bewegung des Förderbandes. 
+                \subitem +1000 : Eine Bewegung um \qty{1000}{\milli\meter} im Uhrzeigersinn
+            \item[2.Auftrag] A11: Ausfahren des Querförderes auf die Position \qty{2500}{\milli\meter} 
+            \item[3.Auftrag] A11: Einfahren des Querförderers auf die Position \qty{0}{\milli\meter}
+            \item[4.Auftrag] A10: Einlagerung der Box
+                \subitem Angesteuert werden dann folgende Werte:
+
+                \vspace{-6mm}
+                    \begin{equation*}
+                        \begin{split}
+                            X_{Wert} = 100 + 50 = 150 \\
+                            Y_{Wert} = 500 + 30 = 530 \\
+                            Z_{Wert} = 250
+                        \end{split}
+                    \end{equation*}
+                \subitem Die X-Achse und Y-Achse können gleichzeitig auf den   richtigen Wert gefahren werden. Erst wenn die X- und Y-Position erreicht wurde, wird die Z-Achse angesteuert. 
+                \subitem Darufhin folgt das Absetzen der Box. Nun wird folgender Y-Wert angefahren:
+
+                \vspace{-6mm}
+                    \begin{equation*}
+                        \begin{split}
+                            Y_{Wert} = 500 - 20 = 480
+                        \end{split}
+                    \end{equation*}
+
+                \subitem Schlussendlich wird die Z-Achse wieder eingefahren.
+
+                \vspace{-6mm}
+                    \begin{equation*}
+                        \begin{split}
+                            Z_{Wert} = 0
+                        \end{split}
+                    \end{equation*}
+            \item Nun sind alle Aufträge abgeschlossen.
+        \end{itemize}
+
+    Bei diesem Beispielauftrag wurde nicht auf die zeitliche Ausführung geachtet. In welcher Reihenfolge sowie Zeitabstand indem die Befehle kommen, hängt alleine von der Logik am Server ab.
 
 \subsection{SPS-Server Kommunikation}
 Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführende Element ist, muss eine Verbindung zwischen SPS und Server aufgebaut werden. Das Ziel dieser Verbindung ist es, die nötigen Informationen, sowie die Übertragung des Auftrags auszuführen. 
