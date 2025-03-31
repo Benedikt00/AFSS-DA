@@ -48,6 +48,18 @@
     \item Datenbanken
 \end{itemize}
 
+\paragraph{Elektrische Planung und Realisierung (Voglauer)}
+\begin{itemize}
+    \item Dokumentation vorhandener Geräte und Abmessungen dieser sowie vom Serverschrank 
+    \item Zeichnen des Serverschrankes in Fusion 360
+    \item Zeichnen der Module in Fusion 360
+    \item Zeichnen des Schaltplanes in E-Plan 
+    \item Zeichnen von Topologien und Übersichten in E-Plan 
+    \item Herstellung von Modulen 
+    \item Umbauten am Serverschrank
+    \item Verdrahtung des Schaltschrankes
+\end{itemize}
+
 
 
 
@@ -55,6 +67,7 @@
 
 \subsection{Inbetriebnahme}
 
+<<<<<<< HEAD
 \subsubsection{Server}
 Der Server kann durch zwei unterschiedliche Arten in Betrieb genommen werden.\\
 Um beim Entwickeln einen angenehmeren Prozessablauf zu erlauben, kann der Server ganz klassisch durch Starten des Programms mit Python gestartet werden. Hierzu sollte zuerst eine neue Virtuelle Python umgebung aufgesetzt werden, und die Pakete aus dem "requirements.txt" geladen, oder die bei Entwickeln verwendete Virtuelle Umgebung in ".conda" Ordner Verwendet werden. Nach Aktivierung der Virtuellen Umgebung, kann durch ausführen des Befehls "python .\_\_init\_\_.py" im Ordner "Prototyp\_2" der Server gestartet werden. Im Terminal erscheinen dann die Logs des Einschaltvorgangs, wo auch die IP-Adresse und Port aufscheint, auf dem der Server läuft. Jedoch muss, um mit der Datenbank verbindung aufnehmen zu können, diese extra gestartet werden. Die Verbindungsdaten für die DB und viele andere Konfiguratonen können im "config.py" geändert werden.\\
@@ -62,6 +75,12 @@ Für einen Serverbetreb in einer Produktionsumgebung gibt es eigentlich die Mög
 
 
 
+=======
+\subsubsection{Schaltschrank}
+    Der Schaltschrank ist möglichst benutzerfreundlich. Zum Inbetriebnehmen ist eine Starkstromleitung an den dafür vorgesehenen Klemmen zu legen. Ist dies gegeben muss der Dreh-Trennschalter nun geschalten werden und die Anlage wird versorgt. Um die Anlage freizugeben ist der Schlüsselschalter zu betätigen.\\
+    Beim Inbetriebnehmen ist zu beachten, dass keine Warnleuchten an den elektirschen Komponenten leuchten und es ist auf untypische Geräusche oder Gerüche zu achten. Bei etwaigen Auffälligkeiten ist die Anlage sofort mitels Trennschalter freizuschalten und daraufhin soll die Quelle der Auffälligkeit gefunden werden und, wenn vorhanden, der Fehler behoben werden.\\
+    Zur Inbetriebnahme gehört auch, dass der FI und der Leitungsschutzschalter einmal getestet beziehungsweise geschalten werden um die Funktion zu testen.\\
+>>>>>>> fea7942c2ce2f5791c9424dd9e85cb0fe2220a4e
 \color{blue}
 Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht trivial die einzelnen Komponenten korrekt zu konfigurieren und das Gesamtsystem in Betrieb zu nehmen. In diesem Kapitel soll eine vollständige, präzise und trotzdem möglichst kompak-te Anleitung zur Inbetriebnahme des Systems dargelegt werden. Die Schritte sollen in dem Detailgrad beschrieben werden, dass ein durchschnittlicher Schüler des vierten Jahrganges das Projekt in Betrieb nehmen kann. Exemplarisch sollten Punkte wie die folgenden be-handelt werden – die Aufzählung ist nicht vollständig):
 \begin{itemize}
@@ -84,8 +103,65 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
     \caption{Kostenaufstellung}
 \end{figure}
 
+
 \newpage
+<<<<<<< HEAD
+\subsubsection{Elektrik}
+\begin{longtable}{|p{7cm}|r|r|}
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+    Trennschalter & 1 & € 143,00 \\
+    Schlüsselschalter & 1 & € 4,99 \\
+    Not-Aus-Schalter & 5 & € 12,65 \\
+    Motorschutzschalter & 1 & € 55,45 \\
+    Fehlerstromschutzschalter Typ A & 1 & € 221,20 \\
+    Leitungsschutzschalter C13 & 1 & € 25,00 \\
+    TSX-SUP-A054 & 1 & € 250,00 \\
+    6EP1436-3BA00-8AA0 & 1 & € 350,00 \\
+    DP500IP/3-24 & 1 & € 301,68 \\
+    DRT-240-24 & 1 & € 97,46 \\
+    6ES7515-2AN03-0AB0 & 1 & € 3.195,40 \\
+    6ES7521-1BL00-0AB0 & 1 & € 332,10 \\
+    6ES7522-1BL01-0AB0 & 1 & € 560,49 \\
+    6ES7553-1AA00-0AB0 & 2 & € 825,86 \\
+    6ES7155-6AU01-0CN0 & 1 & € 300,00 \\
+    6ES7193-6AR00-0AA0 & 1 & € 106,67 \\
+    3RK7137-6SA00-0BC1 & 1 & € 673,04 \\
+    6ES7193-6BP20-0DC0 & 1 & € 70,00 \\
+    3RK2200-0CE02-0AA2 & 7 & € 146,01 \\
+    2081870000 & 2 & € 8,41 \\
+    IE-FC-SET-SPDEK001-KY-P & 1 & € 144,93 \\
+    2080600000 & 4 & € 37,26 \\
+    2080480000 & 2 & € 37,18 \\
+    CL57T(V4.0) & 4 & € 36,39 \\
+    TB6560 & 3 & € 17,99 \\
+    23E1K-20 & 4 & € 38,77 \\
+    17HS4417P1-X4 & 3 & € 8,99 \\
+    Asynchronmotor & 1 & € 200,00 \\
+    \hline
+    \hline
+    \textbf{Summe} & & € 10 390,25 \\
+\end{longtable}
+\newpage
+
+
+\subsection{Besprechungsprotokolle}
+=======
 \subsection{Besprechungsprotokolle (SV)}
+>>>>>>> 582f49f3e85007b3741810f20e58f739d2e7ecd8
 %include pdf file as image, on howl page with label
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{../Protokolls/Projektbesprechung_0.pdf}
@@ -291,10 +367,107 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
 10.3.2025	&DAS	&3.0\\
 11.3.2025	&DAS	&3.0\\
 14.3.2025	&Verkabelung Schaltschrank	&4.0\\
-
-
-    
 \end{longtable}
-
-
 \newpage
+
+
+\subsubsection{Voglauer}
+\begin{longtable}{|l|p{10cm}|r|}
+    \hline
+    \textbf{Datum} & \textbf{Tätigkeit} & \textbf{Stunden} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Datum} & \textbf{Tätigkeit} & \textbf{Stunden} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+    4.10.2023	&	Besprechung des weiteren vorgehens mit WB	&	0.5	\\
+9.10.2023	&	Gruppenbesprechung für das weitere Vorgehen	&	1	\\
+29.11.2023	&	RSTT Ausfahrer + Lasern Schlitten	&	3	\\
+15.12.2023	&	Präsentation	&	1.5	\\
+10.1.2024	&	Testversuch ET200 SPS Stepdrive inkl. Meeting Knapp	&	4	\\
+12.1.2024	&	Handout für Elternverein	&	1.5	\\
+16.1.2024	&	Motor ansteuern	&	3	\\
+23.1.2024	&	Vorbereitung für Knapp-Besuch(HO)	&	2.5	\\
+30.1.2024	&	Inventur/ Sortierung Knapp-Sponsoring	&	4	\\
+1.2.2024	&	Besprechung WB	&	4	\\
+15.2.2024	&	Besprechung Maschinenbau	&	1.5	\\
+17.2.2024	&	Programmieren-weiterbildung(py)	&	3	\\
+20.2.2024	&	el. Komponenten ausmessen 	&	2	\\
+22.2.2024	&	Programmieren-weiterbildung(py)	&	1	\\
+24.2.2024	&	Schaltschrank CAD	&	3.5	\\
+24.2.2024	&	Pflichtenheft Erstversion	&	2	\\
+27.2.2024	&	Barcode-Scanner/http-Kommunikation	&	4	\\
+6.3.2024	&	Lasten/Pflichtenheft erstellen	&	1.25	\\
+13.3.2024	&	Absprache mit Wurnitsch bez. Pflichtenheft	&	2	\\
+14.3.2024	&	Barcode-Scanner/Fusion 360	&	3	\\
+2.4.2024	&	Lagerregal-Planung	&	2	\\
+23.4.2024	&	STT-Fortsetzung / Software einführung	&	2.5	\\
+6.6.2024	&	SPS/Server Communictaion	&	3	\\
+13.6.2024	&	Schaltschrank Konzeptionierung	&	2.25	\\
+18.6.2024	&	Schaltschrank Konzeptionierung	&	2	\\
+21.6.2024	&	Schaltschrank Konzeptionierung	&	4	\\
+16.7.2024	&	CAD-Serverschrank Konstruktion Anfang Fusion	&	2	\\
+18.7.2024	&	CAD-Serverschrank Konstruktion Montage-Schienen	&	2	\\
+28.7.2024	&	CAD-Serverschrank finished	&	3	\\
+6.8.2024	&	Schaltschrank Modul Konzeptionierung	&	1	\\
+3.9.2024	&	Firmen anschreiben und Datei-Management	&	1	\\
+9.9.2024	&	Marketing, Fortschritts-Leafletter	&	2.5	\\
+10.9.2024	&	Meeting Weidmüller	&	0.5	\\
+11.9.2024	&	Schaltschrank konzeptionierung 	&	2.25	\\
+12.9.2024	&	Siemens und Lapp Anrufen+Schreiben	&	1	\\
+15.9.2024	&	Schaltschrank Komponenten konstruieren	&	1,5	\\
+17.9.2024	&	Presentation und Projektmanagement	&	3	\\
+21.9.2024	&	el. Komponenten konstruieren sowie Profilschienen	&	2	\\
+22.9.2024	&	el. Komponenten konstruieren + E-Plan Anfang	&	2	\\
+24.9.2024	&	E-Plan Auffrischungsschulung / Project libre	&	2.5	\\
+26.9.2024	&	Igus, Mororen ansteuern die 1.	&	1	\\
+1.10.2024	&	Schaltschrank-Konzeptionierung, CAD-zeichnen	&	5	\\
+4.10.2024	&	Schaltschrank-Konzeptionierung, CAD / E-plan - zeichnen	&	4	\\
+6.10.2024	&	Schaltschrank-Konzeptionierung, CAD - zeichnen	&	0.5	\\
+9.10.2024	&	Raumeinrichtung, Schaltschrank-Konzeptionierung	&	2,5	\\
+15.10.2024	&	Schaltschrank-Konzeptionierung, E-Plan-zeichen	&	4	\\
+22.10.2024	&	 2.Präsentation	&	1	\\
+23.10.2024	&	Rahmenbau	&	1.5	\\
+7.11.2024	&	E-Plan/Autocad	&	3.5	\\
+8.11.2024	&	E-Plan/Autocad	&	3.5	\\
+15.11.2024	&	E-Plan	&	3.5	\\
+19.11.2024	&	Drehen, Fräsen	&	1.5	\\
+22.11.2024	&	E-Plan	&	4,5	\\
+26.11.2024	&	E-Plan	&	3.5	\\
+29.11.2024	&	E-Plan	&	3.5	\\
+6.12.2024	&	Website	&	2	\\
+10.12.2024	&	ASI in E-Plan	&	3.5	\\
+13.12.2024	&	E-Plan 	&	3.5	\\
+7.1.2025	&	Schaltschrank E-Plan / CAD	&	3.5	\\
+10.1.2025	&	CAD für Schaltschrankmodule	&	4.5	\\
+14.1.2025	&	Zusammenbauen der Module	&	4	\\
+15.1.2025	&	Kabel verlegen	&	2	\\
+17.1.2025	&	Tag der offenen Türe	&	5	\\
+21.1.2025	&	Schaltschrank Modifikationen	&	3.5	\\
+23.1.2025	&	Schaltschrank Modifikationen / Module	&	0.5	\\
+24.1.2025	&	 Förderband testen	&	2	\\
+10.2.2025	&	DA schreiben	&	3.5	\\
+12.2.2025	&	DA schreiben	&	2	\\
+21.2.2025	&	Fräsen	&	2	\\
+25.2.2025	&	Schaltschrank Zusammenbauen	&	3.5	\\
+28.2.2025	&	Fräsen, E-Plan	&	3.5	\\
+11.3.2025	&	DA-schreiben	&	3	\\
+14.3.2025	&	Verkabelung	&	4	\\
+17.3.2025	&	DA schreiben	&	3.5	\\
+18.3.2025	&	Verkabelung	&	4	\\
+19.3.2025	&	DA-schreiben 	&	2	\\
+21.3.2025	&	Verkabelung	&	2.5	\\
+26.3.2025	&	DA-Schreiben	&	2	\\
+27.3.2025 &	DA-Schreiben	&	5	\\
+\end{longtable}
+\newpage
+
+
