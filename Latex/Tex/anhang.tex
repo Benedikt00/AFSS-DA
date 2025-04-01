@@ -159,16 +159,6 @@ Jedoch ist es nach der Implementierung des Rust-Pakets noch nicht möglich, die 
     Der Schaltschrank ist möglichst benutzerfreundlich. Zum Inbetriebnehmen ist eine Starkstromleitung an den dafür vorgesehenen Klemmen zu legen. Ist dies gegeben muss der Dreh-Trennschalter nun geschalten werden und die Anlage wird versorgt. Um die Anlage freizugeben ist der Schlüsselschalter zu betätigen.\\
     Beim Inbetriebnehmen ist zu beachten, dass keine Warnleuchten an den elektirschen Komponenten leuchten und es ist auf untypische Geräusche oder Gerüche zu achten. Bei etwaigen Auffälligkeiten ist die Anlage sofort mitels Trennschalter freizuschalten und daraufhin soll die Quelle der Auffälligkeit gefunden werden und, wenn vorhanden, der Fehler behoben werden.\\
     Zur Inbetriebnahme gehört auch, dass der FI und der Leitungsschutzschalter einmal getestet beziehungsweise geschalten werden um die Funktion zu testen.\\
-\color{blue}
-Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht trivial die einzelnen Komponenten korrekt zu konfigurieren und das Gesamtsystem in Betrieb zu nehmen. In diesem Kapitel soll eine vollständige, präzise und trotzdem möglichst kompak-te Anleitung zur Inbetriebnahme des Systems dargelegt werden. Die Schritte sollen in dem Detailgrad beschrieben werden, dass ein durchschnittlicher Schüler des vierten Jahrganges das Projekt in Betrieb nehmen kann. Exemplarisch sollten Punkte wie die folgenden be-handelt werden – die Aufzählung ist nicht vollständig):
-\begin{itemize}
-    \item Treiberinstallationen und Systemkonfigurationen
-    \item Zu empfehlen wäre bei Server-Installationen ein Setup-Script, welches auf einem vordefinierten Docker-container aufbaut.
-    \item Welche Schritte sind notwendig, um das Projekt mit dem vorhandenen Code / Schaltplänen (auf GIT, CD, Netzlaufwerk, etc.) in Betrieb zu nehmen.
-    \item Bei Schaltungen mit mehreren Platinen muss beschrieben werden, wie diese mit-einander verbunden werden müssen.
-\end{itemize}
-\color{black}
-
 \newpage
 \subsection{Kostenaufstellung BSNV}
 \textcolor{blue}{Für die Kalkulation im Gesamtprojekt sind folgende Kosten zu erfassen: \\
@@ -305,10 +295,104 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     \textbf{Summe} & & € 496,57\\
 \end{longtable}
 
+\subsection{Kostenaufstellung des AFSS}
+Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiegend vor langer Zeit getätigt. Daher sind spezifische Kaufdaten nicht bekannt, die folgenden Daten schätzen somit den aktuellen Preis der Komponenten ab. 
+\paragraph{Kapital von der Schule}\mbox{}\\
+\begin{table}[H]
+    \begin{tabular}{lllll}
+    Name                & Artikelnummer                          & Menge & pro Stück {[}€{]} & Preis {[}€{]} \\ \hline
+    Trennschalter       & -                                     & 1     & 143.00            & 143.00        \\
+    Schlüsselschalter   & -                                     & 1     & 4.99              & 4.99          \\
+    Not-Aus-Schalter    & -                                     & 4     & 12.65             & 50.60         \\
+    Motorschutzschalter & -                                     & 1     & 55.45             & 55.45         \\
+    Fehlerstromschutzschalter Typ A & -                         & 1     & 221.20            & 221.20        \\
+    Leitungsschutzschalter C13 & -                             & 1     & 25.00             & 25.00         \\
+    ASi-Slaves          & 3RK2200-0CE02-0AA2                   & 7     & 146.01            & 1022.07       \\
+    ET 200 SP           & 6ES7155-6AU01-0CN0                   & 1     & 300.00            & 300.00        \\
+    Bus-Karte           & 6ES7193-6AR00-0AA0                   & 1     & 106.67            & 106.67        \\
+    ASi-Master-Karte    & 3RK7137-6SA00-0BC1                   & 1     & 673.04            & 673.04        \\
+    ASi-Steckadapter    & 6ES7193-6BP20-0DC0                   & 1     & 70.00             & 70.00         \\
+    Asynchronmotor      & -                                     & 1     & 200.00            & 200.00        \\
+    SM-Treiber          & CL57T(V4.0)                          & 4     & 36.39             & 145.56        \\
+    SM-Treiber          & TB6560                               & 3     & 17.99             & 53.97         \\
+    Schrittmotor        & 23E1K-20                             & 4     & 38.77             & 155.08        \\
+    Schrittmotor        & 17HS4417P1-X4                        & 3     & 8.99              & 26.97         \\ \hline
+    Gesamt              &                                      &       &                   & 3251.00       
+    \end{tabular}
+\end{table}
+\paragraph{Gesponsort von der KNAPP AG}\mbox{}\\
+\begin{table}[H]
+    \begin{tabular}{lllll}
+    Name                & Artikelnummer                          & Menge & pro Stück {[}€{]} & Preis {[}€{]} \\ \hline
+    ASi-Netzteil        & TSX-SUP-A054                           & 1     & 250.00            & 250.00        \\
+    Netzteil            & 6EP1436-3BA00-8AA0                    & 1     & 350.00            & 350.00        \\
+    Netzteil            & DP500IP/3-24                          & 1     & 301.68            & 301.68        \\
+    Netzteil            & DRT-240-24                            & 1     & 97.46             & 97.46         \\
+    SPS                 & 6ES7515-2AN03-0AB0                    & 1     & 3195.40           & 3195.40       \\
+    SPS-DI-Karte        & 6ES7521-1BL00-0AB0                    & 1     & 332.10            & 332.10        \\
+    SPS-PTO-Karte       & 6ES7553-1AA00-0AB0                    & 2     & 825.86            & 1651.72       \\
+    SPS-DO-Karte        & 6ES7522-1BL01-0AB0                    & 1     & 560.49            & 560.49        \\ \hline
+    Gesamt              &                                        &       &                   & 5912.99       
+    \end{tabular}
+\end{table}
+\paragraph{Gesponsort von der Weidmüller GmbH}\mbox{}\\
+\begin{table}[H]
+    \begin{tabular}{lllll}
+    Name                & Artikelnummer                          & Menge & pro Stück {[}€{]} & Preis {[}€{]} \\ \hline
+    Feed-In-Module      & 2081870000                             & 2     & 8.41              & 16.82         \\
+    Service-Schnittstelle & IE-FC-SET-SPDEK001-KY-P               & 1     & 144.93            & 144.93        \\
+    8A DC Sicherung     & 2080600000                             & 4     & 37.26             & 149.04        \\
+    2A DC Sicherung     & 2080480000                             & 2     & 37.18             & 74.36         \\
+    Reihenklemme        & AL2C 2.5                               & 100   & 0.64              & 64.00         \\ \hline
+    Gesamt              &                                        &       &                   & 449.15       
+    \end{tabular}
+\end{table}
+\paragraph{Gesponsort von der Firma Lapp}\mbox{}\\
+\begin{table}[H]
+    \begin{tabular}{lllll}
+    Name                & Artikelnummer                          & Menge & pro Stück {[}€{]} & Preis {[}€{]} \\ \hline
+    Kabel               & ÖLFLEX CLASSIC FD 810 CY 5x0.5         & 30m   & 3.92              & 117.63        \\
+    Kabel               & ÖLFLEX CLASSIC FD 810 CY 5x0.75        & 40m   & 4.36              & 174.41        \\
+    Kabel               & ÖLFLEX CHAIN 809 CY 7x0.5              & 40m   & 3.77              & 150.95        \\
+    Verdrahtungsdraht   & H05V-K 1x0.75                          & 100m  & 0.19              & 18.86         \\
+    Verdrahtungsdraht   & H05V-K 1x0.75                          & 100m  & 0.19              & 18.86         \\
+    Verdrahtungsdraht   & H05V-K 1x0.75                          & 100m  & 0.19              & 18.86         \\ \hline
+    Gesamt              &                                        &       &                   & 496.57       
+    \end{tabular}
+\end{table}
 \paragraph{Gesamtwert der elektrischen Komponenten}\mbox{}\\
-    Alle Komponenten gemeinsam verfügen über einen Geschätzten Wert von 10 109,71 €.
-\newpage
+    Alle bisher gelisteten Komponenten gemeinsam verfügen über einen Geschätzten Wert von 10 109,71 €.\\ 
+    Zuzüglich des Serverschrankes und den Materialkosten der Montageplatten beträgt der gesammte Schätzwert für den Schaltschrank zwischen 12 000 und 14,500€.
+\paragraph{Gesponsort von der Igus GmbH}\mbox{}\\
+\begin{table}[H]
+    \begin{tabular}{llllll}
+    Name                & Artikelnummer          & Menge & pro Stück {[}€{]} & Preis {[}€{]} \\ \hline
+    Schlepkette X       & E2i.26.057.048.0       & 1             & 72.72                   & 72.72         \\
+    Schlepkette Y       & E2i.26.038.048.0       & 1             & 49.74                   & 49.74         \\
+    Gewindespindel      & DST-LS-10X12-R-ES      & 2 x 350mm              & 35.15                   & 70.3          \\
+    Gewindemutter       & DST-JFRM-252525DS10X12 & 2             & 26.33                   & 52.66         \\
+    Führungsschiene     & TS-01-20               & 2 x 350mm              & 16.685                  & 33.37         \\
+    Führungswagen       & TW-01-20               & 2             & 35.1                    & 70.2          \\ \hline
+    Gesamt              &                        &               &                         & 348.99       
+    \end{tabular}
+\end{table}
 
+\paragraph{Gesponsort von der Mädler GmbH}\mbox{}\\
+\begin{table}[H]
+    \begin{tabular}{lllll}
+    Name                           & Artikelnummer & Menge & pro Stück {[}€{]} & Preis {[}€{]}  \\ \hline
+    Zahnscheibe AT5x16 20 Zähne    & 16632000      & 2     & 7.58            & 15.16  \\
+    Zahnscheibe AT5x16    27 Zähne & 16632700      & 2     & 8.7             & 17.4   \\
+    Zahnscheibe AT5x16  36 Zähne   & 16633600      & 2     & 12.58           & 25.16  \\
+    Zahnriemen AT5x16              & 16670000      & 21    & 16.44           & 345.24 \\ \hline
+    Gesamt                         &               &       &                 & 402.96
+    \end{tabular}
+\end{table}
+\newpage
+<<<<<<< HEAD
+
+=======
+>>>>>>> a698089c973704d3feb9bbde221a456895213f73
 \subsection{Besprechungsprotokolle (SV)}
 %include pdf file as image, on howl page with label
 \begin{figure}[H]
@@ -362,12 +446,8 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 
 4.10.2023&Besprechung des weiteren vorgehens mit WB	&0.5\\
 9.10.2023&Gruppenbesprechung für das weitere Vorgehen	&1.0\\
-9.11.2023&Reconstruction Siemens Twin Towers	&3.5\\
-14.11.2023&	Reconstruction Siemens Twin Towers	&2.0\\
-23.11.2023&	Reconstruction Siemens Twin Towers Lasern	&2.0\\
-29.11.2023&	RSTT Ausfahrer + Schlitten Fertigstellung&	4.0\\
+
 19.12.2023	&CAD Auf/Ab-fahrer	&3.0\\
-20.12.2023	&CAD RSTT, AutCad vorbereitung	&2.0\\
 
 10.1.2024	&Testversuch ET200 SPS Stepdrive und Meeting Knapp&	4.0\\
 11.1.2024	&Achse mechanisch fertig, Schlitten vertikal&	4.0\\
@@ -538,7 +618,7 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 
     4.10.2023	&	Besprechung des weiteren vorgehens mit WB	&	0.5 \\
     9.10.2023	&	Gruppenbesprechung für das weitere Vorgehen	&	1.0 \\
-    29.11.2023	&	RSTT Ausfahrer + Lasern Schlitten	&	4.5 \\
+    29.11.2023	&	Lasern Schlitten	&	4.5 \\
     10.1.2024	&	Testversuch ET200 SPS Stepdrive inkl. Meeting Knapp	&	4.0 \\
     16.1.2024	&	Motor ansteuern	&	4.0 \\
     18.1.2024	&	Schritt-Motor ansteuern	&	4.0 \\
@@ -554,10 +634,10 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     25.4.2024	&	STT-Fortsetzung, Verkabelung	&	4.0 \\
     7.5.2024	&	STT-Fortsetzung,	&	1.5 \\
     14.6.2024	&	Z-Prototyp Bauteile Vorbereitung	&	1.0 \\
-    21.6.2024	&	Z-PT, Schaltschrank, SPS-Com	&	4.5 \\
+    21.6.2024	&	SPS-Communikation	&	4.5 \\
     10.9.2024	&	Meeting Weidmüller	&	1.3 \\
     17.9.2024	&	Autolager Demontieren für Bauteilbeschaffung	&	2.5 \\
-    18.9.2024	&	Förderband Abmessen, Verbindungstest, Sensorensicherun	&	2.0 \\\\
+    18.9.2024	&	Förderband Abmessen, Verbindungstest, Sensorensicherung	&	2.0 \\
     26.9.2024	&	Igus, Mororen ansteuern	&	3.0 \\
     3.10.2024	&	Profile bearbeiten	&	1.5\\
     4.10.2024	&	Sensoren testen	&	2.0\\
@@ -586,10 +666,10 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     15.1.2025	&	Zusammenbau Rahmen, Kabel verlegen	&	4.5\\
     17.1.2025	&	Tag der offenen Tür	&	6.5\\
     24.1.2025	&	Lasern, Förderband  &	3.5\\
-    4.2.2025	&	SPS <--> Server	&	3.5\\
+    4.2.2025	&	SPS-Server Kommunikation	&	3.5\\
     21.2.2025	&   Fräsen	&	3.0\\
     25.2.2025	&	Zusammenbauen	&	4.0\\
-    6.5.2025	&	DA-Schreiben	&	2.0\\
+    6.3.2025	&	DA-Schreiben	&	2.0\\
     11.3.2025	&	DA-schreiben	&	2.0\\
     14.3.2025	&	Verkabelung     &	4.0\\
     18.3.2025	&	Verkabelung	&	5.0\\
