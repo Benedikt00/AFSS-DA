@@ -6,20 +6,39 @@
 
 \subsection{Abmessungen (BSVN)}
 
+
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{abmessungen_rahmen.pdf}
     \centering
     \caption{Abmessungen Rahmen}
 \end{figure}
-
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Vogis Bilder/Maximaldaten.pdf}
+    \centering
+    \caption{Abmessungen Rahmen}
+\end{figure}
 
 \subsection{E-Plan}
 
-\subsection{Projektmanagement (Witi)}
-\textcolor{blue}{In diesem Kapitel soll auf das Projektmanagement des Projektes eingegangen werden. Zu Beginn empfiehlt es sich, die einzelnen Bereiche des Projektmanagements zu erklären und anschließend in einzelnen Kapiteln zu behandeln.}
+\subsection{Projektmanagement}
+In diesem Kapitel wird auf das Projektmanagement des AFSS eingegangen. Dieses umfasst die zu Beginn des Projekts ausgearbeitete Aufgabenstellung und die einzelnen Arbeitspakete der jeweiligen Schülerin und Schüler. Außerdem wurde ein Produktstrukturplan angefertigt, in dem die Teilbereiche des Projekts und dessen zuständige Schülerin oder Schüler erkennbar ist. Ein weiterer Teil es Projektmanagements ist der Projektstrukturplan, welcher die unterschiedlichen Arbeitsschritte des Projekts veranschaulicht. Dieses Kapitel beinhaltet auch die in MS Project angefertigte Terminplanung.
 
 \subsubsection{Aufgabenstellung des Gesamtprojekts}
-\textcolor{blue}{Fügen Sie an dieser Stelle den Text der genehmigten Aufgabenstellung ein, der in die Diplomarbeitsdatenbank  eingegeben wurde.}
+\paragraph{Ausgangslage}\mbox{}\\
+Die Werkstätte hat ein bestehendes Lager für Bauteile, die von Fachlehrern bestellt werden können. Jene Bestellungen werden dann von Schülerinnen und Schüler zusammengestellt und geliefert. Die Verwaltung dieses Lagers gestaltet sich allerdings schwierig, da Schülerinnen und Schüler beim manuellen Ein- und Auslagern z.B. den Lagerplatz vertauschen und es zu Fehlern kommt.
+
+\paragraph{Untersuchungsanliegen der individuellen Themenstellungen}\mbox{}\\
+Das Hauptanliegen dieser Diplomarbeit ist es, eine Anlage zu entwickeln, errichten und in Betrieb zu nehmen. Das bestehende System, mit manueller Handhabung, ist aufgrund des stetigen Bedienerwechsels sowie deren Ungenauigkeit, fehleranfällig. Der dadurch entstehende Mehraufwand verbraucht zusätzliche Ressourcen des Lehrpersonals. Um das Lehrpersonal sowie die Schülerinnen und Schüler zu entlasten, soll hier eine automatisierte Lösung entstehen. Es soll erwogen werden, welche Lösungen nötig sind, um ein Produkt zu planen und zu bauen, sodass dieses auch von nachfolgenden Schülerinnen und Schülern für zukünftige Anforderungen erweitert werden kann. Auch die Schnittstellen zwischen Hardware und Software, sowie die Ansteuerung der Mechanik soll in diesem Rahmen untersucht werden. Zudem soll die Sicherheit der Benutzerinnen und Benutzer immer gewährleistet sein.\\
+\textbf{Simbürger Benedikt:} Programmierung des Backend und Hardwareentwicklung\\
+\textbf{Sonvilla Vincent:} SPS-Programmierung und Serverkommunikation\\
+\textbf{Voglauer Nikolaj:} Schaltschrankbau und Verkabelung sowie Hardwareentwicklung für Querförderer und Förderband\\
+\textbf{Widmann Elena:} Auslegen elektrischen Komponenten, Ansteuerungen über Bussysteme und Sicherheitskonzeptionierung
+
+\paragraph{Zielsetzung}\mbox{}\\
+Erstellung einer Anlage, welche automatisch die gewünschte Ware mittels eines dreiachsigen Roboters, bereitstellt. Über eine Website soll eine Bestellung eingereicht werden können und der Server soll dann mit der SPS kommunizieren. Die Anlage lagert die Bestellung aus und nach Gebrauch wieder ein. Das effiziente Lagersystem soll ein hochtechnisiertes Vorzeigeprojekt der Schule werden.
+
+\paragraph{Geplantes Ergebnis der individuellen Themenstellungen}\mbox{}\\
+Die vom Benutzer gewünschten Bauteile werden aus einem Lagerplatz zu einer Kommissionier-Station gebracht und wieder zurückgestellt. Zum Herausheben der Bauteile, welche sich in Boxen befinden, ist ein vertikal montierter Portalroboter, an welchem eine Gabel montiert ist, verbaut. Ein Querförderer schiebt die angeforderten Boxen zwischen einem Förderband, welches die Boxen zum Endkunden befördert, und dem Lagersystem hin- und her. Die Bestellung ist über einen Web-Server möglich, welcher mit einer SPS kommuniziert.
 
 \subsubsection{Produktstrukturplan}
 \vspace{5mm}
@@ -30,7 +49,7 @@
     \captionof{figure}{Produktstrukturplan}
 \egroup
 
-\subsubsection{Prjektstrukturplan}
+\subsubsection{Projektstrukturplan}
 \vspace{5mm}
 
 \bgroup
@@ -41,6 +60,13 @@
 
 \newpage
 \subsubsection{Terminplanung}
+\vspace{5mm}
+
+\bgroup
+    \centering
+    \includegraphics[width=1\textwidth]{Terminplanung.png}
+    \captionof{figure}{Terminplanung in MS Project}
+\egroup
 
 \newpage
 
@@ -71,6 +97,20 @@
     \item Herstellung von Modulen 
     \item Umbauten am Serverschrank
     \item Verdrahtung des Schaltschrankes
+\end{itemize}
+
+\paragraph{Sensorik (Widmann)}
+\begin{itemize}
+    \item Auswahl der Sensoren
+    \item Referenzplatine
+    \item Funktionsprüfungen und Messungen
+    \item AS-Interface
+\end{itemize}
+
+\paragraph{Sicherheitstechnik (Widmann)}
+\begin{itemize}
+    \item Entwicklung eines Sicherheitskonzepts
+    \item Realisierung
 \end{itemize}
 
 
@@ -143,11 +183,17 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
 
 
 \newpage
+<<<<<<< HEAD
 \subsubsection{Elektrik}
 
 
 
 
+=======
+\subsubsection{Elektrische Komponenten (Voglauer)}
+Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiegend vor langer Zeit getätigt. Daher sind spezifische Kaufdaten nicht bekannt, die folgenden Daten schätzen somit den aktuellen Preis der Komponenten ab.\\ 
+\paragraph{Kapital von der Schule}
+>>>>>>> bba1d72b5ad5c3f3b3e1e80ced846a189e1d487f
 \begin{longtable}{|p{7cm}|r|r|}
     \hline
     \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
@@ -166,37 +212,111 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
     \endlastfoot
     Trennschalter & 1 & € 143,00 \\
     Schlüsselschalter & 1 & € 4,99 \\
-    Not-Aus-Schalter & 5 & € 12,65 \\
+    Not-Aus-Schalter & 4 & € 12,65 \\
     Motorschutzschalter & 1 & € 55,45 \\
     Fehlerstromschutzschalter Typ A & 1 & € 221,20 \\
     Leitungsschutzschalter C13 & 1 & € 25,00 \\
+    3RK2200-0CE02-0AA2 & 7 & € 146,01 \\
+    6ES7155-6AU01-0CN0 & 1 & € 300,00 \\
+    6ES7193-6AR00-0AA0 & 1 & € 106,67 \\
+    3RK7137-6SA00-0BC1 & 1 & € 673,04 \\
+    6ES7193-6BP20-0DC0 & 1 & € 70,00 \\
+    Asynchronmotor & 1 & € 200,00 \\
+    CL57T(V4.0) & 4 & € 36,39 \\
+    TB6560 & 3 & € 17,99 \\
+    23E1K-20 & 4 & € 38,77 \\
+    17HS4417P1-X4 & 3 & € 8,99 \\
+    \textbf{Summe} & & € 3251,00\\
+    \hline
+    \hline
+\end{longtable}
+\paragraph{Gesponsort von der KNAPP AG}
+\begin{longtable}{|p{7cm}|r|r|}
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+    \hline
+    \hline
     TSX-SUP-A054 & 1 & € 250,00 \\
     6EP1436-3BA00-8AA0 & 1 & € 350,00 \\
     DP500IP/3-24 & 1 & € 301,68 \\
     DRT-240-24 & 1 & € 97,46 \\
     6ES7515-2AN03-0AB0 & 1 & € 3.195,40 \\
     6ES7521-1BL00-0AB0 & 1 & € 332,10 \\
-    6ES7522-1BL01-0AB0 & 1 & € 560,49 \\
     6ES7553-1AA00-0AB0 & 2 & € 825,86 \\
-    6ES7155-6AU01-0CN0 & 1 & € 300,00 \\
-    6ES7193-6AR00-0AA0 & 1 & € 106,67 \\
-    3RK7137-6SA00-0BC1 & 1 & € 673,04 \\
-    6ES7193-6BP20-0DC0 & 1 & € 70,00 \\
-    3RK2200-0CE02-0AA2 & 7 & € 146,01 \\
+    6ES7522-1BL01-0AB0 & 1 & € 560,49 \\
+    \textbf{Summe} & & € 5.912,99\\
+\end{longtable}
+\paragraph{Gesponsort von der Weidmüller GmbH}
+\begin{longtable}{|p{7cm}|r|r|}
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+    \hline
+    \hline
     2081870000 & 2 & € 8,41 \\
     IE-FC-SET-SPDEK001-KY-P & 1 & € 144,93 \\
     2080600000 & 4 & € 37,26 \\
     2080480000 & 2 & € 37,18 \\
-    CL57T(V4.0) & 4 & € 36,39 \\
-    TB6560 & 3 & € 17,99 \\
-    23E1K-20 & 4 & € 38,77 \\
-    17HS4417P1-X4 & 3 & € 8,99 \\
-    Asynchronmotor & 1 & € 200,00 \\
-    \hline
-    \hline
-    \textbf{Summe} & & € 10 390,25 \\
+    AL2C 2.5 & 100 & € 0,64 \\
+    \textbf{Summe} & & € 449,15\\
 \end{longtable}
+\paragraph{Gesponsort von der Firma Lapp}
+\begin{longtable}{|p{7cm}|r|r|}
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Komponente} & \textbf{Stückzahl} & \textbf{Preis} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+    \hline
+    \hline
+    ÖLFLEX CLASSIC FD 810 CY 5x0.5 & 30m & € 117,63 \\
+    ÖLFLEX CLASSIC FD 810 CY 5x0.75 & 40m & € 174,41 \\
+    ÖLFLEX CHAIN 809 CY 7x0.5 & 40m & € 150,95 \\
+    H05V-K 1x0.75 & 100m & € 18,86 \\
+    H05V-K 1x0.75 & 100m & € 18,86 \\
+    H05V-K 1x0.75 & 100m & € 18,86 \\
+    \textbf{Summe} & & € 496,57\\
+\end{longtable}
+
+\paragraph{Gesamtwert der elektrischen Komponenten}\mbox{}\\
+    Alle Komponenten gemeinsam verfügen über einen Geschätzten Wert von 10 109,71 €.
 \newpage
+<<<<<<< HEAD
 
 \subsubsection{Igus}
 \begin{table}[H]
@@ -224,6 +344,13 @@ Nachdem typische Projekte aus mehreren Komponenten bestehen, ist es oft nicht tr
     \end{tabular}
 \end{table}
 
+=======
+<<<<<<< HEAD
+\subsection{Besprechungsprotokolle}
+=======
+=======
+>>>>>>> dceed3876735e862bab10feb1fae81db6179fa41
+>>>>>>> bba1d72b5ad5c3f3b3e1e80ced846a189e1d487f
 \subsection{Besprechungsprotokolle (SV)}
 %include pdf file as image, on howl page with label
 \begin{figure}[H]
