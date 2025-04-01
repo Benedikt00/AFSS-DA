@@ -25,8 +25,8 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
     In TIA Portal werden Programmbausteine genutzt, um Steuerungsprogramme modular und strukturiert zu gestalten. Dadurch werden Programme übersichtlicher, wiederverwendbar und effizienter. Es gibt unterschiedliche Arten von Programmierbausteinen:
 
     \begin{itemize}
-        \item[1.] \textbf{OB(Organisationsbausteine)} \\
-            Organisationsbausteine werden verwendet um das Anwenderprogramm hierarchisch zu strukturieren. Auch für OBs stehen,wie in Abb. \ref{Organisationsbausteine} gezeigt, unterchiedliche Bausteine zur Verfügung:
+        \item[1.] \textbf{OB (Organisationsbausteine)} \\
+            Organisationsbausteine werden verwendet um das Anwenderprogramm hierarchisch zu strukturieren. Auch für OBs stehen, wie in Abb. \ref{Organisationsbausteine} gezeigt, unterchiedliche Bausteine zur Verfügung:
             \begin{figure}[h]
                 \includegraphics[width=\textwidth]{Sonne/Tia-Portal_Organisationsbausteine.png}
                 \caption{Organisationsbausteine \cite{Programmierleitfaden_für_S7-1500}}
@@ -42,7 +42,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             \end{itemize}
             Werden in einem Programm mehrere OBs aufgerufen, so werden die OBs in aufsteigender Reihenfolge der OB-Nummer abgearbeitet. 
 
-        \item[2.] \textbf{FC(Funktionen)} \\
+        \item[2.] \textbf{FC (Funktionen)} \\
             Funktion haben keinen zyklischen Datenspeicher, deswegen können Bausteinparameter nicht bis zum nächsten Aufruf gespeichert werden. Daher müssen Funktionen bei jedem Aufruf mit Aktualparametern versorgt werden. Um kein zufälliges Verhalten enstehen zu lassen sind die Werte immer mit einem Defaultwert vorbelegt. Will man die Daten einer Funktion dauerhaft speichern, so muss ein globaler Datenbaustein verwendet werden.\\
             Funktionen werden eingesetzt, um häufig wiederkehrende Anwendungen durchzuführen.
             
