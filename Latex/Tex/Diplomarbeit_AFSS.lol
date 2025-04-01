@@ -5,4 +5,4 @@
 \contentsline {lstlisting}{\numberline {5}{\ignorespaces Berechnung der Termfrequenz}}{44}{lstlisting.5}%
 \contentsline {lstlisting}{\numberline {6}{\ignorespaces Berechnung der Inversen Dokumentenfrequenz}}{45}{lstlisting.6}%
 \contentsline {lstlisting}{\numberline {7}{\ignorespaces Berechnung der Cosinusähnlichkeit}}{46}{lstlisting.7}%
-\contentsline {lstlisting}{\numberline {8}{\ignorespaces SCL Baustein ``ID+Area''}}{66}{lstlisting.8}%
+\contentsline {lstlisting}{\numberline {8}{\ignorespaces SCL Baustein \enquote {ID+Area}}}{67}{lstlisting.8}%
