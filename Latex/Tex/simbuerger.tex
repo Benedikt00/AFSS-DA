@@ -4,7 +4,7 @@
 
 \subsubsection{Planung - Grundanforderungen} 
 Grundlegende Anforderungen zur Planung der AFSS-Mechanik sind Transportfähigkeit, eine möglichst einfache Realisierung mit HTL-Mitteln und möglichst wenige Kompromisse in der Funktion oder Zuverlässigkeit eingehen zu müssen.\\
-Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf \SI{2.3}{\meter} Länge, um im Lift transportiert werden zu können, und auf\SI{1.9}{\meter} Höhe aufgrund der Türhöhe im Keller. Weiters müssen auch noch Rollen an den Rahmen angebracht werden, um das Lager ohne großen Mehraufwand bewegen zu können. Diese Extrahöhe der Räder (ca. \SI{80}{\mm}) limitiert den Rahmen weiter.\\
+Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf \SI{2.3}{\meter} Länge, um im Lift transportiert werden zu können, und auf \SI{1.9}{\meter} Höhe aufgrund der Türhöhe im Keller. Weiters müssen auch noch Rollen an den Rahmen angebracht werden, um das Lager ohne großen Mehraufwand bewegen zu können. Diese Extrahöhe der Räder (ca. \SI{80}{\mm}) limitiert den Rahmen weiter.\\
 Nun soll dieser rund \SI{2.25}{\meter} lange und \SI{1.8}{\meter} hohe Raum optimal genutzt werden, um eine möglichst große Lagerdichte sicherstellen zu können.\\
 Um eine möglichst gute Erweiterbarkeit sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sogenannte Item-Profile verwendet werden.
 
@@ -12,7 +12,7 @@ Um eine möglichst gute Erweiterbarkeit sowie eine Fertigung an der Schule zu er
 
 \paragraph{Item}\mbox{}\\
 Das Item-Profilsystem ist ein System, welches Aluminium-Extrusionen in verschiedenen Ausführungen sowie viele Verbindungsmöglichkeiten zu sich selbst sowie anderen mechanischen Elementen bietet. Hierbei gibt es eine breite Auswahl an Profilen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen werden 20x20-Extrusionen verwendet.
-Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit, sogenannte Nutensteine mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. Ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, können Standardverbindungssätze wie in Abb. \ref{sfs_item} verwendet werden.\\
+Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit, Nutensteine mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. Ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, können Standardverbindungssätze wie in Abb. \ref{sfs_item} verwendet werden.\\
 
 Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot-Profile verwendet.
 
@@ -218,7 +218,7 @@ Dadurch, dass die Y-Achse sowohl das YZ-Shuttle als auch die Boxen aufheben muss
 
 \vspace{5mm}
 
-Bei der Konstruktion einer früheren Version des YZ-Shuttles wurde erfasst, dass das Shuttle bis zu \SI{13}{\newton} wiegen kann. Dies wird zwar in einer späteren Iteration des Designprozesses noch verbessert, dient jedoch als Richtwert für die Antriebsauslegung. \SI{13}{kg} erzeugen ohne Berücksichtigung von Reibung knapp  \SI{130}{\newton}. Die Antriebskraft der Schrittmotoren reicht auf jeden Fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen und somit das gesamte Gewicht der Z-Achse sowie der Kabelschleppkette immer unterstützt werden müssen, durchaus sinnvoll.
+Bei der Konstruktion einer früheren Version des YZ-Shuttles wurde erfasst, dass das Shuttle bis zu \SI{13}{\kg} wiegen kann. Dies wird zwar in einer späteren Iteration des Designprozesses noch verbessert, dient jedoch als Richtwert für die Antriebsauslegung. \SI{13}{kg} erzeugen ohne Berücksichtigung von Reibung knapp  \SI{130}{\newton}. Die Antriebskraft der Schrittmotoren reicht auf jeden Fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen und somit das gesamte Gewicht der Z-Achse sowie der Kabelschleppkette immer unterstützt werden müssen, durchaus sinnvoll.
 
 \paragraph{Zahnriemen und Umlenkung}\mbox{}\\
 Als Zahnriemen wird auch bei der Y-Achse auf ein AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung ebendieses nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, muss er auch dort wieder rückgeführt werden. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ein möglichst kompakter Formfaktor angestrebt werden muss und andererseits eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot-C-Profil erforderlich ist. Aus diesem Grund wird eine Konstruktion aus Aluminium, welche sich selbst verhakt, konstruiert (siehe \ref{X-Achse_b2}). Sie muss seitlich an den Profilen verschraubt werden. Im vorderen Überhang werden Aluminiumelemente eingehängt, die die Aufhängung der Achse für die Umlenkung erlauben.
@@ -668,7 +668,7 @@ def afss():
 \end{lstlisting}  
 
 Die Funktion dieses Codeblocks besteht darin, herrauszufiltern, ob eine Anfrage einer Siemens-SPS eintrifft und dann dementsprechend Daten zurückzugeben.
-Wenn eine Anfrage mit dem Schlüssel 'next\_bmos' (next-box-moveing-operation) empfangen wird, wird diese dem sog. 'stack' weitergegeben, welcher diese dann verarbeitet (dies wird im Anschluss näher behandelt). Sollte diese von einer SPS kommen, werden die Zurückgeschicten Daten vorher noch so bearbeitet, dass diese von der SPS möglichst gut übersetzt werden können.
+Wenn eine Anfrage mit dem Schlüssel 'next\_bmos' (next-box-moveing-operations) empfangen wird, wird diese dem sog. 'stack' weitergegeben, welcher diese dann verarbeitet (dies wird im Anschluss näher behandelt). Sollte diese von einer SPS kommen, werden die Zurückgeschicten Daten vorher noch so bearbeitet, dass diese von der SPS möglichst gut übersetzt werden können.
 Sollte die SPS ein 'inst\_acknowledge' sowie die dementsprechenden Daten, wird im 'Stack' vermerkt dass die dementsprechende Operation bei der SPS angekommen ist.
 
 Weiters bietet Simens auch die Möglichkeit über den Webserver der CPU auf diese zuzugreifen. Dies geschieht über das JSON-RPC Protokoll \cite{ws_s7}. Aus Testzwecken ist des durchaus nützlcih auh dierekten Zugriff auf die CPU zu haben, wenngleich es für den Normalbetrieb nicht zwingend benötigt wird. Um eine möglichst einfache bedienung zu Ermöglichen wird ein Objekt angelegt, um JSON-RPC Befehle auszuführen.
