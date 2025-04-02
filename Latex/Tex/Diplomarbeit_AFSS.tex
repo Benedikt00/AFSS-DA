@@ -30,6 +30,7 @@
 \usepackage{hyperref}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{makecell}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage{tocloft}
 \usepackage[section]{placeins}
@@ -46,7 +47,7 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{multirow}
-
+\usepackage{pdfpages}
 
 \usepackage{helvet}
 
@@ -209,7 +210,7 @@ detect-all
 \raggedbottom
 
 \begin{document}
-
+\sloppy
 \pagenumbering{gobble}
 
 \setlength{\parindent}{0pt}
@@ -240,7 +241,7 @@ detect-all
 \begin{center}
     \Huge \textbf{DIPLOMARBEIT} \\
     \vspace{7mm}
-    \huge{Titel der Diplomarbeit Deutsch}
+    \huge{AFSS}
 
     \vspace{7mm}
     \huge{Automated-Factory-Storage-System}
@@ -271,10 +272,10 @@ detect-all
 \large
 Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung der Reife- und Diplomprüfung des BMBWF in der letztgültigen Fassung.\par
 \begin{flushright}
-    Klagenfurt, am 04.04.2025
+    Klagenfurt, am \todayD
 \end{flushright}
 
-\newpage
+\newpage\null\thispagestyle{empty}\newpage
 
 \begin{figure}[h]
     \includegraphics[width=0.5\textwidth]{HTL_Moessingerstraßen_Logo.png}
@@ -316,7 +317,7 @@ Diese Diplomarbeit entspricht den Standards gemäß dem Leitfaden zur Umsetzung 
     \end{tabular}
 
     \vspace*{\fill}
-    \raggedleft Klagenfurt, am 04.04.2025
+    \raggedleft Klagenfurt, am \todayD
 
 \end{center}
 

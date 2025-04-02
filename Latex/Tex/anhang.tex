@@ -1,10 +1,23 @@
 
 \section{Resümee}
+Durch die Komplexität und die vielen verschiedenen Tätigkeiten, welche in dieses Projekt geflossen sind, wurde vom gesamten Team eine Vielzahl neuer Fähigkeiten erlernt und vorhandene vertieft.
+\\
+
+Vor allem beim Arbeiten mit unterschiedlichen Programmen, wie TIA-Portal oder E-Plan, konnte viel Neues erlernt werden. Diese finden unter anderem auch Anwendungen in der Industrie, was für den weiteren Arbeitsweg von Vorteil ist.
+\\
+
+Da dieses Projekt einen überdurchschnittlichen Zeitrahmen eingenommen hat, war es umso wichtiger, von Anbeginn ein konsequentes Projektmanagement aufrechtzuerhalten. Durch dieses konnte ein möglichst geregelter Ablauf sichergestellt werden. Um ein großes Projekt umsetzen zu können, wird auch ein großes Team benötigt. Die Zusammenarbeit verlief weitestgehend reibungslos und eine gute Kommunikation zwischen den einzelnen Projektmitgliedern war essenziell.
+\\
+
+Für die weitläufige Sponsorensuche war es sehr wichtig, frühzeitig zu erheben, welche Komponenten benötigt werden. Um das Projekt schnellstmöglich umsetzen zu können, musste der Kontaktaufbau möglichst rasch erfolgen. Dadurch konnte sichergestellt werden, dass die benötigten Komponenten zeitnah zur Verfügung standen. Die Kommunikation mit den Sponsorfirmen verlief sehr gut, und die meisten Materialien konnten schnell verbaut oder in Betrieb genommen werden.
+\\
+
+Weiters wurde das Projekt durch das Lehrpersonal unterstützt. Das Weitergeben ihres Know-hows trug zur kompetenten Umsetzung des Projekts bei. Auch die zur Verfügung gestellten Räumlichkeiten und Materialien waren essenziell, um das Vorhaben in diesem Umfang umsetzen zu können.
 
 
 \section{Anhang}
 
-\subsection{Abmessungen (BSVN)}
+\subsection{Abmessungen}
 
 
 \begin{figure}[H]
@@ -15,10 +28,9 @@
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Vogis Bilder/Maximaldaten.pdf}
     \centering
-    \caption{Abmessungen Rahmen}
+    \caption{Abmessungen Schaltschrank}
 \end{figure}
 
-\subsection{E-Plan}
 
 \subsection{Projektmanagement}
 In diesem Kapitel wird auf das Projektmanagement des AFSS eingegangen. Dieses umfasst die zu Beginn des Projekts ausgearbeitete Aufgabenstellung und die einzelnen Arbeitspakete der jeweiligen Schülerin und Schüler. Außerdem wurde ein Produktstrukturplan angefertigt, in dem die Teilbereiche des Projekts und dessen zuständige Schülerin oder Schüler erkennbar ist. Ein weiterer Teil es Projektmanagements ist der Projektstrukturplan, welcher die unterschiedlichen Arbeitsschritte des Projekts veranschaulicht. Dieses Kapitel beinhaltet auch die in MS Project angefertigte Terminplanung.
@@ -47,15 +59,6 @@ Die vom Benutzer gewünschten Bauteile werden aus einem Lagerplatz zu einer Komm
     \centering
     \includegraphics[width=0.9\textwidth]{WorkBreakdownStructure.png}
     \captionof{figure}{Produktstrukturplan}
-\egroup
-
-\subsubsection{Projektstrukturplan}
-\vspace{5mm}
-
-\bgroup
-    \centering
-    \includegraphics[width=0.9\textwidth]{ProjektStrukturPlan.png}
-    \captionof{figure}{Projektstrukturplan}
 \egroup
 
 \newpage
@@ -154,15 +157,16 @@ Danach bleiben die Daten auch nach dem Abschalten des Containers erhalten.
 Jedoch ist es nach der Implementierung des Rust-Pakets noch nicht möglich, die benötigten Bibliotheken zu installieren, da diese nicht im \texttt{docker-compose.yml} enthalten sind. 
 
 
-
 \subsubsection{Schaltschrank}
     Der Schaltschrank ist möglichst benutzerfreundlich. Zum Inbetriebnehmen ist eine Starkstromleitung an den dafür vorgesehenen Klemmen zu legen. Ist dies gegeben muss der Dreh-Trennschalter nun geschalten werden und die Anlage wird versorgt. Um die Anlage freizugeben ist der Schlüsselschalter zu betätigen.\\
     Beim Inbetriebnehmen ist zu beachten, dass keine Warnleuchten an den elektirschen Komponenten leuchten und es ist auf untypische Geräusche oder Gerüche zu achten. Bei etwaigen Auffälligkeiten ist die Anlage sofort mitels Trennschalter freizuschalten und daraufhin soll die Quelle der Auffälligkeit gefunden werden und, wenn vorhanden, der Fehler behoben werden.\\
     Zur Inbetriebnahme gehört auch, dass der FI und der Leitungsschutzschalter einmal getestet beziehungsweise geschalten werden um die Funktion zu testen.\\
 \newpage
+
 \subsection{Kostenaufstellung des AFSS}
 Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiegend vor langer Zeit getätigt. Daher sind spezifische Kaufdaten nicht bekannt, die folgenden Daten schätzen somit den aktuellen Preis der Komponenten ab. 
-\paragraph{Kapital von der Schule}\mbox{}\\
+
+\paragraph{Kapital der HTL-Mössingerstraße}\mbox{}\\
 \begin{table}[H]
     \begin{tabular}{lllll}
     Name                & Artikelnummer                          & Menge & pro Stück {[}€{]} & Preis {[}€{]} \\ \hline
@@ -170,8 +174,8 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     Schlüsselschalter   & -                                     & 1     & 4.99              & 4.99          \\
     Not-Aus-Schalter    & -                                     & 4     & 12.65             & 50.60         \\
     Motorschutzschalter & -                                     & 1     & 55.45             & 55.45         \\
-    Fehlerstromschutzschalter Typ A & -                         & 1     & 221.20            & 221.20        \\
-    Leitungsschutzschalter C13 & -                             & 1     & 25.00             & 25.00         \\
+    FI Typ A & -                         & 1     & 221.20            & 221.20        \\
+    LS C13 & -                             & 1     & 25.00             & 25.00         \\
     ASi-Slaves          & 3RK2200-0CE02-0AA2                   & 7     & 146.01            & 1022.07       \\
     ET 200 SP           & 6ES7155-6AU01-0CN0                   & 1     & 300.00            & 300.00        \\
     Bus-Karte           & 6ES7193-6AR00-0AA0                   & 1     & 106.67            & 106.67        \\
@@ -212,13 +216,13 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     Gesamt              &                                        &       &                   & 449.15       
     \end{tabular}
 \end{table}
-\paragraph{Gesponsort von der Firma Lapp}\mbox{}\\
+\paragraph{Gesponsort von der Lapp GmbH}\mbox{}\\
 \begin{table}[H]
     \begin{tabular}{lllll}
     Name                & Artikelnummer                          & Menge & pro Stück {[}€{]} & Preis {[}€{]} \\ \hline
-    Kabel               & ÖLFLEX CLASSIC FD 810 CY 5x0.5         & 30m   & 3.92              & 117.63        \\
-    Kabel               & ÖLFLEX CLASSIC FD 810 CY 5x0.75        & 40m   & 4.36              & 174.41        \\
-    Kabel               & ÖLFLEX CHAIN 809 CY 7x0.5              & 40m   & 3.77              & 150.95        \\
+    Subbusverteilung    & \makecell[l]{ÖLFLEX CLASSIC \\FD 810 CY 5x0.5 }        & 30m   & 3.92              & 117.63        \\
+    Motorkabel          & \makecell[l]{ÖLFLEX CLASSIC \\FD 810 CY 5x0.75 }     & 40m   & 4.36              & 174.41        \\
+    Geberkabel             & ÖLFLEX CHAIN 809 CY 7x0.5              & 40m   & 3.77              & 150.95        \\
     Verdrahtungsdraht   & H05V-K 1x0.75                          & 100m  & 0.19              & 18.86         \\
     Verdrahtungsdraht   & H05V-K 1x0.75                          & 100m  & 0.19              & 18.86         \\
     Verdrahtungsdraht   & H05V-K 1x0.75                          & 100m  & 0.19              & 18.86         \\ \hline
@@ -247,14 +251,17 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     \begin{tabular}{lllll}
     Name                           & Artikelnummer & Menge & pro Stück {[}€{]} & Preis {[}€{]}  \\ \hline
     Zahnscheibe AT5x16 20 Zähne    & 16632000      & 2     & 7.58            & 15.16  \\
-    Zahnscheibe AT5x16    27 Zähne & 16632700      & 2     & 8.7             & 17.4   \\
-    Zahnscheibe AT5x16  36 Zähne   & 16633600      & 2     & 12.58           & 25.16  \\
+    Zahnscheibe AT5x16 27 Zähne & 16632700      & 2     & 8.7             & 17.4   \\
+    Zahnscheibe AT5x16 36 Zähne   & 16633600      & 2     & 12.58           & 25.16  \\
     Zahnriemen AT5x16              & 16670000      & 21    & 16.44           & 345.24 \\ \hline
     Gesamt                         &               &       &                 & 402.96
     \end{tabular}
 \end{table}
 \newpage
-\subsection{Besprechungsprotokolle (SV)}
+
+\subsection{Besprechungsprotokolle}
+
+
 %include pdf file as image, on howl page with label
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{../Protokolls/Projektbesprechung_0.pdf}
@@ -284,6 +291,11 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 
 
 \newpage
+
+\subsection{E-Plan}
+\includepdf[scale = 0.8, pages = -, pagecommand={},noautoscale=true, angle=90, flip-other-edge=true]{Vogis Bilder/Zweiter Druck E-Plan.pdf}
+
+
 \subsection{Arbeitsnachweis}
 
 \subsubsection{Simbürger}
@@ -456,6 +468,11 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 10.3.2025	&DAS	&3.0\\
 11.3.2025	&DAS	&3.0\\
 14.3.2025	&Verkabelung Schaltschrank	&4.0\\
+
+\hline
+\hline
+Summe & & xx \\
+
 \end{longtable}
 \newpage
 
@@ -479,7 +496,7 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 
     4.10.2023	&	Besprechung des weiteren vorgehens mit WB	&	0.5 \\
     9.10.2023	&	Gruppenbesprechung für das weitere Vorgehen	&	1.0 \\
-    29.11.2023	&	RSTT Ausfahrer + Lasern Schlitten	&	4.5 \\
+    29.11.2023	&	Lasern Schlitten	&	4.5 \\
     10.1.2024	&	Testversuch ET200 SPS Stepdrive inkl. Meeting Knapp	&	4.0 \\
     16.1.2024	&	Motor ansteuern	&	4.0 \\
     18.1.2024	&	Schritt-Motor ansteuern	&	4.0 \\
@@ -495,10 +512,10 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     25.4.2024	&	STT-Fortsetzung, Verkabelung	&	4.0 \\
     7.5.2024	&	STT-Fortsetzung,	&	1.5 \\
     14.6.2024	&	Z-Prototyp Bauteile Vorbereitung	&	1.0 \\
-    21.6.2024	&	Z-PT, Schaltschrank, SPS-Com	&	4.5 \\
+    21.6.2024	&	SPS-Communikation	&	4.5 \\
     10.9.2024	&	Meeting Weidmüller	&	1.3 \\
     17.9.2024	&	Autolager Demontieren für Bauteilbeschaffung	&	2.5 \\
-    18.9.2024	&	Förderband Abmessen, Verbindungstest, Sensorensicherun	&	2.0 \\\\
+    18.9.2024	&	Förderband Abmessen, Verbindungstest, Sensorensicherung	&	2.0 \\
     26.9.2024	&	Igus, Mororen ansteuern	&	3.0 \\
     3.10.2024	&	Profile bearbeiten	&	1.5\\
     4.10.2024	&	Sensoren testen	&	2.0\\
@@ -527,10 +544,10 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     15.1.2025	&	Zusammenbau Rahmen, Kabel verlegen	&	4.5\\
     17.1.2025	&	Tag der offenen Tür	&	6.5\\
     24.1.2025	&	Lasern, Förderband  &	3.5\\
-    4.2.2025	&	SPS <--> Server	&	3.5\\
+    4.2.2025	&	SPS-Server Kommunikation	&	3.5\\
     21.2.2025	&   Fräsen	&	3.0\\
     25.2.2025	&	Zusammenbauen	&	4.0\\
-    6.5.2025	&	DA-Schreiben	&	2.0\\
+    6.3.2025	&	DA-Schreiben	&	2.0\\
     11.3.2025	&	DA-schreiben	&	2.0\\
     14.3.2025	&	Verkabelung     &	4.0\\
     18.3.2025	&	Verkabelung	&	5.0\\
@@ -541,6 +558,11 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
     26.3.2025   &   DA Schreiben    &   5.0 \\
     27.3.2025   &   DA Schreiben    &   3.0 \\
     28.3.2025	&	DA schreiben	&	3.0\\
+
+    \hline
+    \hline
+    Summe & & xx \\
+
 \end{longtable}
 \newpage
 
@@ -640,7 +662,109 @@ Da die Käufe der Komponenten, von der Schule oder von den Sponsoren, überwiege
 21.3.2025	&	Verkabelung	&	2.5	\\
 26.3.2025	&	DA-Schreiben	&	2	\\
 27.3.2025 &	DA-Schreiben	&	5	\\
+
+\hline
+\hline
+Summe & & xx \\
+
 \end{longtable}
 \newpage
 
+\subsubsection{Widmann}
 
+\begin{longtable}{|l|p{10cm}|r|}
+    \hline
+    \textbf{Datum} & \textbf{Tätigkeit} & \textbf{Stunden} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Datum} & \textbf{Tätigkeit} & \textbf{Stunden} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+    4.10.2023	&	Besprechung des weiteren vorgehens mit WB	&	0,5	\\
+    9.10.2023	&	Gruppenbesprechung für das weitere Vorgehen	&	1,0	\\
+    12.12.2023	&	Schlitten Prototyp bauen	&	2,0	\\
+    11.1.2024	&	Achse und Schlitten vertikal Prototyp bauen	&	3,5	\\
+    16.1.2024	&	Motor ansteuern	&	4,0	\\
+    18.1.2024	&	Schritt-Motor ansteuern	&	4,0	\\
+    19.1.2024	&	Schritt-Motor ansteuern	&	3,0	\\
+    30.1.2024	&	Inventur/ Sortierung Knapp-Sponsoring	&	4,0	\\
+    5.2.2024	&	KWF Antrag schreiben	&	1,0	\\
+    6.2.2024	&	Induktiver Sensor testen	&	1,5	\\
+    7.2.2024	&	Barcodescanner	&	3,5	\\
+    27.2.2024	&	Barcodescanner	&	4,0	\\
+    4.3.2024	&	Barcodescanner	&	3,5	\\
+    13.3.2024	&	Absprache mit Wurnitsch bez. Pflichtenheft	&	2,0	\\
+    14.3.2024	&	Barcodescanner	&	3,0	\\
+    21.6.2024	&	Z-Achse Prototyp bauen	&	1,0	\\
+    20.8.2024	&	Sponsorenemail	&	1,3	\\
+    21.8.2024	&	Kontaktdaten, Projektzusammenfassung	&	1,5	\\
+    10.9.2024	&	Meeting Weidmüller	&	2,0	\\
+    12.9.2024	&	Siemens und Lapp Telefonat und E-Mail	&	1,0	\\
+    17.9.2024	&	Präsentation und Projektmanagement	&	3,0	\\
+    18.9.2024	&	Förderband Abmessen, Sensorensicherung	&	2,0	\\
+    24.9.2024	&	Project libre	&	3,0	\\
+    26.9.2024	&	Igus	&	1,0	\\
+    27.9.2024	&	Sonsoren, E-Mails der letzten Tage	&	1,0	\\
+    1.10.2024	&	Zeitplan, Sensoren recherchieren	&	3,5	\\
+    4.10.2024	&	Sensoren testen	&	2,0	\\
+    9.10.2024	&	Raumeinrichtung	&	2,5	\\
+    12.10.2024	&	Latex Vorlage	&	3,0	\\
+    14.10.2024	&	Latex Vorlage	&	2,0	\\
+    15.10.2024	&	Zeitplan	&	4,0	\\
+    16.10.2024	&	Latex Vorlage	&	1,5	\\
+    22.10.2024	&	2.Präsentation, Referenzschaltung	&	2,0	\\
+    23.10.2024	&	Referenzplatine	&	2,0	\\
+    24.10.2024	&	Poster/2.Präsentation	&	3,5	\\
+    12.11.2024	&	Drehen, E-Plan, 	&	3,0	\\
+    15.11.2024	&	ASi	&	2,0	\\
+    19.11.2024	&	ASi	&	1,5	\\
+    22.11.2024	&	Website	&	3,5	\\
+    26.11.2024	&	Website	&	5,5	\\
+    27.11.2024	&	Website	&	3,0	\\
+    29.11.2024	&	Website, Referenzplatine	&	4,0	\\
+    3.12.2024	&	ASI-Sensoren-Platine	&	2,0	\\
+    6.12.2024	&	Website	&	3,0	\\
+    10.12.2024	&	ASi in E-Plan	&	3,5	\\
+    13.12.2024	&	E-Plan 	&	3,5	\\
+    6.1.2025	&	Website	&	3,0	\\
+    7.1.2025	&	Website	&	4,0	\\
+    10.1.2025	&	Website	&	4,0	\\
+    14.1.2025	&	Website	&	4,0	\\
+    15.1.2025	&	Platinen löten	&	3,0	\\
+    17.1.2025	&	Tag der offenen Tür	&	6,0	\\
+    21.1.2025	&	Platinen testen	&	3,5	\\
+    22.1.2025	&	ASi (Fail)	&	3,0	\\
+    23.1.2025	&	ASi (Success)	&	1,5	\\
+    24.1.2025	&	Lasern	&	1,5	\\
+    4.2.2025	&	Sicherheitstechnik-Besprechung	&	1,5	\\
+    21.2.2025	&	Referenzplatine	&	2,0	\\
+    28.2.2025	&	Lasern	&	2,0	\\
+    6.3.2025	&	DA schreiben	&	2,0	\\
+    9.3.2025	&	DA schreiben	&	2,0	\\
+    10.3.2025	&	DA schreiben	&	2,0	\\
+    11.3.2025	&	DA schreiben	&	3,0	\\
+    14.3.2025	&	DA schreiben	&	4,5	\\
+    16.3.2025	&	DA schreiben	&	3,0	\\
+    18.3.2025	&	DA schreiben	&	4,0	\\
+    22.3.2025	&	DA schreiben	&	3,0	\\
+    23.3.2025	&	DA schreiben	&	2,0	\\
+    25.3.2025	&	DA schreiben	&	4,0	\\
+    28.3.2025	&	DA Anhang	&	4,0	\\
+    31.3.2025	&	DA korrigieren	&	1,0	\\
+    1.4.2025	&	DA korrigieren und Stunden	&	4,0	\\
+    2.4.2025	&	DA korrigieren und Anhang	&	1,5	\\
+    
+    \hline
+    \hline
+    Summe & & 196,8 \\
+
+\end{longtable}
