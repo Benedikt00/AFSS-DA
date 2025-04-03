@@ -809,7 +809,7 @@ fn inverse_document_frequency(term: &str, all_documents: &Vec<String>) -> f64 {
 \end{lstlisting}
      \item Nun liegt eine Liste davon vor, wie oft ein Wort in den Suchdaten vorkommt, als auch, wie oft ein Suchbegriff in einem bestimmten Dokument ist. \\ Als nächsten Schritt werden diese beiden Werte für jeden Suchbegriff miteinander multipliziert und ergeben somit einen Vektor der die Suchwörter in Relation zu jedem einzelnen Dokument stellt.
     \item Als letzten Schritt wird der zuvor errechnete Dokumentenvektor (der IDF jedes Suchterms in jedem Dokument) mit dem Suchvektor verglichen. Die geschieht mit der sog. Kosinus-Ähnlichkeit.
-    \begin{lstlisting}[language=Rust, caption={Berechnung der Cosinusähnlichkeit}]
+    \begin{lstlisting}[language=Rust, caption={Berechnung der Kosinusähnlichkeit}]
 fn cos_similarity(query_p: Vec<f64>, document_p: Vec<f64>) -> f64 {
     // Ensure that both vectors have the same length
     if query_p.len() != document_p.len() {
