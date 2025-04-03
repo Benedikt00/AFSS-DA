@@ -155,8 +155,35 @@ detect-all
     xleftmargin=1cm,
     captionpos=b
 }
+
+\lstdefinelanguage{SCL}{
+    morekeywords={A, AN, O, ON, NOT, L, =, JCN, JC, CALL, RET, BE, 
+                  BLD, SET, RST, S, R, SAVE, UNLINK, LP, LPP, T, TAKT, 
+                  CLR, =P, =N, +, -, *, /},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{(*}{*)},
+    morestring=[b]",  % Double-quoted strings
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red},
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    tabsize=4,
+    breaklines=true,
+    breakatwhitespace=true,
+    captionpos=b
+}
 % -- Setting up the custom style:
 \lstset{style=mystyle}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \geometry{a4paper}

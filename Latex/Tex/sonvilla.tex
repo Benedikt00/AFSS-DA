@@ -258,7 +258,7 @@ Um die Technologieojekte nutzen zu können, müssen diese korrekt konfiguriert w
                 \end{itemize}
         \end{enumerate}
 
-* Dieser Wert komm zustande indem man sich anschaut wie weit sich die X-Achse bewegt, wenn der Motor ein Umdrehung macht. Bei einer Drehung des Motors, bewegt sich die X-Achse um den Umfang des Zahnrades, also:
+* Dieser Wert komm zustande indem man sich anschaut wie weit sich die X-Achse bewegt, wenn der Motor eine Umdrehung macht. Bei einer Drehung des Motors, bewegt sich die X-Achse um den Umfang des Zahnrades, also:
 
 \vspace{-6mm}
         \begin{equation*}
@@ -269,7 +269,7 @@ Bei einem Durchmesser des Zahnrades von \qty{42,97}{\milli\meter} ergibt sich so
 
 \vspace{-6mm}
         \begin{equation*}
-            Spindelsteigung = 2 * r * \pi = 42,97 * \pi = 134,9942
+            Spindelsteigung = 2 * r * \pi = \qty{42,97}{\milli\meter}  * \pi = \qty{134,9942}{\milli\meter} 
         \end{equation*}
 
 \paragraph{Gleichlaufachse} \mbox{} \\
@@ -519,7 +519,7 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
     \mbox{} \\
     Alle Bausteine zur Datenfilterung wurden in SCL programmiert. Als Eingabe dient der string, welcher die Daten beinhaltet. In diesem wird zuerst nach ID gefiltert (siehe Code-Snippet \ref{SCL-Baustein}, Zeile 1). Dies liefert die Position von ID innerhalb des Strings. Daraufhin werden alle Zeichen links von ID + ID wegelöscht (siehe Code-Snippet \ref{SCL-Baustein}, Zeilen 2 bis 5). Nun weiß man das rechts von ID eine vierstellige Nummer (ID-Nummer) steht. Da alles links von dieser Nummer weggeschnitten wurde, weiß man das diese Nummer ganz links im string ist. Deswegen werden die ersten vier Stellen von links genommen und dem Ausgang Q\_Info\_ID zugewiesen (siehe Code-Snippet \ref{SCL-Baustein}, Zeile 6). Dieser Ausgang ist für das gesamte Programm erreichbar. Dasselbe Suchen und Löschen der Zeichen links vom Gesuchten wird ebenfalls für A (Area / Auftrag) erledigt (siehe Code-Snippet \ref{SCL-Baustein}, Zeilen 10 bis 13). Da man den Wert von Area, welcher den Auftrag definiert, vergleichen will um den richtigen Baustein auszuführen, werden die zwei Zeichen links von A, von denen wir wissen das es Zahlen sind, in das Datenformat int konvertiert und dem Ein-Ausgang IQ\_Info\_Area zugewiesen (siehe Code-Snippet \ref{SCL-Baustein}, Zeilen 19 bis 23). \\
 
-    \begin{lstlisting}[language=Pascal, caption={SCL Baustein \enquote{ID+Area}}, label = SCL-Baustein]
+    \begin{lstlisting}[language=SCL, caption={SCL Baustein \enquote{ID+Area}}, label = SCL-Baustein]
         #T_Int := FIND(IN1 := #I_Datenstring, IN2 := 'ID');
 IF #T_Int > 0 THEN
     #X_Info_ID := #T_Int + 1;
@@ -546,8 +546,6 @@ IF #T_Int > 0 THEN
     
 END_IF;
     \end{lstlisting}
-
-\newpage
 
 \subsection{Fazit}
 Was bei dieser Diplomarbeit noch nicht erwähnt wurde, ist das dauernde Experimentieren sowie Ausprobieren, ob es so funktioniert, wie man es sich vorstellt. Natürlich funktioniert nicht alles beim ersten Mal. Bei der Motoransteuerung wurde zuerst eine Lösung über ein Weidmüller-Modul angestrebt. Dieses ist jedoch ein PWM-Modul, welches nicht zum Ansteuern von Motortreibern verwendet werden kann. Diese benötigen ein frequenzabhängiges PTO Signal. Auch die SPS-Server-Kommunikation wurde mehrmals ausgetestet. Zuerst über OPC-UA und anschließend erst über HTTP. Daraufhin folgt dann gleich die nächste Herausforderung. Die gesendeten Daten ins JSON-Format zu bringen sowie den HTTP-Post-Put Baustein richtig anzusteuern. Manchmal scheitert es auch an den kleinen Sachen, wie beispielsweise darauf zu achten, dass der Server im richtigen Netzwerk hängt. Den richtigen Namen der SPS zu geben, ist in Tia Portal auch wichtiger als man annehmen möchte und hat am Anfang durchaus für Verwirrung gesorgt. Mittels Versuchen wurde auch herausgefunden, wie man die Daten im JSON-Tree richtig einträgt. Sowohl die HTTP Bausteine als auch die Bausteine, welche verwendet werden, um die Daten ins JSON-Format zu bringen, sind als globale Bibliothek einzubinden. Aufgrund eines fehlenden Siemens-Accounts musste man sich hier immer an einen zuständigen Werkstättenlehrer wende. Hier besteht immer eine zeitliche Diskrepanz, etwas was durchaus öfters aufgefallen ist. Egal, was man machen will, es benötigt Vorbereitung und oft auch eine zweite Person. Dies sollte immer im Vorhinein ausgemacht werden. Zudem wurde gelernt, besser mit Datenblättern sowie dem Internet umzugehen, da jedes Austesten eine Recherche sowie Fehlerbehebung benötigt. Schlussendlich ist das Projekt, eine positive Erfahrung. Daher möchte ich an dieser Stelle einen Dank an meine Teamkollegen aussprechen.
