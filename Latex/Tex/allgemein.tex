@@ -25,7 +25,7 @@ Das System soll nicht nur produzierbar, sondern auch reproduzierbar sein. Daher 
 \subsubsection{Lagermethoden}
 Die Industrie bietet viele Vorbilder dafür, wie ein boxenbasiertes Lagersystem aufgebaut sein kann.
 \\
-Eine besonders platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP \cite{pickengine}. Bei dieser Lösung werden Boxen in mehreren Ebenen übereinander gelagert. Auf jeder Ebene gibt es bewegliche Roboter, die die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommissionierstation transportiert wird. Dieses System ist sowohl platzsparend als auch sehr ausfallsicher. Allerdings ist es schwierig, ein solches System in Miniatur nachzubauen, da die Hardwarefertigung sehr komplex ist.
+Eine besonders platzeffiziente Variante ist beispielsweise die PickEngine von KNAPP (vgl. \cite{pickengine}). Bei dieser Lösung werden Boxen in mehreren Ebenen übereinander gelagert. Auf jeder Ebene gibt es bewegliche Roboter, die die Boxen abholen und zu einem Lift bringen, von dem aus die Box dann zur Kommissionierstation transportiert wird. Dieses System ist sowohl platzsparend als auch sehr ausfallsicher. Allerdings ist es schwierig, ein solches System in Miniatur nachzubauen, da die Hardwarefertigung sehr komplex ist.
 \\
 Eine weitere Möglichkeit wäre ein rotierendes Magazin, in dem die Boxen auf einem horizontalen Karussell gelagert sind. Wenn ein bestimmtes Produkt benötigt wird, rotiert das Karussell so lange weiter, bis die gewünschte Box zugänglich ist. Das Prinzip dieses Systems ist zwar recht simpel, jedoch stellt die mechanische Umsetzung der Rotation mit den Mitteln der HTL eine Herausforderung dar, insbesondere im Hinblick auf einen zuverlässigen Dauerbetrieb.
 \\
@@ -35,7 +35,7 @@ Eine dritte Option besteht darin, die Ware vertikal von oben zu lagern. Über de
 
 \subsubsection{Steuerung}
 Es gibt durchaus verschiedenste Methoden zur Steuerung von Anlagen. Bekannterweise werden hier Speicherprogrammierbare Steuerungen, kurz SPS, verwendet. Diese bieten den Vorteil, komplexe Steuerungen durch Programmierung mit intuitiven Programmiersprachen realisieren zu können. Jedoch erfordern SPS für jeden Zusatz, beispielsweise digitale Ein-/Ausgänge oder das Ansteuern von Motoren, verschiedenste Module. \\
-Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand, sowie die Komplexität des \textbf{des is schon a bissi hoch gestochen} Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
+Eine günstigere Variante zu Speicherprogrammierbare Steuerungen bieten Arduinos. Diese benötigen aber für das Ansteuern von energielastigeren Bauelementen auch zusätzliche Elemente. Zusätzlich steigt der Programmier-Aufwand, sowie die Komplexität des Programms, bei großen Anlagen ins Unermessliche, da jedweilige Motoransteuerung oder Verbindung mit Servern ausprogrammiert werden muss. Dieser Aufwand wäre in diesem Projekt zeitlich nicht schaffbar.\\
 Ein wenig teurer als Arduino, aber noch unter dem Preis einer SPS, liegen Verbindungsprogrammierbare Steuerungen, welche die Funktion dadurch realisieren, wie sie verdrahtet sind, über Relais, Schalter, etc. Diese sind aber mit einem beträchtlichen Aufwand, aufgrund von Verkabelung sowie Anschaffung benötigter Materialien, verbunden. Zusätzlich ist die Realisierung von komplexeren Projekten durchaus zeitintensiv. 
 
 
@@ -69,7 +69,7 @@ Zur Dokumentation der elektrischen Komponenten und deren Verbindungen wird E-Pla
 \paragraph{Fusion360/PCB}\mbox{}\\
 Zur mechanischen Planung des AFSS wird vorrangig Fusion360 genutzt. Dies ist ein 3D-CAD (Computer-Aided-Design) Programm, welches eine breite Palette von Funktionen bietet, jedoch noch sehr bedienerfreundlich ist. Weiters ist es sehr nützlich, dass Fusion360 eine integrierte Cloud-Speicherung anbietet. So können die Konstruktionen von anderen Personen einfach eingesehen werden.\\
 
-Die volle Integration von Eagle in Fusion360 im Jahr 2020 macht es möglich, auch in Fusion360 Leiterplatten zu entwerfen und die dazugehörigen Schaltungen zu zeichnen. Der Verkauf des Programms Autodesk Eagle wird mit Juni 2026 eingestellt und ist somit nicht mehr Stand der Technik.\cite{Eagle_in_Fusion} Das Entwerfen von PCBs (Printed Circuit Boards) ist durch die Integration in Fusion360 nicht nur einfacher, sondern auch einheitlicher geworden. Außerdem kann durch die Zusammenführung der beiden Programme ermöglicht werden, dass Projekte auf einer zentralen Entwurfsplattform umgesetzt werden.
+Die volle Integration von Eagle in Fusion360 im Jahr 2020 macht es möglich, auch in Fusion360 Leiterplatten zu entwerfen und die dazugehörigen Schaltungen zu zeichnen. Der Verkauf des Programms Autodesk Eagle wird mit Juni 2026 eingestellt und ist somit nicht mehr Stand der Technik (vgl. \cite{Eagle_in_Fusion}). Das Entwerfen von PCBs (Printed Circuit Boards) ist durch die Integration in Fusion360 nicht nur einfacher, sondern auch einheitlicher geworden. Außerdem kann durch die Zusammenführung der beiden Programme ermöglicht werden, dass Projekte auf einer zentralen Entwurfsplattform umgesetzt werden.
 
 \paragraph{AutoCAD}\mbox{}\\
 Zur mechanischen Planung des AFSS wird auch AutoCAD verwendet. Vor allem für Pläne von Frästeilen oder Laserteilen bietet sich diese Applikation an. AutoCAD wird in der Industrie verwendet und bietet eine benutzerfreundliche Oberfläche sowie eine breite Palette an Funktionen.
@@ -82,8 +82,8 @@ Die Favorisierte Lösungsvariante für dies Anforderungen ist die Entwicklung ei
 
 
 \paragraph{Tia Portal}\mbox{}\\
-Ist die Software, welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens anzusteuern. Tia-Portal bietet die Möglichkeit, in verschiedensten Programmiersprachen zu arbeiten (Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph.) Zudem können externe Anwendungsspezifische Funktionsbausteine mit Bibliotheken eingebunden werden.
-\cite{TIA_Portal_Programmiersprachen}
+Ist die Software, welche verwendet wird, um speicherprogrammierbare Steuerungen von Siemens anzusteuern. Tia-Portal bietet die Möglichkeit, in verschiedensten Programmiersprachen zu arbeiten (Funktionsplan (FUP), Kontaktplan (KOP), einer Anweisungsliste (AWL), mit Structered Code Language (SCL) oder Graph.) Zudem können externe Anwendungsspezifische Funktionsbausteine mit Bibliotheken eingebunden werden (vgl.
+\cite{TIA_Portal_Programmiersprachen}).
 
 \subsubsection{Hardware}
 \nopagebreak
@@ -103,7 +103,7 @@ Ohne mechanische Endschalter würde die Gefahr bestehen, dass die Motoren nicht 
 
 
 \paragraph{Elektrik}\mbox{}\\
-Die elektrische Seite der Anlage besteht unter anderem aus diesen 7 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und mit einen Motorschutz wird der Motor \textbf{(vor überlast)} geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
+Die elektrische Seite der Anlage besteht unter anderem aus diesen 7 Schrittmotoren, wobei Drei davon schwächer sind. Wenn alle Motoren gleichzeitig anlaufen können Ströme von gut mehr als 20 A entstehen. deswegen werden die Motoren auf zwei 20 A/24 V Gleichspannungs-Netzteile aufgeteilt. Die Logik an der Anlage besteht aus einer Siemens SPS samt Ein- und Ausgangsmodul sowie zwei PTO-Modulen. Der Logikkreis samt SPS sollen getrennt gespeißt werden, mit einem 24V/10A Gleichspannungsnetzteil-Netzteil. Die Sensoren auf der Anlage laufen über einen ASI-Bus, der Master ist eine Karte für eine ET200. Das ASI-System muss über ein ASI-Netzteil gespeißt werden. Das Fließband wird von einem Asynchronmotor mit 1.1 A Nennstrom betrieben. dieser wird über eine Wendeschützschaltung angesteuert. Die Schütz werden von Relais angesteuert und mit einen Motorschutz wird der Motor vor Überlast geschützt. Die Anlage wird über einen FI und einen Leitungsschutzschalter abgesichert und hat zudem einen Schlüsselschalter und einen dreiphasigen Drehschalter zur manuellen Freigabe.\\
 Die Motoren haben jeweils einen Encoder dabei. Somit müssen ein Motorkabel und ein Kabel für den Encoder verlegt werden. Beide Kabel müssen geschrimt sein. 
 
 
@@ -122,7 +122,7 @@ Als Aluminiumlegierung wird hier die Legierung EN-AW 5754 (AlMg3) verwendet. Die
 Um Aluminiumextrusionen abzulängen wird eine eigens dafür ausgelegte Kreissäge verwendet. In dieser ist es möglich einen Anschlag für eine bestimmte Länge einzustellen und dann abzuschneiden. Dadurch ist es möglich in kurzer Zeit viele verschiedene Längen präzise zuzuschneiden. 
 
 \paragraph{3D-Drucken}\mbox{}\\
-Für die Herstellung von Kunststoffteilen, die im Lasercutter nicht gefertigt werden können, stehen den Schülern mehrere 3D-Drucker zur verfügung. Die Drucker können mit verschiedensten Materialen drucken, beispielsweise PLA oder ABS. Komplexe Bauteile die nicht über die räumlichen Begrenzungen der Drucker hinausgehen, können so gefertigt werden. Dazu wird ein 3D-Modell im stl.-Format benötigt, welches dann in einem Slicerprogramm in G-Code oder Bg-Code umgewandelt werden kann\cite{How_to_PrusaSlicer}. Schulintern wird hierzu primär der PrusaSlicer verwendet.
+Für die Herstellung von Kunststoffteilen, die im Lasercutter nicht gefertigt werden können, stehen den Schülern mehrere 3D-Drucker zur verfügung. Die Drucker können mit verschiedensten Materialen drucken, beispielsweise PLA oder ABS. Komplexe Bauteile die nicht über die räumlichen Begrenzungen der Drucker hinausgehen, können so gefertigt werden. Dazu wird ein 3D-Modell im stl.-Format benötigt, welches dann in einem Slicerprogramm in G-Code oder Bg-Code umgewandelt werden kann (vgl. \cite{How_to_PrusaSlicer}). Schulintern wird hierzu primär der PrusaSlicer verwendet.
 
 \subsection{Sicherheitstechnik}
 Um eine langjährige korrekte Funktion des AFSS sicherstellen zu können, müssen diverse Sicherheitsvorkehrungen getroffen werden. Diese lassen sich unterteilen in die Sicherheit der Personen, die das Lagersystem bedienen, und in die Sicherheit des Systems selbst, vor Beschädigung durch Fremdeinwirkungen oder im eigenen Fehlerfall. Um die Sicherheitstechnik richtig umsetzen zu können, muss diese bereits im Vorhinein durchdacht und gut geplant werden.\\
@@ -133,7 +133,7 @@ Damit die Motoren des Lagersystems nicht nur im Normalbetrieb zum Stoppen gebrac
 \subsection{Kooperationspartner}
 
 \subsubsection{KNAPP AG}
-Die KNAPP AG ist ein vergleichsweise junges Grazer Unternehmen mit dem Schwerpunkt auf Intralogistik und automatisierten Lagerlösungen. Die Firma wurde 1952 von Günter Knapp gegründet und hat sich seitdem als einer der führenden Anbieter für Lagerlogistik behauptet. Mit über 40 Standorten weltweit und mehr als 4.100 MitarbeiterInnen arbeitet KNAPP stets an neuen innovativen Ideen und Lösungen für die komplexen Probleme der Lagerlogistik. Viele der etablierten Marktlösungen wurden von KNAPP entwickelt und umgesetzt. \cite{knapp}\\
+Die KNAPP AG ist ein vergleichsweise junges Grazer Unternehmen mit dem Schwerpunkt auf Intralogistik und automatisierten Lagerlösungen. Die Firma wurde 1952 von Günter Knapp gegründet und hat sich seitdem als einer der führenden Anbieter für Lagerlogistik behauptet. Mit über 40 Standorten weltweit und mehr als 4.100 MitarbeiterInnen arbeitet KNAPP stets an neuen innovativen Ideen und Lösungen für die komplexen Probleme der Lagerlogistik. Viele der etablierten Marktlösungen wurden von KNAPP entwickelt und umgesetzt (vgl. \cite{knapp}).\\
 KNAPP ist seit der ersten Stunde ein Unterstützer des Projektes AFSS. Die Materialspenden deckten die meisten elektrischen Komponenten, sowie die Siemens-SPS, und ein weiterführendes Alleinstellungsmerkmal von KNAPP war, dass sie dem AFSS-Betreuung zur Verfügung gestellt haben. Vor allem im Bereich der Software und der Steuerung der Anlage konnte KNAPP mit dem Wissen aus der Praxis effizient helfen. KNAPP-Mitarbeiter waren bis zum Ende des Projektes stets in Kontakt mit dem AFSS-Team und bemüht zu helfen.
 
 \begin{figure}[H]
@@ -146,7 +146,7 @@ KNAPP ist seit der ersten Stunde ein Unterstützer des Projektes AFSS. Die Mater
 
 \subsubsection{Weidmüller GmbH}
 
-Weidmüller wurde 1850 von Carl August Weidmüller als Unternehmen in der Textilindustrie gegründet. Heute ist die Firma in mehr als 80 Ländern vertreten und arbeitet in der Branche Elektrotechnik und Automatisierung. Konkret deckt Weidmüller ein breites Spektrum an Produkten ab. Einerseits werden viele Komponenten für den Schaltschrankbau hergestellt, sowie die neuartigen Push-In-Klemmen, und andererseits hat das Unternehmen auch Produkte in Richtung Digitalisierung sowie Komponenten für den PV-Bereich. \cite{weidmueller}\\
+Weidmüller wurde 1850 von Carl August Weidmüller als Unternehmen in der Textilindustrie gegründet. Heute ist die Firma in mehr als 80 Ländern vertreten und arbeitet in der Branche Elektrotechnik und Automatisierung. Konkret deckt Weidmüller ein breites Spektrum an Produkten ab. Einerseits werden viele Komponenten für den Schaltschrankbau hergestellt, sowie die neuartigen Push-In-Klemmen, und andererseits hat das Unternehmen auch Produkte in Richtung Digitalisierung sowie Komponenten für den PV-Bereich (vgl. \cite{weidmueller}).\\
 Weidmüller stellte dem AFSS viele Komponenten für den Schaltschrank zur Verfügung, wie die genannten Push-In-Klemmen, aber auch DC-Sicherungen, Feldbuskoppler und PWM/Schrittmotorkarten. Die Firma ermöglichte mit ihren Materialspenden, dass das Projekt so weitergeführt werden konnte. 
 
 \begin{figure}[H]
@@ -158,7 +158,7 @@ Weidmüller stellte dem AFSS viele Komponenten für den Schaltschrank zur Verfü
 
 \subsubsection{igus GmbH}
 Die Firma igus ist Hersteller von Hochleistungspolymeren für Bewegungs-Applikationen. Sie entwickeln und produzieren sogenannte motion plastics, Produkte aus schmierfreien Kunststoffen. Dazu zählen unter anderem Energieketten, Kabel, Gleitlager, Gewindetechnik, Roboter sowie intelligente Sensorik. Der Firmenname leitet sich davon her, das die meisten Produkte im Spritzgussverfahren hergestellt werden.\\
-\textbf{igus} = \textbf{I}ndustriespritz\textbf{gus}s. \cite{igus} \\
+\textbf{igus} = \textbf{I}ndustriespritz\textbf{gus}s (vgl. \cite{igus}). \\
 Igus unterstützte das Projekt durch die Bereitstellung der benötigten Kabelschleppketten, Linearführungen, sowie Spindeln. Zusätzlich wird Online eine Software von igus gestellt, welche gratis zur Verfügung steht, die zur Konfiguration der benötigten Teile genutzt wurde.
 
 \begin{figure}[H]
@@ -169,7 +169,7 @@ Igus unterstützte das Projekt durch die Bereitstellung der benötigten Kabelsch
 \end{figure}
 
 \subsubsection{LAPP Austria GmbH}
-LAPP Austria GmbH wurde 1994 gegründet und ist Mitglied der globalen LAPP Gruppe. Ihr Standort in Österreich befindet sich in Linz. LAPP Gruppe ist weltweit führender Anbieter von Kabel-, Stecker- und Verbindungslösungen. Sie bietet ein umfassendes Sortiment an hochwertigen Produkten und maßgeschneiderten Lösungen, die in den verschiedensten Industriezweigen zum Einsatz kommen.\cite{lapp}\\
+LAPP Austria GmbH wurde 1994 gegründet und ist Mitglied der globalen LAPP Gruppe. Ihr Standort in Österreich befindet sich in Linz. LAPP Gruppe ist weltweit führender Anbieter von Kabel-, Stecker- und Verbindungslösungen. Sie bietet ein umfassendes Sortiment an hochwertigen Produkten und maßgeschneiderten Lösungen, die in den verschiedensten Industriezweigen zum Einsatz kommen (vgl. \cite{lapp})\\
 Um unser Projekt verwirklichen zu können werden wir von LAPP durch die Bereitstellung diverser Schleppkettenkabel unterstützt, welche zur Motor- und Geberverkabelung sowie zur Subbusverteilung verwendet werden. Außerdem haben wir Kabel zur Verdrahtung des Schaltschranks in verschiedenen Farben von LAPP erhalten.
 \begin{figure}[H]
     \centering
@@ -180,7 +180,7 @@ Um unser Projekt verwirklichen zu können werden wir von LAPP durch die Bereitst
 \end{figure}
 
 \subsubsection{Mädler GmbH}
-Die Firma Mädler GmbH wurde 1882 gegründet und ist Hersteller und Großhändler von Antriebs- und Maschinenbauelementen. Ihr Sortiment umfasst eine Vielzahl an Produkten und wird stetig erweitert. Zu ihren angebotenen Diensten gehören das Trennen und Schweißen von Zahnriemen sowie das Trennen und Vernieten von Rollenketten auf die Wunschlänge der Kunden. Mädler geht flexibel auf die Kundenwünsche ein, auch Sonderanfertigungen nach Zeichnung gehören zu ihrem Angebot.\cite{mädler}\\
+Die Firma Mädler GmbH wurde 1882 gegründet und ist Hersteller und Großhändler von Antriebs- und Maschinenbauelementen. Ihr Sortiment umfasst eine Vielzahl an Produkten und wird stetig erweitert. Zu ihren angebotenen Diensten gehören das Trennen und Schweißen von Zahnriemen sowie das Trennen und Vernieten von Rollenketten auf die Wunschlänge der Kunden. Mädler geht flexibel auf die Kundenwünsche ein, auch Sonderanfertigungen nach Zeichnung gehören zu ihrem Angebot. (vgl. \cite{mädler})\\
 Das Projekt wurde von Mädler durch die Bereitstellung von Zahnriemen sowie Zahnscheiben unterstützt.
 
 \begin{figure}[H]
