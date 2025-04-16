@@ -680,11 +680,11 @@ Weiters bietet Siemens auch die Möglichkeit über den Webserver der CPU auf die
 
 Dieses Objekt kann dann einfach in einen anderen Programmteil importiert werden, und dort dann die Verbindung zu einer SPS herstellen. Theoretisch könnte man auch mehrere dieser Objekte anlegen, um Zugriff mehreren Steuerungen umzusetzen.
 
-\subsubsection{Lageralgorithmus für SPS}\mbox{}\\
-
+\subsubsection{Lageralgorithmus für SPS}
 Die Auftrage sind im Einkaufswagen oder Änlichem, im Format \enquote{Location -\> Location} hinterlegt. Um dies in eine Operation zu zerlegen, die die SPS versteht, wird eine Box-Moveing-Operation erstellt. Diese enthält alle Teilschritte, wie Schlittenposition oder Förderbandstrecke, um eine Box von Position A zu Position B zu bringen. 
 Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, aufgeteilt und dann dem \enquote{stack} zugeführt. Diese Instruktion enthält Daten wie:
 \begin{itemize}
+
     \item \enquote{instruction\_id}: Eine fortlaufende Nummer um jede Anweisung zu identifizieren
     \item \enquote{order\_id}: Zusammenhängende Anweisungen ,bzw. Anweisungen für die gleiche Box haben eine gleiche Nummer
     \item \enquote{relation}: eine Liste mit \enquote{instruction\_id's}, welche vor dieser Anweisung erfüllt sein müssen
@@ -693,7 +693,7 @@ Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, a
 Bei Auswahl der zu schickenden Anweisung, wird zuerst die aktuelle von der SPS gemachte Anweisung vermerkt, danach wird in allen Modulen des \enquote{stacks} nachgeschaut, welche Anweisungen jetzt ausgeführt werden können (siehe Abb. \ref{bmos_diag}). Zu diesem Zweck wird die \enquote{relation} einer Anweisung mit den bereits gemachten Anweisungen verglichen, wenn bereits alle relevanten Anweisungen gemacht wurden, wird der Auftrag in \enquote{to\_send} vermerkt. Schlussendlich wird einer der in \enquote{to\_send} vermerkten Aufträge für die SPS übersetzt und an diese geschickt. 
 Wenn die SPS den Auftrag erhalten hat, schickt sie ein \enquote{acknowledge} mit der erhaltenen ID zurück. Der Auftrag wird dann aus den \enquote{instructions\_to\_send} gelöscht und entweder wird einfach der nächste Auftrag in \enquote{to\_send} geschickt oder der \enquote{BMOS} Algorithmus wird erneut durchlaufen.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{stack.png}
     \caption{Diagramm der BMOS bereitstellung}
@@ -704,7 +704,8 @@ Wenn die SPS den Auftrag erhalten hat, schickt sie ein \enquote{acknowledge} mit
 
 Als Datenbanksystem wird aufgrund des guten Supports MySQL gewählt. Dies ist ein relationales Datenbankmanagementsystem welches in einem Docker-Container aufgesetzt wird. In diesem werden alle Daten gespeichert, die zur Auswahl sowie zur Ausliferung von Teilen nötig sind.
 
-\begin{figure}[h]
+\begin{figure}[H]
+    \vspace{5mm}
     \includegraphics[width=0.6\textwidth]{DB-Schema.png}
     \centering
     \caption{Datenbankschema des AFSS}
