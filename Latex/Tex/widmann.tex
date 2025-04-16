@@ -51,25 +51,25 @@ Für das AFSS werden TP808 zum Referenzieren verwendet. Hierbei ist zu beachten,
 
 \paragraph{Schaltungsentwurf} \mbox{}\\
 Die Schaltung musste so konzipiert werden, dass keines der involvierten Bauteile über längeren Normalbetrieb oder durch kurzzeitige hohe Ströme bzw. Spannungen beschädigt wird. Das Ziel ist, die korrekte Funktion des Opto Interrupters auch zukünftig noch sicher stellen zu können. Dafür ist es besonders wichtig, auf dessen elektrische Eigenschaften zu achten, welche im Datenblatt zu finden sind. Für den fertigen Entwurf der Schaltung siehe Abb. \ref{Ref_Schaltplan}.\\
-Im Opto Interrupter befindet sich eine LED mit einer maximalen Durchlassspannung von \qty{1.35}{\volt} und einer typischen Durchlassspannung V$_{F}$ von \qty{1.2}{\volt}. Um diese nicht mit den vollen \qty{24}{\volt} der Betriebsspannung V$_{B}$ zu überlasten, muss ein Vorwiderstand R$_{1}$ eingebaut werden. Um die LED zum Leuchten zu bringen, soll ein minimaler I$_{F}$ von \qty{10}{\milli\ampere} fließen. Dann lässt sich daraus der Vorwiderstand aus dem ohmschen Gesetz und mit Hilfe der Maschenregel berechnen:
+Im Opto Interrupter befindet sich eine LED mit einer maximalen Durchlassspannung von \qty{1.35}{\volt} und einer typischen Durchlassspannung V$_{F}$ von \qty{1.2}{\volt}. Um diese nicht mit den vollen \qty{24}{\volt} der Betriebsspannung V$_{B}$ zu überlasten, muss ein Vorwiderstand R$_{1}$ eingebaut werden. Um die LED zum Leuchten zu bringen, soll ein minimaler I$_{F}$ von \qty{10}{\milli\ampere} fließen. Dann lässt sich daraus der Vorwiderstand aus dem ohmschen Gesetz und mit Hilfe der Maschenregel berechnen:\\
 
 \begin{equation*}
     R_{1} = \frac{V_{B} - V_{F}}{I_{F}} = \frac{\qty{24}{\volt} - \qty{1.2}{\volt}}{\qty{10}{\milli\ampere}} = \qty{2.28}{\kilo\ohm}
-\end{equation*}
+\end{equation*}\\
 
 In der HTL wird den Schülerinnen und Schülern die Widerstandsreihe E12 zur Verfügung gestellt. Daher wird in der Schaltung der nächstgrößere Widerstand mit dem Wert $\qty{2,7}{\kilo\ohm}$ verwendet.\\
-Der Phototransistor, welcher als Gegenstück zur LED dient, darf mit einer maximalen Collector-Emitter-Spannung von \qty{30}{\volt} betrieben werden, wodurch er für das Ziel der Schaltung gut geeignet ist. Um jedoch im besten Fall die gesamten \qty{24}{\volt} für den Eingang der SPS an der Klemme X1 abgreifen zu können, wird ein Spannungsteiler verwendet, bei welchem nach dem Transistor ein Widerstand R$_{3}$ parallel zur Klemme X1 eingebaut wird. Da nur ein niedriger Strom benötigt wird, kann I$_{R3}$ relativ klein sein, hier \qty{1}{\milli\ampere}. Daraus lässt sich dann der Widerstandswert wie folgt berechnen:
+Der Phototransistor, welcher als Gegenstück zur LED dient, darf mit einer maximalen Collector-Emitter-Spannung von \qty{30}{\volt} betrieben werden, wodurch er für das Ziel der Schaltung gut geeignet ist. Um jedoch im besten Fall die gesamten \qty{24}{\volt} für den Eingang der SPS an der Klemme X1 abgreifen zu können, wird ein Spannungsteiler verwendet, bei welchem nach dem Transistor ein Widerstand R$_{3}$ parallel zur Klemme X1 eingebaut wird. Da nur ein niedriger Strom benötigt wird, kann I$_{R3}$ relativ klein sein, hier \qty{1}{\milli\ampere}. Daraus lässt sich dann der Widerstandswert wie folgt berechnen:\\
 
 \begin{equation*}
     R_{3} = \frac{V_{B}}{I_{R3}} = \frac{\qty{24}{\volt}}{\qty{1}{\milli\ampere}} = \qty{24}{\kilo\ohm}
-\end{equation*}
+\end{equation*}\\
 
 Auch hier wird wieder der nächstgrößere Widerstandswert, der zur Verfügung gestellt wird, verwendet. R$_{3}$ entspricht somit dem Wert $\qty{27}{\kilo\ohm}$.\\
-Für Funktionstests und die Inbetriebnahme ist es wichtig, dass eine Möglichkeit gegeben ist, den Zustand des Ausgangs der Schaltung anzuzeigen. Hierfür wird eine grüne 5mm LED verwendet, welche parallel zur Klemme X1 eingebaut wird. Da der Transistor einen maximalen Collector Strom von \qty{20}{\milli\ampere} besitzt, wurde die Entscheidung getroffen, die grüne LED nur mit \qty{10}{\milli\ampere} zu versorgen, da diese auch bei geringerem Strom genug Leuchtkraft für den benötigten Zweck besitzt. Bei einem Strom I$_{R2}$ von \qty{10}{\milli\ampere} besitzt die LED einen Spannungsabfall V$_{LED}$ von \qty{2.1}{\volt} (vgl. \cite{led_grün}). Daraus lässt sich dann der Widerstand R$_{2}$ berechnen:
+Für Funktionstests und die Inbetriebnahme ist es wichtig, dass eine Möglichkeit gegeben ist, den Zustand des Ausgangs der Schaltung anzuzeigen. Hierfür wird eine grüne 5mm LED verwendet, welche parallel zur Klemme X1 eingebaut wird. Da der Transistor einen maximalen Collector Strom von \qty{20}{\milli\ampere} besitzt, wurde die Entscheidung getroffen, die grüne LED nur mit \qty{10}{\milli\ampere} zu versorgen, da diese auch bei geringerem Strom genug Leuchtkraft für den benötigten Zweck besitzt. Bei einem Strom I$_{R2}$ von \qty{10}{\milli\ampere} besitzt die LED einen Spannungsabfall V$_{LED}$ von \qty{2.1}{\volt} (vgl. \cite{led_grün}). Daraus lässt sich dann der Widerstand R$_{2}$ berechnen:\\
 
 \begin{equation*}
     R_{2} = \frac{V_{B} - V_{LED}}{I_{R2}} = \frac{\qty{24}{\volt} - \qty{2.1}{\volt}}{\qty{10}{\milli\ampere}} = \qty{2.19}{\kilo\ohm}
-\end{equation*}
+\end{equation*}\\
 
 Der nächsthöhere Widerstand der E12 Reihe entspricht $\qty{2,2}{\kilo\ohm}$. Um auf Nummer sicher zu gehen, wird der um eine Stufe größere Widerstand mit einem Wert von $\qty{2,7}{\kilo\ohm}$ verwendet. Wenn der Lichtstrahl im Opto Interrupter nicht unterbrochen wird, und der Transistor somit durchschaltet, leuchtet die grüne LED. Wird der Lichtstrahl unterbrochen, erlischt die LED. Damit diese nicht während des Normalbetriebs dauerhaft leuchtet, wird ein Jumper eingebaut, durch dessen Entfernung die LED ganz einfach aus der Schaltung ausgeschlossen werden kann.
 
@@ -245,7 +245,7 @@ Zwischen Schaltschrank und Lager wird nur ein Kabel zur Spannungsversorgung der 
     \caption{Siemens AS-Interface Komponente}
 \end{figure}
 
-Diese Verbindung zwischen Sensor und seinem zugehörigen Slave besteht aus einer Plus-, Minus- und IN-Leitung. Ausgenommen sind die Endschalter mit Rollhebel, da diese nur einen Plus- und IN-Anschluss benötigen. Damit die Kabel der Sensoren an den x-Achsen eng am Lager anliegen, wurden auf den Item-Profilen Kabelkanäle angebracht. Um die an den x-Achsen angebrachten querverbindenden Profile übergehen zu können, wurden eigene Kabelbrücken in Fusion360 gezeichnet und daraufhin 3D-gedruckt. Diese führen dann, wie in Abb. \ref{Kabelbrücke} ersichtlich, das Kabel oberhalb des Item-Profils entlang, ohne dass ein Knick entsteht.\\
+Diese Verbindung zwischen Sensor und seinem zugehörigen Slave besteht aus einer Plus"~, Minus"~ und IN-Leitung. Ausgenommen sind die Endschalter mit Rollhebel, da diese nur einen Plus- und IN-Anschluss benötigen. Damit die Kabel der Sensoren an den x-Achsen eng am Lager anliegen, wurden auf den Item-Profilen Kabelkanäle angebracht. Um die an den x-Achsen angebrachten querverbindenden Profile übergehen zu können, wurden eigene Kabelbrücken in Fusion360 gezeichnet und daraufhin 3D-gedruckt. Diese führen dann, wie in Abb. \ref{Kabelbrücke} ersichtlich, das Kabel oberhalb des Item-Profils entlang, ohne dass ein Knick entsteht.\\
 An einem Slave befinden sich drei Klemmen für die Spannungsversorgung der Sensoren. Bei zwei der sieben Slaves müssen jedoch vier Sensoren angeschlossen werden. Auch hier werden wieder externe Klemmen verwendet, um auch den vierten Sensor mit der Plus- und Minus-Leitung zu verbinden.
 
 \begin{figure}[H]
