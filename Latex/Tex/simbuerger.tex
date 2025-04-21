@@ -20,7 +20,7 @@ Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies koste
     \begin{minipage}{0.5\textwidth}
         \centering
         \includegraphics[width=0.9\textwidth]{Item-Standartverbindungssatz.png}
-        \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
+        \caption{Item Profil mit Standardverbindungssatz, Quelle: \cite{Item_svs}}
         \label{sfs_item}
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
@@ -222,7 +222,7 @@ Bei der Konstruktion einer früheren Version des YZ-Shuttles wurde erfasst, dass
 \paragraph{Zahnriemen und Umlenkung}\mbox{}\\
 Als Zahnriemen wird auch bei der Y-Achse auf ein AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, wird er auch dort wieder rückgeführt. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ein möglichst kompakter Formfaktor angestrebt wird und andererseits, eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot-C-Profil (da dort keine einfache Möglichkeit besteht, etwas in Z-Richtung vor der Y-Achse zu befestigen) erforderlich ist. Aus diesem Grund wird eine Konstruktion aus Aluminium, welche sich selbst verhakt, konstruiert (siehe \ref{X-Achse_b2}). Sie muss seitlich an den Profilen verschraubt werden. Im vorderen Überhang werden Aluminiumelemente eingehängt, die die Aufhängung der Achse für die Umlenkung erlauben.
 
-\paragraph{Zahnriemenaufgängung}\mbox{}\\
+\paragraph{Zahnriemenaufhängung}\mbox{}\\
 Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um mit der Konstruktion beginnen zu können, werden hierfür näherungsweise Werte angenommen.
 
 \noindent\begin{minipage}{\textwidth}
@@ -264,7 +264,7 @@ Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu
         \end{tabular}
         \caption{X-Achse beim Ladevorgang}
 \end{table}
-So werden zwei Schwerpunkte errechnet: ca. \SI{130}{\mm} im unbeladenen Zustand und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Shuttles während dem Ladevorgang wichtiger ist als während einer Leerfahrt, wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemens bei rund 200 mm liegt.\\
+So werden zwei Schwerpunkte errechnet: ca. \SI{130}{\mm} im unbeladenen Zustand und \SI{250}{\mm} während dem Ladevorgang. Da die Stabilität des Y-Shuttles während dem Ladevorgang wichtiger ist als während einer Leerfahrt, wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemens bei rund \SI{200}{\mm} liegt.\\
 Weiters muss auch dieser Zahnriemen wieder gespannt werden. Durch die geringere Zahnriemenlänge wird auch der Spannmechanismus verkleinert.
 Dieser muss aus Platzgründen, außerhalb der Flucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung können durch folgenden Ausdruck, der die Länge, die der Zahnriemen bei einer bestimmten Position braucht, um spannungslos zu sein, approximiert, ermittelt werden. (Hierbei wird von einem linearen Zusammenhang zwischen der Kraft auf die Aufhängung und der Längenkontraktion ausgegangen. In der Realität würde jedoch die Elastizität des Zahnriemens sowie jene der Aufhängung Auswirkungen haben, aber diese verringern die Auswirkungen).
 \\
@@ -511,7 +511,7 @@ Nach Fertigung der Bauteile erfolgt auch der Zusammenbau des sehr komplexen unte
 \begin{minipage}{\textwidth}
     
 \subsubsection{Fazit}
-In der Mechanik des AFSS sind nach aktuellem stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte Wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. Das Gesamtkonstrukt (wie in \ref{AFSS-mech-ges} ersichtlich) beinhält dann die gesamte Mechanik. Erst dadurch, dass eine volle Konstruktion erstellt wurde, war es möglich mit den Aufbau zu beginnen. Diese funktionierte, nachdem die benötigten Teile soweit verfügbar waren, auch reibungslos.
+In der Mechanik des AFSS sind nach aktuellem Stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte Wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. Das Gesamtkonstrukt (wie in \ref{AFSS-mech-ges} ersichtlich) beinhält dann die gesamte Mechanik. Erst dadurch, dass eine volle Konstruktion erstellt wurde, war es möglich mit den Aufbau zu beginnen. Diese funktionierte, nachdem die benötigten Teile soweit verfügbar waren, auch reibungslos.
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{mech_gesamt.PNG}
@@ -634,7 +634,7 @@ Eine Funktion, die für die Verarbeitung der Anfragen einer bestimmten URL veran
 
 
 Anfangs wird mit einem Decorator (@main.route(...)) die gewünschte URL, sowie unterstützte HTTP-Requests definiert. Decoratoren verändern oder erweitern die Eigenschaften von Funktionen. In diesem Fall wird in der Funktion (def ...()) definiert was geschieht, wenn ein erlaubter Request an der URL \enquote{add\_stock} eintrifft. Dieser Funktionsname kann auch in den Flask-Vorlagen verwendet werden um URLs dynamisch zu vergeben.\\
-Weiters wird sortiert um welche Art von Anfrage es sich handelt. Bei GET-Anfragen wird typischerweise einfach nur das HTML der Webseite zurückgegeben. Bei POST-Anfragen werden zuerst die Daten dieser Anfrage eytrahiert und dann entschieden was damit gemacht werden soll. In diesem Fall wird, wenn des richtige Schlüsselwort in der Anfrage enthalten ist, ein Datenbankeintrag, mit den Daten aus dem Request, hinzugefügt. Schlussendlich wird ein Wert zurückgegeben, entweder ein HTML-Statuscode, vorgerendertes HTML oder, wie in diesem Fall, ein Text.
+Weiters wird sortiert um welche Art von Anfrage es sich handelt. Bei GET-Anfragen wird typischerweise einfach nur das HTML der Webseite zurückgegeben. Bei POST-Anfragen werden zuerst die Daten dieser Anfrage extrahiert und dann entschieden was damit gemacht werden soll. In diesem Fall wird, wenn des richtige Schlüsselwort in der Anfrage enthalten ist, ein Datenbankeintrag, mit den Daten aus dem Request, hinzugefügt. Schlussendlich wird ein Wert zurückgegeben, entweder ein HTML-Statuscode, vorgerendertes HTML oder, wie in diesem Fall, ein Text.
 
 \subsubsection{APIs}
 
@@ -667,10 +667,10 @@ def afss():
 \end{lstlisting}  
 
 Die Funktion dieses Codeblocks besteht darin, herauszufiltern, ob eine Anfrage einer Siemens-SPS eintrifft und dann dementsprechend Daten zurückzugeben.
-Wenn eine Anfrage mit dem Schlüssel \enquote{next\_bmos} (next-box-moveing-operations) empfangen wird, wird diese dem sog. \enquote{stack} weitergegeben, welcher diese dann verarbeitet (dies wird im Anschluss näher behandelt). Sollte diese von einer SPS kommen, werden die Zurückgeschicten Daten vorher noch so bearbeitet, dass diese von der SPS möglichst gut übersetzt werden können.
+Wenn eine Anfrage mit dem Schlüssel \enquote{next\_bmos} (next-box-moveing-operations) empfangen wird, wird diese dem sog. \enquote{stack} weitergegeben, welcher diese dann verarbeitet (dies wird im Anschluss näher behandelt). Sollte diese von einer SPS kommen, werden die zurückgeschickten Daten vorher noch so bearbeitet, dass diese von der SPS möglichst gut übersetzt werden können.
 Sollte die SPS ein \enquote{inst\_acknowledge} sowie die dementsprechenden Daten zurückschicken, wird im \enquote{Stack} vermerkt dass die dementsprechende Operation bei der SPS angekommen ist.
 
-Weiters bietet Simens auch die Möglichkeit über den Webserver der CPU auf diese zuzugreifen. Dies geschieht über das JSON-RPC Protokoll (vgl. \cite{ws_s7}). Aus Testzwecken ist es durchaus nützlich auch dierekten Zugriff auf die CPU zu haben, wenngleich es für den Normalbetrieb nicht zwingend benötigt wird. Um eine möglichst einfache Bedienung zu ermöglichen wird ein Objekt angelegt, um JSON-RPC Befehle auszuführen.
+Weiters bietet Siemens auch die Möglichkeit über den Webserver der CPU auf diese zuzugreifen. Dies geschieht über das JSON-RPC Protokoll \cite{ws_s7}. Aus Testzwecken ist es durchaus nützlich auch dierekten Zugriff auf die CPU zu haben, wenngleich es für den Normalbetrieb nicht zwingend benötigt wird. Um eine möglichst einfache Bedienung zu ermöglichen wird ein Objekt angelegt, um JSON-RPC Befehle auszuführen.
 
 \begin{itemize}
     \item Login: Um auf die SPS zugreifen zu können muss erst ein Login geschehen. Hierbei werden Benutzername und Passwort benötigt, die zuerst in der SPS festgelegt wurden. Dieser führt bei Erfolg zu einem \enquote{Session-Token}, welches bei jeder folgenden Kommunikation zur Authentifizierung mitgeschickt wird.
@@ -682,15 +682,7 @@ Dieses Objekt kann dann einfach in einen anderen Programmteil importiert werden,
 
 \subsubsection{Lageralgorithmus für SPS}\mbox{}\\
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{stack.png}
-    \caption{Diagramm der BMOS bereitstellung}
-\end{figure}
-
-
-
-Die Auftrage sind im Einkaufswagen oder Änlichem, im Format \enquote{Location -\> Location} hinterlegt. Um dies in eine Operation zu zerlegen, die die SPS versteht, wird eine Box-Moveing-Operation erstellt. Diese enthält alle Teilschritte, wie Schlittenposition oder Fördebandstrecke, um eine Box von Position A zu Position B zu bringen. 
+Die Auftrage sind im Einkaufswagen oder Änlichem, im Format \enquote{Location -\> Location} hinterlegt. Um dies in eine Operation zu zerlegen, die die SPS versteht, wird eine Box-Moveing-Operation erstellt. Diese enthält alle Teilschritte, wie Schlittenposition oder Förderbandstrecke, um eine Box von Position A zu Position B zu bringen. 
 Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, aufgeteilt und dann dem \enquote{stack} zugeführt. Diese Instruktion enthält Daten wie:
 \begin{itemize}
     \item \enquote{instruction\_id}: Eine fortlaufende Nummer um jede Anweisung zu identifizieren
@@ -698,9 +690,15 @@ Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, a
     \item \enquote{relation}: eine Liste mit \enquote{instruction\_id's}, welche vor dieser Anweisung erfüllt sein müssen
 
 \end{itemize}
-Bei Auswahl der zu schickenden Anweisung, wird zuerst die aktuelle von der SPS gemachte Anweisung vermerkt, danach wird in allen Modulen des \enquote{stacks} nachgeschaut, welche Anweisungen jetzt ausgeführt werden können. Zu diesem Zweck wird die \enquote{relation} einer Anweisung mit den bereits gemachten Anweisungen verglichen, wenn bereits alle relevanten Anweisungen gemacht wurden, wird der Auftrag in \enquote{to\_send} vermerkt. Schlussendlich wird einer der in \enquote{to\_send} vermerkten Aufträge für die SPS übersetzt und an diese geschickt. 
+Bei Auswahl der zu schickenden Anweisung, wird zuerst die aktuelle von der SPS gemachte Anweisung vermerkt, danach wird in allen Modulen des \enquote{stacks} nachgeschaut, welche Anweisungen jetzt ausgeführt werden können (siehe Abb. \ref{bmos_diag}). Zu diesem Zweck wird die \enquote{relation} einer Anweisung mit den bereits gemachten Anweisungen verglichen, wenn bereits alle relevanten Anweisungen gemacht wurden, wird der Auftrag in \enquote{to\_send} vermerkt. Schlussendlich wird einer der in \enquote{to\_send} vermerkten Aufträge für die SPS übersetzt und an diese geschickt. 
 Wenn die SPS den Auftrag erhalten hat, schickt sie ein \enquote{acknowledge} mit der erhaltenen ID zurück. Der Auftrag wird dann aus den \enquote{instructions\_to\_send} gelöscht und entweder wird einfach der nächste Auftrag in \enquote{to\_send} geschickt oder der \enquote{BMOS} Algorithmus wird erneut durchlaufen.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{stack.png}
+    \caption{Diagramm der BMOS bereitstellung}
+    \label{bmos_diag}
+\end{figure}
 
 \subsubsection{Datenbanken}
 
@@ -741,7 +739,7 @@ Die Positionen der Container werden in Standorte (\enquote{locations}) abgebilde
 Der TF-IDF (Term Frequency-Inverse Document Frequency) Algorithmus, ist ein Weg um wichtige Wörter aus Dokumenten zu extrahieren. Er wird verwendet um beispielsweise in Suchmaschienen, eine Suchanfrage mit Webpagecontent abzugleichen, und die am besten mit der Suchanfrage übereinsteimmenden Dokumente zu sortieren. \\
 Im Fall dieser Anwendung werden die Daten aus der Artikeldatenbank als \enquote{Dokumente}  angesehen und die Suchanfrage aus dem Suchfeld wird dafür verwendet um die am besten passenden Artikel zu finden.
 \\
-Durch den Relativ hohen Rechenaufwand bei dieser Suchoperation wird dieser in der Programmiersprache Rust implementert. Die Implementierung in Rust ist im vergleich zu Python schon bei relativ kleinen Datenmenge bis zu 5-mal schneller.
+Durch den Relativ hohen Rechenaufwand bei dieser Suchoperation wird dieser in der Programmiersprache Rust implementert. Die Implementierung in Rust ist im Vergleich zu Python schon bei relativ kleinen Datenmenge bis zu 5-mal schneller.
 
 \subparagraph{Rust}\mbox{}\\
 Rust ist eine sehr effiziente und schnelle Programmiersprache, die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt wurde. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler. (vgl. \cite{gpt_rust})
@@ -750,7 +748,7 @@ Die Funktion dieses Algorithmus ist in drei Einzelteile unterteilt.
 
 \begin{enumerate}
     \item Term Frequenz \\
-    Die Termfrequenz gibt an, wie oft ein angegebenes Wort in einem Dokument vorhanden ist. Dies wird durch die Folgende Funktion kalkuliert.
+    Die Termfrequenz gibt an, wie oft ein angegebenes Wort in einem Dokument vorhanden ist. Dies wird durch die folgende Funktion kalkuliert.
     
     \begin{lstlisting}[language=Rust, caption={Berechnung der Termfrequenz}]
 fn term_frequency(document: &str, term: &str) -> f64 {
@@ -779,7 +777,7 @@ fn term_frequency(document: &str, term: &str) -> f64 {
 
     Mithilfe dieser wird eine Liste aller Wörter und deren Vorkommenshäufigkeit erstellt.
 
-    \item Die zweite Komponente ist dann die Inverse Dokument Frequenz. Diese gewichtet, die Anzahl der Dokumente in dem das gesuchte Wort enthalten ist relativ zur Gesamtdokumentanzahl vorkommt. Häufig vorkommende Worte wie z.B. \enquote{und} werden hierbei weniger gewichtet als einzigartige Wörter.
+    \item Die zweite Komponente ist dann die Inverse Dokument Frequenz. Diese gewichtet die Anzahl der Dokumente in dem das gesuchte Wort enthalten ist relativ zur Gesamtdokumentanzahl vorkommt. Häufig vorkommende Worte wie z.B. \enquote{und} werden hierbei weniger gewichtet als einzigartige Wörter.
 
 \begin{lstlisting}[language=Rust, caption={Berechnung der Inversen Dokumentenfrequenz}]
 fn inverse_document_frequency(term: &str, all_documents: &Vec<String>) -> f64 {
@@ -845,7 +843,7 @@ fn cos_similarity(query_p: Vec<f64>, document_p: Vec<f64>) -> f64 {
 Das Aufrufen der Rust-Funktionen von Python aus, ist nicht nativ unterstützt. Die Einbindung erfolgt millels PyO3/maturin.
 
 \subparagraph{Artikelsuche nach Kategorien}\mbox{}\\
-Um auch einen simpleren Weg der Artikelfindung zur Verfügung zu stellen, wird außerdem die Möglichkeit implementiert, Artikel anhand von Attributen zu suchen. Zu diesem Zweck werden schon bei der Artikelerstellung Attribute für die Einträge \enquote{Gruppen} und \enquote{Kategorien} vergeben. In \enquote{Gruppen} wird eine Art Pfad angelegt, der die Suche eingrenzt. Beispielsweise würde so ein Eintrag folgende Daten enthalten: \texttt{[\enquote{Item}, \enquote{Verbindungssatz}]}. So kann bei der Artikelsuche zuerst die Überkategorie \enquote{Item} und dann die Unterkategorie \enquote{Verbindungssatz} aus mehreren verschiedenen ausgewählt werden. Um Bauteile weiter zu unterscheiden, da es z. B. viele verschiedene Widerstände gibt, werden unter \enquote{Kategorien} Einzelheiten zum Produkt, wie Wert, Farbe o. Ä., gespeichert.\\  
+Um auch einen simpleren Weg der Artikelfindung zur Verfügung zu stellen, wird außerdem die Möglichkeit implementiert, Artikel anhand von Attributen zu suchen. Zu diesem Zweck werden schon bei der Artikelerstellung Attribute für die Einträge \enquote{Gruppen} und \enquote{Kategorien} vergeben. In \enquote{Gruppen} wird eine Art Pfad angelegt, der die Suche eingrenzt. Beispielsweise würde so ein Eintrag folgende Daten enthalten: \texttt{['{Item}', '{Verbindungssatz}']}. So kann bei der Artikelsuche zuerst die Überkategorie \enquote{Item} und dann die Unterkategorie \enquote{Verbindungssatz} aus mehreren verschiedenen ausgewählt werden. Um Bauteile weiter zu unterscheiden, da es z. B. viele verschiedene Widerstände gibt, werden unter \enquote{Kategorien} Einzelheiten zum Produkt, wie Wert, Farbe o. Ä., gespeichert.\\  
 Diese Informationen werden auch vom TF-IDF verwendet, dienen aber spezieller dazu, möglichst sicher das gewünschte Bauteil in einem Durchklickmenü zu finden.
 
 

@@ -163,7 +163,7 @@ Dadurch wird ein Container erstellt, der anschließend entweder in Docker-Deskto
 Da die Datenbank beim ersten Start auf einer Fremdmaschine noch kein Setup durchlaufen hat, ist es ratsam, sie mit einer Sicherungsdatei aus dem Ordner \texttt{DB\_export} aufzusetzen.  
 Danach bleiben die Daten auch nach dem Abschalten des Containers erhalten.  
 
-Jedoch ist es nach der Implementierung des Rust-Pakets noch nicht möglich, die benötigten Bibliotheken zu installieren, da diese nicht im installationsprozess des \texttt{docker-compose.yml} enthalten sind. 
+Die Rust Bibliothek wird hierbei über Pip eingebunden. Diese wurde zuvor als Bibliothek dort angelegt und kann als solche wie alle anderen auch einfach eingebunden werden. 
 
 
 \subsubsection{Schaltschrank}

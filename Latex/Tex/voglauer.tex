@@ -13,7 +13,7 @@
 
     \paragraph{Versorgung}\mbox{}\\
     Zur Verfügung steht dem AFSS ein Starkstromanschluss mit 400V Außenleiterspannung. Damit kann nur der Asynchronmotor für das Fließband direkt angesteuert werden.\\
-    Alle anderen Elemente brauchen eine andere Spannungsebene. Die insgesamt sieben Schrittmotoren benötigen 24 V mit einem möglichen Dauersummenstrom von über 20A. Die Steuerlogik besteht aus Siemens-SPS, mit Ein- und Ausgangskarten sowie PTO-Karten und einer ET200 mit ASi-Master. Diese Logik benötigt ebenfalls 24 V und sollen getrennt versorgt werden, um von potentiellen Fehlern geschützt zu sein. Der ASi-Kreis benötigt eine eigene ASi-24V-Versorgung.
+    Alle anderen Elemente brauchen eine andere Spannungsebene. Die insgesamt sieben Schrittmotoren benötigen 24 V mit einem möglichen Dauersummenstrom von über 20 A. Die Steuerlogik besteht aus Siemens-SPS, mit Ein- und Ausgangskarten sowie PTO-Karten und einer ET200 mit ASi-Master. Diese Logik benötigt ebenfalls 24 V und sollen getrennt versorgt werden, um von potentiellen Fehlern geschützt zu sein. Der ASi-Kreis benötigt eine eigene ASi-24V-Versorgung.
 
     \paragraph{Antriebe}\mbox{}\\
     Angesteuert werden müssen folgende Motoren:
@@ -32,7 +32,7 @@
         \item Motorschutzschalter;
         \item Gleichstromsicherungen für jeden Schrittmotor.
     \end{itemize} 
-    Um die Anlage bei Fehlern, die potentiell von den elektrischen Schutzeinheiten nicht erkannt werden, nach wie vor abschalten zu können, verfügt die Anlage über mehrere Not-Aus-Schalter. Zwei beim Regal selbst, einen im Schaltschrank und einen am Kommisionierplatz. Diese Positionierung soll es Nutzer:innen ermöglichen, aus jeder Position an der Anlage einen Not-Aus-Schalter zu erreichen.
+    Um die Anlage bei Fehlern, die potentiell von den elektrischen Schutzeinheiten nicht erkannt werden, nach wie vor abschalten zu können, verfügt die Anlage über mehrere Not-Aus-Schalter. Zwei beim Regal selbst, einen im Schaltschrank und einen am Kommisionierplatz. Diese Positionierung soll es Nutzerinnen und Nutzern ermöglichen, aus jeder Position an der Anlage einen Not-Aus-Schalter zu erreichen.
 
     \paragraph{Bedienelemente}\mbox{}\\
     Physische Bedienelemente sind beim AFSS ein Schlüsselschalter zur Freigabe und ein Drehtrennschalter für eine manuelle Freischaltungsoption.
@@ -52,23 +52,23 @@
         \item Verlegeart
         \item Elektromagnetische Verträglichkeit (EMV)
     \end{itemize} 
-    Während der Spannungsabfall bei den Längen des AFSS vernachlässigt werden kann, muss besonders auf Schleppkettentauglichkeit geachtet werden. Steuer- und Messkabel müssen entsprechend geschirmt werden und abhängig vom Strom muss der passende Querschnitt gewählt werden. Dabei müssen die Querschnitte auch auf die Schutzautomaten im Stromkreis abgestimmt werden.\\
+    Während der Spannungsabfall bei den Längen des AFSS vernachlässigt werden kann, muss besonders auf Schleppkettentauglichkeit geachtet werden. Steuer- und Messkabel müssen entsprechend geschirmt werden und abhängig vom Strom muss der passende Querschnitt gewählt werden. Dabei müssen die Querschnitte auch auf die Schutzautomaten im Stromkreis abgestimmt werden.
 
     \paragraph{Module}\mbox{}\\
     Die Paneele/Module, zur Montage der elektrischen Komponenten, müssen ebenfalls eine umfassende Erdung ermöglichen und mechanisch den Belastungen standhalten. Dabei ist das Gewicht die maßgebliche Belastung. Die Verdrahtungskanäle müssen eine übersichtliche Verdrahtung gewährleisten, die Modularität der Paneele soll vorteilhaft ausgenutzt werden und soll das Projekt nicht unnötig verkomplizieren. Kostentechnisch soll dabei ein möglichst günstiges, aber standhaftes Material gewählt werden.
 
 \subsubsection{Mechanische Planung}
     \paragraph{Schaltschrankrahmen}\mbox{}\\
-        \begin{figure}[h]
+    Bevor man sich den Details des Schaltschrankes widmet, muss zuerst der Rahmen festgelegt werden. Grundsätzlich würde man einen herkömmlichen Schaltschrank verwenden, allerdings sind diese teuer und erfüllen auch nicht die Anforderung der Mobilität. Deswegen wurden mehrere alternative Optionen in Betracht gezogen.\\
+    Anfangs wurde der Ansatz verfolgt, die elektrischen Komponenten in den Lagerschrank selbst einzubauen. Dabei hätte man entweder einen eigenen Abteil für die Elektrotechnik einplanen können, der auch mittels entsprechendem Material räumlich getrennt wäre, oder man hätte die Elemente fluide unterbringen können. Damit ist gemeint, dass in dem ganzen Lagerschrank verteilt die elektrischen Komponenten montiert wären.\\
+    Die fluide Variante benötigt sorgfältige Planung und auch durchgehende Absprache mit der restlichen mechanischen Planung des AFSS. Dafür hätte man ein kompaktes Design, allerdings wäre das Risiko für Verletzungen und Schäden höher, da die elektrischen Komponenten nur schwer räumlich trennbar wären. Aufbauend auf der fehlenden Sicherheit und der Tatsache, dass die benötigte Kommunikation in einer Entwicklungsphase nicht möglich wäre, wurde diese Option nicht verfolgt.\\
+    Wesentlich realistischer ist der Ansatz ein eigenes, kleines Abteil in den Schrank einzubauen. Der Rahmen sowie das Lager wären aus Aluminiumprofilen gebaut und die jeweiligen Seiten mit Kunststoffen verkleidet, um die räumliche Trennung zu gewährleisten. Diese Option ist kommunikationstechnisch möglich, da man sich mit der restlichen mechanischen Planung nur auf die Außenmaße und Position dieses Abteils einigen muss. Allerdings bedeutet ein integriertes Abteil auch weniger Lagerplätze und einen deutlichen Zusatzaufwand in der Realisierung. Diese Variante wurde verworfen, um die Lagerplätze zu maximieren.\\
+    \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{Vogis Bilder/Serverschrank_original.jpg}
         \caption{Serverschrank bei Übergabe an das AFSS-Team}
         \label{fig:Serverschrank_original}
-    \end{figure}
-    Bevor man sich den Details des Schaltschrankes widmet, muss zuerst der Rahmen festgelegt werden. Grundsätzlich würde man einen herkömmlichen Schaltschrank verwenden, allerdings sind diese teuer und erfüllen auch nicht die Anforderung der Mobilität. Deswegen wurden mehrere alternative Optionen in Betracht gezogen.\\
-    Anfangs wurde der Ansatz verfolgt, die elektrischen Komponenten in den Lagerschrank selbst einzubauen. Dabei hätte man entweder einen eigenen Abteil für die Elektrotechnik einplanen können, der auch mittels entsprechendem Material räumlich getrennt wäre, oder man hätte die Elemente fluide unterbringen können. Damit ist gemeint, dass in dem ganzen Lagerschrank verteilt die elektrischen Komponenten montiert wären.\\
-    Die fluide Variante benötigt sorgfältige Planung und auch durchgehende Absprache mit der restlichen mechanischen Planung des AFSS. Dafür hätte man ein kompaktes Design, allerdings wäre das Risiko für Verletzungen und Schäden höher, da die elektrischen Komponenten nur schwer räumlich trennbar wären. Aufbauend auf der fehlenden Sicherheit und der Tatsache, dass die benötigte Kommunikation in einer Entwicklungsphase nicht möglich wäre, wurde diese Option nicht verfolgt.\\
-    Wesentlich realistischer ist der Ansatz ein eigenes, kleines Abteil in den Schrank einzubauen. Der Rahmen sowie das Lager wären aus Aluminiumprofilen gebaut und die jeweiligen Seiten mit Kunststoffen verkleidet, um die räumliche Trennung zu gewährleisten. Diese Option ist kommunikationstechnisch möglich, da man sich mit der restlichen mechanischen Planung nur auf die Außenmaße und Position dieses Abteils einigen muss. Allerdings bedeutet ein integriertes Abteil auch weniger Lagerplätze und einen deutlichen Zusatzaufwand in der Realisierung. Diese Variante wurde verworfen, um die Lagerplätze zu maximieren\\
+    \end{figure}\\
     Auf der weiteren Suche nach einer Alternative zum herkömmlichen Schaltschrank wurde die Möglichkeit, einen alten Serverschrank der Schule (siehe Abbildung \ref{fig:Serverschrank_original}) zu recyceln, erkannt. Ein fertig gebauter Schrank, der im Fehlerfall die Umgebung ausreichend schützt und keine Zusatzkosten mit sich bringt, wurde als beste Option gewählt. Die im Inneren bereits vorhandenen Profilschienen bieten viele Möglichkeiten die Elektrotechnik, zu montieren. Zudem bietet der Innenraum des Serverschrankes viel Platz und auch die Möglichkeit, die Elektrotechnik im Bedarfsfall rasch und einfach zu erweitern, da man die Profilschienen sehr indiviuell nutzen kann.\\
     Es wurde entschieden, den Serverschrank zu einem Schaltschrank umzubauen. Im Zuge des Umbaus wurde der Innenraum umgebaut und der Serverschrank mobil gemacht. 
     \paragraph{Modulprinzip}\mbox{}\\
@@ -85,7 +85,7 @@
         \item Kunststoff.
     \end{itemize}
     Die Aluplatten bieten den Vorteil der Leitfähigkeit und somit müsste man nur die Platte erden und die Elemente auf der Platte wären alle dementsprechend geerdet. Bei reinen Kunststoffplatten gibt es keine Leitfähigkeit und zusätzlich bieten die meisten Kunststoffe keine ausreichende mechanische Stabilität.\\
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{Dibond_Platten_ml.jpg}
         \caption{Dibond-Platte, Quelle: \cite{Dibond-Platte}}
@@ -118,7 +118,7 @@
     Für die Messungen werden Messschieber und bei größeren Abständen Maßbänder verwendet. Um die mechanische Konstruktion zu erleichtern, werden alle Daten digital festgehalten. Während die Messungen des Serverschranks für den finalen digitalen Zwilling wichtig werden, gibt es aber auch noch andere Punkte die berücksichtigt werden müssen. Beispielsweise die Frage, ob das Modulkonzept so möglich sei. Aufgrund dessen und des Umfanges der Diplomarbeit, sowie der begrenzten Zeit, wurde ein erster Entwurf eines Serverschrankes in Fusion360 konstruiert (siehe Abbildung \ref{fig:Sommerprototyp}) und weiters ein Probemodul gezeichnet. Die Maße dieses digitalen Prototyps sind von einem Standard-Serverschrank übernommen.\\
     Dieser Prototyp hat nicht die selben Werte wie der richtige Serverschrank, der dem AFSS zur Verfügung steht. Aufgrund der Prototyp-Konstruktion stand fest, dass das Modulkonzept so umsetzbar war. Weiters wurde festgestellt, wie eine Fusion360 Zeichnung optimaler gestalltet werden kann. Eine Erkenntnis des Prototyps war, dass man den Serverschrank nicht als ein großes Element konstruieren sollte. Wenn ein Fehler spät erkannt wird, ist dieser so gut wie nicht mehr zu beheben. Wenn die Konstruktion allerdings auf viele verschiedene Elemente aufgeteilt wird, dann ist der Schaden bei einem Fehler begrenzt.\\
     Nachdem das Grundprinzip erfolgreich konstruiert wurde, ist der Serverschrank auf Grundlage der echten Maße zu konstruieren gewesen (siehe Abbildung \ref{fig:Clean_Serverschrank}). Die gewonnen Erkenntnisse wurden dabei bestmöglich miteinbezogen.\\    
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.35\textwidth]{Schaltschrank_ohne_Module.PNG} 
         \caption{Serverschrank konstruiert}
@@ -167,8 +167,7 @@
     Beim Zeichnen und Konstruieren fiel auf, dass die Module aus dem Serverschrank, beziehungsweise Schaltschrank, herausragten. Es wurde festgestellt, dass die Profilschienen nach innen verschoben werden müssen, um zu ermöglichen, dass sich die Wände des Schaltschrankes auch schließen lassen. Die Bauart des Serverschrankes erlaubte eine solche Veränderung.\\ 
     Es wurden, bis auf das Erdungsmodul, alle Module auf diese Art konstruiert. Man konnte schön erkennen, welche Reihenfolgen sinnvoll ist und wie sich welche Komponenten am besten montieren lassen. Beispielsweise wurde ausgetestet, ob bei gewissen elektrischen Komponenten eine vertikale Montage zielführend wäre. In der Abbildung \ref{fig:Schaltschrank_bestueckt_Fusion} sieht man die fertige Konstruktion des Schaltschrankes.\\
     Zu dieser Version des Schaltschrankes ist zu sagen, dass ab der Realisierung des Geplanten, dieser digitale Plan sich fließend transformiert zum digitalen Zwilling. Dieser Zwilling gehört nach der Realisierung konstant gepflegt. Das Erdungsmodul beispielsweise, welches erst mitten in der Realisierung eingeplant und umgesetzt wurde, musste dem digitalen Zwilling nachträglich hinzugefügt werden.
-    \paragraph{AutoCAD}\mbox{}\\
-    \label{AutoCAD}
+    \paragraph{AutoCAD}\label{AutoCAD}\mbox{}\\
     Nachem der digitale Plan/Zwilling vollständig ausgeplant war, mussten die jeweiligen Platten gefräst werden. Um die Platten auch fräsen zu können, mussten diese zuerst als DXF-Datei in Filou-NC eingefügt werden. Dazu mussten die einzelnen Module in AutoCAD nachgezeichnet werden. Idealerweise hätte man hierfür nur die Oberfläche der Platten in Fusion zur Skizze gemacht und diese dann als DXF exportiert. Bei einem nachträglichen Ausmessen der 3D-Konstruktion wurde allerdings festgestellt, dass sich die Plan-Maße der Löcher der Profilschiene nicht mit dem Naturmaß decken. Zudem wurden weitere minimale Abweichungen festgestellt. Keiner der Fehler war so gravierend, dass man die digitale Konstruktion des Schaltschrankes nicht weiterverwenden hätte können, aber für eine präzise Fräsung aufbauend auf der Fusion-Konstruktion waren die Abweichungen zu groß. Deswegen wurden alle Module in AutoCAD sorgfälltig nachgezeichnet.\\     
     Beim Nachzeichnen wurden alle fehlerhaften Maße ausgebessert. Mit den richtigen Maßen wurde festgestellt, dass gewisse Module nicht wie geplant gebaut werden konnten. Beim Modul 6 gingen sich die vier Schrittmotortreiber nicht vertikal nebeneinander aus. Deswegen wurde in AutoCAD einer der Treiber vertikal angeordnet und weiterführend wurde die Änderung auch in Fusion nachgebessert.
     \paragraph{Räder}\mbox{}\\
@@ -222,7 +221,7 @@
     \paragraph{E-Plan Allgemein}\mbox{}\\
     Die Firma E-Plan bietet verschiedenste Möglichkeiten zur Planung und Dokumentation von elektrischen Anlagen. Das Programm bietet auch die Möglichkeit eines Aufbauplanes, in diesem werden die elektrischen Komponeten der Anlage in einer 2D-Ansicht dargestellt. Diese Art des Aufbauplanes ist weit verbreitet und übersichtlich, doch die Stärke liegt beim herkömmlichen Schaltschrank. Da beim AFSS-Schaltschrank wesentlich mehr zu beachten ist, wurde der Aufbauplan nicht in E-Plan sondern in Fusion360 gezeichnet.\\
     E-Plan bietet ebenfalls die Möglichkeit verschiedenster Übersichten. Diese sind vor allem bei sehr großen Anlagen zur Orientierung sehr hilfreich. Da das AFSS aber eine eher kleinere Anlage ist, wurde in Abstimmung mit dem Kunden (der Werkstätte der HTL-Mössingerstraße) entschieden, dass die Übersichtstabellen nicht benötigt werden.\\
-    Der Fokus lag daher auf dem reinen Schaltpan des AFSS. Für den grundsätzlichen Schaltplan bietet E-Plan mehrere Tools an. Einerseits gibt es die E-Plan Cloud, in dieser finden sich die meisten Geräte, die am Markt erhältlich sind. Unglücklicherweise sind mehrere Geräte des AFSS aus einem älterem Jahrgang und damit nicht in der E-Plan Cloud vorhanden. Für diesen Fall bietet E-Plan die Möglichkeit ein eigenes Gerät anzulegen. Dazu muss ein Gerätekasten eingefügt werden und in diesen müssen daraufhin die Gräteanschlüsse gelegt werden. Zum besseren Verständnis kann man selbstgezeichnete Geräte noch mit gewissen Schaltzeichen versehen. Weiterführend kann man in E-Plan alle vorstellbaren elektrischen Komponeten finden. Motoren, Geber, Schütze, Relais und noch vieles mehr findet sich in der lokalen E-Plan Bibliothek. Mit E-Plan lassen sich auch die benötigten Reihenklemmen herrausfinden. Ab einem gewissen Masstab kann man sich die Reihenklemmen nicht mehr denken und genau da hilft es, dass man in E-Plan die Klemmen genau planen muss. Das ausführliche Beschäftigen mit den Reihenklemmen ist wichtig, da diese für die Nachvollziehbarkeit eine große Rolle spielen. Für das Zeichnen eines Schaltplans ist es wichtig, im konstanten Austausch mit der Sensorik und der Steuerungstechnik zu stehen, um eine korrekte und realistische Verdrahtung zu planen.\\
+    Der Fokus lag daher auf dem reinen Schaltpan des AFSS. Für den grundsätzlichen Schaltplan bietet E-Plan mehrere Tools an. Einerseits gibt es die E-Plan Cloud, in dieser finden sich die meisten Geräte, die am Markt erhältlich sind. Unglücklicherweise sind mehrere Geräte des AFSS aus einem älterem Jahrgang und damit nicht in der E-Plan Cloud vorhanden. Für diesen Fall bietet E-Plan die Möglichkeit ein eigenes Gerät anzulegen. Dazu muss ein Gerätekasten eingefügt werden und in diesen müssen daraufhin die Geräteanschlüsse gelegt werden. Zum besseren Verständnis kann man selbstgezeichnete Geräte noch mit gewissen Schaltzeichen versehen. Weiterführend kann man in E-Plan alle vorstellbaren elektrischen Komponeten finden. Motoren, Geber, Schütze, Relais und noch vieles mehr findet sich in der lokalen E-Plan Bibliothek. Mit E-Plan lassen sich auch die benötigten Reihenklemmen herrausfinden. Ab einem gewissen Masstab kann man sich die Reihenklemmen nicht mehr denken und genau da hilft es, dass man in E-Plan die Klemmen genau planen muss. Das ausführliche Beschäftigen mit den Reihenklemmen ist wichtig, da diese für die Nachvollziehbarkeit eine große Rolle spielen. Für das Zeichnen eines Schaltplans ist es wichtig, im konstanten Austausch mit der Sensorik und der Steuerungstechnik zu stehen, um eine korrekte und realistische Verdrahtung zu planen.\\
     \paragraph{Komponentenkenntnisse}\mbox{}\\
     Wie bereits erwähnt braucht es für eine richtige E-Plan Zeichnung ein ausführliches Wissen über die elektrischen Komponenten der Anlage. Dafür ist es auch nötig, dass man weiß, wo man sich informieren kann. Deswegen wurde eine Excel-Tabelle angelegt, in welcher alle elektrischen Komponenten aufgelistet waren. Diese Liste diente primär zur elektrischen Planung, wurde aber schon angelegt, als die mechanische Seite des Schaltschrankes geplant wurde. In dieser Liste wurden Links zu Datenblättern hinterlegt, sowie festgehalten ob das jeweilige Element im Schaltschrank oder am AFSS verbaut wird. Auch mechanische Daten wie die Maximalwerte von Breite, Höhe und Tiefe wurden eingefügt. Die Excel-Tabelle beinhaltete weiters auch die Anzahl der jeweiligen Komponente, die Art der Montage (Hutschiene, Siemens-Profilschiene oder andersartige Montage) und die Gerätenummer wurde ebenfalls festgehalten. Diese Liste ist das wichtigste Dokument in der elektrischen Planung gewesen, da man sich konstant an die spezifischen Daten von beispielsweise einem Netzteil erinnern musste. Zu guter Letzt wurde in dieser Excel-Liste ebenfalls dokumentiert wie weit das Element eingeplant wurde. Das heißt, es wurde festgehalten, ob es im E-Plan fertig war oder ob es in der mechanischen Planung konstruiert wurde.
     \paragraph{Schaltplan - Strukturzugang}\mbox{}\\
@@ -233,7 +232,7 @@
     Der Schaltplan orientiert sich, wie erwähnt, am Stromfluss. Damit wurden zuerst der Fehlerstromschutzschalter und der Leitungsschutzschalter sowie der Drehtrennschalter gezeichnet. Diese Elemente sichern die Anlage, beziehungsweise dienen zur manuellen Freischaltung aller Elemente und wurden allen anderen Komponenten vorgeschaltet.
     \paragraph{Netzteile für 24V }\mbox{}\\
     Auf der zweiten Seite befinden sich alle Netzteile für die normale 24V DC Spannung (siehe Abbildung \ref{fig:Netzteile}). Es sind in Summe drei Netzteile auf dieser Seite, die jeweils an L1, L2, L3 und PE angeschlossen gehören. Deswegen wurden die vier Leiter zuerst in Klemmen geführt, dort mit Querverbindern so verbunden, dass man ohne potentiell gefährliche Drahtbrücken alle Netzteile versorgen kann. Von diesen querverbundenen Reihenklemmen wurden auch Abgänge für den Asynchronmotor eingezeichnet und ein Abgang für die Versorgung des ASi-Netzteils sowie der Service-Schnittstelle.\\ 
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{Vogis Bilder/Netzteile_Schaltplan.png}
         \caption{Schaltplan: Netzteile}
@@ -275,7 +274,7 @@
         \label{tab:geberanschluesse}
     \end{table}
     Der Treiber CL57C hat Ausgänge, die genau dieselbe Bezeichnung haben. Die gleichnamigen Anschlüsse wurden miteinander verbunden. \\\\
-    Da der Motor nicht im Schaltschrank sondern am Lagerregal verbaut wird, muss vom Treiber zum Motor beziehungsweise Geber ein Kabel verlegt werden. Dies wiederum bedeuet, dass im Schaltschrank vom Treiber zuerst auf Reihenklemmen gegenagen wird und an diese Reihenklemmen dann die Kabel geklemmt werden. Für den Schrittmotor wird ein 5 adriges Kabel (inklusive PE) verwendet mit der Kabelbezeichnung \enquote{ÖLFLEX® CLASSIC FD 810 CY 5G0,75}. Der PE Leiter wird an eine Erdung angeklemmt und dieses Kabel hat, um die elektromagnetische Verträglichkeit zu gewährleisten, eine Schirmung. Die Schirmung muss, um zu funktionieren, an die Erdung gelegt werden, weil der Schirm nur so eine Senke sein kann, für die von den Leitern abgestrahlten elektromagnetischen Wellen. Das Kabel wird auf einer Ankerschiene mit der entsprechenden Zugentlastungsklemme, auf dem Erdungsmodul, nicht nur zugentlastet, es wird auch der Schirm geerdet. Dabei muss dann bedacht werden, dass die Klemme Kontakt zum Schirm hat, und die Ankerschiene geerdet sein muss. Der Schirm sowie die Erdung dessen wurde im Schaltplan hinzugefügt.\\    
+    Da der Motor nicht im Schaltschrank sondern am Lagerregal verbaut wird, muss vom Treiber zum Motor beziehungsweise Geber ein Kabel verlegt werden. Dies wiederum bedeuet, dass im Schaltschrank vom Treiber zuerst auf Reihenklemmen gegenagen wird und an diese Reihenklemmen dann die Kabel geklemmt werden. Für den Schrittmotor wird ein 5 adriges Kabel (inklusive PE) verwendet mit der Kabelbezeichnung \enquote{ÖLFLEX® CLASSIC FD 810 CY 5G0,75}. Der PE-Leiter wird an eine Erdung angeklemmt und dieses Kabel hat, um die elektromagnetische Verträglichkeit zu gewährleisten, eine Schirmung. Die Schirmung muss, um zu funktionieren, an die Erdung gelegt werden, weil der Schirm nur so eine Senke sein kann, für die von den Leitern abgestrahlten elektromagnetischen Wellen. Das Kabel wird auf einer Ankerschiene mit der entsprechenden Zugentlastungsklemme, auf dem Erdungsmodul, nicht nur zugentlastet, es wird auch der Schirm geerdet. Dabei muss dann bedacht werden, dass die Klemme Kontakt zum Schirm hat, und die Ankerschiene geerdet sein muss. Der Schirm sowie die Erdung dessen wurde im Schaltplan hinzugefügt.\\    
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.9\textwidth]{Vogis Bilder/Schaltplan_SM1.png}
@@ -296,8 +295,8 @@
     \end{table}
     Alle Anschlüsse mit einem \enquote{-} am Ende beschreiben den Minuspol zum jeweiligen Gegenstück mit \enquote{+}. Da in unserem Fall alle \enquote{+} Kontakte von der selben SPS kommen und damit alle die selbe Spannung referenzieren, können PUL-, DIR-, ENA- und COM- zusammengeschlossen werden und daraufhin zur Sammelschiene der Minuspole geklemmt werden.\\
     PUL+ steht für \enquote{pulse} und reguliert die Geschwindigkeit der Drehung,  DIR+ steht für \enquote{direction} und reguliert die Drehrichtung, ENA+ steht für \enquote{enable} und entsperrt den Treiber beziehungsweise gibt frei, dass eine Ansteuerung gewünscht ist. BRK steht für \enquote{break} und würde benötigt werden, wenn eine Bremse angedacht wäre, was in diesem Fall aber nicht der Fall war. ALM steht für \enquote{alarm} und ist ein Ausgang, der einen erkannten Fehler meldet.\\
-    ALM wurde mit der Eingangskarte verbunden und PUL+, DIR+ und ENA+ wurden an die zugehörigen Kontakte bei den PTO Karten der SPS gezeichnet. Die vollständige Seite ist auf der Abbildung \ref{fig:SMohneBremse}\\     
-    \begin{figure}[h]
+    ALM wurde mit der Eingangskarte verbunden und PUL+, DIR+ und ENA+ wurden an die zugehörigen Kontakte bei den PTO Karten der SPS gezeichnet. Die vollständige Seite ist auf der Abbildung \ref{fig:SMohneBremse} .\\     
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{Vogis Bilder/Schaltplan_SM_bremse.png}
         \caption{Zusätzliche Kurzschließung von Spulen bei horizontalen Antrieben}
@@ -328,7 +327,7 @@
     \paragraph{Siemens-DO-Karten}\mbox{}\\
     Auf Seite 24 befindet sich die Ausgangskarte der Siemens SPS. Mit dieser werden ausschließlich nur Relais angesteuert. Diese sind für die Invertierung der Enable-Eingänge der Treiber zuständig, für das Steuern der Schütze für den Asynchronmotor und zuletzt auch für die Bremsfunktion. Damit ist die Schaltung zur Steuerung aller Schrittmotoren fertig. Auf den folgenden Seiten wurde dann die Schaltung der ASi-Sensoren gezeichnet
     \paragraph{ASi-Slaves und Sensoren}\mbox{}\\
-    Bezüglich dem ASi-Netz ist zu wiederholen, dass der ASi-Master mit den Slaves über einen zweiadrigen ASi-Bus kommuniziert. Für diesen Bus gibt es ein eigenes Kabel, aber da mit dem Material gearbeitet werden muss, was vorhanden ist, wird beim AFSS das selbe fünf adrige Ölflex verwendet wie für die Motoren. In diesem ungünstigen Fall werden von den fünf Adern am Ende nur zwei verwendet.\\
+    Bezüglich dem ASi-Netz ist zu wiederholen, dass der ASi-Master mit den Slaves über einen zweiadrigen ASi-Bus kommuniziert. Für diesen Bus gibt es ein eigenes Kabel, aber da mit dem Material gearbeitet werden muss, was vorhanden ist, wird beim AFSS das selbe fünfadrige Ölflex verwendet wie für die Motoren. In diesem ungünstigen Fall werden von den fünf Adern am Ende nur zwei verwendet.\\
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{Vogis Bilder/ASI_Schaltplan_sensoren.png}
@@ -390,7 +389,7 @@
         \label{fig:Schaltschrank_onlyModule}
     \end{figure}    
     \paragraph{Profilschienen-Verschiebung}\mbox{}\\
-    Zwei Profilschienen wurden um ca. 300 mm nach innen versetzt. Dafür wurden die Winkel, die die Profilschienen an den Serverschrank befestigten, gelöst und weiter innen neu montiert. Das war deswegen möglich, da die Winkel an einer weiteren Profilschiene montiert waren. Diese bisher nicht gennante Profilschiene befindet sich im Schaltschrank vier mal und ist oben und unten quer befestigt (siehe Abildung \ref{fig:Clean_Serverschrank}). Nach diesem Schritt konnten die Modulplatten an die verschobenen Profilschienen geschraubt werden (Schaltschrank ohne Verdrahtung siehe Abbildung \ref{fig:Schaltschrank_onlyModule}).  
+    Zwei Profilschienen wurden um ca. 300 mm nach innen versetzt. Dafür wurden die Winkel, die die Profilschienen an den Serverschrank befestigten, gelöst und weiter innen neu montiert. Das war deswegen möglich, da die Winkel an einer weiteren Profilschiene montiert waren. Diese bisher nicht gennante Profilschiene befindet sich im Schaltschrank vier Mal und ist oben und unten quer befestigt (siehe Abildung \ref{fig:Clean_Serverschrank}). Nach diesem Schritt konnten die Modulplatten an die verschobenen Profilschienen geschraubt werden (Schaltschrank ohne Verdrahtung siehe Abbildung \ref{fig:Schaltschrank_onlyModule}).  
     \begin{figure}[H]
         \centering
         \begin{subfigure}{0.45\textwidth}
@@ -418,12 +417,12 @@
     Als letzte Modifikation wurde eine Service-Schnittstelle von Weidmüller in die rechte Metalwand des Schaltschrankes eingebaut (siehe Abbildung \ref{fig:Service_Schnittstelle}). Dazu wurden manuell auf die Seitenwand die erforderlichen Maße angezeichnet. Entlang dieser Markierungen wurde daraufhin, unter Beachtung aller dafür notwendigen Schutzmaßnahmen, mit einem Winkelschleifer geschnitten. Dieser hatte für das Schneiden von Metall dieser Stärke den entsprechenden Aufsatz. 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{Vogis Bilder/Service_Schnittstelle.jpg}
+        \includegraphics[width=0.35\textwidth]{Vogis Bilder/Service_Schnittstelle.jpg}
         \caption{Service-Schnittstelle von Weidmüller}
         \label{fig:Service_Schnittstelle}
     \end{figure}
 \newpage
-\subsection{Fazit}\mbox{}
+\subsection{Fazit}
     Die effiziente Realisierung des Schaltschrankes war nur aufgrund einer umfassenden Vorplanung möglich. Das Prinzip des digitalen Zwillings hat sich mehrfach bewehrt und das Erlernte im Bezug auf 3D-Konstruktion ist umfassend.\\
     Der gezeichnete Schaltplan, im Programm E-Plan, benötigte die meiste Zeit und war auch vom Aufwand das Schwierigste, aufgrund einer geringen Wissensbasis und dem tiefgehenden Produktwissen das nötig war. Im Verlauf der Planung wurde ein breites Wissen im Bezug auf das Zeichnen eines Schaltplanes erlernt sowie ein weitreichendes Verständnis im Bezug auf die elektrischen Komponenten erlangt.\\
     Es musste kein Modul zweimal gefräst werden, für die Profilschienen wurde Alt und Restbestand verwendet und beim Verdrahtungskanal gab es nur minimalen Verschnitt. Aufbauend auf einer gründlichen Planung konnte beim Bau des Schaltschrankes der Verbrauch von Material minimiert werden. Fast alle elektrischen Komponenten sind recycelt und auch damit wurde ein nachhaltiger Anspruch erfüllt.\\
