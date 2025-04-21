@@ -6,13 +6,13 @@
 Grundlegende Anforderungen zur Planung der AFSS-Mechanik sind Transportfähigkeit, eine möglichst einfache Realisierung mit HTL-Mitteln und möglichst wenige Kompromisse in der Funktion oder Zuverlässigkeit eingehen zu müssen.\\
 Die Anforderung der Transportfähigkeit limitiert die Größe des Lagers auf \SI{2.3}{\meter} Länge, um im Lift transportiert werden zu können, und auf \SI{1.9}{\meter} Höhe aufgrund der Türhöhe im Keller. Weiters müssen auch noch Rollen an den Rahmen angebracht werden, um das Lager ohne großen Mehraufwand bewegen zu können. Diese Extrahöhe der Räder (ca. \SI{80}{\mm}) limitiert den Rahmen weiter.\\
 Nun soll dieser rund \SI{2.25}{\meter} lange und \SI{1.8}{\meter} hohe Raum optimal genutzt werden, um eine möglichst große Lagerdichte sicherstellen zu können.\\
-Um eine möglichst gute Erweiterbarkeit sowie eine Fertigung an der Schule zu ermöglichen, sollen für die mechanische Trägerkonstruktion sogenannte Item-Profile verwendet werden.
+Damit eine möglichst gute Erweiterbarkeit sowie eine Fertigung an der Schule möglich sind, sollen für die mechanische Trägerkonstruktion sogenannte Item-Profile verwendet werden.
 
 
 
 \paragraph{Item}\mbox{}\\
-Das Item-Profilsystem ist ein System, welches Aluminium-Extrusionen in verschiedenen Ausführungen sowie viele Verbindungsmöglichkeiten zu sich selbst sowie anderen mechanischen Elementen bietet. Hierbei gibt es eine breite Auswahl an Profilen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen werden 20x20-Extrusionen verwendet.
-Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit, Nutensteine mit verschiedenen Gewinden in die Nut einzulegen und dort Platten o. Ä. anzuschrauben. Um Item-Profile untereinander zu verbinden, können Standardverbindungssätze wie in Abb. \ref{sfs_item} verwendet werden.\\
+Das Item-Profilsystem ist ein System, welches Aluminium-Extrusionen in verschiedenen Ausführungen sowie viele Verbindungsmöglichkeiten zu sich selbst, sowie zu anderen mechanischen Elementen bietet. Hierbei gibt es eine breite Auswahl an Profilen, von 20x20 mm bis 40x40 mm Querschnitt. Für alle Komponenten mit hoher mechanischer Beanspruchung werden 40x40-Extrusionen verbaut, da diese eine besonders hohe Biegefestigkeit aufweisen. Für Anwendungen mit geringerer Beanspruchung sowie aus Platz- und Gewichtsparmaßnahmen werden 20x20-Extrusionen verwendet.
+Zur Verbindung zu anderen Bauelementen gibt es die Möglichkeit, Nutensteine mit verschiedenen Gewinden in die Nut einzulegen und dort Platten oder Ähnliches anzuschrauben. Um Item-Profile untereinander zu verbinden, können Standardverbindungssätze wie in Abb. \ref{sfs_item} verwendet werden.\\
 
 Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies kostengünstig umsetzen zu können, werden V-Slot-Profile verwendet.
 
@@ -20,7 +20,7 @@ Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies koste
     \begin{minipage}{0.5\textwidth}
         \centering
         \includegraphics[width=0.9\textwidth]{Item-Standartverbindungssatz.png}
-        \caption{Item Profil mit Standartverbindungssatz, Quelle: \cite{Item_svs}}
+        \caption{Item Profil mit Standardverbindungssatz, Quelle: \cite{Item_svs}}
         \label{sfs_item}
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
@@ -33,7 +33,7 @@ Die Anwendung im AFSS erfordert ausserdem recht lange Verfahrwege. Um dies koste
 
 
 \paragraph{V-Slot}\mbox{}\\
-Auch V-Slot-Profile sind Aluminium-Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile mit Nutensteinen etc. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann (siehe Abb. \ref{v-wheel}). Diese Profile sind in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da einerseits auch breitere und mehr V-Wheels verwendet werden können, sowie einen sehr großen Widerstandsmoment aufweisen.
+Auch V-Slot-Profile sind Aluminium-Extrusionen. Diese können grundsätzlich auch ähnlich wie Item-Profile mit Nutensteinen, etc. verwendet werden, sind aber zusätzlich darauf ausgelegt, dass ein V-Wheel in einer Narbe des Profils rollen kann (siehe Abb. \ref{v-wheel}). Diese Profile sind unter anderem in einer C-Profil-Form erhältlich. Diese sind für die langen Verfahrwege optimal, da einerseits mehr V-Wheels verwendet werden können, sowie andererseits ein sehr großes Widerstandsmoment aufweisen.
 
 
 \subsubsection{Vorgehensweise}
@@ -106,16 +106,16 @@ Angetrieben wird die X-Achse mit zwei Schrittmotoren, welche jeweils an einer Sc
 Da der Riemen für eine zuverlässige Kraftübertragung bei so langen Verfahrwegen eine relativ große Vorspannkraft benötigt, ist das Zahnriemenklemmelement auf der X-Achse auch dementsprechend auszuführen. Um den Zahnriemen zu greifen, werden Teile mit Negativverzahnung 3D-gedruckt, in dieses der Zahnriemen dann auf beiden Seiten des Schlittens geklemmt wird. Die Aufhängung der einen Seite ist einfach mit den Item-Profilen verschraubt, lässt aber noch etwas Platz, um den Riemen mit der Hand vorzuspannen. Auf der anderen Seite ist das Klembrett über zwei Gewindestangen mit dem restlichen Shuttle verbunden. Diese können festgezogen werden, um die nötigen Vorspannkräfte zu erzeugen (siehe \ref{X-Achse_a1}). Außerdem ist diese Spannvorrichtung in einem Formfaktor ausgeführt, welcher es erlaubt, direkt darüber die Motoren der Y-Achse anzubringen (siehe \ref{X-Achse_a2}).
 
 \paragraph{Achsenführung} \mbox{}\\
-Die Führung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-Wheels werden von oben auf das C-Profil gedrückt. Jedes Rad wird einzeln aufgehängt. Weiters ist überall eine Schraube verbaut, mit welcher das Rad weiter in die Führung hineingedrückt werden kann, sowie ein bis zwei Klemmpunkte, um bei Betrieb die Last von der Spannschraube nehmen zu können. Durch den geringen Platz im Schlitten ist es durchaus eine Herausforderung, dass all diese Mechanik neben den Spannelementen und Motoren in einem so kleinen Shuttle Platz finden. Auf der Seite des Schlittens werden noch weitere V-Wheels angebracht, welche die Spurführung übernehmen.
+Die Führung der Achse im V-Slot-Profil wird mit V-Wheels durchgeführt. Sechs V-Wheels werden von oben auf das C-Profil gedrückt. Jedes Rad wird einzeln aufgehängt. Weiters ist überall eine Schraube verbaut, mit welcher das Rad weiter in die Führung hineingedrückt werden kann, sowie ein bis zwei Klemmpunkte, um bei Betrieb die Last von der Spannschraube nehmen zu können. Durch den geringen Platz im Schlitten war es durchaus eine Herausforderung, dass all diese Mechanik neben den Spannelementen und Motoren in einem so kleinen Shuttle Platz finden. Auf der Seite des Schlittens werden noch weitere V-Wheels angebracht, welche die Spurführung übernehmen.
 Im oberen Schlitten werden nur diese Führungsräder verbaut, da es nicht möglich und nötig ist, vertikale Kräfte zu unterstützen.
 
 \paragraph{Kabelführung} \mbox{}\\
-Um Sensoren und Aktoren der Y- und Z-Achse zu unterstützen, müssen dementsprechende Leitungen auf das X-Shuttle verlegt werden. Dies wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird parallel zum unteren C-Profil verlegt und unter Berücksichtigung der Biegeradien am X-Shuttle befestigt. Bei dieser ist darauf zu achten, dass sie alle benötigten Leitungen sowie genügend Freiraum für die Biegung einhält (vgl. \cite{igus_freitragend}). Weiters müssen Signal- und Aktorstromkreise durch Trennstege voneinander getrennt werden.
+Um Sensoren und Aktoren der Y- und Z-Achse zu versorgen, müssen dementsprechende Leitungen auf das X-Shuttle verlegt werden. Dies wird mithilfe einer Kabelschleppkette der Firma Igus umgesetzt. Diese wird parallel zum unteren C-Profil verlegt und unter Berücksichtigung der Biegeradien am X-Shuttle befestigt. Bei dieser ist darauf zu achten, dass sie genügend Platz für alle benötigten Leitungen, sowie genügend Freiraum für die Biegung der Kabelschleppkette einhält (vgl. \cite{igus_freitragend}). Weiters müssen Signal- und Aktorstromkreise durch Trennstege voneinander getrennt werden.
 \\
 Um die weiteren Geräte am AFSS zu versorgen, müssen zusätzlich noch Verdrahtungskanäle am Rahmen angebracht werden.
 
 \paragraph{Sensoren}\mbox{}\\
-Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und ein Referenzierschalter. Bei der X-Achse werden als Endschalter mechanische Rolltaster verwendet. Diese werden neben den V-Slot-Profilen befestigt und von einem, vom Schlitten abstreifenden Arm ausgelöst.
+Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und ein Referenzierschalter. Bei der X-Achse werden als Endschalter mechanische Rolltaster verwendet. Diese werden neben den V-Slot-Profilen befestigt und von einem, vom Schlitten abstehenden Arm ausgelöst.
 
 
 %zwei abbildungen nebeneinander mit legende
@@ -190,10 +190,10 @@ Die Sensorik ist bei jeder Achse ähnlich aufgebaut. Immer zwei Endschalter und 
 
 
 \subsubsection{Y-Achse}
-Als Y-Achse wird jene Achse bezeichnet, die ihre Bewegung vertikal durchführt. Sie hat die Aufgabe, die Z-Achse bzw. das YZ-Shuttle auf Position zu bringen. Wichtig hierbei ist jedoch, dass die Y-Achse die Aufgabe des Aufhebens der Box übernimmt.
+Als Y-Achse wird jene Achse bezeichnet, die vertikale Bewegung durchführt. Sie hat die Aufgabe, die Z-Achse bzw. das YZ-Shuttle auf Position zu bringen. Wichtig hierbei ist jedoch, dass die Y-Achse die Aufgabe des Aufhebens der Box übernimmt.
 
 \paragraph{Antriebsauslegung}\mbox{}\\
-Dadurch, dass die Y-Achse sowohl das YZ-Shuttle als auch die Boxen aufheben muss, muss der Antrieb dementsprechend dimensioniert werden. Als Formfaktor soll ein Nema23-Schrittmotor verwendet werden. Diese sind weit verbreitet und im Vergleich zu Servomotoren relativ kostengünstig. Als Grundformfaktor wird ein \SI{2}{\newton\meter} Motor gewählt. Nun soll überprüft werden, ob dieser die Last der YZ-Achse auch antreiben kann.
+Dadurch, dass die Y-Achse sowohl das YZ-Shuttle als auch die Boxen aufheben muss, wird der Antrieb dementsprechend dimensioniert. Als Formfaktor der Schrittmotoren soll Nema23 verwendet werden. Diese sind weit verbreitet und im Vergleich zu Servomotoren relativ kostengünstig. Als Grundformfaktor wird ein \SI{2}{\newton\meter} Motor gewählt. Nun soll überprüft werden, ob dieser die Last der YZ-Achse auch antreiben kann.
 
 \vspace{5mm}
 \noindent\begin{minipage}{\textwidth}
@@ -217,13 +217,13 @@ Dadurch, dass die Y-Achse sowohl das YZ-Shuttle als auch die Boxen aufheben muss
 \end{minipage}
 \vspace{5mm}
 
-Bei der Konstruktion einer früheren Version des YZ-Shuttles wurde erfasst, dass das Shuttle bis zu \SI{13}{\kg} wiegen kann. Dies wird zwar in einer späteren Iteration des Designprozesses noch verbessert, dient jedoch als Richtwert für die Antriebsauslegung. \SI{13}{kg} erzeugen ohne Berücksichtigung von Reibung knapp  \SI{130}{\newton}. Die Antriebskraft der Schrittmotoren reicht auf jeden Fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen und somit das gesamte Gewicht der Z-Achse sowie der Kabelschleppkette immer unterstützt werden müssen, durchaus sinnvoll.
+Bei der Konstruktion einer früheren Version des YZ-Shuttles wurde erfasst, dass das Shuttle bis zu \SI{13}{\kg} wiegen kann. Dies wird zwar in einer späteren Iteration des Designprozesses noch verbessert, dient jedoch als Richtwert für die Antriebsauslegung. \SI{13}{kg} erzeugen ohne Berücksichtigung von Reibung eine Kraft von knapp  \SI{130}{\newton}. Die Antriebskraft der Schrittmotoren reicht auf jeden Fall aus. Doch diese Überdimensionierung ist unter dem Aspekt, dass die Antriebe über keine Bremse verfügen und somit das gesamte Gewicht der Z-Achse sowie der Kabelschleppkette immer unterstützt werden müssen, durchaus sinnvoll.
 
 \paragraph{Zahnriemen und Umlenkung}\mbox{}\\
-Als Zahnriemen wird auch bei der Y-Achse auf ein AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung ebendieses nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, muss er auch dort wieder rückgeführt werden. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ein möglichst kompakter Formfaktor angestrebt werden muss und andererseits eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot-C-Profil erforderlich ist. Aus diesem Grund wird eine Konstruktion aus Aluminium, welche sich selbst verhakt, konstruiert (siehe \ref{X-Achse_b2}). Sie muss seitlich an den Profilen verschraubt werden. Im vorderen Überhang werden Aluminiumelemente eingehängt, die die Aufhängung der Achse für die Umlenkung erlauben.
+Als Zahnriemen wird auch bei der Y-Achse auf ein AT5x16-Profil gesetzt. Doch hier gestaltet sich die Positionierung nicht so simpel wie bei der X-Achse. Da der Zahnriemen beim YZ-Shuttle an einem bestimmten Punkt befestigt werden muss, wird er auch dort wieder rückgeführt. Die Umlenkung des Zahnriemens gestaltet sich jedoch wesentlich anspruchsvoller als bei der X-Achse, da einerseits ein möglichst kompakter Formfaktor angestrebt wird und andererseits, eine aufhängungstechnisch sehr unvorteilhafte Positionierung vor dem V-Slot-C-Profil (da dort keine einfache Möglichkeit besteht, etwas in Z-Richtung vor der Y-Achse zu befestigen) erforderlich ist. Aus diesem Grund wird eine Konstruktion aus Aluminium, welche sich selbst verhakt, konstruiert (siehe \ref{X-Achse_b2}). Sie muss seitlich an den Profilen verschraubt werden. Im vorderen Überhang werden Aluminiumelemente eingehängt, die die Aufhängung der Achse für die Umlenkung erlauben.
 
-\paragraph{Zahnriemenaufgängung}\mbox{}\\
-Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um mit der Konstruktion beginnen zu können, werden hierfür ungefähre Werte angenommen.
+\paragraph{Zahnriemenaufhängung}\mbox{}\\
+Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu können, wird überschlagsmäßig ein Massenschwerpunkt in Z-Richtung berechnet. Um mit der Konstruktion beginnen zu können, werden hierfür näherungsweise Werte angenommen.
 
 \noindent\begin{minipage}{\textwidth}
 \begin{minipage}[t]{0.5\textwidth}
@@ -264,9 +264,9 @@ Um die optimale Position der Zahnriemenaufhängung für die Y-Achse bestimmen zu
         \end{tabular}
         \caption{X-Achse beim Ladevorgang}
 \end{table}
-So werden zwei Schwerpunkte errechnet: ca. \SI{130}{\mm} im unbeladenen Zustand und 250 mm während dem Ladevorgang. Da die Stabilität des Y-Shuttles während dem Ladevorgang wichtiger ist als während einer Leerfahrt, wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemens bei rund 200 mm liegt.\\
+So werden zwei Schwerpunkte errechnet: ca. \SI{130}{\mm} im unbeladenen Zustand und \SI{250}{\mm} während dem Ladevorgang. Da die Stabilität des Y-Shuttles während dem Ladevorgang wichtiger ist als während einer Leerfahrt, wird das Y-Shuttle so positioniert, dass die Aufhängung des Zahnriemens bei rund \SI{200}{\mm} liegt.\\
 Weiters muss auch dieser Zahnriemen wieder gespannt werden. Durch die geringere Zahnriemenlänge wird auch der Spannmechanismus verkleinert.
-Leider muss dieser aus Platzgründen außerhalb der Flucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung können durch folgenden Ausdruck, der die Länge, die der Zahnriemen bei einer bestimmten Position braucht, um spannungslos zu sein, approximiert, ermittelt werden. (Hierbei wird von einem linearen Zusammenhang zwischen der Kraft auf die Aufhängung und der Längenkontraktion ausgegangen. In der Realität würde jedoch die Elastizität des Zahnriemens sowie jene der Aufhängung Auswirkungen haben, aber diese verringern die Auswirkungen).
+Dieser muss aus Platzgründen, außerhalb der Flucht zum Zahnriemen angebracht werden. Die Folgen dieser Auslenkung auf die Riemenspannung können durch folgenden Ausdruck, der die Länge, die der Zahnriemen bei einer bestimmten Position braucht, um spannungslos zu sein, approximiert, ermittelt werden. (Hierbei wird von einem linearen Zusammenhang zwischen der Kraft auf die Aufhängung und der Längenkontraktion ausgegangen. In der Realität würde jedoch die Elastizität des Zahnriemens sowie jene der Aufhängung Auswirkungen haben, aber diese verringern die Auswirkungen).
 \\
 
     \noindent\begin{minipage}{\textwidth}
@@ -300,26 +300,26 @@ Leider muss dieser aus Platzgründen außerhalb der Flucht zum Zahnriemen angebr
     Aus der Abbildung \ref{zahnriemenversatz} geht, wie schon intuitiv vermutet, hervor, dass diese Asymmetrie nur dann ein Problem darstellt, wenn der Schlitten weit unten ist. Ein konkretes Maß kann folgendermaßen ermittelt werden: \(K(80) - (750) = 4.24\unit{\milli\meter}\). Der Unterschied in der benötigten Riemenlänge zwischen der Mittelstellung (750 \unit{\milli\meter} ) und der Ruheposition (\SI{80}{\mm} über der Zahnscheibe) beträgt also rund \SI{4}{\mm}. Im Hinblick darauf, dass diese Länge auf zwei Seiten (Hin- und Rücklaufseite) des Zahnriemens aufgeteilt wird (welcher etwas elastisch ist), sowie dass eine leichte Biegung in der Umlenkungsaufhängung auftritt, wird diese Extraspannung toleriert.
 
 \paragraph{Shuttleführung}\mbox{}\\
-Das YZ-Shuttle wird aus Stabilitätsgründen ebenfalls mit einem V-Slot C-Profil geführt. Diese sind auf beiden Seiten jeweils oben und unten befestigt. Die Länge wird so gewählt, dass die Verwendung eines \SI{1.5}{\meter} langen Profils perfekt ausreicht. Da das YZ-Shuttle wesentlich weniger Kraft auf die Führung auswirkt, können weniger Führungsräder verwendet werden. Die Hauptführungsräder werden so positioniert, dass sich ein Dreieck ergibt. Dieses dient dazu, dass sowohl beim Aufhebevorgang als auch beim Leerlauf immer eine Klemmung um die Führungsschiene entsteht. Hierbei sind jene V-Wheels, welche beim Aufhebevorgang belastet werden, doppelt ausgeführt. Wie schon bei der X-Achse sind auch hier wieder alle V-Wheel-Abstände mit Schrauben einstellbar. Zusätzlich zur Hauptführung sind auch außen jeweils noch zwei Führungsräder angebracht, um das Shuttle zusätzlich zu stabilisieren.\\
-Dabei muss die Halterung auf der Zahnriemenseite dünner Ausgeführt werden, da sonst eine Kollision zwischen Riemen und Halterung zustande kommen würde.
+Das YZ-Shuttle wird aus Stabilitätsgründen ebenfalls mit V-Slot C-Profilen geführt. Diese sind auf beiden Seiten jeweils oben und unten befestigt. Die Länge wird so gewählt, dass die Verwendung eines \SI{1.5}{\meter} langen Profils perfekt ausreicht. Da das YZ-Shuttle wesentlich weniger Kraft auf die Führung auswirkt, können weniger Führungsräder verwendet werden. Die Hauptführungsräder werden so positioniert, dass sich ein Dreieck ergibt. Dieses dient dazu, dass sowohl beim Aufhebevorgang als auch beim Leerlauf immer eine Klemmung um die Führungsschiene entsteht. Hierbei sind jene V-Wheels, welche beim Aufhebevorgang belastet werden, doppelt ausgeführt. Wie schon bei der X-Achse sind auch hier wieder alle V-Wheel-Abstände mit Schrauben einstellbar. Zusätzlich zur Hauptführung sind auch außen jeweils noch zwei Führungsräder angebracht, um das Shuttle zusätzlich zu stabilisieren.\\
+Dabei muss die Halterung auf der Zahnriemenseite dünner ausgeführt werden, da sonst eine Kollision zwischen Riemen und Halterung zustande kommen würde.
 
 \paragraph{Sensoren}\mbox{}\\
-Da die Endschalter der Y-Achse kapazitiv ausgeführt sind, muss auf dem Shuttle ein metallisches Gegenstück angebracht sein. Diese stehen oben und unten über und lösen so vor Kollision aus. Um die Sensoren anzubinden, muss auch ein ASi-Client auf dem X-Shuttle angebracht werden.
+Da die Endschalter der Y-Achse kapazitiv ausgeführt sind, muss auf dem Shuttle ein metallisches Gegenstück angebracht sein. Diese stehen oben und unten über und lösen so vor einer Kollision aus. Um die Sensoren anzubinden, wird auch ein ASi-Client auf dem X-Shuttle angebracht.
 
 \paragraph{Kabelschleppkette}\mbox{}\\
-Um Versorgung der Z-Achse herstellen zu können, muss eine Kabelschleppkette vom X- zum Y-Shuttle angebracht werden. Ach diese muss leider Sonderanforderungen erfüllen. Da die Versorgung von unten ausgeht, muss die Kabelschleppkette stehend eingebaut werden. Dies ist grundsätzlich eine äußerst ungünstige Situation, da diese Schleppkette der Beschleunigung des X-Shuttles ausgesetzt ist. Um ein Schwingen möglichst zu verhindern, werden seitlich noch Führungselemente angebracht. Außerdem sind die Anschlusselemente fest um die ersten Kettenglieder extra zu unterstützen. \cite{igus_vertikal}
+Um eine Versorgung der Z-Achse herstellen zu können, muss eine Kabelschleppkette vom X- zum Y-Shuttle angebracht werden. Auch diese muss Sonderanforderungen erfüllen. Da die Versorgung von unten ausgeht, muss die Kabelschleppkette stehend eingebaut werden. Dies ist grundsätzlich eine äußerst ungünstige Situation, da diese Schleppkette der Beschleunigung des X-Shuttles ausgesetzt ist. Um ein Schwingen möglichst zu verhindern, werden seitlich noch Führungselemente angebracht. Außerdem sind die Anschlusselemente fest, um die ersten Kettenglieder extra zu unterstützen (vgl. \cite{igus_vertikal}).
 
 \subsubsection{Z-Achse}
-Als Z-Achse oder Gabel, wird jener Teil des AFSS bezeichnet, der die Boxen in das Lager ein- und ausfährt. Dieser ist in das YZ-Shuttel integriert. Es wird davon ausgegangen, dass um Boxen ein- und auszuheben ca. 210 mm überstand der Gabel benötigt wird. Dies ist also der Mindestverfahrweg der Z-Achse
+Als Z-Achse oder Gabel, wird jener Teil des AFSS bezeichnet, der die Boxen in das Lager ein- und ausfährt. Dieser ist in das YZ-Shuttel integriert. Es wird davon ausgegangen, dass um Boxen ein- und auszuheben ca. 210 mm Überstand der Gabel benötigt wird. Dies ist also der Mindestverfahrweg der Z-Achse
 
 \paragraph{Linearführung}\mbox{}\\
-Geführt wird die Gabel mit zwei Führungsschienen von Igus. Diese bieten optimale Stabilität sowie, in Verbindung mit einem Führungswagen, eine reibungsarme Bewegung. Wichtig ist jedoch, dass der Schwerpunkt der am Führungswagen befestigten Last nicht mehr als die doppelte Wagenlänge über den Wagen hinausgeht. Danach kommt es zu sehr starker Verklemmung, und ein Betrieb ist nur mehr schwer möglich. Da bei einer Auslegeroperation der Schwerpunkt sehr weit übersteht, wird eine TS-01 Führungsschienen- und -wagenkombination verwendet. Diese wirkt zwar recht überdimensioniert, doch da der Führungswagen so lang ist, kann ein reibungsarmer Betrieb gewährleistet werden.
+Geführt wird die Gabel mit zwei Führungsschienen von Igus. Diese bieten optimale Stabilität sowie, in Verbindung mit einem Führungswagen, eine reibungsarme Bewegung. Wichtig ist jedoch, dass der Schwerpunkt der am Führungswagen befestigten Last nicht mehr als die doppelte Wagenlänge über den Wagen hinausgeht. Ansonsten kommt es zu sehr starker Verklemmung, und ein Betrieb ist nur mehr schwer möglich. Da bei einer Auslegeroperation der Schwerpunkt sehr weit übersteht, wird eine TS-01 Führungsschienen- und -wagenkombination verwendet. Diese wirkt zwar recht überdimensioniert, doch da der Führungswagen so lang ist, kann so ein ein reibungsarmer Betrieb gewährleistet werden.
 
 \paragraph{Motor}\mbox{}\\
 Als Antrieb für die Z-Achse sollen zwei Nema-17 Schrittmotoren verwendet werden. Hier ist es nicht nötig, eine Closed-Loop-Steuerung zu verwenden, da bei jedem Hub auch referenziert werden kann. Weiterhin kann dadurch Kabelschleppkettenplatz gespart werden.
 
 \paragraph{Spindelauslegung}\mbox{}\\
-Die Z-Achse wird mit einer Spindel angetrieben. Dies bietet Vorteile in der Positionsgenauigkeit und der Kraftübertragung. Jedoch ist es wichtig, die richtige Spindelsteigung auszuwählen, um die Balance zwischen Geschwindigkeit und Kraft zu halten. Ziel ist es, für eine Richtung des Hubs maximal 5 Sekunden zu benötigen. Sie wird über eine Zahnscheibe und Zahnriemen mit dem Motor verbunden.\\
+Die Z-Achse wird mit einer Spindel angetrieben. Dies bietet Vorteile in der Positionsgenauigkeit und der Kraftübertragung. Jedoch ist es wichtig, die richtige Spindelsteigung auszuwählen, um die Balance zwischen Geschwindigkeit und Kraft zu halten. Ziel ist es, für eine Richtung des Hubs, maximal 5 Sekunden zu benötigen. Die Spindel wird über eine Zahnscheibe und Zahnriemen mit dem Motor verbunden.\\
 Berechnet werden kann diese Zeit mit folgendem Ausdruck:
 
 \vspace{5mm}
@@ -348,7 +348,7 @@ Berechnet werden kann diese Zeit mit folgendem Ausdruck:
 \vspace{5mm}
 
 So wird berechnet, dass eine DS10x12-Spindel mit ihrer \SI{12}{\mm} Steigung, bei einer Motordrehzahl von {\SI{600}{\Umdrehung\per\minute}} (\SI{0.42}{\newton\meter}) und einem Übersetzungsverhältnis von 2:1, ca. 4 Sekunden pro Richtung benötigt und mit einer Kraft von ca. \SI{90}{\newton} bewegt wird.\\
-Dies entspricht unseren Anforderungen, und somit wird diese Spindel gewählt. Um sie zu lagern, wird vorne und hinten der Durchmesser der Spindel verringert, sodass diese in Kugellagern geführt werden kann.
+Dies entspricht den Anforderungen, und somit wird diese Spindel gewählt. Um sie zu lagern, wird vorne und hinten der Durchmesser der Spindel verringert, sodass diese in Kugellagern geführt werden kann.
 
 \paragraph{Sensorik}\mbox{}\\
 Um auch die Endschalter der Z-Achse, sowie weitere Sensoren einzulesen, wird auch hier ein ASi-Slave montiert.
@@ -409,7 +409,7 @@ Um auch die Endschalter der Z-Achse, sowie weitere Sensoren einzulesen, wird auc
 \end{figure}
 
 \subsubsection{Lager}
-Das Lager soll die Boxen beinhalten und die Möglichkeit zulassen, dass diese von der Gabel ein- und ausgehoben werden. Weiterhin muss die Box in X- und Z-Richtung geführt werden, um die Positionsgenauigkeit sicherzustellen, da sonst die Gabel möglicherweise in die Box fährt. Das Lager soll darauf ausgelegt werden, dass Boxen mit den Maßen \qtyproduct{50 x 100 x 200}{\milli\metre} verwendet werden können. Diese Boxen sind nach unten hin verjüngt und haben oben eine Lippe, an der die Gabel greift.
+Das Lager soll die Boxen beinhalten und die Möglichkeit zulassen, dass diese von der Gabel ein- und ausgehoben werden. Weiterhin muss die Box in X- und Z-Richtung geführt werden, um die Positionsgenauigkeit sicherzustellen, da sonst die Gabel möglicherweise in die Box fährt. Das Lager wird darauf ausgelegt, dass Boxen mit den Maßen \qtyproduct{50 x 100 x 200}{\milli\metre} verwendet werden können. Diese Boxen sind nach unten hin verjüngt und haben oben eine Lippe, an der die Gabel greift.
 Umgesetzt wird dies mit einem Gerüst aus 40x40-Item-Profilen, welches im Nachhinein in den restlichen Rahmen eingesetzt wird. Auf diese werden 20x40-Profile horizontal aufgeschraubt, auf denen die Boxen stehen. Vorne und hinten wird eine Kunststoffplatte aufgeschraubt, welche leicht übersteht und somit die Box in Z-Richtung positioniert. Zwischen den Boxen wird ein Trennsteg eingebaut, welcher die Boxen in X-Richtung positioniert sowie den richtigen Abstand zwischen den Boxen einhält.
 
 \subsubsection{Querförderer}
@@ -418,7 +418,7 @@ Zu diesem Zweck wird eine weitere, der Gabel ähnliche Konstruktion montiert, we
 
 
 \subsubsection{Fertigung der Einzelteile}\nobreak
-Die Fertigung der Bauteile erfolgt parallel zur Montage. Hierzu werden viele Tiele Gefräßt, Gelasert und Aluminiumprofile zugeschnitten. Manche Teile sind jedoch komplexer und müssen speziell angefertigt werden.
+Die Fertigung der Bauteile erfolgt parallel zur Montage. Hierzu werden viele Teile gefräßt, gelasert und Aluminiumprofile werden zugeschnitten. Manche Teile sind jedoch komplexer und müssen speziell angefertigt werden.
 
 \paragraph{Umlenkrollen}\mbox{}\\
 Die Umlenkrollen sind jeweils am Ende der X- und Y-Achsen angebracht. Da diese der gesamten Spannkraft ausgesetzt sind, erfordert dies spezielle Anforderungen an die Aufhängung sowie an die Umlenkrolle selbst. Diese soll primär eine 180°-Wende des Zahnriemens ermöglichen und sekundär eine Führung für den Riemen bieten.\\
@@ -488,15 +488,15 @@ Da die Welle des Motors recht kurz ist und die Motoraufhängung Platz wegnimmt, 
 \begin{minipage}{\textwidth}
 \subsubsection{Aufbau}
 
-Nach Fertigung der Einzelteile kann das AFSS sukksesive zusammengebaut werden.
+Nach Fertigung der Einzelteile kann das AFSS sukzessive zusammengebaut werden.
 
 \paragraph{Rahmen} \mbox{}\\
 Gestartet wird mit der Montage des Rahmen. Hierfür werden zuerst alle Aluminiumprofile auf Länge zugeschnitten und Gewinde in den Enden geschnitten. Da nicht genug Profile in der Gesamtlänge des AFSS verfügbar sind, müssen teils noch Verbinder eingesetzt werden. An den Ecken werden die Profile dann mit Standardverbindungssätzen verbunden. Unten werden dann noch die Rollen montiert.
 
 \paragraph{X-Achse} \mbox{}\\
-Nachdem die Aufhängungen für die V-Slot Profile gefräßt sind, werden diese an den Rahmen angeschraubt. Auf die V-Slot Profile werden das Nivellierungssystem aufgeschraubt, dann werden die Profile, wie in Abb. \ref{ramreal}, an der Aufhängung befestigt. \\
+Nachdem die Aufhängungen für die V-Slot Profile gefräßt sind, werden diese an den Rahmen angeschraubt. Auf die V-Slot Profile wird das Nivellierungssystem aufgeschraubt, dann werden die Profile, wie in Abb. \ref{ramreal}, an der Aufhängung befestigt. \\
 Danach werden die Umlenkrollen- und die Motoraufhängungen montiert. In diese werden dann Umlenkrollen und Motoren montiert. \\
-Nach Fertigung der Bauteile erfolgt auch der zusammenbau des sehr komplexen unteren X-Shuttels relativ reibungslos. Die Stoßverbindung der V-Slot-Profile kann jedoch nicht 100\%ig ausgerichtet werden, deshalb werden dies Übergänge noch abgeschliffen.
+Nach Fertigung der Bauteile erfolgt auch der Zusammenbau des sehr komplexen unteren X-Shuttels relativ reibungslos. Die Stoßverbindung der V-Slot-Profile kann jedoch nicht 100\%ig ausgerichtet werden, weshalb dies Übergänge noch abgeschliffen werden.
 
 
 \begin{figure}[H]
@@ -511,7 +511,7 @@ Nach Fertigung der Bauteile erfolgt auch der zusammenbau des sehr komplexen unte
 \begin{minipage}{\textwidth}
     
 \subsubsection{Fazit}
-In der Mechanik des AFSS sind nach aktuellem stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. Das Gesamtkonstrukt (wie in \ref{AFSS-mech-ges} ersichtlich) beinhält dann die gesamte Mechanik. Erst dadurch, dass eine volle Konstruktion erstellt wurde, war es dann möglich mit den Aufbau zu beginnen. Diese funktionierte, nachdem die Benötigten Teile soweit verfügbar waren, auch Reibungslos.
+In der Mechanik des AFSS sind nach aktuellem Stand über 1000 Bauteile verbaut. Die Umsetzung diese Projekts war nur durch eine sehr umfangreiche theoretische Planung möglich. Zwischen Haupt- und Einzelversionsiterationen wurden mehrere hundert Versionen der Mechanik in Fusion360 durchgeführt. Das dabei erlernte Wissen, sowie das daraus resultierende Design, welches viele Aspekte von Fertigung, Wartung und Zusammenbau bedenkt, macht es erst möglich ein solches Vorhaben zu versuchen. Das Gesamtkonstrukt (wie in \ref{AFSS-mech-ges} ersichtlich) beinhält dann die gesamte Mechanik. Erst dadurch, dass eine volle Konstruktion erstellt wurde, war es möglich mit den Aufbau zu beginnen. Diese funktionierte, nachdem die benötigten Teile soweit verfügbar waren, auch reibungslos.
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{mech_gesamt.PNG}
@@ -534,7 +534,7 @@ Um dem Endnutzer die Möglichkeit zu geben, das AFSS möglichst einfach zu bedie
     \caption{Gesamtüberblick des Servers}
 \end{figure}
 
-Um diesen Anforderungen gerecht zu werden, muss eine Lösung mit sehr hohem Grad an Freiheit in der Logik sowie der UI-Gestaltung gewählt werden. Weiters muss es möglich sein, dass zukünftige Schülerinnen und Schüler diese instand halten und erweitern. Aus diesen Gründen, sowie den bereits vorhandenen Kenntnissen, wird die Programmiersprache 'Python' als Grundlage des Servers verwendet.
+Um diesen Anforderungen gerecht zu werden, muss eine Lösung mit sehr hohem Grad an Freiheit in der Logik sowie der UI (user interface)-Gestaltung gewählt werden. Weiters muss es möglich sein, dass zukünftige Schülerinnen und Schüler diese instand halten und erweitern. Aus diesen Gründen, sowie den bereits vorhandenen Kenntnissen, wird die Programmiersprache \enquote{Python} als Grundlage des Servers verwendet.
 
 \paragraph{Python}\mbox{}\\
 Python ist eine vielseitige und hochentwickelte Programmiersprache, die für ihre Einfachheit und Lesbarkeit bekannt ist und sich sowohl für Anfänger als auch für Fortgeschrittene eignet. Sie unterstützt mehrere Programmierphilosophien, darunter objektorientierte und funktionale Programmierung, und wird in Bereichen wie Webentwicklung, Datenanalyse, künstliche Intelligenz und wissenschaftlichem Rechnen häufig eingesetzt. (vgl. \cite{gpt_python})
@@ -552,8 +552,8 @@ Um die Benutzeroberfläche zu realisieren, muss eine Weboberfläche erstellt wer
 \paragraph{HTML}\mbox{}\\
 HTML (HyperText Markup Language) ist die Standard-Auszeichnungssprache zur Strukturierung und Darstellung von Inhalten im Web. Sie definiert die grundlegende Struktur einer Webseite mit Elementen wie Überschriften, Absätzen, Links, Bildern und Formularen. (vgl. \cite{gpt_html})\\
 
-Dadurch, dass sich viele Elemente des UI wiederholen, wie z. B. die Navigationsleiste, bietet Flask die Möglichkeit, sogenannte 'Templates' zu verwenden. Diese können einmal definiert und dann an mehreren Teilen der Webseite verwendet werden.
-Um Elemente wie Formularfelder oder Datenanzeige einfach mit den benötigten Daten anzuzeigen, gibt es die Möglichkeit, Makros zu erstellen, die von Flask mit den bestimmten Daten vorgerendert und in das restliche HTML eingefügt werden.
+Dadurch, dass sich viele Elemente des UI wiederholen, wie z. B. die Navigationsleiste, bietet Flask die Möglichkeit, sogenannte \enquote{Templates} zu verwenden. Diese können einmal definiert und dann an mehreren Teilen der Webseite verwendet werden.
+Um Elemente wie Formularfelder oder Datenanzeige einfach mit den benötigten Daten anzuzeigen, gibt es die Möglichkeit, Makros zu erstellen, welche von Flask mit den bestimmten Daten vorgerendert und in das restliche HTML eingefügt werden.
 Um HTML, welches grundsätzlich ohne Formatierung auskommt, zu stylen, muss CSS verwendet werden.
 
 \paragraph{CSS}\mbox{}\\
@@ -584,7 +584,7 @@ Praktisch geschieht diese Server-Kommunkation immer mithilfe diese Programmblock
     }
 \end{lstlisting}
 
-Dieser ermöglicht die Übergabe von Daten im JSON format, und einer Funktion, die die zurückgeschickten Daten verarbeitet. In der Praxis wird dieser so aufgerufen:
+Dieser ermöglicht die Übergabe von Daten im JSON Format, und einer Funktion, die die zurückgeschickten Daten verarbeitet. In der Praxis wird dieser so aufgerufen:
 
 \begin{lstlisting}[language=JavaScript, caption=JSON-Beispiel]
 function add_to_db(){
@@ -596,7 +596,7 @@ function set_gen_stock(req){
     document.getElementById("generated").innerHTML = req
 }\end{lstlisting}
 
-Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen und in JSON konvertiert. Danach werden diese Daten zusammen mit einer Funktion an 'send\_Data' übergeben. Wie bereits erwähnt, gibt der Server dann Daten zurück. In diesem Fall werden dann Daten aus der DB vorformatiert. Diese werden dann in der zuvor übergebenen Funktion in die Webseite eingefügt.
+Wie im Quellcode ersichtlich, werden Daten aus der Webseite ausgelesen und in JSON konvertiert. Danach werden diese Daten zusammen mit einer Funktion an \enquote{send\_Data} übergeben. Wie bereits erwähnt, gibt der Server dann Daten zurück. In diesem Fall werden dann Daten aus der DB vorformatiert. Diese werden dann in der zuvor übergebenen Funktion in die Webseite eingefügt.
 
 \subsubsection{Backend}
 Das Backend des Servers ist für die Datenverarbeitung verantwortlich. Es ist, wie bereits erwähnt, in Python geschrieben und stellt mit dem Flask-Framework die Benutzeroberfläche zur Verfügung. \\
@@ -605,7 +605,7 @@ Aufgebaut ist es in mehrere Bereiche: Einerseits die Webanwendung sowie die API 
 
 
 \paragraph{Serverseite der Benutzeroberfläche}\mbox{}\\
-In Flask könne 'bleuprints' definiert werden. Dies sind Webseitelemente die einen Bestimmten URL-Vorsatz haben. So werden anfanges 'blueprints' für Hauptfunktionen ('/', also ohne Vorsatz), Datenbankinteraktionen ('/db\_interactions') usw. definiert. Die Funktionen dafür werden dann in jeweils eigenen Dateien geschrieben. Dies ermöglicht eine weit aus bessere Übersicht bei großen Projekten. \\
+In Flask können \enquote{bleuprints} definiert werden. Dies sind Webseitelemente die einen Bestimmten URL-Vorsatz haben. So werden anfanges \enquote{bleuprints}  für Hauptfunktionen (\enquote{/}, also ohne Vorsatz), Datenbankinteraktionen (\enquote{/db\_interactions}) usw. definiert. Die Funktionen dafür werden dann in jeweils eigene Dateien geschrieben. Dies ermöglicht eine weit aus bessere Übersicht bei großen Projekten. \\
 Eine Funktion, die für die Verarbeitung der Anfragen einer bestimmten URL verantwortlich ist, sieht immer ähnlich aus.
 
 \begin{lstlisting}[language=Python, caption=Blueprint Beispiel]
@@ -633,13 +633,13 @@ Eine Funktion, die für die Verarbeitung der Anfragen einer bestimmten URL veran
 \end{lstlisting}  
 
 
-Anfangs wird mit einem Decorator (@main.route(...)) die gewünschte URL, sowie unterstützte http-Requests definiert. Decoratoren verändern oder erweitern die Eigenschaften von Funktionen. In diesem Fall wird in der Funktion (def ...()) definiert was geschieht, wenn ein erlaubter Request an der URL 'add\_stock' eintrifft. Dieser Funktionsname kann auch in den Flask-Vorlagen verwendet werden um URLs dynamisch zu vergeben.\\
-Weiters wird sortiert um welche art von Art von Anfrage es sich handelt. Bei GET-Anfragen wird typischerweise einfach nur das HTML der Webseite zurückgegeben. Bei POST-Anfragen werden zuerst die Daten dieser Anfrage eytrahiert und dann entschieden was damit gemacht werden soll. In diesem Fall wird, wenn des richtige Schlüsselwort in der Anfrage enthalten ist, ein Datenbankeintrag, mit den Daten aus dem Request, hinzugefügt. Schlussendlich wird ein Wert zurückgegeben, entweder ein HTML-Statuscode, vorgerendertes HTML oder, wie in diesem Fall, ein Text.
+Anfangs wird mit einem Decorator (@main.route(...)) die gewünschte URL, sowie unterstützte HTTP-Requests definiert. Decoratoren verändern oder erweitern die Eigenschaften von Funktionen. In diesem Fall wird in der Funktion (def ...()) definiert was geschieht, wenn ein erlaubter Request an der URL \enquote{add\_stock} eintrifft. Dieser Funktionsname kann auch in den Flask-Vorlagen verwendet werden um URLs dynamisch zu vergeben.\\
+Weiters wird sortiert um welche Art von Anfrage es sich handelt. Bei GET-Anfragen wird typischerweise einfach nur das HTML der Webseite zurückgegeben. Bei POST-Anfragen werden zuerst die Daten dieser Anfrage extrahiert und dann entschieden was damit gemacht werden soll. In diesem Fall wird, wenn des richtige Schlüsselwort in der Anfrage enthalten ist, ein Datenbankeintrag, mit den Daten aus dem Request, hinzugefügt. Schlussendlich wird ein Wert zurückgegeben, entweder ein HTML-Statuscode, vorgerendertes HTML oder, wie in diesem Fall, ein Text.
 
 \subsubsection{APIs}
 
 \paragraph{SPS - Verbindung}\mbox{}\\
-Die Daten für die SPS werden in einem Ähnlichen vefahren zu verfügung gestellt. Nun schickt nicht die Benutzeroberfläche oder der Browser eine Anfrage an das Backend, sondern die SPS. Der Programmblock zur Verarbeitung dieser Anfrage sieht folgenderaßen aus:
+Die Daten für die SPS werden in einem ähnlichen Vefahren zur Verfügung gestellt. Nun schickt nicht die Benutzeroberfläche oder der Browser eine Anfrage an das Backend, sondern die SPS. Der Programmblock zur Verarbeitung dieser Anfrage sieht folgendermaßen aus:
 
 \begin{lstlisting}[language=Python, caption={Schnittstelle für die SPS}]
 @api.route("/afss", methods=["GET", "POST"])
@@ -666,39 +666,39 @@ def afss():
                 return convert_instruction_for_PLC(ack)
 \end{lstlisting}  
 
-Die Funktion dieses Codeblocks besteht darin, herrauszufiltern, ob eine Anfrage einer Siemens-SPS eintrifft und dann dementsprechend Daten zurückzugeben.
-Wenn eine Anfrage mit dem Schlüssel 'next\_bmos' (next-box-moveing-operations) empfangen wird, wird diese dem sog. 'stack' weitergegeben, welcher diese dann verarbeitet (dies wird im Anschluss näher behandelt). Sollte diese von einer SPS kommen, werden die Zurückgeschicten Daten vorher noch so bearbeitet, dass diese von der SPS möglichst gut übersetzt werden können.
-Sollte die SPS ein 'inst\_acknowledge' sowie die dementsprechenden Daten, wird im 'Stack' vermerkt dass die dementsprechende Operation bei der SPS angekommen ist.
+Die Funktion dieses Codeblocks besteht darin, herauszufiltern, ob eine Anfrage einer Siemens-SPS eintrifft und dann dementsprechend Daten zurückzugeben.
+Wenn eine Anfrage mit dem Schlüssel \enquote{next\_bmos} (next-box-moveing-operations) empfangen wird, wird diese dem sog. \enquote{stack} weitergegeben, welcher diese dann verarbeitet (dies wird im Anschluss näher behandelt). Sollte diese von einer SPS kommen, werden die zurückgeschickten Daten vorher noch so bearbeitet, dass diese von der SPS möglichst gut übersetzt werden können.
+Sollte die SPS ein \enquote{inst\_acknowledge} sowie die dementsprechenden Daten zurückschicken, wird im \enquote{Stack} vermerkt dass die dementsprechende Operation bei der SPS angekommen ist.
 
-Weiters bietet Simens auch die Möglichkeit über den Webserver der CPU auf diese zuzugreifen. Dies geschieht über das JSON-RPC Protokoll \cite{ws_s7}. Aus Testzwecken ist des durchaus nützlcih auh dierekten Zugriff auf die CPU zu haben, wenngleich es für den Normalbetrieb nicht zwingend benötigt wird. Um eine möglichst einfache bedienung zu Ermöglichen wird ein Objekt angelegt, um JSON-RPC Befehle auszuführen.
+Weiters bietet Siemens auch die Möglichkeit über den Webserver der CPU auf diese zuzugreifen. Dies geschieht über das JSON-RPC Protokoll \cite{ws_s7}. Aus Testzwecken ist es durchaus nützlich auch dierekten Zugriff auf die CPU zu haben, wenngleich es für den Normalbetrieb nicht zwingend benötigt wird. Um eine möglichst einfache Bedienung zu ermöglichen wird ein Objekt angelegt, um JSON-RPC Befehle auszuführen.
 
 \begin{itemize}
-    \item Login: Um die SPS zugreifen zu können muss erst ein Login geschehen. Hierbei werden Benutzername und Passwort benötigt, die zuerst in der SPS festgelegt wurden. Dieser führt bei Erfolg zu einem 'Session-Token', welches bei jeder folgenden Kommunikation zur Authentifizierung mitgeschickt werden muss.
-    \item Daten Lesen: Die Methode 'PlcProgram.Read' gibt den Wert einer gegebenen Variable zurück.
-    \item Daten Schreiben: Mit 'PlcProgram.Write' kan der Wert einer oder mehrere Variablen geändert werden.
+    \item Login: Um auf die SPS zugreifen zu können muss erst ein Login geschehen. Hierbei werden Benutzername und Passwort benötigt, die zuerst in der SPS festgelegt wurden. Dieser führt bei Erfolg zu einem \enquote{Session-Token}, welches bei jeder folgenden Kommunikation zur Authentifizierung mitgeschickt wird.
+    \item Daten Lesen: Die Methode \enquote{PlcProgram.Read} gibt den Wert einer gegebenen Variable zurück.
+    \item Daten Schreiben: Mit \enquote{PlcProgram.Write} kann der Wert einer oder mehrerer Variablen geändert werden.
 \end{itemize}
 
-Diese Objekt kann dann einfach in einen Anderen Programmteil importiert werden, und dort dann die Verbindung zu einer SPS herstellen. Theoretsich könnt man auch mehrere dieser Objekte anlegen, um Zugriff mehreren Steuerungen umzusetzen.
+Dieses Objekt kann dann einfach in einen anderen Programmteil importiert werden, und dort dann die Verbindung zu einer SPS herstellen. Theoretisch könnte man auch mehrere dieser Objekte anlegen, um Zugriff mehreren Steuerungen umzusetzen.
 
 \subsubsection{Lageralgorithmus für SPS}\mbox{}\\
+
+Die Auftrage sind im Einkaufswagen oder Änlichem, im Format \enquote{Location -\> Location} hinterlegt. Um dies in eine Operation zu zerlegen, die die SPS versteht, wird eine Box-Moveing-Operation erstellt. Diese enthält alle Teilschritte, wie Schlittenposition oder Förderbandstrecke, um eine Box von Position A zu Position B zu bringen. 
+Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, aufgeteilt und dann dem \enquote{stack} zugeführt. Diese Instruktion enthält Daten wie:
+\begin{itemize}
+    \item \enquote{instruction\_id}: Eine fortlaufende Nummer um jede Anweisung zu identifizieren
+    \item \enquote{order\_id}: Zusammenhängende Anweisungen ,bzw. Anweisungen für die gleiche Box haben eine gleiche Nummer
+    \item \enquote{relation}: eine Liste mit \enquote{instruction\_id's}, welche vor dieser Anweisung erfüllt sein müssen
+
+\end{itemize}
+Bei Auswahl der zu schickenden Anweisung, wird zuerst die aktuelle von der SPS gemachte Anweisung vermerkt, danach wird in allen Modulen des \enquote{stacks} nachgeschaut, welche Anweisungen jetzt ausgeführt werden können (siehe Abb. \ref{bmos_diag}). Zu diesem Zweck wird die \enquote{relation} einer Anweisung mit den bereits gemachten Anweisungen verglichen, wenn bereits alle relevanten Anweisungen gemacht wurden, wird der Auftrag in \enquote{to\_send} vermerkt. Schlussendlich wird einer der in \enquote{to\_send} vermerkten Aufträge für die SPS übersetzt und an diese geschickt. 
+Wenn die SPS den Auftrag erhalten hat, schickt sie ein \enquote{acknowledge} mit der erhaltenen ID zurück. Der Auftrag wird dann aus den \enquote{instructions\_to\_send} gelöscht und entweder wird einfach der nächste Auftrag in \enquote{to\_send} geschickt oder der \enquote{BMOS} Algorithmus wird erneut durchlaufen.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{stack.png}
     \caption{Diagramm der BMOS bereitstellung}
+    \label{bmos_diag}
 \end{figure}
-
-Die Auftrage sind im Einkaufswagen o.ä. im Format 'Location -\> Location' hinterlegt. Um dies in eine Opeation zu zerlegen die die SPS versteht, wird eine Box-Moveing-Operation erstellt. Diese enthält alle Teilschritte, wie Schlittenposition oder Fördebandstracke, um eine Box von Position A zu Position B zu bringen. 
-Die BMO wird dann in die einzelnen verwendeten Module, Förderband oder Lager, aufgeteilt und dann dem 'stack' zugeführt. Diese Instruktion enthält Daten wie:
-\begin{itemize}
-    \item 'instruction\_id': Eine fortlaufende Nummer um jede Anweisung zu identifizieren
-    \item 'order\_id': Zusammenhängende Anweisungen, bzw. Anweisungen für die gleiche Box, haben eine gleiche Nummer
-    \item 'relation': eine Liste mit 'instruction\_id's', welch vor dieser Anweisung erfüllt sein müssen
-\end{itemize} 
-
-Bei Auswahl der zu schickenden Anweisung, wird zuerst die aktuell von der SPS gemachte Anweisung vermerkt, danach weird in allen Modulen des 'stacks' nachgeschaut, welche Anweisungen jetzt ausgeführt werden können. Zu diesem Zweck wird die 'relation' einer Anweisung mit den bereits gemachten Anweisungen verglichen, wenn bereits alle relevanten Anweisungen gemacht wurden, wird der Auftrag in 'to\_send' vermerkt. Schlussendlich wird einer der in 'to\_send' vermerkten Aufträge für die SPS übersetzt und an diese geschickt. 
-Wenn die SPS den Auftrag erhalten hat, schickt sie ein 'acknowledge' mit der erhaltenen ID zurück. Der Auftrag wird dann aus den 'instructions\_to\_send' gelöscht und entweder wird einfach der nächste Auftrag in 'to\_send' geschickt oder der 'BMOS' Algorithmus wird erneut durchlaufen.
-
 
 \subsubsection{Datenbanken}
 
@@ -713,22 +713,22 @@ Als Datenbanksystem wird aufgrund des guten Supports MySQL gewählt. Dies ist ei
 
 Wie in \ref{DB-Scema} ersichtlich, beinhalt diese Datenbank fünf Tabellen. Diese hohe Komplexität resultiert daraus, dass diese Struktur eine 100\%ige Flexibilität in der Ablage von Bauteilen in einem überliegendem System bietet.
 
-Die Erste Tabelle beschreibt ein einziges theoretisches Bauteil. Dieses hat einen Namen, Gewicht, Beschreibung und Kategorien zur Filterung. Unter der Spalte 'picture' wird ein Dateiname gespeichert, der zu einem Bild zeigt, dass das Produkt abbildet.
-Die zweite beschreibt einen Container. Im Lagersystem entspricht dieser einer Box. Diese kann mehrere `stocks' beinhalten, sowie durch einen Barcode identifiziert werden. Weiters muss jeder Container immer eine aktuelle Position (`current\_location') besitzen, an der die Box gerade ist. Im ausgelagerten (und noch nicht eingelagerten) Zustand ist diese `location' Position 0. Das Ziel der Box wird in `target\_location' gespeichert. Stimmt die aktuelle mit der Zielposition überein, so ist die Box an ihrem Ziel angelangt. Die Kategorie `size' beschreibt die Größe eines Containers und lässt somit theoretisch zu, dass in Zukunft auch unterschiedlich große Boxen zuverlässig in die richtigen Lagerplätze eingelagert werden. `priority' wird nicht verwendet.
+Die erste Tabelle beschreibt ein einziges theoretisches Bauteil. Dieses hat einen Namen, Gewicht, Beschreibung und Kategorien zur Filterung. Unter der Spalte \enquote{picture} wird ein Dateiname gespeichert, der zu einem Bild zeigt, das das Produkt abbildet.
+Die zweite beschreibt einen Container. Im Lgersystem entspricht dieser einer Box. Diese kann mehrere \enquote{stocks} beinhalten, sowie durch einen Barcode identifiziert werden. Weiters muss jeder Container immer eine aktuelle Position (\enquote{current\_location}) besitzen, an der die Box gerade ist. Im ausgelagerten (und noch nicht eingelagerten) Zustand ist diese \enquote{location} Position 0. Das Ziel der Box wird in \enquote{target\_location} gespeichert. Stimmt die aktuelle mit der Zielposition überein, so ist die Box an ihrem Ziel angelangt. Die Kategorie \enquote{size} beschreibt die Größe eines Containers und lässt somit theoretisch zu, dass in Zukunft auch unterschiedlich große Boxen zuverlässig in die richtigen Lagerplätze eingelagert werden. \enquote{priority} wird nicht verwendet.
 
-Container und Artikel werden im sog. 'stock' verheiratet. Dieser kann als bauteilhaufen in einer Box verstanden werden. Es können also auch mehrere 'stocks' mit dem selben Container geben, dies würde mehreren verschiedenen Bauteilen in einem einzigen Copntainer entsprechen. Auch ist es möglich mehrere Container mit den selben 'stocks' abzubilden, welches ener aufteilung von Abuteilen auf mehrere Container entspräche.
+Container und Artikel werden im sog. \enquote{stock} verheiratet. Dieser kann als Bauteilhaufen in einer Box verstanden werden. Es können also auch mehrere \enquote{stocks} mit dem selben Container geben, dies würde mehreren verschiedenen Bauteilen in einem einzigen Container entsprechen. Auch ist es möglich mehrere Container mit den selben \enquote{stocks} abzubilden, welches einer Aufteilung von Bauteilen auf mehrere Container entspräche.
 
-Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese entsprechen den Lagerplätzen. Sie sind einer darüberliegenden 'area' zugeordnet, welche einerseits einen Lagerschrank, aber weiters auch Module wie Vereinzelungsanalgen, abbilden kann. Standorte verfüghen weiters über eine Position welche in X, Y und Z-Richtung beschreibt, wo sich ein Standort im Referenzsystem des Lagers befindet. Auch die größe des Lagerplatzes wird abgebildet, um sicherzustellen, dass auf jeden fall nur die richtige Größe an Box eingelagert wird.
+Die Positionen der Container werden in Standorte (\enquote{locations}) abgebildet. Diese entsprechen den Lagerplätzen. Sie sind einer darüberliegenden \enquote{area} zugeordnet, welche einerseits einen Lagerschrank, aber weiters auch Module wie Vereinzelungsanalgen, abbilden kann. Standorte verfügen weiters über eine Position welche in X, Y und Z-Richtung beschreibt, wo sich ein Standort im Referenzsystem des Lagers befindet. Auch die Größe des Lagerplatzes wird abgebildet, um sicherzustellen, dass auf jeden Fall nur die richtige Größe an Box eingelagert wird.
 
 
 \subsubsection{Docker}
 
 
-    Docker ist eine Umgebung, in der Softwareprojekte isoliert werden können. Da es besonders  bei Projekten mit viele Pakete, mit verschiedenen Versionen, zu konflikten kommen kann, ist es sehr hilfreich diese zu bündeln. \\
-    Umgesetzt wird dies mithilfe von Containern welche einen gesamten Programmteil als alleinstehende Einheit enthält. Diese werden über ein 'Dockerfile' configuriert, welches sich im selben Ordner wie die Python-Anwendung befindet. In diesem werden Parameter wie die Python-Version und die benötigten pip-Pakete sowie den Programmeinstiegspunkt angegeben. \\ 
-    Ein zweier Docker Conteianer wird mit einem MySQL-Image erstellt, dort wird die Datenbank aufgesetzt. \\
-    Um diese zwei Container miteinander Kommunizieren zu lasen, ist es ntig ein sog. docker-compose.yml File zu erstellen. Dies enthält alle Informationen über verwendete container, deren Ports, sowie Speicher für Dateien (Volumes). Bei Testbetrieb wird der Datenbankcontainer aleinstehend bestrieben und mit einem anderen Port, keine Zugriffsprobleme zu generieren. In Produktion wird dann derselbe Container in den Containerverband übertragen und dort mit einem anderen Port weiterverwendet. \\
-    Erstellt wird dieser Containerverband mit den Consolenbefehlt der auf das docker-compose File zugreift. 
+    Docker ist eine Umgebung, in der Softwareprojekte isoliert werden können. Da es besonders  bei Projekten mit vielen Paketen, mit verschiedenen Versionen, zu Konflikten kommen kann, ist es sehr hilfreich diese zu bündeln. \\
+    Umgesetzt wird dies mithilfe von Containern, welche einen gesamten Programmteil als alleinstehende Einheit enthält. Diese werden über ein \enquote{Dockerfile} configuriert, welches sich im selben Ordner wie die Python-Anwendung befindet. In diesem werden Parameter wie die Python-Version und die benötigten pip-Pakete sowie den Programmeinstiegspunkt angegeben. \\ 
+    Ein zweiter Docker Container wird mit einem MySQL-Image erstellt. Dort wird die Datenbank aufgesetzt. \\
+    Um diese zwei Container miteinander Kommunizieren zu lasen, ist es nötig ein sog. docker-compose.yml File zu erstellen. Dies enthält alle Informationen über verwendete Container, deren Ports, sowie Speicher für Dateien (Volumes). Bei Testbetrieb wird der Datenbankcontainer alleinstehend betrieben und mit einem anderen Port, um keine Zugriffsprobleme zu generieren. In Produktion wird dann derselbe Container in den Containerverband übertragen und dort mit einem anderen Port weiterverwendet. \\
+    Erstellt wird dieser Containerverband mit den Konsolenbefehl der auf das docker-compose File zugreift. 
     \begin{lstlisting}[language=bash]
         docker build docker-compose.yml\end{lstlisting}
     Dann werden auch alle Logs in der Kommandozeile ausgegeben. 
@@ -736,19 +736,19 @@ Die Positionen der Container werden in Standorte ('locations') abgebildet. Diese
 
 \subsubsection{Artikelsuche}
 \paragraph{TF-IDF und Rust Implementierung} \hspace{0pt} \\
-Der TF-IDF (Term Frequency-Inverse Document Frequency) Algorithmus, ist ein Weg um wichtige wörter aus Dokumenten zu extrahieren. Er wird verwendet um beispielsweise in Suchmaschienen, eine Suchanfrage mit Webpagecontent abzugleichen, und die am besten mit der Suchanfrage übereinsteimmenden Dokumente zu sortieren. \\
-Im Fall dieser Anwendung werden die Daten aus der Artikeldatenbank als 'Dokumente'  angesehen und die Suchanfrage aus dem Suchfeld wird dafür verwendet um die am besten passenden Artikel zu finden.
+Der TF-IDF (Term Frequency-Inverse Document Frequency) Algorithmus, ist ein Weg um wichtige Wörter aus Dokumenten zu extrahieren. Er wird verwendet um beispielsweise in Suchmaschienen, eine Suchanfrage mit Webpagecontent abzugleichen, und die am besten mit der Suchanfrage übereinsteimmenden Dokumente zu sortieren. \\
+Im Fall dieser Anwendung werden die Daten aus der Artikeldatenbank als \enquote{Dokumente}  angesehen und die Suchanfrage aus dem Suchfeld wird dafür verwendet um die am besten passenden Artikel zu finden.
 \\
-Durch den Relativ hohen Rechenaufwand bei dieser Suchoperation wird dieser in der Programmiersprache Rust implementert. Die Implementierung in Rust ist im vergleich zu Python schon bei relativ kleinen Datenmenge bis zu 5-mal schneller.
+Durch den Relativ hohen Rechenaufwand bei dieser Suchoperation wird dieser in der Programmiersprache Rust implementert. Die Implementierung in Rust ist im Vergleich zu Python schon bei relativ kleinen Datenmenge bis zu 5-mal schneller.
 
 \subparagraph{Rust}\mbox{}\\
-Rust ist eine sehr effiziente und schnelle Programmiersprache die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler. (vgl. \cite{gpt_rust})
+Rust ist eine sehr effiziente und schnelle Programmiersprache, die in den späten 2000er und frühen 2010ern bei Mozilla und der Open-Source-Community entwickelt wurde. Sie unterstützt unter anderem mehr Typensicherheit und verhindert viele Programmierfehler. (vgl. \cite{gpt_rust})
 
-Die Funktion dieses Algorithmus ist in drei unterteile Unterteilt.
+Die Funktion dieses Algorithmus ist in drei Einzelteile unterteilt.
 
 \begin{enumerate}
     \item Term Frequenz \\
-    Die Termfrequenz gibt an, wie oft ein angegebenes Wort in einem Dokument vorhanen ist. Dies wird durch die Folgende Funktion kalkuliert.
+    Die Termfrequenz gibt an, wie oft ein angegebenes Wort in einem Dokument vorhanden ist. Dies wird durch die folgende Funktion kalkuliert.
     
     \begin{lstlisting}[language=Rust, caption={Berechnung der Termfrequenz}]
 fn term_frequency(document: &str, term: &str) -> f64 {
@@ -775,9 +775,9 @@ fn term_frequency(document: &str, term: &str) -> f64 {
     }
 }\end{lstlisting}
 
-    Mithilfe dieser wird eine Liste aller Wörter und der Vorkommenshäufigkeit dieser erstellt.
+    Mithilfe dieser wird eine Liste aller Wörter und deren Vorkommenshäufigkeit erstellt.
 
-    \item Die zweite Komponente ist dann die Inverse Dokument Frequenz. Diese gewichtet, die Anzahl der Dokumente in dem das gesuchte Wort enthalten ist relativ zur Gesamtdokumentanzahl vorkommt. Häufig vorkommende Worte wie z.B. 'und' werden hierbei weniger gewichtet als einzigartige Wörter.
+    \item Die zweite Komponente ist dann die Inverse Dokument Frequenz. Diese gewichtet die Anzahl der Dokumente in dem das gesuchte Wort enthalten ist relativ zur Gesamtdokumentanzahl vorkommt. Häufig vorkommende Worte wie z.B. \enquote{und} werden hierbei weniger gewichtet als einzigartige Wörter.
 
 \begin{lstlisting}[language=Rust, caption={Berechnung der Inversen Dokumentenfrequenz}]
 fn inverse_document_frequency(term: &str, all_documents: &Vec<String>) -> f64 {
@@ -805,9 +805,9 @@ fn inverse_document_frequency(term: &str, all_documents: &Vec<String>) -> f64 {
     }
 }
 \end{lstlisting}
-     \item Nun liegt Liste davon vor, wie oft ein Wort in den Suchdaten vorkommt, als auch, wie oft ein Suchbegriff in einem bestimmten Dokument ist. \\ Als nächsten Schritt werden diese beiden Werte für jeden Suchbegriff miteinander multipliziert und ergeben somit einen Vektor der die Suchwörter in Relation zu jedem einzelnen Dokument stellt.
+     \item Nun liegt eine Liste davon vor, wie oft ein Wort in den Suchdaten vorkommt, als auch, wie oft ein Suchbegriff in einem bestimmten Dokument ist. \\ Als nächsten Schritt werden diese beiden Werte für jeden Suchbegriff miteinander multipliziert und ergeben somit einen Vektor der die Suchwörter in Relation zu jedem einzelnen Dokument stellt.
     \item Als letzten Schritt wird der zuvor errechnete Dokumentenvektor (der IDF jedes Suchterms in jedem Dokument) mit dem Suchvektor verglichen. Die geschieht mit der sog. Kosinus-Ähnlichkeit.
-    \begin{lstlisting}[language=Rust, caption={Berechnung der Cosinusähnlichkeit}]
+    \begin{lstlisting}[language=Rust, caption={Berechnung der Kosinusähnlichkeit}]
 fn cos_similarity(query_p: Vec<f64>, document_p: Vec<f64>) -> f64 {
     // Ensure that both vectors have the same length
     if query_p.len() != document_p.len() {
@@ -840,15 +840,16 @@ fn cos_similarity(query_p: Vec<f64>, document_p: Vec<f64>) -> f64 {
     Nach der Berechnung dieser für jedes Dokument werden alle Dokumente sortiert und ja nach anforderung die benötigte Anzahl ausgegeben.
 \end{enumerate}
 
-Das Aufraufen der Rust-Funtionen von Python aus, ist nicht nativ unterstützt. Die einbindung erfolgt millels PyO3/maturin.
+Das Aufrufen der Rust-Funktionen von Python aus, ist nicht nativ unterstützt. Die Einbindung erfolgt millels PyO3/maturin.
 
 \subparagraph{Artikelsuche nach Kategorien}\mbox{}\\
-Um auch einen simpleren Weg der Artikelfindung zur Verfügung zu stellen, wird außerdem die Möglichkeit implementiert, Artikel anhand von Attributen zu suchen. Zu diesem Zweck werden schon bei der Artikelerstellung Attribute für die Einträge \textit{Gruppen} und \textit{Kategorien} vergeben. In \textit{Gruppen} wird eine Art Pfad angelegt, der die Suche eingrenzt. Beispielsweise würde so ein Eintrag folgende Daten enthalten: \texttt{['Item', 'Verbindungssatz']}. So kann bei der Artikelsuche zuerst die Überkategorie \texttt{'Item'} und dann die Unterkategorie \texttt{'Verbindungssatz'} aus mehreren verschiedenen ausgewählt werden. Um Bauteile weiter zu unterscheiden, da es z. B. viele verschiedene Widerstände gibt, werden unter \textit{Kategorien} Einzelheiten zum Produkt, wie Wert, Farbe o. Ä., gespeichert.\\  
+Um auch einen simpleren Weg der Artikelfindung zur Verfügung zu stellen, wird außerdem die Möglichkeit implementiert, Artikel anhand von Attributen zu suchen. Zu diesem Zweck werden schon bei der Artikelerstellung Attribute für die Einträge \enquote{Gruppen} und \enquote{Kategorien} vergeben. In \enquote{Gruppen} wird eine Art Pfad angelegt, der die Suche eingrenzt. Beispielsweise würde so ein Eintrag folgende Daten enthalten: \texttt{['{Item}', '{Verbindungssatz}']}. So kann bei der Artikelsuche zuerst die Überkategorie \enquote{Item} und dann die Unterkategorie \enquote{Verbindungssatz} aus mehreren verschiedenen ausgewählt werden. Um Bauteile weiter zu unterscheiden, da es z. B. viele verschiedene Widerstände gibt, werden unter \enquote{Kategorien} Einzelheiten zum Produkt, wie Wert, Farbe o. Ä., gespeichert.\\  
 Diese Informationen werden auch vom TF-IDF verwendet, dienen aber spezieller dazu, möglichst sicher das gewünschte Bauteil in einem Durchklickmenü zu finden.
 
 
 \subsubsection{Fazit}
 Die serverseitige Software des AFSS, also das WMS und die Benutzeroberfläche, wurde im Laufe des Projekts sehr komplex. Dadurch war es eine sehr gute Entscheidung, den Server in einer Hochsprache auszuführen.
-Um einen zuverlässigen Dauerbetrieb zu gewährleisten, wäre es jedoch noch nötig, Unittests für wichtige Funktionen wie APIs oder den Lageralgorithmus zu implementieren. Weiterhin müsste die Benutzeroberfläche noch benutzerfreundlicher gestaltet werden, da sie momentan noch eher rudimentär ausgeführt ist. Außerdem wären noch kleinere 'Quality-of-Life'-Änderungen durchzuführen. Insgesamt ist die Software aber bereits sehr ausgereift und kann die Anforderungen der Lagersteuerung und -verwaltung erfüllen.
+Um einen zuverlässigen Dauerbetrieb zu gewährleisten, wäre es jedoch noch nötig, Unittests für wichtige Funktionen wie APIs oder den Lageralgorithmus zu implementieren. Weiterhin müsste die Benutzeroberfläche noch benutzerfreundlicher gestaltet werden, da sie momentan noch eher rudimentär ausgeführt ist. Außerdem wären noch kleinere 
+\enquote{Quality-of-Life}-Änderungen durchzuführen. Insgesamt ist die Software aber bereits sehr ausgereift und kann die Anforderungen der Lagersteuerung und -verwaltung erfüllen.
 
 

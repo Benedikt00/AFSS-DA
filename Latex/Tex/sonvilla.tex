@@ -2,16 +2,22 @@
 
 
 \subsection{Aufgabenstellung}
-Die \enquote{Integration und Programmierung der Steuerungstechnik} befasst sich mit der Bewegungskontrolle für die Motoren und dem notwendigen Datenaustausch zwischen Server und SPS. Auf dem Server läuft das Warehouse Management System (WMS), welches die Logik der Lagerung übernimmt. Die SPS wird erfordert um die Motoren anzusteuern sowie die Sensoren auszulesen, welche benötigt werden. Das Einbinden und Ansteuern der Sensoren wird durch die nette Kollegin der \enquote{Sensorik und Sicherheitstechnik} vorgenommen. Also ist das Ziel der Aufgabenstellung \enquote{Integration und Programmierung der Steuerungstechnik}, das Kommunizieren mit dem Server, um die notwendigen Daten zu erhalten, sowie das Ansteuern der Motoren. 
+Die \enquote{Integration und Programmierung der Steuerungstechnik} befasst sich mit der Bewegungskontrolle für die Motoren und dem notwendigen Datenaustausch zwischen Server und SPS. Auf dem Server läuft das Warehouse Management System (WMS), welches die Logik der Lagerung übernimmt. Die SPS wird erfordert, um die Motoren anzusteuern sowie die Sensoren auszulesen, welche benötigt werden. Das Einbinden und Ansteuern der Sensoren wird durch die nette Kollegin der \enquote{Sensorik und Sicherheitstechnik} im Teil \ref{sec:Sensorik und Sicherheitstechnik} vorgenommen. Also ist das Ziel der Aufgabenstellung \enquote{Integration und Programmierung der Steuerungstechnik}, das Kommunizieren mit dem Server, um die notwendigen Daten zu erhalten, sowie das Ansteuern der Motoren. 
 
 \subsection{Tia-Portal Grundlagen}
 
 Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von Siemens zur Programmierung, Konfiguration und Diagnose von Automatisierungssystemen. Es ermöglicht die Steuerung von SPS (Speicherprogrammierbare Steuerungen), HMI (Bedienpanels) und Antrieben in einer einzigen Umgebung. Alle folgenden Informationen, sowie Anwendungen beziehen sich auf die genutzte Tia Portal Version (V18) sowie Hardware (S7-1513).
 
+\begin{minipage}{\textwidth}
+    
+    \vspace{10mm}
+
     \subsubsection{Allgemeines}
 
         \paragraph{Arbeitsweise einer SPS} \mbox{} \\
         Eine SPS arbeitet zyklisch. In Abb. \ref{Arbeitsweise_einer_SPS} wird gezeigt wie ein solcher Zyklus aussieht. Bei erstmaligem Starten oder Neustarten der SPS werden zuerst alle Ausgänge, Merker, etc. auf Null gesetzt. Danach startet die zyklische Arbeitsweise. Zunächst wird ein Prozessabbild der Eingänge gemacht. Mit diesen Eingangswerten wird dann das Programm ausgeführt. Anschließend wird ein Prozessabbild der Ausgänge gemacht. Dieses wird dann an die Ausgänge übergeben. Danach beginnt der Zyklus von vorne. (vgl.\cite{Arbeitsweise_der_SPS})
+
+    \end{minipage}
         \begin{figure}[H]
             \includegraphics[width=0.9\textwidth]{Sonne/Arbeitsweise_einer_SPS.png}
             \caption{Arbeitsweise einer SPS, Quelle: \cite{Arbeitsweise_der_SPS}}
@@ -26,7 +32,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
     \begin{itemize}
         \item[1.] \textbf{OB (Organisationsbausteine)} \\
-            Organisationsbausteine werden verwendet um das Anwenderprogramm hierarchisch zu strukturieren. Auch für OBs stehen, wie in Abb. \ref{Organisationsbausteine} gezeigt, unterchiedliche Bausteine zur Verfügung:
+            Organisationsbausteine werden verwendet um das Anwenderprogramm hierarchisch zu strukturieren. Auch für OBs stehen, wie in Abb. \ref{Organisationsbausteine} gezeigt, unterschiedliche Bausteine zur Verfügung:
             \begin{figure}[h]
                 \includegraphics[width=\textwidth]{Sonne/Tia-Portal_Organisationsbausteine.png}
                 \caption{Organisationsbausteine, Quelle: \cite{Programmierleitfaden_für_S7-1500}}
@@ -51,12 +57,12 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             Funktionsbausteine können genutzt werden, um Unterprogramme für unterschiedliche Anwendungen zu erstellen. Dies erleichtert das Strukturieren eines Anwenderprogramms. Bei mehrfacher Verwendung von Funktionsbausteinen empfiehlt sich die Verwendung von Multiinstanz-DBs (siehe 6.Multiinstanzen).
         
         \item[4.] \textbf{Global-DB (Datenbausteine)} \\
-            Globale Datenbausteine speichern variable Daten, die dem kompletten Programm zur Verfügung stehen. Wie in Abb.\ref{Zugriff auf Global-DB} ersichtlich, bedeutet das ,dass alle Bausteine Zugriff auf den Global-DB haben.
+            Globale Datenbausteine speichern variable Daten, die dem kompletten Programm zur Verfügung stehen. Wie in Abb.\ref{Zugriff auf Global-DB} ersichtlich, bedeutet das, dass alle Bausteine Zugriff auf den Global-DB haben.
 
             \begin{figure}[h]
                 \centering
                 \includegraphics{Sonne/Zugriff_auf_Global-DBs.png}
-                \caption{Zugriff auf Global-DB, Quelle \cite{Programmierleitfaden_für_S7-1500}}
+                \caption{Zugriff auf Global-DB, Quelle: \cite{Programmierleitfaden_für_S7-1500}}
                 \label{Zugriff auf Global-DB}
             \end{figure}
 
@@ -82,18 +88,18 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             Dieses Technologieobjekt dient zur genauen Positionierung einer Achse, sowie der Rückmeldung der aktuellen Achsposition. Zusätzlich wird die Zielposition automatisch gehalten. \\
             Für die Positionierachse stehen folgende Motion Control Anweisungen zur Verfügung: 
             \begin{itemize}
-                \item Home \\
-                    \subitem Aktives oder passives Referenzieren der Achse.
-                \item MoveAbsolut \\
-                    \subitem Fahren der Achse auf eine absolute Position.
-                \item MoveRelativ \\
-                    \subitem Fahren der Achse auf eine Position relativ zur aktuellen Position.
-                \item MoveSuperimposed \\
-                    \subitem Starten einer überlagerten Bewegung zu einer bereits laufenden Bewegung.
-                \item TorqueLimiting \\
-                    \subitem Aktivieren einer Momentbegrenzung oder Festanschlagserkennung.
-                \item SetSensor \\
-                    \subitem Umschalten des Gebers für die Achse. 
+                \item \textbf{Home} \\ 
+                    Aktives oder passives Referenzieren der Achse.
+                \item \textbf{MoveAbsolut} \\
+                    Fahren der Achse auf eine absolute Position.
+                \item \textbf{MoveRelativ} \\ 
+                    Fahren der Achse auf eine Position relativ zur aktuellen Position.
+                \item \textbf{MoveSuperimposed} \\
+                    Starten einer überlagerten Bewegung zu einer bereits laufenden Bewegung.
+                \item \textbf{TorqueLimiting} \\
+                    Aktivieren einer Momentbegrenzung oder Festanschlagserkennung.
+                \item \textbf{SetSensor} \\
+                    Umschalten des Gebers für die Achse. 
             \end{itemize}
             
 
@@ -101,17 +107,17 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             Das Technologieobjekt Gleichlaufachse enthält alle Funktionen des Technologieobjekts Positionierachse. Zusätzlich lässt sich die Achse mit einer Leitachse verschalten, sodass diese der Positionsänderung der Leitachse folgt. Dieses Technologieobjekt wird verwendet um synchrone bzw. positionsabhängige Bearbeitungsvorgänge auszuführen. \\
             Der Gleichlaufachse stehen folgende zusätzliche Motion Control Anweisungen zur Verfügung:
             \begin{itemize}
-                \item GearIn \\
+                \item \textbf{GearIn} \\
                     Starten eines relativen Gleichlaufs einer Leit- und Folgeachse.
-                \item GearInPos \\
+                \item \textbf{GearInPos} \\
                     Starten eines absoluten Gleichlaufs einer Leit- und Folgeachse unter Vorgabe einer Synchronposition.
-                \item PhasingAbsolut \\
+                \item \textbf{PhasingAbsolut} \\
                     Absolutes Verschieben des Leitwertbezugs während eines aktiven Gleichlaufs.
-                \item PhasingRelativ \\
+                \item \textbf{PhasingRelativ} \\
                     Relatives Verschieben des Leitwertbezugs während eines aktiven Gleichlaufs.
-                \item CamIn \\
+                \item \textbf{CamIn} \\
                     Start eines absoluten Kurvenscheibengleichlaufs.
-                \item SynchronizedMotionSimulation \\
+                \item \textbf{SynchronizedMotionSimulation} \\
                     Simulation eines aktiven Gleichlaufs. 
             \end{itemize}
              (vgl. \cite{Technologieobjekte})
@@ -134,7 +140,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
             (vgl. \cite{Anweisungsliste})
 
         \item[4.] \textbf{S7-Graph, gr.} \\
-            S7-Graph wird verwendet um Ablaufsteuerungen übersichtlich und schnell zu programmieren. Die zu ausführenden Aktionen werden in unterchiedliche Einzelschritte aufgeteilt. Zwischen diesen Einzelschritten befinden sich Transitionen. Transitionen sind Weiterschaltbedingungen, welche erfüllt werden müssen damit zum nächsten Schritt weitergeschaltet wird. Der Ablauf der Steuerung erfolgt von oben nach unten. 
+            S7-Graph wird verwendet um Ablaufsteuerungen übersichtlich und schnell zu programmieren. Die zu ausführenden Aktionen werden in unterschiedliche Einzelschritte aufgeteilt. Zwischen diesen Einzelschritten befinden sich Transitionen. Transitionen sind Weiterschaltbedingungen, welche erfüllt werden müssen damit zum nächsten Schritt weitergeschaltet wird. Der Ablauf der Steuerung erfolgt von oben nach unten. 
 
         \item[5.] \textbf{Structered Code Language (SCL), tb.} \\
             SCL ist eine höhere Programmiersprache, welche sich an Pascal orientiert. SCL ist für mathematische Funktionen, sowie das Programmieren von Schleifen oder if-Bedingungen besser geeignet als andere Programmiersprachen der SPS. In SCL hat man trotzdem Zugriff auf die typischen Elemente einer SPS, wie Eingänge, Ausgänge, Zeiten, Merker, Bausteinaufrufe und dergleichen.
@@ -150,7 +156,7 @@ Tia Portal (Totally Integrated Automation Portal) ist die zentrale Software von 
 
         \paragraph{Einbindung von globalen Bibliotheken} \mbox{} \\
         \label{Bilbliotheken}
-        Bibliotheken in Tia Portal hinzuzufügen ist intuitiv und simpel. Der erste Schritt ist das Downloaden der richtigen Bibliothek. Diese können Online auf Websiten, von Siemens oder Drittherstellern, gefunden werden. Um diese jedoch herunterzuladen, braucht man einen dazu berechtigten Siemens-Account. Ist die richtige Bibliothek gefunden und heruntergeladen, erfolgt der zweite Schritt. Zuerst wird Tia Portal geöffnet. Dann geht man auf die Projektansicht. Daraufhin findet man ganz rechts, als vierten Reiter von oben den Punkt Bibliotheken. Klickt an auf diesen erscheint ein Fenster, welches der Höhe nach in zwei Teile aufgeteilt ist. Die obere Hälfte ist für die Projektbibliothek. In der unteren Hälfte findet man die Globalen Bibliotheken. Um nun eine neue Bibliothek einzubinden, klickt man auf das zweite Symbol von links "Globale Bibliothek öffnen". Das Symbol ist ein Buch mit einem grünen Pfeil rechts oben. Jetzt öffnet sich wieder ein Fenster. Hier befindet sich  dann der Ordner, aus dem die zu integrierende Bibliothek ausgewählt wird. Im Anschluss wird die Datei mit dem Datenformat .alxx (xx ... Version Tia-Portal (18)) geöffnet. Nun ist die gewünschte Bibliothek verfügbar. Alle Bausteine die diese Bibliothek zur Verfügung stellt,können nun per Drag-and-Drop ins Programm gezogen werden.
+        Bibliotheken in Tia Portal hinzuzufügen ist intuitiv und simpel. Der erste Schritt ist das Downloaden der richtigen Bibliothek. Diese können Online auf Websiten, von Siemens oder Drittherstellern, gefunden werden. Um diese jedoch herunterzuladen, braucht man einen dazu berechtigten Siemens-Account. Ist die richtige Bibliothek gefunden und heruntergeladen, erfolgt der zweite Schritt. Zuerst wird Tia Portal geöffnet. Dann geht man auf die Projektansicht. Daraufhin findet man ganz rechts, als vierten Reiter von oben den Punkt Bibliotheken. Klickt an auf diesen erscheint ein Fenster, welches der Höhe nach in zwei Teile aufgeteilt ist. Die obere Hälfte ist für die Projektbibliothek. In der unteren Hälfte findet man die Globalen Bibliotheken. Um nun eine neue Bibliothek einzubinden, klickt man auf das zweite Symbol von links "Globale Bibliothek öffnen". Das Symbol ist ein Buch mit einem grünen Pfeil rechts oben. Jetzt öffnet sich wieder ein Fenster. Hier befindet sich  dann der Ordner, aus dem die zu integrierende Bibliothek ausgewählt wird. Im Anschluss wird die Datei mit dem Datenformat .alxx (xx ... Version Tia-Portal (18)) geöffnet. Nun ist die gewünschte Bibliothek verfügbar. Alle Bausteine die diese Bibliothek zur Verfügung stellt, können nun per Drag-and-Drop ins Programm gezogen werden.
         (vgl. \cite{Bibliotheken})
 
 
@@ -202,7 +208,7 @@ Um den Motor in der SPS durch das Programm steuern zu können, wird zuerst das T
         Mit dieser Anweisung wird eine Achse auf eine absolute Position gefahren. Die Parameter Velocity (Geschwindigkeit), Jerk (Ruck), Acceleration (Beschleunigung) und Deceleration (Verzögerung) können bestimmt werden. Werden diese nicht ausgefüllt oder mit einem Wert kleiner null ausgefüllt, so werden die voreingestellten Werte übernommen. Diese Motion Control Anweisung kann nur ausgeführt werden, wenn das Technologieobjekt bereits referenziert ist. Ist das der Fall so wird das Technologieobjekt ausgeführt, wenn es am Parameter execute eine steigende Flanke erkennt. Wenn die Zielposition erreicht wird, schaltet der Paramterer Done auf HIGH. 
 
     \item \textbf{MC\_GearIn} \\
-        Startet einen Getriebegleichlauf zwischen einer Leit- und einer Flogeachse. Dies kann sowohl in Bewegung als auch im Stillstand erfolgen. Als Leitachse können folgende Technologieobjekte ausgewählt werden: Positionierachse, Gleichlaufachse, Externer Geber und Leitachsstellvertreter. Als Folgeachse kann jedoch nur das Technologieobjekt Gleichlaufachse agieren. Der Auftrag wird gestartet sobalb am Parameter execute eine steigende Flanke kommt. Die Snychronisation ist fertiggestellt, wenn der Parameter InGear auf HIGH schaltet.
+        Startet einen Getriebegleichlauf zwischen einer Leit- und einer Folgeachse. Dies kann sowohl in Bewegung als auch im Stillstand erfolgen. Als Leitachse können folgende Technologieobjekte ausgewählt werden: Positionierachse, Gleichlaufachse, Externer Geber und Leitachsstellvertreter. Als Folgeachse kann jedoch nur das Technologieobjekt Gleichlaufachse agieren. Der Auftrag wird gestartet sobalb am Parameter execute eine steigende Flanke kommt. Die Snychronisation ist fertiggestellt, wenn der Parameter InGear auf HIGH schaltet.
 
 \end{enumerate}
 
@@ -223,7 +229,7 @@ Um die Technologieojekte nutzen zu können, müssen diese korrekt konfiguriert w
                 \begin{itemize}
 
                 \item Antrieb $\rightarrow$ Local Modules $\rightarrow$ PTO Modul auszuwählen
-                \item Mechanik $\rightarrow$ Spindelsteigung: $= 134,9942$
+                \item Mechanik $\rightarrow$ Spindelsteigung: $= 134,9942$ *
                 \item Dynamik-Voreinstellung: 
                     \subitem Geschwindigkeit:
                         \qty{300}{\milli\meter/\second}
@@ -252,6 +258,20 @@ Um die Technologieojekte nutzen zu können, müssen diese korrekt konfiguriert w
                 \end{itemize}
         \end{enumerate}
 
+* Dieser Wert komm zustande indem man sich anschaut wie weit sich die X-Achse bewegt, wenn der Motor eine Umdrehung macht. Bei einer Drehung des Motors, bewegt sich die X-Achse um den Umfang des Zahnrades, also:
+
+\vspace{-6mm}
+        \begin{equation*}
+          X\_Achse_{Bewegung} = 2 * r * \pi
+        \end{equation*}
+        
+Bei einem Durchmesser des Zahnrades von \qty{42,97}{\milli\meter} ergibt sich so:
+
+\vspace{-6mm}
+        \begin{equation*}
+            Spindelsteigung = 2 * r * \pi = \qty{42,97}{\milli\meter}  * \pi = \qty{134,9942}{\milli\meter} 
+        \end{equation*}
+
 \paragraph{Gleichlaufachse} \mbox{} \\
 Bei der Gleichlaufachse ist bei der Konfiguration ein zusätzlicher Schritt vorzunehmen. Unter Konfiguration - Leitwertverschaltung wird eine Leitwertverschaltung hinzugefügt, in dem man auf \enquote{hinzufügen} klickt und anschließend das Technologieobjekt auswählt, dem die Gleichlaufachse folgen soll.
 
@@ -269,7 +289,7 @@ Die X,Y,Z -Achsen werden von jeweils zwei Motoren angetrieben. Daher müssen die
 
 \subsubsection{Ansteuerung des Förderbands}
 \label{Ansteuerung des Förderbandes}
-Die Ansteuerung des Förderbands erfolgt im Gegensatz zu den anderen Motoren nicht über Motortreiber. Die Asynchronmaschine des Förderbands wird schlicht und einfach über Relais mit der Spannungsversorgung verbunden oder getrennt. Die Ansteuerung der Relais erfolgt dann über die Digitalausgänge der SPS. Die Relais schalten jeweils die drei Phasen. Eine Richtungsumkehr wird durch eine Vertauschung zweier Phasen erreicht. Deswegen ist das Relais 1 so verschalten, dass das Förderband im Uhrzeigersinn läuft. Beim zweiten Relais sind dann zwei Phasen vertauscht, sodass es zu einer Richtungsumkehr kommt. Dies bedeutet das bei Ansteuern des Relais 1 sich das Förderband im Uhrzeigersinn (+ Richtung ) läuft und beim Ansteuern des  Relais 2 gegen den Uhrzeigersinn (- Richtung). Jedes dieser Relais beistzt auch Hilfskontakte. Diese werden so verkabelt, dass eine Ansteuerung des einen Relais nur geht, sofern das andere Relais nicht angesteurt ist. Dieder Aufbau gleicht einer Wendeschützschaltung. \\
+Die Ansteuerung des Förderbands erfolgt im Gegensatz zu den anderen Motoren nicht über Motortreiber. Die Asynchronmaschine des Förderbands wird schlicht und einfach über Relais mit der Spannungsversorgung verbunden oder getrennt. Die Ansteuerung der Relais erfolgt dann über die Digitalausgänge der SPS. Die Relais schalten jeweils die drei Phasen. Eine Richtungsumkehr wird durch eine Vertauschung zweier Phasen erreicht. Deswegen ist das Relais 1 so verschalten, dass das Förderband im Uhrzeigersinn läuft. Beim zweiten Relais sind dann zwei Phasen vertauscht, sodass es zu einer Richtungsumkehr kommt. Dies bedeutet das bei Ansteuern des Relais 1 sich das Förderband im Uhrzeigersinn (+ Richtung ) läuft und beim Ansteuern des  Relais 2 gegen den Uhrzeigersinn (- Richtung). Jedes dieser Relais beistzt auch Hilfskontakte. Diese werden so verkabelt, dass eine Ansteuerung des einen Relais nur geht, sofern das andere Relais nicht angesteurt ist. Dieser Aufbau gleicht einer Wendeschützschaltung. \\
 Nun wird bestimmt wie lange man ein Relais ansteuern muss, damit das Förderband eine bestimmte Strecke zurücklegt. Aufgrund des hohen Zeitaufwandes dieses Projektes konnte folgender Ansatz noch nicht umgesetzt werden. Der Ansatz ist es, das Förderband per Direktstart anlaufen zu lassen. Daraufhin wäre die Distanz, die das Förderband nach einer bestimmten Zeit zurücklegt zu messen und mehrere Datenpunkte anzulegen. Beispielsweise bei \qty{0.5}{\second}, \qty{1}{\second}, \qty{2}{\second} und \qty{5}{\second}. Dann wäre eine Regressionsrechnung durchzuführen, um eine Funktion für die zurückgelegte Strecke, in Abhängigkeit von der Zeit zu bekommen. Von dieser Funktion wäre nun eine Umkehrfunktion zu erstellen. Diese liefert dann, die Zeit die es braucht um eine bestimmte Wegstrecke zurückzulegen. Mit dieser Funktion kann dann in Tia Portal gearbeitet werden, in dem man die gewünschte Wegstrecke einsetzt und den zugehörigen Zeitwert bekommt. Dieser Zeitwert ist dann die Zeit, wie lange die Relais angesteuert werden sollen. 
 
 \subsubsection{Tia-Portal Programm}
@@ -366,7 +386,7 @@ Durch die SPS-Server Kommunikation stehen die benötigten Daten sowie der Auftra
                         \end{split}
                     \end{equation*}
                 \subitem Die X-Achse und Y-Achse können gleichzeitig auf den   richtigen Wert gefahren werden. Erst wenn die X- und Y-Position erreicht wurde, wird die Z-Achse angesteuert. 
-                \subitem Darufhin folgt das Absetzen der Box. Nun wird folgender Y-Wert angefahren:
+                \subitem Daraufhin folgt das Absetzen der Box. Nun wird folgender Y-Wert angefahren:
 
                 \vspace{-6mm}
                     \begin{equation*}
@@ -499,7 +519,7 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
     \mbox{} \\
     Alle Bausteine zur Datenfilterung wurden in SCL programmiert. Als Eingabe dient der string, welcher die Daten beinhaltet. In diesem wird zuerst nach ID gefiltert (siehe Code-Snippet \ref{SCL-Baustein}, Zeile 1). Dies liefert die Position von ID innerhalb des Strings. Daraufhin werden alle Zeichen links von ID + ID wegelöscht (siehe Code-Snippet \ref{SCL-Baustein}, Zeilen 2 bis 5). Nun weiß man das rechts von ID eine vierstellige Nummer (ID-Nummer) steht. Da alles links von dieser Nummer weggeschnitten wurde, weiß man das diese Nummer ganz links im string ist. Deswegen werden die ersten vier Stellen von links genommen und dem Ausgang Q\_Info\_ID zugewiesen (siehe Code-Snippet \ref{SCL-Baustein}, Zeile 6). Dieser Ausgang ist für das gesamte Programm erreichbar. Dasselbe Suchen und Löschen der Zeichen links vom Gesuchten wird ebenfalls für A (Area / Auftrag) erledigt (siehe Code-Snippet \ref{SCL-Baustein}, Zeilen 10 bis 13). Da man den Wert von Area, welcher den Auftrag definiert, vergleichen will um den richtigen Baustein auszuführen, werden die zwei Zeichen links von A, von denen wir wissen das es Zahlen sind, in das Datenformat int konvertiert und dem Ein-Ausgang IQ\_Info\_Area zugewiesen (siehe Code-Snippet \ref{SCL-Baustein}, Zeilen 19 bis 23). \\
 
-    \begin{lstlisting}[language=Pascal, caption={SCL Baustein \enquote{ID+Area}}, label = SCL-Baustein]
+    \begin{lstlisting}[language=SCL, caption={SCL Baustein \enquote{ID+Area}}, label = SCL-Baustein]
         #T_Int := FIND(IN1 := #I_Datenstring, IN2 := 'ID');
 IF #T_Int > 0 THEN
     #X_Info_ID := #T_Int + 1;
@@ -527,5 +547,6 @@ IF #T_Int > 0 THEN
 END_IF;
     \end{lstlisting}
 
+\subsection{Fazit}
+Was bei dieser Diplomarbeit noch nicht erwähnt wurde, ist das dauernde Experimentieren sowie Ausprobieren, ob es so funktioniert, wie man es sich vorstellt. Natürlich funktioniert nicht alles beim ersten Mal. Bei der Motoransteuerung wurde zuerst eine Lösung über ein Weidmüller-Modul angestrebt. Dieses ist jedoch ein PWM-Modul, welches nicht zum Ansteuern von Motortreibern verwendet werden kann. Diese benötigen ein frequenzabhängiges PTO Signal. Auch die SPS-Server-Kommunikation wurde mehrmals ausgetestet. Zuerst über OPC-UA und anschließend erst über HTTP. Daraufhin folgt dann gleich die nächste Herausforderung. Die gesendeten Daten ins JSON-Format zu bringen sowie den HTTP-Post-Put Baustein richtig anzusteuern. Manchmal scheitert es auch an den kleinen Sachen, wie beispielsweise darauf zu achten, dass der Server im richtigen Netzwerk hängt. Den richtigen Namen der SPS zu geben, ist in Tia Portal auch wichtiger als man annehmen möchte und hat am Anfang durchaus für Verwirrung gesorgt. Mittels Versuchen wurde auch herausgefunden, wie man die Daten im JSON-Tree richtig einträgt. Sowohl die HTTP Bausteine als auch die Bausteine, welche verwendet werden, um die Daten ins JSON-Format zu bringen, sind als globale Bibliothek einzubinden. Aufgrund eines fehlenden Siemens-Accounts musste man sich hier immer an einen zuständigen Werkstättenlehrer wende. Hier besteht immer eine zeitliche Diskrepanz, etwas was durchaus öfters aufgefallen ist. Egal, was man machen will, es benötigt Vorbereitung und oft auch eine zweite Person. Dies sollte immer im Vorhinein ausgemacht werden. Zudem wurde gelernt, besser mit Datenblättern sowie dem Internet umzugehen, da jedes Austesten eine Recherche sowie Fehlerbehebung benötigt. Schlussendlich ist das Projekt, eine positive Erfahrung. Daher möchte ich an dieser Stelle einen Dank an meine Teamkollegen aussprechen.
 
-\subsection{Herausforderungen}

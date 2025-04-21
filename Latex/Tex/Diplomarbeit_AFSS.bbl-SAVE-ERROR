@@ -351,6 +351,37 @@
       \verb https://www.lapp.com/de/at/unternehmen/ueber-lapp-oesterreich/e/000123
       \endverb
     \endentry
+    \entry{lapp_logo}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=31575194d924bb99bc841b3d57d41308}{%
+           family={Lapp},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{31575194d924bb99bc841b3d57d41308}
+      \strng{fullhash}{31575194d924bb99bc841b3d57d41308}
+      \strng{fullhashraw}{31575194d924bb99bc841b3d57d41308}
+      \strng{bibnamehash}{31575194d924bb99bc841b3d57d41308}
+      \strng{authorbibnamehash}{31575194d924bb99bc841b3d57d41308}
+      \strng{authornamehash}{31575194d924bb99bc841b3d57d41308}
+      \strng{authorfullhash}{31575194d924bb99bc841b3d57d41308}
+      \strng{authorfullhashraw}{31575194d924bb99bc841b3d57d41308}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{title}{Lapp Logo}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lapp_Logo_rgb.svg/2560px-Lapp_Logo_rgb.svg.png
+      \endverb
+      \verb{url}
+      \verb https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lapp_Logo_rgb.svg/2560px-Lapp_Logo_rgb.svg.png
+      \endverb
+    \endentry
     \entry{mädler}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=786bd28f73b2ab12bb63b72d727477d6}{%
@@ -974,6 +1005,32 @@
       \field{year}{2024}
       \field{dateera}{ce}
     \endentry
+    \entry{Tia-Portal_Informationssystem}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
+           family={Siemens},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{fullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
+      \field{extraname}{7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{howpublished}{Online}
+      \field{month}{4}
+      \field{title}{TIA Portal Informationssystem}
+      \field{year}{2025}
+      \field{dateera}{ce}
+    \endentry
     \entry{HTTP-Allgemein}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=05011fe5bea6facbac565aec3e1037d9}{%
@@ -1083,7 +1140,7 @@
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
-      \field{extraname}{7}
+      \field{extraname}{8}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -1109,8 +1166,8 @@
       \strng{authornamehash}{a21be47e6ad732c3758a7bf13ef6346d}
       \strng{authorfullhash}{a21be47e6ad732c3758a7bf13ef6346d}
       \strng{authorfullhashraw}{a21be47e6ad732c3758a7bf13ef6346d}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{17}
@@ -1372,8 +1429,8 @@
       \strng{authornamehash}{7e9f7ae4b84a6fc7f732a29458333729}
       \strng{authorfullhash}{50ad3f4b1b33d7f5a567821e2ec534db}
       \strng{authorfullhashraw}{50ad3f4b1b33d7f5a567821e2ec534db}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Elektroinstallation Blitzschutz Lichttechnik}
@@ -1393,7 +1450,7 @@
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
-      \field{extraname}{8}
+      \field{extraname}{9}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -1529,7 +1586,7 @@
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
-      \field{extraname}{9}
+      \field{extraname}{10}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -1559,8 +1616,8 @@
       \strng{authornamehash}{5a84a9d8f3c54e82d520730803cea181}
       \strng{authorfullhash}{5a84a9d8f3c54e82d520730803cea181}
       \strng{authorfullhashraw}{5a84a9d8f3c54e82d520730803cea181}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{howpublished}{Online}
       \field{urlday}{22}
@@ -1761,7 +1818,7 @@
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
-      \field{extraname}{10}
+      \field{extraname}{11}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -1882,7 +1939,7 @@
       \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
       \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
-      \field{extraname}{11}
+      \field{extraname}{12}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -1924,7 +1981,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{lapp_logo}
 \endrefsection
 \endinput
 
