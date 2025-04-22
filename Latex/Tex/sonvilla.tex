@@ -198,7 +198,7 @@ Um den Motor in der SPS durch das Programm steuern zu können, wird zuerst das T
 
 \begin{enumerate}
     \item \textbf{MC\_Power} \\
-        Diese Motion Control Anweisung gibt ein Technologieobjekt frei beziehungsweise sperrt es. Wird der Parameter enabel auf HIGH gesetzt, so wird das Technologieobjekt freigegeben. Das Technologieobjekt ist solange freigegeben, solange \enquote{enable} auf HIGH ist. Am Parameter Status kann man dann erkennen, ob das Technologieobjekt freigegeben wurde oder nicht.
+        Diese Motion Control Anweisung gibt ein Technologieobjekt frei beziehungsweise sperrt es. Wird der Parameter enabel auf HIGH gesetzt, so wird das Technologieobjekt freigegeben. Das Technologieobjekt ist solange freigegeben, solange Enable auf HIGH ist. Am Parameter Status kann man dann erkennen, ob das Technologieobjekt freigegeben wurde oder nicht.
 
     \item \textbf{MC\_Home} \\
         Wird verwendet um eine Achse zu referenzieren. Die Dynamikwerte mit welcher dieser Baustein ausgeführt wird, sind jene, die in der Konfiguration des Technologieobjekts voreingestellt wurden. Es wird unterschiedlich referenziert, je nach dem welcher Wert (0-13) am Parameter Mode anliegt. Ausgeführt wird diese Motion Control Anweisung sobald eine steigende Flanke am Parameter execute erfasst wird. Referenziert ist die Achse erst, wenn der Parameter Done auf HIGH umschaltet. 
@@ -207,7 +207,7 @@ Um den Motor in der SPS durch das Programm steuern zu können, wird zuerst das T
         Mit dieser Anweisung wird eine Achse auf eine absolute Position gefahren. Die Parameter Velocity (Geschwindigkeit), Jerk (Ruck), Acceleration (Beschleunigung) und Deceleration (Verzögerung) können bestimmt werden. Werden diese nicht ausgefüllt oder mit einem Wert kleiner null ausgefüllt, so werden die voreingestellten Werte übernommen. Diese Motion Control Anweisung kann nur ausgeführt werden, wenn das Technologieobjekt bereits referenziert ist. Ist das der Fall so wird das Technologieobjekt ausgeführt, wenn es am Parameter execute eine steigende Flanke erkennt. Wenn die Zielposition erreicht wird, schaltet der Paramterer Done auf HIGH. 
 
     \item \textbf{MC\_GearIn} \\
-        Startet einen Getriebegleichlauf zwischen einer Leit- und einer Folgeachse. Dies kann sowohl in Bewegung als auch im Stillstand erfolgen. Als Leitachse können folgende Technologieobjekte ausgewählt werden: Positionierachse, Gleichlaufachse, Externer Geber und Leitachsstellvertreter. Als Folgeachse kann jedoch nur das Technologieobjekt Gleichlaufachse agieren. Der Auftrag wird gestartet sobalb am Parameter \enquote{execute} eine steigende Flanke kommt. Die Snychronisation ist fertiggestellt, wenn der Parameter InGear auf HIGH schaltet.
+        Startet einen Getriebegleichlauf zwischen einer Leit- und einer Folgeachse. Dies kann sowohl in Bewegung als auch im Stillstand erfolgen. Als Leitachse können folgende Technologieobjekte ausgewählt werden: Positionierachse, Gleichlaufachse, Externer Geber und Leitachsstellvertreter. Als Folgeachse kann jedoch nur das Technologieobjekt Gleichlaufachse agieren. Der Auftrag wird gestartet sobalb am Parameter Execute eine steigende Flanke kommt. Die Snychronisation ist fertiggestellt, wenn der Parameter InGear auf HIGH schaltet.
 
 \end{enumerate}
 
@@ -501,7 +501,7 @@ Da die Lagerlogik auf einem Server ausgeführt wird und die SPS nur das ausführ
                 \item 00: SB\\
                 Bei diesem Befehl muss der Barcodescanner angesteuert werden um an der Kommissionierstation einen Barcode einzuscannen.
                 \item 01: P $\pm$xxxx \\
-                Gibt an um wie viel sich das Förderband (in mm) bewegen muss. Vor der Zahl steht jedoch entweder ein Plus oder inus um festzulegen, in welche Richtung sich das Förderband bewegen muss. 
+                Gibt an um wie viel sich das Förderband (in mm) bewegen muss. Vor der Zahl steht jedoch entweder ein Plus oder Minus um festzulegen, in welche Richtung sich das Förderband bewegen muss. 
                 \item 10: XxxxxYxxxxZxxxxRx \\
                 Nach jeder Achse X,Y,Z steht ein vierstelliger Wert, der die Position des gewünschten Lagerplatzes angibt. Der Wert nach R ist entweder 0 oder 1 und gibt an ob es sich um eine Einlagerung (1) oder Auslagerung (0) handet.
                 \item 11: Pxxxx \\
